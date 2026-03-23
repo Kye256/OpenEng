@@ -1,0 +1,94 @@
+{
+  "skill_name": "vehicle-classification",
+  "evals": [
+    {
+      "id": 0,
+      "prompt": "Classify the following traffic count data for a trunk road in Uganda (Mbale-Tororo Road, paved, rolling terrain). The AADT is 2,500 vpd (both directions) with the following classified breakdown:\n\n- Passenger cars: 500\n- Pickups/4x4: 300\n- Matatus/taxis (14-seat minibus): 250\n- Buses (large): 60\n- Medium trucks (2-axle rigid, Fuso Canter type, ~8t GVW): 180\n- Heavy trucks (3-axle rigid, Fuso Fighter type, >8.5t GVW): 100\n- Truck-trailers (articulated, 6-axle): 70\n- Boda-bodas (motorcycles): 480\n- Bicycles: 60\n- Total: 2,500 vpd\n\nMap these to MoWT vehicle categories. Calculate the heavy vehicle percentage, PCU-adjusted flow for rolling terrain using MoWT Table 5-4 factors, and identify which vehicles are relevant for pavement design ESA calculation. Show the distinction between capacity classification and pavement design classification.",
+      "expected_output": "Should map to MoWT Table 5-4 categories: Cars (800 = cars+pickups), LGV (250 = matatus), Medium GV (180), Heavy GV (170 = heavy trucks+trailers), Buses (60), Motorcycles (480), Bicycles (60). Heavy vehicle % = (180+100+70+60)/2500 = approximately 16.4% (or higher if buses included). PCU-adjusted flow using rolling terrain factors: cars 800x1.0=800, LGV 250x1.5=375, medium 180x5.0=900, heavy 170x8.0=1360, buses 60x4.0=240, motorcycles 480x1.0=480, bicycles 60x0.5=30 = approximately 4185 pcu/day. For pavement design: commercial vehicles (medium trucks + heavy trucks + trailers + buses) = 410 vpd need axle load data for ESA.",
+      "files": [],
+      "assertions": [
+        {
+          "text": "Correctly maps vehicles to MoWT Table 5-4 categories (or equivalent standard Uganda classification)",
+          "passed": null,
+          "evidence": ""
+        },
+        {
+          "text": "Heavy vehicle percentage is calculated and is in the range of 14-22% (depending on whether buses are included)",
+          "passed": null,
+          "evidence": ""
+        },
+        {
+          "text": "PCU-adjusted total is significantly higher than vehicle count (at least 1.5x for rolling terrain) due to heavy vehicle PCU factors",
+          "passed": null,
+          "evidence": ""
+        },
+        {
+          "text": "Uses rolling terrain PCU factors from MoWT Table 5-4 (not flat terrain factors)",
+          "passed": null,
+          "evidence": ""
+        },
+        {
+          "text": "Distinguishes between capacity classification (PCU-based) and pavement design classification (axle load damage-based), or notes that the two serve different purposes",
+          "passed": null,
+          "evidence": ""
+        }
+      ]
+    },
+    {
+      "id": 1,
+      "prompt": "Classify the following traffic count data for a rural A-road in the UK (A567 in Staffordshire, flat terrain). The AADT is 5,500 vpd (both directions) with the following DfT classification:\n\n- Cars and taxis: 4,400 (80%)\n- LGV: 660 (12%)\n- OGV1: 165 (3%)\n- OGV2: 110 (2%)\n- PSV: 55 (1%)\n- Motorcycles: 82 (1.5%)\n- Pedal cycles: 28 (0.5%)\n- Total: 5,500 vpd\n\nCalculate the heavy vehicle percentage (UK definition), PCU-adjusted flow, and identify any notable features of the fleet composition. Use DMRB/DfT classification standards.",
+      "expected_output": "HV% = (OGV1+OGV2)/total = (165+110)/5500 = 5%. Including PSV: (165+110+55)/5500 = 6%. PCU-adjusted flow approximately 5,800-6,000 pcu/day. Fleet composition is typical for a UK rural A-road. LGV proportion (12%) is within normal UK range.",
+      "files": [],
+      "assertions": [
+        {
+          "text": "Calculates heavy vehicle percentage correctly using UK definition (OGV1+OGV2, with or without PSV noted separately)",
+          "passed": null,
+          "evidence": ""
+        },
+        {
+          "text": "PCU-adjusted flow is calculated and is higher than vehicle count (reflecting HGV/PSV PCU factors > 1.0)",
+          "passed": null,
+          "evidence": ""
+        },
+        {
+          "text": "Uses DfT standard vehicle categories (cars, LGV, OGV1, OGV2, PSV, motorcycles, cycles)",
+          "passed": null,
+          "evidence": ""
+        },
+        {
+          "text": "Notes that fleet composition is typical for a UK rural road or compares to national averages",
+          "passed": null,
+          "evidence": ""
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "prompt": "Classify the following traffic count data for a district road in Uganda (Mukono-Kayunga Road, unpaved, rolling terrain). The traffic count recorded the following 12-hour volumes (AADT not yet calculated -- use these raw counts for classification proportions):\n\n- Passenger cars: 30\n- Pickups/4x4: 40\n- Matatus/taxis: 20\n- Buses: 5\n- Medium trucks: 15\n- Heavy trucks: 3\n- Boda-bodas (motorcycles): 280\n- Bicycles: 85\n- Unclassified 'other': 22\n- Total: 500 vehicles (12-hour)\n\nThe 'unclassified other' category includes some three-wheeled vehicles (tuk-tuks), animal-drawn carts, and tractors. Classify this traffic, calculate heavy vehicle percentage, address the high motorcycle proportion, and handle the unclassified category. Flag any concerns about the fleet composition.",
+      "expected_output": "Motorcycle traffic (280/500 = 56%) dominates the fleet. This is not unusual for Uganda district roads but requires specific attention. Heavy vehicles (medium trucks + heavy trucks + buses) = 23/500 = 4.6% of total, or 23/135 = 17% of motorised non-motorcycle traffic. The unclassified 'other' category (22/500 = 4.4%) should be mapped conservatively -- tuk-tuks as motorcycles/LGV, animal carts as pedal cycles, tractors as medium goods vehicles. Escalation flag should be raised for the high motorcycle proportion (>50%). Standard PCU analysis may not adequately represent capacity for motorcycle-dominant traffic.",
+      "files": [],
+      "assertions": [
+        {
+          "text": "Flags the unusually high motorcycle/boda-boda proportion (>50% of total) as a notable feature requiring attention",
+          "passed": null,
+          "evidence": ""
+        },
+        {
+          "text": "Handles the unclassified 'other' category by assigning vehicles to appropriate classes conservatively or flagging for review",
+          "passed": null,
+          "evidence": ""
+        },
+        {
+          "text": "Calculates heavy vehicle percentage and notes it is low in absolute terms but may still be significant for pavement design on an unpaved road",
+          "passed": null,
+          "evidence": ""
+        },
+        {
+          "text": "Notes that motorcycle-dominated traffic may require different capacity analysis approach than standard PCU methodology",
+          "passed": null,
+          "evidence": ""
+        }
+      ]
+    }
+  ]
+}

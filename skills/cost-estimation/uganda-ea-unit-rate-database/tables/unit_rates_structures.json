@@ -1,0 +1,19 @@
+{
+  "_metadata": {
+    "source": "Illustrative rates for methodology demonstration",
+    "base_year": "2024",
+    "currency_primary": "UGX",
+    "currency_secondary": "USD",
+    "exchange_rate": "UGX 3,700 = USD 1 (illustrative)",
+    "disclaimer": "PLACEHOLDER RATES -- not current market rates. Replace with actual market data before use.",
+    "region": "Central Uganda (Kampala corridor)"
+  },
+  "items": [
+    {"item_code": "S01", "description": "Structural concrete Class 25/20", "unit": "m3", "rate_ugx": 850000, "rate_usd": 229.73, "notes": "Including formwork, placement, curing. Bridge deck.", "source_skill": "Skill #37"},
+    {"item_code": "S02", "description": "Structural concrete Class 30/20", "unit": "m3", "rate_ugx": 950000, "rate_usd": 256.76, "notes": "Higher strength for piers and abutments", "source_skill": "Skill #38"},
+    {"item_code": "S03", "description": "Reinforcement steel -- high yield (Y)", "unit": "kg", "rate_ugx": 5500, "rate_usd": 1.49, "notes": "Cut, bent, and fixed. Price volatile.", "source_skill": "Skill #37"},
+    {"item_code": "S04", "description": "Reinforcement steel -- mild (R)", "unit": "kg", "rate_ugx": 5000, "rate_usd": 1.35, "notes": "Links and distribution bars", "source_skill": "Skill #37"},
+    {"item_code": "S05", "description": "Bearing pads (elastomeric)", "unit": "number", "rate_ugx": 1500000, "rate_usd": 405.41, "notes": "Standard neoprene pad. Size-dependent.", "source_skill": "Skill #37"},
+    {"item_code": "S06", "description": "Bridge railing (steel)", "unit": "m", "rate_ugx": 250000, "rate_usd": 67.57, "notes": "Galvanized steel. Supply and install.", "source_skill": "Skill #37"}
+  ]
+}

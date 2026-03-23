@@ -1,0 +1,216 @@
+{
+  "source": "Adapted from MoWT Vol 7 and iRAP Road Safety Inspection Guidelines for East Africa. Items augmented with East African-specific hazards (boda-boda, pedestrians on carriageway, animal crossings, trading centre speed transitions).",
+  "stages": {
+    "feasibility": {
+      "description": "Review of route options and design concepts. Strategic-level safety assessment.",
+      "categories": {
+        "alignment": [
+          "Route avoids high-risk terrain (steep escarpments, landslide-prone areas)",
+          "Route minimises need for sharp curves or steep gradients",
+          "Route avoids or provides for safe passage through trading centres"
+        ],
+        "cross_section": [
+          "Proposed cross-section width is appropriate for traffic and road users",
+          "Provision for NMT facilities considered in cross-section"
+        ],
+        "intersections": [
+          "Major junction locations identified and type considered",
+          "Access management strategy for trading centres"
+        ],
+        "environment": [
+          "High-risk locations identified (trading centres, schools, markets)",
+          "Animal crossing locations identified (pastoral areas)",
+          "Night-time safety considerations noted"
+        ]
+      }
+    },
+    "preliminary_design": {
+      "description": "Review of preliminary design drawings and cross-sections.",
+      "categories": {
+        "alignment": [
+          "Horizontal alignment provides adequate sight distance on curves",
+          "Vertical alignment provides adequate stopping sight distance on crests",
+          "Combination of horizontal and vertical alignment avoids hidden hazards",
+          "Design speed is consistent along the route (no sudden changes)"
+        ],
+        "cross_section": [
+          "Carriageway width is adequate for design traffic",
+          "Shoulder width is sufficient for stopped vehicles and pedestrians",
+          "Clear zone is adequate (no fixed objects within recovery area)",
+          "Cut and fill slopes are safe (not excessively steep)"
+        ],
+        "intersections": [
+          "Junction type is appropriate for traffic volumes and turning movements",
+          "Junction layout provides adequate sight distance",
+          "Pedestrian crossing facilities provided at junctions in trading centres",
+          "Boda-boda stage locations identified and separated from junction"
+        ],
+        "speed_management": [
+          "Speed reduction measures planned for trading centre transitions",
+          "Speed is consistent with road function and environment",
+          "Advance warning of speed changes provided"
+        ],
+        "nmt": [
+          "Pedestrian facilities provided through trading centres",
+          "Cyclist facilities provided where appropriate",
+          "School zone treatments identified",
+          "NMT conflict points with motorised traffic identified"
+        ]
+      }
+    },
+    "detailed_design": {
+      "description": "Review of detailed design drawings, specifications, and traffic management plans.",
+      "categories": {
+        "alignment": [
+          "Horizontal curves have appropriate superelevation and widening",
+          "Vertical curves have adequate sight distance for design speed",
+          "Sight distance checked at all accesses and intersections",
+          "Overtaking sight distance provided on appropriate sections",
+          "No hidden dips or crests that obscure road features ahead"
+        ],
+        "cross_section": [
+          "Carriageway width matches design standard for road class",
+          "Shoulder type and width are adequate (paved/gravel, width)",
+          "Cross-fall and superelevation provide adequate drainage without skid risk",
+          "Roadside clear zone is maintained (forgiving roadside)",
+          "Cut slopes and fill slopes are stable and not excessively steep",
+          "Guardrails/barriers provided where clear zone is inadequate"
+        ],
+        "intersections": [
+          "Junction geometry provides adequate sight triangles",
+          "Turning lanes provided where warranted by traffic volumes",
+          "Channelization is clear and unambiguous",
+          "Pedestrian crossing facilities at signalised intersections",
+          "Boda-boda stages located away from junction and carriageway",
+          "Access management (control of direct property access near junctions)"
+        ],
+        "roadside_hazards": [
+          "Fixed objects (poles, trees, bridge piers) are outside clear zone or shielded",
+          "Open drainage ditches adjacent to carriageway are protected or covered",
+          "Bridge approach safety barriers provided",
+          "End treatments of guardrails are safe (flared or buried)",
+          "Utility poles are not in the clear zone"
+        ],
+        "drainage": [
+          "Drainage structures do not create safety hazards (unprotected headwalls, deep ditches)",
+          "Culvert headwalls and wingwalls are outside clear zone or shielded",
+          "Drainage gratings do not create bicycle or pedestrian hazards",
+          "Water does not flow across carriageway at any point"
+        ],
+        "signs_markings": [
+          "Advance warning signs provided for curves, junctions, speed changes",
+          "Speed limit signs at trading centre entries and repeaters within",
+          "Road markings (centre line, edge lines) specified throughout",
+          "Sign placement does not obstruct sight distance",
+          "Delineation (reflective posts, edge markers) on curves and at hazards",
+          "School zone signs and markings provided"
+        ],
+        "nmt": [
+          "Footpaths provided through all trading centres and built-up areas",
+          "Pedestrian crossings at key locations (schools, markets, bus stops)",
+          "Crossings have adequate visibility (not on curves or crests)",
+          "NMT facilities are continuous (no gaps forcing NMT onto carriageway)",
+          "Handcart and wheelchair accessibility considered",
+          "Separation between NMT and motorised traffic is adequate"
+        ],
+        "speed_management": [
+          "Speed humps/tables at trading centre entries (both directions)",
+          "Advance rumble strips before speed changes",
+          "Gateway treatments at trading centre entries",
+          "Speed design is consistent with function and environment",
+          "Speed limit changes are gradual and supported by road design"
+        ],
+        "lighting": [
+          "Street lighting provided at junctions, trading centres, and pedestrian crossings",
+          "Lighting is adequate for night-time NMT visibility",
+          "No dark spots between lit areas creating adaptation hazard"
+        ],
+        "east_african_specific": [
+          "Pedestrian walking space on shoulders assessed for rural sections without footpaths",
+          "Boda-boda conflict points identified and managed at all junctions and trading centres",
+          "Animal crossing locations assessed (livestock, wildlife) -- warning signs provided",
+          "Trading centre speed transition has physical speed reduction measures (not signs only)",
+          "Market area encroachment on road reservation assessed for sight distance",
+          "Night-time visibility for unlit road users assessed"
+        ]
+      }
+    },
+    "pre_opening": {
+      "description": "Inspection of completed construction before opening to traffic. Includes day and night inspection.",
+      "categories": {
+        "as_built": [
+          "Road alignment and cross-section match approved design",
+          "Junction layouts match approved design",
+          "Sign and marking installation matches sign plan"
+        ],
+        "visibility": [
+          "Sight distance is adequate at all junctions and curves (as-built, not drawing)",
+          "Vegetation does not obstruct sight distance",
+          "Signs are visible and legible from the required distance",
+          "Delineation is visible at night (retroreflectivity check)"
+        ],
+        "surface": [
+          "Road surface is in good condition (no construction defects)",
+          "Surface drainage is functioning (no ponding on carriageway)",
+          "Skid resistance is adequate (no bleeding or polishing)"
+        ],
+        "safety_devices": [
+          "Guardrails and barriers are correctly installed and undamaged",
+          "Speed humps are constructed to specification",
+          "Pedestrian crossings are correctly marked and signed"
+        ],
+        "night_inspection": [
+          "Road delineation is visible at night from adequate distance",
+          "Street lighting is functioning (where provided)",
+          "Unlit sections do not create hazards for pedestrians",
+          "Sign retroreflectivity is adequate"
+        ],
+        "east_african_specific": [
+          "Boda-boda stages have been provided with off-carriageway waiting areas",
+          "Trading centre speed humps are correctly profiled and signed",
+          "Footpaths through trading centres are complete and accessible",
+          "Animal crossing warning signs installed at identified locations"
+        ]
+      }
+    },
+    "existing_road": {
+      "description": "Systematic review of an existing road. Combines crash data analysis with site inspection.",
+      "categories": {
+        "crash_analysis": [
+          "Crash data reviewed for patterns (location, type, severity, road users)",
+          "High-crash locations (black spots) identified",
+          "Vulnerable road user crashes (pedestrian, cyclist, boda-boda) analysed",
+          "Time-of-day pattern analysed (day vs night crashes)"
+        ],
+        "alignment": [
+          "Sight distance adequate on all curves (check for vegetation, structures)",
+          "No unexpected sharp curves without advance warning",
+          "Vertical alignment does not create hidden hazards"
+        ],
+        "cross_section": [
+          "Carriageway width adequate for traffic (check for edge deterioration)",
+          "Shoulders present and usable (not eroded away)",
+          "Roadside clear zone not compromised by structures, poles, trees"
+        ],
+        "intersections": [
+          "Junction sight distance not obstructed (vegetation, structures, parked vehicles)",
+          "Junction type appropriate for current traffic volumes",
+          "Pedestrian crossing facilities present where needed"
+        ],
+        "road_condition": [
+          "Pavement surface condition does not create safety hazards (potholes, rutting, bleeding)",
+          "Road markings visible (not worn away)",
+          "Signs present, visible, and correctly oriented"
+        ],
+        "east_african_specific": [
+          "Pedestrian walking patterns observed (on carriageway, on shoulder, on footpath)",
+          "Boda-boda behaviour observed at junctions and trading centres",
+          "Trading centre speed management effectiveness assessed",
+          "Animal crossing locations observed",
+          "Market encroachment on road reservation observed",
+          "Night-time hazards observed (unlit users, delineation, lighting)"
+        ]
+      }
+    }
+  }
+}

@@ -1,0 +1,104 @@
+{
+  "skill_name": "material-suitability",
+  "evals": [
+    {
+      "id": 0,
+      "prompt": "Assess the suitability of a laterite cut material from a Class II road project in Uganda. The material has been tested with the following results: soaked CBR 25% (at 98% modified AASHTO density), Plasticity Index 18%, Liquid Limit 35%, passing 75um sieve 22%, swell 0.5%. Assess this material for use as: (a) general fill, (b) selected fill (G15), (c) sub-base (G30), and (d) base (G80). Use MoWT Table 5.1 requirements. State the recommended use and whether borrow is needed for higher-grade layers.",
+      "expected_output": "Assessment against MoWT Table 5.1: (a) General fill: SUITABLE -- CBR 25% > 5%. (b) Selected fill G15: SUITABLE -- CBR 25% > 15% at 93% mod. AASHTO, PI 18% < 25%. (c) Sub-base G30: UNSUITABLE -- CBR 25% < 30% at 95% mod. AASHTO. (d) Base G80: UNSUITABLE -- CBR 25% << 80%. Recommended use: selected fill (G15). Borrow needed for sub-base and base layers from higher-quality source.",
+      "files": [],
+      "assertions": [
+        {
+          "text": "Correctly identifies material as suitable for general fill (CBR 25% > 5%)",
+          "passed": null,
+          "evidence": ""
+        },
+        {
+          "text": "Correctly identifies material as suitable for selected fill G15 (CBR 25% > 15%, PI 18% within limits)",
+          "passed": null,
+          "evidence": ""
+        },
+        {
+          "text": "Correctly identifies material as unsuitable for sub-base G30 (CBR 25% < 30%)",
+          "passed": null,
+          "evidence": ""
+        },
+        {
+          "text": "References MoWT Table 5.1 for material strength classification requirements",
+          "passed": null,
+          "evidence": ""
+        },
+        {
+          "text": "Recommends borrow from alternative source for sub-base and base layers",
+          "passed": null,
+          "evidence": ""
+        }
+      ]
+    },
+    {
+      "id": 1,
+      "prompt": "Assess the suitability of a cut material from an A-road improvement in the UK. The material has the following test results: soaked CBR 25%, Plasticity Index 18%, Liquid Limit 35%, passing 63um sieve 22%, swell 0.5%. Assess against SHW Series 600 classification. What SHW class would this material be assigned to? Is it suitable for capping (Class 6)?",
+      "expected_output": "UK assessment against SHW Series 600: Material has PI 18% and 22% passing 63um, making it a cohesive-granular mix. Potentially Class 2C (stony cohesive) or Class 2D (silty cohesive) -- MCV test data needed for definitive classification. For capping Class 6A (selected granular): FAIL due to PI 18% exceeding Class 6A limit. Potentially Class 6B (selected cohesive) but MCV data required. CBR 25% exceeds the 15% minimum for capping. Recommended: Class 2 general fill, pending MCV for possible Class 6B capping upgrade.",
+      "files": [],
+      "assertions": [
+        {
+          "text": "References SHW Series 600 for UK material classification (not MoWT Table 5.1)",
+          "passed": null,
+          "evidence": ""
+        },
+        {
+          "text": "Identifies material as potentially Class 2 (general fill) based on available data",
+          "passed": null,
+          "evidence": ""
+        },
+        {
+          "text": "Notes that MCV test data is needed for definitive SHW classification",
+          "passed": null,
+          "evidence": ""
+        },
+        {
+          "text": "Assesses capping Class 6 suitability and notes CBR 25% exceeds 15% minimum",
+          "passed": null,
+          "evidence": ""
+        },
+        {
+          "text": "Identifies PI 18% as a limiting factor for Class 6A (selected granular) use",
+          "passed": null,
+          "evidence": ""
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "prompt": "Assess the suitability of a black cotton soil encountered during cut excavation on a road project in Uganda. The test results are: soaked CBR 3% (at 98% modified AASHTO density), Plasticity Index 45%, Liquid Limit 68%, Linear Shrinkage 12%, swell 8%. The material is proposed for use as general fill in an embankment. Determine suitability and recommend appropriate action.",
+      "expected_output": "Black cotton soil is UNSUITABLE for fill. CBR 3% is below the 5% minimum for general fill. PI 45% is extremely high, indicating severe moisture sensitivity. Swell 8% indicates expansive behaviour -- material will undergo significant volume changes with moisture fluctuation. LL 68% and LS 12% confirm expansive clay mineralogy. Recommendation: (1) Remove black cotton soil and dispose at designated spoil area, (2) Replace with suitable fill from laterite borrow pit (CBR >= 15% for selected fill), (3) If treatment is considered, lime stabilization (3-5% by weight) may reduce PI and swell, but requires specialist design and trial section, (4) NEMA environmental requirements for spoil disposal. Escalation flag for expansive soil.",
+      "files": [],
+      "assertions": [
+        {
+          "text": "Clearly determines black cotton soil as UNSUITABLE for fill based on CBR 3% < 5% minimum",
+          "passed": null,
+          "evidence": ""
+        },
+        {
+          "text": "Identifies high PI (45%), high swell (8%), and high LL (68%) as critical disqualifying factors",
+          "passed": null,
+          "evidence": ""
+        },
+        {
+          "text": "Recommends removal and replacement with suitable material (not just treatment)",
+          "passed": null,
+          "evidence": ""
+        },
+        {
+          "text": "Mentions lime stabilization as a possible alternative treatment but notes specialist design and trial section requirements",
+          "passed": null,
+          "evidence": ""
+        },
+        {
+          "text": "Raises escalation flag for expansive soil and/or environmental disposal requirements",
+          "passed": null,
+          "evidence": ""
+        }
+      ]
+    }
+  ]
+}

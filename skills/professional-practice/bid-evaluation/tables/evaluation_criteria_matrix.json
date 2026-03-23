@@ -1,0 +1,131 @@
+{
+  "source": {
+    "document": "PPDA (Evaluation) Regulations 2014 / World Bank SBD / PPDA (Rules and Methods) Regulations 2014",
+    "disclaimer": "Criteria and weights are ILLUSTRATIVE -- actual criteria must match those stated in the specific bidding documents. No criteria may be added or modified during evaluation (PPDA Evaluation Regulations 2014, Regulation 7(2)).",
+    "verification": "verified-from-pdf"
+  },
+  "works_evaluation": {
+    "method": "Technical Compliance (Pass/Fail) + Lowest Evaluated Price",
+    "regulation_ref": "PPDA Evaluation Regulations 2014, Regulations 15-21",
+    "stages": [
+      {
+        "stage": "Preliminary Examination",
+        "type": "pass_fail",
+        "criteria": [
+          {
+            "criterion": "Eligibility",
+            "sub_criteria": "Legal capacity, not bankrupt, tax compliance, not suspended, no conflict of interest",
+            "regulation_ref": "Regulation 17"
+          },
+          {
+            "criterion": "Administrative Compliance",
+            "sub_criteria": "Bid security (correct form and amount), bid format, authorisation and signature, bid validity, required documents",
+            "regulation_ref": "Regulation 18"
+          }
+        ]
+      },
+      {
+        "stage": "Detailed Evaluation (Technical)",
+        "type": "pass_fail",
+        "criteria": [
+          {
+            "criterion": "Responsiveness to Terms and Conditions",
+            "sub_criteria": "Conformity with bidding document terms, no material deviation",
+            "regulation_ref": "Regulation 19(3)(a)"
+          },
+          {
+            "criterion": "Conformity with Statement of Requirements",
+            "sub_criteria": "No material deviation from requirements",
+            "regulation_ref": "Regulation 19(3)(b)"
+          },
+          {
+            "criterion": "Technical Specifications Adherence (Works)",
+            "sub_criteria": "Bid adheres to technical specifications and standards",
+            "regulation_ref": "Regulation 19(3)(d)(i)"
+          },
+          {
+            "criterion": "Work Plan and Schedule (Works)",
+            "sub_criteria": "Proposed work plan and completion schedule are adequate",
+            "regulation_ref": "Regulation 19(3)(d)(ii)"
+          },
+          {
+            "criterion": "Work Methods and Safety (Works)",
+            "sub_criteria": "Work methods including safety precautions and measures are adequate",
+            "regulation_ref": "Regulation 19(3)(d)(iii)"
+          },
+          {
+            "criterion": "Documentation (Works)",
+            "sub_criteria": "Documents submitted including drawings, charts, calculations are adequate",
+            "regulation_ref": "Regulation 19(3)(d)(iv)"
+          },
+          {
+            "criterion": "Materials and Equipment (Works)",
+            "sub_criteria": "Methods for handling materials and schedules of materials and equipment are suitable",
+            "regulation_ref": "Regulation 19(3)(d)(v)"
+          }
+        ]
+      },
+      {
+        "stage": "Financial Comparison",
+        "type": "ranked",
+        "criteria": [
+          {
+            "criterion": "Arithmetic Correction",
+            "sub_criteria": "Unit price prevails over total; subtotals prevail over total; words prevail over figures (with arithmetic exception)",
+            "regulation_ref": "Regulation 14"
+          },
+          {
+            "criterion": "Total Evaluated Price",
+            "sub_criteria": "After corrections, discounts, missing item adjustments, deviation adjustments, currency conversion, preference margin",
+            "regulation_ref": "Regulation 21"
+          }
+        ],
+        "award_basis": "Lowest evaluated price among technically responsive bids"
+      },
+      {
+        "stage": "Post-Qualification",
+        "type": "pass_fail",
+        "criteria": [
+          {
+            "criterion": "Capacity and Resources",
+            "sub_criteria": "Experience on similar contracts, key personnel, equipment, financial capacity, current workload",
+            "regulation_ref": "Regulation 34"
+          }
+        ]
+      }
+    ],
+    "pass_threshold": "N/A (pass/fail for technical compliance method -- no scoring threshold)",
+    "financial_weight": "Lowest evaluated price for ICB/NCB/ODB (price-only after technical pass). QCBS uses weighted scoring (Regulations 22-31).",
+    "evaluation_timeline_works": "40 working days from date of bid opening (Regulation 5(1)(b))"
+  },
+  "qcbs_evaluation": {
+    "method": "Quality and Cost Based Evaluation (Scored)",
+    "applicable_to": "Textbooks, IT systems, design-build contracts (Regulation 6(2))",
+    "regulation_ref": "PPDA Evaluation Regulations 2014, Regulations 22-31",
+    "technical_criteria": [
+      {
+        "criterion": "Company Experience",
+        "sub_criteria": "Similar contracts completed in last 5 years",
+        "max_score": 25
+      },
+      {
+        "criterion": "Methodology and Work Plan",
+        "sub_criteria": "Construction methodology, programme, quality plan",
+        "max_score": 25
+      },
+      {
+        "criterion": "Key Personnel",
+        "sub_criteria": "Project Manager, RE, Site Engineer qualifications and experience",
+        "max_score": 25
+      },
+      {
+        "criterion": "Equipment",
+        "sub_criteria": "Ownership/lease of key equipment items",
+        "max_score": 25
+      }
+    ],
+    "pass_threshold": 70,
+    "financial_weight": "QCBS uses weighted scoring (technical:financial typically 80:20 or 70:30 -- as stated in bidding documents)",
+    "notes": "QCBS is NOT the standard method for works under PPDA. It applies only where specified (design-build, IT). For standard works contracts, use technical compliance method."
+  }
+}

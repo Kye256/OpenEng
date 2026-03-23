@@ -1,0 +1,104 @@
+{
+  "skill_name": "tender-document-preparation",
+  "evals": [
+    {
+      "id": 0,
+      "prompt": "UNRA is preparing tender documents for a World Bank-funded trunk road rehabilitation project. The procurement method is ICB (from Skill #47, estimated value USD 25 million). The contract will use FIDIC Red Book conditions. Advise on: (a) which Standard Bidding Document to use, (b) key Bid Data Sheet entries, (c) whether single or two-envelope system applies, (d) what Particular Conditions must reference FIDIC Red Book, and (e) what the BoQ format should reference.",
+      "expected_output": "World Bank SBD for Procurement of Works selected (not PPDA SBD). Single-envelope system for ICB works (technical compliance then lowest evaluated price). BDS entries include 90-120 day bid validity, 2% bid security, minimum 40 working days bidding period. Particular Conditions modify FIDIC Red Book General Conditions and include mandatory World Bank clauses. BoQ format per Skill #51 referencing MoWT specifications.",
+      "files": [],
+      "assertions": [
+        {
+          "text": "Selects World Bank Standard Bidding Documents for Works (not PPDA SBDs) based on WB funding",
+          "passed": null,
+          "evidence": ""
+        },
+        {
+          "text": "Describes single-envelope system as standard for ICB works with technical compliance evaluation",
+          "passed": null,
+          "evidence": ""
+        },
+        {
+          "text": "References FIDIC Red Book (Skill #42) for Particular Conditions drafting",
+          "passed": null,
+          "evidence": ""
+        },
+        {
+          "text": "Identifies BoQ component as requiring Skill #51 (BoQ Preparation)",
+          "passed": null,
+          "evidence": ""
+        },
+        {
+          "text": "Notes mandatory World Bank clauses that must be included (fraud/corruption, inspection/audit)",
+          "passed": null,
+          "evidence": ""
+        }
+      ]
+    },
+    {
+      "id": 1,
+      "prompt": "A district local government in western Uganda needs to prepare tender documents for a GoU-funded district road upgrade (UGX 4 billion, Open Domestic Bidding). The project uses FIDIC Red Book conditions. Advise on: (a) SBD selection, (b) minimum bidding period, (c) key Particular Conditions entries for a typical UNRA-type road project, and (d) what approvals are needed before the documents can be issued.",
+      "expected_output": "PPDA SBD for Works (Open Domestic Bidding edition) selected. Minimum 30 working days bidding period for works under open domestic bidding. Particular Conditions cover: time for completion, 10% performance security, 5% retention, advance payment terms, delay damages rate, DAB composition. Contracts Committee must approve bidding documents before issue (PPDA Act Section 29(a)(ii)). PPDA SBDs are mandatory and may not be modified without PPDA Authority approval.",
+      "files": [],
+      "assertions": [
+        {
+          "text": "Selects PPDA Standard Bidding Documents for Works (not World Bank SBDs) based on GoU funding",
+          "passed": null,
+          "evidence": ""
+        },
+        {
+          "text": "States minimum 30 working days bidding period for open domestic bidding of works",
+          "passed": null,
+          "evidence": ""
+        },
+        {
+          "text": "Identifies key Particular Conditions entries including bid security requirements from PPDA",
+          "passed": null,
+          "evidence": ""
+        },
+        {
+          "text": "States Contracts Committee approval required before issue of bidding documents",
+          "passed": null,
+          "evidence": ""
+        },
+        {
+          "text": "Notes PPDA SBDs are mandatory and deviation requires PPDA Authority approval",
+          "passed": null,
+          "evidence": ""
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "prompt": "A donor-funded highway project requires a design-build contract. The Employer will provide performance specifications and the Contractor will design and construct. Advise on how the tender document structure differs from a traditional construction tender, what contract conditions apply, and what replaces the traditional technical specifications and BoQ components.",
+      "expected_output": "Design-build contract uses FIDIC Yellow Book (Skill #43) conditions instead of Red Book. Employer's Requirements document replaces traditional technical specifications -- defines performance criteria, functional requirements, and design standards rather than prescriptive specifications. Activity schedule or lump sum pricing replaces traditional measured BoQ. Bidders submit design proposals as part of their bids. Evaluation includes design quality assessment. Two-envelope system may be more appropriate for design-build (technical design + financial).",
+      "files": [],
+      "assertions": [
+        {
+          "text": "Identifies FIDIC Yellow Book (Skill #43) as the contract conditions for design-build",
+          "passed": null,
+          "evidence": ""
+        },
+        {
+          "text": "Describes Employer's Requirements document as replacing traditional technical specifications",
+          "passed": null,
+          "evidence": ""
+        },
+        {
+          "text": "Identifies that performance criteria replace prescriptive specifications in the tender documents",
+          "passed": null,
+          "evidence": ""
+        },
+        {
+          "text": "Notes that bidders submit design proposals as part of their bid (different from traditional construction)",
+          "passed": null,
+          "evidence": ""
+        },
+        {
+          "text": "Considers two-envelope evaluation for design-build to separately assess design quality and price",
+          "passed": null,
+          "evidence": ""
+        }
+      ]
+    }
+  ]
+}

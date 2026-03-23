@@ -1,0 +1,104 @@
+{
+  "skill_name": "procurement-methods",
+  "evals": [
+    {
+      "id": 0,
+      "prompt": "A UNRA trunk road project in northern Uganda involves rehabilitation of 65 km of national road. The estimated contract value is UGX 80 billion (approximately USD 21 million). The project is funded by World Bank IDA Credit. The project has an agreed Procurement Plan with the World Bank. There are both domestic and international contractors with relevant experience. Advise on the correct procurement method, prior review requirements, and contract form.",
+      "expected_output": "World Bank procurement rules apply (not PPDA thresholds alone). ICB selected because USD 21M exceeds the USD 15M ICB threshold. Prior review required. World Bank no-objection needed for bidding documents, evaluation report, and award. FIDIC Red Book contract form (Employer provides design). Prequalification recommended for a contract of this size.",
+      "files": ["tables/wb_procurement_thresholds.json"],
+      "assertions": [
+        {
+          "text": "Identifies World Bank as the applicable procurement framework (not PPDA alone) based on funding source",
+          "passed": null,
+          "evidence": ""
+        },
+        {
+          "text": "Selects International Competitive Bidding (ICB) based on value exceeding USD 15 million threshold",
+          "passed": null,
+          "evidence": ""
+        },
+        {
+          "text": "States that prior review is required for this contract value",
+          "passed": null,
+          "evidence": ""
+        },
+        {
+          "text": "Identifies World Bank no-objection requirements at key stages (bidding documents, evaluation, award)",
+          "passed": null,
+          "evidence": ""
+        },
+        {
+          "text": "Recommends FIDIC Red Book (Skill #42) as the contract form for traditional construction",
+          "passed": null,
+          "evidence": ""
+        }
+      ]
+    },
+    {
+      "id": 1,
+      "prompt": "A district local government in central Uganda plans to upgrade a 15 km district road from gravel to paved standard. The estimated contract value is UGX 3 billion. The project is funded entirely from the Government of Uganda budget (no donor funding). There are at least 6 domestic contractors with experience in similar district road projects. No urgency or special circumstances apply. Advise on the correct procurement method, approval requirements, and standard bidding documents to use.",
+      "expected_output": "PPDA Act framework applies (GoU funded). Open Domestic Bidding selected because UGX 3 billion exceeds the UGX 500 million threshold from Guideline 1/2014. Contracts Committee approval required for method selection, bidding documents, evaluation report, and award. PPDA Standard Bidding Documents for works. No prior review from donors (GoU funded).",
+      "files": ["tables/ppda_thresholds.json"],
+      "assertions": [
+        {
+          "text": "Applies PPDA Act framework based on GoU funding source identification",
+          "passed": null,
+          "evidence": ""
+        },
+        {
+          "text": "Selects Open Domestic Bidding based on UGX 3 billion exceeding UGX 500 million threshold",
+          "passed": null,
+          "evidence": ""
+        },
+        {
+          "text": "Identifies Contracts Committee as the approval authority",
+          "passed": null,
+          "evidence": ""
+        },
+        {
+          "text": "Specifies PPDA Standard Bidding Documents (not World Bank SBDs)",
+          "passed": null,
+          "evidence": ""
+        },
+        {
+          "text": "Flags thresholds as illustrative with recommendation to verify current values from PPDA Authority",
+          "passed": null,
+          "evidence": ""
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "prompt": "Following severe flooding in eastern Uganda, a major culvert on a national road has been completely washed out, cutting off access to several communities. UNRA needs to replace the culvert urgently. The estimated cost is UGX 150 million, funded from GoU emergency budget. Only 2 local contractors can mobilise within the required timeframe. The flooding event occurred 4 days ago and was unforeseeable. Advise on procurement method options, justification requirements, and any limitations on the use of emergency provisions.",
+      "expected_output": "Emergency provisions under PPDA Regulation 8 are applicable (urgent, unforeseeable, not caused by PDE delays). However, even in emergencies, competition must be maximised. Value falls in quotation method range (UGX 10M-200M). Recommended: quotation method with shortened timeline rather than direct procurement. If only 1 contractor can mobilise, direct procurement with comprehensive justification. Contracts Committee approval still required. Document emergency circumstances fully.",
+      "files": ["tables/ppda_thresholds.json"],
+      "assertions": [
+        {
+          "text": "Considers emergency/direct procurement under PPDA provisions but notes limitations",
+          "passed": null,
+          "evidence": ""
+        },
+        {
+          "text": "Notes that even in emergencies, competitive methods should be considered first (Regulation 8(5))",
+          "passed": null,
+          "evidence": ""
+        },
+        {
+          "text": "Identifies comprehensive justification requirements for emergency procurement",
+          "passed": null,
+          "evidence": ""
+        },
+        {
+          "text": "Recognises that with 2 available contractors, a competitive method (quotation with modifications) is feasible",
+          "passed": null,
+          "evidence": ""
+        },
+        {
+          "text": "States Contracts Committee approval is still required for emergency procurement",
+          "passed": null,
+          "evidence": ""
+        }
+      ]
+    }
+  ]
+}

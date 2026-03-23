@@ -1,0 +1,94 @@
+{
+  "skill_name": "dispute-resolution",
+  "evals": [
+    {
+      "id": 0,
+      "prompt": "On a UNRA road project (FIDIC Red Book 1999, UGX 50 billion, World Bank funded), the Contractor disagrees with the Engineer's determination on a time extension claim. The Engineer granted 2 months but the Contractor claims 4 months. The Contractor wants to challenge the determination. Advise on: (1) the next step in the dispute resolution process, (2) the DAB referral procedure under Sub-Clause 20.4, (3) the timeline for the DAB decision, and (4) what happens if a party is dissatisfied with the DAB decision.",
+      "expected_output": "Next step: formal referral to the DAB under Sub-Clause 20.4. Procedure: Contractor submits referral with statement of dispute, Engineer's determination, Contractor's claimed extension with supporting evidence. DAB gives decision within 84 days. Decision is binding on both parties -- must be complied with immediately. If dissatisfied: notice of dissatisfaction within 28 days (critical deadline -- if missed, decision becomes final and binding). Then 56-day amicable settlement period (Sub-Clause 20.5), then arbitration (Sub-Clause 20.6) if not settled.",
+      "files": [],
+      "assertions": [
+        {
+          "text": "DAB referral under Sub-Clause 20.4 correctly identified as the next step",
+          "passed": null,
+          "evidence": ""
+        },
+        {
+          "text": "28-day notice of dissatisfaction deadline referenced with consequence (decision becomes final and binding if missed)",
+          "passed": null,
+          "evidence": ""
+        },
+        {
+          "text": "DAB decision timeline of 84 days referenced",
+          "passed": null,
+          "evidence": ""
+        },
+        {
+          "text": "Three-tier sequence correctly described: DAB -> amicable settlement (56 days) -> arbitration",
+          "passed": null,
+          "evidence": ""
+        },
+        {
+          "text": "Binding nature of DAB decision emphasised -- must comply immediately even if dissatisfied",
+          "passed": null,
+          "evidence": ""
+        }
+      ]
+    },
+    {
+      "id": 1,
+      "prompt": "On a FIDIC Red Book 1999 project, the DAB has issued its decision on a payment dispute. The Contractor is satisfied, but the Employer (UNRA) disagrees with the amount. The DAB decision was received on 1 March. It is now 25 March. UNRA asks what they should do. Advise on: (1) the deadline for notice of dissatisfaction, (2) the consequence of not giving notice, (3) UNRA's obligation to comply with the decision in the meantime, and (4) the subsequent dispute resolution steps.",
+      "expected_output": "Notice of dissatisfaction deadline: 28 days from DAB decision = 29 March. UNRA has 4 days remaining. If UNRA does not give notice by 29 March, the decision becomes final and binding -- it can NEVER be challenged. UNRA must comply with the DAB decision immediately (even while giving notice of dissatisfaction) -- the decision is binding from the moment it is issued. Subsequent steps after notice: 56-day amicable settlement period (Sub-Clause 20.5), then arbitration if not settled (Sub-Clause 20.6).",
+      "files": [],
+      "assertions": [
+        {
+          "text": "Correct deadline calculated -- 28 days from 1 March = 29 March, with note that UNRA has limited time remaining",
+          "passed": null,
+          "evidence": ""
+        },
+        {
+          "text": "Consequence of missing deadline correctly stated -- decision becomes final and binding, can never be challenged",
+          "passed": null,
+          "evidence": ""
+        },
+        {
+          "text": "Immediate compliance obligation emphasised -- UNRA must comply with DAB decision regardless of dissatisfaction",
+          "passed": null,
+          "evidence": ""
+        },
+        {
+          "text": "Subsequent steps correctly sequenced: amicable settlement (56 days per Sub-Clause 20.5) then arbitration (Sub-Clause 20.6)",
+          "passed": null,
+          "evidence": ""
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "prompt": "On a small UNRA road project (FIDIC Red Book 1999, UGX 8 billion, GoU funded), a dispute has arisen about defective pavement work. The Particular Conditions for this contract do not require a DAB. The Engineer has made a determination under Sub-Clause 3.5, and the Contractor is dissatisfied. Advise on: (1) what happens when no DAB is appointed, (2) which Sub-Clause applies, (3) the dispute resolution route, and (4) whether direct arbitration is possible.",
+      "expected_output": "When no DAB is appointed, Sub-Clause 20.8 applies. Under Sub-Clause 20.8, if no DAB has been appointed (and the dispute cannot be referred to a DAB), either party may refer the dispute directly. The typical sequence: if Particular Conditions remove the DAB requirement, they should specify an alternative (e.g., direct arbitration after the Engineer's determination, or mediation). If Particular Conditions are silent, Sub-Clause 20.8 provides for reference to arbitration under Sub-Clause 20.6 after the amicable settlement period. The Engineer should check the specific Particular Conditions for this contract to determine the exact procedure.",
+      "files": [],
+      "assertions": [
+        {
+          "text": "Sub-Clause 20.8 identified as applying when no DAB is appointed",
+          "passed": null,
+          "evidence": ""
+        },
+        {
+          "text": "Addresses the scenario of no DAB -- either Particular Conditions specify alternative, or Sub-Clause 20.8 provides fallback",
+          "passed": null,
+          "evidence": ""
+        },
+        {
+          "text": "Notes that Particular Conditions should be checked for the specific dispute resolution procedure on this contract",
+          "passed": null,
+          "evidence": ""
+        },
+        {
+          "text": "Arbitration identified as the final tier of dispute resolution, whether through DAB or direct referral",
+          "passed": null,
+          "evidence": ""
+        }
+      ]
+    }
+  ]
+}

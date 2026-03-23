@@ -1,0 +1,122 @@
+{
+  "source": {
+    "manual": "MoWT Road Design Manual Vol 3 Part IV",
+    "edition": "January 2010",
+    "section": "Sections 3-5, Appendices E-F",
+    "verification": "pending"
+  },
+  "description": "Pavement rehabilitation design parameters from MoWT Vol 3 Part IV. Includes condition assessment criteria, deflection thresholds, overlay design procedures, and reconstruction triggers.",
+  "condition_assessment": {
+    "source": "Section 3, Table 2.1",
+    "iri_condition": {
+      "very_good": {"iri_max": 6},
+      "good": {"iri_min": 6, "iri_max": 11},
+      "fair": {"iri_min": 11, "iri_max": 15},
+      "poor": {"iri_min": 15, "iri_max": 19},
+      "very_poor": {"iri_min": 19}
+    },
+    "damage_quantifiers": {
+      "cracking": {
+        "description": "Percentage of road surface area exhibiting cracking",
+        "severity_levels": ["hairline", "moderate (1-3mm)", "severe (>3mm)"],
+        "measurement": "Visual survey per Appendix A methodology"
+      },
+      "rutting": {
+        "description": "Maximum rut depth measured with straight edge",
+        "severity_levels": [
+          {"level": "low", "depth_mm_max": 10},
+          {"level": "moderate", "depth_mm_min": 10, "depth_mm_max": 25},
+          {"level": "severe", "depth_mm_min": 25}
+        ]
+      },
+      "patching": {
+        "description": "Percentage of area with patches",
+        "notes": "High patching percentage indicates underlying structural problems"
+      },
+      "ravelling": {
+        "description": "Loss of aggregate from surfacing",
+        "notes": "Indicates surfacing distress, not necessarily structural failure"
+      }
+    }
+  },
+  "deflection_criteria": {
+    "source": "Section 4, Appendix B",
+    "measurement_method": "Benkelman beam (standard in Uganda) or FWD",
+    "deflection_thresholds": {
+      "overlay_candidate": {
+        "description": "Deflection range suitable for overlay design",
+        "max_deflection_mm": 2.0,
+        "notes": "Mean deflection. If max deflection > 2.0 mm, reconstruction may be needed."
+      },
+      "reconstruction_trigger": {
+        "description": "Deflection indicating structural failure requiring reconstruction",
+        "min_deflection_mm": 2.0,
+        "notes": "Combined with severe visual distress indicates reconstruction needed"
+      }
+    },
+    "temperature_correction": {
+      "description": "Deflection measurements must be corrected for pavement temperature",
+      "reference_temperature_c": 35,
+      "notes": "Uganda pavement temperatures typically 30-50 C. Correction per Appendix D."
+    }
+  },
+  "overlay_design_procedures": {
+    "deflection_procedure": {
+      "source": "Section 4.1.2",
+      "description": "Design overlay thickness from deflection data",
+      "steps": [
+        "1. Measure deflections along the road (Benkelman beam or FWD)",
+        "2. Correct for temperature to reference temperature (35 C)",
+        "3. Calculate representative rebound deflection (RRD) = mean + 2*std dev",
+        "4. Determine required SN_new for design traffic from Appendix E",
+        "5. Calculate effective SN_eff from deflection using Appendix F",
+        "6. Overlay SN_required = SN_new - SN_eff",
+        "7. Overlay thickness = SN_required / a1 (where a1 = 0.35 for AC overlay)"
+      ],
+      "overlay_coefficient": {
+        "asphalt_concrete": 0.35,
+        "source": "Table 5.2 (same as new construction)"
+      }
+    },
+    "effective_analysis_procedure": {
+      "source": "Section 4.1.3",
+      "description": "Design overlay without deflection data, using visual condition + DCP",
+      "steps": [
+        "1. Assess existing pavement condition (visual survey + DCP)",
+        "2. Determine layer thicknesses from test pits or as-built records",
+        "3. Assign condition factors to each layer based on observed distress",
+        "4. Calculate effective SN from existing layers with condition factors",
+        "5. Determine required SN_new for design traffic",
+        "6. Overlay thickness = (SN_new - SN_eff) / a1"
+      ],
+      "condition_factors": {
+        "description": "Reduction factors applied to layer coefficients based on condition",
+        "good_condition": 1.0,
+        "fair_condition": 0.75,
+        "poor_condition": 0.50,
+        "failed": 0.0,
+        "notes": "Engineering judgment required. DCP penetration rate helps assess layer condition."
+      }
+    }
+  },
+  "reconstruction_triggers": {
+    "description": "Conditions indicating full reconstruction rather than overlay",
+    "triggers": [
+      {"condition": "deflection", "threshold": "Mean deflection > 2.0 mm (Benkelman beam)", "action": "Reconstruction likely needed"},
+      {"condition": "cracking", "threshold": "Cracking area > 40% of surface", "action": "Severe structural distress -- overlay may not be adequate"},
+      {"condition": "rutting", "threshold": "Rut depth > 25 mm", "action": "Subgrade or base layer failure -- investigate before overlay"},
+      {"condition": "base_failure", "threshold": "DCP shows base layer CBR < 30% (failed)", "action": "Base reconstruction required"},
+      {"condition": "subgrade_failure", "threshold": "Subgrade CBR < design CBR after moisture damage", "action": "Full reconstruction with subgrade improvement"}
+    ],
+    "notes": "Multiple triggers occurring together strongly indicate reconstruction. A single trigger may still permit overlay if other conditions are acceptable."
+  },
+  "overlay_formula": {
+    "equation": "Overlay thickness (mm) = (SN_new - SN_eff) / a1 * 25.4",
+    "where": {
+      "SN_new": "Required structural number for new design traffic (inches, from Appendix E)",
+      "SN_eff": "Effective structural number of existing pavement (inches, from Appendix F or deflection)",
+      "a1": "Layer coefficient for overlay material (0.35 for AC per Table 5.2)"
+    },
+    "notes": "Minimum practical overlay thickness is 40 mm (AC14) or 50 mm (AC20)"
+  }
+}

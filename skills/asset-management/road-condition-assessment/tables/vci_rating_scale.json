@@ -1,0 +1,370 @@
+{
+  "source": "Adapted from UNRA visual condition survey methodology. Deduct values are representative of East African road condition assessment practice. Actual agency deduct values may differ.",
+  "disclaimer": "REPRESENTATIVE -- deduct values are indicative. Agencies may calibrate their own deduct value curves.",
+  "methodology": "VCI = 100 - Sum(deduct_values). Each distress occurrence produces one deduct value based on type, severity, and extent.",
+  "severity_scale": {
+    "L": "Low -- minor, cosmetic, no structural concern",
+    "M": "Medium -- moderate, functional impact, structural concern developing",
+    "H": "High -- severe, significant functional/structural impact"
+  },
+  "vci_condition_categories": {
+    "Good": {"min": 80, "max": 100},
+    "Fair": {"min": 60, "max": 79},
+    "Poor": {"min": 40, "max": 59},
+    "Very Poor": {"min": 0, "max": 39}
+  },
+  "paved_road_deducts": [
+    {
+      "distress_type": "alligator_cracking",
+      "display_name": "Alligator / Fatigue Cracking",
+      "severity": "L",
+      "extent_range": "< 10%",
+      "deduct": 5
+    },
+    {
+      "distress_type": "alligator_cracking",
+      "display_name": "Alligator / Fatigue Cracking",
+      "severity": "L",
+      "extent_range": "10-25%",
+      "deduct": 10
+    },
+    {
+      "distress_type": "alligator_cracking",
+      "display_name": "Alligator / Fatigue Cracking",
+      "severity": "M",
+      "extent_range": "< 10%",
+      "deduct": 10
+    },
+    {
+      "distress_type": "alligator_cracking",
+      "display_name": "Alligator / Fatigue Cracking",
+      "severity": "M",
+      "extent_range": "10-25%",
+      "deduct": 18
+    },
+    {
+      "distress_type": "alligator_cracking",
+      "display_name": "Alligator / Fatigue Cracking",
+      "severity": "M",
+      "extent_range": "> 25%",
+      "deduct": 28
+    },
+    {
+      "distress_type": "alligator_cracking",
+      "display_name": "Alligator / Fatigue Cracking",
+      "severity": "H",
+      "extent_range": "< 10%",
+      "deduct": 20
+    },
+    {
+      "distress_type": "alligator_cracking",
+      "display_name": "Alligator / Fatigue Cracking",
+      "severity": "H",
+      "extent_range": "10-25%",
+      "deduct": 30
+    },
+    {
+      "distress_type": "alligator_cracking",
+      "display_name": "Alligator / Fatigue Cracking",
+      "severity": "H",
+      "extent_range": "> 25%",
+      "deduct": 40
+    },
+    {
+      "distress_type": "longitudinal_cracking",
+      "display_name": "Longitudinal Cracking",
+      "severity": "L",
+      "extent_range": "any",
+      "deduct": 3
+    },
+    {
+      "distress_type": "longitudinal_cracking",
+      "display_name": "Longitudinal Cracking",
+      "severity": "M",
+      "extent_range": "any",
+      "deduct": 8
+    },
+    {
+      "distress_type": "longitudinal_cracking",
+      "display_name": "Longitudinal Cracking",
+      "severity": "H",
+      "extent_range": "any",
+      "deduct": 15
+    },
+    {
+      "distress_type": "transverse_cracking",
+      "display_name": "Transverse Cracking",
+      "severity": "L",
+      "extent_range": "any",
+      "deduct": 3
+    },
+    {
+      "distress_type": "transverse_cracking",
+      "display_name": "Transverse Cracking",
+      "severity": "M",
+      "extent_range": "any",
+      "deduct": 7
+    },
+    {
+      "distress_type": "transverse_cracking",
+      "display_name": "Transverse Cracking",
+      "severity": "H",
+      "extent_range": "any",
+      "deduct": 12
+    },
+    {
+      "distress_type": "rutting",
+      "display_name": "Rutting",
+      "severity": "L",
+      "extent_range": "< 10mm depth",
+      "deduct": 5
+    },
+    {
+      "distress_type": "rutting",
+      "display_name": "Rutting",
+      "severity": "M",
+      "extent_range": "10-25mm depth",
+      "deduct": 12
+    },
+    {
+      "distress_type": "rutting",
+      "display_name": "Rutting",
+      "severity": "H",
+      "extent_range": "> 25mm depth",
+      "deduct": 25
+    },
+    {
+      "distress_type": "shoving_corrugation",
+      "display_name": "Shoving / Corrugation",
+      "severity": "L",
+      "extent_range": "any",
+      "deduct": 4
+    },
+    {
+      "distress_type": "shoving_corrugation",
+      "display_name": "Shoving / Corrugation",
+      "severity": "M",
+      "extent_range": "any",
+      "deduct": 10
+    },
+    {
+      "distress_type": "shoving_corrugation",
+      "display_name": "Shoving / Corrugation",
+      "severity": "H",
+      "extent_range": "any",
+      "deduct": 18
+    },
+    {
+      "distress_type": "ravelling",
+      "display_name": "Ravelling",
+      "severity": "L",
+      "extent_range": "< 10%",
+      "deduct": 3
+    },
+    {
+      "distress_type": "ravelling",
+      "display_name": "Ravelling",
+      "severity": "M",
+      "extent_range": "10-25%",
+      "deduct": 8
+    },
+    {
+      "distress_type": "ravelling",
+      "display_name": "Ravelling",
+      "severity": "H",
+      "extent_range": "> 25%",
+      "deduct": 15
+    },
+    {
+      "distress_type": "bleeding",
+      "display_name": "Bleeding / Flushing",
+      "severity": "L",
+      "extent_range": "any",
+      "deduct": 2
+    },
+    {
+      "distress_type": "bleeding",
+      "display_name": "Bleeding / Flushing",
+      "severity": "M",
+      "extent_range": "any",
+      "deduct": 5
+    },
+    {
+      "distress_type": "bleeding",
+      "display_name": "Bleeding / Flushing",
+      "severity": "H",
+      "extent_range": "any",
+      "deduct": 10
+    },
+    {
+      "distress_type": "potholes",
+      "display_name": "Potholes",
+      "severity": "L",
+      "extent_range": "< 5%",
+      "deduct": 8
+    },
+    {
+      "distress_type": "potholes",
+      "display_name": "Potholes",
+      "severity": "M",
+      "extent_range": "5-15%",
+      "deduct": 18
+    },
+    {
+      "distress_type": "potholes",
+      "display_name": "Potholes",
+      "severity": "H",
+      "extent_range": "> 15%",
+      "deduct": 30
+    },
+    {
+      "distress_type": "patching",
+      "display_name": "Patching",
+      "severity": "L",
+      "extent_range": "< 10%",
+      "deduct": 3
+    },
+    {
+      "distress_type": "patching",
+      "display_name": "Patching",
+      "severity": "M",
+      "extent_range": "10-25%",
+      "deduct": 8
+    },
+    {
+      "distress_type": "patching",
+      "display_name": "Patching",
+      "severity": "H",
+      "extent_range": "> 25%",
+      "deduct": 15
+    }
+  ],
+  "gravel_road_deducts": [
+    {
+      "distress_type": "corrugation",
+      "display_name": "Corrugation (Washboarding)",
+      "severity": "L",
+      "extent_range": "< 20%",
+      "deduct": 5
+    },
+    {
+      "distress_type": "corrugation",
+      "display_name": "Corrugation (Washboarding)",
+      "severity": "M",
+      "extent_range": "20-50%",
+      "deduct": 12
+    },
+    {
+      "distress_type": "corrugation",
+      "display_name": "Corrugation (Washboarding)",
+      "severity": "H",
+      "extent_range": "> 50%",
+      "deduct": 22
+    },
+    {
+      "distress_type": "potholes",
+      "display_name": "Potholes",
+      "severity": "L",
+      "extent_range": "< 5%",
+      "deduct": 8
+    },
+    {
+      "distress_type": "potholes",
+      "display_name": "Potholes",
+      "severity": "M",
+      "extent_range": "5-15%",
+      "deduct": 15
+    },
+    {
+      "distress_type": "potholes",
+      "display_name": "Potholes",
+      "severity": "H",
+      "extent_range": "> 15%",
+      "deduct": 28
+    },
+    {
+      "distress_type": "erosion",
+      "display_name": "Erosion (Sheet / Channel)",
+      "severity": "L",
+      "extent_range": "< 10%",
+      "deduct": 4
+    },
+    {
+      "distress_type": "erosion",
+      "display_name": "Erosion (Sheet / Channel)",
+      "severity": "M",
+      "extent_range": "10-25%",
+      "deduct": 10
+    },
+    {
+      "distress_type": "erosion",
+      "display_name": "Erosion (Sheet / Channel)",
+      "severity": "H",
+      "extent_range": "> 25%",
+      "deduct": 20
+    },
+    {
+      "distress_type": "gravel_loss",
+      "display_name": "Gravel Loss",
+      "severity": "L",
+      "extent_range": "< 25% thickness lost",
+      "deduct": 5
+    },
+    {
+      "distress_type": "gravel_loss",
+      "display_name": "Gravel Loss",
+      "severity": "M",
+      "extent_range": "25-50% thickness lost",
+      "deduct": 12
+    },
+    {
+      "distress_type": "gravel_loss",
+      "display_name": "Gravel Loss",
+      "severity": "H",
+      "extent_range": "> 50% thickness lost",
+      "deduct": 22
+    },
+    {
+      "distress_type": "loose_material",
+      "display_name": "Loose Material",
+      "severity": "L",
+      "extent_range": "any",
+      "deduct": 3
+    },
+    {
+      "distress_type": "loose_material",
+      "display_name": "Loose Material",
+      "severity": "M",
+      "extent_range": "any",
+      "deduct": 7
+    },
+    {
+      "distress_type": "loose_material",
+      "display_name": "Loose Material",
+      "severity": "H",
+      "extent_range": "any",
+      "deduct": 12
+    },
+    {
+      "distress_type": "inadequate_crossfall",
+      "display_name": "Inadequate Crossfall / Ponding",
+      "severity": "L",
+      "extent_range": "any",
+      "deduct": 3
+    },
+    {
+      "distress_type": "inadequate_crossfall",
+      "display_name": "Inadequate Crossfall / Ponding",
+      "severity": "M",
+      "extent_range": "any",
+      "deduct": 8
+    },
+    {
+      "distress_type": "inadequate_crossfall",
+      "display_name": "Inadequate Crossfall / Ponding",
+      "severity": "H",
+      "extent_range": "any",
+      "deduct": 15
+    }
+  ]
+}

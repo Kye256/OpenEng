@@ -1,0 +1,104 @@
+{
+  "skill_name": "tara-integration",
+  "evals": [
+    {
+      "id": 0,
+      "prompt": "TARA provides a traffic forecast of 800 AADT with 20% heavy vehicles growing at 4% annually for a trunk road in Uganda. The road is being upgraded from gravel to paved standard with a 20-year design period. Calculate the design ESA using OpenEng skills and identify the traffic class for pavement design.",
+      "expected_output": "Maps TARA traffic to Skill #6 for growth application (including 10-20% generated traffic for gravel-to-paved), then calculates cumulative ESA via Skill #5 using MoWT methodology. Design year AADT approximately 1,750-2,000 vpd (with generated traffic). Cumulative ESA approximately 5-8 million ESA. Traffic class T5-T6 per MoWT classification.",
+      "files": [],
+      "assertions": [
+        {
+          "text": "Correctly maps TARA traffic data to Skill #6 (Traffic Forecasting) as the first step, applying the 4% growth rate",
+          "passed": null,
+          "evidence": ""
+        },
+        {
+          "text": "Includes generated traffic factor (10-20%) from Skill #6 for gravel-to-paved surface upgrade",
+          "passed": null,
+          "evidence": ""
+        },
+        {
+          "text": "Calculates cumulative ESA via Skill #5 using AADT, VDF, growth rate, and 20-year design period",
+          "passed": null,
+          "evidence": ""
+        },
+        {
+          "text": "Identifies MoWT traffic class (T4-T6 range) appropriate for the calculated ESA magnitude",
+          "passed": null,
+          "evidence": ""
+        },
+        {
+          "text": "Notes that Skill #5 produces cumulative ESA while TARA may work with annual values, flagging the distinction",
+          "passed": null,
+          "evidence": ""
+        }
+      ]
+    },
+    {
+      "id": 1,
+      "prompt": "Road condition surveys on a 30 km Uganda trunk road show IRI = 9.5 m/km and VCI = 25. The road needs economic justification for rehabilitation funding from the World Bank. Format the condition data for TARA economic analysis and identify the appropriate maintenance intervention using OpenEng skills.",
+      "expected_output": "Classifies condition as Very Poor (IRI >8 threshold) via Skill #56. Identifies rehabilitation trigger via Skill #57 (IRI exceeds 6 m/km threshold). Formats before/after IRI trajectories for TARA (current IRI 9.5 to post-rehabilitation ~2.5 m/km). Notes WB discount rate (6%) for economic analysis. Identifies cost pipeline inputs needed from Skills #50-53.",
+      "files": [],
+      "assertions": [
+        {
+          "text": "Correctly classifies IRI 9.5 m/km as Very Poor and VCI 25 as Poor/Very Poor via Skill #56",
+          "passed": null,
+          "evidence": ""
+        },
+        {
+          "text": "Identifies rehabilitation as the intervention via Skill #57 based on IRI exceeding the rehabilitation trigger threshold",
+          "passed": null,
+          "evidence": ""
+        },
+        {
+          "text": "Formats with-project and without-project IRI trajectories for TARA before/after comparison",
+          "passed": null,
+          "evidence": ""
+        },
+        {
+          "text": "Specifies World Bank discount rate (6% or project-specific) rather than GoU 12% for WB-funded project",
+          "passed": null,
+          "evidence": ""
+        },
+        {
+          "text": "Identifies that cost data from Skill #50 is needed to complete the TARA cost pipeline",
+          "passed": null,
+          "evidence": ""
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "prompt": "A district road in rural Uganda has no traffic counts and no condition survey data. A TARA screening analysis is needed to determine if the road warrants investment. What assumptions should be used and what data should be collected as priority?",
+      "expected_output": "Identifies data gaps for both traffic and condition pipelines. Proposes reasonable defaults: AADT from road class defaults (Skill #2 module, 50-200 vpd for district road), assumed IRI 10-14 m/km for unmaintained road. Flags all assumptions clearly. Notes that BCR likely <1.0 at 12% for low-traffic district road. Recommends non-economic justification. Specifies priority data collection: 7-day traffic count first, then visual condition survey.",
+      "files": [],
+      "assertions": [
+        {
+          "text": "Identifies both traffic and condition data gaps as the primary challenge",
+          "passed": null,
+          "evidence": ""
+        },
+        {
+          "text": "Proposes class-based AADT estimates from Skill #2 Uganda module defaults as reasonable traffic assumption",
+          "passed": null,
+          "evidence": ""
+        },
+        {
+          "text": "Proposes assumed IRI based on road age/surface type as condition estimate, flagging clearly as assumption",
+          "passed": null,
+          "evidence": ""
+        },
+        {
+          "text": "Flags that BCR is likely below 1.0 at 12% discount rate for low-traffic district road and recommends non-economic justification",
+          "passed": null,
+          "evidence": ""
+        },
+        {
+          "text": "Recommends specific priority data collection (traffic count and condition survey) before full appraisal",
+          "passed": null,
+          "evidence": ""
+        }
+      ]
+    }
+  ]
+}

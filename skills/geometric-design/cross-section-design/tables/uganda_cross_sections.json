@@ -1,0 +1,155 @@
+{
+  "source": {
+    "manual": "Uganda MoWT Road Design Manual Vol. 1",
+    "table": "Tables 4-3 to 4-9, Figures 7-14 to 7-18",
+    "page": "148-151",
+    "verified": true,
+    "verified_date": "2026-03-20"
+  },
+  "description": "Cross-section parameters by design class and context (rural/normal, town paved, town gravel, dual carriageway)",
+  "data": {
+    "rural_normal": [
+      {
+        "design_class": "Paved Ib",
+        "road_reserve_width_m": 40.0,
+        "roadway_width_m": 11.0,
+        "carriageway_width_m": 7.0,
+        "lanes": 2,
+        "lane_width_m": 3.5,
+        "shoulder_width_m": 2.0,
+        "crossfall_pct": 2.5,
+        "side_slope_pct": 4.0
+      },
+      {
+        "design_class": "Paved II",
+        "road_reserve_width_m": 30.0,
+        "roadway_width_m": 10.0,
+        "carriageway_width_m": 6.0,
+        "lanes": 2,
+        "lane_width_m": 3.0,
+        "shoulder_width_m": 2.0,
+        "crossfall_pct": 2.5,
+        "side_slope_pct": 4.0
+      },
+      {
+        "design_class": "Paved III",
+        "road_reserve_width_m": 30.0,
+        "roadway_width_m": 8.6,
+        "carriageway_width_m": 5.6,
+        "lanes": 2,
+        "lane_width_m": 2.8,
+        "shoulder_width_m": 1.5,
+        "crossfall_pct": 4.0,
+        "side_slope_pct": 4.0
+      },
+      {
+        "design_class": "Gravel A",
+        "road_reserve_width_m": 30.0,
+        "roadway_width_m": 10.0,
+        "carriageway_width_m": 6.0,
+        "lanes": 2,
+        "lane_width_m": 3.0,
+        "shoulder_width_m": 2.0,
+        "crossfall_pct": 4.0,
+        "side_slope_pct": 4.0
+      },
+      {
+        "design_class": "Gravel B",
+        "road_reserve_width_m": 25.0,
+        "roadway_width_m": 8.6,
+        "carriageway_width_m": 5.6,
+        "lanes": 2,
+        "lane_width_m": 2.8,
+        "shoulder_width_m": 1.5,
+        "crossfall_pct": 4.0,
+        "side_slope_pct": 4.0
+      },
+      {
+        "design_class": "Gravel C",
+        "road_reserve_width_m": 15.0,
+        "roadway_width_m": 6.4,
+        "carriageway_width_m": 4.0,
+        "lanes": 1,
+        "lane_width_m": 4.0,
+        "shoulder_width_m": 1.2,
+        "crossfall_pct": 4.0,
+        "side_slope_pct": 4.0
+      }
+    ],
+    "town_paved": [
+      {
+        "design_class": "Paved Ib",
+        "road_reserve_width_m": 40.0,
+        "roadway_width_m": 19.0,
+        "carriageway_width_m": 14.0,
+        "lanes": 2,
+        "lane_width_m": 3.5,
+        "outer_lane_width_m": 3.5,
+        "footway_width_m": 2.5
+      },
+      {
+        "design_class": "Paved II",
+        "road_reserve_width_m": 30.0,
+        "roadway_width_m": 17.0,
+        "carriageway_width_m": 12.0,
+        "lanes": 2,
+        "lane_width_m": 3.0,
+        "outer_lane_width_m": 3.0,
+        "footway_width_m": 2.5
+      },
+      {
+        "design_class": "Paved III",
+        "road_reserve_width_m": 30.0,
+        "roadway_width_m": 15.6,
+        "carriageway_width_m": 10.6,
+        "lanes": 2,
+        "lane_width_m": 2.8,
+        "outer_lane_width_m": 2.5,
+        "footway_width_m": 2.5
+      }
+    ],
+    "town_gravel": [
+      {
+        "design_class": "Gravel A",
+        "road_reserve_width_m": 30.0,
+        "roadway_width_m": 17.0,
+        "carriageway_width_m": 12.0,
+        "lanes": 2,
+        "lane_width_m": 3.0,
+        "outer_lane_width_m": 3.0,
+        "footway_width_m": 2.5
+      },
+      {
+        "design_class": "Gravel B",
+        "road_reserve_width_m": 25.0,
+        "roadway_width_m": 14.6,
+        "carriageway_width_m": 10.6,
+        "lanes": 2,
+        "lane_width_m": 2.8,
+        "outer_lane_width_m": 2.5,
+        "footway_width_m": 2.0
+      },
+      {
+        "design_class": "Gravel C",
+        "road_reserve_width_m": 20.0,
+        "roadway_width_m": 13.0,
+        "carriageway_width_m": 9.0,
+        "lanes": 1,
+        "lane_width_m": 4.0,
+        "outer_lane_width_m": 2.5,
+        "footway_width_m": 2.0
+      }
+    ],
+    "dual_carriageway": [
+      {
+        "design_class": "Paved Ia",
+        "roadway_width_m": 31.0,
+        "median_width_m": "1.2-5.0",
+        "lane_width_m": 3.65,
+        "lanes_per_direction": 2,
+        "outer_lane_width_m": 3.5,
+        "footway_width_m": 2.5
+      }
+    ]
+  }
+}

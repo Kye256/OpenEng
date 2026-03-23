@@ -1,0 +1,104 @@
+{
+  "skill_name": "maintenance-planning",
+  "evals": [
+    {
+      "id": 0,
+      "prompt": "A 10km section of paved national road in Uganda has been assessed by Skill #56 with the following results: condition rating = Poor, IRI = 7.5 m/km, VCI = 38, distress summary shows alligator cracking at High severity covering 25% of the area and rutting at 22mm average depth. The road is asphalt concrete, 7m wide, 2 lanes, carrying 2,500 vpd. Select the appropriate maintenance intervention, recommend specific treatments, and estimate preliminary quantities.",
+      "expected_output": "Rehabilitation triggered (IRI 7.5 > 6 m/km trigger, VCI 38 < 40 trigger). Alligator cracking at High severity with 25% extent indicates structural failure. Recommended: structural investigation (FWD/DCP), then overlay design per Skill #25. Preliminary scope: shaped patching of worst failures (immediate), then AC overlay on 70,000 m2 (10km x 7m). Drainage repair must precede overlay. Refer to Skill #25 for overlay thickness and Skill #50 for cost estimate.",
+      "files": ["tables/maintenance_trigger_levels.json", "tables/treatment_selection_matrix.json"],
+      "assertions": [
+        {
+          "text": "Correctly identifies rehabilitation as the intervention level based on IRI exceeding 6 m/km and VCI below 40",
+          "passed": null,
+          "evidence": ""
+        },
+        {
+          "text": "Identifies alligator cracking at High severity as indicating structural failure requiring more than surface treatment",
+          "passed": null,
+          "evidence": ""
+        },
+        {
+          "text": "Recommends structural investigation (FWD or DCP) before detailed rehabilitation design",
+          "passed": null,
+          "evidence": ""
+        },
+        {
+          "text": "Refers to Skill #25 (Pavement Rehabilitation) for overlay design and Skill #50 for cost estimation",
+          "passed": null,
+          "evidence": ""
+        },
+        {
+          "text": "Includes drainage repair as a prerequisite activity before surface treatment",
+          "passed": null,
+          "evidence": ""
+        }
+      ]
+    },
+    {
+      "id": 1,
+      "prompt": "A 15km gravel district road in western Uganda has condition rating = Poor from visual survey (no IRI data). Distress summary: corrugation at Medium severity covering 30% of area, potholes at Low severity covering 8%, and gravel thickness loss estimated at 40%. The road is 6m wide, carrying approximately 150 vpd. The district has a limited maintenance budget of UGX 500 million for this financial year across all district roads. Select the maintenance intervention and estimate quantities for this road section.",
+      "expected_output": "Periodic maintenance triggered (VCI in periodic range, gravel loss 40% in periodic range 25-50%, corrugation Medium severity triggers periodic). Treatment: gravel resheeting 150mm compacted. Quantities: ~18,000 m3 loose gravel (allowing for compaction), pothole patching, drain clearing 30km. Notes budget constraint and recommends prioritization per Skill #59 if budget insufficient for full resheeting.",
+      "files": ["tables/maintenance_trigger_levels.json", "tables/treatment_selection_matrix.json"],
+      "assertions": [
+        {
+          "text": "Correctly identifies periodic maintenance as the intervention level based on gravel road trigger levels",
+          "passed": null,
+          "evidence": ""
+        },
+        {
+          "text": "Selects gravel resheeting as the primary periodic treatment for gravel road with corrugation and gravel loss",
+          "passed": null,
+          "evidence": ""
+        },
+        {
+          "text": "Estimates resheeting quantities including compaction loss factor (loose volume > compacted volume)",
+          "passed": null,
+          "evidence": ""
+        },
+        {
+          "text": "Acknowledges budget constraint and references Skill #59 for prioritization if budget is insufficient",
+          "passed": null,
+          "evidence": ""
+        },
+        {
+          "text": "Includes drainage clearing as part of the maintenance plan alongside surface treatment",
+          "passed": null,
+          "evidence": ""
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "prompt": "A 50km national road corridor in Uganda has mixed conditions: 30km in Good condition (IRI < 4, VCI > 80), 15km in Fair condition (IRI 4-6, VCI 60-80), and 5km in Poor condition (IRI 6-8, VCI 40-60). Periodic maintenance has been separately programmed for the 5km Poor section. Prepare a routine maintenance plan for the entire 50km corridor, specifying activities and quantities for each maintenance type.",
+      "expected_output": "Routine maintenance applies to all 50km regardless of condition (including the 5km with periodic treatment programmed). Activities: pothole patching (~500 m2), crack sealing (~2,000 lm for Fair/Poor sections), drainage clearing (100 km), vegetation control (300,000 m2 at 3 cuts/year), shoulder maintenance (60 km), sign maintenance. Notes that routine maintenance continues even when periodic/rehabilitation is programmed.",
+      "files": ["tables/treatment_selection_matrix.json"],
+      "assertions": [
+        {
+          "text": "Plans routine maintenance for the full 50km corridor, including sections with periodic maintenance programmed",
+          "passed": null,
+          "evidence": ""
+        },
+        {
+          "text": "Includes drainage clearing as a standard routine maintenance activity with quantity estimate",
+          "passed": null,
+          "evidence": ""
+        },
+        {
+          "text": "Specifies multiple routine activities (patching, crack sealing, vegetation, drainage, shoulders) with quantities",
+          "passed": null,
+          "evidence": ""
+        },
+        {
+          "text": "Notes that routine maintenance is always needed regardless of condition -- it is baseline, not alternative to periodic",
+          "passed": null,
+          "evidence": ""
+        },
+        {
+          "text": "Provides quantity estimates suitable for input to Skill #50 (Engineer's Estimate)",
+          "passed": null,
+          "evidence": ""
+        }
+      ]
+    }
+  ]
+}

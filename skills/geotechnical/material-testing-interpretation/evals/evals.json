@@ -1,0 +1,99 @@
+{
+  "skill_name": "material-testing-interpretation",
+  "evals": [
+    {
+      "id": 0,
+      "prompt": "You are interpreting lab test results for a Uganda road project: the Gulu-Atiak trunk road upgrade (UNRA). Five soil samples from subgrade test pits along a 10 km section have been tested. The region has high rainfall (>1200 mm/year) with a distinct wet season.\n\nSample results:\n| Sample | Chainage | Depth (m) | CBR (soaked 4-day, 100% MDD) | LL (%) | PL (%) | PI (%) | LS (%) | MDD T-99 (kg/m3) | OMC (%) |\n|--------|----------|-----------|------|--------|--------|--------|--------|---------|--------|\n| TP-01 | 0+500 | 0.5-1.0 | 12 | 38 | 19 | 19 | 8.0 | 1780 | 16.2 |\n| TP-02 | 2+500 | 0.5-1.0 | 18 | 32 | 17 | 15 | 6.2 | 1850 | 14.5 |\n| TP-03 | 4+500 | 0.5-1.0 | 8 | 45 | 22 | 23 | 9.5 | 1720 | 18.0 |\n| TP-04 | 6+500 | 0.5-1.0 | 15 | 35 | 18 | 17 | 7.0 | 1810 | 15.3 |\n| TP-05 | 9+000 | 0.5-1.0 | 22 | 28 | 16 | 12 | 5.0 | 1900 | 13.0 |\n\nAdditionally, a borrow pit investigation found laterite gravel with the following results:\n| Sample | CBR (soaked 4-day, 95% mod AASHTO) | LL (%) | PL (%) | PI (%) | MDD T-180 (kg/m3) | OMC (%) |\n|--------|------|--------|--------|--------|---------|--------|\n| BP-A | 42 | 30 | 18 | 12 | 2020 | 10.5 |\n| BP-B | 35 | 33 | 19 | 14 | 1980 | 11.2 |\n| BP-C | 48 | 27 | 17 | 10 | 2050 | 9.8 |\n\nInterpret all results. Assess subgrade classification per MoWT Table 3.1. Assess borrow pit material suitability for subbase per MoWT Table 5.1. Identify any concerns and provide recommendations.",
+      "expected_output": "Subgrade CBR values range from 8-22%, giving subgrade classes S3 (TP-03 at 8%), S4 (TP-01 at 12%, TP-04 at 15%), and S5 (TP-02 at 18%, TP-05 at 22%). TP-03 is the weakest section. PI values of 12-23% indicate moderate to high plasticity subgrade soils. Borrow pit material: All 3 samples meet CBR >= 30% for subbase (Table 5.1). BP-C (PI=10) meets PI < 12 recommendation; BP-A (PI=12) is borderline; BP-B (PI=14) exceeds PI limit. Overall, borrow pit is suitable for subbase but BP-B may need PI reduction (lime treatment). Material is NOT suitable for base (CBR < 80%).",
+      "files": [],
+      "assertions": [
+        {
+          "text": "Correctly classifies subgrade per MoWT Table 3.1: TP-03 (CBR 8%) = S4 (8-14%), TP-01 (CBR 12%) = S4, TP-04 (CBR 15%) = S5 (15-29%), TP-02 (CBR 18%) = S5, TP-05 (CBR 22%) = S5",
+          "passed": null,
+          "evidence": ""
+        },
+        {
+          "text": "Correctly assesses all borrow pit samples against subbase CBR >= 30% criterion from Table 5.1 and confirms all pass",
+          "passed": null,
+          "evidence": ""
+        },
+        {
+          "text": "Identifies PI compliance issue: flags that BP-B (PI=14) exceeds the recommended PI < 12 limit for subbase materials and recommends treatment (lime, screening, or blending)",
+          "passed": null,
+          "evidence": ""
+        },
+        {
+          "text": "States that borrow pit material is NOT suitable for base course (CBR well below 80% requirement in Table 5.1)",
+          "passed": null,
+          "evidence": ""
+        },
+        {
+          "text": "Notes that soaked CBR is appropriate for this region given rainfall > 1200 mm/year (wet conditions per MoWT Table 3.2)",
+          "passed": null,
+          "evidence": ""
+        }
+      ]
+    },
+    {
+      "id": 1,
+      "prompt": "You are interpreting lab test results for a UK road improvement project: a rural road in North Yorkshire. The subgrade is glacial till (boulder clay). Three trial pit samples have been tested per BS 1377.\n\nSubgrade results:\n| Sample | Equilibrium CBR (%) | LL (%) | PL (%) | PI (%) | MCV | Description |\n|--------|-----|--------|--------|--------|-----|-------------|\n| TP-A | 3.5 | 52 | 23 | 29 | 8 | Firm to stiff brown boulder clay |\n| TP-B | 2.8 | 58 | 25 | 33 | 6 | Stiff grey boulder clay with gravel |\n| TP-C | 4.2 | 46 | 21 | 25 | 9 | Firm brown clay with sand and gravel |\n\nA proposed Type 1 sub-base aggregate has been tested:\n| Property | Result | SHW Requirement |\n|----------|--------|-----------------|\n| 10% fines value (dry) | 62 kN | > 50 kN |\n| 10% fines value (soaked) | 52 kN | > 75% of dry |\n| Passing 37.5 mm | 100% | 100% |\n| Passing 20 mm | 68% | 55-100% |\n| Passing 10 mm | 42% | 25-85% |\n| Passing 5 mm | 28% | 10-65% |\n| Passing 0.6 mm | 10% | 0-25% |\n| Passing 0.075 mm | 5% | 0-10% |\n\nInterpret the results. Determine the foundation class per CD 225. Assess the Type 1 sub-base material against SHW requirements.",
+      "expected_output": "Subgrade is Foundation Class 2 (CBR 2-5%). Design CBR approximately 3% (lower bound). Capping layer required per CD 225. Boulder clay has high PI (25-33%) but is generally not frost-susceptible due to low permeability. Type 1 sub-base: 10% fines value passes (62 kN > 50 kN, soaked/dry ratio 52/62 = 84% > 75%). Grading within SHW Table 8/3 limits. Material acceptable as Type 1 sub-base.",
+      "files": [],
+      "assertions": [
+        {
+          "text": "Assigns Foundation Class 2 (CBR 2-5% range) based on the equilibrium CBR values of 2.8-4.2%",
+          "passed": null,
+          "evidence": ""
+        },
+        {
+          "text": "Recommends capping layer requirement for Foundation Class 2 subgrade per CD 225",
+          "passed": null,
+          "evidence": ""
+        },
+        {
+          "text": "Confirms Type 1 sub-base passes 10% fines value test (62 kN > 50 kN minimum) and soaked/dry ratio meets requirements",
+          "passed": null,
+          "evidence": ""
+        },
+        {
+          "text": "Confirms Type 1 sub-base grading is within SHW specification limits for all sieve sizes",
+          "passed": null,
+          "evidence": ""
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "prompt": "You are interpreting lab test results for a Uganda road project. The Engineer has provided the following test results for a borrow pit material being considered for base course:\n\n| Sample | CBR (unsoaked, 98% mod AASHTO) | LL (%) | PL (%) | PI (%) | MDD T-180 (kg/m3) | OMC (%) |\n|--------|------|--------|--------|--------|---------|--------|\n| S1 | 95 | 35 | 18 | 17 | 1950 | 12.5 |\n| S2 | 88 | 38 | 19 | 19 | 1920 | 13.2 |\n| S3 | 72 | 32 | 17 | 15 | 1980 | 11.8 |\n\nThe project is located in western Uganda with annual rainfall exceeding 1500 mm and a high water table. The contractor insists the material meets MoWT Table 5.1 requirements for granular base. Interpret the results and assess suitability.",
+      "expected_output": "This is a trap scenario with multiple issues. (1) CBR was tested unsoaked -- for a wet region (>1500 mm rainfall), soaked CBR is required per MoWT Table 3.2. The actual soaked CBR is likely to be significantly lower. (2) PI of 15-19 far exceeds the PI < 6 limit for base course (MoWT Appendix A). (3) Only S1 and S2 have CBR > 80% -- but these are unsoaked values. (4) High CBR with high PI is an inconsistency flag -- the material may perform well dry but will degrade rapidly when wet. Conclusion: Material does NOT meet MoWT base specifications. Flag both the wrong test method and the excessive PI. Recommend re-testing with soaked CBR and/or lime treatment to reduce PI.",
+      "files": [],
+      "assertions": [
+        {
+          "text": "Flags that unsoaked CBR is inappropriate for this wet region (rainfall > 1500 mm) and that soaked CBR is required per MoWT Table 3.2",
+          "passed": null,
+          "evidence": ""
+        },
+        {
+          "text": "Flags that PI of 15-19 exceeds the PI < 6 specification limit for granular base material per MoWT Appendix A",
+          "passed": null,
+          "evidence": ""
+        },
+        {
+          "text": "Identifies the inconsistency between high CBR and high PI as a concern -- material is moisture-sensitive and soaked CBR will likely be much lower",
+          "passed": null,
+          "evidence": ""
+        },
+        {
+          "text": "Concludes the material does NOT meet MoWT base specifications and recommends re-testing with soaked CBR and/or treatment to reduce PI",
+          "passed": null,
+          "evidence": ""
+        },
+        {
+          "text": "Raises an escalation flag for the use of unsoaked CBR in a wet region and for the excessive PI",
+          "passed": null,
+          "evidence": ""
+        }
+      ]
+    }
+  ]
+}

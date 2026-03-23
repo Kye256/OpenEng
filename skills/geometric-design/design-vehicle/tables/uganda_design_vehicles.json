@@ -1,0 +1,60 @@
+{
+  "source": {
+    "manual": "Uganda MoWT Road Design Manual Vol. 1",
+    "table": "Table 5-1",
+    "page": "49-53",
+    "verified": true,
+    "verified_date": "2026-03-20"
+  },
+  "description": "Standard design vehicle dimensions and turning radii from MoWT Table 5-1",
+  "data": [
+    {
+      "vehicle_type": "Passenger Car (P)",
+      "overall_length_m": 5.8,
+      "overall_width_m": 2.1,
+      "overall_height_m": 1.3,
+      "min_turning_radius_m": 7.3,
+      "wheelbase_m": 3.4
+    },
+    {
+      "vehicle_type": "Single Unit Truck (SU)",
+      "overall_length_m": 9.2,
+      "overall_width_m": 2.6,
+      "overall_height_m": 4.1,
+      "min_turning_radius_m": 12.8,
+      "wheelbase_m": 6.1
+    },
+    {
+      "vehicle_type": "Bus (BUS)",
+      "overall_length_m": 12.2,
+      "overall_width_m": 2.6,
+      "overall_height_m": 4.1,
+      "min_turning_radius_m": 12.8,
+      "wheelbase_m": 7.6
+    },
+    {
+      "vehicle_type": "Semitrailer (WB-15)",
+      "overall_length_m": 16.8,
+      "overall_width_m": 2.6,
+      "overall_height_m": 4.1,
+      "min_turning_radius_m": 13.7,
+      "wheelbase_m": "4.0+9.6"
+    },
+    {
+      "vehicle_type": "Semitrailer (WB-19)",
+      "overall_length_m": 21.0,
+      "overall_width_m": 2.6,
+      "overall_height_m": 4.1,
+      "min_turning_radius_m": 13.7,
+      "wheelbase_m": "6.1+12.2"
+    },
+    {
+      "vehicle_type": "Semitrailer (WB-20)",
+      "overall_length_m": 22.4,
+      "overall_width_m": 2.6,
+      "overall_height_m": 4.1,
+      "min_turning_radius_m": 13.7,
+      "wheelbase_m": "6.1+13.0"
+    }
+  ]
+}

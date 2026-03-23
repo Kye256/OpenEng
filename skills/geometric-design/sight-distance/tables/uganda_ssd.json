@@ -1,0 +1,195 @@
+{
+  "source": {
+    "manual": "Uganda MoWT Road Design Manual Vol. 1",
+    "table": "Tables 6-19, 6-20",
+    "page": 129,
+    "verified": true,
+    "verified_date": "2026-03-20"
+  },
+  "description": "Stopping sight distance on level and on grades",
+  "parameters": {
+    "prt": 2.5,
+    "eye_height_m": 1.07,
+    "object_height_m": 0.15
+  },
+  "data": {
+    "level": [
+      {
+        "design_speed_kmh": 30,
+        "assumed_speed_range_kmh": [30, 30],
+        "reaction_distance_range_m": [20.8, 20.8],
+        "friction_f": 0.40,
+        "braking_distance_range_m": [8.9, 8.9],
+        "ssd_range_m": [29.7, 29.7]
+      },
+      {
+        "design_speed_kmh": 40,
+        "assumed_speed_range_kmh": [40, 40],
+        "reaction_distance_range_m": [27.8, 27.8],
+        "friction_f": 0.38,
+        "braking_distance_range_m": [16.6, 16.6],
+        "ssd_range_m": [44.4, 44.4]
+      },
+      {
+        "design_speed_kmh": 50,
+        "assumed_speed_range_kmh": [47, 50],
+        "reaction_distance_range_m": [32.6, 34.7],
+        "friction_f": 0.35,
+        "braking_distance_range_m": [24.8, 28.1],
+        "ssd_range_m": [57.5, 62.8]
+      },
+      {
+        "design_speed_kmh": 60,
+        "assumed_speed_range_kmh": [55, 60],
+        "reaction_distance_range_m": [38.2, 41.7],
+        "friction_f": 0.33,
+        "braking_distance_range_m": [36.1, 42.9],
+        "ssd_range_m": [74.3, 84.6]
+      },
+      {
+        "design_speed_kmh": 70,
+        "assumed_speed_range_kmh": [63, 70],
+        "reaction_distance_range_m": [43.8, 48.6],
+        "friction_f": 0.31,
+        "braking_distance_range_m": [50.4, 62.2],
+        "ssd_range_m": [94.2, 110.8]
+      },
+      {
+        "design_speed_kmh": 80,
+        "assumed_speed_range_kmh": [70, 80],
+        "reaction_distance_range_m": [48.6, 55.6],
+        "friction_f": 0.30,
+        "braking_distance_range_m": [64.3, 84.0],
+        "ssd_range_m": [112.9, 139.5]
+      },
+      {
+        "design_speed_kmh": 90,
+        "assumed_speed_range_kmh": [77, 90],
+        "reaction_distance_range_m": [53.5, 62.5],
+        "friction_f": 0.30,
+        "braking_distance_range_m": [77.8, 106.3],
+        "ssd_range_m": [131.3, 168.8]
+      },
+      {
+        "design_speed_kmh": 100,
+        "assumed_speed_range_kmh": [85, 100],
+        "reaction_distance_range_m": [59.0, 69.4],
+        "friction_f": 0.29,
+        "braking_distance_range_m": [98.1, 135.8],
+        "ssd_range_m": [157.0, 205.2]
+      },
+      {
+        "design_speed_kmh": 110,
+        "assumed_speed_range_kmh": [91, 110],
+        "reaction_distance_range_m": [63.2, 76.4],
+        "friction_f": 0.28,
+        "braking_distance_range_m": [116.4, 170.1],
+        "ssd_range_m": [179.6, 246.5]
+      },
+      {
+        "design_speed_kmh": 120,
+        "assumed_speed_range_kmh": [98, 120],
+        "reaction_distance_range_m": [68.1, 83.3],
+        "friction_f": 0.28,
+        "braking_distance_range_m": [135.0, 202.5],
+        "ssd_range_m": [203.1, 285.8]
+      }
+    ],
+    "grades": {
+      "description": "SSD on grades from Table 6-20. Values for 3%, 5%, and 7% grades (both downgrade and upgrade). Downgrade SSD is LONGER than level; upgrade SSD is SHORTER. G convention: positive = upgrade, negative = downgrade.",
+      "note": "Table 6-20 uses 'assumed speed for condition' which differs from design speed on downgrades. The values below are design SSD values from the table.",
+      "data_by_speed": [
+        {
+          "design_speed_kmh": 30,
+          "ssd_3pct_downgrade_m": 31,
+          "ssd_3pct_upgrade_m": 29,
+          "ssd_5pct_downgrade_m": 32,
+          "ssd_5pct_upgrade_m": 28,
+          "ssd_7pct_downgrade_m": 34,
+          "ssd_7pct_upgrade_m": 27
+        },
+        {
+          "design_speed_kmh": 40,
+          "ssd_3pct_downgrade_m": 47,
+          "ssd_3pct_upgrade_m": 42,
+          "ssd_5pct_downgrade_m": 50,
+          "ssd_5pct_upgrade_m": 41,
+          "ssd_7pct_downgrade_m": 54,
+          "ssd_7pct_upgrade_m": 39
+        },
+        {
+          "design_speed_kmh": 50,
+          "ssd_3pct_downgrade_m": 66,
+          "ssd_3pct_upgrade_m": 59,
+          "ssd_5pct_downgrade_m": 70,
+          "ssd_5pct_upgrade_m": 57,
+          "ssd_7pct_downgrade_m": 76,
+          "ssd_7pct_upgrade_m": 54
+        },
+        {
+          "design_speed_kmh": 60,
+          "ssd_3pct_downgrade_m": 90,
+          "ssd_3pct_upgrade_m": 79,
+          "ssd_5pct_downgrade_m": 97,
+          "ssd_5pct_upgrade_m": 75,
+          "ssd_7pct_downgrade_m": 107,
+          "ssd_7pct_upgrade_m": 72
+        },
+        {
+          "design_speed_kmh": 70,
+          "ssd_3pct_downgrade_m": 119,
+          "ssd_3pct_upgrade_m": 103,
+          "ssd_5pct_downgrade_m": 130,
+          "ssd_5pct_upgrade_m": 98,
+          "ssd_7pct_downgrade_m": 145,
+          "ssd_7pct_upgrade_m": 93
+        },
+        {
+          "design_speed_kmh": 80,
+          "ssd_3pct_downgrade_m": 152,
+          "ssd_3pct_upgrade_m": 129,
+          "ssd_5pct_downgrade_m": 169,
+          "ssd_5pct_upgrade_m": 122,
+          "ssd_7pct_downgrade_m": 192,
+          "ssd_7pct_upgrade_m": 116
+        },
+        {
+          "design_speed_kmh": 90,
+          "ssd_3pct_downgrade_m": 187,
+          "ssd_3pct_upgrade_m": 156,
+          "ssd_5pct_downgrade_m": 210,
+          "ssd_5pct_upgrade_m": 147,
+          "ssd_7pct_downgrade_m": 242,
+          "ssd_7pct_upgrade_m": 139
+        },
+        {
+          "design_speed_kmh": 100,
+          "ssd_3pct_downgrade_m": 229,
+          "ssd_3pct_upgrade_m": 186,
+          "ssd_5pct_downgrade_m": 260,
+          "ssd_5pct_upgrade_m": 175,
+          "ssd_7pct_downgrade_m": 304,
+          "ssd_7pct_upgrade_m": 165
+        },
+        {
+          "design_speed_kmh": 110,
+          "ssd_3pct_downgrade_m": 277,
+          "ssd_3pct_upgrade_m": 222,
+          "ssd_5pct_downgrade_m": 318,
+          "ssd_5pct_upgrade_m": 207,
+          "ssd_7pct_downgrade_m": 378,
+          "ssd_7pct_upgrade_m": 195
+        },
+        {
+          "design_speed_kmh": 120,
+          "ssd_3pct_downgrade_m": 328,
+          "ssd_3pct_upgrade_m": 256,
+          "ssd_5pct_downgrade_m": 382,
+          "ssd_5pct_upgrade_m": 239,
+          "ssd_7pct_downgrade_m": 462,
+          "ssd_7pct_upgrade_m": 224
+        }
+      ]
+    }
+  }
+}

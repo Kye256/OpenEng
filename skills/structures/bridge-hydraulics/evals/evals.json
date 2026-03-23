@@ -1,0 +1,103 @@
+{
+  "skill_name": "bridge-hydraulics",
+  "evals": [
+    {
+      "id": 0,
+      "prompt": "Assess the hydraulic adequacy of a bridge crossing on a national road in Uganda. The bridge has 3 spans of 15 m each (45 m total opening) with 3 round-nosed piers each 1.2 m wide. The river is alluvial with a natural channel width of 45 m, mean depth at Q100 of 3.0 m, bed material D50 = 1 mm (medium sand), and channel slope 0.001 m/m. The design flood Q100 = 250 m3/s. The bridge soffit is 5.0 m above the existing bed level. Determine: waterway area adequacy, pier scour depth using HEC-18 CSU equation with appropriate K-factors, contraction scour, total scour depth, freeboard check (1.5 m required for national road), and afflux assessment.",
+      "expected_output": "Waterway area: 41.4 x 3.0 = 124.2 m2, V = 2.01 m/s (exceeds 1.5 m/s sand limit). Lacey regime width = 76.5 m (bridge constricts to 59% of regime width). Live-bed conditions (V > Vc). Contraction scour approximately 1.5 m. Pier scour (CSU): K1=1.0, K2=1.0, K3=1.1, K4=1.0, ys approximately 2.0-2.5 m. Total scour approximately 4.0-4.5 m. Freeboard = 5.0 - 3.0 = 2.0 m > 1.5 m (PASS). Afflux estimated < 0.5 m. HEC-18 methodology applied per MoWT Vol 2 Section 10.",
+      "files": [
+        "skills/structures/bridge-hydraulics/tables/uganda_scour_parameters.json"
+      ],
+      "assertions": [
+        {
+          "text": "Pier scour depth calculated using HEC-18 CSU equation with K1, K2, K3, K4 correction factors all stated",
+          "passed": null,
+          "evidence": ""
+        },
+        {
+          "text": "Pier scour depth in range 1.5-3.5 m (depends on exact K-factor values and intermediate rounding)",
+          "passed": null,
+          "evidence": ""
+        },
+        {
+          "text": "Contraction scour estimated using live-bed equation (V exceeds critical velocity for D50=1mm)",
+          "passed": null,
+          "evidence": ""
+        },
+        {
+          "text": "Freeboard check performed: 2.0 m exceeds 1.5 m minimum for national road (MoWT Section 10.3.2f)",
+          "passed": null,
+          "evidence": ""
+        },
+        {
+          "text": "HEC-18 methodology referenced (not culvert hydraulics -- Skill #39 is distinct from Skill #31)",
+          "passed": null,
+          "evidence": ""
+        },
+        {
+          "text": "Lacey regime width calculated and compared with bridge opening to assess constriction",
+          "passed": null,
+          "evidence": ""
+        }
+      ]
+    },
+    {
+      "id": 1,
+      "prompt": "Assess the same bridge crossing (45 m opening, 3 piers at 1.2 m, Q100 = 250 m3/s, mean depth 3.0 m, D50 = 1 mm) for a UK context. Apply appropriate UK standards and climate change considerations.",
+      "expected_output": "UK approach references CIRIA C742 and DMRB BD 97/CD 356. Climate change uplift applied to design flow (typically 20-25%, giving Q100cc approximately 300-312 m3/s). Scour assessment uses HEC-18 methodology (accepted in UK practice) with climate-adjusted flows. Soffit clearance checked against DMRB requirements (typically 600 mm minimum). Knowledge-based flag noted since CIRIA/DMRB documents not available locally for verification.",
+      "files": [],
+      "assertions": [
+        {
+          "text": "References CIRIA C742 or DMRB BD 97/CD 356 (not MoWT)",
+          "passed": null,
+          "evidence": ""
+        },
+        {
+          "text": "Climate change uplift applied to design flow (increase of 20-40%)",
+          "passed": null,
+          "evidence": ""
+        },
+        {
+          "text": "Knowledge-based flag noted for UK module",
+          "passed": null,
+          "evidence": ""
+        },
+        {
+          "text": "HEC-18 methodology accepted for UK practice alongside CIRIA methods",
+          "passed": null,
+          "evidence": ""
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "prompt": "A bridge on a national road in Uganda has a 15 m opening over a river with a natural channel width of 40 m. Q100 = 150 m3/s. The bridge has a single 1.0 m wide pier. The constriction ratio is 15/40 = 0.375. Mean depth at Q100 is 2.5 m, D50 = 0.5 mm (fine sand). Assess the hydraulic adequacy and identify any critical concerns.",
+      "expected_output": "CRITICAL -- Severe constriction. Constriction ratio 0.375 (bridge opening only 37.5% of natural channel). Lacey regime width = 4.836 x 150^0.5 = 59.2 m -- bridge opening is only 25% of regime width. Very high contraction scour expected. Mean velocity V = 150/(15 x 2.5) = 4.0 m/s -- very high for fine sand. Significant afflux likely exceeding 0.5 m limit. Escalation: widen bridge opening or add relief openings. Upstream flood impact assessment required.",
+      "files": [
+        "skills/structures/bridge-hydraulics/tables/uganda_scour_parameters.json"
+      ],
+      "assertions": [
+        {
+          "text": "Severe constriction identified (constriction ratio < 0.5 or bridge width << regime width)",
+          "passed": null,
+          "evidence": ""
+        },
+        {
+          "text": "High contraction scour warning raised due to narrow opening relative to natural channel",
+          "passed": null,
+          "evidence": ""
+        },
+        {
+          "text": "Afflux likely exceeds 0.5 m limit -- escalation for upstream flood impact assessment",
+          "passed": null,
+          "evidence": ""
+        },
+        {
+          "text": "Recommendation to widen bridge opening or add relief openings",
+          "passed": null,
+          "evidence": ""
+        }
+      ]
+    }
+  ]
+}

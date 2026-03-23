@@ -1,0 +1,129 @@
+{
+  "source": {
+    "manual": "MoWT Road Design Manual Vol 3 Part I",
+    "edition": "January 2010",
+    "section": "Appendix A (Tables A.1-A.4), Table 5.1, Section 6",
+    "verification": "pending"
+  },
+  "description": "Material specifications for pavement layers from MoWT Appendix A and Table 5.1. Includes unbound granular, cemented, bituminous, and selected fill materials.",
+  "specifications": {
+    "strength_classification": {
+      "source": "Table 5.1",
+      "G80": {"layer": "Base", "material": "Granular", "strength": "Soaked CBR > 80% @ 98% mod. AASHTO density"},
+      "G60": {"layer": "Base/Subbase", "material": "Granular", "strength": "Soaked CBR > 60% @ 97% mod. AASHTO density"},
+      "G45": {"layer": "Subbase", "material": "Granular", "strength": "Soaked CBR > 45% @ 97% mod. AASHTO density"},
+      "G30": {"layer": "Subbase", "material": "Granular", "strength": "Soaked CBR > 30% @ 95% mod. AASHTO density"},
+      "G15": {"layer": "Capping/Selected", "material": "Granular", "strength": "Soaked CBR > 15% @ 93% mod. AASHTO density"},
+      "C1": {"layer": "Base", "material": "Cemented", "strength": "7-day UCS 1.5-3.0 MPa @ 100% mod. AASHTO density"},
+      "C2": {"layer": "Base/Subbase", "material": "Cemented", "strength": "7-day UCS 0.75-1.5 MPa @ 100% mod. AASHTO density"},
+      "C3": {"layer": "Subbase", "material": "Cemented", "strength": "7-day UCS 0.75-1.5 MPa @ 100% mod. AASHTO density"}
+    },
+    "unbound_granular": {
+      "source": "Appendix A, Section A.2",
+      "crushed_stone_base": {
+        "description": "Graded crushed stone base (Section A.2.1)",
+        "min_cbr": 80,
+        "cbr_test_condition": "Soaked, 98% mod. AASHTO MDD",
+        "max_pi": 6,
+        "max_linear_shrinkage": 3,
+        "grading": "Per MoWT General Specifications Section 3900 (Tables 3902/1, 3902/2, 3903/1)",
+        "notes": "Angular particles, not excessively flaky. Fines should be non-plastic."
+      },
+      "natural_gravel_base": {
+        "description": "Naturally-occurring granular base (Section A.2.1b)",
+        "min_cbr": 80,
+        "cbr_test_condition": "Soaked, at probable in-situ density and moisture content",
+        "max_pi": 6,
+        "grading": "Per MoWT General Specifications Section 3700 (Table 3702/2)",
+        "notes": "Lateritic, calcareous, quartzitic, river gravels commonly used in Uganda. Marginal materials (PI>6 or CBR borderline) may be acceptable for T1-T2 traffic with local evidence."
+      },
+      "granular_subbase": {
+        "description": "Granular subbase (Section A.2.2)",
+        "min_cbr": 30,
+        "cbr_test_condition": "Soaked, 95% mod. AASHTO MDD",
+        "grading": "Per MoWT General Specifications Section 3700 (Table 3702/5)",
+        "notes": "In wet areas, soaked CBR required. In drier areas, unsoaked may be considered with engineer approval."
+      },
+      "selected_fill_capping": {
+        "description": "Selected layer / capping (Section A.2.3)",
+        "min_cbr": 15,
+        "cbr_test_condition": "93% mod. AASHTO MDD at highest anticipated moisture content",
+        "notes": "Homogeneous, relatively insensitive to moisture change. Required for S1, S2, S3 subgrades."
+      }
+    },
+    "cemented_materials": {
+      "source": "Appendix A, Section A.3",
+      "cement_treated_base": {
+        "description": "Treatment or stabilisation with CEM I (Section A.3.1)",
+        "ucs_range_mpa": {"min": 1.5, "max": 3.0},
+        "specimen": "150mm cubes, 7-day moist cure, 4-hour soak",
+        "suitable_pi": "Preferably < 10. High PI materials should be lime-treated first.",
+        "cement_content_typical": "2-6% by weight",
+        "notes": "Upper and lower UCS bounds set to minimise cracking. Higher cement = wider cracks = worse performance."
+      },
+      "lime_treated": {
+        "description": "Treatment with lime (Section A.3.2)",
+        "ucs_range_mpa": {"min": 0.75, "max": 1.5},
+        "curing": "11 days moist cure (vs 7 for cement)",
+        "suitable_for": "High PI materials (PI > 10) that won't respond to cement",
+        "notes": "Effective for reducing PI. Can be pre-treatment before cement stabilisation."
+      },
+      "bitumen_emulsion_treated": {
+        "description": "Treatment with bitumen emulsion (Section A.3.3)",
+        "emulsion_type": "60% anionic stable grade",
+        "residual_bitumen": "1-3% by weight (0.6-1.8% residual)",
+        "cement_addition": "1% CEM I combined with emulsion",
+        "notes": "Effective for enhancing roadbuilding characteristics. Immune to cracking problems of cement treatment."
+      }
+    },
+    "bituminous_materials": {
+      "source": "Appendix A, Section A.4",
+      "asphalt_concrete": {
+        "description": "AC mix requirements (Table 6.14)",
+        "types": {
+          "AC20": {"use": "Primarily binder course; wearing course in severely loaded areas", "thickness_mm": "50-80", "stability_min_N": 9000},
+          "AC14": {"use": "Wearing course in normal conditions", "thickness_mm": "40-60", "stability_min_N": 7000},
+          "AC10": {"use": "Wearing course, moderate traffic only", "thickness_mm": "30-40", "stability_min_N": 4000}
+        },
+        "common_properties": {
+          "air_voids_pct": {"min": 3, "max": 6},
+          "flow_mm": {"min": 2, "max": 4},
+          "water_absorption_max_pct": 2,
+          "tfv_dry_min_kn": 110,
+          "tfv_soaked_min_pct_of_dry": 75,
+          "indirect_tensile_strength_min_kpa": 800,
+          "immersion_index_min_pct": 75
+        },
+        "bitumen_grade": {
+          "normal": "60/70 or 40/50 penetration grade",
+          "severely_loaded": "40/50 or modified binders"
+        }
+      },
+      "surface_dressing": {
+        "description": "Surface dressing / chip seal (Section 6.2, Appendix A.4.2)",
+        "types": ["Single surface dressing", "Double surface dressing", "Otta seal", "Sand seal", "Slurry seal"],
+        "aggregate_requirements": {
+          "tfv_dry_min_kn_aadt_over_1000": 160,
+          "tfv_dry_min_kn_aadt_under_1000": 120,
+          "flakiness_index_max_pct": 25,
+          "water_absorption_max_pct": 2
+        }
+      }
+    },
+    "gravel_wearing_course": {
+      "source": "MoWT Vol 3 Part III, Section 6",
+      "description": "Gravel wearing course for unsealed roads",
+      "max_particle_size_mm": 37.5,
+      "plasticity_index": {"min": 10, "max": 25, "notes": "For tropical areas. Too low = ravels; too high = slippery when wet"},
+      "shrinkage_product_max": 250,
+      "grading_modulus": {"min": 1.5, "max": 3.0},
+      "cbr_min_pct": 15,
+      "notes": "PI range 10-25 specific to tropical conditions. Temperate regions may use different limits."
+    }
+  },
+  "compaction_standards": {
+    "mod_aashto": "Modified AASHTO T-180 (heavy compaction, 4.5 kg rammer)",
+    "std_proctor": "Standard Proctor T-99 (used for subgrade CBR per Table 3.2)",
+    "note": "Table 3.2 specifies Standard Proctor for subgrade CBR, Modified AASHTO for base/subbase. Critical distinction."
+  }
+}

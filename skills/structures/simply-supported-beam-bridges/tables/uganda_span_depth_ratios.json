@@ -1,0 +1,41 @@
+{
+  "source": {
+    "manual": "Engineering practice, BS 5400 Part 4 guidance as referenced by MoWT Vol 4",
+    "note": "Approximate ratios for preliminary sizing only. Actual depth determined by detailed structural analysis.",
+    "verification": "pending"
+  },
+  "span_depth_ratios": [
+    {
+      "type": "RC deck slab",
+      "span_range_m": "up to 12",
+      "depth_ratio": "L/15 to L/20",
+      "typical_depth_m_at_10m": "0.5-0.7",
+      "construction_complexity": "Low",
+      "uganda_suitability": "Excellent"
+    },
+    {
+      "type": "RC T-beam",
+      "span_range_m": "8-25",
+      "depth_ratio": "L/12 to L/16",
+      "typical_depth_m_at_20m": "1.25-1.67",
+      "construction_complexity": "Medium",
+      "uganda_suitability": "Excellent -- most common type"
+    },
+    {
+      "type": "Steel-concrete composite",
+      "span_range_m": "15-40+",
+      "depth_ratio": "L/18 to L/22",
+      "typical_depth_m_at_25m": "1.14-1.39",
+      "construction_complexity": "High",
+      "uganda_suitability": "Limited -- requires steel erection capability"
+    },
+    {
+      "type": "Precast prestressed beam",
+      "span_range_m": "10-35",
+      "depth_ratio": "L/16 to L/20",
+      "typical_depth_m_at_20m": "1.0-1.25",
+      "construction_complexity": "Medium-High",
+      "uganda_suitability": "Depends on crane access and precasting facilities"
+    }
+  ]
+}

@@ -1,0 +1,199 @@
+{
+  "source": {
+    "document": "FIDIC Conditions of Contract for Construction",
+    "edition": "1st Edition 1999",
+    "commonly_known_as": "Red Book",
+    "verification": "pending"
+  },
+  "clauses": [
+    {
+      "sub_clause": "1.5",
+      "title": "Priority of Documents",
+      "engineers_action": "Resolve ambiguities or discrepancies by applying document priority order",
+      "time_limit": "None specified",
+      "key_principle": "Priority: (1) Contract Agreement, (2) Letter of Acceptance, (3) Letter of Tender, (4) Particular Conditions, (5) General Conditions, (6) Specification, (7) Drawings, (8) Schedules",
+      "cross_references": [],
+      "common_pitfall": "Applying General Conditions when Particular Conditions have modified the provision"
+    },
+    {
+      "sub_clause": "2.1",
+      "title": "Right of Access to the Site",
+      "engineers_action": "Monitor Employer's obligation to give right of access. Document any delays.",
+      "time_limit": "Commencement Date (or as stated in Particular Conditions)",
+      "key_principle": "Employer shall give right of access to and possession of the Site. Failure gives Contractor entitlement to Cost + profit and time extension.",
+      "cross_references": ["8.4", "20.1"],
+      "common_pitfall": "Not documenting delayed access as a potential Contractor entitlement"
+    },
+    {
+      "sub_clause": "3.5",
+      "title": "Determinations",
+      "engineers_action": "Make fair determination of any matter under the Contract",
+      "time_limit": "42 days from notification (or as modified by Particular Conditions)",
+      "key_principle": "Engineer shall consult each Party, endeavour to reach agreement. If not, make a fair determination in accordance with the Contract. This is an impartial function.",
+      "cross_references": ["20.1", "14.6", "8.4", "12.3"],
+      "common_pitfall": "Acting as Employer's agent rather than impartial certifier"
+    },
+    {
+      "sub_clause": "4.12",
+      "title": "Unforeseeable Physical Conditions",
+      "engineers_action": "Assess whether physical conditions were unforeseeable by an experienced contractor",
+      "time_limit": "Contractor must notify promptly; 28-day claim notice per 20.1",
+      "key_principle": "If conditions are unforeseeable, Contractor entitled to Cost (not profit). Engineer inspects and assesses. If conditions could have been foreseen, no entitlement.",
+      "cross_references": ["20.1", "3.5"],
+      "common_pitfall": "Confusing 'unforeseeable' with 'unforeseen' -- the test is what an experienced contractor should have anticipated"
+    },
+    {
+      "sub_clause": "8.1",
+      "title": "Commencement of Works",
+      "engineers_action": "Issue notice to commence. Verify Contractor commences within 28 days.",
+      "time_limit": "Contractor commences within 28 days after receiving notice",
+      "key_principle": "Engineer gives notice when Contractor has provided Performance Security and evidence of insurance.",
+      "cross_references": ["4.2", "8.2"],
+      "common_pitfall": "Issuing commencement notice before Performance Security is in place"
+    },
+    {
+      "sub_clause": "8.2",
+      "title": "Time for Completion",
+      "engineers_action": "Monitor progress against Time for Completion stated in Appendix to Tender",
+      "time_limit": "As stated in Appendix to Tender",
+      "key_principle": "Time for Completion is the number of days from Commencement Date. Extensions granted under Sub-Clause 8.4 are added.",
+      "cross_references": ["8.4", "8.7"],
+      "common_pitfall": "Not updating the completion date when extensions are granted"
+    },
+    {
+      "sub_clause": "8.4",
+      "title": "Extension of Time for Completion",
+      "engineers_action": "Assess entitlement to extension. Determine fair extension under Sub-Clause 3.5.",
+      "time_limit": "Contractor must claim per Sub-Clause 20.1 (28-day notice)",
+      "key_principle": "Extension available for: (a) Variation/quantity change, (b) entitlement under other clause, (c) exceptionally adverse climatic conditions, (d) unforeseeable shortages, (e) Employer-caused delay.",
+      "cross_references": ["20.1", "3.5", "13.1"],
+      "common_pitfall": "Granting extension for normal seasonal weather (not 'exceptionally adverse')"
+    },
+    {
+      "sub_clause": "8.7",
+      "title": "Delay Damages",
+      "engineers_action": "Certify delay damages if Contractor fails to complete on time",
+      "time_limit": "From expiry of Time for Completion (as extended)",
+      "key_principle": "Delay damages at rate stated in Appendix to Tender. Subject to maximum stated in Appendix. Employer may deduct from amounts due.",
+      "cross_references": ["8.2", "8.4", "14.6"],
+      "common_pitfall": "Applying delay damages before granting entitled time extensions"
+    },
+    {
+      "sub_clause": "10.1",
+      "title": "Taking Over of the Works and Sections",
+      "engineers_action": "Issue Taking-Over Certificate when Works are complete (or substantially complete)",
+      "time_limit": "Within 28 days of receiving Contractor's application (or deemed if Engineer fails)",
+      "key_principle": "Works considered complete when tests on completion passed and only minor outstanding work remains. Taking-Over triggers retention release (first half) and starts Defects Notification Period.",
+      "cross_references": ["11.1", "14.9", "9.1"],
+      "common_pitfall": "Refusing to issue TOC for minor defects that do not prevent use of the Works"
+    },
+    {
+      "sub_clause": "11.1",
+      "title": "Completion of Outstanding Work and Remedying Defects",
+      "engineers_action": "Issue notices of defects during Defects Notification Period",
+      "time_limit": "Defects Notification Period (stated in Appendix to Tender, typically 365 days)",
+      "key_principle": "Contractor shall complete outstanding work and remedy defects during the DNP. Engineer may extend DNP if defects or damage cannot be remedied expeditiously (Sub-Clause 11.3).",
+      "cross_references": ["10.1", "11.3", "14.9"],
+      "common_pitfall": "Not issuing defects notices in writing within the DNP"
+    },
+    {
+      "sub_clause": "13.1",
+      "title": "Right to Vary",
+      "engineers_action": "Initiate Variation by instruction or request proposal from Contractor",
+      "time_limit": "None specified for instruction; Contractor's proposal timing per 13.3",
+      "key_principle": "Engineer may instruct variations at any time before Taking-Over Certificate. Variations may include changes to quantities, quality, dimensions, levels, sequence, timing, or methods.",
+      "cross_references": ["12.3", "13.3", "3.5"],
+      "common_pitfall": "Instructing changes that fundamentally alter the nature of the Works (may not be a valid Variation)"
+    },
+    {
+      "sub_clause": "12.3",
+      "title": "Evaluation",
+      "engineers_action": "Agree or determine rates for varied work",
+      "time_limit": "None specified; typically before next IPC",
+      "key_principle": "Use contract rates where applicable. If not applicable, derive new rate from contract rates or agree new rate. If cannot agree, Engineer determines per Sub-Clause 3.5.",
+      "cross_references": ["13.1", "3.5", "14.6"],
+      "common_pitfall": "Using contract rates for work that is fundamentally different in character from the original item"
+    },
+    {
+      "sub_clause": "13.2",
+      "title": "Value Engineering",
+      "engineers_action": "Evaluate Contractor's proposal for value engineering savings",
+      "time_limit": "None specified",
+      "key_principle": "Contractor may propose changes that reduce cost or improve value. If accepted, savings shared (typically 50/50 unless Particular Conditions specify otherwise).",
+      "cross_references": ["13.1", "12.3"],
+      "common_pitfall": "Accepting value engineering proposals without properly assessing long-term performance implications"
+    },
+    {
+      "sub_clause": "14.3",
+      "title": "Application for Interim Payment Certificate",
+      "engineers_action": "Receive and verify Contractor's monthly Statement",
+      "time_limit": "Contractor submits monthly (or as stated in Particular Conditions)",
+      "key_principle": "Statement includes estimated contract value of work done, plus amounts the Contractor considers due. Supporting documents required.",
+      "cross_references": ["14.6", "14.7"],
+      "common_pitfall": "Rejecting a Statement for minor omissions instead of certifying the verified amount"
+    },
+    {
+      "sub_clause": "14.6",
+      "title": "Issue of Interim Payment Certificates",
+      "engineers_action": "Issue IPC within 28 days of receiving Statement",
+      "time_limit": "28 days after receiving Contractor's Statement",
+      "key_principle": "Engineer certifies the amount considered correct. May differ from Contractor's claimed amount. If Engineer fails to issue, Contractor has grounds under Sub-Clause 16.1.",
+      "cross_references": ["14.3", "14.7", "16.1"],
+      "common_pitfall": "Failing to issue IPC within 28 days -- gives Contractor right to suspend"
+    },
+    {
+      "sub_clause": "14.7",
+      "title": "Payment",
+      "engineers_action": "Monitor Employer's payment within 56 days of Statement receipt",
+      "time_limit": "Employer pays within 56 days after receiving the Statement",
+      "key_principle": "Payment is the Employer's obligation, not the Engineer's. But the Engineer should monitor and advise on late payment consequences.",
+      "cross_references": ["14.6", "14.8", "16.1"],
+      "common_pitfall": "Not documenting late payments and their entitlement consequences"
+    },
+    {
+      "sub_clause": "15.2",
+      "title": "Termination by Employer",
+      "engineers_action": "Advise Employer on grounds for termination and correct procedure",
+      "time_limit": "14-day notice (or as modified by Particular Conditions)",
+      "key_principle": "Employer may terminate if Contractor: fails to provide security (4.2), abandons works, subcontracts whole works, is bankrupt, or offers bribe. Termination must follow correct notice procedure.",
+      "cross_references": ["4.2", "15.3", "15.4"],
+      "common_pitfall": "Employer terminating without following the notice procedure -- creates counter-claims"
+    },
+    {
+      "sub_clause": "16.1",
+      "title": "Contractor's Entitlement to Suspend Work",
+      "engineers_action": "Recognise Contractor's right to suspend if Engineer fails to certify or Employer fails to pay",
+      "time_limit": "21-day notice before suspension",
+      "key_principle": "Contractor may suspend if: (a) Engineer fails to issue IPC per 14.6, or (b) Employer fails to comply with Sub-Clause 2.4 (financial arrangements), or (c) Employer fails to pay. 21-day notice required before suspension.",
+      "cross_references": ["14.6", "14.7", "2.4"],
+      "common_pitfall": "Not recognising the Contractor's legal right to suspend -- attempting to impose delay damages during a valid suspension"
+    },
+    {
+      "sub_clause": "19.1",
+      "title": "Definition of Force Majeure",
+      "engineers_action": "Assess whether claimed event meets all four elements of the definition",
+      "time_limit": "Affected Party gives notice within 14 days (19.2)",
+      "key_principle": "Four elements: (1) beyond Party's control, (2) could not reasonably have been provided against before contract, (3) could not reasonably have been avoided or overcome, (4) not substantially attributable to the other Party.",
+      "cross_references": ["19.2", "19.4", "8.4"],
+      "common_pitfall": "Accepting seasonal events (rainy season, normal flooding) as force majeure when they are foreseeable"
+    },
+    {
+      "sub_clause": "20.1",
+      "title": "Contractor's Claims",
+      "engineers_action": "Check compliance with 28-day notice requirement. Assess claim.",
+      "time_limit": "28-day notice bar. Detailed particulars within 42 days. Engineer responds within 42 days.",
+      "key_principle": "If Contractor fails to give notice within 28 days: no entitlement, Employer discharged from liability. This is the most critical procedural requirement. The time bar is strict unless modified by Particular Conditions.",
+      "cross_references": ["3.5", "8.4", "14.6"],
+      "common_pitfall": "Not applying the time bar when notice is late -- or applying it without checking Particular Conditions"
+    },
+    {
+      "sub_clause": "20.4",
+      "title": "Obtaining Dispute Adjudication Board's Decision",
+      "engineers_action": "Cooperate with DAB process. Provide records and determinations as required.",
+      "time_limit": "DAB decision within 84 days. Notice of dissatisfaction within 28 days.",
+      "key_principle": "Either Party may refer a dispute to the DAB. DAB gives decision within 84 days. Decision is binding unless either Party gives notice of dissatisfaction within 28 days.",
+      "cross_references": ["20.2", "20.5", "20.6"],
+      "common_pitfall": "Missing the 28-day notice of dissatisfaction -- the DAB decision becomes final and binding"
+    }
+  ]
+}

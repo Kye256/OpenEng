@@ -1,0 +1,90 @@
+{
+  "source": {"document": "MoWT General Specifications / FIDIC BoQ format", "disclaimer": "Item numbering is illustrative -- verify against current MoWT standard specifications", "verification": "pending"},
+  "bills": [
+    {
+      "bill": 1,
+      "title": "Preliminary & General",
+      "items": [
+        {"item": "1.01", "description": "Mobilization and establishment of camp and facilities", "unit": "LS", "source_skill": null},
+        {"item": "1.02", "description": "Performance Security", "unit": "LS", "source_skill": null},
+        {"item": "1.03", "description": "Insurance of Works", "unit": "LS", "source_skill": null},
+        {"item": "1.04", "description": "Traffic management during construction", "unit": "LS", "source_skill": null},
+        {"item": "1.05", "description": "Environmental management and monitoring", "unit": "LS", "source_skill": null},
+        {"item": "1.06", "description": "Health and safety management", "unit": "LS", "source_skill": null}
+      ]
+    },
+    {
+      "bill": 2,
+      "title": "Earthworks",
+      "items": [
+        {"item": "2.01", "description": "Clearing and grubbing", "unit": "ha", "source_skill": "Skill #26"},
+        {"item": "2.02", "description": "Topsoil stripping and stockpiling", "unit": "m3", "source_skill": "Skill #26"},
+        {"item": "2.03", "description": "Excavation in common material to spoil", "unit": "m3", "source_skill": "Skill #26"},
+        {"item": "2.04", "description": "Excavation in common material for re-use as fill", "unit": "m3", "source_skill": "Skill #26"},
+        {"item": "2.05", "description": "Rock excavation", "unit": "m3", "source_skill": "Skill #26"},
+        {"item": "2.06", "description": "Fill from approved borrow areas", "unit": "m3", "source_skill": "Skill #27"},
+        {"item": "2.07", "description": "Compaction of fill in layers not exceeding 200mm", "unit": "m3", "source_skill": "Skill #26"}
+      ]
+    },
+    {
+      "bill": 3,
+      "title": "Pavement Layers",
+      "items": [
+        {"item": "3.01", "description": "Sub-base course -- natural gravel", "unit": "m3", "source_skill": "Skill #21/#22/#23"},
+        {"item": "3.02", "description": "Base course -- crushed stone", "unit": "m3", "source_skill": "Skill #21/#22/#23"},
+        {"item": "3.03", "description": "Base course -- cement stabilized", "unit": "m3", "source_skill": "Skill #22"},
+        {"item": "3.04", "description": "Prime coat -- MC-30 cutback bitumen", "unit": "m2", "source_skill": "Skill #24"},
+        {"item": "3.05", "description": "Tack coat -- K1-60 bitumen emulsion", "unit": "m2", "source_skill": "Skill #24"},
+        {"item": "3.06", "description": "Double bituminous surface treatment (DBST)", "unit": "m2", "source_skill": "Skill #21"},
+        {"item": "3.07", "description": "Asphalt wearing course -- hot mix AC", "unit": "m2", "source_skill": "Skill #22"}
+      ]
+    },
+    {
+      "bill": 4,
+      "title": "Drainage",
+      "items": [
+        {"item": "4.01", "description": "Excavation for side drains", "unit": "m3", "source_skill": "Skill #30"},
+        {"item": "4.02", "description": "Pipe culvert supply and installation -- 600mm diameter", "unit": "m", "source_skill": "Skill #31"},
+        {"item": "4.03", "description": "Pipe culvert supply and installation -- 900mm diameter", "unit": "m", "source_skill": "Skill #31"},
+        {"item": "4.04", "description": "RC box culvert 1.5m x 1.5m", "unit": "m", "source_skill": "Skill #31/#33"},
+        {"item": "4.05", "description": "Headwalls and wingwalls", "unit": "number", "source_skill": "Skill #34"},
+        {"item": "4.06", "description": "Gabion basket erosion protection", "unit": "m3", "source_skill": "Skill #32"},
+        {"item": "4.07", "description": "Stone-pitched side drain lining", "unit": "m2", "source_skill": "Skill #30"}
+      ]
+    },
+    {
+      "bill": 5,
+      "title": "Structures",
+      "items": [
+        {"item": "5.01", "description": "Structural concrete Class 25/20 for bridge deck", "unit": "m3", "source_skill": "Skill #37"},
+        {"item": "5.02", "description": "Structural concrete Class 30/20 for piers and abutments", "unit": "m3", "source_skill": "Skill #38"},
+        {"item": "5.03", "description": "Reinforcement steel -- high yield", "unit": "kg", "source_skill": "Skill #37"},
+        {"item": "5.04", "description": "Reinforcement steel -- mild", "unit": "kg", "source_skill": "Skill #37"},
+        {"item": "5.05", "description": "Formwork to exposed surfaces", "unit": "m2", "source_skill": "Skill #37"},
+        {"item": "5.06", "description": "Elastomeric bearing pads", "unit": "number", "source_skill": "Skill #37"},
+        {"item": "5.07", "description": "Bridge railing -- steel", "unit": "m", "source_skill": "Skill #37"}
+      ]
+    },
+    {
+      "bill": 6,
+      "title": "Miscellaneous",
+      "items": [
+        {"item": "6.01", "description": "Road signs -- warning and regulatory", "unit": "number", "source_skill": null},
+        {"item": "6.02", "description": "Kilometre marker posts", "unit": "number", "source_skill": null},
+        {"item": "6.03", "description": "Road markings -- centre line and edge line", "unit": "m", "source_skill": null},
+        {"item": "6.04", "description": "Guardrails at bridge approaches", "unit": "m", "source_skill": null},
+        {"item": "6.05", "description": "Landscaping and re-vegetation", "unit": "ha", "source_skill": null}
+      ]
+    },
+    {
+      "bill": 7,
+      "title": "Dayworks",
+      "items": [
+        {"item": "7.01", "description": "Dayworks -- unskilled labour", "unit": "PS", "source_skill": null},
+        {"item": "7.02", "description": "Dayworks -- skilled labour", "unit": "PS", "source_skill": null},
+        {"item": "7.03", "description": "Dayworks -- equipment", "unit": "PS", "source_skill": null},
+        {"item": "7.04", "description": "Dayworks -- materials at cost plus percentage", "unit": "PS", "source_skill": null}
+      ]
+    }
+  ]
+}

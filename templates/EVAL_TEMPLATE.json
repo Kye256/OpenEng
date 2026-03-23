@@ -1,0 +1,75 @@
+{
+  "_template_instructions": "Copy this file to skills/<domain>/<skill-name>/evals/evals.json. Replace all placeholder values. Remove this _template_instructions field.",
+  "skill_name": "REPLACE_WITH_SKILL_SLUG",
+  "evals": [
+    {
+      "id": 0,
+      "prompt": "REPLACE: Full engineering scenario prompt. Include country context, traffic data, terrain, road function, and any relevant parameters. Be specific enough that a correct answer can be objectively evaluated.",
+      "expected_output": "REPLACE: Brief summary of the correct answer including key numerical values, standard selected, and classification.",
+      "files": [],
+      "assertions": [
+        {
+          "text": "REPLACE: Standard selection — correct manual/standard identified (e.g., 'Selects MoWT Road Design Manual')",
+          "passed": null,
+          "evidence": ""
+        },
+        {
+          "text": "REPLACE: Numerical accuracy — key calculation within acceptable range (e.g., 'Design speed between 70-100 km/h')",
+          "passed": null,
+          "evidence": ""
+        },
+        {
+          "text": "REPLACE: Country module — correct country-specific parameters applied",
+          "passed": null,
+          "evidence": ""
+        },
+        {
+          "text": "REPLACE: Assumption flagging — all assumed values explicitly marked with warning symbols",
+          "passed": null,
+          "evidence": ""
+        },
+        {
+          "text": "REPLACE: Output format — structured output matches SKILL.md Section 8 template",
+          "passed": null,
+          "evidence": ""
+        }
+      ]
+    },
+    {
+      "id": 1,
+      "prompt": "REPLACE: Second scenario — different country or edge case",
+      "expected_output": "REPLACE: Expected answer summary",
+      "files": [],
+      "assertions": [
+        {
+          "text": "REPLACE: Assertion 1",
+          "passed": null,
+          "evidence": ""
+        },
+        {
+          "text": "REPLACE: Assertion 2",
+          "passed": null,
+          "evidence": ""
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "prompt": "REPLACE: Third scenario — missing data or boundary condition",
+      "expected_output": "REPLACE: Expected answer summary",
+      "files": [],
+      "assertions": [
+        {
+          "text": "REPLACE: Escalation trigger — raises flag for missing/insufficient data",
+          "passed": null,
+          "evidence": ""
+        },
+        {
+          "text": "REPLACE: Reasonable defaults applied and documented",
+          "passed": null,
+          "evidence": ""
+        }
+      ]
+    }
+  ]
+}

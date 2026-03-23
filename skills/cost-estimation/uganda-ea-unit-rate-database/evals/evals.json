@@ -1,0 +1,94 @@
+{
+  "skill_name": "uganda-ea-unit-rate-database",
+  "evals": [
+    {
+      "id": 0,
+      "prompt": "Look up unit rates for a rural road BoQ in Central Uganda. Items needed: excavation in common material (m3), fill from approved borrow (m3), crushed stone base course (m3), DBST (m2), 600mm pipe culvert (m), and headwall (number). Present rates in both UGX and USD with the PLACEHOLDER disclaimer.",
+      "expected_output": "All 6 items found in database with rates in UGX and USD. PLACEHOLDER disclaimer present. Units match BoQ items from Skill #51. Each rate includes notes on cost drivers and source_skill reference.",
+      "files": [],
+      "assertions": [
+        {
+          "text": "All requested rates found in database with correct units",
+          "passed": null,
+          "evidence": ""
+        },
+        {
+          "text": "PLACEHOLDER disclaimer present in output",
+          "passed": null,
+          "evidence": ""
+        },
+        {
+          "text": "Units match BoQ items from Skill #51 (m3, m2, m, number)",
+          "passed": null,
+          "evidence": ""
+        },
+        {
+          "text": "Both UGX and USD rates shown with exchange rate stated",
+          "passed": null,
+          "evidence": ""
+        },
+        {
+          "text": "Source skill references included for traceability",
+          "passed": null,
+          "evidence": ""
+        }
+      ]
+    },
+    {
+      "id": 1,
+      "prompt": "Compare unit rates between Central Uganda and Northern Uganda for a 20 km road project. Look up rates for: excavation (common), crushed stone base, DBST, and 900mm pipe culvert. Apply the Northern Uganda regional adjustment factor and show both base and adjusted rates.",
+      "expected_output": "Base rates shown for Central Uganda. Northern Uganda factor (1.15-1.25) applied. Both base and adjusted rates clearly distinguished. Rationale for regional adjustment explained (transport distance, supplier availability, mobilisation). All rates flagged as PLACEHOLDER.",
+      "files": [],
+      "assertions": [
+        {
+          "text": "Regional adjustment factor applied for Northern Uganda (1.15-1.25 range)",
+          "passed": null,
+          "evidence": ""
+        },
+        {
+          "text": "Rationale for adjustment provided (transport, availability, mobilisation)",
+          "passed": null,
+          "evidence": ""
+        },
+        {
+          "text": "Both base (Central) and adjusted (Northern) rates clearly shown",
+          "passed": null,
+          "evidence": ""
+        },
+        {
+          "text": "All rates flagged as PLACEHOLDER",
+          "passed": null,
+          "evidence": ""
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "prompt": "Look up a unit rate for 'soil nailing for slope stabilisation' (m2) for a road project in Western Uganda. This item is not a standard road construction item and is unlikely to be in the database.",
+      "expected_output": "Item flagged as not found in database. Recommendation to use Skill #52 (Unit Rate Analysis) to build up rate from first principles. Suggestion to obtain specialist quotation. Escalation flag raised for non-standard item.",
+      "files": [],
+      "assertions": [
+        {
+          "text": "Item flagged as unavailable in the standard rate database",
+          "passed": null,
+          "evidence": ""
+        },
+        {
+          "text": "Recommendation to use Skill #52 for first-principles rate build-up",
+          "passed": null,
+          "evidence": ""
+        },
+        {
+          "text": "Suggestion to obtain specialist quotation for non-standard item",
+          "passed": null,
+          "evidence": ""
+        },
+        {
+          "text": "Escalation flag raised for item not in database",
+          "passed": null,
+          "evidence": ""
+        }
+      ]
+    }
+  ]
+}

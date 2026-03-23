@@ -1,0 +1,103 @@
+{
+  "skill_name": "fidic-red-book",
+  "evals": [
+    {
+      "id": 0,
+      "prompt": "You are advising the Engineer on a UNRA trunk road rehabilitation project in Uganda (World Bank funded, UGX 80 billion contract value, FIDIC Red Book 1999). The Contractor has submitted a claim for a 3-month extension of time, stating that exceptionally heavy rainfall during April-May caused flooding of the works and prevented earthworks operations for 10 weeks. The Contractor gave notice under Sub-Clause 20.1 on Day 22 after the onset of the rainfall event. Advise the Engineer on: (1) whether the notice is compliant, (2) which Sub-Clause governs the time extension entitlement, (3) how to assess whether the rainfall was 'exceptionally adverse', and (4) the Engineer's determination process. The project is located in the Lake Victoria basin region.",
+      "expected_output": "Notice is compliant (Day 22 within 28-day limit). Extension of time governed by Sub-Clause 8.4(c) -- exceptionally adverse climatic conditions. Assessment requires comparison of actual rainfall against historical records for the Lake Victoria basin. Normal seasonal rain (March-May rainy season) is NOT exceptional -- must demonstrate that rainfall exceeded historical norms significantly. Engineer determines per Sub-Clause 3.5 (consult parties, endeavour to agree, then fair determination). Particular Conditions caveat mentioned. World Bank project context noted.",
+      "files": [
+        "skills/professional-practice/fidic-red-book/tables/fidic_red_book_key_clauses.json"
+      ],
+      "assertions": [
+        {
+          "text": "Notice compliance checked -- identifies 22 days as within the 28-day limit under Sub-Clause 20.1",
+          "passed": null,
+          "evidence": ""
+        },
+        {
+          "text": "Correct entitlement clause identified -- Sub-Clause 8.4(c) for exceptionally adverse climatic conditions (not 8.4(b) or 8.4(e))",
+          "passed": null,
+          "evidence": ""
+        },
+        {
+          "text": "Assessment methodology described -- comparison against historical rainfall records for the specific location to determine if conditions were 'exceptional' vs normal seasonal",
+          "passed": null,
+          "evidence": ""
+        },
+        {
+          "text": "Engineer's determination process per Sub-Clause 3.5 described -- consult parties, endeavour to agree, fair determination",
+          "passed": null,
+          "evidence": ""
+        },
+        {
+          "text": "Particular Conditions caveat mentioned -- notes that Particular Conditions may modify time limits or assessment criteria",
+          "passed": null,
+          "evidence": ""
+        }
+      ]
+    },
+    {
+      "id": 1,
+      "prompt": "A client in Uganda is planning a road rehabilitation project where the design is already complete (detailed engineering design with drawings and specifications prepared by a consulting firm). The estimated contract value is UGX 45 billion and the project will be funded by the Government of Uganda. The client asks: should we use FIDIC Red Book or Yellow Book for this contract? Advise on contract form selection with reasons.",
+      "expected_output": "Red Book (Conditions of Contract for Construction) is the correct choice. Reasons: (1) design is complete and provided by the Employer -- Red Book is for construction where the Employer provides the design; (2) Employer retains design risk, which is appropriate since the Employer commissioned the design; (3) contract price will be based on re-measurement of quantities (measured contract), suitable for road rehabilitation where actual quantities may vary from estimates; (4) Yellow Book is for design-build where Contractor provides the design -- not appropriate when design is already complete. UNRA standard practice is Red Book for construction with Employer's design.",
+      "files": [],
+      "assertions": [
+        {
+          "text": "Red Book selected as the correct contract form for construction with Employer's design",
+          "passed": null,
+          "evidence": ""
+        },
+        {
+          "text": "Design responsibility rationale correct -- Employer provides design, Employer retains design risk under Red Book",
+          "passed": null,
+          "evidence": ""
+        },
+        {
+          "text": "Yellow Book correctly rejected with reason -- design-build not appropriate when design is already complete",
+          "passed": null,
+          "evidence": ""
+        },
+        {
+          "text": "Measurement basis noted -- re-measurement contract suitable for road rehabilitation",
+          "passed": null,
+          "evidence": ""
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "prompt": "You are advising the Engineer on a UNRA road project (FIDIC Red Book 1999). The Contractor encountered rock during excavation that was not shown in the site investigation report. The Contractor claims additional payment under Sub-Clause 4.12 (Unforeseeable Physical Conditions). However, the Contractor only submitted the claim notice 60 days after first encountering the rock -- exceeding the 28-day limit under Sub-Clause 20.1. The Particular Conditions for this contract do not modify the time bar provision. Advise the Engineer on: (1) the time bar analysis, (2) the Contractor's entitlement, (3) the Engineer's options, and (4) what the Contractor can do if dissatisfied.",
+      "expected_output": "Claim is time-barred: notice given at Day 60 exceeds the 28-day limit under Sub-Clause 20.1. Since Particular Conditions do not modify the time bar, the Contractor has no entitlement to additional payment and the Employer is discharged from liability per Sub-Clause 20.1. Engineer should assess when the Contractor 'became aware' (or should have become aware) -- the 28 days runs from awareness, not necessarily the first encounter. Engineer's fairness obligation under Sub-Clause 3.5 does not override the procedural time bar. Contractor's remedy if dissatisfied: refer to DAB under Sub-Clause 20.4.",
+      "files": [
+        "skills/professional-practice/fidic-red-book/tables/fidic_red_book_key_clauses.json"
+      ],
+      "assertions": [
+        {
+          "text": "28-day notice requirement under Sub-Clause 20.1 correctly referenced and applied -- claim identified as time-barred",
+          "passed": null,
+          "evidence": ""
+        },
+        {
+          "text": "Consequence of late notice stated -- no entitlement, Employer discharged from liability per Sub-Clause 20.1",
+          "passed": null,
+          "evidence": ""
+        },
+        {
+          "text": "Engineer's fairness obligation noted (Sub-Clause 3.5) but correctly identified as not overriding the time bar",
+          "passed": null,
+          "evidence": ""
+        },
+        {
+          "text": "Particular Conditions check performed -- confirmed no modification to time bar in this case",
+          "passed": null,
+          "evidence": ""
+        },
+        {
+          "text": "Dispute resolution route identified -- Contractor may refer to DAB if dissatisfied with Engineer's assessment",
+          "passed": null,
+          "evidence": ""
+        }
+      ]
+    }
+  ]
+}

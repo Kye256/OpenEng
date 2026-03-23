@@ -1,0 +1,86 @@
+{
+  "source": {
+    "manual": "Uganda MoWT Road Design Manual Vol. 1",
+    "table": "Tables 6-14, 6-15",
+    "page": 122,
+    "verified": true,
+    "verified_date": "2026-03-20"
+  },
+  "description": "Maximum gradients (desirable and absolute) by terrain class and design speed",
+  "unit": "percent (%)",
+  "note": "null values indicate speed/terrain combinations where the standard does not provide a value (dash in original table — combination not applicable for that terrain/speed)",
+  "data": {
+    "desirable": {
+      "terrain": "desirable maximum gradient",
+      "flat": [
+        {"design_speed_kmh": 40, "max_gradient": null},
+        {"design_speed_kmh": 50, "max_gradient": 5},
+        {"design_speed_kmh": 60, "max_gradient": 4},
+        {"design_speed_kmh": 70, "max_gradient": 4},
+        {"design_speed_kmh": 80, "max_gradient": 3.5},
+        {"design_speed_kmh": 90, "max_gradient": 3},
+        {"design_speed_kmh": 100, "max_gradient": 3},
+        {"design_speed_kmh": 110, "max_gradient": 3},
+        {"design_speed_kmh": 120, "max_gradient": 3}
+      ],
+      "rolling": [
+        {"design_speed_kmh": 40, "max_gradient": null},
+        {"design_speed_kmh": 50, "max_gradient": 7},
+        {"design_speed_kmh": 60, "max_gradient": 6},
+        {"design_speed_kmh": 70, "max_gradient": 5.5},
+        {"design_speed_kmh": 80, "max_gradient": 5},
+        {"design_speed_kmh": 90, "max_gradient": 4.5},
+        {"design_speed_kmh": 100, "max_gradient": 4.5},
+        {"design_speed_kmh": 110, "max_gradient": null},
+        {"design_speed_kmh": 120, "max_gradient": null}
+      ],
+      "mountainous": [
+        {"design_speed_kmh": 40, "max_gradient": 10},
+        {"design_speed_kmh": 50, "max_gradient": 9},
+        {"design_speed_kmh": 60, "max_gradient": 8},
+        {"design_speed_kmh": 70, "max_gradient": 7},
+        {"design_speed_kmh": 80, "max_gradient": null},
+        {"design_speed_kmh": 90, "max_gradient": null},
+        {"design_speed_kmh": 100, "max_gradient": null},
+        {"design_speed_kmh": 110, "max_gradient": null},
+        {"design_speed_kmh": 120, "max_gradient": null}
+      ]
+    },
+    "absolute": {
+      "terrain": "absolute maximum gradient",
+      "flat": [
+        {"design_speed_kmh": 40, "max_gradient": null},
+        {"design_speed_kmh": 50, "max_gradient": null},
+        {"design_speed_kmh": 60, "max_gradient": null},
+        {"design_speed_kmh": 70, "max_gradient": 6},
+        {"design_speed_kmh": 80, "max_gradient": 6},
+        {"design_speed_kmh": 90, "max_gradient": 5.5},
+        {"design_speed_kmh": 100, "max_gradient": 5},
+        {"design_speed_kmh": 110, "max_gradient": 4},
+        {"design_speed_kmh": 120, "max_gradient": 4}
+      ],
+      "rolling": [
+        {"design_speed_kmh": 40, "max_gradient": null},
+        {"design_speed_kmh": 50, "max_gradient": 9},
+        {"design_speed_kmh": 60, "max_gradient": 8},
+        {"design_speed_kmh": 70, "max_gradient": 7.5},
+        {"design_speed_kmh": 80, "max_gradient": 7},
+        {"design_speed_kmh": 90, "max_gradient": 6.5},
+        {"design_speed_kmh": 100, "max_gradient": null},
+        {"design_speed_kmh": 110, "max_gradient": null},
+        {"design_speed_kmh": 120, "max_gradient": null}
+      ],
+      "mountainous": [
+        {"design_speed_kmh": 40, "max_gradient": 12},
+        {"design_speed_kmh": 50, "max_gradient": 11},
+        {"design_speed_kmh": 60, "max_gradient": 10},
+        {"design_speed_kmh": 70, "max_gradient": 9},
+        {"design_speed_kmh": 80, "max_gradient": null},
+        {"design_speed_kmh": 90, "max_gradient": null},
+        {"design_speed_kmh": 100, "max_gradient": null},
+        {"design_speed_kmh": 110, "max_gradient": null},
+        {"design_speed_kmh": 120, "max_gradient": null}
+      ]
+    }
+  }
+}

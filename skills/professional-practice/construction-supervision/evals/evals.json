@@ -1,0 +1,89 @@
+{
+  "skill_name": "construction-supervision",
+  "evals": [
+    {
+      "id": 0,
+      "prompt": "You are advising the Resident Engineer on a UNRA trunk road rehabilitation project in Uganda (FIDIC Red Book 1999, World Bank funded). The Contractor's monthly progress report for Month 12 of an 18-month contract shows physical progress at 55% against a planned 70% -- the project is approximately 15% behind programme. The Contractor's site agent states that the delays are due to: (a) a grader breakdown lasting 3 weeks in Month 10, and (b) late delivery of culvert reinforcement steel due to supply chain issues. Advise the RE on: (1) how to assess the programme status, (2) how to analyse the causes (within or outside Contractor's control), (3) what contractual action to take, and (4) what to include in the progress report to UNRA.",
+      "expected_output": "Programme assessment should use S-curve comparison and critical path analysis. Cause analysis: grader breakdown is within Contractor's control (equipment maintenance is Contractor's responsibility); reinforcement steel supply chain issue needs further investigation -- if caused by market shortage (Sub-Clause 8.4(d)) may justify extension, if caused by Contractor's late ordering then within Contractor's control. Contractual action: issue written notice under Sub-Clause 8.3 requiring updated programme, warn of delay damages under Sub-Clause 8.7 for delays within Contractor's control. Progress report should document physical and financial progress, causes of delay, contractual notices issued, and flag risk to completion date for UNRA/World Bank awareness.",
+      "files": [],
+      "assertions": [
+        {
+          "text": "Programme assessment approach described -- S-curve comparison (planned vs actual) and critical path review to determine impact on completion date",
+          "passed": null,
+          "evidence": ""
+        },
+        {
+          "text": "Cause analysis differentiates between causes within Contractor's control (grader breakdown = equipment maintenance) and those potentially outside control (steel supply -- requires investigation)",
+          "passed": null,
+          "evidence": ""
+        },
+        {
+          "text": "Contractual action referenced -- Sub-Clause 8.3 (revised programme requirement) and Sub-Clause 8.7 (delay damages warning) for delays within Contractor's control",
+          "passed": null,
+          "evidence": ""
+        },
+        {
+          "text": "Progress report content outlined -- includes physical/financial progress, delay causes, contractual notices, and risk flagging for UNRA and World Bank",
+          "passed": null,
+          "evidence": ""
+        }
+      ]
+    },
+    {
+      "id": 1,
+      "prompt": "You are advising the RE on a UNRA road project (FIDIC Red Book 1999). During a routine quality inspection of the base course layer at Km 14, you discover that the Contractor has been placing base course material from a source that has not been formally approved by the Engineer. The material appears to be crushed stone but no source approval documentation or test results have been submitted. Approximately 800 m3 has been placed and compacted over a 400m section. Advise on: (1) immediate actions, (2) the non-conformance reporting process, (3) what testing is required to assess the placed material, and (4) the decision tree for accepting, rejecting, or conditionally accepting the material.",
+      "expected_output": "Immediate actions: stop work instruction for base course placement at this location, formal written instruction to Contractor. NCR issued documenting the non-conformance (unapproved source), specification requirement, affected quantity and location. Testing required per Skill #55: CBR (soaked, minimum 80% for base course), grading (within envelope), Atterberg limits (PI <= 6 typical), Los Angeles Abrasion (<= 30%), field density (>= 98% MDD Modified AASHTO). Decision tree: if passes all tests -- approve retrospectively with warning; if fails -- remove and replace at Contractor's cost; if marginal -- refer to Engineer for determination (accept with reduced payment or require replacement).",
+      "files": [],
+      "assertions": [
+        {
+          "text": "Immediate stop work instruction for base course placement and formal NCR issued with specification reference",
+          "passed": null,
+          "evidence": ""
+        },
+        {
+          "text": "Testing requirements referenced -- Skill #55 for material testing, with specific tests listed (CBR, grading, Atterberg limits, field density as minimum)",
+          "passed": null,
+          "evidence": ""
+        },
+        {
+          "text": "Decision tree includes three options based on test results -- retrospective approval (passes), removal and replacement (fails), and conditional acceptance with reduced payment (marginal, requires Engineer determination)",
+          "passed": null,
+          "evidence": ""
+        },
+        {
+          "text": "Unapproved source identified as the non-conformance -- not just the material quality itself, but the procedural failure of using material without approval",
+          "passed": null,
+          "evidence": ""
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "prompt": "You are advising the RE on a UNRA road project (FIDIC Red Book 1999). The Contractor's site agent approaches the RE and states: 'Last week you verbally instructed us to widen the drainage ditch at Km 8 from 0.6m to 1.0m wide. This is a variation and we will be claiming additional payment.' The RE recalls making a comment during a site walk that the ditch 'looks too narrow' but did not intend it as a formal instruction. Advise the RE on: (1) the contractual position regarding verbal instructions, (2) the Engineer's Representative authority limitations, (3) the proper variation procedure, and (4) how to handle this situation going forward.",
+      "expected_output": "Contractual position: verbal instructions are not formal instructions under FIDIC -- Sub-Clause 3.3 requires instructions to be in writing. RE should clarify that the comment was an observation, not an instruction. Authority limitations: RE's authority is defined by the delegation letter per Sub-Clause 3.2 -- RE may not have authority to issue variation instructions (check delegation). Proper variation procedure: variations must be instructed by the Engineer per Sub-Clause 13.1, not the RE (unless specifically delegated). RE should refer to Skill #45 for variation procedure. Going forward: RE must distinguish between observations/comments and formal instructions, always use written instructions with sequential numbering, and be cautious about comments that could be interpreted as instructions.",
+      "files": [],
+      "assertions": [
+        {
+          "text": "Written instruction requirement identified -- Sub-Clause 3.3 or equivalent FIDIC provision requiring instructions to be in writing",
+          "passed": null,
+          "evidence": ""
+        },
+        {
+          "text": "Engineer's Representative authority limitations per Sub-Clause 3.2 discussed -- RE acts within delegated authority only, variation instruction may require Engineer's direct involvement",
+          "passed": null,
+          "evidence": ""
+        },
+        {
+          "text": "Proper variation procedure referenced -- Sub-Clause 13.1 (Engineer's right to vary) and Skill #45 (Variations & Claims) for detailed procedure",
+          "passed": null,
+          "evidence": ""
+        },
+        {
+          "text": "Practical advice provided -- distinguish observations from instructions, use written numbered instructions, be cautious about comments during site visits",
+          "passed": null,
+          "evidence": ""
+        }
+      ]
+    }
+  ]
+}

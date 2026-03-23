@@ -1,0 +1,108 @@
+{
+  "skill_name": "sight-distance",
+  "evals": [
+    {
+      "id": 0,
+      "prompt": "Calculate the stopping sight distance for a road in Uganda with a design speed of 80 km/h on a level road. Use the MoWT Road Design Manual. Provide the SSD components (perception-reaction distance and braking distance), the total SSD, and state the friction factor used. Reference the appropriate MoWT table.",
+      "expected_output": "Using MoWT Table 6-19 at 80 km/h: friction f = 0.30, prt = 2.5 s. Reaction distance = 0.278 x 2.5 x 80 = 55.6 m. Braking distance = 80^2 / (254 x 0.30) = 84.0 m. Total SSD = 139.6 m. Table 6-19 gives a range of 112.9-139.5 m for 80 km/h. The calculated value matches the upper bound (using full design speed).",
+      "files": [
+        "skills/geometric-design/sight-distance/tables/uganda_ssd.json"
+      ],
+      "assertions": [
+        {
+          "text": "SSD calculated using MoWT formula with correct friction factor f = 0.30 for 80 km/h",
+          "passed": null,
+          "evidence": ""
+        },
+        {
+          "text": "Total SSD is in the range 112-140 m (matching MoWT Table 6-19 range for 80 km/h)",
+          "passed": null,
+          "evidence": ""
+        },
+        {
+          "text": "Perception-reaction distance component shown separately (approximately 49-56 m)",
+          "passed": null,
+          "evidence": ""
+        },
+        {
+          "text": "Braking distance component shown separately (approximately 64-84 m)",
+          "passed": null,
+          "evidence": ""
+        },
+        {
+          "text": "References MoWT Road Design Manual Table 6-19 for SSD values",
+          "passed": null,
+          "evidence": ""
+        }
+      ]
+    },
+    {
+      "id": 1,
+      "prompt": "For a single carriageway road in the UK with design speed 100A km/h, following DMRB CD 109 standards, determine the desirable minimum stopping sight distance and the full overtaking sight distance (FOSD). A crest curve on this road has K = 80. Is the desirable SSD provided? Is FOSD available over this crest? State the SSD relaxation rules for this road type.",
+      "expected_output": "From CD 109 Table 2.10 at 100 km/h: Desirable minimum SSD = 215 m. One step below = 160 m. FOSD = 580 m, FOSD overtaking crest K = 400. For crest K = 80: desirable minimum crest K = 100, one step below = 55. K = 80 is between these values — desirable SSD is NOT fully provided but one-step-below SSD IS provided. FOSD requires K = 400, so K = 80 does NOT provide FOSD. SSD relaxation for all-purpose Band A: 2 steps (Table 3.5).",
+      "files": [],
+      "assertions": [
+        {
+          "text": "Desirable minimum SSD at 100 km/h is 215 m (from CD 109 Table 2.10)",
+          "passed": null,
+          "evidence": ""
+        },
+        {
+          "text": "FOSD at 100 km/h is 580 m (from CD 109 Table 2.10)",
+          "passed": null,
+          "evidence": ""
+        },
+        {
+          "text": "Correctly identifies that K = 80 does not provide desirable SSD (desirable crest K = 100) but does provide one-step-below SSD (K = 55)",
+          "passed": null,
+          "evidence": ""
+        },
+        {
+          "text": "Correctly identifies that FOSD is not available over crest with K = 80 (requires K = 400)",
+          "passed": null,
+          "evidence": ""
+        },
+        {
+          "text": "States SSD relaxation rules from Table 3.5: all-purpose Band A gets 2 steps",
+          "passed": null,
+          "evidence": ""
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "prompt": "A road in Uganda has a design speed of 60 km/h and a 7% downgrade. The friction factor for 60 km/h is not explicitly provided in the project data — only friction factors for 50 km/h (f=0.35) and 70 km/h (f=0.31) are available. Calculate the SSD on this 7% downgrade, explaining how you handle the missing friction data and the grade adjustment. State any escalation flags.",
+      "expected_output": "Friction factor for 60 km/h can be interpolated from MoWT Table 6-19: between f=0.35 (50 km/h) and f=0.31 (70 km/h), giving approximately f=0.33 at 60 km/h. SSD on 7% downgrade: reaction = 0.278 x 2.5 x 60 = 41.7 m. Braking = 60^2 / (254 x (0.33 + (-0.07))) = 3600 / (254 x 0.26) = 3600 / 66.04 = 54.5 m. Total SSD = 96.2 m. This should be cross-checked against MoWT Table 6-20 (SSD on grades). Escalation: flag that friction data was interpolated, flag that SSD on 7% downgrade is significantly longer than on level (~84.6 m upper bound from Table 6-19), and note the conservative estimate.",
+      "files": [
+        "skills/geometric-design/sight-distance/tables/uganda_ssd.json"
+      ],
+      "assertions": [
+        {
+          "text": "Addresses missing friction factor by interpolation or conservative estimate, explaining the approach",
+          "passed": null,
+          "evidence": ""
+        },
+        {
+          "text": "Correctly applies grade adjustment with G = -0.07 (negative for downgrade per MoWT convention)",
+          "passed": null,
+          "evidence": ""
+        },
+        {
+          "text": "Calculated SSD on 7% downgrade is longer than SSD on level (demonstrates understanding that downgrade increases SSD)",
+          "passed": null,
+          "evidence": ""
+        },
+        {
+          "text": "Raises escalation flag for missing/interpolated friction data or conservative assumption",
+          "passed": null,
+          "evidence": ""
+        },
+        {
+          "text": "Provides a total SSD estimate in the range 90-120 m for 60 km/h on 7% downgrade",
+          "passed": null,
+          "evidence": ""
+        }
+      ]
+    }
+  ]
+}

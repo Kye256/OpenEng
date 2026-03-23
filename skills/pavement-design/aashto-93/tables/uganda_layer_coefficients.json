@@ -1,0 +1,55 @@
+{
+  "source": {
+    "manual": "MoWT Road Design Manual Vol 3 Part I",
+    "edition": "January 2010",
+    "table": "Table 5.2 - Layer Coefficients",
+    "page": "5-2",
+    "verification": "pending"
+  },
+  "description": "Layer coefficients for AASHTO 93 structural number calculation as specified in MoWT Table 5.2. DSN = a1*h1 + a2*h2 + a3*h3 where thicknesses are in mm.",
+  "layer_coefficients": {
+    "surfacing": {
+      "surface_dressing": {"coefficient": 0.20, "symbol": "a1", "notes": "Single or double surface dressing"},
+      "asphalt_concrete": {"coefficient": 0.35, "symbol": "a1", "notes": "Hot-mix asphalt concrete per Section 6.8"}
+    },
+    "base": {
+      "bitumen_macadam": {"coefficient": 0.20, "symbol": "a2", "notes": "Hot-mix bituminous base"},
+      "natural_or_crushed_gravel": {"coefficient": 0.12, "symbol": "a2", "notes": "Natural gravel or crushed gravel base"},
+      "crushed_stone_on_natural_gravel_subbase": {"coefficient": 0.14, "symbol": "a2", "notes": "Crushed stone base over natural gravel subbase"},
+      "crushed_stone_on_stabilised_subbase": {"coefficient": 0.18, "symbol": "a2", "notes": "Crushed stone base over stabilised subbase"},
+      "cement_treated_gravel_type_a": {"coefficient": 0.18, "symbol": "a2", "notes": "Type A: 7-day UCS 3.5-5.0 MPa"},
+      "cement_treated_gravel_type_b": {"coefficient": 0.14, "symbol": "a2", "notes": "Type B: 7-day UCS 2.0-3.5 MPa"}
+    },
+    "subbase": {
+      "natural_gravel_cbr_30_plus": {"coefficient": 0.11, "symbol": "a3", "notes": "Natural gravel with soaked CBR >= 30%"},
+      "cement_treated_type_b": {"coefficient": 0.16, "symbol": "a3", "notes": "Type B cement treated: 7-day UCS 2.0-3.5 MPa"},
+      "cement_treated_type_c": {"coefficient": 0.12, "symbol": "a3", "notes": "Type C cement treated: 7-day UCS 0.7-2.0 MPa"}
+    }
+  },
+  "dsn_formula": {
+    "equation": "DSN = a1*h1 + a2*h2 + a3*h3",
+    "units": "Thicknesses (h) in mm. DSN is weighted structural number in mm-based units.",
+    "conversion": "To convert DSN to AASHTO SN (in inches): SN = DSN / 25.4",
+    "extension": "For a fourth pavement layer, extend equation by adding a4*h4"
+  },
+  "design_parameters": {
+    "reliability_R": {
+      "trunk_roads": "80-95%",
+      "local_roads": "70-85%",
+      "note": "Higher reliability for more important roads"
+    },
+    "standard_deviation_S0": 0.45,
+    "serviceability": {
+      "initial_p0": 4.2,
+      "terminal_pt_trunk": 2.5,
+      "terminal_pt_low_volume": 2.0,
+      "delta_psi_trunk": 1.7,
+      "delta_psi_low_volume": 2.2
+    },
+    "resilient_modulus_from_cbr": {
+      "formula": "MR (psi) = 1500 * CBR",
+      "note": "AASHTO approximation for subgrade resilient modulus from CBR",
+      "valid_range": "CBR 2-20%"
+    }
+  }
+}

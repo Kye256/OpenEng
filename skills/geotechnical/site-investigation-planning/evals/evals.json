@@ -1,0 +1,94 @@
+{
+  "skill_name": "site-investigation-planning",
+  "evals": [
+    {
+      "id": 0,
+      "prompt": "Plan a ground investigation for the Gulu-Atiak Road in northern Uganda. The road is a 30 km trunk road upgrade (gravel to paved) managed by UNRA. The terrain is predominantly flat with some rolling sections. The project is at the detailed design stage. Expected soils are laterite (murram) with possible black cotton soil near Atiak. There are 1 major bridge (over the Aswa River) and 10 box culverts along the route. No previous ground investigation data is available. Provide a complete investigation plan including DCP survey, test pits, boreholes, borrow pit investigation, and laboratory testing programme.",
+      "expected_output": "MoWT Vol 3 Part I should be the reference standard. DCP survey at 100 m intervals (300 tests over 30 km). Test pits at 300-500 m spacing (~60-100 test pits). Boreholes at the Aswa River bridge (minimum 4-6, depth 15-20 m). Borrow pit investigation for murram sources. Laboratory testing: Atterberg limits, CBR (soaked 4-day), compaction, grading on all samples. Minimum 6 samples per uniform section. Black cotton soil area near Atiak should be flagged for specialist investigation (swell tests, linear shrinkage). Total investigation depth should consider Table 3.3 minimum subgrade depths.",
+      "files": [],
+      "assertions": [
+        {
+          "text": "DCP survey spacing is 100 m or similar per MoWT Section 5.8, giving approximately 300 DCP tests over 30 km",
+          "passed": null,
+          "evidence": ""
+        },
+        {
+          "text": "Test pit spacing is 200-500 m for detailed design of a trunk road, giving approximately 60-150 test pits",
+          "passed": null,
+          "evidence": ""
+        },
+        {
+          "text": "Boreholes specified at the Aswa River bridge location, with minimum one per abutment/pier (at least 4 boreholes)",
+          "passed": null,
+          "evidence": ""
+        },
+        {
+          "text": "Black cotton soil near Atiak is flagged with an escalation trigger or recommendation for additional testing (Atterberg limits, swell test, linear shrinkage)",
+          "passed": null,
+          "evidence": ""
+        },
+        {
+          "text": "Laboratory testing programme includes CBR (soaked), Atterberg limits, grading, and compaction, with minimum 6 samples per uniform section referenced",
+          "passed": null,
+          "evidence": ""
+        }
+      ]
+    },
+    {
+      "id": 1,
+      "prompt": "Plan a ground investigation for a 3 km rural road improvement scheme in Wiltshire, United Kingdom. The road is a single carriageway managed by the local highway authority (Wiltshire Council). The project involves widening and minor realignment. The terrain is flat to gently rolling. BGS mapping indicates Chalk bedrock with some clay-with-flints superficial deposits. There is one bridge over a small stream. The project is at preliminary design stage. Provide an investigation plan including appropriate UK methods and standards.",
+      "expected_output": "DMRB CD 622 / BS 5930 should be referenced. Cable percussion boreholes at 200-500 m spacing for preliminary design (6-15 boreholes). Trial pits between boreholes at 100-200 m spacing. Boreholes at bridge location. Geotechnical Risk Register should be mentioned. AGS data format specified. Testing should include classification, CBR, and chemical testing (sulphate/pH for chalk). Chalk dissolution features should be flagged as a geotechnical risk.",
+      "files": [],
+      "assertions": [
+        {
+          "text": "References DMRB CD 622 or BS 5930 as the applicable standard for UK ground investigation",
+          "passed": null,
+          "evidence": ""
+        },
+        {
+          "text": "Borehole spacing is in the 200-500 m range appropriate for preliminary design",
+          "passed": null,
+          "evidence": ""
+        },
+        {
+          "text": "Mentions or recommends a Geotechnical Risk Register per DMRB requirements",
+          "passed": null,
+          "evidence": ""
+        },
+        {
+          "text": "Identifies chalk dissolution features or solution features as a geotechnical risk requiring investigation",
+          "passed": null,
+          "evidence": ""
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "prompt": "Plan a ground investigation for a 20 km district road upgrade in Karamoja region, north-eastern Uganda. The road connects Moroto to Kotido. The project is at detailed design stage. The terrain is rolling to mountainous. No existing ground investigation data is available, and no geological maps are available for the area. The available investigation budget is very limited -- the client can only afford 50 DCP tests and 20 test pits for the entire 20 km. There are 5 box culverts and no bridges. The area is known for black cotton soil and seasonal flooding. Provide an investigation plan that addresses the budget constraints while highlighting risks.",
+      "expected_output": "The plan should use MoWT Vol 3 Part I as reference. With only 50 DCP tests over 20 km, spacing would be 400 m -- well above the recommended 100 m. This must be flagged as an escalation. With 20 test pits, spacing is 1000 m. The plan should prioritise investigation at known problem areas (black cotton soil, flooding areas, culvert locations). An escalation flag should be raised for insufficient investigation scope, recommending either increased budget or acceptance of higher design risk. The plan should still specify appropriate testing (soaked CBR, Atterberg limits) and flag the need for geological reconnaissance in the absence of geological maps.",
+      "files": [],
+      "assertions": [
+        {
+          "text": "Raises an escalation flag for insufficient investigation scope relative to MoWT recommendations (budget allows only 400 m DCP spacing vs 100 m recommended)",
+          "passed": null,
+          "evidence": ""
+        },
+        {
+          "text": "Recommends prioritising investigation at problem areas (black cotton soil locations, flooding areas, culvert locations) given limited budget",
+          "passed": null,
+          "evidence": ""
+        },
+        {
+          "text": "Flags the absence of geological maps as a risk and recommends geological reconnaissance or walkover survey",
+          "passed": null,
+          "evidence": ""
+        },
+        {
+          "text": "Despite budget constraints, specifies appropriate lab testing including soaked CBR and Atterberg limits for black cotton soil identification",
+          "passed": null,
+          "evidence": ""
+        }
+      ]
+    }
+  ]
+}

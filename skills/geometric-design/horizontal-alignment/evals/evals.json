@@ -1,0 +1,99 @@
+{
+  "skill_name": "horizontal-alignment",
+  "evals": [
+    {
+      "id": 0,
+      "prompt": "Design a horizontal curve for a Class II trunk road in Uganda. The design speed is 80 km/h, the maximum superelevation is 7% (emax = 0.07, rural road per MoWT standard), and the terrain is flat. Using the MoWT Road Design Manual and the formula R = V^2 / (127 * (e + f)), determine the minimum radius, the recommended superelevation rate for a curve of radius 300 m, and the required transition curve length.",
+      "expected_output": "Using R_min = V^2 / (127 * (emax + fmax)) with V=80, emax=0.07, fmax=0.14 (from MoWT Table 6.1): R_min = 6400 / (127 * 0.21) = 6400 / 26.67 = approximately 240 m. For a 300 m radius curve, superelevation is calculated from the formula and should be less than emax (approximately 4-6%). Transition curve length calculated from superelevation development requirements, approximately 80-120 m depending on method used.",
+      "files": [],
+      "assertions": [
+        {
+          "text": "Minimum radius calculated using R = V^2/(127*(e+f)) formula or equivalent table lookup from MoWT",
+          "passed": null,
+          "evidence": ""
+        },
+        {
+          "text": "Minimum radius is between 220-260 m for 80 km/h design speed with emax=7% (MoWT Table 6.1 gives 240 m)",
+          "passed": null,
+          "evidence": ""
+        },
+        {
+          "text": "Superelevation rate for 300 m radius is specified and does not exceed 7%",
+          "passed": null,
+          "evidence": ""
+        },
+        {
+          "text": "Transition curve (spiral) length is calculated and specified with a reasonable value between 60-150 m",
+          "passed": null,
+          "evidence": ""
+        },
+        {
+          "text": "References MoWT Road Design Manual for parameter values (friction factors, superelevation limits)",
+          "passed": null,
+          "evidence": ""
+        }
+      ]
+    },
+    {
+      "id": 1,
+      "prompt": "Design the horizontal alignment for a single carriageway road in the United Kingdom. The design speed is 100 km/h (approximately 60 mph), the road follows DMRB CD 109 standard, and the terrain is rolling. Determine the desirable minimum radius and the absolute minimum radius, the required superelevation for a proposed curve of radius 600 m, and any required transition curve length.",
+      "expected_output": "Per DMRB CD 109 Table 2.10 at 100 km/h: Desirable minimum radius (at V^2/R = 14.14, superelevation 5%) = 720 m. One step below desirable (V^2/R = 20) = 510 m. Two steps below (V^2/R = 28.28) = 360 m. For R=600 m: V^2/R = 10000/600 = 16.67, which is one step below desirable minimum (Relaxation required). Superelevation S = V^2/(2.828*R) = 10000/1696.8 = approximately 5.9%. Transition length L = V^3/(46.7*q*R) with q=0.3 gives approximately 119 m.",
+      "files": [],
+      "assertions": [
+        {
+          "text": "References DMRB CD 109 for horizontal alignment parameters (not AASHTO formula)",
+          "passed": null,
+          "evidence": ""
+        },
+        {
+          "text": "Provides both desirable minimum radius (700-750 m range) and at least one step below desirable value (490-530 m range) for 100 km/h",
+          "passed": null,
+          "evidence": ""
+        },
+        {
+          "text": "Superelevation for the 600 m curve is between 5-7% (UK practice maximum 7% rural)",
+          "passed": null,
+          "evidence": ""
+        },
+        {
+          "text": "Transition curve requirements stated per DMRB with length in the 90-140 m range",
+          "passed": null,
+          "evidence": ""
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "prompt": "A mountainous road in Uganda with a design speed of 40 km/h requires a hairpin bend. The available corridor width restricts the radius to approximately 30 m. The maximum superelevation is 7% per MoWT standard. The design vehicle is a single-unit truck (SU) with a wheelbase of approximately 6.1 m. Determine whether the proposed 30 m radius meets the minimum standard for 40 km/h, calculate the curve widening needed for the SU design vehicle, and advise whether compound curves are appropriate for this situation.",
+      "expected_output": "MoWT Table 6.1 gives minimum radius at 40 km/h with emax=7% as 55 m. The proposed 30 m radius is below the minimum for 40 km/h. This is a serious non-compliance requiring either a reduced design speed (30 km/h where Rmin is approximately 30 m) or an increased radius. Curve widening for SU at R=30 m would be significant (approximately 1.5-3 m). Compound curves could be considered for hairpin situations but the radius ratio should not exceed 2:1.",
+      "files": [],
+      "assertions": [
+        {
+          "text": "Checks proposed 30 m radius against minimum for 40 km/h design speed (minimum is between 50-60 m per MoWT Table 6.1)",
+          "passed": null,
+          "evidence": ""
+        },
+        {
+          "text": "Calculates or estimates curve widening for the SU design vehicle at 30 m radius (widening should be between 1-4 m)",
+          "passed": null,
+          "evidence": ""
+        },
+        {
+          "text": "Discusses whether compound curves are appropriate, noting the 2:1 maximum radius ratio guideline",
+          "passed": null,
+          "evidence": ""
+        },
+        {
+          "text": "Raises escalation flag or non-compliance warning because the 30 m radius is below the absolute minimum for 40 km/h",
+          "passed": null,
+          "evidence": ""
+        },
+        {
+          "text": "Flags safety concerns for tight mountain curves including sight distance, vehicle stability, or speed management",
+          "passed": null,
+          "evidence": ""
+        }
+      ]
+    }
+  ]
+}

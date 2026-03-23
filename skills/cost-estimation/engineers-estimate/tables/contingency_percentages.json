@@ -1,0 +1,15 @@
+{
+  "source": {"document": "Standard cost estimation practice / MoWT guidelines", "disclaimer": "Percentages are typical ranges -- adjust based on project-specific risk assessment", "verification": "pending"},
+  "physical_contingency": [
+    {"stage": "Feasibility / Pre-feasibility", "percentage_range": "20-25%", "typical": 25, "rationale": "Design not developed, quantities approximate"},
+    {"stage": "Preliminary Design", "percentage_range": "15-20%", "typical": 15, "rationale": "Major quantities known, details pending"},
+    {"stage": "Detailed Design", "percentage_range": "8-12%", "typical": 10, "rationale": "Design complete, quantities measured"},
+    {"stage": "Pre-Tender (Engineer's Estimate)", "percentage_range": "5-10%", "typical": 7, "rationale": "Final quantities, unit rates benchmarked"}
+  ],
+  "price_contingency": {
+    "method": "Annual inflation rate applied to expenditure profile",
+    "typical_range_uganda": "5-8% per annum",
+    "source_note": "Based on Bank of Uganda construction cost indices. Adjust to current forecasts."
+  },
+  "vat_uganda": 18
+}

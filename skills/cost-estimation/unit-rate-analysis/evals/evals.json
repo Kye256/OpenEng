@@ -1,0 +1,104 @@
+{
+  "skill_name": "unit-rate-analysis",
+  "evals": [
+    {
+      "id": 0,
+      "prompt": "Build up a unit rate from first principles for 'Excavation in common material' (m3) for a road project in Central Uganda. The method is mechanical using an excavator (1.0 m3 bucket) and dump trucks (10 m3 capacity). Haul distance to spoil is 500m. Show the complete L+E+M+OH breakdown with production rates, wage rates, and equipment costs.",
+      "expected_output": "Complete rate build-up showing Labour (operator, driver, labourer), Equipment (excavator, dump truck with production rates), Materials (none for excavation), and Overheads (site, head office, profit as percentages). Total rate approximately UGX 10,000-25,000/m3 range. Rate flagged as PLACEHOLDER.",
+      "files": [],
+      "assertions": [
+        {
+          "text": "L+E+M+OH breakdown present with all four components identified",
+          "passed": null,
+          "evidence": ""
+        },
+        {
+          "text": "Production rates used to derive equipment and labour hours per unit",
+          "passed": null,
+          "evidence": ""
+        },
+        {
+          "text": "Overheads applied as percentage of direct cost (site + head office + profit)",
+          "passed": null,
+          "evidence": ""
+        },
+        {
+          "text": "Rate flagged as PLACEHOLDER with warning not to use for budgeting",
+          "passed": null,
+          "evidence": ""
+        },
+        {
+          "text": "Output format shows tabular breakdown per Section 8 template",
+          "passed": null,
+          "evidence": ""
+        }
+      ]
+    },
+    {
+      "id": 1,
+      "prompt": "Build up a unit rate for 'Crushed stone base course, 200mm compacted thickness' (m3) for a road project in Uganda. The quarry is 25 km from the site. Include material cost (ex-quarry), transport cost, spreading and compaction equipment, and wastage. Show the complete L+E+M+OH breakdown.",
+      "expected_output": "Rate build-up with significant material component including crushed stone ex-quarry cost plus transport (25 km x rate per tonne-km x density). Equipment includes loader, trucks, grader, roller. Wastage allowance (5-10%) applied to materials. Transport cost clearly shown as separate line item within materials.",
+      "files": [],
+      "assertions": [
+        {
+          "text": "Material cost includes explicit transport calculation (distance x rate x density)",
+          "passed": null,
+          "evidence": ""
+        },
+        {
+          "text": "Wastage allowance applied to material quantities (5-10%)",
+          "passed": null,
+          "evidence": ""
+        },
+        {
+          "text": "Equipment for spreading and compaction included (grader, roller)",
+          "passed": null,
+          "evidence": ""
+        },
+        {
+          "text": "Transport cost shown separately from material ex-quarry cost",
+          "passed": null,
+          "evidence": ""
+        },
+        {
+          "text": "Total rate flagged as PLACEHOLDER",
+          "passed": null,
+          "evidence": ""
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "prompt": "Build up a unit rate for 'Natural gravel sub-base, 150mm compacted thickness' (m3) for a road project in Karamoja region, Northern Uganda. The nearest gravel borrow pit is 40 km from the site over poor roads. Terrain is semi-arid with limited water for compaction. Apply appropriate adjustment factors for the remote location.",
+      "expected_output": "Rate significantly higher than Central Uganda reference due to: long transport distance (40 km over poor roads), remote location adjustment factor (1.25-1.40), water supply for compaction (bowser haul or borehole cost), reduced productivity. Transport cost dominates the material component. Location adjustment documented and justified.",
+      "files": [],
+      "assertions": [
+        {
+          "text": "Transport cost significantly increases material component (40 km haul over poor roads)",
+          "passed": null,
+          "evidence": ""
+        },
+        {
+          "text": "Remote location or Karamoja regional adjustment factor applied and documented",
+          "passed": null,
+          "evidence": ""
+        },
+        {
+          "text": "Water supply for compaction addressed as cost factor",
+          "passed": null,
+          "evidence": ""
+        },
+        {
+          "text": "Total rate higher than Central Uganda reference with clear justification",
+          "passed": null,
+          "evidence": ""
+        },
+        {
+          "text": "Rate flagged as PLACEHOLDER with note about remote location sensitivity",
+          "passed": null,
+          "evidence": ""
+        }
+      ]
+    }
+  ]
+}

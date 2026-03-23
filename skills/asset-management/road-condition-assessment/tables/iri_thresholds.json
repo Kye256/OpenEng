@@ -1,0 +1,63 @@
+{
+  "source": "MoWT Maintenance Manual / UNRA standard practice. Thresholds are representative ranges used in Uganda road management. Paved road thresholds align with World Bank HDM-4 defaults. Gravel road thresholds are approximately double paved values.",
+  "disclaimer": "REPRESENTATIVE -- individual agencies may use slightly different breakpoints. Verify current thresholds before use.",
+  "unit": "m/km",
+  "thresholds": [
+    {
+      "surface_type": "paved",
+      "condition_category": "Good",
+      "iri_min": 0,
+      "iri_max": 4,
+      "intervention_trigger": "routine"
+    },
+    {
+      "surface_type": "paved",
+      "condition_category": "Fair",
+      "iri_min": 4,
+      "iri_max": 6,
+      "intervention_trigger": "routine"
+    },
+    {
+      "surface_type": "paved",
+      "condition_category": "Poor",
+      "iri_min": 6,
+      "iri_max": 8,
+      "intervention_trigger": "periodic"
+    },
+    {
+      "surface_type": "paved",
+      "condition_category": "Very Poor",
+      "iri_min": 8,
+      "iri_max": null,
+      "intervention_trigger": "rehabilitation"
+    },
+    {
+      "surface_type": "gravel",
+      "condition_category": "Good",
+      "iri_min": 0,
+      "iri_max": 8,
+      "intervention_trigger": "routine"
+    },
+    {
+      "surface_type": "gravel",
+      "condition_category": "Fair",
+      "iri_min": 8,
+      "iri_max": 12,
+      "intervention_trigger": "routine"
+    },
+    {
+      "surface_type": "gravel",
+      "condition_category": "Poor",
+      "iri_min": 12,
+      "iri_max": 16,
+      "intervention_trigger": "periodic"
+    },
+    {
+      "surface_type": "gravel",
+      "condition_category": "Very Poor",
+      "iri_min": 16,
+      "iri_max": null,
+      "intervention_trigger": "rehabilitation"
+    }
+  ]
+}

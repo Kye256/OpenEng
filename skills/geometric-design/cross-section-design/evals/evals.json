@@ -1,0 +1,99 @@
+{
+  "skill_name": "cross-section-design",
+  "evals": [
+    {
+      "id": 0,
+      "prompt": "Determine the cross-section parameters for a Class II Paved road in Uganda. The road is in a rural area with rolling terrain. The design speed is 70 km/h per MoWT standard. Using the MoWT Road Design Manual, specify the lane width, shoulder width, carriageway width, crossfall, and road reserve width for the rural/normal cross-section.",
+      "expected_output": "From MoWT Figure 7-14 (rural/normal cross-section) for Paved II: lane width 3.0m, shoulder width 2.0m, carriageway width 6.0m (2 lanes x 3.0m), roadway width 10.0m, road reserve width 30.0m, crossfall 2.5% (paved road).",
+      "files": ["tables/uganda_cross_sections.json"],
+      "assertions": [
+        {
+          "text": "Lane width is 3.0m for Class II Paved rural section",
+          "passed": null,
+          "evidence": ""
+        },
+        {
+          "text": "Shoulder width is 2.0m for Class II Paved rural section",
+          "passed": null,
+          "evidence": ""
+        },
+        {
+          "text": "Carriageway width is 6.0m (2 lanes x 3.0m)",
+          "passed": null,
+          "evidence": ""
+        },
+        {
+          "text": "Crossfall is 2.5% for paved road (not 4.0% which applies to gravel)",
+          "passed": null,
+          "evidence": ""
+        },
+        {
+          "text": "References MoWT Road Design Manual Figure 7-14 or Tables 4-3 to 4-9 for parameter values",
+          "passed": null,
+          "evidence": ""
+        }
+      ]
+    },
+    {
+      "id": 1,
+      "prompt": "A UK trunk road is classified as a WS2 (wide single 2-lane) carriageway under DMRB CD 109. Determine the carriageway width and note any additional cross-section information available from CD 109. The road is a rural all-purpose road with kerbed drainage sections.",
+      "expected_output": "From CD 109 Table 2.3: WS2 carriageway width is 7.3m. Minimum gradient on kerbed sections is 0.5% (CD 109 clause 5.2). Full cross-section design (verge widths, headrooms, central reserve) requires CD 127 which provides detailed cross-section parameters beyond carriageway width.",
+      "files": [],
+      "assertions": [
+        {
+          "text": "Carriageway width is 7.3m for WS2 road type per CD 109 Table 2.3",
+          "passed": null,
+          "evidence": ""
+        },
+        {
+          "text": "References CD 127 as required for full cross-section detail beyond carriageway width",
+          "passed": null,
+          "evidence": ""
+        },
+        {
+          "text": "Notes minimum gradient of 0.5% on kerbed roads per CD 109 clause 5.2",
+          "passed": null,
+          "evidence": ""
+        },
+        {
+          "text": "Distinguishes between CD 109 (carriageway types) and CD 127 (full cross-section design) responsibilities",
+          "passed": null,
+          "evidence": ""
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "prompt": "A Gravel C road in Uganda passes through a small trading centre (town section). Determine the cross-section parameters for the town section. Note any concerns about a single-lane road in a town context and recommend whether an escalation flag is appropriate.",
+      "expected_output": "From MoWT Figure 7-16 (town gravel) for Gravel C: single-lane road (4.0m lane width), outer lane width 2.5m, footway width 2.0m each side, roadway width 13.0m, road reserve width 20.0m. An escalation note is appropriate because a single-lane road in a town context may create access and safety issues if traffic volume is growing. Consider whether upgrade to Gravel B (2-lane) is warranted.",
+      "files": ["tables/uganda_cross_sections.json"],
+      "assertions": [
+        {
+          "text": "Correctly identifies Gravel C as single-lane (1 lane, 4.0m carriageway) even in town context",
+          "passed": null,
+          "evidence": ""
+        },
+        {
+          "text": "Uses town gravel cross-section (not rural) because the road is in a trading centre",
+          "passed": null,
+          "evidence": ""
+        },
+        {
+          "text": "Includes footway width (2.0m) in the town cross-section -- does not omit pedestrian provision",
+          "passed": null,
+          "evidence": ""
+        },
+        {
+          "text": "Raises escalation or advisory note about a single-lane road in a town context",
+          "passed": null,
+          "evidence": ""
+        },
+        {
+          "text": "Does not incorrectly apply rural cross-section parameters to the town section",
+          "passed": null,
+          "evidence": ""
+        }
+      ]
+    }
+  ]
+}

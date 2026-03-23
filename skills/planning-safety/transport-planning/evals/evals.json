@@ -1,0 +1,104 @@
+{
+  "skill_name": "transport-planning",
+  "evals": [
+    {
+      "id": 0,
+      "prompt": "A 25 km gravel road in western Uganda connects a subcounty headquarters to the main district road. The road is being considered for upgrade to paved standard. Current AADT is 400 vpd (from a 7-day traffic count processed per Skill #2). The vehicle composition is 35% boda-bodas, 30% cars/pickups, 20% minibuses, and 15% trucks. The growth rate from Skill #6 is 5% per year. The design period is 20 years. Estimated project cost from Skill #50 is UGX 38 billion. There are no alternative routes -- this is the only road connecting the subcounty to the district road network. Conduct a screening-level transport demand assessment and economic viability screening.",
+      "expected_output": "Applies growth-factor method: future AADT (normal) = 400 x (1.05)^20 = 1,061 vpd. Adds generated traffic at 10-20% for gravel-to-paved upgrade, giving total design AADT of approximately 1,167-1,273 vpd. Screening BCR calculated and likely exceeds 1.0 for this traffic level. Recommends proceeding to detailed economic appraisal via Skill #65. References Skill #6 for growth rate source.",
+      "files": [],
+      "assertions": [
+        {
+          "text": "Applies compound growth formula correctly to calculate future AADT in the range of 1,000-1,100 vpd (normal traffic before generated)",
+          "passed": null,
+          "evidence": ""
+        },
+        {
+          "text": "Includes generated traffic factor of 10-20% for gravel-to-paved upgrade per MoWT guidance",
+          "passed": null,
+          "evidence": ""
+        },
+        {
+          "text": "References Skill #6 (Traffic Forecasting) as the source for the 5% growth rate",
+          "passed": null,
+          "evidence": ""
+        },
+        {
+          "text": "Calculates or estimates a screening BCR using estimated project cost and VOC savings",
+          "passed": null,
+          "evidence": ""
+        },
+        {
+          "text": "Recommends detailed economic appraisal (Skill #65 / HDM-4 / RED) as next step",
+          "passed": null,
+          "evidence": ""
+        }
+      ]
+    },
+    {
+      "id": 1,
+      "prompt": "Two alternative routes are being evaluated for upgrading access from a trading centre in eastern Uganda to a regional market town. Route A is 18 km through hilly terrain with a maximum gradient of 12%, requiring significant earthworks. Route B is 28 km through flat terrain following an existing earth track alongside a river. Estimated construction costs are UGX 55 billion for Route A and UGX 42 billion for Route B. Current traffic on the existing path (closest to Route A alignment) is estimated at 180 vpd. Current traffic on the Route B alignment is approximately 120 vpd from a nearby road. Growth rate is 5% for both. Design period is 20 years. Both routes would be gravel-to-paved upgrades. Assess both routes and make a reasoned recommendation.",
+      "expected_output": "Calculates future AADT for both routes including generated traffic. Route A: higher traffic potential but higher cost and terrain difficulty. Route B: lower cost but longer distance. Considers construction cost, terrain difficulty, traffic benefits, connectivity, and maintenance implications. Makes a reasoned recommendation with clear rationale, likely favouring Route B on cost-effectiveness grounds unless Route A serves significantly more population.",
+      "files": [],
+      "assertions": [
+        {
+          "text": "Calculates future demand for both Route A and Route B using growth-factor method with generated traffic",
+          "passed": null,
+          "evidence": ""
+        },
+        {
+          "text": "Considers construction cost difference (UGX 55B vs 42B) in the route comparison",
+          "passed": null,
+          "evidence": ""
+        },
+        {
+          "text": "Assesses connectivity and population served for both routes, not just cost and traffic",
+          "passed": null,
+          "evidence": ""
+        },
+        {
+          "text": "Makes a clear recommendation with stated rationale, identifying which factors drive the decision",
+          "passed": null,
+          "evidence": ""
+        },
+        {
+          "text": "Notes terrain difficulty implications for Route A including maintenance cost and safety considerations",
+          "passed": null,
+          "evidence": ""
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "prompt": "A community access road in Karamoja region (northeastern Uganda) serves as the only access to a health centre (Health Centre III) that provides services to approximately 50,000 people across 5 parishes. The road is 14 km of earth surface in poor condition. Current AADT is estimated at only 50 vpd (mostly boda-bodas and a few trucks bringing supplies). The growth rate for Karamoja community roads is estimated at 3%. There is no traffic count data -- the 50 vpd estimate comes from a community leader interview. The road has no alternative -- communities must use it to reach the health centre. Conduct a transport demand assessment and advise on whether paving is justified.",
+      "expected_output": "Future AADT approximately 67 vpd at 20 years (or 60 vpd at 10 years). Recognises that economic analysis alone may not justify paving investment at this traffic level. However, introduces social and accessibility criteria -- sole access to health services for 50,000 people. Recommends multi-criteria analysis (Skill #59 MCA) rather than pure economic screening. Flags traffic data as unreliable (interview-based, not survey-based).",
+      "files": [],
+      "assertions": [
+        {
+          "text": "Recognises that at 50 vpd with 3% growth, the road is unlikely to meet economic screening thresholds for paving",
+          "passed": null,
+          "evidence": ""
+        },
+        {
+          "text": "Introduces social/accessibility criteria as justification beyond economic analysis (health access for 50,000 people)",
+          "passed": null,
+          "evidence": ""
+        },
+        {
+          "text": "References Skill #59 (Prioritization Methods / MCA) for multi-criteria assessment approach",
+          "passed": null,
+          "evidence": ""
+        },
+        {
+          "text": "Flags the traffic data quality concern -- estimate from community leader interview, not a traffic survey",
+          "passed": null,
+          "evidence": ""
+        },
+        {
+          "text": "Considers intermediate improvement options (e.g., earth-to-gravel rather than paving) appropriate for this traffic level",
+          "passed": null,
+          "evidence": ""
+        }
+      ]
+    }
+  ]
+}

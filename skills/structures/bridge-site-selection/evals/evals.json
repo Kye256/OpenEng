@@ -1,0 +1,99 @@
+{
+  "skill_name": "bridge-site-selection",
+  "evals": [
+    {
+      "id": 0,
+      "prompt": "Assess a bridge site for a trunk road crossing of a river in Uganda. The design flow is Q100 = 250 m3/s (from Skill #29, SCS method, catchment area 180 km2). The channel is 45m wide at normal flow with an alluvial bed. Geotechnical investigation (Skill #10) shows laterite with soaked bearing capacity 180 kPa at 3m depth. No rock was encountered to 15m depth. The approach road gradient is 4%. The crossing has a skew angle of approximately 10 degrees. Assess site suitability and estimate the span requirement.",
+      "expected_output": "Multi-criteria assessment showing: hydraulic adequacy (waterway area sufficient for 250 m3/s with velocity < 3 m/s), geotechnical suitability (laterite at 3m with 180 kPa adequate for shallow foundations if below scour depth), alignment compliance (4% grade acceptable, 10-degree skew minor), span estimate approximately 50-60m. Foundation type: shallow in laterite. Scour depth estimation needed. Overall: site suitable. References MoWT Vol 4 and UNRA Guidelines.",
+      "files": [],
+      "assertions": [
+        {
+          "text": "Multi-criteria assessment performed covering hydraulic, geotechnical, alignment, and environmental factors",
+          "passed": null,
+          "evidence": ""
+        },
+        {
+          "text": "Span estimate provided in range 45-65m (accounting for flood plain width and skew correction)",
+          "passed": null,
+          "evidence": ""
+        },
+        {
+          "text": "Foundation type recommendation given (shallow foundations in laterite, with scour depth consideration)",
+          "passed": null,
+          "evidence": ""
+        },
+        {
+          "text": "Skew angle assessed -- 10 degrees identified as acceptable with minor cost increase",
+          "passed": null,
+          "evidence": ""
+        },
+        {
+          "text": "Flood level estimation referenced with freeboard requirement",
+          "passed": null,
+          "evidence": ""
+        }
+      ]
+    },
+    {
+      "id": 1,
+      "prompt": "Assess a bridge site for a trunk road river crossing in the UK. The design flow is Q100 = 250 m3/s. The channel is 45m wide at normal flow. Ground conditions show stiff clay with bearing capacity 200 kPa. The approach gradient is 4% and skew angle is 10 degrees. Provide site assessment following UK procedures.",
+      "expected_output": "Assessment referencing UK Technical Approval (TA/AIP) process per BD 2, DMRB CD 350 for design of highway structures, FEH methodology for flood estimation, CIRIA C742 for scour, and Eurocode 7 for geotechnical design. Module flagged as knowledge-based. Notes 200-year design flood for HA structures.",
+      "files": [],
+      "assertions": [
+        {
+          "text": "References Technical Approval (TA) / Approval in Principle (AIP) process per BD 2 or DMRB",
+          "passed": null,
+          "evidence": ""
+        },
+        {
+          "text": "References DMRB CD 350 or equivalent for bridge design standards",
+          "passed": null,
+          "evidence": ""
+        },
+        {
+          "text": "UK module identified as knowledge-based with appropriate caveats",
+          "passed": null,
+          "evidence": ""
+        },
+        {
+          "text": "Multi-criteria assessment structure maintained despite different regulatory framework",
+          "passed": null,
+          "evidence": ""
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "prompt": "Assess a difficult bridge site in Uganda with the following conditions: skew angle 30 degrees, deep alluvial deposits (no rock or firm stratum to 15m depth -- only soft clay with bearing capacity 60 kPa), highly seasonal flood regime with Q100/Q2 ratio of 12, and a settlement of approximately 50 households located on the flood plain within 200m of the proposed crossing. The design flow is Q100 = 400 m3/s and the channel width is 35m at normal flow but expands to 120m at Q100. Assess site suitability.",
+      "expected_output": "Multiple escalation flags raised: (1) skew > 20 degrees -- significant cost/complexity increase, consider realignment; (2) no competent bearing stratum within 15m -- pile foundation required (specialist escalation to Skill #38); (3) extreme flood variability Q100/Q2 = 12 -- scour and debris risk elevated; (4) settlement on flood plain -- resettlement assessment required. Alternative site recommendation suggested. Overall assessment: marginal to unsuitable without significant design modifications.",
+      "files": [],
+      "assertions": [
+        {
+          "text": "Escalation raised for skew angle exceeding 20 degrees (30 degrees)",
+          "passed": null,
+          "evidence": ""
+        },
+        {
+          "text": "Pile foundation escalation raised due to no competent bearing stratum within 15m (Skill #38 specialist)",
+          "passed": null,
+          "evidence": ""
+        },
+        {
+          "text": "Settlement impact assessment flagged for 50 households on flood plain",
+          "passed": null,
+          "evidence": ""
+        },
+        {
+          "text": "Alternative site recommendation provided or explicitly suggested",
+          "passed": null,
+          "evidence": ""
+        },
+        {
+          "text": "Overall site rated as marginal or unsuitable, with clear justification",
+          "passed": null,
+          "evidence": ""
+        }
+      ]
+    }
+  ]
+}

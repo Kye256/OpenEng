@@ -1,0 +1,88 @@
+{
+  "skill_name": "pavement-material-specs",
+  "evals": [
+    {
+      "id": 0,
+      "prompt": "Specify the material requirements for a crushed stone base layer for a road in Uganda with T5 traffic (3-6 million ESAs). The pavement design from Skill #21 specifies a G80 granular base. Provide the CBR requirement, compaction standard, plasticity limits, and grading reference using the MoWT Road Design Manual specifications.",
+      "expected_output": "G80 classification requires soaked CBR > 80% at 98% modified AASHTO density. PI < 6, linear shrinkage < 3. Grading per MoWT General Specifications Section 3900 (Tables 3902/1, 3902/2, 3903/1). Angular particles, not excessively flaky. Compaction to 98% modified AASHTO MDD.",
+      "files": [
+        "skills/pavement-design/pavement-material-specs/tables/uganda_material_specifications.json"
+      ],
+      "assertions": [
+        {
+          "text": "Specifies CBR > 80% (G80 classification from Table 5.1)",
+          "passed": null,
+          "evidence": ""
+        },
+        {
+          "text": "Specifies compaction to 98% Modified AASHTO density (not Standard Proctor)",
+          "passed": null,
+          "evidence": ""
+        },
+        {
+          "text": "Specifies PI < 6 for crushed stone base",
+          "passed": null,
+          "evidence": ""
+        },
+        {
+          "text": "References MoWT General Specifications Section 3900 for grading requirements",
+          "passed": null,
+          "evidence": ""
+        },
+        {
+          "text": "References MoWT Vol 3 Part I Table 5.1 or Appendix A for specification source",
+          "passed": null,
+          "evidence": ""
+        }
+      ]
+    },
+    {
+      "id": 1,
+      "prompt": "Specify base material requirements for a road in the UK with heavy traffic. What specification system should be used?",
+      "expected_output": "Notes that UK uses SHW (Specification for Highway Works) Series 800 for unbound materials and Series 700 for road pavements. Different classification system from MoWT. Type 1 sub-base, SHW Clause 803. Flags that no local MCHW document is available.",
+      "files": [],
+      "assertions": [
+        {
+          "text": "Identifies SHW Series 700/800 as the UK specification system (not MoWT)",
+          "passed": null,
+          "evidence": ""
+        },
+        {
+          "text": "Notes that no local MCHW document is available for detailed specifications",
+          "passed": null,
+          "evidence": ""
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "prompt": "A natural gravel material is available for sub-base use on a road in Uganda. Test results show: soaked CBR = 35%, PI = 28, Liquid Limit = 52. Assess whether this material meets MoWT sub-base specifications (G30 requirement). If not, what treatment options should be considered?",
+      "expected_output": "CBR 35% > 30% requirement: PASS for strength. However, PI = 28 is very high for sub-base material -- typical limits are PI < 6 for sub-bases in moist/wet tropical conditions (ORN 31 Table 4-3), and MoWT recommends low PI. LL = 52 is also high. The material strength is adequate but plasticity is too high, making it moisture-sensitive. Recommendations: lime treatment to reduce PI, or blending with non-plastic material. Test after treatment to confirm PI reduction.",
+      "files": [
+        "skills/pavement-design/pavement-material-specs/tables/uganda_material_specifications.json"
+      ],
+      "assertions": [
+        {
+          "text": "Correctly identifies CBR 35% as meeting G30 strength requirement (> 30%)",
+          "passed": null,
+          "evidence": ""
+        },
+        {
+          "text": "Flags PI = 28 as too high for sub-base use in tropical conditions",
+          "passed": null,
+          "evidence": ""
+        },
+        {
+          "text": "Recommends lime treatment or blending to reduce PI",
+          "passed": null,
+          "evidence": ""
+        },
+        {
+          "text": "Notes that material is moisture-sensitive due to high PI and LL",
+          "passed": null,
+          "evidence": ""
+        }
+      ]
+    }
+  ]
+}

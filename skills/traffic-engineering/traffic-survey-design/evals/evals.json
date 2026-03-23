@@ -1,0 +1,99 @@
+{
+  "skill_name": "traffic-survey-design",
+  "evals": [
+    {
+      "id": 0,
+      "prompt": "Plan traffic surveys for a trunk road upgrade project in Uganda. The road is the Gulu-Kitgum Road (80 km), managed by UNRA. The project is at detailed design stage. Existing traffic data consists of a 3-day manual classified count from 2022 showing approximately 3,000 vpd (both directions). The terrain is flat to rolling. The survey budget is adequate for a comprehensive programme. The project is funded by the African Development Bank. Plan the traffic survey programme including survey types, station locations, count durations, timing, and classification scheme. Identify any limitations of the existing data.",
+      "expected_output": "Should recommend a comprehensive survey programme including 7-day ATC at 3-4 stations spaced every 20-25 km, minimum 3-day MCC (12-hour) at each ATC station, and axle load survey at a representative location. Survey timing should target a dry season month (June-August or January-February) and avoid major Ugandan holidays. Classification scheme should include boda-bodas as a separate category. Existing 2022 data should be flagged as 4 years old and insufficient for detailed design on its own. The MoWT Road Design Manual should be referenced as the primary standard. AfDB funding requirements should be noted.",
+      "files": [],
+      "assertions": [
+        {
+          "text": "References MoWT Road Design Manual or Uganda survey practice standards as the primary framework",
+          "passed": null,
+          "evidence": ""
+        },
+        {
+          "text": "Recommends at least 7-day ATC and multi-day manual classified count as part of the survey programme",
+          "passed": null,
+          "evidence": ""
+        },
+        {
+          "text": "Specifies survey duration appropriate for detailed design stage (not just screening-level counts)",
+          "passed": null,
+          "evidence": ""
+        },
+        {
+          "text": "Addresses seasonal timing considerations for Uganda (recommends dry season or notes need for seasonal adjustment)",
+          "passed": null,
+          "evidence": ""
+        },
+        {
+          "text": "Classification scheme includes motorcycles/boda-bodas as a separate vehicle category",
+          "passed": null,
+          "evidence": ""
+        }
+      ]
+    },
+    {
+      "id": 1,
+      "prompt": "Plan traffic surveys for a rural road improvement scheme in the UK. The road is the B4567 in Shropshire, England (15 km), managed by Shropshire Council. The project is at preliminary design stage. DfT count point data from 2023 shows an AADT of approximately 3,200 vpd. There are two key junctions within the scheme corridor. The survey budget is moderate. Plan the survey programme including what existing data to use, what new surveys are needed, survey types, locations, timing, and any regulatory considerations.",
+      "expected_output": "Should recommend checking existing DfT count point data and WebTRIS first. New surveys should include 7-day ATC at 2-3 locations and at least 1-day MCC (12-hour) for classified counts. Junction turning counts at the two key junctions should be recommended. Survey timing should target a neutral month (March, May, June, September, October). DfT standard vehicle classification should be specified. No ANPR/video survey implied, so GDPR considerations minimal. DMRB should be referenced as the design framework.",
+      "files": [],
+      "assertions": [
+        {
+          "text": "Recommends checking or using existing DfT count point data before commissioning all-new surveys",
+          "passed": null,
+          "evidence": ""
+        },
+        {
+          "text": "Includes junction turning counts at the key junctions as part of the survey programme",
+          "passed": null,
+          "evidence": ""
+        },
+        {
+          "text": "Specifies survey timing in a neutral month or references DfT seasonal adjustment factors",
+          "passed": null,
+          "evidence": ""
+        },
+        {
+          "text": "References DMRB or DfT standards as the applicable design/survey framework for UK",
+          "passed": null,
+          "evidence": ""
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "prompt": "Plan traffic surveys for a community access road in Karamoja region, Uganda. The road connects Kotido town to a group of rural villages (18 km). No traffic data exists. The road is currently unpaved and in poor condition. The managing authority is the District Local Government. The project is at feasibility stage. The survey budget is very limited -- only enough for a short manual count. There is no existing traffic data of any kind for this road or nearby roads. Determine what surveys are feasible, identify all assumptions, and flag any limitations.",
+      "expected_output": "Should recommend a minimum 3-day manual classified count (12-hour) at 1-2 representative locations given the budget constraint. Should flag the complete absence of existing data as a significant limitation. Should apply default AADT estimates for minor/community roads (approximately 50-100 vpd). Should note that Karamoja is a remote region with seasonal accessibility issues (rainy season may make roads impassable). Should recommend seasonal adjustment if count is done outside a neutral period. All assumptions must be clearly flagged. The output should be marked as screening/feasibility level only.",
+      "files": [],
+      "assertions": [
+        {
+          "text": "Flags absence of existing traffic data as a key limitation requiring cautious interpretation of survey results",
+          "passed": null,
+          "evidence": ""
+        },
+        {
+          "text": "Recommends a feasible survey approach within the stated budget constraints (short manual count rather than comprehensive programme)",
+          "passed": null,
+          "evidence": ""
+        },
+        {
+          "text": "Raises escalation flag or warning about data adequacy for design -- feasibility-level data only, not sufficient for detailed design",
+          "passed": null,
+          "evidence": ""
+        },
+        {
+          "text": "All assumed values (AADT estimate, growth rate, seasonal factors) are explicitly marked as assumptions",
+          "passed": null,
+          "evidence": ""
+        },
+        {
+          "text": "Output is clearly marked as preliminary or screening level, not suitable for final design without additional data",
+          "passed": null,
+          "evidence": ""
+        }
+      ]
+    }
+  ]
+}

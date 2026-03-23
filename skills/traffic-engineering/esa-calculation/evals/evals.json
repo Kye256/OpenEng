@@ -1,0 +1,94 @@
+{
+  "skill_name": "esa-calculation",
+  "evals": [
+    {
+      "id": 0,
+      "prompt": "Calculate the cumulative design traffic in ESAs for a two-lane paved road in Uganda. The baseline AADT is 3000 vpd with 30% heavy vehicles. Axle load survey data shows an average vehicle damage factor of 2.5 ESAs per heavy vehicle. The design period is 15 years with an annual growth rate of 5%. The road has a paved width of 7.0m. Use the MoWT Pavement Design Manual methodology.",
+      "expected_output": "Using MoWT Vol 3 Part I methodology: Daily heavy vehicles = 3000 * 0.30 = 900. One-directional = 450. Daily ESAs per direction = 450 * 2.5 = 1125. Using Equation 1: DT = 1125 * 365 * [(1.05)^15 - 1]/0.05 = 1125 * 365 * 21.58 = approximately 8.86 million ESAs. From Table 2.4 for paved road >6.0m: design traffic = total ESAs in most heavily trafficked direction. Traffic class from Table 2.5: T6 (6-10 million ESAs).",
+      "files": [],
+      "assertions": [
+        {
+          "text": "Uses MoWT Vol 3 Part I Equation 1 or equivalent compound growth formula for cumulative traffic",
+          "passed": null,
+          "evidence": ""
+        },
+        {
+          "text": "Cumulative ESAs in one direction are between 7 and 11 million (range accounts for rounding and directional factor interpretation)",
+          "passed": null,
+          "evidence": ""
+        },
+        {
+          "text": "Correctly applies Table 2.4 directional/lane factor for paved road width 7.0m (total ESAs in most heavily trafficked direction)",
+          "passed": null,
+          "evidence": ""
+        },
+        {
+          "text": "Assigns traffic class T6 (6-10 million ESAs) from Table 2.5 or adjacent class with justification",
+          "passed": null,
+          "evidence": ""
+        },
+        {
+          "text": "Shows step-by-step calculation with daily heavy vehicles, daily ESAs, and compound growth formula applied",
+          "passed": null,
+          "evidence": ""
+        }
+      ]
+    },
+    {
+      "id": 1,
+      "prompt": "A single carriageway A-road in rural England has an AADT of 8000 vpd. Heavy vehicles (OGV1 and OGV2) comprise 15% of traffic. Using UK standard wear factors, the average damage factor is 1.8 ESA per heavy vehicle. The directional split is 50/50 and the design period is 20 years with a growth rate of 2% per annum. Calculate the cumulative design traffic in msa for this road.",
+      "expected_output": "Daily heavy vehicles one direction = 8000 * 0.15 * 0.5 = 600. Daily ESAs = 600 * 1.8 = 1080 ESA/day. Cumulative = 1080 * 365 * [(1.02)^20 - 1]/0.02 = 1080 * 365 * 24.30 = approximately 9.58 million ESAs = 9.6 msa. This is a moderate-to-heavy traffic loading for a UK single carriageway, appropriate for standard flexible pavement design per CD 226.",
+      "files": [],
+      "assertions": [
+        {
+          "text": "Uses correct UK standard axle (80 kN) and fourth-power law (n=4)",
+          "passed": null,
+          "evidence": ""
+        },
+        {
+          "text": "Cumulative traffic is between 8 and 12 msa (million standard axles) for the given inputs",
+          "passed": null,
+          "evidence": ""
+        },
+        {
+          "text": "Expresses result in msa (UK convention) rather than raw ESA numbers",
+          "passed": null,
+          "evidence": ""
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "prompt": "A district road in Apac District, Uganda is being upgraded from gravel to paved standard. The current AADT is estimated at 500 vpd but no classified traffic count has been conducted. No axle load survey data is available. The growth rate is unknown. The road connects Apac town to several sub-counties. Determine the design traffic loading for pavement design, clearly stating all assumptions.",
+      "expected_output": "With missing data, conservative defaults must be applied with prominent escalation flags. Assumed heavy vehicle % of 15-20% (typical for Uganda district roads). Assumed VDF of 1.5 ESA/HV (district road default). Assumed growth rate of 4% (district road default). Design period 15 years. Daily HV one direction = 500 * 0.175 * 0.5 = 44. Daily ESAs = 44 * 1.5 = 66. Cumulative = 66 * 365 * [(1.04)^15 - 1]/0.04 = approximately 0.48 million ESAs. Traffic class T2 (0.3-0.7 million ESAs). Multiple escalation flags for missing data.",
+      "files": [],
+      "assertions": [
+        {
+          "text": "Raises escalation flag for missing axle load survey data and recommends conducting a survey",
+          "passed": null,
+          "evidence": ""
+        },
+        {
+          "text": "Raises escalation flag for missing growth rate and applies a conservative default with explicit warning",
+          "passed": null,
+          "evidence": ""
+        },
+        {
+          "text": "Applies reasonable defaults for Uganda district road (VDF 1.0-2.0, growth rate 3-5%, HV% 10-25%)",
+          "passed": null,
+          "evidence": ""
+        },
+        {
+          "text": "All assumed values are explicitly flagged with warning markers and marked as preliminary",
+          "passed": null,
+          "evidence": ""
+        },
+        {
+          "text": "Cumulative ESAs result is in a reasonable range for a Uganda district road (T1-T3, less than 1.5 million ESAs)",
+          "passed": null,
+          "evidence": ""
+        }
+      ]
+    }
+  ]
+}

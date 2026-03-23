@@ -1,0 +1,176 @@
+{
+  "source": {
+    "manual": "MoWT Road Design Manual Vol 3 Part I",
+    "edition": "January 2010",
+    "section": "Appendix C - Design Catalogue",
+    "table": "Charts D1-D5, W1-W5",
+    "verification": "pending"
+  },
+  "description": "MoWT Appendix C pavement design catalogue. D-charts for dry conditions, W-charts for wet conditions. Each chart provides structure options by traffic class and subgrade class combination.",
+  "chart_classification": {
+    "source": "Table 5.3",
+    "D1_W1": {"base": "Granular", "subbase": "Granular", "notes": "Normally gravel or crushed stone base; can be macadam if appropriate"},
+    "D2_W2": {"base": "Granular", "subbase": "Cemented", "notes": "Subbase could include lime treated (T2) or bitumen emulsion treated (T4)"},
+    "D3_W3": {"base": "Cemented", "subbase": "Cemented", "notes": "Normally cemented base; bitumen emulsion treated base permissible to T3"},
+    "D4_W4": {"base": "Bituminous", "subbase": "Granular", "notes": "Hot plant-mix asphalt base"},
+    "D5_W5": {"base": "Bituminous", "subbase": "Cemented", "notes": "As D4/W4 but with cemented subbase"}
+  },
+  "charts": {
+    "D1": {
+      "description": "Dry region: Granular base and granular subbase",
+      "applicable_traffic": "T1-T6 (granular base limited to approximately 6M ESAs)",
+      "structures": {
+        "T1_S1": [{"surfacing": {"type": "surface_dressing", "thickness_mm": null}, "base": {"material": "natural_gravel_G80", "thickness_mm": 150}, "subbase": {"material": "natural_gravel_G30", "thickness_mm": 125}, "capping": {"material": "selected_G15", "thickness_mm": 200}}],
+        "T1_S2": [{"surfacing": {"type": "surface_dressing", "thickness_mm": null}, "base": {"material": "natural_gravel_G80", "thickness_mm": 150}, "subbase": {"material": "natural_gravel_G30", "thickness_mm": 125}, "capping": {"material": "selected_G15", "thickness_mm": 150}}],
+        "T1_S3": [{"surfacing": {"type": "surface_dressing", "thickness_mm": null}, "base": {"material": "natural_gravel_G80", "thickness_mm": 150}, "subbase": {"material": "natural_gravel_G30", "thickness_mm": 100}, "capping": null}],
+        "T1_S4": [{"surfacing": {"type": "surface_dressing", "thickness_mm": null}, "base": {"material": "natural_gravel_G80", "thickness_mm": 150}, "subbase": {"material": "natural_gravel_G30", "thickness_mm": 100}, "capping": null}],
+        "T1_S5": [{"surfacing": {"type": "surface_dressing", "thickness_mm": null}, "base": {"material": "natural_gravel_G80", "thickness_mm": 150}, "subbase": null, "capping": null}],
+        "T1_S6": [{"surfacing": {"type": "surface_dressing", "thickness_mm": null}, "base": {"material": "natural_gravel_G80", "thickness_mm": 150}, "subbase": null, "capping": null}],
+        "T2_S1": [{"surfacing": {"type": "surface_dressing", "thickness_mm": null}, "base": {"material": "natural_gravel_G80", "thickness_mm": 150}, "subbase": {"material": "natural_gravel_G30", "thickness_mm": 150}, "capping": {"material": "selected_G15", "thickness_mm": 200}}],
+        "T2_S2": [{"surfacing": {"type": "surface_dressing", "thickness_mm": null}, "base": {"material": "natural_gravel_G80", "thickness_mm": 150}, "subbase": {"material": "natural_gravel_G30", "thickness_mm": 150}, "capping": {"material": "selected_G15", "thickness_mm": 150}}],
+        "T2_S3": [{"surfacing": {"type": "surface_dressing", "thickness_mm": null}, "base": {"material": "natural_gravel_G80", "thickness_mm": 150}, "subbase": {"material": "natural_gravel_G30", "thickness_mm": 125}, "capping": null}],
+        "T2_S4": [{"surfacing": {"type": "surface_dressing", "thickness_mm": null}, "base": {"material": "natural_gravel_G80", "thickness_mm": 150}, "subbase": {"material": "natural_gravel_G30", "thickness_mm": 100}, "capping": null}],
+        "T2_S5": [{"surfacing": {"type": "surface_dressing", "thickness_mm": null}, "base": {"material": "natural_gravel_G80", "thickness_mm": 150}, "subbase": null, "capping": null}],
+        "T2_S6": [{"surfacing": {"type": "surface_dressing", "thickness_mm": null}, "base": {"material": "natural_gravel_G80", "thickness_mm": 150}, "subbase": null, "capping": null}],
+        "T3_S1": [{"surfacing": {"type": "surface_dressing", "thickness_mm": null}, "base": {"material": "crushed_stone_G80", "thickness_mm": 150}, "subbase": {"material": "natural_gravel_G30", "thickness_mm": 200}, "capping": {"material": "selected_G15", "thickness_mm": 200}}],
+        "T3_S2": [{"surfacing": {"type": "surface_dressing", "thickness_mm": null}, "base": {"material": "crushed_stone_G80", "thickness_mm": 150}, "subbase": {"material": "natural_gravel_G30", "thickness_mm": 175}, "capping": {"material": "selected_G15", "thickness_mm": 150}}],
+        "T3_S3": [{"surfacing": {"type": "surface_dressing", "thickness_mm": null}, "base": {"material": "crushed_stone_G80", "thickness_mm": 150}, "subbase": {"material": "natural_gravel_G30", "thickness_mm": 150}, "capping": null}],
+        "T3_S4": [{"surfacing": {"type": "surface_dressing", "thickness_mm": null}, "base": {"material": "crushed_stone_G80", "thickness_mm": 150}, "subbase": {"material": "natural_gravel_G30", "thickness_mm": 125}, "capping": null}],
+        "T3_S5": [{"surfacing": {"type": "surface_dressing", "thickness_mm": null}, "base": {"material": "crushed_stone_G80", "thickness_mm": 150}, "subbase": {"material": "natural_gravel_G30", "thickness_mm": 100}, "capping": null}],
+        "T3_S6": [{"surfacing": {"type": "surface_dressing", "thickness_mm": null}, "base": {"material": "crushed_stone_G80", "thickness_mm": 150}, "subbase": null, "capping": null}],
+        "T4_S2": [{"surfacing": {"type": "surface_dressing", "thickness_mm": null}, "base": {"material": "crushed_stone_G80", "thickness_mm": 175}, "subbase": {"material": "natural_gravel_G30", "thickness_mm": 200}, "capping": {"material": "selected_G15", "thickness_mm": 175}}],
+        "T4_S3": [{"surfacing": {"type": "surface_dressing", "thickness_mm": null}, "base": {"material": "crushed_stone_G80", "thickness_mm": 175}, "subbase": {"material": "natural_gravel_G30", "thickness_mm": 175}, "capping": null}],
+        "T4_S4": [{"surfacing": {"type": "surface_dressing", "thickness_mm": null}, "base": {"material": "crushed_stone_G80", "thickness_mm": 175}, "subbase": {"material": "natural_gravel_G30", "thickness_mm": 150}, "capping": null}],
+        "T4_S5": [{"surfacing": {"type": "surface_dressing", "thickness_mm": null}, "base": {"material": "crushed_stone_G80", "thickness_mm": 150}, "subbase": {"material": "natural_gravel_G30", "thickness_mm": 125}, "capping": null}],
+        "T4_S6": [{"surfacing": {"type": "surface_dressing", "thickness_mm": null}, "base": {"material": "crushed_stone_G80", "thickness_mm": 150}, "subbase": {"material": "natural_gravel_G30", "thickness_mm": 100}, "capping": null}],
+        "T5_S3": [{"surfacing": {"type": "surface_dressing", "thickness_mm": null}, "base": {"material": "crushed_stone_G80", "thickness_mm": 200}, "subbase": {"material": "natural_gravel_G30", "thickness_mm": 200}, "capping": null}],
+        "T5_S4": [{"surfacing": {"type": "surface_dressing", "thickness_mm": null}, "base": {"material": "crushed_stone_G80", "thickness_mm": 200}, "subbase": {"material": "natural_gravel_G30", "thickness_mm": 175}, "capping": null}],
+        "T5_S5": [{"surfacing": {"type": "surface_dressing", "thickness_mm": null}, "base": {"material": "crushed_stone_G80", "thickness_mm": 175}, "subbase": {"material": "natural_gravel_G30", "thickness_mm": 150}, "capping": null}],
+        "T5_S6": [{"surfacing": {"type": "surface_dressing", "thickness_mm": null}, "base": {"material": "crushed_stone_G80", "thickness_mm": 175}, "subbase": {"material": "natural_gravel_G30", "thickness_mm": 125}, "capping": null}],
+        "T6_S3": [{"surfacing": {"type": "surface_dressing", "thickness_mm": null}, "base": {"material": "crushed_stone_G80", "thickness_mm": 225}, "subbase": {"material": "natural_gravel_G30", "thickness_mm": 225}, "capping": null}],
+        "T6_S4": [{"surfacing": {"type": "surface_dressing", "thickness_mm": null}, "base": {"material": "crushed_stone_G80", "thickness_mm": 225}, "subbase": {"material": "natural_gravel_G30", "thickness_mm": 200}, "capping": null}],
+        "T6_S5": [{"surfacing": {"type": "surface_dressing", "thickness_mm": null}, "base": {"material": "crushed_stone_G80", "thickness_mm": 200}, "subbase": {"material": "natural_gravel_G30", "thickness_mm": 175}, "capping": null}],
+        "T6_S6": [{"surfacing": {"type": "surface_dressing", "thickness_mm": null}, "base": {"material": "crushed_stone_G80", "thickness_mm": 200}, "subbase": {"material": "natural_gravel_G30", "thickness_mm": 150}, "capping": null}]
+      }
+    },
+    "W1": {
+      "description": "Wet region: Granular base and granular subbase",
+      "applicable_traffic": "T1-T6 (granular base limited to approximately 6M ESAs)",
+      "structures": {
+        "T1_S1": [{"surfacing": {"type": "surface_dressing", "thickness_mm": null}, "base": {"material": "natural_gravel_G80", "thickness_mm": 150}, "subbase": {"material": "natural_gravel_G30", "thickness_mm": 150}, "capping": {"material": "selected_G15", "thickness_mm": 225}}],
+        "T1_S3": [{"surfacing": {"type": "surface_dressing", "thickness_mm": null}, "base": {"material": "natural_gravel_G80", "thickness_mm": 150}, "subbase": {"material": "natural_gravel_G30", "thickness_mm": 125}, "capping": null}],
+        "T1_S5": [{"surfacing": {"type": "surface_dressing", "thickness_mm": null}, "base": {"material": "natural_gravel_G80", "thickness_mm": 150}, "subbase": null, "capping": null}],
+        "T2_S3": [{"surfacing": {"type": "surface_dressing", "thickness_mm": null}, "base": {"material": "natural_gravel_G80", "thickness_mm": 150}, "subbase": {"material": "natural_gravel_G30", "thickness_mm": 150}, "capping": null}],
+        "T3_S3": [{"surfacing": {"type": "surface_dressing", "thickness_mm": null}, "base": {"material": "crushed_stone_G80", "thickness_mm": 175}, "subbase": {"material": "natural_gravel_G30", "thickness_mm": 175}, "capping": null}],
+        "T4_S4": [{"surfacing": {"type": "surface_dressing", "thickness_mm": null}, "base": {"material": "crushed_stone_G80", "thickness_mm": 200}, "subbase": {"material": "natural_gravel_G30", "thickness_mm": 175}, "capping": null}],
+        "T5_S4": [{"surfacing": {"type": "surface_dressing", "thickness_mm": null}, "base": {"material": "crushed_stone_G80", "thickness_mm": 225}, "subbase": {"material": "natural_gravel_G30", "thickness_mm": 200}, "capping": null}],
+        "T6_S5": [{"surfacing": {"type": "surface_dressing", "thickness_mm": null}, "base": {"material": "crushed_stone_G80", "thickness_mm": 225}, "subbase": {"material": "natural_gravel_G30", "thickness_mm": 200}, "capping": null}]
+      },
+      "notes": "W1 structures generally have thicker layers than D1 equivalents for the same traffic/subgrade combination"
+    },
+    "D2": {
+      "description": "Dry region: Granular base and cemented subbase",
+      "applicable_traffic": "T1-T6",
+      "structures": {
+        "T1_S1": [{"surfacing": {"type": "surface_dressing", "thickness_mm": null}, "base": {"material": "natural_gravel_G80", "thickness_mm": 150}, "subbase": {"material": "cemented_C3", "thickness_mm": 150}, "capping": {"material": "selected_G15", "thickness_mm": 175}}],
+        "T2_S2": [{"surfacing": {"type": "surface_dressing", "thickness_mm": null}, "base": {"material": "natural_gravel_G80", "thickness_mm": 150}, "subbase": {"material": "cemented_C3", "thickness_mm": 150}, "capping": {"material": "selected_G15", "thickness_mm": 125}}],
+        "T3_S3": [{"surfacing": {"type": "surface_dressing", "thickness_mm": null}, "base": {"material": "crushed_stone_G80", "thickness_mm": 150}, "subbase": {"material": "cemented_C3", "thickness_mm": 150}, "capping": null}],
+        "T4_S4": [{"surfacing": {"type": "surface_dressing", "thickness_mm": null}, "base": {"material": "crushed_stone_G80", "thickness_mm": 175}, "subbase": {"material": "cemented_C3", "thickness_mm": 150}, "capping": null}],
+        "T5_S4": [{"surfacing": {"type": "surface_dressing", "thickness_mm": null}, "base": {"material": "crushed_stone_G80", "thickness_mm": 200}, "subbase": {"material": "cemented_C3", "thickness_mm": 175}, "capping": null}],
+        "T6_S5": [{"surfacing": {"type": "surface_dressing", "thickness_mm": null}, "base": {"material": "crushed_stone_G80", "thickness_mm": 200}, "subbase": {"material": "cemented_C3", "thickness_mm": 175}, "capping": null}]
+      }
+    },
+    "W2": {
+      "description": "Wet region: Granular base and cemented subbase",
+      "applicable_traffic": "T1-T6",
+      "structures": {
+        "T1_S1": [{"surfacing": {"type": "surface_dressing", "thickness_mm": null}, "base": {"material": "natural_gravel_G80", "thickness_mm": 150}, "subbase": {"material": "cemented_C3", "thickness_mm": 175}, "capping": {"material": "selected_G15", "thickness_mm": 200}}],
+        "T3_S3": [{"surfacing": {"type": "surface_dressing", "thickness_mm": null}, "base": {"material": "crushed_stone_G80", "thickness_mm": 175}, "subbase": {"material": "cemented_C3", "thickness_mm": 175}, "capping": null}],
+        "T5_S4": [{"surfacing": {"type": "surface_dressing", "thickness_mm": null}, "base": {"material": "crushed_stone_G80", "thickness_mm": 225}, "subbase": {"material": "cemented_C3", "thickness_mm": 200}, "capping": null}]
+      }
+    },
+    "D3": {
+      "description": "Dry region: Cemented base and cemented subbase",
+      "applicable_traffic": "T1-T8",
+      "structures": {
+        "T1_S1": [{"surfacing": {"type": "surface_dressing", "thickness_mm": null}, "base": {"material": "cemented_C1", "thickness_mm": 150}, "subbase": {"material": "cemented_C3", "thickness_mm": 125}, "capping": {"material": "selected_G15", "thickness_mm": 175}}],
+        "T3_S3": [{"surfacing": {"type": "surface_dressing", "thickness_mm": null}, "base": {"material": "cemented_C1", "thickness_mm": 150}, "subbase": {"material": "cemented_C3", "thickness_mm": 150}, "capping": null}],
+        "T5_S3": [{"surfacing": {"type": "surface_dressing", "thickness_mm": null}, "base": {"material": "cemented_C1", "thickness_mm": 175}, "subbase": {"material": "cemented_C3", "thickness_mm": 200}, "capping": null}],
+        "T5_S4": [{"surfacing": {"type": "surface_dressing", "thickness_mm": null}, "base": {"material": "cemented_C1", "thickness_mm": 175}, "subbase": {"material": "cemented_C3", "thickness_mm": 175}, "capping": null}],
+        "T6_S4": [{"surfacing": {"type": "surface_dressing", "thickness_mm": null}, "base": {"material": "cemented_C1", "thickness_mm": 200}, "subbase": {"material": "cemented_C3", "thickness_mm": 200}, "capping": null}],
+        "T7_S4": [{"surfacing": {"type": "asphalt_concrete", "thickness_mm": 50}, "base": {"material": "cemented_C1", "thickness_mm": 200}, "subbase": {"material": "cemented_C3", "thickness_mm": 200}, "capping": null}],
+        "T8_S5": [{"surfacing": {"type": "asphalt_concrete", "thickness_mm": 50}, "base": {"material": "cemented_C1", "thickness_mm": 225}, "subbase": {"material": "cemented_C3", "thickness_mm": 225}, "capping": null}]
+      }
+    },
+    "W3": {
+      "description": "Wet region: Cemented base and cemented subbase",
+      "applicable_traffic": "T1-T8",
+      "structures": {
+        "T3_S3": [{"surfacing": {"type": "surface_dressing", "thickness_mm": null}, "base": {"material": "cemented_C1", "thickness_mm": 175}, "subbase": {"material": "cemented_C3", "thickness_mm": 175}, "capping": null}],
+        "T5_S4": [{"surfacing": {"type": "surface_dressing", "thickness_mm": null}, "base": {"material": "cemented_C1", "thickness_mm": 200}, "subbase": {"material": "cemented_C3", "thickness_mm": 200}, "capping": null}],
+        "T7_S5": [{"surfacing": {"type": "asphalt_concrete", "thickness_mm": 50}, "base": {"material": "cemented_C1", "thickness_mm": 225}, "subbase": {"material": "cemented_C3", "thickness_mm": 225}, "capping": null}]
+      }
+    },
+    "D4": {
+      "description": "Dry region: Bituminous base and granular subbase",
+      "applicable_traffic": "T3-T8 (bituminous base for higher traffic)",
+      "structures": {
+        "T3_S2": [{"surfacing": {"type": "asphalt_concrete", "thickness_mm": 40}, "base": {"material": "bitumen_macadam", "thickness_mm": 80}, "subbase": {"material": "natural_gravel_G30", "thickness_mm": 175}, "capping": {"material": "selected_G15", "thickness_mm": 150}}],
+        "T4_S3": [{"surfacing": {"type": "asphalt_concrete", "thickness_mm": 40}, "base": {"material": "bitumen_macadam", "thickness_mm": 100}, "subbase": {"material": "natural_gravel_G30", "thickness_mm": 175}, "capping": null}],
+        "T5_S3": [{"surfacing": {"type": "asphalt_concrete", "thickness_mm": 50}, "base": {"material": "bitumen_macadam", "thickness_mm": 100}, "subbase": {"material": "natural_gravel_G30", "thickness_mm": 200}, "capping": null}],
+        "T6_S4": [{"surfacing": {"type": "asphalt_concrete", "thickness_mm": 50}, "base": {"material": "bitumen_macadam", "thickness_mm": 120}, "subbase": {"material": "natural_gravel_G30", "thickness_mm": 200}, "capping": null}],
+        "T7_S4": [{"surfacing": {"type": "asphalt_concrete", "thickness_mm": 60}, "base": {"material": "bitumen_macadam", "thickness_mm": 150}, "subbase": {"material": "natural_gravel_G30", "thickness_mm": 200}, "capping": null}],
+        "T8_S5": [{"surfacing": {"type": "asphalt_concrete", "thickness_mm": 60}, "base": {"material": "bitumen_macadam", "thickness_mm": 175}, "subbase": {"material": "natural_gravel_G30", "thickness_mm": 200}, "capping": null}]
+      }
+    },
+    "W4": {
+      "description": "Wet region: Bituminous base and granular subbase",
+      "applicable_traffic": "T3-T8",
+      "structures": {
+        "T4_S3": [{"surfacing": {"type": "asphalt_concrete", "thickness_mm": 50}, "base": {"material": "bitumen_macadam", "thickness_mm": 100}, "subbase": {"material": "natural_gravel_G30", "thickness_mm": 200}, "capping": null}],
+        "T6_S4": [{"surfacing": {"type": "asphalt_concrete", "thickness_mm": 60}, "base": {"material": "bitumen_macadam", "thickness_mm": 130}, "subbase": {"material": "natural_gravel_G30", "thickness_mm": 225}, "capping": null}],
+        "T8_S5": [{"surfacing": {"type": "asphalt_concrete", "thickness_mm": 70}, "base": {"material": "bitumen_macadam", "thickness_mm": 200}, "subbase": {"material": "natural_gravel_G30", "thickness_mm": 225}, "capping": null}]
+      }
+    },
+    "D5": {
+      "description": "Dry region: Bituminous base and cemented subbase",
+      "applicable_traffic": "T3-T8",
+      "structures": {
+        "T4_S3": [{"surfacing": {"type": "asphalt_concrete", "thickness_mm": 40}, "base": {"material": "bitumen_macadam", "thickness_mm": 100}, "subbase": {"material": "cemented_C3", "thickness_mm": 150}, "capping": null}],
+        "T5_S4": [{"surfacing": {"type": "asphalt_concrete", "thickness_mm": 50}, "base": {"material": "bitumen_macadam", "thickness_mm": 100}, "subbase": {"material": "cemented_C3", "thickness_mm": 175}, "capping": null}],
+        "T6_S4": [{"surfacing": {"type": "asphalt_concrete", "thickness_mm": 50}, "base": {"material": "bitumen_macadam", "thickness_mm": 120}, "subbase": {"material": "cemented_C3", "thickness_mm": 175}, "capping": null}],
+        "T7_S5": [{"surfacing": {"type": "asphalt_concrete", "thickness_mm": 60}, "base": {"material": "bitumen_macadam", "thickness_mm": 150}, "subbase": {"material": "cemented_C3", "thickness_mm": 175}, "capping": null}],
+        "T8_S5": [{"surfacing": {"type": "asphalt_concrete", "thickness_mm": 60}, "base": {"material": "bitumen_macadam", "thickness_mm": 175}, "subbase": {"material": "cemented_C3", "thickness_mm": 175}, "capping": null}]
+      }
+    },
+    "W5": {
+      "description": "Wet region: Bituminous base and cemented subbase",
+      "applicable_traffic": "T3-T8",
+      "structures": {
+        "T5_S4": [{"surfacing": {"type": "asphalt_concrete", "thickness_mm": 50}, "base": {"material": "bitumen_macadam", "thickness_mm": 120}, "subbase": {"material": "cemented_C3", "thickness_mm": 200}, "capping": null}],
+        "T7_S5": [{"surfacing": {"type": "asphalt_concrete", "thickness_mm": 60}, "base": {"material": "bitumen_macadam", "thickness_mm": 175}, "subbase": {"material": "cemented_C3", "thickness_mm": 200}, "capping": null}],
+        "T8_S5": [{"surfacing": {"type": "asphalt_concrete", "thickness_mm": 70}, "base": {"material": "bitumen_macadam", "thickness_mm": 200}, "subbase": {"material": "cemented_C3", "thickness_mm": 200}, "capping": null}]
+      }
+    }
+  },
+  "material_codes": {
+    "natural_gravel_G80": "Natural gravel or crushed gravel, soaked CBR >= 80% at 98% mod. AASHTO density",
+    "crushed_stone_G80": "Crushed stone, soaked CBR >= 80% at 98% mod. AASHTO density",
+    "natural_gravel_G30": "Natural gravel, soaked CBR >= 30% at 95% mod. AASHTO density",
+    "cemented_C1": "Cement treated base, 7-day UCS 1.5-3.0 MPa at 100% mod. AASHTO density",
+    "cemented_C3": "Cement treated subbase, 7-day UCS 0.75-1.5 MPa at 100% mod. AASHTO density",
+    "selected_G15": "Selected fill / capping, soaked CBR >= 15% at 93% mod. AASHTO density",
+    "bitumen_macadam": "Bitumen macadam (hot-mix) per Section 6.8 specifications",
+    "surface_dressing": "Surface dressing per Section 6.2 (single or double seal)",
+    "asphalt_concrete": "Hot-mix asphalt concrete per Section 6.8"
+  },
+  "notes": [
+    "Structures are representative examples -- not all traffic/subgrade combinations are shown for every chart",
+    "Engineer should verify selected structure against Appendix C in the actual manual",
+    "Surfacing thickness null indicates surface dressing (no fixed layer thickness)",
+    "Capping null indicates capping layer is not required for that combination",
+    "S1 subgrade (CBR < 2%) is generally excluded -- see Section 5.5 for treatment options",
+    "For traffic classes above T6 with granular bases (D1/W1), consider bituminous base charts (D4/D5/W4/W5)",
+    "Verification status pending -- full catalogue has many more combinations per chart page"
+  ]
+}

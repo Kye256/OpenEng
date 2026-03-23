@@ -1,0 +1,102 @@
+{
+  "skill_name": "mowt-catalogue",
+  "evals": [
+    {
+      "id": 0,
+      "prompt": "Design a pavement structure for a Class I trunk road in Uganda using the MoWT catalogue method. The design traffic is 4.5 million ESAs over a 15-year design life. The design CBR is 6% (10th percentile from 12 DCP tests along the route). The road is in a region with annual rainfall of 450 mm, good drainage provision and well-maintained drainage structures. Using the MoWT Road Design Manual Vol 3 Part I, determine the traffic class, subgrade class, wet/dry condition, select the appropriate chart type, and provide the pavement structure from the catalogue.",
+      "expected_output": "Traffic class T5 (3-6M ESAs). Subgrade class S3 (CBR 5-7%). Table 4.1 wet/dry check: rainfall 450mm with good drainage and maintenance = D (Dry). Chart selection per Table 5.3: for T5 traffic, D3 (cemented base/cemented subbase) or D4 (bituminous base/granular subbase) appropriate. Structure from Appendix C for selected chart and T5/S3 combination, with layer materials and thicknesses.",
+      "files": [
+        "skills/pavement-design/mowt-catalogue/tables/uganda_design_catalogue.json",
+        "skills/pavement-design/mowt-catalogue/tables/uganda_traffic_classes.json",
+        "skills/pavement-design/mowt-catalogue/tables/uganda_subgrade_classes.json"
+      ],
+      "assertions": [
+        {
+          "text": "Correctly classifies 4.5M ESAs as traffic class T5 (range 3-6M)",
+          "passed": null,
+          "evidence": ""
+        },
+        {
+          "text": "Correctly classifies CBR 6% as subgrade class S3 (range 5-7%)",
+          "passed": null,
+          "evidence": ""
+        },
+        {
+          "text": "Performs Table 4.1 wet/dry check BEFORE chart type selection -- determines D (dry) condition",
+          "passed": null,
+          "evidence": ""
+        },
+        {
+          "text": "Selects chart type using Table 5.3 classification -- justifies D3, D4, or D5 selection for T5 traffic",
+          "passed": null,
+          "evidence": ""
+        },
+        {
+          "text": "Provides specific layer thicknesses from catalogue (base 100-225 mm range, subbase 150-225 mm range depending on chart)",
+          "passed": null,
+          "evidence": ""
+        }
+      ]
+    },
+    {
+      "id": 1,
+      "prompt": "Design a pavement for a road in the UK with 20 million ESAs design traffic and a subgrade with CBR of 8%. Use the MoWT catalogue method to select a pavement structure.",
+      "expected_output": "Notes that MoWT catalogue method is not UK practice. References CD 227 as the applicable UK standard. Describes UK foundation class approach (Foundation Class 3 for CBR 8%). Flags that no local CD 227 document is available for exact values.",
+      "files": [],
+      "assertions": [
+        {
+          "text": "Identifies that MoWT catalogue is not UK practice and references CD 227 as the UK equivalent",
+          "passed": null,
+          "evidence": ""
+        },
+        {
+          "text": "Describes UK foundation class concept (not CBR-based subgrade classes)",
+          "passed": null,
+          "evidence": ""
+        },
+        {
+          "text": "Flags that no local CD 227 document is available for exact design values",
+          "passed": null,
+          "evidence": ""
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "prompt": "Design a pavement using the MoWT catalogue for a road in Uganda with 2.8 million ESAs (near the T4/T5 boundary at 3 million), CBR 4% (subgrade class S2), in a region with annual rainfall 1200mm, poor side drainage (ditches frequently blocked), and uncertain maintenance. Determine the appropriate pavement structure and flag any design concerns.",
+      "expected_output": "Traffic class T4 (1.5-3M ESAs) but ESA within 15% of T4/T5 boundary (2.8M vs 3M) -- sensitivity flag raised, both T4 and T5 structures should be provided. Subgrade class S2 (CBR 3-4%). Table 4.1 wet/dry: high rainfall (1200mm) + poor drainage + deficient maintenance = W (Wet) condition. W-chart structures selected. Escalation for poor subgrade (S2 may require capping). Sensitivity analysis for T4 vs T5.",
+      "files": [
+        "skills/pavement-design/mowt-catalogue/tables/uganda_design_catalogue.json",
+        "skills/pavement-design/mowt-catalogue/tables/uganda_traffic_classes.json",
+        "skills/pavement-design/mowt-catalogue/tables/uganda_subgrade_classes.json"
+      ],
+      "assertions": [
+        {
+          "text": "Raises sensitivity flag for ESA 2.8M being within 15% of T4/T5 boundary at 3M ESAs",
+          "passed": null,
+          "evidence": ""
+        },
+        {
+          "text": "Determines W (Wet) condition from Table 4.1 due to 1200mm rainfall, poor drainage, and deficient maintenance",
+          "passed": null,
+          "evidence": ""
+        },
+        {
+          "text": "Selects W-chart (not D-chart) for the pavement structure",
+          "passed": null,
+          "evidence": ""
+        },
+        {
+          "text": "Flags poor subgrade S2 (CBR 4%) requiring capping layer consideration",
+          "passed": null,
+          "evidence": ""
+        },
+        {
+          "text": "Provides structures for both T4 and T5 due to boundary sensitivity",
+          "passed": null,
+          "evidence": ""
+        }
+      ]
+    }
+  ]
+}

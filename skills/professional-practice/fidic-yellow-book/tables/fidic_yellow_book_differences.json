@@ -1,0 +1,79 @@
+{
+  "source": {
+    "document": "FIDIC Yellow Book 1999 vs Red Book 1999",
+    "edition": "1st Edition 1999 (both)",
+    "verification": "pending"
+  },
+  "differences": [
+    {
+      "topic": "Design Responsibility",
+      "red_book": "Employer provides design (drawings + specifications). Contractor builds to Employer's design.",
+      "yellow_book": "Contractor designs and builds to Employer's Requirements. Contractor responsible for design adequacy.",
+      "key_clause_yb": "5.1",
+      "engineers_implication": "Engineer reviews Contractor's design documents but review does not transfer responsibility"
+    },
+    {
+      "topic": "Contract Documents",
+      "red_book": "Drawings + Specifications provided by Employer. Schedule of rates/BoQ for payment.",
+      "yellow_book": "Employer's Requirements + Contractor's Proposal. Schedule of payments for lump sum pricing.",
+      "key_clause_yb": "1.1.1.3 / 1.1.1.6",
+      "engineers_implication": "Document priority and ambiguity resolution differs -- Employer's Requirements replace Specifications"
+    },
+    {
+      "topic": "Design Review Process",
+      "red_book": "No design review by Engineer (Employer's design). Engineer reviews Contractor's submissions for construction compliance only.",
+      "yellow_book": "Engineer reviews Contractor's design documents within 21 days (Sub-Clause 5.2). Four response options: approve, comment-no objection, comment-disapprove, reject.",
+      "key_clause_yb": "5.2",
+      "engineers_implication": "Engineer must review within 21 days. Review does NOT relieve Contractor of responsibility. Critical distinction."
+    },
+    {
+      "topic": "Payment Mechanism",
+      "red_book": "Re-measurement: payment based on actual measured quantities at contract rates. Quantity risk with Employer.",
+      "yellow_book": "Lump sum: payment based on milestones or percentage completion. Quantity risk with Contractor.",
+      "key_clause_yb": "14.1",
+      "engineers_implication": "Monthly certificates based on progress milestones, not measured quantities. Contractor bears quantity risk."
+    },
+    {
+      "topic": "Testing on Completion",
+      "red_book": "Tests on Completion (Clause 9) -- primarily construction quality tests.",
+      "yellow_book": "Tests on Completion with performance criteria (Sub-Clause 9.4). Must demonstrate Works meet Employer's Requirements performance specifications.",
+      "key_clause_yb": "9.4",
+      "engineers_implication": "Performance testing is more significant. Failure may indicate design defect (Contractor's risk) not just construction defect."
+    },
+    {
+      "topic": "Tests after Completion",
+      "red_book": "Sub-Clause 12.1 -- limited provisions.",
+      "yellow_book": "Clause 12 -- detailed provisions for Tests after Completion to verify long-term performance. Contractor liable for performance deficiencies.",
+      "key_clause_yb": "12.1-12.4",
+      "engineers_implication": "May need to monitor and certify performance over an extended period after Taking-Over."
+    },
+    {
+      "topic": "Contractor's Fitness-for-Purpose Obligation",
+      "red_book": "No fitness-for-purpose obligation (Contractor builds to Employer's design).",
+      "yellow_book": "Sub-Clause 5.3: Contractor undertakes that completed Works will be fit for intended purpose stated in Employer's Requirements.",
+      "key_clause_yb": "5.3",
+      "engineers_implication": "Higher standard than reasonable skill and care. Contractor warrants fitness for purpose."
+    },
+    {
+      "topic": "Priority of Documents",
+      "red_book": "Sub-Clause 1.5: Contract Agreement > Letter of Acceptance > Letter of Tender > Particular Conditions > General Conditions > Specification > Drawings > Schedules.",
+      "yellow_book": "Sub-Clause 1.5: Similar but Employer's Requirements and Contractor's Proposal replace Specification and Drawings in the hierarchy.",
+      "key_clause_yb": "1.5",
+      "engineers_implication": "Ambiguity resolution follows different document hierarchy. Employer's Requirements take precedence over Contractor's Proposal."
+    },
+    {
+      "topic": "Variations Scope",
+      "red_book": "Variations to the Works as designed by the Employer. Engineer instructs changes to design.",
+      "yellow_book": "Variations to the Employer's Requirements or other contract provisions. Contractor designs the changed work.",
+      "key_clause_yb": "13.1",
+      "engineers_implication": "Engineer varies the requirement, not the design. Contractor designs the solution to meet the varied requirement."
+    },
+    {
+      "topic": "Design Risk Allocation",
+      "red_book": "Employer bears design risk (Employer provided the design). Design errors are Employer's liability.",
+      "yellow_book": "Contractor bears design risk (Contractor provided the design). Design errors are Contractor's liability.",
+      "key_clause_yb": "5.1 / 5.3",
+      "engineers_implication": "When assessing claims, design-related issues are Contractor's risk under Yellow Book (opposite to Red Book)."
+    }
+  ]
+}

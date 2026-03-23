@@ -1,0 +1,59 @@
+{
+  "source": {
+    "document": "PPDA Guideline 1/2014: Thresholds for Procurement Methods",
+    "authority": "Public Procurement and Disposal of Public Assets Authority",
+    "legal_basis": "Regulation 6(4) of PPDA (Rules and Methods for Procurement of Supplies, Works and Non-Consultancy Services) Regulations, 2014",
+    "edition": "2014",
+    "effective_date": "2014-03-03",
+    "disclaimer": "ILLUSTRATIVE -- thresholds are subject to periodic updates by the PPDA Authority. Verify current thresholds from PPDA Authority before use in any actual procurement.",
+    "verification": "verified-from-pdf"
+  },
+  "works_thresholds": [
+    {
+      "method": "Open Domestic Bidding or Open International Bidding",
+      "min_ugx": 500000000,
+      "max_ugx": null,
+      "approval": "Contracts Committee",
+      "notes": "Default method for works above UGX 500 million. Open International Bidding when insufficient domestic competition. Guideline 1/2014, Section 1.1.",
+      "regulation_ref": "PPDA Act Section 80-81, Regulations 12-13"
+    },
+    {
+      "method": "Restricted Domestic Bidding or Restricted International Bidding",
+      "min_ugx": 200000000,
+      "max_ugx": 500000000,
+      "approval": "Contracts Committee",
+      "notes": "Selection from shortlist. Requires justification: limited providers (Regulation 9) or compatibility/continuity (Regulation 10). Guideline 1/2014, Section 1.2.",
+      "regulation_ref": "PPDA Act Section 82-83, Regulation 14"
+    },
+    {
+      "method": "Quotation Method",
+      "min_ugx": 10000000,
+      "max_ugx": 200000000,
+      "approval": "Contracts Committee (via PDU submission)",
+      "notes": "Minimum 3 quotations from shortlist. No public bid opening required. Guideline 1/2014, Section 1.3.",
+      "regulation_ref": "PPDA Act Section 84, Regulation 15"
+    },
+    {
+      "method": "Micro Procurement",
+      "min_ugx": 0,
+      "max_ugx": 10000000,
+      "approval": "Accounting Officer (may delegate to User Department)",
+      "notes": "For unforeseen requirements only. No bidding document, bid submission, public opening, or evaluation committee required. Guideline 1/2014, Section 1.4.",
+      "regulation_ref": "PPDA Act Section 86, Regulation 16"
+    }
+  ],
+  "special_methods": [
+    {
+      "method": "Direct Procurement",
+      "value_threshold": "Any value (overrides normal thresholds)",
+      "conditions": [
+        "Emergency situations (Regulation 8): urgent, unforeseeable, not caused by dilatory conduct",
+        "Limited number of providers or sole source (Regulation 9): patent, monopoly, proprietary rights",
+        "Compatibility and continuity (Regulation 10): existing works compatibility"
+      ],
+      "approval": "Contracts Committee",
+      "notes": "Even in emergencies, maximum feasible competition must be sought. Consider competitive methods with modifications before direct procurement (Regulation 8(5)-(9)).",
+      "regulation_ref": "PPDA Act Section 85, Regulation 17"
+    }
+  ]
+}

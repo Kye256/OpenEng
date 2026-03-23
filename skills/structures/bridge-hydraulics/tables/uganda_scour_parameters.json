@@ -1,0 +1,59 @@
+{
+  "source": {
+    "manual": "HEC-18 5th Edition (FHWA) + MoWT Vol 2 Section 10",
+    "note": "HEC-18 is universal methodology; MoWT provides freeboard and waterway provisions. Pier scour correction factors from MoWT Tables 10.2-10.3. Contraction scour K1 from MoWT Table 10.1.",
+    "verification": "pending"
+  },
+  "pier_scour_correction_factors": {
+    "K1_pier_shape": [
+      {"shape": "square-nosed", "K1": 1.1},
+      {"shape": "round-nosed", "K1": 1.0},
+      {"shape": "circular", "K1": 1.0},
+      {"shape": "sharp-nosed", "K1": 0.9},
+      {"shape": "group-of-cylinders", "K1": 1.0}
+    ],
+    "K2_angle_of_attack": {
+      "formula": "K2 = (cos(theta) + L/a * sin(theta))^0.65",
+      "table": [
+        {"angle_deg": 0, "L_a_4": 1.0, "L_a_8": 1.0, "L_a_12": 1.0},
+        {"angle_deg": 15, "L_a_4": 1.5, "L_a_8": 2.0, "L_a_12": 2.5},
+        {"angle_deg": 30, "L_a_4": 2.0, "L_a_8": 2.75, "L_a_12": 3.5},
+        {"angle_deg": 45, "L_a_4": 2.3, "L_a_8": 3.3, "L_a_12": 4.3},
+        {"angle_deg": 90, "L_a_4": 2.5, "L_a_8": 3.9, "L_a_12": 5.0}
+      ]
+    },
+    "K3_bed_condition": [
+      {"condition": "clear-water", "K3": 1.1},
+      {"condition": "plane bed", "K3": 1.1},
+      {"condition": "small dunes", "K3": 1.1},
+      {"condition": "medium dunes", "K3": 1.2},
+      {"condition": "large dunes", "K3": 1.3}
+    ]
+  },
+  "contraction_scour_K1": [
+    {"V_star_over_w": "<0.50", "K1": 0.59, "mode": "Mostly contact bed material discharge"},
+    {"V_star_over_w": "0.50-2.0", "K1": 0.64, "mode": "Some suspended bed material discharge"},
+    {"V_star_over_w": ">2.0", "K1": 0.69, "mode": "Mostly suspended bed material discharge"}
+  ],
+  "freeboard_requirements": {
+    "national_roads_m": 1.5,
+    "district_roads_m": 1.0,
+    "community_access_m": 0.6,
+    "note": "Above design flood level to soffit of bridge. MoWT Vol 2, Section 10.3.2f specifies 1.5 m for bridges."
+  },
+  "design_flood_return_period": {
+    "national_roads_years": 100,
+    "district_roads_years": 50,
+    "community_access_years": 25,
+    "superflood_factor": 1.7,
+    "superflood_note": "Superflood = 500-year flood or 1.7 x Q100, whichever governs (MoWT Section 10.3.2g)"
+  },
+  "acceptable_mean_velocity_ms": {
+    "sand": 1.5,
+    "gravel": 2.5,
+    "cobbles": 3.5,
+    "rock": 5.0
+  },
+  "maximum_afflux_m": 0.5,
+  "afflux_note": "MoWT Vol 2, Section 10.2: maximum backwater allowed 0.5 m during 100-year flood"
+}

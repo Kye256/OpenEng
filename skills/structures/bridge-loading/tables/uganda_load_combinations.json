@@ -1,0 +1,112 @@
+{
+  "source": {
+    "manual": "MoWT Road Design Manual Vol 4",
+    "edition": "January 2010",
+    "table": "Table 1 - Loads to be Taken in Each Combination with Appropriate Factors",
+    "section": "Section 4.4",
+    "page": "4.3",
+    "verification": "pending"
+  },
+  "description": "Partial load factors gamma_fL for five load combinations, ULS and SLS. Read from MoWT Vol 4 Table 1. Notes: * gamma_fL for dead loads shall be increased to at least 1.10/1.20 for steel/concrete if dead loads not accurately assessed. dagger gamma_fL for superimposed dead may be reduced to 1.2 ULS and 1.0 SLS subject to approval.",
+  "combinations": [
+    {
+      "combination": 1,
+      "description": "Permanent + Primary Live Loads",
+      "loads": {
+        "dead_steel": {"clause": "5.1", "uls": 1.05, "sls": 1.00},
+        "dead_concrete": {"clause": "5.1", "uls": 1.15, "sls": 1.00},
+        "superimposed_dead": {"clause": "5.2", "uls": 1.75, "sls": 1.20},
+        "reduced_dead_and_super_dead": {"clause": "5.1.2.2/5.2.2.2", "uls": 1.00, "sls": null},
+        "wind_during_erection": {"clause": "5.3", "uls": null, "sls": null},
+        "wind_with_dead_and_super_dead_only": {"clause": "5.3", "uls": null, "sls": null},
+        "wind_with_dead_super_dead_and_comb2_loads": {"clause": "5.3", "uls": null, "sls": null},
+        "wind_relieving_effect": {"clause": "5.3", "uls": null, "sls": null},
+        "temperature_restraint_to_movement": {"clause": "5.4", "uls": null, "sls": null},
+        "temperature_frictional_restraint": {"clause": "5.4", "uls": null, "sls": null},
+        "temperature_difference": {"clause": "5.4", "uls": null, "sls": null},
+        "differential_settlement": {"clause": "5.6", "uls": null, "sls": null},
+        "earth_pressure_retained_fill_and_surcharge": {"clause": "5.8", "uls": 1.50, "sls": 1.00},
+        "earth_pressure_relieving_effect": {"clause": "5.8", "uls": 1.00, "sls": 1.00},
+        "erection_temporary_loads": {"clause": "5.9", "uls": null, "sls": null},
+        "ha_alone": {"clause": "6.2", "uls": 1.50, "sls": 1.20},
+        "ha_with_hb_or_hb_alone": {"clause": "6.3", "uls": 1.30, "sls": 1.10},
+        "foot_cycle_track": {"clause": "7", "uls": 1.50, "sls": 1.00},
+        "railway_ru_rl": {"clause": "8", "uls": 1.40, "sls": 1.00}
+      }
+    },
+    {
+      "combination": 2,
+      "description": "Combination 1 + Wind (+ erection loads)",
+      "loads": {
+        "dead_steel": {"clause": "5.1", "uls": 1.05, "sls": 1.00},
+        "dead_concrete": {"clause": "5.1", "uls": 1.15, "sls": 1.00},
+        "superimposed_dead": {"clause": "5.2", "uls": 1.75, "sls": 1.20},
+        "reduced_dead_and_super_dead": {"clause": "5.1.2.2/5.2.2.2", "uls": 1.00, "sls": null},
+        "wind_during_erection": {"clause": "5.3", "uls": 1.10, "sls": 1.00},
+        "wind_with_dead_and_super_dead_only": {"clause": "5.3", "uls": 1.40, "sls": 1.00},
+        "wind_with_dead_super_dead_and_comb2_loads": {"clause": "5.3", "uls": 1.10, "sls": 1.00},
+        "wind_relieving_effect": {"clause": "5.3", "uls": 1.00, "sls": 1.00},
+        "earth_pressure_retained_fill_and_surcharge": {"clause": "5.8", "uls": 1.50, "sls": 1.00},
+        "earth_pressure_relieving_effect": {"clause": "5.8", "uls": 1.00, "sls": 1.00},
+        "erection_temporary_loads": {"clause": "5.9", "uls": 1.15, "sls": 1.00},
+        "ha_alone": {"clause": "6.2", "uls": 1.25, "sls": 1.00},
+        "ha_with_hb_or_hb_alone": {"clause": "6.3", "uls": 1.10, "sls": 1.00},
+        "foot_cycle_track": {"clause": "7", "uls": 1.25, "sls": 1.00},
+        "railway_ru_rl": {"clause": "8", "uls": 1.20, "sls": 1.00}
+      }
+    },
+    {
+      "combination": 3,
+      "description": "Combination 1 + Temperature (+ erection loads)",
+      "loads": {
+        "dead_steel": {"clause": "5.1", "uls": 1.05, "sls": 1.00},
+        "dead_concrete": {"clause": "5.1", "uls": 1.15, "sls": 1.00},
+        "superimposed_dead": {"clause": "5.2", "uls": 1.75, "sls": 1.20},
+        "reduced_dead_and_super_dead": {"clause": "5.1.2.2/5.2.2.2", "uls": 1.00, "sls": null},
+        "temperature_restraint_to_movement": {"clause": "5.4", "uls": 1.30, "sls": 1.00},
+        "temperature_frictional_restraint": {"clause": "5.4", "uls": null, "sls": null},
+        "temperature_difference": {"clause": "5.4", "uls": 1.00, "sls": 0.80},
+        "earth_pressure_retained_fill_and_surcharge": {"clause": "5.8", "uls": 1.50, "sls": 1.00},
+        "earth_pressure_relieving_effect": {"clause": "5.8", "uls": 1.00, "sls": 1.00},
+        "erection_temporary_loads": {"clause": "5.9", "uls": 1.15, "sls": 1.00},
+        "ha_alone": {"clause": "6.2", "uls": 1.25, "sls": 1.00},
+        "ha_with_hb_or_hb_alone": {"clause": "6.3", "uls": 1.10, "sls": 1.00},
+        "foot_cycle_track": {"clause": "7", "uls": 1.25, "sls": 1.00},
+        "railway_ru_rl": {"clause": "8", "uls": 1.20, "sls": 1.00}
+      }
+    },
+    {
+      "combination": 4,
+      "description": "Secondary Live Loads (centrifugal, longitudinal, collision, skidding)",
+      "loads": {
+        "dead_steel": {"clause": "5.1", "uls": 1.05, "sls": 1.00},
+        "dead_concrete": {"clause": "5.1", "uls": 1.15, "sls": 1.00},
+        "superimposed_dead": {"clause": "5.2", "uls": 1.75, "sls": 1.20},
+        "reduced_dead_and_super_dead": {"clause": "5.1.2.2/5.2.2.2", "uls": 1.00, "sls": null},
+        "earth_pressure_retained_fill_and_surcharge": {"clause": "5.8", "uls": 1.50, "sls": 1.00},
+        "earth_pressure_relieving_effect": {"clause": "5.8", "uls": 1.00, "sls": 1.00},
+        "centrifugal_load": {"clause": "6.5", "uls": 1.50, "sls": 1.00},
+        "longitudinal_ha": {"clause": "6.6", "uls": 1.25, "sls": 1.00},
+        "longitudinal_hb": {"clause": "6.6", "uls": 1.10, "sls": 1.00},
+        "skidding_load": {"clause": "6.7", "uls": 1.25, "sls": 1.00},
+        "vehicle_collision_with_parapets": {"clause": "6.8", "uls": 1.25, "sls": 1.00},
+        "vehicle_collision_with_supports": {"clause": "6.9", "uls": 1.25, "sls": 1.00},
+        "foot_cycle_collision": {"clause": "7", "uls": 1.25, "sls": 1.00},
+        "note": "Each secondary live load considered separately with appropriate Combination 4 primary live loads. Not for railway bridges."
+      }
+    },
+    {
+      "combination": 5,
+      "description": "Permanent + Bearing Friction",
+      "loads": {
+        "dead_steel": {"clause": "5.1", "uls": 1.05, "sls": 1.00},
+        "dead_concrete": {"clause": "5.1", "uls": 1.15, "sls": 1.00},
+        "superimposed_dead": {"clause": "5.2", "uls": 1.75, "sls": 1.20},
+        "reduced_dead_and_super_dead": {"clause": "5.1.2.2/5.2.2.2", "uls": 1.00, "sls": null},
+        "temperature_frictional_restraint": {"clause": "5.4", "uls": 1.30, "sls": 1.00},
+        "earth_pressure_retained_fill_and_surcharge": {"clause": "5.8", "uls": 1.50, "sls": 1.00},
+        "earth_pressure_relieving_effect": {"clause": "5.8", "uls": 1.00, "sls": 1.00}
+      }
+    }
+  ]
+}

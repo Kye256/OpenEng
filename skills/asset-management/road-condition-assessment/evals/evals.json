@@ -1,0 +1,104 @@
+{
+  "skill_name": "road-condition-assessment",
+  "evals": [
+    {
+      "id": 0,
+      "prompt": "Assess the condition of a 1km section of paved national road in Uganda (Kampala-Jinja Highway). Survey data: IRI from laser profiler = 5.2 m/km. Visual distress survey of 100m sample segment records: alligator cracking at medium severity covering 15% of sample area, rutting measured at 8mm average depth, and patching at low severity covering 5% of sample area. The road surface is asphalt concrete. Provide the condition rating, VCI score, and recommended intervention trigger.",
+      "expected_output": "IRI = 5.2 m/km classifies as Fair (paved threshold 4-6 m/km). VCI calculation: alligator cracking M/15% deduct=18, rutting L deduct=5, patching L/5% deduct=3, total deducts=26, VCI=74 (Fair). Overall condition: Fair (both IRI and VCI agree). Intervention trigger: routine maintenance with monitoring, approaching periodic trigger due to medium-severity alligator cracking.",
+      "files": ["tables/iri_thresholds.json", "tables/vci_rating_scale.json"],
+      "assertions": [
+        {
+          "text": "Correctly classifies IRI 5.2 m/km as Fair condition for paved road using the 4-6 m/km threshold range",
+          "passed": null,
+          "evidence": ""
+        },
+        {
+          "text": "Calculates VCI by summing deduct values for each distress (alligator cracking, rutting, patching) and subtracting from 100",
+          "passed": null,
+          "evidence": ""
+        },
+        {
+          "text": "VCI score is in the range 70-80 (Fair category), reflecting the combination of medium-severity cracking and minor rutting/patching",
+          "passed": null,
+          "evidence": ""
+        },
+        {
+          "text": "Overall condition rating is Fair based on the worse of IRI and VCI categories (both Fair in this case)",
+          "passed": null,
+          "evidence": ""
+        },
+        {
+          "text": "Identifies intervention trigger as routine maintenance and notes the alligator cracking as a developing structural concern",
+          "passed": null,
+          "evidence": ""
+        }
+      ]
+    },
+    {
+      "id": 1,
+      "prompt": "Perform a network-level condition assessment for 5 road sections in a Ugandan district. The sections have mixed surface types and conditions:\n\nSection A: Paved, IRI=3.5, VCI=85\nSection B: Paved, IRI=7.2, VCI=45\nSection C: Gravel, IRI=10, VCI=70\nSection D: Gravel, IRI=18, VCI=25\nSection E: Paved, IRI=4.8, VCI=62\n\nRank the sections by condition from worst to best, apply the correct IRI thresholds for each surface type, and identify which sections need rehabilitation, periodic maintenance, and routine maintenance.",
+      "expected_output": "Section D is worst (Very Poor -- gravel IRI>16, VCI<40, rehabilitation needed). Section B is next (Poor -- paved IRI 6-8 range, VCI 40-59, periodic maintenance). Section E is Fair (paved IRI 4-6, VCI 60-79, routine). Section C is Fair (gravel IRI 8-12, VCI 60-79, routine). Section A is Good (paved IRI<4, VCI>=80, routine). Different IRI thresholds correctly applied for paved vs gravel.",
+      "files": ["tables/iri_thresholds.json", "tables/vci_rating_scale.json"],
+      "assertions": [
+        {
+          "text": "Applies different IRI thresholds for paved roads (Good <4, Fair 4-6, Poor 6-8, Very Poor >8) versus gravel roads (Good <8, Fair 8-12, Poor 12-16, Very Poor >16)",
+          "passed": null,
+          "evidence": ""
+        },
+        {
+          "text": "Correctly identifies Section D as worst condition (Very Poor) and Section A as best (Good)",
+          "passed": null,
+          "evidence": ""
+        },
+        {
+          "text": "Section B classified as Poor based on both IRI (6-8 range for paved) and VCI (40-59 range)",
+          "passed": null,
+          "evidence": ""
+        },
+        {
+          "text": "Identifies rehabilitation need for Section D and periodic maintenance for Section B",
+          "passed": null,
+          "evidence": ""
+        },
+        {
+          "text": "Uses the worse of IRI and VCI categories for overall rating on each section",
+          "passed": null,
+          "evidence": ""
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "prompt": "Assess the condition of a 3km gravel district road in Karamoja, Uganda. No IRI profiling equipment is available -- only a visual walk-through survey was conducted. The survey records the following distresses: corrugation at high severity covering 35% of sample area, potholes at medium severity covering 12% of sample area, and erosion at low severity covering 8% of sample area. No drainage condition data is available. Provide a condition rating and intervention recommendation.",
+      "expected_output": "Proceeds with VCI-only assessment since no IRI data. VCI calculation: corrugation H/35% deduct ~22, potholes M/12% deduct ~15, erosion L/8% deduct ~4, total deducts ~41, VCI ~59 (Poor). Flags IRI data gap. Condition: Poor. Intervention: periodic maintenance (gravel resheeting). Notes seasonal context for Karamoja and recommends drainage assessment.",
+      "files": ["tables/vci_rating_scale.json"],
+      "assertions": [
+        {
+          "text": "Proceeds with VCI-only assessment when IRI data is unavailable, rather than refusing to assess",
+          "passed": null,
+          "evidence": ""
+        },
+        {
+          "text": "Flags the absence of IRI data as a data gap that limits assessment confidence",
+          "passed": null,
+          "evidence": ""
+        },
+        {
+          "text": "Calculates VCI using gravel road deduct values for corrugation, potholes, and erosion",
+          "passed": null,
+          "evidence": ""
+        },
+        {
+          "text": "Produces a valid condition rating (Poor or Very Poor range) and identifies periodic maintenance or rehabilitation trigger",
+          "passed": null,
+          "evidence": ""
+        },
+        {
+          "text": "Notes missing drainage data and recommends drainage assessment as part of maintenance planning",
+          "passed": null,
+          "evidence": ""
+        }
+      ]
+    }
+  ]
+}

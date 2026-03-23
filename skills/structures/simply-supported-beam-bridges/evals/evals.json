@@ -1,0 +1,94 @@
+{
+  "skill_name": "simply-supported-beam-bridges",
+  "evals": [
+    {
+      "id": 0,
+      "prompt": "Perform preliminary design of a 20m simply supported bridge in Uganda with a 7.3m carriageway. Loading is HA + 25 HB per MoWT Vol 4 (Combination 1). HA UDL = 30.0 kN/m (from Skill #36, L=20m). Determine: (1) appropriate bridge type, (2) preliminary beam depth using span-to-depth ratio, (3) dead load estimate, (4) HA moment including both UDL and KEL components, and (5) support reactions for substructure design. Include escalation trigger for detailed design.",
+      "expected_output": "Bridge type: RC T-beam (20m in 8-25m range, suitable for Uganda). Beam depth approximately L/14 = 1.4m (range 1.2-1.7m acceptable). Dead load calculation including self-weight and superimposed. HA moment includes UDL (w*L^2/8) and KEL (P*L/4) components. Support reactions calculated. Escalation for detailed reinforcement design by specialist.",
+      "files": [
+        "skills/structures/simply-supported-beam-bridges/tables/uganda_span_depth_ratios.json",
+        "skills/structures/bridge-loading/tables/uganda_load_combinations.json"
+      ],
+      "assertions": [
+        {
+          "text": "Beam depth in range 1.2-1.7m (from span-to-depth ratio L/12 to L/16 for RC T-beam at 20m)",
+          "passed": null,
+          "evidence": ""
+        },
+        {
+          "text": "HA UDL = 30.0 kN/m correctly applied (constant for L = 20m <= 30m)",
+          "passed": null,
+          "evidence": ""
+        },
+        {
+          "text": "Moment calculation includes both UDL (w*L^2/8) and KEL (P*L/4) components",
+          "passed": null,
+          "evidence": ""
+        },
+        {
+          "text": "Support reactions calculated for substructure design (Skill #38 output)",
+          "passed": null,
+          "evidence": ""
+        },
+        {
+          "text": "Escalation trigger present for detailed reinforcement design by specialist structural engineer",
+          "passed": null,
+          "evidence": ""
+        }
+      ]
+    },
+    {
+      "id": 1,
+      "prompt": "Perform preliminary design of a 20m simply supported bridge in the UK with a 7.3m carriageway. Use current UK standards for the design approach.",
+      "expected_output": "References EN 1992-2 (Eurocode 2 for bridges) for concrete bridge design. Loading from EN 1991-2 LM1 (not HA/HB). Span-to-depth ratio similar range. Notes difference in partial factor approach (gamma_G, gamma_Q from EN 1990 vs gamma_fL from Table 1). Knowledge-based flag.",
+      "files": [],
+      "assertions": [
+        {
+          "text": "References EN 1992-2 or Eurocode 2 for concrete bridge design",
+          "passed": null,
+          "evidence": ""
+        },
+        {
+          "text": "Loading from EN 1991-2 LM1 referenced (not HA/HB system)",
+          "passed": null,
+          "evidence": ""
+        },
+        {
+          "text": "Knowledge-based module flag present",
+          "passed": null,
+          "evidence": ""
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "prompt": "Perform preliminary design of a 35m simply supported bridge in Uganda with an 11.0m carriageway (3 notional lanes). Loading is HA + 45 HB. HA UDL for 35m loaded length is approximately 26.5 kN/m (from formula W = 151*(1/35)^0.475 since L > 30m). Determine bridge type, preliminary depth, and note any escalation triggers.",
+      "expected_output": "Bridge type: steel-concrete composite recommended for 35m span (beyond typical RC T-beam range of 8-25m). Alternative: precast prestressed if logistics allow. Beam depth approximately L/20 = 1.75m (composite ratio). 3-lane loading with HA UDL from formula. Escalation: composite design requires specialist for steel design and shear connector detailing. If steel not available, escalate for alternative span arrangement.",
+      "files": [
+        "skills/structures/simply-supported-beam-bridges/tables/uganda_span_depth_ratios.json"
+      ],
+      "assertions": [
+        {
+          "text": "Composite or precast type selected for 35m span (beyond typical RC T-beam range)",
+          "passed": null,
+          "evidence": ""
+        },
+        {
+          "text": "HA UDL from formula W = 151*(1/L)^0.475 for L > 30m, result approximately 26-27 kN/m",
+          "passed": null,
+          "evidence": ""
+        },
+        {
+          "text": "3-lane loading correctly identified for 11.0m carriageway",
+          "passed": null,
+          "evidence": ""
+        },
+        {
+          "text": "Escalation trigger for specialist steel/composite design or alternative arrangement",
+          "passed": null,
+          "evidence": ""
+        }
+      ]
+    }
+  ]
+}

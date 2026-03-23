@@ -1,0 +1,99 @@
+{
+  "skill_name": "engineers-estimate",
+  "evals": [
+    {
+      "id": 0,
+      "prompt": "Prepare a detailed engineer's estimate for a 20 km trunk road upgrade in Uganda (gravel to paved DBST). The BoQ (from Skill #51) shows: Bill 1 Preliminaries UGX 1.5B, Bill 2 Earthworks UGX 3.0B, Bill 3 Pavement UGX 5.5B, Bill 4 Drainage UGX 2.0B, Bill 5 Structures UGX 0, Bill 6 Miscellaneous UGX 0.8B, Bill 7 Dayworks UGX 0.7B. Contract duration is 2 years. Use detailed design contingency level. All rates are PLACEHOLDER.",
+      "expected_output": "Estimate showing total direct cost UGX 13.5B, physical contingency at 8-12% (detailed design), price contingency for 2-year contract, VAT at 18%, total estimate with all additions. Cost per km calculated and compared to Uganda benchmarks. PLACEHOLDER disclaimer prominent.",
+      "files": [],
+      "assertions": [
+        {
+          "text": "BoQ quantities referenced from Skill #51 output with Bill subtotals",
+          "passed": null,
+          "evidence": ""
+        },
+        {
+          "text": "Unit rates referenced from Skill #52/#53 (even if PLACEHOLDER)",
+          "passed": null,
+          "evidence": ""
+        },
+        {
+          "text": "Physical contingency at detailed design level (8-12%, typically 10%)",
+          "passed": null,
+          "evidence": ""
+        },
+        {
+          "text": "Price contingency applied for multi-year contract with inflation rate stated",
+          "passed": null,
+          "evidence": ""
+        },
+        {
+          "text": "VAT at 18% included and total clearly marked PLACEHOLDER",
+          "passed": null,
+          "evidence": ""
+        }
+      ]
+    },
+    {
+      "id": 1,
+      "prompt": "Prepare a preliminary cost estimate for a 50 km national road improvement in Uganda, funded by the World Bank (IDA credit). Project is at preliminary design stage. BoQ not yet detailed -- use approximate quantities. The estimate must show both UGX and USD equivalents in World Bank cost table format. Contract duration is 3 years. Include the foreign/local currency split.",
+      "expected_output": "Preliminary estimate with higher contingency (15-20%), USD conversion shown alongside UGX, World Bank cost table format referenced, 3-year price contingency with expenditure profile, foreign/local currency split (approximately 65/35). PLACEHOLDER disclaimer.",
+      "files": [],
+      "assertions": [
+        {
+          "text": "Higher physical contingency for preliminary stage (15-20%)",
+          "passed": null,
+          "evidence": ""
+        },
+        {
+          "text": "USD conversion shown with exchange rate stated and flagged as illustrative",
+          "passed": null,
+          "evidence": ""
+        },
+        {
+          "text": "World Bank cost table format referenced or approximated",
+          "passed": null,
+          "evidence": ""
+        },
+        {
+          "text": "Price contingency for 3-year contract with expenditure profile (e.g., 25/45/30)",
+          "passed": null,
+          "evidence": ""
+        },
+        {
+          "text": "Foreign/local currency split indicated for donor-funded context",
+          "passed": null,
+          "evidence": ""
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "prompt": "Prepare a cost estimate for emergency rehabilitation of a 10 km road section in Northern Uganda damaged by flooding. No detailed design available -- only a rapid damage assessment. Works include: debris clearing, temporary drainage restoration, emergency surface patching, and culvert replacement (3 washed-out culverts). The works are urgent and must start within 2 weeks.",
+      "expected_output": "Estimate with high contingency (20-25%) reflecting lack of detailed design. Simplified BoQ (not all 7 Bills needed). Emergency/urgency premium noted (e.g., mobilisation cost higher, limited competitive pricing). Rates flagged as approximate and PLACEHOLDER. Northern Uganda regional cost adjustment mentioned.",
+      "files": [],
+      "assertions": [
+        {
+          "text": "High contingency (20-25%) appropriate for emergency works without detailed design",
+          "passed": null,
+          "evidence": ""
+        },
+        {
+          "text": "Simplified BoQ structure appropriate for emergency scope",
+          "passed": null,
+          "evidence": ""
+        },
+        {
+          "text": "Emergency/urgency pricing adjustment noted (higher mobilisation, limited competition)",
+          "passed": null,
+          "evidence": ""
+        },
+        {
+          "text": "All rates flagged as approximate and PLACEHOLDER",
+          "passed": null,
+          "evidence": ""
+        }
+      ]
+    }
+  ]
+}

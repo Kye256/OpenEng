@@ -1,0 +1,89 @@
+{
+  "skill_name": "traffic-forecasting",
+  "evals": [
+    {
+      "id": 0,
+      "prompt": "A UNRA trunk road is being upgraded from gravel to paved standard in eastern Uganda. The base AADT from a 2025 traffic survey is 2500 vpd. The road will open to traffic in 2027 after 2 years of construction. The design period is 20 years (design year 2047). The corridor has historically experienced 5% annual traffic growth. The project is a major improvement (gravel to paved) that is expected to generate 10% additional traffic. Heavy vehicles are 25% of traffic. Calculate the design-year AADT, provide low/medium/high growth scenarios, and determine the growth rate input for Skill #5 (ESA calculation).",
+      "expected_output": "Opening-year AADT (2027) = 2500 * (1.05)^2 = 2756 vpd. Add 10% generated traffic: 2756 * 1.10 = 3032 vpd. Design-year AADT (2047, medium): 3032 * (1.05)^20 = 3032 * 2.6533 = 8041 vpd. Low scenario (3%): 3032 * (1.03)^20 = 5477 vpd. High scenario (7%): 3032 * (1.07)^20 = 11731 vpd. Growth rate for Skill #5: 5%. Design-year heavy vehicles: 8041 * 25% = 2010 HV/day.",
+      "files": [],
+      "assertions": [
+        {
+          "text": "Correctly grows base AADT from count year (2025) to opening year (2027) using compound growth before applying generated traffic",
+          "passed": null,
+          "evidence": ""
+        },
+        {
+          "text": "Adds generated traffic of approximately 10% for the gravel-to-paved improvement",
+          "passed": null,
+          "evidence": ""
+        },
+        {
+          "text": "Design-year AADT (medium scenario, 5% growth) is between 6500 and 9500 vpd",
+          "passed": null,
+          "evidence": ""
+        },
+        {
+          "text": "Presents low/medium/high growth scenarios with at least 3 different growth rates",
+          "passed": null,
+          "evidence": ""
+        },
+        {
+          "text": "Provides growth rate output for Skill #5 ESA calculation and states it clearly",
+          "passed": null,
+          "evidence": ""
+        }
+      ]
+    },
+    {
+      "id": 1,
+      "prompt": "A rural A-road in Norfolk, United Kingdom has a current AADT of 6000 vpd (2025 data). The road is being improved with minor widening. Using DfT TEMPro growth factors of approximately 1.2% per annum for the local area, forecast the design-year AADT for a 20-year design period (design year 2045). Present appropriate growth scenarios.",
+      "expected_output": "Design-year AADT (medium, 1.2%): 6000 * (1.012)^20 = 6000 * 1.2697 = 7618 vpd. Low scenario (DfT low, ~0.7%): 6000 * (1.007)^20 = 6000 * 1.1497 = 6898 vpd. High scenario (DfT high, ~1.7%): 6000 * (1.017)^20 = 6000 * 1.4020 = 8412 vpd. No significant generated traffic for minor widening. UK practice uses DfT published scenarios, not assumed rates.",
+      "files": [],
+      "assertions": [
+        {
+          "text": "Uses UK-appropriate growth rates in the 0.5-2.5% range (not developing-country rates)",
+          "passed": null,
+          "evidence": ""
+        },
+        {
+          "text": "Design-year AADT is between 6500 and 9000 vpd for the medium scenario",
+          "passed": null,
+          "evidence": ""
+        },
+        {
+          "text": "References DfT or TEMPro as the source for growth factors rather than assuming a rate",
+          "passed": null,
+          "evidence": ""
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "prompt": "A new community access road is planned in Karamoja region, Uganda to connect a remote village to the nearest trading centre. No traffic data exists -- the road does not currently exist. No historical traffic counts are available for the area. No information on growth rates is available. The road is expected to be a gravel road serving a small community. Estimate the design-year traffic for a 15-year design period, clearly identifying all assumptions and limitations.",
+      "expected_output": "With no existing traffic data, all parameters must be assumed and flagged. Assumed base AADT of 50-150 vpd (typical for Uganda community access road). Growth rate assumed at 3-4% (rural development). Generated traffic not applicable (new road, but will attract some traffic from tracks). Design-year AADT approximately 75-220 vpd depending on base and growth assumptions. Heavy vehicles approximately 10-15%. Multiple escalation flags for all assumed values. Strong recommendation for traffic survey before construction and post-construction monitoring.",
+      "files": [],
+      "assertions": [
+        {
+          "text": "Raises escalation flag for absent traffic data and recommends a traffic survey or alternative estimation method",
+          "passed": null,
+          "evidence": ""
+        },
+        {
+          "text": "Applies conservative default AADT appropriate for a Uganda community access road (50-200 vpd range)",
+          "passed": null,
+          "evidence": ""
+        },
+        {
+          "text": "Uses an appropriate growth rate for rural Uganda (2-5% range, not trunk road rates)",
+          "passed": null,
+          "evidence": ""
+        },
+        {
+          "text": "All assumed values are explicitly flagged with warning markers and recommendations for obtaining actual data",
+          "passed": null,
+          "evidence": ""
+        }
+      ]
+    }
+  ]
+}

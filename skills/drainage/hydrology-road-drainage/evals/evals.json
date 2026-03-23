@@ -1,0 +1,109 @@
+{
+  "skill_name": "hydrology-road-drainage",
+  "evals": [
+    {
+      "id": 0,
+      "prompt": "Calculate the design peak flow for a road side drain in Uganda. The catchment area is 2.5 hectares, the runoff coefficient is 0.45 (moderately permeable soil with gentle slope), and the rainfall intensity for a 10-year ARI with a time of concentration of 15 minutes is 120 mm/hr. Use the Rational Method per MoWT Vol 2.",
+      "expected_output": "Using the Rational Method: Q = 0.00278 * C * I * A = 0.00278 * 0.45 * 120 * 2.5 = 0.375 m3/s. The 10-year return period is appropriate for side drains per MoWT Table 3.2. No frequency multiplier needed (Table 4.8 factor = 1.0 for 2-10 year ARI).",
+      "files": [
+        "skills/drainage/hydrology-road-drainage/tables/uganda_runoff_coefficients.json",
+        "skills/drainage/hydrology-road-drainage/tables/uganda_idf_parameters.json"
+      ],
+      "assertions": [
+        {
+          "text": "Uses Q = 0.00278 * C * I * A (or Q = CIA/360) with I in mm/hr and A in hectares -- the exact MoWT Vol 2 Rational Method form",
+          "passed": null,
+          "evidence": ""
+        },
+        {
+          "text": "Design flow Q is between 0.35 and 0.40 m3/s (exact value 0.375 m3/s)",
+          "passed": null,
+          "evidence": ""
+        },
+        {
+          "text": "References MoWT Vol 2 for the Rational Method application",
+          "passed": null,
+          "evidence": ""
+        },
+        {
+          "text": "Identifies 10-year return period as appropriate for side drains per Table 3.2",
+          "passed": null,
+          "evidence": ""
+        },
+        {
+          "text": "Output includes structured format with inputs, calculation, and assumptions clearly stated",
+          "passed": null,
+          "evidence": ""
+        }
+      ]
+    },
+    {
+      "id": 1,
+      "prompt": "Estimate the design peak flow for a highway culvert in the UK. The catchment area is 2.5 hectares with clay soil and grassland cover. The time of concentration is 15 minutes. Assume the FEH data gives a 1 in 100 year rainfall intensity of 95 mm/hr for this location. Apply appropriate UK design requirements.",
+      "expected_output": "Using the Modified Rational Method with UK FEH data. Return period: 1 in 100 year per DMRB CG 501 for culverts. Climate change uplift of +20% applied: I = 95 * 1.20 = 114 mm/hr. C approximately 0.45-0.55 for clay/grassland. Q = 0.00278 * 0.50 * 114 * 2.5 = 0.396 m3/s (using mid-range C=0.50). CG 501 document not available locally -- flagged for engineer review.",
+      "files": [],
+      "assertions": [
+        {
+          "text": "References FEH and/or DMRB CG 501 for UK rainfall and design requirements (not MoWT)",
+          "passed": null,
+          "evidence": ""
+        },
+        {
+          "text": "Applies climate change uplift to the design rainfall intensity (at least +20%)",
+          "passed": null,
+          "evidence": ""
+        },
+        {
+          "text": "Uses 1 in 100 year return period for the culvert (UK requirement) rather than 25-50 year",
+          "passed": null,
+          "evidence": ""
+        },
+        {
+          "text": "Flags that CG 501 is not available locally and module is knowledge-based",
+          "passed": null,
+          "evidence": ""
+        },
+        {
+          "text": "Uses the Rational Method formula with correct unit conversion factor (0.00278 or 1/360)",
+          "passed": null,
+          "evidence": ""
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "prompt": "A road project in rural Uganda requires a culvert design at a stream crossing. The catchment upstream of the crossing is approximately 30 km2 (3000 hectares). Land use is predominantly grassland with some cultivated areas. No IDF data is available for the specific project location -- the nearest rainfall station is 80 km away. Estimate the design peak flow for a 50-year return period culvert.",
+      "expected_output": "The catchment area of 30 km2 exceeds the 25 km2 limit for the Rational Method. Recommend using the SCS Curve Number method or TRRL East African Flood Model instead. The Rational Method should NOT be applied to this catchment. Additionally, no IDF data is available within 50 km -- this requires escalation for missing rainfall data. Suggest using the nearest station (80 km away) with regional adjustment, or commissioning site-specific rainfall analysis. An areal reduction factor must also be applied (ARF = 1 - 0.044 * 30^0.275 = approximately 0.87).",
+      "files": [
+        "skills/drainage/hydrology-road-drainage/tables/uganda_idf_parameters.json"
+      ],
+      "assertions": [
+        {
+          "text": "Identifies that the Rational Method is not appropriate for catchments > 25 km2 and recommends SCS or TRRL East African Flood Model",
+          "passed": null,
+          "evidence": ""
+        },
+        {
+          "text": "Raises escalation flag for missing IDF data -- nearest station is 80 km away",
+          "passed": null,
+          "evidence": ""
+        },
+        {
+          "text": "Suggests using nearest station data with regional adjustment or commissioning site-specific analysis",
+          "passed": null,
+          "evidence": ""
+        },
+        {
+          "text": "Mentions the need for an areal reduction factor for a 30 km2 catchment",
+          "passed": null,
+          "evidence": ""
+        },
+        {
+          "text": "Does not blindly apply the Rational Method to the oversized catchment without flagging the limitation",
+          "passed": null,
+          "evidence": ""
+        }
+      ]
+    }
+  ]
+}

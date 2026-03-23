@@ -1,0 +1,109 @@
+{
+  "skill_name": "coordination-meta-skill",
+  "evals": [
+    {
+      "id": 0,
+      "prompt": "A feasibility study is needed for upgrading a 25 km gravel road in Gulu District, Uganda, to paved standard. Current AADT is 450 vpd with 15% heavy vehicles. The terrain is rolling with 3 river crossings. The project is funded by the World Bank. What skills should be invoked, in what order, and what data flows between them?",
+      "expected_output": "Comprehensive workflow plan using Template 1 with WB overlay. Identifies 25-30 skills across traffic, geotechnical, geometric, pavement, drainage, bridge (3 crossings), cost, procurement, and planning domains. Sequential traffic chain (#1->#2->#3->#4->#6->#5), bridge chain per crossing (#35->#36->#37->#38), cost chain (#51->#52/#53->#50). Includes generated traffic factor for gravel-to-paved upgrade, WB ESF screening, and WB procurement overlay.",
+      "files": [],
+      "assertions": [
+        {
+          "text": "Identifies correct starting sequence: terrain (#11) and traffic survey (#1) first, then traffic processing chain (#2->#3->#4->#6->#5) before pavement design",
+          "passed": null,
+          "evidence": ""
+        },
+        {
+          "text": "Includes bridge design chain (#35->#36->#37->#38) for the 3 river crossings, noting it must be sequential",
+          "passed": null,
+          "evidence": ""
+        },
+        {
+          "text": "Identifies ESA (Skill #5) to pavement design (Skill #21 or #22) as a hard dependency with data type cumulative_ESA",
+          "passed": null,
+          "evidence": ""
+        },
+        {
+          "text": "Includes generated traffic factor (10-20%) from Skill #6 for gravel-to-paved upgrade",
+          "passed": null,
+          "evidence": ""
+        },
+        {
+          "text": "Adds World Bank ESF screening (Skill #62) and WB procurement overlay (Skill #47) due to WB funding",
+          "passed": null,
+          "evidence": ""
+        },
+        {
+          "text": "References specific skill numbers (not just domain names) throughout the execution plan",
+          "passed": null,
+          "evidence": ""
+        }
+      ]
+    },
+    {
+      "id": 1,
+      "prompt": "A 50km section of trunk road in Uganda has been identified for rehabilitation. IRI measurements show 8.2 m/km average, with extensive cracking (alligator pattern, >60% area) and rutting (average 15mm depth). The road was last rehabilitated 12 years ago with a 20-year design life. It is a UNRA-managed road with GoU funding. What workflow should be followed to assess and plan the rehabilitation?",
+      "expected_output": "Rehabilitation workflow using Template 3. Starts with Skill #56 (condition assessment confirming Very Poor rating), flows to Skill #57 (maintenance planning identifying rehabilitation trigger), refers to Skill #25 (pavement rehabilitation design), includes Skill #59 (prioritization), Skill #50 (cost estimation), and Skill #58 (asset valuation). Notes that Skill #25 needs traffic data from Skills #1-5 if not available.",
+      "files": [],
+      "assertions": [
+        {
+          "text": "Starts with Skill #56 (Road Condition Assessment) and correctly classifies IRI 8.2 m/km as Very Poor (paved threshold >8)",
+          "passed": null,
+          "evidence": ""
+        },
+        {
+          "text": "Identifies rehabilitation trigger via Skill #57 (IRI exceeds rehabilitation threshold of 6 for paved roads)",
+          "passed": null,
+          "evidence": ""
+        },
+        {
+          "text": "Invokes Skill #25 (Pavement Rehabilitation) for overlay/reconstruction design after Skill #57 referral",
+          "passed": null,
+          "evidence": ""
+        },
+        {
+          "text": "Includes cost estimation chain (Skill #50) and notes dependency on design quantities from Skill #25",
+          "passed": null,
+          "evidence": ""
+        },
+        {
+          "text": "Notes that Skill #25 requires traffic data (ESA from Skill #5) which may need to be collected if not available",
+          "passed": null,
+          "evidence": ""
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "prompt": "A district road in Kabarole District, Uganda needs both safety improvements (multiple pedestrian fatalities at a trading centre) and periodic maintenance (IRI 5.5 m/km, moderate cracking), but the district budget is limited to 500 million UGX. How should the skills be orchestrated to inform the decision on how to allocate the budget?",
+      "expected_output": "Dual assessment pathway: (1) Safety path using Skill #61 (RSA of existing road) to identify specific hazards and mitigations, and (2) Condition path using Skill #56 (condition assessment) -> Skill #57 (maintenance planning) for maintenance needs. Both feed into Skill #59 (prioritization using MCA with safety and condition criteria) to rank interventions within the 500M UGX budget constraint. Cost estimation (Skill #50) for both safety and maintenance options.",
+      "files": [],
+      "assertions": [
+        {
+          "text": "Identifies two parallel assessment paths: Skill #61 (Road Safety Audit, existing road stage) and Skill #56 (Road Condition Assessment)",
+          "passed": null,
+          "evidence": ""
+        },
+        {
+          "text": "Routes condition data through Skill #57 (Maintenance Planning) for treatment identification before prioritization",
+          "passed": null,
+          "evidence": ""
+        },
+        {
+          "text": "Combines both paths into Skill #59 (Prioritization Methods) using MCA or similar multi-criteria approach to weigh safety vs maintenance",
+          "passed": null,
+          "evidence": ""
+        },
+        {
+          "text": "References the budget constraint (500M UGX) as a binding parameter in Skill #59 for programme selection",
+          "passed": null,
+          "evidence": ""
+        },
+        {
+          "text": "Includes Skill #50 (cost estimation) for both safety improvements and maintenance works to enable comparison",
+          "passed": null,
+          "evidence": ""
+        }
+      ]
+    }
+  ]
+}

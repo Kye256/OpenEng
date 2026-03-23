@@ -1,0 +1,88 @@
+{
+  "skill_name": "aashto-93",
+  "evals": [
+    {
+      "id": 0,
+      "prompt": "Design a flexible pavement using the AASHTO 1993 method for a trunk road in Uganda. The design traffic is 5 million ESAs over a 15-year design life. The design CBR is 8%. The road is a Class I trunk road. Available materials are: asphalt concrete surfacing (a1=0.35), crushed stone base on natural gravel subbase (a2=0.14 per MoWT Table 5.2), and natural gravel subbase with CBR >= 30% (a3=0.11). Use R=90% and S0=0.45. Calculate the required structural number and determine appropriate layer thicknesses.",
+      "expected_output": "MR = 1500 * 8 = 12,000 psi. ZR = -1.282 for R=90%. delta_psi = 4.2 - 2.5 = 1.7. Required SN approximately 3.5-4.0 inches from AASHTO equation. Layer design using Table 5.2 coefficients: AC 50mm + crushed stone base ~200-250mm + natural gravel subbase ~200-250mm. Total SN_achieved >= SN_required.",
+      "files": [
+        "skills/pavement-design/aashto-93/tables/uganda_layer_coefficients.json"
+      ],
+      "assertions": [
+        {
+          "text": "Calculates MR from CBR: MR = 1500 * 8 = 12,000 psi (range 10,000-14,000 acceptable)",
+          "passed": null,
+          "evidence": ""
+        },
+        {
+          "text": "Required SN is in range 3.0-4.5 inches for these inputs",
+          "passed": null,
+          "evidence": ""
+        },
+        {
+          "text": "Uses MoWT Table 5.2 layer coefficients (a1=0.35, a2=0.14 or 0.18, a3=0.11), not generic AASHTO values",
+          "passed": null,
+          "evidence": ""
+        },
+        {
+          "text": "Verifies SN_achieved >= SN_required in the final design",
+          "passed": null,
+          "evidence": ""
+        },
+        {
+          "text": "Notes that DSN = SN * 25.4 for MoWT mm-based system",
+          "passed": null,
+          "evidence": ""
+        }
+      ]
+    },
+    {
+      "id": 1,
+      "prompt": "Design a pavement using AASHTO 93 for a road in the UK with 15 million standard axles and a subgrade CBR of 12%.",
+      "expected_output": "Notes that AASHTO 93 is not standard UK practice. UK uses CD 227 analytical method. This skill is primarily for Uganda/East African practice. The AASHTO 93 calculation could be performed but would not produce a UK-compliant design.",
+      "files": [],
+      "assertions": [
+        {
+          "text": "Identifies that AASHTO 93 is not UK practice and references CD 227 as UK equivalent",
+          "passed": null,
+          "evidence": ""
+        },
+        {
+          "text": "Notes this skill is primarily for Uganda/East African practice",
+          "passed": null,
+          "evidence": ""
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "prompt": "Design a pavement using AASHTO 93 for a road in Uganda with design traffic of 10 million ESAs, subgrade CBR of 2%, and no reliability input specified. The only available materials are natural gravel (a2=0.12) and natural gravel subbase (a3=0.11).",
+      "expected_output": "CBR 2% gives MR = 3,000 psi -- very weak subgrade. Escalation for subgrade improvement needed. Default R=90% with flag. Required SN will be very high (>5.0 inches) due to weak subgrade. With only natural gravel materials (low coefficients), impractical layer thicknesses would be required. Escalation: subgrade improvement strongly recommended before pavement design. If no improvement, extremely thick pavement layers needed.",
+      "files": [
+        "skills/pavement-design/aashto-93/tables/uganda_layer_coefficients.json"
+      ],
+      "assertions": [
+        {
+          "text": "Raises escalation flag for CBR 2% (very weak subgrade requiring improvement)",
+          "passed": null,
+          "evidence": ""
+        },
+        {
+          "text": "Applies default R=90% with explicit flag that reliability was not specified",
+          "passed": null,
+          "evidence": ""
+        },
+        {
+          "text": "Calculates very high required SN (>5.0 inches) due to MR = 3,000 psi",
+          "passed": null,
+          "evidence": ""
+        },
+        {
+          "text": "Notes that natural gravel coefficients (a2=0.12, a3=0.11) make achieving high SN impractical without subgrade improvement",
+          "passed": null,
+          "evidence": ""
+        }
+      ]
+    }
+  ]
+}

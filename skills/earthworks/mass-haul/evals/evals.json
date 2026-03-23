@@ -1,0 +1,104 @@
+{
+  "skill_name": "mass-haul",
+  "evals": [
+    {
+      "id": 0,
+      "prompt": "Construct a mass haul diagram for a Class II paved trunk road in Uganda. Five station intervals at 100m spacing provide the following net volumes (cut minus shrinkage-adjusted fill): +200, +150, -100, -300, +50 m3. The contract free haul distance is 200m. Calculate the mass ordinates at each station, describe the mass haul diagram shape, identify the peak and trough, and determine whether the project is balanced. Note the free haul and overhaul implications.",
+      "expected_output": "Mass ordinates: 0, 200, 350, 250, -50, 0. Peak at station 3 (chainage 0+200, M=350). Trough at station 5 (chainage 0+400, M=-50). Final mass ordinate = 0, so the project is balanced overall. Material moves from cut zone (0+000 to 0+200) to fill zone (0+200 to 0+400). Primary haul distance approximately 200-250m. Free haul (200m) covers most material movement; some overhaul for material hauled beyond 200m.",
+      "files": [],
+      "assertions": [
+        {
+          "text": "Mass ordinates correctly calculated as 0, 200, 350, 250, -50, 0",
+          "passed": null,
+          "evidence": ""
+        },
+        {
+          "text": "Peak identified at station 3 (chainage 0+200) with mass ordinate of 350 m3",
+          "passed": null,
+          "evidence": ""
+        },
+        {
+          "text": "Trough identified at station 5 (chainage 0+400) with mass ordinate of -50 m3",
+          "passed": null,
+          "evidence": ""
+        },
+        {
+          "text": "Final mass ordinate correctly identified as 0 (balanced project, no borrow or spoil needed)",
+          "passed": null,
+          "evidence": ""
+        },
+        {
+          "text": "Free haul distance of 200m referenced and overhaul implications discussed",
+          "passed": null,
+          "evidence": ""
+        }
+      ]
+    },
+    {
+      "id": 1,
+      "prompt": "Perform a mass haul analysis for an A-road improvement scheme in the UK using NEC contract conditions. The same net volumes apply: +200, +150, -100, -300, +50 m3 at 100m intervals. Free haul distance is 200m. Calculate mass ordinates, interpret the diagram, and note UK-specific considerations including SHW Series 600 material classification and materials management requirements.",
+      "expected_output": "Same mass ordinate calculations as Uganda scenario (0, 200, 350, 250, -50, 0). Balanced project. UK-specific: cut material must be classified per SHW Series 600 before placement as fill. CL:AIRE Materials Management Plan recommended for on-site reuse. Waste hierarchy satisfied since project is balanced (no waste generated).",
+      "files": [],
+      "assertions": [
+        {
+          "text": "Mass ordinates identical to Uganda scenario (universal calculation method)",
+          "passed": null,
+          "evidence": ""
+        },
+        {
+          "text": "References SHW Series 600 for earthworks material classification requirement",
+          "passed": null,
+          "evidence": ""
+        },
+        {
+          "text": "Mentions CL:AIRE or Materials Management Plan for UK on-site material reuse",
+          "passed": null,
+          "evidence": ""
+        },
+        {
+          "text": "Notes waste hierarchy compliance (balanced project means no waste generated)",
+          "passed": null,
+          "evidence": ""
+        },
+        {
+          "text": "Free haul distance of 200m referenced per NEC contract conditions",
+          "passed": null,
+          "evidence": ""
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "prompt": "Analyse a mass haul problem for a road alignment where all station intervals show negative net volumes (persistent fill deficit). The net volumes at 100m intervals are: -150, -200, -250, -180, -120 m3 (5 intervals). No cut is available anywhere along the alignment. Determine the mass ordinates, identify the total borrow requirement, and recommend next steps.",
+      "expected_output": "Mass ordinates: 0, -150, -350, -600, -780, -900. All negative and monotonically decreasing -- persistent fill deficit. Total borrow required: 900 m3. No balance line is meaningful since there is no cut. Entire fill must come from borrow. Recommend: (1) identify borrow pit source, (2) assess material suitability with Skill #28, (3) consider vertical alignment adjustment to reduce fill requirement, (4) environmental assessment for borrow pit.",
+      "files": [],
+      "assertions": [
+        {
+          "text": "Mass ordinates correctly calculated as 0, -150, -350, -600, -780, -900",
+          "passed": null,
+          "evidence": ""
+        },
+        {
+          "text": "Identifies total borrow requirement of 900 m3 (all fill must come from external source)",
+          "passed": null,
+          "evidence": ""
+        },
+        {
+          "text": "Recommends borrow pit investigation and flags Skill #28 for material suitability assessment",
+          "passed": null,
+          "evidence": ""
+        },
+        {
+          "text": "Suggests vertical alignment adjustment as potential mitigation for fill deficit",
+          "passed": null,
+          "evidence": ""
+        },
+        {
+          "text": "Raises escalation flag for significant borrow requirement (100% of fill from borrow)",
+          "passed": null,
+          "evidence": ""
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,89 @@
+{
+  "skill_name": "small-span-structures",
+  "evals": [
+    {
+      "id": 0,
+      "prompt": "A community access road in Uganda crosses a seasonal river. AADT = 80 vehicles/day. The river has a normal wet-season base flow of 0.5 m3/s and is completely dry for 5 months of the year. The 2-year flood is Q2 = 15 m3/s. The acceptable closure is 10 days per year. The budget is limited (community road standard). River bed width is 12 m. Select the appropriate structure type, size the key elements, and specify flood warning requirements.",
+      "expected_output": "Recommended type: Vented causeway (drift) -- AADT < 150, seasonal river with base flow (plain causeway would be overtopped by base flow), closure 10 days acceptable. Pipe sizing: 2-3 pipes of 600 mm diameter to pass 0.5 m3/s base flow. Slab: 250 mm RC concrete. Scour protection: gabion mattress at downstream edge. Flood warning: depth markers and warning signs. Closure assessment: approximately 10-15 days/year when depth exceeds 300 mm.",
+      "files": [],
+      "assertions": [
+        {
+          "text": "Structure type is causeway or vented causeway (drift) -- appropriate for AADT 80 and seasonal river",
+          "passed": null,
+          "evidence": ""
+        },
+        {
+          "text": "AADT threshold checked against type selection criteria (AADT < 150 suitable for drift)",
+          "passed": null,
+          "evidence": ""
+        },
+        {
+          "text": "Closure days assessed and compared with acceptable limit (10 days/year for community road)",
+          "passed": null,
+          "evidence": ""
+        },
+        {
+          "text": "Skill #39 referenced for flood levels or submergence frequency assessment",
+          "passed": null,
+          "evidence": ""
+        },
+        {
+          "text": "Flood warning signage specified (depth markers, warning signs)",
+          "passed": null,
+          "evidence": ""
+        }
+      ]
+    },
+    {
+      "id": 1,
+      "prompt": "The same river crossing scenario (AADT 80, seasonal river, Q2 = 15 m3/s, normal flow 0.5 m3/s) is assessed for a UK context. What type of crossing would be recommended and why does the UK approach differ from Uganda?",
+      "expected_output": "UK approach: causeways and drifts are not standard practice on UK public roads due to safety standards, liability concerns, and public expectation of all-weather access. Even at AADT 80, a conventional bridge or culvert would typically be recommended. Fords exist in the UK as legacy features but are not new design choices. DMRB does not provide specific guidance for submersible structures. Knowledge-based flag noted.",
+      "files": [],
+      "assertions": [
+        {
+          "text": "Notes that causeways/drifts are rare or not standard in UK public road practice",
+          "passed": null,
+          "evidence": ""
+        },
+        {
+          "text": "References UK ford provisions or lack of specific DMRB guidance for submersible structures",
+          "passed": null,
+          "evidence": ""
+        },
+        {
+          "text": "Knowledge-based flag noted for UK module",
+          "passed": null,
+          "evidence": ""
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "prompt": "A district road in Uganda crosses a perennial river (never dry). AADT = 350 vehicles/day. Q50 = 80 m3/s. Normal flow is 5 m3/s (always flowing). The budget is constrained and a conventional bridge costing 800 million UGX is unaffordable -- the available budget is 200 million UGX. Acceptable closure: 5 days/year. Select the appropriate structure type and identify any escalation issues.",
+      "expected_output": "Recommended type: Submersible bridge or low-level crossing -- NOT causeway (AADT 350 too high, perennial flow). Submersible bridge preferred due to AADT > 300. Buoyancy check required for submergence conditions. Budget constraint is a critical issue: conventional bridge needed for this AADT but budget insufficient. Escalation: document as design compromise, consider phased approach (submersible bridge now, upgrade to conventional when funding available). If budget insufficient even for submersible bridge, escalate to senior review.",
+      "files": [],
+      "assertions": [
+        {
+          "text": "Structure type is submersible bridge or low-level crossing (NOT causeway -- perennial flow and AADT 350 too high)",
+          "passed": null,
+          "evidence": ""
+        },
+        {
+          "text": "Buoyancy check mentioned or required for submersible type",
+          "passed": null,
+          "evidence": ""
+        },
+        {
+          "text": "Budget constraint identified as escalation issue -- conventional bridge needed but unaffordable",
+          "passed": null,
+          "evidence": ""
+        },
+        {
+          "text": "Escalation raised if budget insufficient for appropriate structure type",
+          "passed": null,
+          "evidence": ""
+        }
+      ]
+    }
+  ]
+}

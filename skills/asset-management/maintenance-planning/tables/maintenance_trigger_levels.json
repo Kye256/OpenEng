@@ -1,0 +1,81 @@
+{
+  "source": "MoWT maintenance manual / UNRA standard practice. Thresholds are representative ranges used in Uganda road maintenance planning.",
+  "disclaimer": "REPRESENTATIVE -- individual agencies may use slightly different trigger values. Verify current triggers before use in work programming.",
+  "trigger_levels": {
+    "paved": [
+      {
+        "parameter": "IRI",
+        "unit": "m/km",
+        "routine_max": 4,
+        "periodic_min": 4,
+        "periodic_max": 6,
+        "rehabilitation_min": 6,
+        "notes": "IRI > 8 indicates road may be unserviceable"
+      },
+      {
+        "parameter": "VCI",
+        "unit": "score (0-100)",
+        "routine_min": 80,
+        "periodic_min": 40,
+        "periodic_max": 80,
+        "rehabilitation_max": 40,
+        "notes": "VCI < 20 indicates extreme distress"
+      },
+      {
+        "parameter": "rutting_depth",
+        "unit": "mm",
+        "routine_max": 10,
+        "periodic_min": 10,
+        "periodic_max": 25,
+        "rehabilitation_min": 25,
+        "notes": "Rutting > 25mm is safety concern (aquaplaning)"
+      },
+      {
+        "parameter": "cracking_extent",
+        "unit": "% area",
+        "routine_max": 10,
+        "periodic_min": 10,
+        "periodic_max": 30,
+        "rehabilitation_min": 30,
+        "notes": "Alligator cracking > 30% indicates structural failure"
+      }
+    ],
+    "gravel": [
+      {
+        "parameter": "IRI",
+        "unit": "m/km",
+        "routine_max": 8,
+        "periodic_min": 8,
+        "periodic_max": 14,
+        "rehabilitation_min": 14,
+        "notes": "Gravel roads inherently rougher than paved"
+      },
+      {
+        "parameter": "VCI",
+        "unit": "score (0-100)",
+        "routine_min": 70,
+        "periodic_min": 40,
+        "periodic_max": 70,
+        "rehabilitation_max": 40,
+        "notes": "Gravel road VCI thresholds slightly lower than paved"
+      },
+      {
+        "parameter": "gravel_thickness_loss",
+        "unit": "% of original thickness",
+        "routine_max": 25,
+        "periodic_min": 25,
+        "periodic_max": 50,
+        "rehabilitation_min": 50,
+        "notes": "> 50% loss means wearing course effectively gone"
+      },
+      {
+        "parameter": "corrugation_severity",
+        "unit": "severity (L/M/H)",
+        "routine_max": "L",
+        "periodic_trigger": "M",
+        "rehabilitation_trigger": "H",
+        "notes": "High severity corrugation with > 50% extent triggers resheeting"
+      }
+    ]
+  }
+}

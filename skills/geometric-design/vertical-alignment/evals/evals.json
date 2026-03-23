@@ -1,0 +1,109 @@
+{
+  "skill_name": "vertical-alignment",
+  "evals": [
+    {
+      "id": 0,
+      "prompt": "Design a vertical crest curve for a Class II trunk road in Uganda. The terrain is rolling, the design speed is 70 km/h (from MoWT standards), and the proposed grades are +3% rising to a crest then -3% falling, giving an algebraic grade difference A = 6%. Using the MoWT Road Design Manual, determine the appropriate K-value for the crest curve, calculate the required curve length, check the minimum curve length requirement, and verify that the proposed gradient of 3% complies with the desirable maximum for rolling terrain at 70 km/h.",
+      "expected_output": "From MoWT Table 6-11 at 70 km/h: K_crest = 19. Curve length L = K x A = 19 x 6 = 114 m. Minimum curve length L_min = 0.6 x 70 = 42 m; 114 m > 42 m so OK. From MoWT Table 6-14, rolling terrain at 70 km/h: desirable maximum gradient = 5.5%. The proposed 3% is within the desirable maximum. All checks pass.",
+      "files": [
+        "skills/geometric-design/vertical-alignment/tables/uganda_k_values.json",
+        "skills/geometric-design/vertical-alignment/tables/uganda_gradients.json"
+      ],
+      "assertions": [
+        {
+          "text": "K-value for crest curve at 70 km/h is 19 (from MoWT Table 6-11, not AASHTO Green Book)",
+          "passed": null,
+          "evidence": ""
+        },
+        {
+          "text": "Curve length calculated as L = K x A = 19 x 6 = 114 m (range 110-120 m acceptable due to rounding)",
+          "passed": null,
+          "evidence": ""
+        },
+        {
+          "text": "Minimum curve length check performed: L_min = 0.6 x 70 = 42 m, and 114 m exceeds this",
+          "passed": null,
+          "evidence": ""
+        },
+        {
+          "text": "Gradient compliance checked against MoWT Table 6-14: 3% is within desirable maximum of 5.5% for rolling terrain at 70 km/h",
+          "passed": null,
+          "evidence": ""
+        },
+        {
+          "text": "References MoWT Road Design Manual Vol. 1 table numbers (Table 6-11, Table 6-14)",
+          "passed": null,
+          "evidence": ""
+        }
+      ]
+    },
+    {
+      "id": 1,
+      "prompt": "Design a sag vertical curve for an all-purpose single carriageway road in the UK following DMRB CD 109 standards. The design speed is 100A km/h, and the algebraic grade difference at the sag is A = 4% (from -2% downhill to +2% uphill). Determine the desirable minimum K-value for the sag curve, calculate the required curve length, and state the permitted relaxation steps for sag curves on this road type.",
+      "expected_output": "From CD 109 Table 2.10 at 100 km/h: desirable minimum sag K = 26. Curve length L = K x A = 26 x 4 = 104 m. For sag curves on all-purpose roads (100A is not 50B/60B/70B): 1 step relaxation is permitted per Table 5.9. No relaxation needed since we are using desirable K.",
+      "files": [],
+      "assertions": [
+        {
+          "text": "References DMRB CD 109 for sag curve K-value (not MoWT or AASHTO)",
+          "passed": null,
+          "evidence": ""
+        },
+        {
+          "text": "Desirable minimum sag K at 100 km/h is 26 (from CD 109 Table 2.10)",
+          "passed": null,
+          "evidence": ""
+        },
+        {
+          "text": "Curve length calculated as L = 26 x 4 = 104 m (range 100-110 m acceptable)",
+          "passed": null,
+          "evidence": ""
+        },
+        {
+          "text": "Correctly identifies sag curve relaxation rules from Table 5.9 — states that all-purpose (not 50B/60B/70B) gets 1 step relaxation",
+          "passed": null,
+          "evidence": ""
+        },
+        {
+          "text": "Notes that sag curve relaxation rules differ from crest curve rules (Table 5.7 vs Table 5.9)",
+          "passed": null,
+          "evidence": ""
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "prompt": "A road in mountainous terrain in Uganda has a proposed gradient of 11% over a length of 400 m. The design speed is 50 km/h. The AADT is 3,500 pcu/day and the road is Class II. Using the MoWT Road Design Manual, check whether this gradient is within the desirable and absolute maximum limits, check the critical length of gradient, and assess whether a climbing lane is needed.",
+      "expected_output": "From MoWT Table 6-14 (desirable): mountainous at 50 km/h = 9%. The proposed 11% exceeds the desirable maximum. From Table 6-15 (absolute): mountainous at 50 km/h = 11%. The proposed 11% is at the absolute maximum — barely compliant. Critical length check from Table 6-16: at 11%, max desirable length = 350 m. The proposed 400 m exceeds the critical length. Escalation: gradient at absolute maximum AND exceeds critical length. Climbing lane: AADT 3,500 is between 2,000-6,000 on Class II road — climbing lane should be considered. Overall: multiple escalation flags for gradient, critical length, and climbing lane.",
+      "files": [
+        "skills/geometric-design/vertical-alignment/tables/uganda_gradients.json"
+      ],
+      "assertions": [
+        {
+          "text": "Identifies that 11% gradient exceeds desirable maximum of 9% for mountainous terrain at 50 km/h (MoWT Table 6-14)",
+          "passed": null,
+          "evidence": ""
+        },
+        {
+          "text": "Identifies that 11% gradient equals or is at the absolute maximum of 11% for mountainous terrain at 50 km/h (MoWT Table 6-15)",
+          "passed": null,
+          "evidence": ""
+        },
+        {
+          "text": "Checks critical length of gradient: 400 m exceeds the 350 m limit for 11% gradient (MoWT Table 6-16)",
+          "passed": null,
+          "evidence": ""
+        },
+        {
+          "text": "Raises escalation flag for gradient exceeding desirable maximum and/or critical length being exceeded",
+          "passed": null,
+          "evidence": ""
+        },
+        {
+          "text": "Assesses climbing lane need: AADT 3,500 on Class II road warrants climbing lane consideration per MoWT Table 6-17 guidance",
+          "passed": null,
+          "evidence": ""
+        }
+      ]
+    }
+  ]
+}

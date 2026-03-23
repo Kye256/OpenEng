@@ -1,0 +1,78 @@
+{
+  "source": {
+    "manual": "MoWT Road Design Manual Vol 2: Drainage Design",
+    "edition": "January 2010",
+    "section": "Section 4.3, Tables 4.5 and 4.6",
+    "page": "22-23",
+    "original_source": "TRRL Laboratory Report 623",
+    "verification": "pending"
+  },
+  "description": "IDF curve parameters for East African stations. Formula: i = a / (b + td)^c, where i = intensity (mm/hr), td = duration (hours), b = 0.33 hrs for all Group I stations",
+  "formula": "i = a / (b + td)^c",
+  "b_parameter": 0.33,
+  "b_unit": "hours",
+  "group_I_stations": {
+    "description": "Table 4.5: Values of Constants in Intensity-Duration-Frequency Relationships for Group I Stations",
+    "stations": [
+      {"name": "BUSIA", "country": "Uganda/Kenya", "return_periods": {"2yr": {"a": 74.62, "c": 1.00}, "5yr": {"a": 94.88, "c": 0.97}, "10yr": {"a": 105.19, "c": 0.96}}},
+      {"name": "MUGUGA", "country": "Kenya", "return_periods": {"2yr": {"a": 40.18, "c": 0.83}, "5yr": {"a": 54.86, "c": 0.84}, "10yr": {"a": 63.75, "c": 0.85}}},
+      {"name": "ATUMATAK", "country": "Uganda", "return_periods": {"2yr": {"a": 51.06, "c": 1.01}, "5yr": {"a": 61.33, "c": 0.99}, "10yr": {"a": 68.74, "c": 0.97}}},
+      {"name": "SAMBRET", "country": "Kenya", "return_periods": {"2yr": {"a": 56.61, "c": 1.00}, "5yr": {"a": 70.34, "c": 0.97}, "10yr": {"a": 77.98, "c": 0.96}}},
+      {"name": "SAOSA", "country": "Kenya", "return_periods": {"2yr": {"a": 56.55, "c": 0.98}, "5yr": {"a": 69.35, "c": 0.92}, "10yr": {"a": 81.39, "c": 0.90}}},
+      {"name": "KASESE", "country": "Uganda", "return_periods": {"2yr": {"a": 54.95, "c": 1.09}, "5yr": {"a": 66.65, "c": 1.04}, "10yr": {"a": 73.81, "c": 1.01}}},
+      {"name": "WADELAI", "country": "Uganda", "return_periods": {"2yr": {"a": 57.87, "c": 0.98}, "5yr": {"a": 72.24, "c": 0.82}, "10yr": {"a": 81.69, "c": 0.75}}},
+      {"name": "EQUATOR", "country": "Uganda/Kenya", "return_periods": {"2yr": {"a": 40.03, "c": 0.99}, "5yr": {"a": 48.53, "c": 1.02}, "10yr": {"a": 54.90, "c": 1.03}}},
+      {"name": "KABETE", "country": "Kenya", "return_periods": {"2yr": {"a": 42.17, "c": 0.78}, "5yr": {"a": 50.24, "c": 0.83}, "10yr": {"a": 59.64, "c": 0.84}}},
+      {"name": "KISUMU", "country": "Kenya", "return_periods": {"2yr": {"a": 72.15, "c": 1.01}, "5yr": {"a": 86.39, "c": 0.99}, "10yr": {"a": 96.36, "c": 0.98}}},
+      {"name": "KITALE", "country": "Kenya", "return_periods": {"2yr": {"a": 49.90, "c": 0.99}, "5yr": {"a": 62.90, "c": 1.01}, "10yr": {"a": 70.79, "c": 1.01}}},
+      {"name": "MOMBASA", "country": "Kenya", "return_periods": {"2yr": {"a": 49.49, "c": 0.78}, "5yr": {"a": 65.88, "c": 0.77}, "10yr": {"a": 74.48, "c": 0.83}}},
+      {"name": "NANYUKI", "country": "Kenya", "return_periods": {"2yr": {"a": 44.34, "c": 0.92}, "5yr": {"a": 57.81, "c": 0.81}, "10yr": {"a": 65.09, "c": 0.80}}},
+      {"name": "VOI", "country": "Kenya", "return_periods": {"2yr": {"a": 53.39, "c": 0.84}, "5yr": {"a": 79.04, "c": 0.57}, "10yr": {"a": 95.34, "c": 0.48}}},
+      {"name": "DAR ES SALAAM", "country": "Tanzania", "return_periods": {"2yr": {"a": 57.83, "c": 0.91}, "5yr": {"a": 68.83, "c": 0.86}, "10yr": {"a": 77.41, "c": 0.84}}},
+      {"name": "DODOMA", "country": "Tanzania", "return_periods": {"2yr": {"a": 55.35, "c": 0.95}, "5yr": {"a": 71.28, "c": 0.91}, "10yr": {"a": 82.43, "c": 0.88}}},
+      {"name": "KIGOMA", "country": "Tanzania", "return_periods": {"2yr": {"a": 58.51, "c": 0.97}, "5yr": {"a": 74.79, "c": 0.88}, "10yr": {"a": 83.89, "c": 0.86}}},
+      {"name": "MBEYA", "country": "Tanzania", "return_periods": {"2yr": {"a": 42.20, "c": 0.97}, "5yr": {"a": 55.62, "c": 0.97}, "10yr": {"a": 64.16, "c": 0.98}}},
+      {"name": "TABORA", "country": "Tanzania", "return_periods": {"2yr": {"a": 55.20, "c": 1.00}, "5yr": {"a": 70.84, "c": 1.02}, "10yr": {"a": 82.52, "c": 1.03}}},
+      {"name": "ZANZIBAR", "country": "Tanzania", "return_periods": {"2yr": {"a": 59.83, "c": 0.81}, "5yr": {"a": 76.06, "c": 0.72}, "10yr": {"a": 86.29, "c": 0.69}}},
+      {"name": "ENTEBBE", "country": "Uganda", "return_periods": {"2yr": {"a": 63.16, "c": 0.88}, "5yr": {"a": 82.70, "c": 0.89}, "10yr": {"a": 92.85, "c": 0.88}}},
+      {"name": "KAMPALA", "country": "Uganda", "return_periods": {"2yr": {"a": 58.52, "c": 0.97}, "5yr": {"a": 73.24, "c": 0.95}, "10yr": {"a": 83.36, "c": 0.94}}},
+      {"name": "GULU", "country": "Uganda", "return_periods": {"2yr": {"a": 70.06, "c": 1.01}, "5yr": {"a": 87.96, "c": 0.98}, "10yr": {"a": 100.83, "c": 0.96}}}
+    ]
+  },
+  "group_II_stations": {
+    "description": "Table 4.6: Values of Constants for Group II Stations (different b values possible but b=0.33 used as standard)",
+    "stations": [
+      {"name": "KITALE", "country": "Kenya", "return_periods": {"2yr": {"a": 51.50, "c": 0.97}, "5yr": {"a": 65.41, "c": 0.94}, "10yr": {"a": 74.52, "c": 0.93}}},
+      {"name": "MOLO", "country": "Kenya", "return_periods": {"2yr": {"a": 34.38, "c": 0.89}, "5yr": {"a": 51.11, "c": 0.94}, "10yr": {"a": 62.38, "c": 0.96}}},
+      {"name": "LAMU", "country": "Kenya", "return_periods": {"2yr": {"a": 47.04, "c": 0.77}, "5yr": {"a": 61.08, "c": 0.70}, "10yr": {"a": 70.84, "c": 0.67}}},
+      {"name": "LODWAR", "country": "Kenya", "return_periods": {"2yr": {"a": 47.35, "c": 1.02}, "5yr": {"a": 58.36, "c": 0.97}, "10yr": {"a": 65.89, "c": 0.95}}},
+      {"name": "GARISSA", "country": "Kenya", "return_periods": {"2yr": {"a": 55.33, "c": 1.00}, "5yr": {"a": 81.42, "c": 0.99}, "10yr": {"a": 99.19, "c": 0.98}}},
+      {"name": "NARKURU", "country": "Kenya", "return_periods": {"2yr": {"a": 46.06, "c": 0.97}, "5yr": {"a": 60.63, "c": 0.99}, "10yr": {"a": 71.21, "c": 0.99}}},
+      {"name": "KISUMU", "country": "Kenya", "return_periods": {"2yr": {"a": 70.49, "c": 0.97}, "5yr": {"a": 84.95, "c": 0.97}, "10yr": {"a": 95.26, "c": 0.96}}},
+      {"name": "MOMBASA", "country": "Kenya", "return_periods": {"2yr": {"a": 46.14, "c": 0.84}, "5yr": {"a": 57.85, "c": 0.80}, "10yr": {"a": 65.02, "c": 0.79}}},
+      {"name": "NANYUKI", "country": "Kenya", "return_periods": {"2yr": {"a": 43.13, "c": 1.00}, "5yr": {"a": 60.96, "c": 1.05}, "10yr": {"a": 73.20, "c": 1.07}}},
+      {"name": "VOI", "country": "Kenya", "return_periods": {"2yr": {"a": 53.76, "c": 0.94}, "5yr": {"a": 83.36, "c": 0.96}, "10yr": {"a": 103.10, "c": 0.97}}},
+      {"name": "JINJA", "country": "Uganda", "return_periods": {"2yr": {"a": 65.43, "c": 1.00}, "5yr": {"a": 73.28, "c": 0.96}, "10yr": {"a": 78.80, "c": 0.94}}},
+      {"name": "FORTPORTAL", "country": "Uganda", "return_periods": {"2yr": {"a": 49.24, "c": 0.98}, "5yr": {"a": 65.26, "c": 0.99}, "10yr": {"a": 76.30, "c": 0.99}}},
+      {"name": "MBARARA", "country": "Uganda", "return_periods": {"2yr": {"a": 51.27, "c": 0.96}, "5yr": {"a": 69.94, "c": 0.95}, "10yr": {"a": 81.99, "c": 0.95}}},
+      {"name": "TORORO", "country": "Uganda", "return_periods": {"2yr": {"a": 71.97, "c": 1.01}, "5yr": {"a": 89.00, "c": 0.98}, "10yr": {"a": 99.80, "c": 0.97}}},
+      {"name": "ENTEBBE", "country": "Uganda", "return_periods": {"2yr": {"a": 76.04, "c": 0.96}, "5yr": {"a": 97.09, "c": 0.88}, "10yr": {"a": 112.12, "c": 0.86}}},
+      {"name": "KAMPALA", "country": "Uganda", "return_periods": {"2yr": {"a": 60.80, "c": 1.00}, "5yr": {"a": 76.59, "c": 1.01}, "10yr": {"a": 87.52, "c": 1.01}}},
+      {"name": "GULU", "country": "Uganda", "return_periods": {"2yr": {"a": 60.84, "c": 0.97}, "5yr": {"a": 84.12, "c": 1.00}, "10yr": {"a": 97.75, "c": 1.01}}},
+      {"name": "NAIROBI", "country": "Kenya", "return_periods": {"2yr": {"a": 50.07, "c": 0.86}, "5yr": {"a": 92.26, "c": 0.88}, "10yr": {"a": 70.79, "c": 0.87}}}
+    ]
+  },
+  "short_duration_conversion": {
+    "description": "Eqn 4.4: Converting 24-hour rainfall to shorter duration rainfall",
+    "formula": "R_T = (T/24) * ((24 + b) / (b + T))^c * R_D",
+    "notes": "R_T = rainfall in T hours (mm), R_D = daily rainfall (mm), b = 0.33 hrs, c from station tables. Daily rainfall from Appendix 4.3 (24-hour rainfall maps)"
+  },
+  "appendix_4_4": {
+    "description": "Appendix 4.4: Ten Year to Two Year Ratio -- used to convert 2-year rainfall to 10-year. Regional ratios vary, typically 1.2 to 1.6 for Uganda stations.",
+    "note": "Full map-based data in Appendix 4.4 of MoWT Vol 2. Consult appendix for specific project locations."
+  },
+  "appendix_4_5": {
+    "description": "Appendix 4.5: Flood Factors -- used to convert from 10-year event to other return periods using the 10yr/2yr ratio",
+    "note": "Full table in Appendix 4.5 of MoWT Vol 2. Enter with 10yr/2yr ratio and desired return period to read flood factor."
+  }
+}

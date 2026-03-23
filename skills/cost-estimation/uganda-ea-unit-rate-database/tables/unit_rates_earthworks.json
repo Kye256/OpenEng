@@ -1,0 +1,19 @@
+{
+  "_metadata": {
+    "source": "Illustrative rates for methodology demonstration",
+    "base_year": "2024",
+    "currency_primary": "UGX",
+    "currency_secondary": "USD",
+    "exchange_rate": "UGX 3,700 = USD 1 (illustrative)",
+    "disclaimer": "PLACEHOLDER RATES -- not current market rates. Replace with actual market data before use.",
+    "region": "Central Uganda (Kampala corridor)"
+  },
+  "items": [
+    {"item_code": "E01", "description": "Clearing and grubbing", "unit": "ha", "rate_ugx": 3500000, "rate_usd": 946, "notes": "Varies significantly with vegetation density", "source_skill": "Skill #26"},
+    {"item_code": "E02", "description": "Topsoil stripping (150mm)", "unit": "m3", "rate_ugx": 8000, "rate_usd": 2.16, "notes": "Including stockpiling within 500m", "source_skill": "Skill #26"},
+    {"item_code": "E03", "description": "Excavation in common material", "unit": "m3", "rate_ugx": 25000, "rate_usd": 6.76, "notes": "Haul to spoil within 1 km. Add UGX 5,000/m3 per additional km", "source_skill": "Skill #26"},
+    {"item_code": "E04", "description": "Rock excavation", "unit": "m3", "rate_ugx": 65000, "rate_usd": 17.57, "notes": "Ripping or blasting. Blasting requires permit.", "source_skill": "Skill #26"},
+    {"item_code": "E05", "description": "Fill from approved borrow", "unit": "m3", "rate_ugx": 30000, "rate_usd": 8.11, "notes": "Including excavation, haul (average 5 km), spreading, and compaction", "source_skill": "Skill #27"},
+    {"item_code": "E06", "description": "Compaction of fill layers", "unit": "m3", "rate_ugx": 12000, "rate_usd": 3.24, "notes": "Layers not exceeding 200mm. Includes watering.", "source_skill": "Skill #26"}
+  ]
+}

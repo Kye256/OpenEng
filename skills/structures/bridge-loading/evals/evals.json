@@ -1,0 +1,107 @@
+{
+  "skill_name": "bridge-loading",
+  "evals": [
+    {
+      "id": 0,
+      "prompt": "Determine the design loads for a 25m simply supported bridge in Uganda with a 7.3m carriageway. The bridge is designed for 25 units of HB loading. The site is in central Uganda with a wind speed of 100 km/h. Using the MoWT Road Design Manual Vol 4, calculate: (1) the HA UDL and KEL, (2) the number of notional lanes, (3) the HB total load, (4) the Combination 1 ULS load factors for HA alone and dead load (concrete), and (5) check whether seismic design is required for this site.",
+      "expected_output": "HA UDL W = 30.0 kN/m (since L = 25m <= 30m, constant value). KEL = 120 kN per notional lane. 2 notional lanes (7.3m carriageway in 4.6-7.6m range). HB 25 units = 250 kN per axle, total 1000 kN over 4 axles. Combination 1 ULS: HA alone gamma_fL = 1.50, dead concrete gamma_fL = 1.15. Central Uganda is Zone 2 or 3 (A = 0.07 or 0.05), SPC 1 or 2 -- no detailed seismic analysis required but connections must resist 0.20 * dead load reaction. Seismic Section 9 referenced.",
+      "files": [
+        "skills/structures/bridge-loading/tables/uganda_load_combinations.json",
+        "skills/structures/bridge-loading/tables/uganda_ha_udl.json",
+        "skills/structures/bridge-loading/tables/uganda_seismic_parameters.json"
+      ],
+      "assertions": [
+        {
+          "text": "HA UDL value is 30.0 kN/m (in range 29-31 kN/m) -- correctly applies constant value for L <= 30m, NOT the formula",
+          "passed": null,
+          "evidence": ""
+        },
+        {
+          "text": "Notional lane count is 2 (for 7.3m carriageway in 4.6-7.6m range)",
+          "passed": null,
+          "evidence": ""
+        },
+        {
+          "text": "Load factor for HA alone ULS in Combination 1 is in range 1.45-1.55 (should be 1.50)",
+          "passed": null,
+          "evidence": ""
+        },
+        {
+          "text": "HB total load is in range 900-1100 kN (25 units * 10 kN/axle * 4 axles = 1000 kN)",
+          "passed": null,
+          "evidence": ""
+        },
+        {
+          "text": "Seismic Section 9 referenced -- zone determined and seismic check performed for central Uganda site",
+          "passed": null,
+          "evidence": ""
+        }
+      ]
+    },
+    {
+      "id": 1,
+      "prompt": "Determine the design loads for a 25m simply supported bridge in the UK with a 7.3m carriageway. Provide the loading approach using current UK standards.",
+      "expected_output": "References EN 1991-2 (Eurocode 1 Part 2) with UK National Annex. Uses Load Model LM1 (UDL + tandem system per lane) instead of HA/HB. Notes that HA/HB loading (from BS 5400) has been replaced by LM1-LM4 in the UK. Partial factors from EN 1990, not MoWT Table 1. No seismic loading for UK. Module flagged as knowledge-based.",
+      "files": [],
+      "assertions": [
+        {
+          "text": "References EN 1991-2 or Eurocode 1 Part 2 for traffic loads (not BS 5400 or MoWT Vol 4)",
+          "passed": null,
+          "evidence": ""
+        },
+        {
+          "text": "Identifies LM1 as the replacement for HA loading, with UDL + tandem system approach",
+          "passed": null,
+          "evidence": ""
+        },
+        {
+          "text": "Notes that HA/HB loading is withdrawn in UK, replaced by LM1-LM4",
+          "passed": null,
+          "evidence": ""
+        },
+        {
+          "text": "UK module identified as knowledge-based",
+          "passed": null,
+          "evidence": ""
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "prompt": "Determine the design loads for a 60m simply supported bridge in Uganda with an 11.0m carriageway. The bridge is designed for 45 units of HB loading. The site is in western Uganda near Kasese (seismic Zone 1). Calculate: (1) HA UDL for the 60m loaded length using the correct formula, (2) number of notional lanes, (3) HB total load for 45 units, (4) earth pressure surcharge for HB 45 units behind abutments, and (5) seismic design requirements for this site.",
+      "expected_output": "HA UDL for L = 60m (> 30m): W = 151 * (1/60)^0.475 = approximately 20.2 kN/m. 3 notional lanes (11.0m in 7.6-11.4m range). HB 45 units: 450 kN per axle, 1800 kN total. Earth pressure surcharge for HB 45 = 20 kN/m2 per Section 5.8.2. Kasese is Zone 1 (A = 0.15), SPC 3 -- full seismic analysis required per Section 9. Response modification factors from Table 9.4 apply.",
+      "files": [
+        "skills/structures/bridge-loading/tables/uganda_load_combinations.json",
+        "skills/structures/bridge-loading/tables/uganda_ha_udl.json",
+        "skills/structures/bridge-loading/tables/uganda_seismic_parameters.json"
+      ],
+      "assertions": [
+        {
+          "text": "HA UDL calculated using formula W = 151*(1/L)^0.475 for L > 30m, result in range 19-22 kN/m (approximately 20.2 kN/m for L=60m)",
+          "passed": null,
+          "evidence": ""
+        },
+        {
+          "text": "Notional lane count is 3 (for 11.0m carriageway in 7.6-11.4m range)",
+          "passed": null,
+          "evidence": ""
+        },
+        {
+          "text": "HB 45 units total load in range 1700-1900 kN (45 * 10 * 4 = 1800 kN)",
+          "passed": null,
+          "evidence": ""
+        },
+        {
+          "text": "Earth pressure surcharge for HB 45 units identified as 20 kN/m2 per Section 5.8.2",
+          "passed": null,
+          "evidence": ""
+        },
+        {
+          "text": "Seismic design required -- site identified as Zone 1 (A = 0.15), SPC 3, with reference to Table 9.1/9.2 and full Section 9 analysis",
+          "passed": null,
+          "evidence": ""
+        }
+      ]
+    }
+  ]
+}

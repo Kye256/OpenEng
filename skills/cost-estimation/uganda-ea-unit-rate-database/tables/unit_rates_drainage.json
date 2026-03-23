@@ -1,0 +1,20 @@
+{
+  "_metadata": {
+    "source": "Illustrative rates for methodology demonstration",
+    "base_year": "2024",
+    "currency_primary": "UGX",
+    "currency_secondary": "USD",
+    "exchange_rate": "UGX 3,700 = USD 1 (illustrative)",
+    "disclaimer": "PLACEHOLDER RATES -- not current market rates. Replace with actual market data before use.",
+    "region": "Central Uganda (Kampala corridor)"
+  },
+  "items": [
+    {"item_code": "D01", "description": "Excavation for side drains (unlined)", "unit": "m3", "rate_ugx": 18000, "rate_usd": 4.86, "notes": "Trapezoidal section", "source_skill": "Skill #30"},
+    {"item_code": "D02", "description": "Stone-pitched side drain lining (150mm)", "unit": "m2", "rate_ugx": 45000, "rate_usd": 12.16, "notes": "Hand-placed stone with mortar", "source_skill": "Skill #30"},
+    {"item_code": "D03", "description": "600mm diameter pipe culvert (supply and install)", "unit": "m", "rate_ugx": 350000, "rate_usd": 94.59, "notes": "Concrete pipe, Class 2. Includes bedding.", "source_skill": "Skill #31"},
+    {"item_code": "D04", "description": "900mm diameter pipe culvert (supply and install)", "unit": "m", "rate_ugx": 550000, "rate_usd": 148.65, "notes": "Concrete pipe, Class 2. Includes bedding.", "source_skill": "Skill #31"},
+    {"item_code": "D05", "description": "RC box culvert 1.5m x 1.5m", "unit": "m", "rate_ugx": 2500000, "rate_usd": 675.68, "notes": "Including formwork, concrete, reinforcement", "source_skill": "Skill #33"},
+    {"item_code": "D06", "description": "Headwall (standard, up to 1.2m)", "unit": "number", "rate_ugx": 1500000, "rate_usd": 405.41, "notes": "RC headwall with wingwalls", "source_skill": "Skill #34"},
+    {"item_code": "D07", "description": "Gabion basket erosion protection", "unit": "m3", "rate_ugx": 180000, "rate_usd": 48.65, "notes": "2x1x1m baskets, PVC-coated mesh, hand-placed stone fill", "source_skill": "Skill #32"}
+  ]
+}

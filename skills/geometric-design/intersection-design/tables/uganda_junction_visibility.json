@@ -1,0 +1,38 @@
+{
+  "source": {
+    "manual": "Uganda MoWT Road Design Manual Vol. 1",
+    "table": "Figures 8-11, 8-12",
+    "page": 167,
+    "verified": true,
+    "verified_date": "2026-03-20"
+  },
+  "description": "Visibility splays for approach/yield and stop conditions at junctions",
+  "data": {
+    "approach_yield": {
+      "setback_m": 20,
+      "splays": [
+        {"junction_design_speed_kmh": 40, "LA_m": 110},
+        {"junction_design_speed_kmh": 50, "LA_m": 135},
+        {"junction_design_speed_kmh": 60, "LA_m": 160},
+        {"junction_design_speed_kmh": 70, "LA_m": 185},
+        {"junction_design_speed_kmh": 80, "LA_m": 210},
+        {"junction_design_speed_kmh": 90, "LA_m": 235},
+        {"junction_design_speed_kmh": 100, "LA_m": 260},
+        {"junction_design_speed_kmh": 120, "LA_m": 310}
+      ]
+    },
+    "stop": {
+      "setback_m": 3,
+      "splays": [
+        {"junction_design_speed_kmh": 40, "LS_m": 120},
+        {"junction_design_speed_kmh": 50, "LS_m": 145},
+        {"junction_design_speed_kmh": 60, "LS_m": 185},
+        {"junction_design_speed_kmh": 70, "LS_m": 230},
+        {"junction_design_speed_kmh": 80, "LS_m": 280},
+        {"junction_design_speed_kmh": 90, "LS_m": 340},
+        {"junction_design_speed_kmh": 100, "LS_m": 400},
+        {"junction_design_speed_kmh": 120, "LS_m": 500}
+      ]
+    }
+  }
+}

@@ -1,0 +1,94 @@
+{
+  "skill_name": "variations-claims",
+  "evals": [
+    {
+      "id": 0,
+      "prompt": "You are advising the Engineer on a UNRA road project (FIDIC Red Book 1999, GoU funded, UGX 30 billion). During construction, it is discovered that 3 additional culverts are needed at Km 8, Km 12, and Km 19 due to updated drainage analysis. The BoQ contains an item for culvert construction at UGX 85 million per culvert. The Engineer wants to instruct this as a variation. Advise on: (1) the variation procedure, (2) the valuation method, (3) any impact on completion time, and (4) whether the Engineer has authority to instruct this (typical UNRA threshold of UGX 500 million or 5% of Contract Price).",
+      "expected_output": "Variation procedure per Sub-Clause 13.1: Engineer may instruct or request proposal per 13.3. Valuation: existing contract rate (UGX 85M/culvert) applies since the work is of similar character per Sub-Clause 12.3. Total value: 3 x UGX 85M = UGX 255 million. Impact on completion: assess whether additional culverts are on the critical path; if so, time extension may be needed per Sub-Clause 8.4(a). Authority check: UGX 255M is below the typical threshold of UGX 500M or 5% (UGX 1.5B), so Engineer may instruct without UNRA approval.",
+      "files": [],
+      "assertions": [
+        {
+          "text": "Variation procedure per Sub-Clause 13.1 correctly described -- Engineer instructs or requests proposal per 13.3",
+          "passed": null,
+          "evidence": ""
+        },
+        {
+          "text": "Valuation method identified -- existing contract rate applies for work of similar character (Sub-Clause 12.3)",
+          "passed": null,
+          "evidence": ""
+        },
+        {
+          "text": "Programme/time impact assessed -- considers whether additional culverts affect completion time, references Sub-Clause 8.4(a)",
+          "passed": null,
+          "evidence": ""
+        },
+        {
+          "text": "Authority check performed -- confirms variation value is within or outside Engineer's threshold",
+          "passed": null,
+          "evidence": ""
+        }
+      ]
+    },
+    {
+      "id": 1,
+      "prompt": "On a UNRA road project (FIDIC Red Book 1999), the Contractor submits a claim for additional payment due to unforeseeable ground conditions at Km 30-33. The site investigation report indicated firm laterite, but the Contractor encountered soft clay requiring subgrade improvement with imported material. The Contractor gave notice on Day 20 after first encountering the soft clay. Advise the Engineer on: (1) notice compliance, (2) the applicable Sub-Clause, (3) the unforeseeability test, (4) the entitlement basis (Cost or Cost + profit), and (5) the Engineer's determination process.",
+      "expected_output": "Notice compliant: Day 20 within 28-day limit (Sub-Clause 20.1). Applicable clause: Sub-Clause 4.12 (Unforeseeable Physical Conditions). Unforeseeability test: would an experienced contractor, having examined the site investigation data and available geological information, have foreseen the soft clay? If the site investigation showed laterite and the geological context did not suggest soft clay, the conditions are unforeseeable. Entitlement basis: Cost only (Sub-Clause 4.12 provides Cost, not Cost + profit). Engineer's determination per Sub-Clause 3.5: consult parties, endeavour to agree, then fair determination if no agreement.",
+      "files": [],
+      "assertions": [
+        {
+          "text": "Notice compliance checked -- 20 days within the 28-day limit under Sub-Clause 20.1",
+          "passed": null,
+          "evidence": ""
+        },
+        {
+          "text": "Sub-Clause 4.12 correctly identified as the entitlement clause for unforeseeable physical conditions",
+          "passed": null,
+          "evidence": ""
+        },
+        {
+          "text": "Unforeseeability test described -- what an experienced contractor would have anticipated from available data",
+          "passed": null,
+          "evidence": ""
+        },
+        {
+          "text": "Entitlement basis correctly identified as Cost only (not Cost + profit) under Sub-Clause 4.12",
+          "passed": null,
+          "evidence": ""
+        },
+        {
+          "text": "Engineer's determination process per Sub-Clause 3.5 described -- consult, endeavour to agree, fair determination",
+          "passed": null,
+          "evidence": ""
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "prompt": "On a UNRA road project (FIDIC Red Book 1999), the Contractor submits a claim for time extension and additional cost, stating that heavy rainfall during the October-November rainy season caused flooding and prevented earthworks for 6 weeks. The Contractor gave notice 45 days after the start of the rainfall -- arguing they did not realize the full impact until week 5. The Particular Conditions for this contract do not modify the 28-day time bar under Sub-Clause 20.1. Advise the Engineer on the time bar analysis.",
+      "expected_output": "Time bar analysis under Sub-Clause 20.1: The 28-day period runs from when the Contractor became aware (or should have become aware) of the event. Key question: when should the Contractor have become aware? Heavy rainfall starting in October is a foreseeable seasonal event in Uganda -- the Contractor should have been aware from the onset of the rainfall, not after 5 weeks. If the Contractor should have been aware at the onset, the notice at Day 45 exceeds the 28-day limit and the claim is time-barred. The Particular Conditions do not modify the time bar. Additional consideration: even if the rainfall itself was foreseeable (normal rainy season), the Contractor must demonstrate 'exceptionally adverse' conditions per Sub-Clause 8.4(c) -- normal seasonal rainfall is not 'exceptional' in Uganda.",
+      "files": [],
+      "assertions": [
+        {
+          "text": "28-day time bar under Sub-Clause 20.1 analysed -- identifies that 45 days likely exceeds the limit",
+          "passed": null,
+          "evidence": ""
+        },
+        {
+          "text": "Awareness test discussed -- considers when the Contractor 'became aware' or 'should have become aware'",
+          "passed": null,
+          "evidence": ""
+        },
+        {
+          "text": "Particular Conditions checked -- confirmed no modification to the time bar",
+          "passed": null,
+          "evidence": ""
+        },
+        {
+          "text": "Notes that normal seasonal rainfall in Uganda (October-November) may not qualify as 'exceptionally adverse' under Sub-Clause 8.4(c)",
+          "passed": null,
+          "evidence": ""
+        }
+      ]
+    }
+  ]
+}

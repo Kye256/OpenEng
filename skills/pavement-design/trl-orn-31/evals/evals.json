@@ -1,0 +1,85 @@
+{
+  "skill_name": "trl-orn-31",
+  "evals": [
+    {
+      "id": 0,
+      "prompt": "Design a pavement for a community access road in Uganda using TRL Road Note 31 (5th Edition). The design traffic is 0.5 million ESAs. The design CBR is 10% determined from 5 DCP profiles along the route (TRL standard cone). Select the appropriate subgrade class using ORN 31 Table 3-9, determine the foundation class from Table 8-1, and provide a pavement structure from the Chapter 9 catalogue.",
+      "expected_output": "ORN 31 subgrade class: S4 (CBR 8-14%) from Table 3-9 (NOT MoWT S4). Foundation class: F3 (CBR 8-14%, stiffness 50-100 MPa) from Table 8-1 -- capping NOT required. Traffic band: T2 (0.3-0.7 MESA). Structure from Chapter 9: surface dressing + granular roadbase (GB1 or GB3) 150mm, no subbase required for F3 foundation at T2 traffic.",
+      "files": [
+        "skills/pavement-design/trl-orn-31/tables/orn31_structure_catalogues.json",
+        "skills/pavement-design/trl-orn-31/tables/orn31_subgrade_classes.json"
+      ],
+      "assertions": [
+        {
+          "text": "Uses ORN 31 Table 3-9 subgrade classification (NOT MoWT Table 3.1) -- classifies CBR 10% as S4",
+          "passed": null,
+          "evidence": ""
+        },
+        {
+          "text": "Determines foundation class F3 from Table 8-1 for CBR 10%",
+          "passed": null,
+          "evidence": ""
+        },
+        {
+          "text": "Selects structure from Chapter 9 catalogue with appropriate roadbase material and thickness",
+          "passed": null,
+          "evidence": ""
+        },
+        {
+          "text": "Notes DCP data source and apparatus type (TRL standard cone)",
+          "passed": null,
+          "evidence": ""
+        }
+      ]
+    },
+    {
+      "id": 1,
+      "prompt": "Design a pavement for a road in the UK using TRL Road Note 31 with 5 million ESAs and CBR 15%.",
+      "expected_output": "Notes that ORN 31 is explicitly for developing and emerging countries, not UK practice. References CD 227 as the applicable UK standard. ORN 31 was developed by TRL (a UK organisation) but is not used domestically.",
+      "files": [],
+      "assertions": [
+        {
+          "text": "Identifies that ORN 31 is not UK practice -- explicitly for developing countries",
+          "passed": null,
+          "evidence": ""
+        },
+        {
+          "text": "References CD 227 as the UK equivalent for pavement design",
+          "passed": null,
+          "evidence": ""
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "prompt": "Design a pavement using ORN 31 for a road in Uganda with 2 million ESAs. Only DCP data is available (no laboratory CBR testing). The DCP results give estimated CBR values of 6%, 8%, 5%, 7%, 9%, 4%, 7%, 8% at different points along the route. The design CBR is near the S3/S4 boundary. Determine the subgrade class and provide a pavement structure.",
+      "expected_output": "DCP-CBR correlation used with caveat (apparatus type must be verified). 10th percentile of 8 values: sorted = 4, 5, 6, 7, 7, 8, 8, 9. 10th percentile approximately 4.5-5%. ORN 31 subgrade class: S3 (CBR 5-7%) -- at the S3/S4 boundary. Sensitivity flag raised. Foundation class: F2 (CBR 3-7%, capping required) or F3 (if CBR 8%). Structures for both classes should be considered.",
+      "files": [
+        "skills/pavement-design/trl-orn-31/tables/orn31_structure_catalogues.json",
+        "skills/pavement-design/trl-orn-31/tables/orn31_subgrade_classes.json"
+      ],
+      "assertions": [
+        {
+          "text": "Notes DCP-CBR correlation used with caveat about apparatus type verification",
+          "passed": null,
+          "evidence": ""
+        },
+        {
+          "text": "Raises sensitivity flag for subgrade near S3/S4 boundary",
+          "passed": null,
+          "evidence": ""
+        },
+        {
+          "text": "Correctly uses ORN 31 subgrade classes (not MoWT) for classification",
+          "passed": null,
+          "evidence": ""
+        },
+        {
+          "text": "Provides structures for both boundary classes (S3 and S4) due to sensitivity",
+          "passed": null,
+          "evidence": ""
+        }
+      ]
+    }
+  ]
+}

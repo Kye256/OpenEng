@@ -1,0 +1,99 @@
+{
+  "skill_name": "design-standards-selection",
+  "evals": [
+    {
+      "id": 0,
+      "prompt": "A 2-lane road connecting Masaka to Mbarara in Uganda. The current AADT is 2500 vpd with an estimated annual traffic growth rate of 5%. The terrain is rolling. The road is managed by UNRA (Uganda National Roads Authority). Determine the appropriate design standard, road classification, design speed, design vehicle, and design period for this project.",
+      "expected_output": "The MoWT Road Design Manual (2010) should be selected as the primary standard, with UNRA supplementary guidelines noted. The road should be classified as a Functional Class B (National Trunk) road. Based on design-year AADT of approximately 6600 vpd (2500 x 1.05^20), the Design Class should be Ib Paved or II Paved. Design speed for rolling terrain should be in the range of 70-100 km/h depending on Design Class. Design period of 20 years for UNRA national trunk road. Design vehicle WB-15 or SU depending on Design Class.",
+      "files": [],
+      "assertions": [
+        {
+          "text": "Selects MoWT Road Design Manual as the primary standard (not AASHTO as a separate parallel standard)",
+          "passed": null,
+          "evidence": ""
+        },
+        {
+          "text": "Identifies road class as trunk/national road (Functional Class A or B) or Design Class Ib/II for the given traffic",
+          "passed": null,
+          "evidence": ""
+        },
+        {
+          "text": "Design speed is in the 70-100 km/h range for rolling terrain trunk road",
+          "passed": null,
+          "evidence": ""
+        },
+        {
+          "text": "Design period is 15-20 years (UNRA national roads typically use 20 years)",
+          "passed": null,
+          "evidence": ""
+        },
+        {
+          "text": "All assumptions are flagged with warning markers or explicitly stated",
+          "passed": null,
+          "evidence": ""
+        }
+      ]
+    },
+    {
+      "id": 1,
+      "prompt": "A single carriageway road in rural Oxfordshire, United Kingdom. The expected traffic flow is approximately 5000 AADT. The terrain is flat. The road is managed by the local highway authority (Oxfordshire County Council). Determine the appropriate design standard, road category, and design speed for this project.",
+      "expected_output": "DMRB should be selected as the primary standard (widely adopted by local authorities even though not mandatory for non-trunk roads). The road category should be S2 (single carriageway, 2 lanes) under CD 109. Design speed should be approximately 100 km/h (equivalent to the national speed limit of 60 mph for a rural single carriageway). CD 109 should be referenced as the primary geometric design document.",
+      "files": [],
+      "assertions": [
+        {
+          "text": "Selects DMRB as the primary standard or notes it is widely adopted for local authority roads",
+          "passed": null,
+          "evidence": ""
+        },
+        {
+          "text": "Identifies correct road category as S2 or single carriageway for a local authority road",
+          "passed": null,
+          "evidence": ""
+        },
+        {
+          "text": "Design speed is appropriate for UK single carriageway (85-100 km/h range, corresponding to 50-60 mph)",
+          "passed": null,
+          "evidence": ""
+        },
+        {
+          "text": "References CD 109 or equivalent current DMRB document for geometric design parameters",
+          "passed": null,
+          "evidence": ""
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "prompt": "A community access road in Karamoja region, Uganda. No traffic data is available. The terrain is mountainous. The road connects a small rural community to the nearest trading centre. There is no information on the managing authority or funding source. Determine the appropriate design standard, road classification, and design speed, clearly identifying all assumptions made.",
+      "expected_output": "MoWT Road Design Manual should be selected as the primary standard. The road should be classified as Functional Class E (Minor Road) with Design Class C (Gravel) or B (Gravel) depending on assumed traffic. Design speed for mountainous terrain should be reduced to 40-50 km/h. Missing traffic data must be flagged prominently with an escalation trigger recommending a traffic survey. All assumed values (traffic, growth rate, design period) must be explicitly marked. Output should be clearly marked as preliminary/screening level.",
+      "files": [],
+      "assertions": [
+        {
+          "text": "Flags absence of traffic data as a key assumption requiring a traffic survey",
+          "passed": null,
+          "evidence": ""
+        },
+        {
+          "text": "Applies appropriate default AADT for a minor/community road (approximately 100 vpd per MoWT defaults) or explicitly states the assumed value",
+          "passed": null,
+          "evidence": ""
+        },
+        {
+          "text": "Design speed is reduced for mountainous terrain (40-50 km/h range for Design Class B or C)",
+          "passed": null,
+          "evidence": ""
+        },
+        {
+          "text": "Raises escalation flag for missing traffic data recommending a survey before detailed design",
+          "passed": null,
+          "evidence": ""
+        },
+        {
+          "text": "Output is clearly marked as preliminary or screening level, not suitable for final design",
+          "passed": null,
+          "evidence": ""
+        }
+      ]
+    }
+  ]
+}

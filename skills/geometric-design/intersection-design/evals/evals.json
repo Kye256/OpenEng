@@ -1,0 +1,104 @@
+{
+  "skill_name": "intersection-design",
+  "evals": [
+    {
+      "id": 0,
+      "prompt": "Design a priority T-junction on a Class II paved road in Uganda. The major road has a design speed of 80 km/h and AADT of 5000. The minor road has AADT of 600. The junction is on level ground. The junction is controlled by a give-way sign (approach condition). Using the MoWT Road Design Manual, determine: (1) the appropriate junction type, (2) the visibility splay requirement, (3) whether a right turn lane is needed and if so its total length. Assume right-turning traffic is 120 pcu/h.",
+      "expected_output": "Junction type B or C (partly to fully channelised T) based on approximate thresholds from MoWT Figures 8-5 to 8-8 at 80 km/h. Visibility splay: approach condition from 20 m setback, LA = 210 m at 80 km/h (from MoWT Figure 8-11). Right turn lane required: deceleration 85 m (MoWT Table 8-5) + storage 20 m (traffic 0-150 pcu/h, MoWT Table 8-6) = 105 m total at 3.0 m width. No gradient adjustment (level ground).",
+      "files": ["tables/uganda_junction_visibility.json"],
+      "assertions": [
+        {
+          "text": "Junction type is B (Partly Channelised T) or C (Channelised T) based on traffic volumes and 80 km/h design speed",
+          "passed": null,
+          "evidence": ""
+        },
+        {
+          "text": "Visibility splay uses approach/yield condition with 20 m setback (not 3.0 m stop condition)",
+          "passed": null,
+          "evidence": ""
+        },
+        {
+          "text": "Approach visibility distance LA is 210 m at 80 km/h (from MoWT Figure 8-11 or JSON table)",
+          "passed": null,
+          "evidence": ""
+        },
+        {
+          "text": "Right turn lane specified with deceleration length of 85 m (MoWT Table 8-5 at 80 km/h)",
+          "passed": null,
+          "evidence": ""
+        },
+        {
+          "text": "Storage section is 20 m (traffic 0-150 pcu/h range from MoWT Table 8-6)",
+          "passed": null,
+          "evidence": ""
+        },
+        {
+          "text": "References MoWT Road Design Manual Section 8 for parameter values",
+          "passed": null,
+          "evidence": ""
+        }
+      ]
+    },
+    {
+      "id": 1,
+      "prompt": "Design a priority junction for a single carriageway road in the United Kingdom. The major road has a design speed of 70A km/h. The minor road is stop-controlled. Determine the visibility requirements on the approach to the junction, referencing the appropriate DMRB standard.",
+      "expected_output": "Per CD 109 clause 2.13, no relaxation from desirable minimum SSD is permitted on immediate approaches to at-grade junctions. At 70 km/h design speed, the desirable minimum SSD from CD 109 Table 2.10 is 120 m. The y-distance (visibility along the major road) must be at least 120 m. Note that detailed junction design requires CD 123 which is not available locally -- engineer review required.",
+      "files": [],
+      "assertions": [
+        {
+          "text": "References CD 109 clause 2.13 for junction approach visibility (no relaxations permitted)",
+          "passed": null,
+          "evidence": ""
+        },
+        {
+          "text": "Desirable minimum SSD at 70 km/h is 120 m (from CD 109 Table 2.10)",
+          "passed": null,
+          "evidence": ""
+        },
+        {
+          "text": "Notes that CD 123 is needed for full junction design but is not available locally",
+          "passed": null,
+          "evidence": ""
+        },
+        {
+          "text": "Flags that the UK module is knowledge-based and requires engineer review",
+          "passed": null,
+          "evidence": ""
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "prompt": "A junction in Uganda has a minor road AADT of 3000 on a major road with AADT of 5000 and design speed of 60 km/h. The minor road carries 37.5% of total junction traffic. Additionally, the visibility splay on the northern approach is obstructed by a building at 100 m. Determine the junction type and identify any concerns.",
+      "expected_output": "With minor road at 37.5% of total traffic, a priority junction is inadequate. Recommend roundabout (Type D) or signalised intersection (Type E). At 60 km/h the required approach visibility LA = 160 m, but only 100 m is available on the northern approach -- this is a serious deficiency requiring escalation. Options: relocate junction, acquire land to remove obstruction, change to roundabout (which has different visibility geometry), or reduce design speed.",
+      "files": ["tables/uganda_junction_visibility.json"],
+      "assertions": [
+        {
+          "text": "Recommends roundabout or signalised intersection (not just priority T) given minor road carries over 30% of traffic",
+          "passed": null,
+          "evidence": ""
+        },
+        {
+          "text": "Identifies that required visibility splay LA = 160 m at 60 km/h but only 100 m is available",
+          "passed": null,
+          "evidence": ""
+        },
+        {
+          "text": "Raises escalation flag for obstructed visibility splay",
+          "passed": null,
+          "evidence": ""
+        },
+        {
+          "text": "Provides options to resolve the visibility obstruction (relocate, remove obstruction, change junction type, or reduce speed)",
+          "passed": null,
+          "evidence": ""
+        },
+        {
+          "text": "Notes that high minor road percentage (>15%) supports roundabout selection",
+          "passed": null,
+          "evidence": ""
+        }
+      ]
+    }
+  ]
+}

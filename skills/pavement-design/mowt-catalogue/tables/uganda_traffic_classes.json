@@ -1,0 +1,25 @@
+{
+  "source": {
+    "manual": "MoWT Road Design Manual Vol 3 Part I",
+    "edition": "January 2010",
+    "table": "Table 2.5",
+    "page": "2-7",
+    "verified": true
+  },
+  "description": "Traffic class designations by cumulative ESA ranges for pavement design catalogue entry",
+  "classes": [
+    {"class": "T1", "esa_min": 0, "esa_max": 300000, "description": "< 0.3 million ESAs"},
+    {"class": "T2", "esa_min": 300000, "esa_max": 700000, "description": "0.3 - 0.7 million ESAs"},
+    {"class": "T3", "esa_min": 700000, "esa_max": 1500000, "description": "0.7 - 1.5 million ESAs"},
+    {"class": "T4", "esa_min": 1500000, "esa_max": 3000000, "description": "1.5 - 3 million ESAs"},
+    {"class": "T5", "esa_min": 3000000, "esa_max": 6000000, "description": "3 - 6 million ESAs"},
+    {"class": "T6", "esa_min": 6000000, "esa_max": 10000000, "description": "6 - 10 million ESAs"},
+    {"class": "T7", "esa_min": 10000000, "esa_max": 17000000, "description": "10 - 17 million ESAs"},
+    {"class": "T8", "esa_min": 17000000, "esa_max": 30000000, "description": "17 - 30 million ESAs"}
+  ],
+  "notes": [
+    "T1 is the practical minimum -- catalogue does not provide lighter structures below T1",
+    "For design traffic < 0.1M ESAs, consider alternative designs proven locally",
+    "If design ESA is near a class boundary, review forecasts and run sensitivity analysis"
+  ]
+}

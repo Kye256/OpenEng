@@ -1,0 +1,94 @@
+{
+  "skill_name": "measurement-payment",
+  "evals": [
+    {
+      "id": 0,
+      "prompt": "You are advising the Engineer on a UNRA road project in Uganda (FIDIC Red Book 1999, GoU funded, UGX 20 billion). The Contractor submits monthly Statement No. 5 claiming UGX 3 billion of measured work. The Engineer's site measurement records show that earthworks quantities are overclaimed by UGX 300 million and pavement base course has 400 m2 that failed quality testing (value UGX 40 million). The contract has 5% retention (max 5% of Contract Price) and 10% advance payment (UGX 2 billion received, repayment started). Cumulative retention to date is UGX 350 million. Calculate the IPC amount the Engineer should certify, including retention and advance payment deductions.",
+      "expected_output": "Engineer certifies the correct amount, not the claimed amount. Verified work: UGX 3,000M - 300M (overclaimed) - 40M (failed QC) = UGX 2,660M. Retention: 5% of UGX 2,660M = UGX 133M. Check cumulative retention: 350M + 133M = 483M (below max UGX 1,000M). Advance repayment: 10% of UGX 2,660M = UGX 266M. Net IPC: UGX 2,660M - 133M - 266M = UGX 2,261M. IPC must be issued within 28 days of Statement receipt. Employer pays within 56 days.",
+      "files": [],
+      "assertions": [
+        {
+          "text": "Engineer certifies the correct amount (approximately UGX 2,660M gross) -- not the Contractor's claimed UGX 3,000M",
+          "passed": null,
+          "evidence": ""
+        },
+        {
+          "text": "Retention calculation shown -- 5% deducted, with check against maximum",
+          "passed": null,
+          "evidence": ""
+        },
+        {
+          "text": "Advance payment deduction included in the IPC calculation",
+          "passed": null,
+          "evidence": ""
+        },
+        {
+          "text": "28-day IPC issuance deadline referenced (Sub-Clause 14.6)",
+          "passed": null,
+          "evidence": ""
+        },
+        {
+          "text": "56-day Employer payment deadline referenced -- runs from Statement receipt, not IPC date",
+          "passed": null,
+          "evidence": ""
+        }
+      ]
+    },
+    {
+      "id": 1,
+      "prompt": "On a UNRA road project (FIDIC Red Book 1999, GoU funded), the Employer has failed to pay IPC No. 6 within the contractual deadline. The Statement was received on 1 March and it is now 15 May (75 days since Statement receipt, 19 days past the 56-day deadline). The Contractor has written to the Engineer asking about their rights. Advise the Engineer on: (1) the Contractor's entitlement to financing charges, (2) the Contractor's right to suspend work, (3) the correct notice procedure for suspension, and (4) what the Engineer should do.",
+      "expected_output": "Contractor is entitled to financing charges from Day 57 under Sub-Clause 14.8 (at interest rate stated in Appendix to Tender, typically central bank rate + 3%). Contractor has the right to suspend work under Sub-Clause 16.1 after giving 21 days' written notice. The payment is now 19 days overdue -- Contractor may give 21-day suspension notice, and if payment is still not received after those 21 days, may suspend. Engineer should: (1) confirm the payment is overdue, (2) advise UNRA of the contractual position, (3) document the financing charge entitlement, (4) advise the Contractor of their rights under 16.1.",
+      "files": [],
+      "assertions": [
+        {
+          "text": "Contractor's right to financing charges identified under Sub-Clause 14.8, with accrual from Day 57",
+          "passed": null,
+          "evidence": ""
+        },
+        {
+          "text": "Contractor's right to suspend work identified under Sub-Clause 16.1 with 21-day notice requirement",
+          "passed": null,
+          "evidence": ""
+        },
+        {
+          "text": "Interest rate basis referenced (typically central bank rate + specified margin per Appendix to Tender)",
+          "passed": null,
+          "evidence": ""
+        },
+        {
+          "text": "Engineer's duty to document and advise both parties of the contractual position is described",
+          "passed": null,
+          "evidence": ""
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "prompt": "On a UNRA road project (FIDIC Red Book 1999), the works have reached practical completion and the Taking-Over Certificate has been issued. The Contractor submits a draft final statement showing total measured work of UGX 22.5 billion against a Contract Price of UGX 20 billion (the difference is due to approved variations and claims). The Engineer has verified the amounts but the Contractor disagrees with the Engineer's final measurement of earthworks quantities -- a difference of UGX 800 million. Advise on: (1) the final payment procedure, (2) the discharge requirement, (3) how to handle the disputed earthworks measurement, and (4) the dispute resolution route.",
+      "expected_output": "Final payment procedure: Sub-Clause 14.11 (Contractor submits draft final statement for verification, then final statement with written discharge per Sub-Clause 14.12). Engineer issues Final Payment Certificate within 28 days of receiving the final statement and discharge (Sub-Clause 14.13). The discharge releases the Employer from further liability except for matters referred to DAB/arbitration. For the disputed UGX 800M: the Engineer should certify the amount considered correct and note the dispute. The Contractor may include a reservation in the discharge regarding the disputed amount. If unresolved, the dispute may be referred to the DAB under Sub-Clause 20.4.",
+      "files": [],
+      "assertions": [
+        {
+          "text": "Final payment procedure referenced -- Sub-Clause 14.11 (draft final statement), 14.12 (discharge), 14.13 (FPC issuance within 28 days)",
+          "passed": null,
+          "evidence": ""
+        },
+        {
+          "text": "Discharge requirement explained -- written discharge releases Employer except for reserved matters, DAB referrals, and post-discharge entitlements",
+          "passed": null,
+          "evidence": ""
+        },
+        {
+          "text": "Disputed measurement handling described -- Engineer certifies correct amount, Contractor may reserve the disputed amount in discharge",
+          "passed": null,
+          "evidence": ""
+        },
+        {
+          "text": "Dispute resolution route identified -- DAB referral under Sub-Clause 20.4 for the disputed earthworks measurement",
+          "passed": null,
+          "evidence": ""
+        }
+      ]
+    }
+  ]
+}

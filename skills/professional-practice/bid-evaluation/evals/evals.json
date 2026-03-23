@@ -1,0 +1,104 @@
+{
+  "skill_name": "bid-evaluation",
+  "evals": [
+    {
+      "id": 0,
+      "prompt": "UNRA has received 6 bids for a World Bank-funded road rehabilitation project (ICB, estimated value UGX 45 billion / USD 12 million). The engineer's estimate is UGX 43 billion. Bid prices range from UGX 31.5 billion to UGX 44.8 billion. One bidder (UGX 31.5 billion) did not submit a bid security. Another bidder's price (UGX 35.2 billion) is approximately 18% below the engineer's estimate. Advise on: (a) preliminary examination outcome for the bidder without bid security, (b) whether the low bid should be flagged as abnormally low, (c) what action to take regarding the abnormally low bid, and (d) the risk if the abnormally low bid is accepted without investigation.",
+      "expected_output": "The bidder without bid security should be rejected at preliminary examination as this is a material deviation (administrative non-compliance). The bid at 18% below estimate should be flagged as abnormally low. The evaluation committee should request detailed cost justification from the bidder, examining key unit rates against market rates and the engineer's estimate. Risk of accepting without investigation: potential contract default, quality compromise, claims and variations to recover costs. World Bank evaluation methodology applies; evaluation report requires WB prior review and no-objection before award.",
+      "files": ["tables/evaluation_criteria_matrix.json"],
+      "assertions": [
+        {
+          "text": "Applies World Bank evaluation methodology (not PPDA alone) based on funding source",
+          "passed": null,
+          "evidence": ""
+        },
+        {
+          "text": "Identifies missing bid security as grounds for rejection at preliminary examination (material deviation)",
+          "passed": null,
+          "evidence": ""
+        },
+        {
+          "text": "Flags the bid at 18% below estimate as abnormally low requiring investigation",
+          "passed": null,
+          "evidence": ""
+        },
+        {
+          "text": "Recommends requesting detailed cost justification from the abnormally low bidder rather than automatic rejection",
+          "passed": null,
+          "evidence": ""
+        },
+        {
+          "text": "Notes the risk of contract default and quality compromise if abnormally low bid accepted without adequate justification",
+          "passed": null,
+          "evidence": ""
+        }
+      ]
+    },
+    {
+      "id": 1,
+      "prompt": "A district local government in Uganda has received 4 bids for a GoU-funded district road upgrade (Open Domestic Bidding, estimated value UGX 5 billion). The engineer's estimate is UGX 4.8 billion. All 4 bids passed preliminary examination. All bids are within 10% of the estimate (range: UGX 4.5 billion to UGX 5.2 billion). All bids are technically responsive. Advise on: (a) the evaluation methodology under PPDA, (b) how to handle a minor arithmetic error in the second-lowest bid (unit price x quantity discrepancy), (c) whether post-qualification is needed, and (d) the award recommendation.",
+      "expected_output": "PPDA technical compliance evaluation method applies (pass/fail technical, then lowest evaluated price). Arithmetic error corrected per PPDA Evaluation Regulation 14: unit price prevails over total price, total recalculated. Bidder notified of correction and asked to agree within 5 working days. Post-qualification of best evaluated bidder required (Regulation 34). Award to lowest evaluated price after arithmetic correction among technically responsive bidders. Evaluation report submitted to Contracts Committee for approval.",
+      "files": ["tables/evaluation_criteria_matrix.json"],
+      "assertions": [
+        {
+          "text": "Applies PPDA technical compliance evaluation method (pass/fail technical then lowest price)",
+          "passed": null,
+          "evidence": ""
+        },
+        {
+          "text": "Applies correct arithmetic correction rule: unit price prevails over total price (Regulation 14)",
+          "passed": null,
+          "evidence": ""
+        },
+        {
+          "text": "States bidder must be notified of arithmetic correction and asked to agree within 5 working days",
+          "passed": null,
+          "evidence": ""
+        },
+        {
+          "text": "Identifies post-qualification as required step before award recommendation",
+          "passed": null,
+          "evidence": ""
+        },
+        {
+          "text": "Recommends award to lowest evaluated price (after correction) among responsive bidders",
+          "passed": null,
+          "evidence": ""
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "prompt": "UNRA has received 5 bids for a road project. After preliminary examination, 3 bids are rejected: one for missing bid security, one for expired bid validity, and one for being submitted after the deadline. Only 2 responsive bids remain. The procurement method was Open Domestic Bidding. Advise on: (a) whether the evaluation can proceed with only 2 responsive bids, (b) what conditions must be satisfied to proceed, (c) whether re-bidding should be considered, and (d) what documentation is required.",
+      "expected_output": "Under PPDA Regulation 8 (Evaluation Regulations 2014), evaluation may proceed with a limited number of bids if specific conditions are met: bidding period was sufficient, terms were reasonable, notice was properly published, no extraneous events affected response, no collusion suspected, and procurement method was appropriate. If these conditions are not all met, re-bidding should be considered. The evaluation committee must document its assessment of these conditions in the evaluation report. Proceeding with 2 bids is permissible but requires explicit justification.",
+      "files": ["tables/evaluation_criteria_matrix.json"],
+      "assertions": [
+        {
+          "text": "References PPDA provisions for evaluating limited number of bids (Regulation 8 of Evaluation Regulations)",
+          "passed": null,
+          "evidence": ""
+        },
+        {
+          "text": "Lists minimum competition requirements that must be satisfied to proceed with 2 bids",
+          "passed": null,
+          "evidence": ""
+        },
+        {
+          "text": "Considers re-bidding as an alternative if minimum competition conditions are not met",
+          "passed": null,
+          "evidence": ""
+        },
+        {
+          "text": "Requires explicit documentation of justification for proceeding with limited competition",
+          "passed": null,
+          "evidence": ""
+        },
+        {
+          "text": "Notes that proceeding with 2 responsive bids is permissible but not automatic under PPDA framework",
+          "passed": null,
+          "evidence": ""
+        }
+      ]
+    }
+  ]
+}

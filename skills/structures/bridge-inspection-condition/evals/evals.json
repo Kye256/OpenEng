@@ -1,0 +1,94 @@
+{
+  "skill_name": "bridge-inspection-condition",
+  "evals": [
+    {
+      "id": 0,
+      "prompt": "Perform a routine inspection assessment for a 30-year-old RC T-beam bridge on a national road in Uganda. The bridge has a 25 m span. Inspection findings: deck slab has longitudinal cracking (2 mm width, affecting 30% of area), bearings at left abutment appear seized, minor scour at right abutment (0.5 m depth, foundations not exposed), drainage has 2 of 4 scuppers blocked. Beams show flexural cracking at midspan (0.3-0.5 mm) with isolated spalling and minor reinforcement corrosion. Assign NBI condition ratings for deck, superstructure, and substructure. Determine maintenance priority and recommend actions.",
+      "expected_output": "NBI ratings: Deck = 5 (Fair -- sound but significant cracking 2mm/30%), Superstructure = 5 (Fair -- flexural cracking, spalling, seized bearings), Substructure = 6 (Satisfactory -- minor cracking and minor scour 0.5m, foundations not exposed). Overall = 5. Maintenance priority: Routine (all components >= 5). Recommended actions: clear scuppers, replace joint sealant, monitor cracking progression, monitor bearing condition, monitor scour at right abutment. Photo documentation plan included.",
+      "files": [],
+      "assertions": [
+        {
+          "text": "NBI ratings assigned for deck, superstructure, and substructure separately (not just overall)",
+          "passed": null,
+          "evidence": ""
+        },
+        {
+          "text": "Each defect classified by type and severity (cracking, spalling, bearing seizure, scour)",
+          "passed": null,
+          "evidence": ""
+        },
+        {
+          "text": "Maintenance priority stated (Routine or Important -- depends on interpretation of seized bearings)",
+          "passed": null,
+          "evidence": ""
+        },
+        {
+          "text": "Standalone assessment -- no dependency on Skill #56 mentioned as requirement",
+          "passed": null,
+          "evidence": ""
+        },
+        {
+          "text": "Photo documentation requirements mentioned or photo documentation plan included",
+          "passed": null,
+          "evidence": ""
+        }
+      ]
+    },
+    {
+      "id": 1,
+      "prompt": "Assess the same 30-year-old RC T-beam bridge (25 m span, same defects: deck cracking 2mm/30%, seized bearings, minor scour 0.5m, blocked drainage, beam cracking 0.3-0.5mm with spalling) for a UK context. Apply the BCI assessment methodology per DMRB CS 465.",
+      "expected_output": "UK uses BCI system per CS 465 instead of NBI. Element-by-element assessment with severity (1-5) and extent for each defect. Element importance factors applied. BCIave approximately 70-75 (Fair). BCIcrit governed by seized bearings or deck cracking (high importance elements). Both BCIave and BCIcrit reported. CS 465 referenced. Knowledge-based flag noted.",
+      "files": [],
+      "assertions": [
+        {
+          "text": "References DMRB CS 465 or BCI assessment methodology (not NBI as primary system)",
+          "passed": null,
+          "evidence": ""
+        },
+        {
+          "text": "Element-based scoring with severity and extent (BCI approach, not component-level NBI)",
+          "passed": null,
+          "evidence": ""
+        },
+        {
+          "text": "Knowledge-based flag noted for UK module",
+          "passed": null,
+          "evidence": ""
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "prompt": "Perform a post-flood emergency inspection of a bridge in Uganda. Evidence found: exposed pile caps at the right pier (scour hole approximately 2 m deep at pier base), deck intact but approach slab on the left side has settled 50 mm creating a bump, debris (logs and vegetation) accumulated against the upstream face of both piers. The bridge is a 3-span RC T-beam, each span 15 m, on a national road with AADT 2000. Assign NBI ratings and determine the inspection priority and recommended immediate actions.",
+      "expected_output": "CRITICAL FINDINGS. NBI substructure rating: 4 or lower (Poor -- exposed pile caps indicate foundation undermining from 2 m scour). Deck: 6-7 (intact). Superstructure: 6-7 (intact). Approach: 5 (settled slab). Substructure governs overall: NBI = 4 or lower. Maintenance priority: URGENT -- safety risk from scour. Recommended actions: (1) traffic restriction (weight limit or single lane), (2) specialist scour assessment immediately, (3) remove debris from piers, (4) monitor scour hole progression, (5) install temporary scour protection if available. Escalation: specialist structural and scour assessment required.",
+      "files": [],
+      "assertions": [
+        {
+          "text": "Urgent priority assigned due to exposed pile caps and 2 m scour hole",
+          "passed": null,
+          "evidence": ""
+        },
+        {
+          "text": "NBI substructure rating <= 4 (Poor or worse) assigned due to exposed foundations",
+          "passed": null,
+          "evidence": ""
+        },
+        {
+          "text": "Traffic restriction recommended (weight limit, lane closure, or bridge closure)",
+          "passed": null,
+          "evidence": ""
+        },
+        {
+          "text": "Specialist scour assessment or specialist structural assessment required (escalation)",
+          "passed": null,
+          "evidence": ""
+        },
+        {
+          "text": "Immediate monitoring plan specified for scour progression",
+          "passed": null,
+          "evidence": ""
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,118 @@
+{
+  "source": "Adapted from World Bank Climate and Disaster Risk Screening guidelines for road projects. Ratings are illustrative -- project-specific assessment required. Likelihood and consequence scales should be calibrated to local climate data and road network context.",
+  "framework": "Climate Risk Screening Matrix for Road Infrastructure",
+  "hazards": [
+    {
+      "hazard": "flooding",
+      "description": "Increased rainfall intensity causing culvert overtopping, embankment washout, road submergence, and erosion",
+      "likelihood_criteria": {
+        "low": "Arid/semi-arid area, well-drained terrain, no flood history, rainfall <800mm/yr",
+        "medium": "Moderate rainfall area, some flood history, flat terrain near water bodies",
+        "high": "High rainfall area (>1500mm/yr), flood-prone lowland, history of flood damage, climate projections show increasing intensity"
+      },
+      "consequence_criteria": {
+        "minor": "Low-traffic road (<200 vpd), alternative routes available, minor economic disruption",
+        "moderate": "Medium-traffic road (200-1000 vpd), limited alternatives, moderate economic disruption",
+        "major": "High-traffic road (>1000 vpd) or strategic road, no alternative route, critical for community access"
+      },
+      "adaptation_measures": [
+        "Increase culvert capacity by 20-30% (Skill #31, design Q x 1.2-1.3)",
+        "Raise road embankment above projected flood levels",
+        "Improve drainage channel capacity (Skill #30)",
+        "Specify erosion protection at outlets and slopes (Skill #32)",
+        "Consider increasing design return period (e.g., 25-year to 50-year)",
+        "Provide scour protection at bridge foundations (Skill #39)"
+      ]
+    },
+    {
+      "hazard": "extreme_heat",
+      "description": "High temperatures causing pavement softening, rutting, binder degradation, and thermal expansion",
+      "likelihood_criteria": {
+        "low": "Highland area (>1500m elevation), mean max temperature <28C",
+        "medium": "Lowland area, mean max temperature 28-33C, occasional heat waves",
+        "high": "Arid/semi-arid lowland, mean max temperature >33C, frequent extreme heat events (>38C)"
+      },
+      "consequence_criteria": {
+        "minor": "Gravel road (no asphalt to degrade), low traffic",
+        "moderate": "Standard asphalt pavement, moderate traffic, some heavy vehicles",
+        "major": "Thin asphalt overlay, heavy traffic, many heavy vehicles, standard bitumen grade"
+      },
+      "adaptation_measures": [
+        "Use polymer-modified bitumen (PMB) for surface course (Skill #24)",
+        "Increase pavement thickness for thermal load distribution (Skill #21-23)",
+        "Use lighter-coloured aggregates to reduce heat absorption",
+        "Specify higher-grade bitumen (e.g., PG 76-22 for high-temperature zones)",
+        "Increase joint spacing in concrete pavements"
+      ]
+    },
+    {
+      "hazard": "landslides",
+      "description": "Slope instability from rainfall saturation causing road blockage, formation loss, and debris flow",
+      "likelihood_criteria": {
+        "low": "Flat terrain (<5% gradient), stable geology, low rainfall",
+        "medium": "Moderate terrain (5-15% gradient), some weathered soils, moderate rainfall",
+        "high": "Steep terrain (>15% gradient), deeply weathered soils, high rainfall (>1500mm/yr), history of landslides"
+      },
+      "consequence_criteria": {
+        "minor": "Minor slope slip, road can be cleared quickly, alternative access exists",
+        "moderate": "Significant road blockage, clearance takes days, limited alternatives",
+        "major": "Major slope failure, road destroyed, no alternative, risk to life (settlements below road)"
+      },
+      "adaptation_measures": [
+        "Improve slope drainage (herringbone drains, interceptor drains above road)",
+        "Reduce cut slope angles or provide benching",
+        "Install retaining structures at critical locations",
+        "Bioengineering (vetiver grass, deep-rooting vegetation) on slopes",
+        "Consider route realignment to avoid most vulnerable slopes",
+        "Install monitoring on critical slopes (inclinometers)"
+      ]
+    },
+    {
+      "hazard": "drought",
+      "description": "Extended dry periods causing subgrade desiccation, cracking (expansive soils), and loss of support",
+      "likelihood_criteria": {
+        "low": "High rainfall area (>1500mm/yr), short dry season (<2 months), non-expansive soils",
+        "medium": "Moderate rainfall, dry season 3-5 months, some expansive soils in subgrade",
+        "high": "Semi-arid area, dry season >5 months, expansive clay subgrade, increasing drought frequency"
+      },
+      "consequence_criteria": {
+        "minor": "Non-expansive subgrade, well-sealed pavement, limited moisture ingress",
+        "moderate": "Some expansive soils, standard sealed surface, minor cracking observed",
+        "major": "Expansive clay subgrade, thin pavement, unpaved shoulders allowing moisture ingress"
+      },
+      "adaptation_measures": [
+        "Protect subgrade from desiccation using moisture barriers",
+        "Lime/cement stabilization for expansive clay subgrades (Skill #28)",
+        "Provide wider sealed shoulders to prevent moisture ingress",
+        "Specify flexible pavement structure accommodating minor movement",
+        "Avoid expansive clay as fill material in embankments"
+      ]
+    }
+  ],
+  "risk_matrix": {
+    "description": "Combined risk rating from likelihood and consequence",
+    "matrix": {
+      "low_likelihood": {
+        "minor_consequence": "Low",
+        "moderate_consequence": "Low",
+        "major_consequence": "Medium"
+      },
+      "medium_likelihood": {
+        "minor_consequence": "Low",
+        "moderate_consequence": "Medium",
+        "major_consequence": "High"
+      },
+      "high_likelihood": {
+        "minor_consequence": "Medium",
+        "moderate_consequence": "High",
+        "major_consequence": "Very High"
+      }
+    }
+  },
+  "notes": [
+    "Risk ratings are qualitative and require engineering judgment for project-specific application.",
+    "Multiple hazards may apply simultaneously -- assess each independently then consider interactions.",
+    "Climate adjustment factors in country modules provide quantitative values for design parameter adjustments.",
+    "Adaptation measures reference specific design skills for implementation details."
+  ]
+}

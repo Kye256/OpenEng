@@ -1,0 +1,99 @@
+{
+  "skill_name": "boq-preparation",
+  "evals": [
+    {
+      "id": 0,
+      "prompt": "Prepare a Bill of Quantities for a 20 km rural road upgrade project in Uganda. The project involves: earthworks (50,000 m3 cut, 42,000 m3 fill from cuttings, 8,000 m3 to spoil, 3,000 m3 borrow), pavement (150mm natural gravel sub-base, 200mm crushed stone base, DBST surface), drainage (15 pipe culverts: 10 x 600mm and 5 x 900mm, average 12m length each, no box culverts), and no bridges. Road width is 6.5m carriageway with 1.5m shoulders each side. Use FIDIC Red Book format with MoWT item numbering.",
+      "expected_output": "Complete BoQ with Bills 1-4 and 6-7 (no Bill 5 as no bridges). Earthworks items reference Skill #26 for quantities, pavement items reference Skill #21 for design, culvert items reference Skill #31 for sizing. All items have correct measurement units (m3 for earthworks, m2 for pavement surface, m for culverts, ha for clearing).",
+      "files": [],
+      "assertions": [
+        {
+          "text": "Bills 1-4 and 6-7 present in output (Bill 5 omitted or marked N/A as no bridges)",
+          "passed": null,
+          "evidence": ""
+        },
+        {
+          "text": "Earthworks items reference Skill #26 for quantity derivation",
+          "passed": null,
+          "evidence": ""
+        },
+        {
+          "text": "Pavement items reference Skill #21 for design layer selection",
+          "passed": null,
+          "evidence": ""
+        },
+        {
+          "text": "Culvert items reference Skill #31 for hydraulic sizing",
+          "passed": null,
+          "evidence": ""
+        },
+        {
+          "text": "Measurement units correct: m3 for earthworks volumes, m2 for pavement surface, m for culverts, ha for clearing",
+          "passed": null,
+          "evidence": ""
+        }
+      ]
+    },
+    {
+      "id": 1,
+      "prompt": "Prepare a Bill of Quantities for a 5 km urban road reconstruction in Kampala, Uganda. The project includes: earthworks (minimal -- 5,000 m3 excavation for formation), pavement (200mm cement-stabilised base, 50mm AC wearing course), drainage (concrete-lined side drains, 3 box culverts 2.0x2.0m), and one 15m single-span bridge. Bridge requires approximately 120 m3 Class 25/20 concrete, 60 m3 Class 30/20 concrete for abutments, and 12,000 kg reinforcement steel. Include all 7 Bills.",
+      "expected_output": "Complete BoQ with all 7 Bills including Bill 5 (Structures) with bridge items. Bridge concrete measured in m3, reinforcement in kg. Quantities reference Skill #37 for deck design and Skill #38 for abutment design.",
+      "files": [],
+      "assertions": [
+        {
+          "text": "Bill 5 (Structures) present with bridge concrete and reinforcement items",
+          "passed": null,
+          "evidence": ""
+        },
+        {
+          "text": "Bridge quantities reference Skill #37 and/or Skill #38 for design",
+          "passed": null,
+          "evidence": ""
+        },
+        {
+          "text": "Concrete measured in m3 and reinforcement in kg",
+          "passed": null,
+          "evidence": ""
+        },
+        {
+          "text": "Urban road items include concrete-lined drains and AC wearing course",
+          "passed": null,
+          "evidence": ""
+        },
+        {
+          "text": "Output format follows FIDIC BoQ structure with item number, description, unit, quantity columns",
+          "passed": null,
+          "evidence": ""
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "prompt": "Prepare a Bill of Quantities for a 10 km rehabilitation project in Uganda. The existing road has a deteriorated bituminous surface but adequate formation. Works consist of: patching failed areas (estimated 2,000 m2), 50mm AC overlay on entire road, shoulder re-gravelling (150mm), and cleaning/reshaping existing side drains. No new culverts, no earthworks except minor patching excavation. Road width is 6.0m carriageway with 1.0m shoulders.",
+      "expected_output": "BoQ with minimal Bill 2 (patching excavation only, not full earthworks), Bill 3 dominated by overlay and shoulder works, Bill 4 limited to drain maintenance. Measurement method distinguishes overlay (m2 at specified thickness) from new construction. Rehabilitation-specific items like surface preparation and tack coat present.",
+      "files": [],
+      "assertions": [
+        {
+          "text": "Bill 2 minimal -- only patching excavation, not full earthworks programme",
+          "passed": null,
+          "evidence": ""
+        },
+        {
+          "text": "Bill 3 includes AC overlay item with area measurement and tack coat for overlay adhesion",
+          "passed": null,
+          "evidence": ""
+        },
+        {
+          "text": "Measurement method for overlay distinguished from new construction (surface preparation item present)",
+          "passed": null,
+          "evidence": ""
+        },
+        {
+          "text": "Escalation flag or note about rehabilitation-specific measurement considerations",
+          "passed": null,
+          "evidence": ""
+        }
+      ]
+    }
+  ]
+}

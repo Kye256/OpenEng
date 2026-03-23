@@ -1,0 +1,104 @@
+{
+  "skill_name": "asset-valuation",
+  "evals": [
+    {
+      "id": 0,
+      "prompt": "Calculate the asset value of a 25km paved national trunk road in central Uganda. The road was constructed 10 years ago and has a design life of 20 years. The current replacement cost is UGX 3.0 billion per km. No condition data is available from Skill #56. Assume 10% residual value for earthworks. Provide the DRC, remaining useful life, and annual depreciation charge.",
+      "expected_output": "Straight-line depreciation applied (no condition data). Replacement cost = 3.0B x 25 = UGX 75.0B. Residual = 7.5B (10%). Depreciation factor = 10/20 = 50%. DRC = 75.0B x 0.50 + 7.5B = UGX 45.0B. Remaining life = 10 years. Annual depreciation = (75.0B - 7.5B) / 20 = UGX 3.375B/year.",
+      "files": [],
+      "assertions": [
+        {
+          "text": "Applies straight-line depreciation method when no condition data is available from Skill #56",
+          "passed": null,
+          "evidence": ""
+        },
+        {
+          "text": "Calculates DRC correctly: replacement cost x (1 - age/design_life) + residual value, result in range UGX 40-50 billion",
+          "passed": null,
+          "evidence": ""
+        },
+        {
+          "text": "Identifies remaining useful life as approximately 10 years (design life minus age)",
+          "passed": null,
+          "evidence": ""
+        },
+        {
+          "text": "Calculates annual depreciation charge as (replacement cost - residual) / design life",
+          "passed": null,
+          "evidence": ""
+        },
+        {
+          "text": "Flags replacement costs as requiring verification with current market rates",
+          "passed": null,
+          "evidence": ""
+        }
+      ]
+    },
+    {
+      "id": 1,
+      "prompt": "A 30km district road network in eastern Uganda consists of 5 segments with different conditions (from Skill #56 assessments). Segment A: 8km paved, Good condition. Segment B: 5km paved, Fair condition. Segment C: 7km paved, Poor condition. Segment D: 6km gravel, Fair condition. Segment E: 4km gravel, Very Poor condition. Replacement costs: paved = UGX 1.5B/km, gravel = UGX 0.4B/km (eastern region factor 1.15 applied). Use condition-based depreciation with condition factors (Good=0.90, Fair=0.65, Poor=0.35, Very Poor=0.10) and 10% residual value. Provide per-segment DRC and total network value.",
+      "expected_output": "Condition-based depreciation for all segments. Segment A: 12.0B x 0.90 + 1.2B = UGX 12.0B. Segment B: 7.5B x 0.65 + 0.75B = UGX 5.625B. Segment C: 10.5B x 0.35 + 1.05B = UGX 4.725B. Segment D: 2.4B x 0.65 + 0.24B = UGX 1.80B. Segment E: 1.6B x 0.10 + 0.16B = UGX 0.32B. Total network DRC approximately UGX 24-26B. Segment E has minimal remaining value -- rehabilitation assessment recommended.",
+      "files": [],
+      "assertions": [
+        {
+          "text": "Uses condition-based depreciation for all segments since Skill #56 data is available",
+          "passed": null,
+          "evidence": ""
+        },
+        {
+          "text": "Applies different replacement costs for paved (1.5B/km) and gravel (0.4B/km) segments",
+          "passed": null,
+          "evidence": ""
+        },
+        {
+          "text": "Produces different DRC values per segment reflecting condition differences (Good segments worth more than Poor)",
+          "passed": null,
+          "evidence": ""
+        },
+        {
+          "text": "Identifies Segment E (Very Poor) as having minimal remaining value and recommends rehabilitation assessment",
+          "passed": null,
+          "evidence": ""
+        },
+        {
+          "text": "Provides total network value by summing individual segment DRC values",
+          "passed": null,
+          "evidence": ""
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "prompt": "A paved national road in Uganda is 28 years old with a design life of 20 years. It was last rehabilitated 18 years ago (overlay at year 10). Despite exceeding its design life by 8 years, a recent Skill #56 assessment rates it as Fair condition (VCI = 62, IRI = 5.5 m/km). The current replacement cost is UGX 3.5 billion per km for 12km length. How should this road be valued? Address the age exceeding design life issue.",
+      "expected_output": "Age > design life creates a problem for straight-line depreciation (would give zero/negative value). Condition-based depreciation is strongly recommended since condition data shows Fair -- road still has significant remaining value. DRC = 42.0B x 0.65 + 4.2B = approximately UGX 31.5B. Notes that straight-line would value at residual only (UGX 4.2B), which does not reflect actual condition. Recommends rehabilitation assessment per Skill #25 given age, and updating the asset register to reflect condition-based methodology.",
+      "files": [],
+      "assertions": [
+        {
+          "text": "Flags that age (28 years) exceeds design life (20 years) as a valuation issue for straight-line depreciation",
+          "passed": null,
+          "evidence": ""
+        },
+        {
+          "text": "Recommends condition-based depreciation to avoid undervaluation (straight-line would give residual value only)",
+          "passed": null,
+          "evidence": ""
+        },
+        {
+          "text": "Uses Fair condition factor (approximately 0.65) to calculate DRC that reflects actual road value",
+          "passed": null,
+          "evidence": ""
+        },
+        {
+          "text": "Recommends rehabilitation assessment per Skill #25 given the road's age beyond design life",
+          "passed": null,
+          "evidence": ""
+        },
+        {
+          "text": "Explains why condition-based method is preferred over straight-line when age exceeds design life",
+          "passed": null,
+          "evidence": ""
+        }
+      ]
+    }
+  ]
+}

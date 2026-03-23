@@ -1,0 +1,108 @@
+{
+  "skill_name": "culvert-structural-design",
+  "evals": [
+    {
+      "id": 0,
+      "prompt": "Design the structural elements of a 2.0m x 1.5m single-cell RC box culvert in Uganda. The culvert size was determined by Skill #31 (Culvert Hydraulic Design). The fill depth is 1.2 m. Use HA loading. The subgrade is S3 (CBR 6%) with an allowable bearing capacity of 100 kPa (from Skill #10). The fill material has a unit weight of 19 kN/m3. Using the MoWT Road Design Manual Vol 4, determine: (a) the earth pressure on the culvert with correct load factors, (b) the live load surcharge, (c) preliminary slab and wall thicknesses, (d) bearing pressure check, and (e) any escalation flags.",
+      "expected_output": "Earth pressure: nominal P_v = 19 x 1.2 = 22.8 kN/m2, design P_v (ULS) = 1.50 x 22.8 = 34.2 kN/m2. HA surcharge = 10 kN/m2, design surcharge (ULS) = 1.50 x 10 = 15.0 kN/m2. Preliminary slab thickness 250-350 mm, wall thickness 200-300 mm. Bearing pressure well within 100 kPa allowable. Escalation flag: detailed reinforcement design required by specialist structural engineer per BS 5400 Part 4 (as referenced by MoWT Vol 4).",
+      "files": [
+        "skills/structures/culvert-structural-design/tables/uganda_culvert_loading.json"
+      ],
+      "assertions": [
+        {
+          "text": "References Skill #31 as the source of culvert size -- does NOT perform hydraulic sizing (no inlet/outlet control checks)",
+          "passed": null,
+          "evidence": ""
+        },
+        {
+          "text": "Earth pressure calculation uses gamma_fL = 1.50 (ULS) per MoWT Vol 4 Table 1 (value within range 1.45-1.55 acceptable due to rounding)",
+          "passed": null,
+          "evidence": ""
+        },
+        {
+          "text": "HA surcharge correctly identified as 10 kN/m2 per MoWT Vol 4 Section 5.8.2",
+          "passed": null,
+          "evidence": ""
+        },
+        {
+          "text": "Preliminary member sizes provided (slab thickness 200-400 mm range, wall thickness 200-350 mm range)",
+          "passed": null,
+          "evidence": ""
+        },
+        {
+          "text": "Bearing pressure check performed against 100 kPa allowable from Skill #10",
+          "passed": null,
+          "evidence": ""
+        },
+        {
+          "text": "Escalation flag present: detailed reinforcement design requires specialist structural engineer",
+          "passed": null,
+          "evidence": ""
+        }
+      ]
+    },
+    {
+      "id": 1,
+      "prompt": "Design the structural elements of a 2.0m x 1.5m single-cell RC box culvert for UK conditions. The culvert size was determined by hydraulic design. The fill depth is 1.5 m. The foundation soil has phi' = 30 degrees and allowable bearing capacity of 150 kPa. Determine the appropriate loading, earth pressure approach, and note any differences from Uganda practice.",
+      "expected_output": "UK design uses Eurocode loading (LM1, not HA/HB) and Eurocode partial factors (gamma_G = 1.35 for permanent, gamma_Q = 1.50 for variable -- different from MoWT gamma_fL = 1.50). Earth pressure K0 = 1 - sin(30) = 0.50. Foundation design uses Eurocode 7 (not CP 2004). DMRB CD 361 provides specific requirements for buried box structures. Flag: CD 361 not available locally -- engineer review required.",
+      "files": [],
+      "assertions": [
+        {
+          "text": "References DMRB CD 361 for UK buried concrete box structures (not MoWT Vol 4)",
+          "passed": null,
+          "evidence": ""
+        },
+        {
+          "text": "Uses Eurocode loading (LM1/LM3) -- does NOT use HA/HB loading for UK context",
+          "passed": null,
+          "evidence": ""
+        },
+        {
+          "text": "Notes that UK uses Eurocode 7 for foundation design, not CP 2004",
+          "passed": null,
+          "evidence": ""
+        },
+        {
+          "text": "Flags CD 361 as unavailable locally -- knowledge-based content requiring engineer review",
+          "passed": null,
+          "evidence": ""
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "prompt": "Design the structural elements of a 900mm diameter pipe culvert in Uganda with only 400mm of fill (shallow cover). The loading is HB 45 units (national road on a major freight corridor). The subgrade has bearing capacity of 80 kPa. Using the MoWT Road Design Manual Vol 4, identify the design challenges and recommend appropriate solutions.",
+      "expected_output": "Shallow cover warning: 400 mm < 600 mm threshold. Concentrated wheel loads dominate rather than distributed surcharge. HB 45-unit surcharge = 20 kN/m2 (high). At shallow depth, wheel loads are not fully dispersed -- need to check concentrated load distribution through 400 mm fill. Recommend Class A bedding (concrete surround, Fm = 3.4) to provide maximum structural support. Consider increasing fill depth if possible. Flag shallow cover as requiring special analysis. Flag detailed design required by specialist.",
+      "files": [
+        "skills/structures/culvert-structural-design/tables/uganda_culvert_loading.json"
+      ],
+      "assertions": [
+        {
+          "text": "Identifies shallow cover warning (400 mm < 600 mm threshold) with concentrated wheel load concern",
+          "passed": null,
+          "evidence": ""
+        },
+        {
+          "text": "Correctly uses HB 45-unit surcharge of 20 kN/m2 (not 10 kN/m2 which is for HA/HB 25)",
+          "passed": null,
+          "evidence": ""
+        },
+        {
+          "text": "Recommends Class A bedding (concrete surround) or equivalent enhanced protection for shallow cover scenario",
+          "passed": null,
+          "evidence": ""
+        },
+        {
+          "text": "Raises escalation flag for shallow cover requiring special analysis beyond standard surcharge approach",
+          "passed": null,
+          "evidence": ""
+        },
+        {
+          "text": "References bedding factor method with appropriate bedding class selection",
+          "passed": null,
+          "evidence": ""
+        }
+      ]
+    }
+  ]
+}

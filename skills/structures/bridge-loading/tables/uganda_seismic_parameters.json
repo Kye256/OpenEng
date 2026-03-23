@@ -1,0 +1,102 @@
+{
+  "source": {
+    "manual": "MoWT Road Design Manual Vol 4",
+    "edition": "January 2010",
+    "section": "Section 9 - Earthquake Loads",
+    "tables": "Tables 9.1, 9.2, 9.3, 9.4, 9.5",
+    "figures": "Figure 9-1 (Seismic Map of Uganda)",
+    "verification": "pending"
+  },
+  "acceleration_coefficients": {
+    "description": "Table 9.1 - Bedrock Acceleration Ratio, A",
+    "note": "Coefficient A determined from seismic map Figure 9-1. Linear interpolation between contour lines.",
+    "values": [
+      {"zone_spc": 1, "acceleration_A": 0.15, "description": "Zone 1 -- Western rift valley (Kasese, Fort Portal, Bundibugyo, Kabale)"},
+      {"zone_spc": 2, "acceleration_A": 0.07, "description": "Zone 2 -- Central/northern Uganda (Kampala, Hoima, Arua, Gulu, Masindi)"},
+      {"zone_spc": 3, "acceleration_A": 0.05, "description": "Zone 3 -- Eastern Uganda (Soroti, Mbale, Tororo, most of central plateau)"}
+    ]
+  },
+  "importance_classification": {
+    "description": "Section 9.3.3 - Importance Classification (IC)",
+    "note": "IC assigned for all bridges with A > 0.29. For A <= 0.29 (all Uganda zones), IC assignment is for SPC determination.",
+    "classes": [
+      {"ic": "I", "description": "Essential bridges -- critical for Social/Survival and Security/Defense"},
+      {"ic": "II", "description": "Other bridges -- standard highway bridges"}
+    ]
+  },
+  "performance_categories": {
+    "description": "Table 9.2 - Seismic Performance Category (SPC)",
+    "note": "SPC determines minimum analysis and design requirements",
+    "categories": [
+      {"acceleration_range": "A < 0.05", "ic_I": 1, "ic_II": 1},
+      {"acceleration_range": "0.05 < A < 0.07", "ic_I": 2, "ic_II": 2},
+      {"acceleration_range": "0.07 < A <= 0.15", "ic_I": 3, "ic_II": 3}
+    ],
+    "design_implications": {
+      "spc_1": "No special seismic design requirements. Minimum support lengths required.",
+      "spc_1_and_2": "No detailed seismic analysis required. Connections designed for 0.20 * dead load reaction force. Minimum support lengths per Eq 4-3A/B.",
+      "spc_3": "Full seismic analysis required per Section 9 procedures. Response modification factors from Table 9.4 apply."
+    }
+  },
+  "site_coefficients": {
+    "description": "Table 9.3 - Site Coefficient (S)",
+    "note": "Approximates effect of site conditions on bridge response",
+    "coefficients": [
+      {"soil_profile_type": "I", "S": 1.0, "description": "Rock or stiff soil < 200ft (61m) depth over rock"},
+      {"soil_profile_type": "II", "S": 1.2, "description": "Stiff clay or deep cohesionless soil > 200ft (61m) over rock"},
+      {"soil_profile_type": "III", "S": 1.5, "description": "Soft to medium-stiff clays and sands, 30ft (9m) or more of soft soil"}
+    ],
+    "default_note": "If soil properties not known, use Soil Profile Type II (S = 1.2)"
+  },
+  "response_modification_factors": {
+    "description": "Table 9.4 - Response Modification Factor (R)",
+    "note": "For SPC 3 only. Elastic forces divided by R to obtain design forces.",
+    "substructure": [
+      {"type": "Wall-Type Pier", "R": 2, "note": "May be designed as column in weak direction if Chapter 8 provisions followed (R = 3 for single column)"},
+      {"type": "Reinforced Concrete Pile Bents - Vertical piles only", "R": 3},
+      {"type": "Reinforced Concrete Pile Bents - One or more Batter piles", "R": 2},
+      {"type": "Single columns", "R": 3},
+      {"type": "Steel or composite pile bents - Vertical piles only", "R": 5},
+      {"type": "Steel or composite pile bents - One or more batter piles", "R": 3},
+      {"type": "Multiple column bent", "R": 5}
+    ],
+    "connections": [
+      {"type": "Superstructure to Abutment", "R": 0.8},
+      {"type": "Expansion Joints within a span of the superstructure", "R": 0.8},
+      {"type": "Columns, Piers or pile bents to Cap Beam of Superstructure", "R": 1.0},
+      {"type": "Columns or piers to Foundation", "R": 1.0}
+    ]
+  },
+  "analysis_procedures": {
+    "description": "Table 9.5 - Analysis Procedures",
+    "note": "Minimum analysis method by SPC and bridge regularity. Procedure 1 = Single-Mode Spectral. Procedure 2 = Multimode Spectral.",
+    "procedures": [
+      {"spc": "1 & 2", "regular_bridges": "Not required", "irregular_bridges": "Not required"},
+      {"spc": 3, "regular_bridges": "Procedure 1", "irregular_bridges": "Procedure 1"}
+    ],
+    "exception": "Detailed seismic analysis not required for single span bridges or SPC 1 & 2 bridges."
+  },
+  "seismic_zones_uganda": {
+    "description": "Uganda seismic zones from Figure 9-1 (Seismic Map of Uganda)",
+    "zones": [
+      {
+        "zone": 1,
+        "A": 0.15,
+        "regions": "Western rift valley -- Kasese, Fort Portal, Bundibugyo, Bushenyi (west), Kabale, Mbarara (west)",
+        "note": "Highest seismicity in Uganda. East African Rift. SPC 3 for all bridges."
+      },
+      {
+        "zone": 2,
+        "A": 0.07,
+        "regions": "Central-western and northern Uganda -- Hoima, Masindi, Arua, Pachwach, Gulu, Mubende, parts of Kampala",
+        "note": "Moderate seismicity. SPC 2 for most bridges."
+      },
+      {
+        "zone": 3,
+        "A": 0.05,
+        "regions": "Eastern and central Uganda -- Soroti, Mbale, Tororo, Moroto, Kotido, Lira, Apac, most of central plateau",
+        "note": "Lowest seismicity in Uganda. SPC 1 for IC=II bridges."
+      }
+    ]
+  }
+}

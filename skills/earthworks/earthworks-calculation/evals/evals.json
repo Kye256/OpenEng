@@ -1,0 +1,104 @@
+{
+  "skill_name": "earthworks-calculation",
+  "evals": [
+    {
+      "id": 0,
+      "prompt": "Calculate earthworks volumes for a Class II paved road in Uganda (rolling terrain, laterite soils). Three cross-sections at 25m intervals provide the following data: Station 0+000: cut area 12.5 m2, fill area 3.2 m2. Station 0+025: cut area 8.3 m2, fill area 6.1 m2. Station 0+050: cut area 2.1 m2, fill area 15.4 m2. Use the average end area method. Apply a shrinkage factor of 1.20 for laterite fill. Determine the net earthworks balance and whether borrow material is needed.",
+      "expected_output": "Cut volumes: segment 1-2 = 260.0 m3, segment 2-3 = 130.0 m3, total cut = 390.0 m3. Fill volumes: segment 1-2 = 116.25 m3, segment 2-3 = 268.75 m3, total fill (compacted) = 385.0 m3. Shrinkage-adjusted fill = 385.0 x 1.20 = 462.0 m3. Net balance = 390.0 - 462.0 = -72.0 m3. Borrow material needed: 72.0 m3.",
+      "files": [],
+      "assertions": [
+        {
+          "text": "Total cut volume calculated between 380-400 m3 using average end area method",
+          "passed": null,
+          "evidence": ""
+        },
+        {
+          "text": "Total fill volume (before shrinkage) calculated between 375-395 m3",
+          "passed": null,
+          "evidence": ""
+        },
+        {
+          "text": "Shrinkage factor of 1.20 applied to fill volume, giving shrinkage-adjusted fill between 450-475 m3",
+          "passed": null,
+          "evidence": ""
+        },
+        {
+          "text": "Net earthworks balance correctly identified as negative (borrow needed), value between -80 and -60 m3",
+          "passed": null,
+          "evidence": ""
+        },
+        {
+          "text": "Identifies need for borrow material and recommends Skill #28 material suitability assessment",
+          "passed": null,
+          "evidence": ""
+        }
+      ]
+    },
+    {
+      "id": 1,
+      "prompt": "Calculate earthworks volumes for an A-road improvement scheme in the UK. The same three cross-sections at 25m intervals are provided: Station 0+000: cut area 12.5 m2, fill area 3.2 m2. Station 0+025: cut area 8.3 m2, fill area 6.1 m2. Station 0+050: cut area 2.1 m2, fill area 15.4 m2. Use the average end area method with a shrinkage factor of 1.15 for UK mixed soils. Also note the SHW Series 600 material classification requirement and any materials management considerations.",
+      "expected_output": "Same volume calculations as Uganda scenario. Total cut = 390.0 m3, total fill (compacted) = 385.0 m3. Shrinkage-adjusted fill = 385.0 x 1.15 = 442.75 m3. Net balance = 390.0 - 442.75 = -52.75 m3. Borrow needed. References SHW Series 600 for material classification (Class 1 general granular or Class 6 selected cohesive). Notes CL:AIRE Materials Management Plan for on-site reuse.",
+      "files": [],
+      "assertions": [
+        {
+          "text": "Volume calculations correct: total cut 380-400 m3, total fill 375-395 m3",
+          "passed": null,
+          "evidence": ""
+        },
+        {
+          "text": "UK shrinkage factor of 1.15 applied, giving shrinkage-adjusted fill between 435-455 m3",
+          "passed": null,
+          "evidence": ""
+        },
+        {
+          "text": "References SHW Series 600 for earthworks material classification",
+          "passed": null,
+          "evidence": ""
+        },
+        {
+          "text": "Mentions CL:AIRE or Materials Management Plan for materials reuse framework",
+          "passed": null,
+          "evidence": ""
+        },
+        {
+          "text": "Correctly identifies borrow requirement (net balance negative)",
+          "passed": null,
+          "evidence": ""
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "prompt": "Calculate earthworks volumes for a road project with only two cross-sections available: Station 0+000: cut area 2.0 m2, fill area 18.5 m2. Station 0+100: cut area 22.0 m2, fill area 0.5 m2. The stations are 100m apart. No soil type information is available. Determine the volumes and comment on the reliability of the estimate.",
+      "expected_output": "Cut volume = (2.0 + 22.0)/2 x 100 = 1,200 m3. Fill volume = (18.5 + 0.5)/2 x 100 = 950 m3. With assumed shrinkage 1.20: adjusted fill = 1,140 m3. Net = 1,200 - 1,140 = +60 m3 (slight surplus). However, the large difference between areas at the two stations (2.0 vs 22.0 m2 cut, 18.5 vs 0.5 m2 fill) indicates a major transition. The 100m interval is too wide for accuracy. Prismoidal method recommended. Additional intermediate cross-sections recommended at 25m intervals.",
+      "files": [],
+      "assertions": [
+        {
+          "text": "Flags that the 100m cross-section spacing is too wide for reliable volume estimation",
+          "passed": null,
+          "evidence": ""
+        },
+        {
+          "text": "Notes the large variation between cross-section areas as a source of uncertainty",
+          "passed": null,
+          "evidence": ""
+        },
+        {
+          "text": "Recommends additional intermediate cross-sections to improve accuracy",
+          "passed": null,
+          "evidence": ""
+        },
+        {
+          "text": "Suggests prismoidal method or prismoidal correction for improved accuracy with large area differences",
+          "passed": null,
+          "evidence": ""
+        },
+        {
+          "text": "Uses assumed shrinkage factor (no soil data) and flags this assumption explicitly",
+          "passed": null,
+          "evidence": ""
+        }
+      ]
+    }
+  ]
+}

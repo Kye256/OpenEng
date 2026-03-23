@@ -1,0 +1,99 @@
+{
+  "skill_name": "design-vehicle",
+  "evals": [
+    {
+      "id": 0,
+      "prompt": "Select the appropriate design vehicle for a Class II trunk road in Uganda on the northern corridor (Kampala to Gulu). The road carries mixed traffic including heavy freight. Determine the design vehicle type, its minimum turning radius, and the minimum junction turning radius per MoWT standard. Use the MoWT Road Design Manual as the primary reference.",
+      "expected_output": "For a Class II trunk road on the northern corridor, WB-15 (Semitrailer) is the minimum appropriate design vehicle, with WB-19 recommended for new construction given the corridor's freight importance. WB-15 minimum turning radius is 13.7m. MoWT Section 8.3.1(c) requires a minimum junction turning radius of 15m. The 15m junction minimum exceeds the WB-15 vehicle minimum (13.7m), providing adequate clearance.",
+      "files": ["tables/uganda_design_vehicles.json"],
+      "assertions": [
+        {
+          "text": "Selects WB-15 or larger (WB-19/WB-20) as design vehicle for Class II trunk road, not SU or P",
+          "passed": null,
+          "evidence": ""
+        },
+        {
+          "text": "Minimum turning radius is 13.7m for WB-15 (from MoWT Table 5-1)",
+          "passed": null,
+          "evidence": ""
+        },
+        {
+          "text": "States minimum junction turning radius of 15m per MoWT Section 8.3.1(c)",
+          "passed": null,
+          "evidence": ""
+        },
+        {
+          "text": "Notes northern corridor freight context and potential need for WB-19 or WB-20",
+          "passed": null,
+          "evidence": ""
+        },
+        {
+          "text": "References MoWT Table 5-1 for vehicle dimensions",
+          "passed": null,
+          "evidence": ""
+        }
+      ]
+    },
+    {
+      "id": 1,
+      "prompt": "A UK trunk road junction is being designed. The design vehicle is a 16.5m articulated vehicle (standard UK maximum legal vehicle). Determine the vehicle dimensions and assess whether a junction with a 12m inner kerb radius is adequate. Reference the applicable UK standards.",
+      "expected_output": "The 16.5m articulated vehicle has an overall width of 2.55m and a minimum turning radius of approximately 12.5m (outer front wheel). At 12m inner kerb radius, the junction is at the lower limit of adequacy -- the vehicle can likely complete the turn but with minimal clearance. Swept path analysis software should be used to confirm. Reference to CD 127 for full design vehicle requirements (not available locally). Note that this module is knowledge-based and requires engineer review.",
+      "files": [],
+      "assertions": [
+        {
+          "text": "Identifies 16.5m articulated vehicle as the UK standard design vehicle for trunk roads",
+          "passed": null,
+          "evidence": ""
+        },
+        {
+          "text": "Provides vehicle width (2.55m) and minimum turning radius (approximately 12-13m range)",
+          "passed": null,
+          "evidence": ""
+        },
+        {
+          "text": "Assesses 12m radius as marginal or tight for the design vehicle and recommends swept path software check",
+          "passed": null,
+          "evidence": ""
+        },
+        {
+          "text": "References CD 127 or EU Directive 96/53/EC for UK vehicle dimensions",
+          "passed": null,
+          "evidence": ""
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "prompt": "An urban road in Uganda serves mixed traffic including buses and semitrailers. A tight junction has only 10m turning radius available due to building constraints. The design vehicle is an SU (Single Unit Truck) with a minimum turning radius of 12.8m. Assess whether the junction is adequate and recommend appropriate action.",
+      "expected_output": "The available 10m turning radius is below the SU minimum turning radius of 12.8m and well below the MoWT 15m minimum junction requirement (Section 8.3.1(c)). This is a non-compliant condition. The agent should raise an escalation flag. Options include: (1) increase the radius by acquiring additional right-of-way, (2) use mountable kerbs to provide additional swept path, (3) reduce the design vehicle to P (passenger car) with restricted access for trucks, (4) provide alternative routing for large vehicles. The 10m radius cannot safely accommodate an SU truck.",
+      "files": ["tables/uganda_design_vehicles.json"],
+      "assertions": [
+        {
+          "text": "Identifies that 10m radius is below the SU minimum turning radius of 12.8m",
+          "passed": null,
+          "evidence": ""
+        },
+        {
+          "text": "Identifies that 10m radius is below the MoWT 15m minimum junction requirement",
+          "passed": null,
+          "evidence": ""
+        },
+        {
+          "text": "Raises an escalation flag for the non-compliant condition",
+          "passed": null,
+          "evidence": ""
+        },
+        {
+          "text": "Discusses remedial options (increased radius, mountable kerbs, vehicle restriction, alternative routing)",
+          "passed": null,
+          "evidence": ""
+        },
+        {
+          "text": "Does not simply accept the 10m radius as adequate -- flags it as a safety concern",
+          "passed": null,
+          "evidence": ""
+        }
+      ]
+    }
+  ]
+}

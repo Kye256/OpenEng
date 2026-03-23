@@ -1,0 +1,130 @@
+{
+  "_metadata": {
+    "source": "Data flow mapping between TARA appraisal and OpenEng design skills",
+    "pipelines": 3,
+    "generated_date": "2026-03-21",
+    "notes": "TARA = Transport Appraisal and Road Assessment. Uses HDM-4/RED methodology for economic appraisal of road investments."
+  },
+  "pipelines": [
+    {
+      "name": "traffic",
+      "direction": "tara_to_design",
+      "description": "Extract TARA traffic forecast data and calculate design ESA for pavement design",
+      "tara_output": {
+        "field": "traffic_forecast",
+        "format": "AADT by vehicle class, annual, with growth rates",
+        "units": "vehicles per day by class, percent growth per annum",
+        "typical_fields": ["base_year_AADT", "vehicle_class_distribution", "growth_rate_percent", "forecast_horizon_years"]
+      },
+      "design_skills": [6, 5],
+      "skill_input_format": {
+        "skill_6": {
+          "required_inputs": ["base_year_AADT", "growth_rate_percent"],
+          "optional_inputs": ["historical_traffic_data", "project_type"],
+          "notes": "TARA provides annual growth rates directly; Skill #6 validates and applies them"
+        },
+        "skill_5": {
+          "required_inputs": ["AADT_by_class", "VDF_table", "growth_rate", "design_life"],
+          "optional_inputs": ["directional_split", "lane_distribution_factor"],
+          "notes": "TARA provides annual growth; Skill #5 calculates cumulative ESA over design life"
+        }
+      },
+      "skill_output": {
+        "skill_5": {
+          "output_fields": ["cumulative_ESA", "traffic_class", "design_traffic_loading"],
+          "units": "ESA (equivalent standard axles)",
+          "consumers": ["Skill #21 MoWT Catalogue", "Skill #22 AASHTO 93", "Skill #23 ORN 31"]
+        }
+      },
+      "format_conversion_notes": [
+        "TARA uses annual AADT growth; Skill #5 needs cumulative ESA over design period -- Skill #5 handles the conversion",
+        "TARA vehicle classes may differ from MoWT classes (Skill #3) -- map TARA classes to MoWT standard classes before ESA calculation",
+        "TARA may provide compound growth rates; Skill #6 can disaggregate by vehicle class if needed"
+      ]
+    },
+    {
+      "name": "condition",
+      "direction": "bidirectional",
+      "description": "Feed road condition data into TARA for economic analysis, and use TARA outputs for maintenance decisions",
+      "openeng_to_tara": {
+        "source_skills": [56, 57],
+        "data_from_skill_56": {
+          "fields": ["IRI_value", "VCI_score", "condition_rating", "distress_summary"],
+          "units": {"IRI": "m/km", "VCI": "0-100 index", "condition_rating": "Good/Fair/Poor/Very Poor"},
+          "tara_format": {
+            "IRI": "Direct input -- TARA uses IRI as primary roughness measure",
+            "condition_category": "Map VCI to TARA condition categories if IRI unavailable",
+            "remaining_service_life": "Calculate from condition data and design life"
+          }
+        },
+        "data_from_skill_57": {
+          "fields": ["intervention_type", "treatment_details", "treatment_cost"],
+          "units": {"intervention_type": "routine/periodic/rehabilitation", "cost": "UGX or USD"},
+          "tara_format": {
+            "intervention_cost": "Total treatment cost per km for TARA economic comparison",
+            "intervention_timing": "Year of intervention for discounted cash flow analysis",
+            "without_project_deterioration": "Projected IRI without treatment for 'do-nothing' scenario"
+          }
+        }
+      },
+      "tara_to_openeng": {
+        "tara_outputs": {
+          "fields": ["NPV", "BCR", "EIRR", "economic_ranking"],
+          "units": {"NPV": "UGX or USD", "BCR": "ratio", "EIRR": "percent"},
+          "consumer_skills": [59]
+        },
+        "data_to_skill_59": {
+          "fields": ["NPV", "BCR"],
+          "purpose": "Economic ranking method in Skill #59 prioritization",
+          "notes": "TARA BCR used directly as economic ranking criterion in MCA; NPV used for absolute comparison"
+        }
+      },
+      "format_conversion_notes": [
+        "TARA needs 'with-project' and 'without-project' IRI trajectories -- Skill #56 provides current IRI, deterioration model provides projection",
+        "TARA economic appraisal uses vehicle operating costs (VOC) as primary benefit measure -- VOC savings from IRI improvement",
+        "Analysis period alignment: TARA typically uses 20-year analysis period; ensure design life from Skill #13 matches"
+      ]
+    },
+    {
+      "name": "cost",
+      "direction": "design_to_tara",
+      "description": "Feed detailed cost estimates from OpenEng design skills into TARA for economic appraisal",
+      "source_skills": [50, 51, 52, 53],
+      "data_from_skills": {
+        "skill_50": {
+          "fields": ["total_estimate", "cost_per_km", "estimate_summary"],
+          "units": {"total_estimate": "UGX", "cost_per_km": "UGX/km or USD/km"},
+          "notes": "Total project cost for TARA economic comparison"
+        },
+        "skill_51": {
+          "fields": ["bill_of_quantities"],
+          "units": "Itemized quantities with units",
+          "notes": "BoQ subtotals by work category for TARA cost component breakdown"
+        },
+        "skill_52": {
+          "fields": ["unit_rate", "rate_breakdown"],
+          "units": "UGX per unit",
+          "notes": "Unit rates for sensitivity analysis in TARA"
+        },
+        "skill_53": {
+          "fields": ["unit_rate", "rate_metadata"],
+          "units": "UGX per unit",
+          "notes": "Database rates with regional adjustment factors"
+        }
+      },
+      "tara_input_format": {
+        "total_project_cost": "Sum of all BoQ items with contingencies (from Skill #50)",
+        "annual_maintenance_cost": "Routine maintenance cost per year (from Skill #57 treatment costs)",
+        "periodic_maintenance_cost": "Periodic treatment cost and timing (from Skill #57)",
+        "currency": "UGX or USD -- specify which and conversion rate if needed",
+        "price_year": "Base year for costs (for inflation adjustment in TARA)"
+      },
+      "format_conversion_notes": [
+        "TARA separates capital cost, recurrent cost, and maintenance cost -- map BoQ categories accordingly",
+        "Currency conversion: TARA may require USD for cross-country comparison; use Bank of Uganda exchange rate",
+        "Price contingency: TARA applies its own price contingency -- do not double-count with Skill #50 price contingency",
+        "Annual maintenance costs must be net present values at the discount rate used by TARA (12% for Uganda GoU projects)"
+      ]
+    }
+  ]
+}

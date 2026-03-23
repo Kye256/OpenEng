@@ -1,0 +1,104 @@
+{
+  "skill_name": "road-safety-audit",
+  "evals": [
+    {
+      "id": 0,
+      "prompt": "Conduct a detailed design stage road safety audit for a 10 km rural road in central Uganda. The road is a UNRA project (World Bank-funded) with a 7.0m carriageway and 1.5m paved shoulders. Design speed is 80 km/h. The road passes through one trading centre (km 4-5, approximately 1 km long) with a posted speed limit of 50 km/h. There are 2 T-junctions within the trading centre. The design includes speed limit signs at trading centre entry but no speed humps or physical speed reduction measures. No footpaths are designed through the trading centre. AADT is 600 vpd with 30% boda-bodas. Apply the detailed design RSA checklist and identify key findings.",
+      "expected_output": "Uses detailed design RSA checklist. Identifies at minimum: (1) Serious Concern for absence of pedestrian facilities through trading centre, (2) Serious Concern or Recommendation for lack of physical speed reduction measures at trading centre entry, (3) Assessment of boda-boda conflict at the 2 T-junctions. Recommends speed management measures (humps, rumble strips, gateway treatment) and NMT facilities (footpaths, pedestrian crossings). References relevant design skills.",
+      "files": ["tables/rsa_checklist_items.json"],
+      "assertions": [
+        {
+          "text": "Uses detailed design stage RSA checklist appropriate for the project stage",
+          "passed": null,
+          "evidence": ""
+        },
+        {
+          "text": "Identifies NMT/pedestrian facility gap at trading centre as a Serious Concern or high-priority finding",
+          "passed": null,
+          "evidence": ""
+        },
+        {
+          "text": "Identifies lack of physical speed reduction measures at trading centre as a finding (signs alone are insufficient)",
+          "passed": null,
+          "evidence": ""
+        },
+        {
+          "text": "Recommends specific speed management measures (speed humps, rumble strips, gateway treatment, or similar)",
+          "passed": null,
+          "evidence": ""
+        },
+        {
+          "text": "Assesses boda-boda conflicts at the T-junctions within the trading centre",
+          "passed": null,
+          "evidence": ""
+        }
+      ]
+    },
+    {
+      "id": 1,
+      "prompt": "Conduct a pre-opening road safety audit for a recently completed 20 km paved road in western Uganda. During the day inspection, you observe: (1) speed humps at km 8 trading centre are well-constructed but there are no advance warning signs, (2) guardrail end treatment at km 12 bridge approach is a blunt exposed end (not flared or buried), (3) vegetation has grown to obstruct the sight triangle at the T-junction at km 15, (4) road markings are complete and well-applied, (5) delineation posts are installed on all curves. During the night inspection, you observe: (6) 2 of 5 street lights at the trading centre are not functioning, (7) delineation posts are clearly visible on curves, (8) sign retroreflectivity is adequate. Classify each finding by severity and recommend mitigations.",
+      "expected_output": "Classifies each finding by severity. The guardrail blunt end (item 2) should be a Serious Concern (impalement risk). Missing advance warning for speed humps (item 1) and vegetation obstructing sight triangle (item 3) should be Recommendations. Non-functioning lights (item 6) should be a Recommendation. Good markings, delineation, and sign retroreflectivity should be noted as Satisfactory. Proposes specific mitigations for each finding.",
+      "files": ["tables/rsa_checklist_items.json"],
+      "assertions": [
+        {
+          "text": "Classifies findings by severity (Serious Concern, Recommendation, Observation, Satisfactory)",
+          "passed": null,
+          "evidence": ""
+        },
+        {
+          "text": "Identifies the blunt guardrail end as a Serious Concern with impalement or vehicle penetration risk",
+          "passed": null,
+          "evidence": ""
+        },
+        {
+          "text": "Proposes specific mitigations for each non-satisfactory finding referencing relevant design skills or measures",
+          "passed": null,
+          "evidence": ""
+        },
+        {
+          "text": "Distinguishes between daytime and night-time findings (includes night-time inspection assessment)",
+          "passed": null,
+          "evidence": ""
+        },
+        {
+          "text": "Notes satisfactory items (markings, delineation, retroreflectivity) as positive findings, not just deficiencies",
+          "passed": null,
+          "evidence": ""
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "prompt": "You are asked to conduct an existing road safety inspection of a 6 km section of paved road on the outskirts of Jinja, Uganda. The road has very high pedestrian activity (estimated 3,000+ pedestrians per day) but no footpaths, no pedestrian crossings, and no street lighting. There are 2 schools along the road (one primary, one secondary). Boda-boda stages are located at 3 points along the road, all on the carriageway edge. The road has no shoulders (eroded away). AADT is 1,500 vpd. The client has stated that there is no budget for NMT infrastructure and asks you to focus the audit on motorised traffic safety only. How do you respond and what findings do you report?",
+      "expected_output": "Refuses to exclude NMT safety from the audit scope -- RSA must cover all road users. Identifies absence of NMT facilities as the primary Serious Concern given 3,000+ pedestrians/day. Notes school zones without any protection as Serious Concerns. Reports boda-boda stages on carriageway as Recommendations. Proposes prioritised measures: low-cost immediate measures (signs, markings, speed humps at schools) plus high-cost measures (footpaths) flagged as separate budget requirement. Does not accept client instruction to ignore pedestrian safety.",
+      "files": ["tables/rsa_checklist_items.json"],
+      "assertions": [
+        {
+          "text": "Does not accept the client's instruction to exclude NMT safety -- states RSA must cover all road users",
+          "passed": null,
+          "evidence": ""
+        },
+        {
+          "text": "Identifies absence of pedestrian facilities as the primary safety concern given the volume of pedestrians",
+          "passed": null,
+          "evidence": ""
+        },
+        {
+          "text": "Identifies school zones without protection (signs, crossings, speed reduction) as Serious Concerns",
+          "passed": null,
+          "evidence": ""
+        },
+        {
+          "text": "Recommends prioritised low-cost measures (signs, markings, speed humps) for immediate implementation alongside high-cost measures (footpaths) for future budget",
+          "passed": null,
+          "evidence": ""
+        },
+        {
+          "text": "Addresses boda-boda stages on carriageway as safety findings requiring relocation",
+          "passed": null,
+          "evidence": ""
+        }
+      ]
+    }
+  ]
+}

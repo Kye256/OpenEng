@@ -1,0 +1,109 @@
+{
+  "skill_name": "nmt-facilities",
+  "evals": [
+    {
+      "id": 0,
+      "prompt": "Design NMT facilities for a Class II paved road through a trading centre in Uganda. The road has a design speed of 60 km/h (80 km/h outside the trading centre), AADT of 1500, and estimated pedestrian flow of 600 per day. The trading centre section is approximately 400 m long. Determine: (1) footway provision, (2) footway width, (3) crossing requirements, and (4) speed management measures.",
+      "expected_output": "Footways on both sides per MoWT Table 11-1 (AADT >1400, pedestrian flow 600/day at 60-80 km/h exceeds 600 threshold for both sides). Width minimum 2.25 m per MoWT Section 11.1.1 (light/moderate volume). Speed reduction to 50 km/h through trading centre per MoWT Section 10. Entry gates at both ends (R1 < 100 m for 50 km/h). Plateau speed humps at 125 m intervals (approximately 3 humps over 400 m). Humped pedestrian crossings at key desire lines.",
+      "files": [],
+      "assertions": [
+        {
+          "text": "Footway provided on both sides (MoWT Table 11-1 criteria met for both-side provision)",
+          "passed": null,
+          "evidence": ""
+        },
+        {
+          "text": "Footway width is at least 2.25 m (light/moderate volume per MoWT Section 11.1.1)",
+          "passed": null,
+          "evidence": ""
+        },
+        {
+          "text": "Speed management specified: entry gates and speed humps per MoWT Section 10",
+          "passed": null,
+          "evidence": ""
+        },
+        {
+          "text": "Speed hump spacing approximately 125 m for 50 km/h target zone",
+          "passed": null,
+          "evidence": ""
+        },
+        {
+          "text": "Pedestrian crossing provision specified (humped or other formal crossing type)",
+          "passed": null,
+          "evidence": ""
+        },
+        {
+          "text": "References MoWT Road Design Manual Sections 10 and 11 for parameter values",
+          "passed": null,
+          "evidence": ""
+        }
+      ]
+    },
+    {
+      "id": 1,
+      "prompt": "Design cycle infrastructure for an urban road in the United Kingdom. The road has a 30 mph speed limit and is identified in the Local Cycling and Walking Infrastructure Plan. The available corridor width is 14 m. Determine the appropriate cycle facility type and width, referencing LTN 1/20 principles.",
+      "expected_output": "Per LTN 1/20 principles, separated cycle track recommended (not shared-use path). One-way cycle track on each side, minimum 2.0 m wide (1.5 m absolute minimum). Shared-use paths are discouraged for new schemes per LTN 1/20. Footway minimum 2.0 m per Manual for Streets. Note that UK module is knowledge-based and requires engineer review.",
+      "files": [],
+      "assertions": [
+        {
+          "text": "Recommends separated cycle track, not shared-use path (per LTN 1/20 principles)",
+          "passed": null,
+          "evidence": ""
+        },
+        {
+          "text": "Cycle track width is at least 1.5 m (absolute minimum) and preferably 2.0 m per LTN 1/20",
+          "passed": null,
+          "evidence": ""
+        },
+        {
+          "text": "Notes that shared-use paths are discouraged for new schemes per LTN 1/20",
+          "passed": null,
+          "evidence": ""
+        },
+        {
+          "text": "References LTN 1/20 for cycle infrastructure design guidance",
+          "passed": null,
+          "evidence": ""
+        },
+        {
+          "text": "Flags that the UK module is knowledge-based and requires engineer review",
+          "passed": null,
+          "evidence": ""
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "prompt": "A rural road in Uganda (Class III Paved, AADT 300, design speed 60 km/h) passes near a primary school with 500 pupils. The estimated pedestrian flow near the school is 500 per day (mostly children). There is no existing footway or crossing provision. Determine what NMT facilities are needed and identify any safety concerns.",
+      "expected_output": "Per MoWT Table 11-1: AADT 300 is below the 400 threshold for one-side footway at 60-80 km/h. However, pedestrian flow of 500/day near a school demands at least one-side footway (300 ped/day threshold at 400-1400 AADT range, so 500 exceeds this). School zone requires escalation: recommend 30 km/h school zone with plateau humps at 50 m intervals, controlled crossing on the school-side desire line, and warning signage. Child safety flag should be raised.",
+      "files": [],
+      "assertions": [
+        {
+          "text": "Recommends footway on at least one side (pedestrian flow exceeds threshold despite low AADT)",
+          "passed": null,
+          "evidence": ""
+        },
+        {
+          "text": "Raises escalation flag for child safety near school",
+          "passed": null,
+          "evidence": ""
+        },
+        {
+          "text": "Recommends speed management measures (school zone, reduced speed, humps)",
+          "passed": null,
+          "evidence": ""
+        },
+        {
+          "text": "Specifies crossing provision on the desire line to/from the school",
+          "passed": null,
+          "evidence": ""
+        },
+        {
+          "text": "References MoWT Table 11-1 for footway provision decision",
+          "passed": null,
+          "evidence": ""
+        }
+      ]
+    }
+  ]
+}

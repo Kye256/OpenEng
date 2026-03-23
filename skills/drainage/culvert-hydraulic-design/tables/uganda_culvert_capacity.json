@@ -1,0 +1,68 @@
+{
+  "source": {
+    "manual": "MoWT Road Design Manual Vol 2: Drainage Design",
+    "edition": "January 2010",
+    "section": "Appendices 9.19-9.21",
+    "page": "Section 9.5.2, approximate procedures",
+    "verification": "pending",
+    "notes": "These are approximate capacities. Tables use 200% efficiency factor (design discharge = 2x actual Q). Slopes limited to 2% maximum for table validity (supercritical above this)."
+  },
+  "description": "Approximate culvert capacities from MoWT Vol 2 nomograph-derived tables. For quick sizing only -- detailed design requires full 16-step procedure.",
+  "pipe_culvert_capacity": {
+    "description": "Appendix 9.19: Capacity for Concrete Pipe Culverts for Approximate Estimate. Manning's n = 0.015. Enter with doubled design discharge (200% efficiency). Slopes up to 2%.",
+    "entries": [
+      {"size": "1x24\" (600mm)", "slope_percent": 0.5, "capacity_m3s": 0.45},
+      {"size": "1x24\" (600mm)", "slope_percent": 1.0, "capacity_m3s": 0.64},
+      {"size": "1x24\" (600mm)", "slope_percent": 2.0, "capacity_m3s": 0.90},
+      {"size": "1x30\" (750mm)", "slope_percent": 0.5, "capacity_m3s": 0.85},
+      {"size": "1x30\" (750mm)", "slope_percent": 1.0, "capacity_m3s": 1.20},
+      {"size": "1x30\" (750mm)", "slope_percent": 2.0, "capacity_m3s": 1.70},
+      {"size": "1x36\" (900mm)", "slope_percent": 0.5, "capacity_m3s": 1.40},
+      {"size": "1x36\" (900mm)", "slope_percent": 1.0, "capacity_m3s": 2.00},
+      {"size": "1x36\" (900mm)", "slope_percent": 2.0, "capacity_m3s": 2.80},
+      {"size": "1x42\" (1050mm)", "slope_percent": 0.5, "capacity_m3s": 2.20},
+      {"size": "1x42\" (1050mm)", "slope_percent": 1.0, "capacity_m3s": 3.10},
+      {"size": "1x42\" (1050mm)", "slope_percent": 2.0, "capacity_m3s": 4.40},
+      {"size": "2x36\" (2x900mm)", "slope_percent": 0.5, "capacity_m3s": 2.80},
+      {"size": "2x36\" (2x900mm)", "slope_percent": 1.0, "capacity_m3s": 4.00},
+      {"size": "2x36\" (2x900mm)", "slope_percent": 2.0, "capacity_m3s": 5.60},
+      {"size": "2x42\" (2x1050mm)", "slope_percent": 0.5, "capacity_m3s": 4.40},
+      {"size": "2x42\" (2x1050mm)", "slope_percent": 1.0, "capacity_m3s": 6.20},
+      {"size": "2x42\" (2x1050mm)", "slope_percent": 2.0, "capacity_m3s": 8.80},
+      {"size": "3x42\" (3x1050mm)", "slope_percent": 0.5, "capacity_m3s": 6.60},
+      {"size": "3x42\" (3x1050mm)", "slope_percent": 1.0, "capacity_m3s": 9.30},
+      {"size": "3x42\" (3x1050mm)", "slope_percent": 2.0, "capacity_m3s": 13.20}
+    ],
+    "usage_note": "Enter table with doubled design discharge (200% efficiency). Select size whose capacity >= 2 * Q_design. Values are approximate readings from nomograph-derived tables."
+  },
+  "box_culvert_capacity": {
+    "description": "Appendix 9.20: Capacity of Box Culverts for Different Slopes for Approximate Estimate. Manning's n = 0.017.",
+    "entries": [
+      {"span_m": 1.5, "height_m": 1.0, "slope_percent": 0.5, "capacity_m3s": 3.50},
+      {"span_m": 1.5, "height_m": 1.0, "slope_percent": 1.0, "capacity_m3s": 4.95},
+      {"span_m": 1.5, "height_m": 1.5, "slope_percent": 0.5, "capacity_m3s": 6.20},
+      {"span_m": 1.5, "height_m": 1.5, "slope_percent": 1.0, "capacity_m3s": 8.75},
+      {"span_m": 2.0, "height_m": 1.5, "slope_percent": 0.5, "capacity_m3s": 9.50},
+      {"span_m": 2.0, "height_m": 1.5, "slope_percent": 1.0, "capacity_m3s": 13.40},
+      {"span_m": 2.0, "height_m": 2.0, "slope_percent": 0.5, "capacity_m3s": 14.50},
+      {"span_m": 2.0, "height_m": 2.0, "slope_percent": 1.0, "capacity_m3s": 20.50},
+      {"span_m": 3.0, "height_m": 2.0, "slope_percent": 0.5, "capacity_m3s": 26.65},
+      {"span_m": 3.0, "height_m": 2.0, "slope_percent": 1.0, "capacity_m3s": 37.70},
+      {"span_m": 3.0, "height_m": 3.0, "slope_percent": 0.5, "capacity_m3s": 48.00},
+      {"span_m": 3.0, "height_m": 3.0, "slope_percent": 1.0, "capacity_m3s": 67.90}
+    ],
+    "usage_note": "Enter with doubled design discharge (200% efficiency). Values approximate from MoWT nomograph tables."
+  },
+  "slab_culvert_capacity": {
+    "description": "Appendix 9.21: Capacity of Slab Culverts for Approximate Estimate. Manning's n = 0.019 (paved waterway). Single or double openings.",
+    "entries": [
+      {"span_m": 1.5, "height_m": 1.0, "openings": 1, "slope_percent": 0.5, "capacity_m3s": 3.10},
+      {"span_m": 1.5, "height_m": 1.5, "openings": 1, "slope_percent": 0.5, "capacity_m3s": 5.50},
+      {"span_m": 2.0, "height_m": 1.5, "openings": 1, "slope_percent": 0.5, "capacity_m3s": 8.40},
+      {"span_m": 2.0, "height_m": 2.0, "openings": 1, "slope_percent": 0.5, "capacity_m3s": 12.80},
+      {"span_m": 3.0, "height_m": 2.0, "openings": 1, "slope_percent": 0.5, "capacity_m3s": 23.50},
+      {"span_m": 3.0, "height_m": 2.0, "openings": 2, "slope_percent": 3.4, "capacity_m3s": 105.0}
+    ],
+    "usage_note": "Enter with doubled design discharge. Values approximate."
+  }
+}

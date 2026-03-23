@@ -1,0 +1,104 @@
+{
+  "skill_name": "prioritization-methods",
+  "evals": [
+    {
+      "id": 0,
+      "prompt": "Prioritize 10 road sections in Uganda for periodic maintenance. All sections have had their condition assessed by Skill #56 and maintenance interventions selected by Skill #57. Available budget is UGX 25 billion. Total maintenance need is UGX 48 billion. Condition ratings: 3 sections Very Poor (VCI 22-32), 4 sections Poor (VCI 38-48), 3 sections Fair (VCI 58-72). Treatment costs range from UGX 1.5B to UGX 11.0B per section. Use needs-based prioritization (worst condition first). Identify the funded programme and unfunded backlog.",
+      "expected_output": "Needs-based ranking: Very Poor sections first (ranked by VCI within category), then Poor, then Fair. Budget constraint applied -- cumulative costs compared to UGX 25B. Approximately 5-7 sections funded depending on cost distribution. Budget gap = UGX 23B (48% underfunded). Unfunded sections carried forward. Large-cost sections may be skipped for gap-filling with smaller projects.",
+      "files": ["tables/mca_criteria_weights.json"],
+      "assertions": [
+        {
+          "text": "Ranks road sections by condition severity with Very Poor sections before Poor sections before Fair sections",
+          "passed": null,
+          "evidence": ""
+        },
+        {
+          "text": "Applies budget constraint by accumulating treatment costs and identifying the cut-off point at UGX 25 billion",
+          "passed": null,
+          "evidence": ""
+        },
+        {
+          "text": "Reports both the funded programme and the unfunded backlog with estimated costs",
+          "passed": null,
+          "evidence": ""
+        },
+        {
+          "text": "Calculates budget gap as the difference between total need and available budget",
+          "passed": null,
+          "evidence": ""
+        },
+        {
+          "text": "Considers gap-filling (selecting lower-ranked but cheaper projects to improve budget utilization)",
+          "passed": null,
+          "evidence": ""
+        }
+      ]
+    },
+    {
+      "id": 1,
+      "prompt": "A district in Uganda needs to prioritize 8 roads for maintenance using MCA. The district has limited data -- condition ratings from visual surveys and estimated traffic volumes, but no economic appraisal data (BCR not available). Social data is available (population served, facilities accessed). Use DUCAR-style MCA with district weights from the mca_criteria_weights.json table. Set economic return weight to zero and redistribute to other criteria. Score each road on a 1-5 scale for: condition (5=Very Poor), traffic (5=highest), social access (5=highest). Budget is UGX 2.5 billion.",
+      "expected_output": "MCA applied with adjusted district weights (economic return set to 0, redistributed). Each road scored on 3-4 criteria, weighted, and ranked by total score. Social access weighted heavily (~0.30-0.40) per district context. Budget constraint identifies 2-4 funded roads. Methodology documented transparently for District Roads Committee.",
+      "files": ["tables/mca_criteria_weights.json"],
+      "assertions": [
+        {
+          "text": "Applies MCA methodology with district-level weights that emphasize social access over economic return",
+          "passed": null,
+          "evidence": ""
+        },
+        {
+          "text": "Sets economic return criterion weight to zero when BCR data is unavailable and redistributes weight",
+          "passed": null,
+          "evidence": ""
+        },
+        {
+          "text": "Scores each road on the specified criteria using the 1-5 scale and calculates total weighted score",
+          "passed": null,
+          "evidence": ""
+        },
+        {
+          "text": "Applies budget constraint and identifies funded vs unfunded roads",
+          "passed": null,
+          "evidence": ""
+        },
+        {
+          "text": "Documents the methodology transparently, noting that weights are adjustable and should be confirmed by the decision-maker",
+          "passed": null,
+          "evidence": ""
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "prompt": "A national road maintenance programme in Uganda has 20 road sections all in Poor or Very Poor condition. Total maintenance need is UGX 150 billion. Available budget is only UGX 45 billion (30% of need). 12 sections are in central and western Uganda (high traffic corridors, 2,000-8,000 vpd). 8 sections are in northern Uganda and Karamoja (low traffic, 200-800 vpd, but serving the poorest communities with limited alternative access). Using pure needs-based ranking, the 8 northern sections rank lower due to slightly better VCI scores. The District Engineer raises equity concerns. How should prioritization be adjusted to address equity while maintaining technical defensibility?",
+      "expected_output": "Recommends MCA approach instead of pure needs-based to incorporate equity. Adds regional equity criterion or increases social access weight. Demonstrates that with equity-adjusted weights, 2-3 northern sections enter the funded programme. Documents the policy decision transparently. Notes that pure economic ranking would exclude all northern sections. Budget still constrains total programme to ~UGX 45B.",
+      "files": ["tables/mca_criteria_weights.json"],
+      "assertions": [
+        {
+          "text": "Recognizes the equity concern as legitimate and recommends MCA over pure needs-based to address it",
+          "passed": null,
+          "evidence": ""
+        },
+        {
+          "text": "Proposes adding an equity or regional balance criterion to the MCA framework",
+          "passed": null,
+          "evidence": ""
+        },
+        {
+          "text": "Demonstrates that the equity-adjusted approach includes at least some northern/Karamoja sections in the funded programme",
+          "passed": null,
+          "evidence": ""
+        },
+        {
+          "text": "Maintains budget constraint at UGX 45 billion regardless of equity adjustment",
+          "passed": null,
+          "evidence": ""
+        },
+        {
+          "text": "Documents the policy choice transparently -- equity criterion weight is a policy decision, not engineering default",
+          "passed": null,
+          "evidence": ""
+        }
+      ]
+    }
+  ]
+}

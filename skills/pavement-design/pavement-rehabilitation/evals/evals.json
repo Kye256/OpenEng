@@ -1,0 +1,88 @@
+{
+  "skill_name": "pavement-rehabilitation",
+  "evals": [
+    {
+      "id": 0,
+      "prompt": "Design pavement rehabilitation for a 10-year-old trunk road in Uganda. Condition data: visual survey shows cracking on 15% of the surface area, maximum rut depth 12mm, IRI = 13. Deflection survey (Benkelman beam, temperature-corrected to 35C): mean deflection 0.8mm, standard deviation 0.2mm. The original pavement SN was 3.5. Future design traffic is 5 million ESAs over the next 10 years. Design CBR is 8%. Determine whether overlay or reconstruction is needed, and if overlay, calculate the required thickness.",
+      "expected_output": "Condition: IRI 13 = Fair, rehabilitation appropriate. Reconstruction triggers check: cracking 15% < 40%, rutting 12mm < 25mm, deflection 0.8mm < 2.0mm -- NO reconstruction triggers. Overlay is appropriate. RRD = 0.8 + 2*0.2 = 1.2mm. SN_new approximately 3.6 (from AASHTO equation). SN_eff approximately 2.5-3.0 (from deflection). Overlay = (SN_new - SN_eff)/0.35 * 25.4, approximately 50-80mm AC overlay.",
+      "files": [
+        "skills/pavement-design/pavement-rehabilitation/tables/uganda_overlay_design.json"
+      ],
+      "assertions": [
+        {
+          "text": "Uses deflection procedure (Benkelman beam data available)",
+          "passed": null,
+          "evidence": ""
+        },
+        {
+          "text": "Calculates RRD as mean + 2*SD (0.8 + 0.4 = 1.2mm)",
+          "passed": null,
+          "evidence": ""
+        },
+        {
+          "text": "Checks reconstruction triggers before proceeding to overlay design",
+          "passed": null,
+          "evidence": ""
+        },
+        {
+          "text": "Calculates overlay thickness using (SN_new - SN_eff)/a1 formula with a1 = 0.35",
+          "passed": null,
+          "evidence": ""
+        },
+        {
+          "text": "Overlay thickness is in practical range 40-100mm for AC",
+          "passed": null,
+          "evidence": ""
+        }
+      ]
+    },
+    {
+      "id": 1,
+      "prompt": "Assess rehabilitation needs for a road in the UK with similar condition data: cracking 15%, rutting 12mm, IRI 13. What assessment framework should be used?",
+      "expected_output": "Notes that UK uses DMRB HD 30/HD 32 for maintenance/rehabilitation assessment, not MoWT Part IV. UK uses SCANNER surveys and SCRIM data. Assessment framework is fundamentally different. Flags that no local HD 30/HD 32 documents are available. Describes UK approach conceptually.",
+      "files": [],
+      "assertions": [
+        {
+          "text": "References HD 30/HD 32 as UK rehabilitation assessment standards (not MoWT Part IV)",
+          "passed": null,
+          "evidence": ""
+        },
+        {
+          "text": "Notes that local HD 30/HD 32 documents are not available",
+          "passed": null,
+          "evidence": ""
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "prompt": "A trunk road in Uganda has severe structural failure: mean deflection 2.5mm (Benkelman beam), cracking on 45% of the surface, rutting 30mm, and DCP shows base CBR has dropped to 25%. The original design was a D1 structure with natural gravel base. Determine the appropriate rehabilitation intervention.",
+      "expected_output": "Multiple reconstruction triggers are met: deflection 2.5mm > 2.0mm threshold, cracking 45% > 40% threshold, rutting 30mm > 25mm threshold, base CBR 25% < 30% (base layer has failed). Overlay is NOT appropriate -- reconstruction is needed. Escalation: full reconstruction with subgrade investigation before redesign. Consider recycling existing base material if properties allow.",
+      "files": [
+        "skills/pavement-design/pavement-rehabilitation/tables/uganda_overlay_design.json"
+      ],
+      "assertions": [
+        {
+          "text": "Identifies ALL reconstruction triggers: deflection >2.0mm, cracking >40%, rutting >25mm, base failure",
+          "passed": null,
+          "evidence": ""
+        },
+        {
+          "text": "Recommends reconstruction (NOT overlay) due to severe structural failure",
+          "passed": null,
+          "evidence": ""
+        },
+        {
+          "text": "Raises escalation for subgrade investigation before reconstruction design",
+          "passed": null,
+          "evidence": ""
+        },
+        {
+          "text": "Does NOT attempt to calculate overlay thickness (reconstruction is the correct intervention)",
+          "passed": null,
+          "evidence": ""
+        }
+      ]
+    }
+  ]
+}

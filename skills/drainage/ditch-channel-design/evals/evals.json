@@ -1,0 +1,89 @@
+{
+  "skill_name": "ditch-channel-design",
+  "evals": [
+    {
+      "id": 0,
+      "prompt": "Design a roadside side drain for a Paved II road in Uganda. The design flow from Skill #29 is Q = 0.375 m3/s. The longitudinal gradient is 2%. The channel is an earth ditch with Manning's n = 0.025, trapezoidal shape with bottom width b = 0.5 m and side slopes z = 1.5:1 (H:V). Determine adequate flow depth, check capacity, calculate velocity, and assess whether lining is needed. The soil is laterite (stiff clay).",
+      "expected_output": "Using Manning's equation: Q = (1/n)*A*R^(2/3)*S^(1/2). For trial depth d = 0.4 m: A = (0.5 + 1.5*0.4)*0.4 = 0.44 m2, P = 0.5 + 2*0.4*sqrt(1+2.25) = 1.94 m, R = 0.227 m. Q_cap = (1/0.025)*0.44*0.227^(2/3)*0.02^(1/2) = approximately 0.93 m3/s > 0.375 m3/s OK. V = Q/A = 0.375/0.44 = 0.85 m/s. Permissible velocity for stiff clay = 1.1 m/s (Table 9.1). V < Vp, so no lining needed. Add 150 mm freeboard: total depth = 0.55 m.",
+      "files": [],
+      "assertions": [
+        {
+          "text": "Uses Manning's equation Q = (1/n)*A*R^(2/3)*S^(1/2) for capacity calculation",
+          "passed": null,
+          "evidence": ""
+        },
+        {
+          "text": "Calculated capacity Q_cap exceeds design flow 0.375 m3/s",
+          "passed": null,
+          "evidence": ""
+        },
+        {
+          "text": "Velocity is calculated and compared against permissible limits for the channel material",
+          "passed": null,
+          "evidence": ""
+        },
+        {
+          "text": "Freeboard of at least 150 mm is specified",
+          "passed": null,
+          "evidence": ""
+        },
+        {
+          "text": "References MoWT Vol 2 Table 9.1 for permissible velocities",
+          "passed": null,
+          "evidence": ""
+        }
+      ]
+    },
+    {
+      "id": 1,
+      "prompt": "Size a roadside drainage channel for a UK A-road. The design flow is 0.375 m3/s, the longitudinal gradient is 2%, and the channel material is grass-lined. Apply UK design principles.",
+      "expected_output": "Using Manning's equation with n = 0.035-0.045 for grass-lined channel. Same hydraulic principles as Uganda but with SuDS considerations. CG 501 reference required. Swale (grass-lined channel) design considers infiltration as well as conveyance. Channel sized to convey design flow with adequate freeboard. Velocity check against grass lining permissible limits (typically 1.5-2.0 m/s).",
+      "files": [],
+      "assertions": [
+        {
+          "text": "Uses Manning's equation with appropriate n value for grass-lined channel (0.035-0.045 range)",
+          "passed": null,
+          "evidence": ""
+        },
+        {
+          "text": "References DMRB CG 501 or equivalent UK standard (not MoWT)",
+          "passed": null,
+          "evidence": ""
+        },
+        {
+          "text": "Mentions SuDS (Sustainable Drainage Systems) considerations for UK practice",
+          "passed": null,
+          "evidence": ""
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "prompt": "A road in steep terrain in Uganda has a side drain with design flow Q = 2.5 m3/s, longitudinal gradient S = 8%, and the soil is sandy loam (erodible). The drain is currently unlined earth with n = 0.025. Size the drain and assess erosion protection requirements.",
+      "expected_output": "High flow and steep gradient will produce high velocities. For an earth channel sized to carry 2.5 m3/s at 8% gradient: velocity will significantly exceed permissible for sandy loam (0.6 m/s from Table 9.1). Concrete or stone pitching lining is required. Velocity likely exceeds 3 m/s even with lining -- energy dissipation at outfall needed. Flag for Skill #32 (Erosion Protection) for outfall design. SENIOR REVIEW escalation for extreme velocity.",
+      "files": [],
+      "assertions": [
+        {
+          "text": "Identifies that velocity exceeds permissible for unlined earth (sandy loam max 0.6 m/s)",
+          "passed": null,
+          "evidence": ""
+        },
+        {
+          "text": "Specifies concrete or stone pitching lining as required protection",
+          "passed": null,
+          "evidence": ""
+        },
+        {
+          "text": "Flags the need for erosion protection at the outfall -- references Skill #32",
+          "passed": null,
+          "evidence": ""
+        },
+        {
+          "text": "Raises escalation flag for high velocity condition",
+          "passed": null,
+          "evidence": ""
+        }
+      ]
+    }
+  ]
+}

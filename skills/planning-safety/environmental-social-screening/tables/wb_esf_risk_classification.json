@@ -1,0 +1,101 @@
+{
+  "source": "World Bank Environmental and Social Framework, ESF Guidance Note on Classification, 2018. Risk classification is project-specific and determined by the World Bank. Criteria shown are illustrative for road projects.",
+  "framework": "World Bank Environmental and Social Framework (ESF), 2018",
+  "risk_levels": {
+    "high": {
+      "description": "Projects with potential for significant adverse environmental and social risks and impacts that are diverse, irreversible, or unprecedented.",
+      "criteria_for_road_projects": [
+        {
+          "criterion": "New road through protected area, national park, or critical natural habitat",
+          "ess_triggered": ["ESS 1", "ESS 6"]
+        },
+        {
+          "criterion": "Significant involuntary resettlement (>200 persons physically displaced)",
+          "ess_triggered": ["ESS 1", "ESS 5"]
+        },
+        {
+          "criterion": "Impacts on Indigenous Peoples / historically underserved traditional local communities",
+          "ess_triggered": ["ESS 1", "ESS 7"]
+        },
+        {
+          "criterion": "Major infrastructure in conflict-affected or fragile areas",
+          "ess_triggered": ["ESS 1", "ESS 4"]
+        },
+        {
+          "criterion": "Project requiring significant cultural heritage site relocation or destruction",
+          "ess_triggered": ["ESS 1", "ESS 8"]
+        }
+      ],
+      "required_instruments": ["Full ESIA", "ESMP", "RAP (if resettlement)", "IPP (if ESS 7)", "SEP"],
+      "world_bank_review": "Prior review at all stages. No-objection required for TOR, draft ESIA, final ESIA, ESMP, RAP."
+    },
+    "substantial": {
+      "description": "Projects with potential for significant adverse environmental and social risks and impacts that are fewer in number, generally site-specific, largely reversible, and can be mitigated.",
+      "criteria_for_road_projects": [
+        {
+          "criterion": "Road upgrade with limited land acquisition (<200 persons, no physical relocation)",
+          "ess_triggered": ["ESS 1", "ESS 5"]
+        },
+        {
+          "criterion": "Road near but not through sensitive ecosystem (within 1 km of wetland, forest reserve)",
+          "ess_triggered": ["ESS 1", "ESS 6"]
+        },
+        {
+          "criterion": "Road through areas with significant community safety concerns (dense pedestrian activity)",
+          "ess_triggered": ["ESS 1", "ESS 4"]
+        },
+        {
+          "criterion": "Large-scale quarrying or borrow pit operations required",
+          "ess_triggered": ["ESS 1", "ESS 3"]
+        }
+      ],
+      "required_instruments": ["Targeted ESIA or detailed ESMP", "ARAP (if minor resettlement)", "SEP"],
+      "world_bank_review": "Prior review for key instruments. Selective no-objection."
+    },
+    "moderate": {
+      "description": "Projects with limited adverse environmental and social risks and impacts that are few in number, generally site-specific, largely reversible, and readily mitigated.",
+      "criteria_for_road_projects": [
+        {
+          "criterion": "Road rehabilitation within existing corridor with no land acquisition",
+          "ess_triggered": ["ESS 1", "ESS 2"]
+        },
+        {
+          "criterion": "Minor road widening within existing road reserve (no resettlement)",
+          "ess_triggered": ["ESS 1"]
+        },
+        {
+          "criterion": "Bridge rehabilitation at existing location with temporary construction impacts",
+          "ess_triggered": ["ESS 1", "ESS 3"]
+        }
+      ],
+      "required_instruments": ["ESMP", "SEP"],
+      "world_bank_review": "Post review. No-objection for ESMP."
+    },
+    "low": {
+      "description": "Projects with minimal or negligible adverse environmental and social risks and impacts.",
+      "criteria_for_road_projects": [
+        {
+          "criterion": "Routine road maintenance with no physical works outside existing footprint",
+          "ess_triggered": ["ESS 1"]
+        },
+        {
+          "criterion": "Road safety improvements (signs, markings, speed humps) with no land acquisition",
+          "ess_triggered": ["ESS 1"]
+        },
+        {
+          "criterion": "Technical assistance, studies, or institutional strengthening with no physical works",
+          "ess_triggered": ["ESS 1"]
+        }
+      ],
+      "required_instruments": ["Standard contractual environmental and social provisions"],
+      "world_bank_review": "Post review only."
+    }
+  },
+  "notes": [
+    "Risk classification is determined by the World Bank, not the borrower.",
+    "Classification can be revised upward or downward during project preparation if scope changes.",
+    "ESS 2 (Labor) and ESS 10 (Stakeholder Engagement) apply to virtually all projects with physical works.",
+    "These criteria are illustrative. Each project is classified individually based on its specific circumstances.",
+    "For Uganda specifically: ESS 7 applies to projects affecting Batwa (southwest), Ik (northeast), and potentially Karamojong pastoralists."
+  ]
+}

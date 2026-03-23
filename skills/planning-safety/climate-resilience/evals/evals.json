@@ -1,0 +1,104 @@
+{
+  "skill_name": "climate-resilience",
+  "evals": [
+    {
+      "id": 0,
+      "prompt": "A 25 km road improvement project is located in Rakai District, southern Uganda, within the Lake Victoria Basin. The road is being upgraded from gravel to paved standard. The road crosses two low-lying areas (at km 8 and km 17) that have experienced flooding in 3 of the last 5 years. The current drainage design uses a 25-year return period for culvert sizing (Skill #29 output). There are 6 cross-drainage culverts designed per Skill #31. The road embankment at the low points is currently designed at 0.3m above the estimated 25-year flood level. AADT is 500 vpd. Screen this road for climate risks and recommend specific adaptation measures.",
+      "expected_output": "Identifies flooding as the primary climate risk (High likelihood, Major consequence = Very High risk in Lake Victoria Basin). Recommends increasing culvert capacity by 20-30% referencing Skill #31. Recommends increasing design return period from 25-year to 50-year referencing Skill #29. Recommends raising embankment and adding erosion protection at culvert outlets referencing Skill #32. Other hazards (heat, landslides, drought) screened as Low risk for this location.",
+      "files": ["tables/climate_risk_screening_matrix.json"],
+      "assertions": [
+        {
+          "text": "Identifies flooding as the primary climate risk with High or Very High risk rating for Lake Victoria Basin location",
+          "passed": null,
+          "evidence": ""
+        },
+        {
+          "text": "Recommends increasing culvert capacity by 20-30% referencing Skill #31 (Culvert Hydraulic Design)",
+          "passed": null,
+          "evidence": ""
+        },
+        {
+          "text": "Recommends erosion protection at culvert outlets referencing Skill #32 (Erosion Protection)",
+          "passed": null,
+          "evidence": ""
+        },
+        {
+          "text": "Recommends increasing design return period or adding freeboard/embankment height referencing Skill #29 or drainage design",
+          "passed": null,
+          "evidence": ""
+        },
+        {
+          "text": "Screens other hazards (heat, landslides, drought) and correctly identifies them as low risk for this flat lowland location",
+          "passed": null,
+          "evidence": ""
+        }
+      ]
+    },
+    {
+      "id": 1,
+      "prompt": "A road project in Moroto District, Karamoja region of northeastern Uganda, involves rehabilitation of a 30 km paved road. The existing pavement shows severe rutting (rut depth 15-25mm) and surface cracking. Peak daily temperatures regularly reach 36-38C. The subgrade includes sections of expansive black cotton soil that show desiccation cracking during the 7-month dry season. The road is on flat terrain (no landslide risk). When rain comes (April-August), it arrives in intense short-duration storms that cause flash flooding. There are 4 culverts along the road. Conduct a climate risk screening and recommend adaptation measures for both the heat/drought hazards AND the flash flood hazard.",
+      "expected_output": "Identifies extreme heat as Very High risk (high likelihood in Karamoja, major consequence for pavement). Identifies drought as Very High risk (expansive clay subgrade, 7-month dry season). Identifies flooding as Medium risk (flash floods despite arid setting). Recommends PMB for surface course referencing pavement skills (#21-25). Recommends subgrade stabilization referencing Skill #28. Recommends sealed shoulders. For flash floods: recommends climate-adjusted culvert sizing. Correctly identifies that Karamoja has MULTIPLE interacting hazards.",
+      "files": ["tables/climate_risk_screening_matrix.json"],
+      "assertions": [
+        {
+          "text": "Identifies both extreme heat AND drought as high or very high risk hazards for Karamoja",
+          "passed": null,
+          "evidence": ""
+        },
+        {
+          "text": "Recommends modified bitumen (PMB or higher-grade binder) for pavement surface referencing Skill #24 or pavement design skills",
+          "passed": null,
+          "evidence": ""
+        },
+        {
+          "text": "Recommends subgrade treatment for expansive clay (lime/cement stabilization) referencing Skill #28 or material suitability",
+          "passed": null,
+          "evidence": ""
+        },
+        {
+          "text": "Also identifies flash flooding risk despite the arid/semi-arid setting and recommends drainage adaptation",
+          "passed": null,
+          "evidence": ""
+        },
+        {
+          "text": "Cross-references at least 2 different design skills for implementation of adaptation measures",
+          "passed": null,
+          "evidence": ""
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "prompt": "A new 12 km road is planned in a remote area of eastern Uganda near the Kenyan border. There is no weather station within 50 km of the project site. No historical climate data is available for this specific location. The terrain is moderately hilly (slopes 10-20%) with some deeply weathered laterite soils. The nearest regional climate station (80 km away) shows annual rainfall of approximately 1,200 mm with a unimodal pattern. The road will serve about 150 vpd. The area has no recorded landslide history, though a neighbouring district experienced a major landslide event in 2018 during heavy rains. How should the climate risk screening handle the absence of local climate data?",
+      "expected_output": "Flags the absence of local climate data as a significant limitation. Uses regional climate projections from the nearest station as a proxy but explicitly flags the uncertainty. Applies a precautionary approach -- screens landslide risk as Medium (not Low) given the terrain and neighbouring district event. Recommends a monitoring plan to collect baseline climate data. Does not ignore climate risk simply because local data is unavailable -- uses best available information with clear uncertainty flags.",
+      "files": ["tables/climate_risk_screening_matrix.json"],
+      "assertions": [
+        {
+          "text": "Flags the absence of local climate data as a limitation and does not simply ignore climate risk",
+          "passed": null,
+          "evidence": ""
+        },
+        {
+          "text": "Uses regional climate projections as a proxy with explicit uncertainty acknowledgment",
+          "passed": null,
+          "evidence": ""
+        },
+        {
+          "text": "Applies a precautionary approach to risk ratings given data uncertainty (does not default everything to Low)",
+          "passed": null,
+          "evidence": ""
+        },
+        {
+          "text": "Considers the neighbouring district landslide event as relevant context for this project's landslide risk assessment",
+          "passed": null,
+          "evidence": ""
+        },
+        {
+          "text": "Recommends a monitoring plan or data collection to address the climate data gap",
+          "passed": null,
+          "evidence": ""
+        }
+      ]
+    }
+  ]
+}

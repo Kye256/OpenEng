@@ -1,0 +1,82 @@
+{
+  "source": "National Environment Act 2019, Schedules. Categories are illustrative for road projects -- full Schedules cover all sectors. Verify current Schedule wording from NEMA for project-specific application.",
+  "framework": "NEMA (National Environment Management Authority), Uganda",
+  "schedules": {
+    "third_schedule": {
+      "description": "EIA mandatory. Projects likely to have significant environmental impacts.",
+      "criteria_for_road_projects": [
+        {
+          "criterion": "New road construction exceeding 10 km in or through an environmentally sensitive area",
+          "examples": ["Road through forest reserve", "Road through wetland system", "Road through wildlife corridor"],
+          "outcome": "Full EIA mandatory"
+        },
+        {
+          "criterion": "Road or bridge construction requiring significant land acquisition and involuntary resettlement",
+          "examples": ["New road alignment through settled area", "Road widening requiring demolition of structures (>50 households)"],
+          "outcome": "Full EIA mandatory"
+        },
+        {
+          "criterion": "Major bridge construction in environmentally sensitive areas",
+          "examples": ["Bridge over major river in protected area", "Bridge construction affecting wetland"],
+          "outcome": "Full EIA mandatory"
+        },
+        {
+          "criterion": "Road construction involving quarrying, borrow pit extraction, or large-scale earthworks in sensitive areas",
+          "examples": ["Quarry in forest reserve", "Borrow pit in wetland buffer zone"],
+          "outcome": "Full EIA mandatory"
+        }
+      ]
+    },
+    "second_schedule": {
+      "description": "Project Brief or summary ESIA required. Projects with potential environmental impacts that may be significant depending on circumstances.",
+      "criteria_for_road_projects": [
+        {
+          "criterion": "Road rehabilitation or upgrade within existing road corridor",
+          "examples": ["Repaving existing road", "Gravel to paved upgrade in existing alignment", "Minor widening within road reserve"],
+          "outcome": "Project Brief required. NEMA may require more detailed study depending on circumstances."
+        },
+        {
+          "criterion": "Road construction in non-sensitive areas with minor land acquisition",
+          "examples": ["New access road in agricultural area", "Road extension < 10 km not through sensitive area"],
+          "outcome": "Project Brief required"
+        },
+        {
+          "criterion": "Bridge replacement or upgrade at existing location",
+          "examples": ["Replacing timber bridge with concrete", "Widening existing bridge"],
+          "outcome": "Project Brief required"
+        },
+        {
+          "criterion": "Road drainage improvements involving watercourse modification",
+          "examples": ["New culvert installations", "Drainage channel realignment", "Outfall construction"],
+          "outcome": "Project Brief required"
+        }
+      ]
+    },
+    "first_schedule": {
+      "description": "Exempt from EIA. Projects with negligible environmental impacts.",
+      "criteria_for_road_projects": [
+        {
+          "criterion": "Routine road maintenance within existing footprint",
+          "examples": ["Pothole patching", "Resealing", "Gravel resurfacing", "Ditch cleaning"],
+          "outcome": "Exempt"
+        },
+        {
+          "criterion": "Minor repairs to existing road furniture",
+          "examples": ["Sign replacement", "Guardrail repair", "Road marking renewal"],
+          "outcome": "Exempt"
+        },
+        {
+          "criterion": "Emergency repairs to restore road access",
+          "examples": ["Temporary culvert repair after flood", "Emergency landslide clearance"],
+          "outcome": "Exempt (but environmental management still required)"
+        }
+      ]
+    }
+  },
+  "notes": [
+    "The National Environment Act 2019 replaced the 1995 Act. Schedule numbering and criteria may differ from the 1995 Act.",
+    "NEMA has discretion to reclassify projects based on site-specific circumstances.",
+    "These categories are illustrative for road projects only. The full Schedules cover all sectors (mining, industry, agriculture, etc.).",
+    "Always verify current Schedule wording from NEMA -- the Act and Regulations are periodically updated."
+  ]
+}

@@ -1,0 +1,63 @@
+{
+  "source": {
+    "document": "World Bank Procurement Regulations for IPF Borrowers",
+    "edition": "5th Edition, July 2016 (revised November 2020)",
+    "disclaimer": "Thresholds are project-specific and agreed in each project's Procurement Plan. Values shown are TYPICAL for Uganda road infrastructure projects and are ILLUSTRATIVE. Always check the specific project Procurement Plan for applicable thresholds.",
+    "verification": "knowledge-based"
+  },
+  "works_thresholds": [
+    {
+      "method": "International Competitive Bidding (ICB)",
+      "wb_terminology": "Open International",
+      "min_usd": 15000000,
+      "max_usd": null,
+      "prior_review": true,
+      "no_objection_required": [
+        "Prequalification documents",
+        "Bidding documents",
+        "Evaluation report",
+        "Contract award",
+        "Contract amendments above threshold"
+      ],
+      "notes": "Typical prior review threshold for Uganda infrastructure. Prequalification common for large road contracts. World Bank SBDs mandatory."
+    },
+    {
+      "method": "National Competitive Bidding (NCB)",
+      "wb_terminology": "Open National",
+      "min_usd": 200000,
+      "max_usd": 15000000,
+      "prior_review": "Above USD 5,000,000 (typical -- check Procurement Plan)",
+      "no_objection_required": [
+        "Bidding documents (if prior review)",
+        "Evaluation report (if prior review)",
+        "Contract award (if prior review)"
+      ],
+      "notes": "Must use acceptable NCB procedures (World Bank reviews national bidding procedures for acceptability). PPDA SBDs may be used if acceptable to World Bank."
+    },
+    {
+      "method": "Shopping",
+      "wb_terminology": "Request for Quotations",
+      "min_usd": 0,
+      "max_usd": 200000,
+      "prior_review": false,
+      "no_objection_required": [],
+      "notes": "Minimum 3 quotations. Post review unless specifically flagged in Procurement Plan. Simplified procedure for small works."
+    }
+  ],
+  "special_provisions": {
+    "direct_contracting": {
+      "wb_terminology": "Direct Selection",
+      "conditions": [
+        "Extension of existing contract (justification required)",
+        "Emergency (World Bank approval required)",
+        "Proprietary/sole source",
+        "Standardisation"
+      ],
+      "prior_review": true,
+      "notes": "Always requires World Bank prior review and no-objection. More restrictive than PPDA direct procurement."
+    },
+    "force_account": {
+      "notes": "Works carried out by the borrower's own workforce. Requires justification and World Bank approval. Not common for large road contracts."
+    }
+  }
+}

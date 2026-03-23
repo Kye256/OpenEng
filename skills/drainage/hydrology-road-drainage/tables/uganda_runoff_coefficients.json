@@ -1,0 +1,79 @@
+{
+  "source": {
+    "manual": "MoWT Road Design Manual Vol 2: Drainage Design",
+    "edition": "January 2010",
+    "section": "Section 4.3.3",
+    "tables": ["Table 4.7(a) - Urban Areas", "Table 4.7(b) - Rural Areas"],
+    "page": "28",
+    "verification": "pending"
+  },
+  "description": "Runoff coefficients for the Rational Method per MoWT Vol 2",
+  "urban_coefficients": {
+    "description": "Table 4.7(a): Typical Values of Rational Coefficients for Urban Areas",
+    "entries": [
+      {"land_use": "Lawns", "condition": "sandy soil, flat <2%", "C_range": [0.05, 0.10]},
+      {"land_use": "Lawns", "condition": "sandy soil, steep >7%", "C_range": [0.15, 0.20]},
+      {"land_use": "Lawns", "condition": "heavy soil, flat <2%", "C_range": [0.13, 0.17]},
+      {"land_use": "Lawns", "condition": "heavy soil, steep >7%", "C_range": [0.25, 0.35]},
+      {"land_use": "Residential", "condition": "single family areas", "C_range": [0.30, 0.50]},
+      {"land_use": "Residential", "condition": "apartment dwelling areas", "C_range": [0.50, 0.70]},
+      {"land_use": "Industrial", "condition": "light areas", "C_range": [0.50, 0.80]},
+      {"land_use": "Industrial", "condition": "heavy areas", "C_range": [0.60, 0.90]},
+      {"land_use": "Business", "condition": "downtown areas", "C_range": [0.70, 0.95]},
+      {"land_use": "Business", "condition": "neighborhood areas", "C_range": [0.50, 0.70]},
+      {"land_use": "Streets", "condition": "asphaltic", "C_range": [0.70, 0.95]},
+      {"land_use": "Streets", "condition": "concrete", "C_range": [0.80, 0.95]},
+      {"land_use": "Streets", "condition": "bricks", "C_range": [0.70, 0.85]},
+      {"land_use": "Roofs", "condition": "any", "C_range": [0.75, 0.95]}
+    ]
+  },
+  "rural_coefficients": {
+    "description": "Table 4.7(b): Typical Values of Rational Coefficients for Rural Areas. C = factor * (Cs + Ck + Cv) where factor depends on land treatment.",
+    "slope_factor_Cs": {
+      "description": "Average slope of hillsides in catchment",
+      "entries": [
+        {"component": "3.5% flat", "MAP_less_300": 0.01, "MAP_300_600": 0.02, "MAP_greater_600": 0.03},
+        {"component": "3.5-11% soft to moderate", "MAP_less_300": 0.04, "MAP_300_600": 0.06, "MAP_greater_600": 0.08},
+        {"component": "11-35% steep", "MAP_less_300": 0.09, "MAP_300_600": 0.12, "MAP_greater_600": 0.16},
+        {"component": ">35% very steep", "MAP_less_300": 0.18, "MAP_300_600": 0.22, "MAP_greater_600": 0.26}
+      ]
+    },
+    "permeability_factor_Ck": {
+      "description": "Permeability of soil",
+      "entries": [
+        {"component": "very permeable", "MAP_less_300": 0.02, "MAP_300_600": 0.03, "MAP_greater_600": 0.04},
+        {"component": "permeable", "MAP_less_300": 0.04, "MAP_300_600": 0.06, "MAP_greater_600": 0.08},
+        {"component": "semi-permeable", "MAP_less_300": 0.08, "MAP_300_600": 0.12, "MAP_greater_600": 0.16},
+        {"component": "impermeable", "MAP_less_300": 0.15, "MAP_300_600": 0.21, "MAP_greater_600": 0.26}
+      ]
+    },
+    "vegetation_factor_Cv": {
+      "description": "Vegetation cover",
+      "entries": [
+        {"component": "dense forest or very loose deposits", "MAP_less_300": 0.02, "MAP_300_600": 0.03, "MAP_greater_600": 0.04},
+        {"component": "cultivated land or thin forest", "MAP_less_300": 0.04, "MAP_300_600": 0.07, "MAP_greater_600": 0.11},
+        {"component": "grassland", "MAP_less_300": 0.13, "MAP_300_600": 0.17, "MAP_greater_600": 0.21},
+        {"component": "bare rock", "MAP_less_300": 0.24, "MAP_300_600": 0.26, "MAP_greater_600": 0.28}
+      ]
+    },
+    "treatment_factors": {
+      "description": "Multiplier based on land treatment (applied to sum Cs+Ck+Cv)",
+      "entries": [
+        {"treatment": "contour cultivated lands", "factor": 0.80},
+        {"treatment": "100% dense wood, flat <3.5%", "factor": 0.60},
+        {"treatment": "lakes, swamps and dams", "factor": 1.00}
+      ]
+    },
+    "formula": "C = factor * (Cs + Ck + Cv)"
+  },
+  "frequency_multipliers": {
+    "description": "Table 4.8: Multipliers for Higher Recurrence Intervals",
+    "source_table": "Table 4.8, p34",
+    "entries": [
+      {"recurrence_interval_years": "2-10", "multiplier": 1.0},
+      {"recurrence_interval_years": "25", "multiplier": 1.1},
+      {"recurrence_interval_years": "50", "multiplier": 1.2},
+      {"recurrence_interval_years": "100", "multiplier": 1.25}
+    ]
+  }
+}

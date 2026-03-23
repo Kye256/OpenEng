@@ -1,0 +1,98 @@
+{
+  "skill_name": "culvert-hydraulic-design",
+  "evals": [
+    {
+      "id": 0,
+      "prompt": "Design a culvert for cross-drainage on a Paved I road in Uganda. The design flow from Skill #29 is Q = 1.8 m3/s for a 25-year ARI. The embankment height is 3.0 m (allowable headwater = 2.5 m). The culvert length is 10 m, slope is 2%, and tailwater depth is 0.5 m. Use a concrete pipe culvert with headwall entrance. Check both inlet and outlet control to determine the governing headwater condition.",
+      "expected_output": "Trial 900 mm pipe: inlet control HW/D approximately 1.6, HW_i = 1.44 m. Outlet control calculation using Eqn 9.6 gives HW_oi approximately 1.31 m. Inlet control governs (1.44 > 1.31) but HW/D = 1.6 exceeds 1.5 limit. Try 1200 mm pipe: inlet control HW/D approximately 0.9, HW_i = 1.08 m. Outlet control HW_oi approximately 0.88 m. Inlet control governs at 1.08 m. HW/D = 0.9, within limits. HW_c = 1.08 m < 2.5 m allowable. Outlet velocity approximately 1.6 m/s. Use 1200 mm concrete pipe.",
+      "files": [
+        "skills/drainage/culvert-hydraulic-design/tables/uganda_culvert_capacity.json"
+      ],
+      "assertions": [
+        {
+          "text": "Checks BOTH inlet control and outlet control headwater (not just one)",
+          "passed": null,
+          "evidence": ""
+        },
+        {
+          "text": "Uses the HIGHER of inlet and outlet control headwater as the governing condition",
+          "passed": null,
+          "evidence": ""
+        },
+        {
+          "text": "Reports HW/D ratio and checks against the 1.2-1.5 limit",
+          "passed": null,
+          "evidence": ""
+        },
+        {
+          "text": "Minimum culvert diameter of 600 mm noted or applied per MoWT Section 9.10",
+          "passed": null,
+          "evidence": ""
+        },
+        {
+          "text": "Outlet velocity calculated and reported for erosion protection assessment",
+          "passed": null,
+          "evidence": ""
+        }
+      ]
+    },
+    {
+      "id": 1,
+      "prompt": "Size a highway culvert in the UK for a design flow of 1.8 m3/s. The embankment height is 3.0 m and the culvert length is 10 m with 2% slope. Apply UK design requirements including CIRIA C689 principles.",
+      "expected_output": "Same hydraulic principles as Uganda (inlet/outlet control). UK requires 1 in 100 year + climate change. CIRIA C689 is the primary UK reference. Same dual control check procedure. Environmental considerations including fish passage should be noted. CG 501/CIRIA C689 not available locally -- flagged for engineer review.",
+      "files": [],
+      "assertions": [
+        {
+          "text": "References CIRIA C689 or DMRB for UK culvert design (not MoWT)",
+          "passed": null,
+          "evidence": ""
+        },
+        {
+          "text": "Applies same inlet/outlet control dual check procedure (same hydraulic principles)",
+          "passed": null,
+          "evidence": ""
+        },
+        {
+          "text": "Notes environmental considerations (fish passage) relevant to UK practice",
+          "passed": null,
+          "evidence": ""
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "prompt": "A culvert in Uganda has a design flow of Q = 0.3 m3/s with a very flat gradient of 0.3% and a long barrel length of 30 m. The embankment height is 2.0 m. The culvert is a 600 mm diameter concrete pipe with headwall entrance (Ke = 0.5, n = 0.012). Calculate both inlet control and outlet control headwater. The tailwater is 0.2 m. Identify which control condition governs and explain why.",
+      "expected_output": "This scenario is designed to test Pitfall #5: inlet and outlet control give DIFFERENT results. For 600 mm pipe at 0.3 m3/s: Inlet control HW/D from nomograph is moderate. Outlet control: long culvert (30 m) and flat slope (0.3%) means high friction losses and minimal elevation drop (So*L = 0.003*30 = 0.09 m). H will be significant due to the long barrel. HW_oi = H + ho - So*L will be HIGHER than HW_i because of the long barrel and flat slope. Outlet control governs. This is exactly the scenario where checking only inlet control would undersize the culvert.",
+      "files": [
+        "skills/drainage/culvert-hydraulic-design/tables/uganda_culvert_capacity.json"
+      ],
+      "assertions": [
+        {
+          "text": "Calculates BOTH inlet control headwater AND outlet control headwater with different numerical results",
+          "passed": null,
+          "evidence": ""
+        },
+        {
+          "text": "Correctly identifies outlet control as governing for this long, flat culvert scenario",
+          "passed": null,
+          "evidence": ""
+        },
+        {
+          "text": "Explains WHY outlet control governs: long barrel length and flat slope increase friction losses",
+          "passed": null,
+          "evidence": ""
+        },
+        {
+          "text": "Uses the higher headwater value as the design headwater (max of inlet and outlet)",
+          "passed": null,
+          "evidence": ""
+        },
+        {
+          "text": "Notes that this scenario demonstrates why BOTH controls must always be checked (Pitfall #5)",
+          "passed": null,
+          "evidence": ""
+        }
+      ]
+    }
+  ]
+}

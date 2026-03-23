@@ -1,0 +1,29 @@
+{
+  "source": {
+    "manual": "TRL Road Note 31",
+    "edition": "5th Edition, December 2022",
+    "table": "Table 3-9",
+    "page": "23",
+    "verification": "pending"
+  },
+  "description": "ORN 31 subgrade strength classes. CRITICAL: These are DIFFERENT from MoWT S1-S6 classes (Table 3.1). Do not cross-reference between the two systems.",
+  "classes": [
+    {"class": "S1", "cbr_min": 0, "cbr_max": 3, "description": "Very weak subgrade"},
+    {"class": "S2", "cbr_min": 3, "cbr_max": 4, "description": "Weak subgrade"},
+    {"class": "S3", "cbr_min": 5, "cbr_max": 7, "description": "Moderate subgrade"},
+    {"class": "S4", "cbr_min": 8, "cbr_max": 14, "description": "Fair subgrade"},
+    {"class": "S5", "cbr_min": 15, "cbr_max": 30, "description": "Good subgrade"},
+    {"class": "S6", "cbr_min": 30, "cbr_max": null, "description": "Very good subgrade"}
+  ],
+  "comparison_with_mowt": {
+    "warning": "ORN 31 5th Edition Table 3-9 subgrade classes have SIMILAR but NOT IDENTICAL boundaries to MoWT Table 3.1. The S1 class in ORN 31 covers CBR <3% while MoWT S1 covers CBR <=2%. Always use the classification from the method being applied.",
+    "mowt_s1_cbr_max": 2,
+    "orn31_s1_cbr_max": 3
+  },
+  "notes": [
+    "ORN 31 5th Edition uses 6 subgrade classes defined by CBR",
+    "Assessment should use 10th percentile CBR from at least 10 readings per uniform section",
+    "DCP-CBR correlation can be used but with apparatus-specific caveat",
+    "For design, the CBR at the most critical moisture condition should be used"
+  ]
+}

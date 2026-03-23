@@ -1,0 +1,99 @@
+{
+  "skill_name": "headwalls-wingwalls",
+  "evals": [
+    {
+      "id": 0,
+      "prompt": "Design headwalls and wingwalls for a 2.0m x 1.5m RC box culvert in Uganda. The fill depth is 1.2 m, HA loading applies, and 45-degree flared wingwalls are to be used. The subgrade has bearing capacity of 100 kPa and phi' = 30 degrees (Ka = 0.33). Fill unit weight is 19 kN/m3. Using MoWT standards, determine: (a) headwall height and type, (b) wingwall earth pressure with correct load factors, (c) wingwall stability checks (overturning and bearing), (d) apron slab sizing, and (e) erosion protection requirements (reference Skill #32).",
+      "expected_output": "Headwall height approximately 3.0 m (fill + culvert + slab). Designed straight headwall for box culvert > 1500 mm. Earth pressure on wingwall uses gamma_fL = 1.50 (ULS) per MoWT Vol 4 Table 1, with HA surcharge 10 kN/m2. Wingwall stability: overturning FoS >= 2.0, bearing within 100 kPa. Apron slab approximately 2-3 m long. Erosion protection at outlet -- reference Skill #32.",
+      "files": [],
+      "assertions": [
+        {
+          "text": "Wingwall earth pressure calculation uses gamma_fL = 1.50 (ULS) per MoWT Vol 4 Table 1",
+          "passed": null,
+          "evidence": ""
+        },
+        {
+          "text": "Headwall height calculation accounts for fill depth + culvert rise + slab thickness (approximately 2.7-3.3 m)",
+          "passed": null,
+          "evidence": ""
+        },
+        {
+          "text": "Wingwall stability check includes overturning factor of safety (target >= 2.0) and bearing pressure check against 100 kPa",
+          "passed": null,
+          "evidence": ""
+        },
+        {
+          "text": "Apron slab sized (length >= 1.5 x culvert height, approximately 2-3 m)",
+          "passed": null,
+          "evidence": ""
+        },
+        {
+          "text": "References Skill #32 (Erosion Protection) for outlet scour protection",
+          "passed": null,
+          "evidence": ""
+        }
+      ]
+    },
+    {
+      "id": 1,
+      "prompt": "Design headwalls and wingwalls for a 2.0m x 1.5m box culvert in the UK with 1.5 m fill. The foundation soil has phi' = 30 degrees and bearing capacity 150 kPa. Determine the appropriate design approach and note key differences from Uganda practice.",
+      "expected_output": "UK design uses Eurocode partial factors (gamma_G = 1.35 for permanent earth pressure, gamma_Q = 1.50 for traffic surcharge) rather than MoWT gamma_fL = 1.50. Stability checked using Eurocode Design Approach 1 (DA1) with two combinations, not global FoS. Foundation design per Eurocode 7 (not CP 2004). Reference DMRB CD 361 for standard headwall details. Flag: CD 361 not available locally.",
+      "files": [],
+      "assertions": [
+        {
+          "text": "References DMRB CD 361 for UK headwall details (not MoWT Vol 2)",
+          "passed": null,
+          "evidence": ""
+        },
+        {
+          "text": "Uses Eurocode partial factors (gamma_G = 1.35 for permanent loads) -- not MoWT gamma_fL = 1.50",
+          "passed": null,
+          "evidence": ""
+        },
+        {
+          "text": "Notes UK uses Eurocode Design Approach 1 for stability, not global factor of safety",
+          "passed": null,
+          "evidence": ""
+        },
+        {
+          "text": "Flags knowledge-based content -- CD 361 not available locally for verification",
+          "passed": null,
+          "evidence": ""
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "prompt": "Design headwalls and wingwalls for a large 3.0m x 2.0m RC box culvert in Uganda with deep fill of 3.5 m. The road is a national highway with HB 45-unit loading. The outlet velocity from Skill #31 is 4.0 m/s. The subgrade bearing capacity is 120 kPa and phi' = 28 degrees. Identify the design challenges and escalation triggers.",
+      "expected_output": "Large box culvert requires designed headwalls/wingwalls (not standard details). Headwall height approximately 6.0 m (3.5 + 2.0 + slabs). Deep fill = high earth pressure on wingwalls. HB 45 surcharge = 20 kN/m2. Wingwall retained height ~6 m exceeds 5 m threshold -- escalation for substantial retaining wall design. High outlet velocity 4.0 m/s requires significant erosion protection (Skill #32). Ka = (1-sin28)/(1+sin28) = 0.36. Large earth pressures at base of 6 m wingwall. Possible need for counterfort wingwalls.",
+      "files": [],
+      "assertions": [
+        {
+          "text": "Identifies deep fill (3.5 m) creating substantial earth pressure on wingwalls with retained height approximately 5.5-6.5 m",
+          "passed": null,
+          "evidence": ""
+        },
+        {
+          "text": "Uses HB 45-unit surcharge of 20 kN/m2 (not 10 kN/m2 for HA) for national highway",
+          "passed": null,
+          "evidence": ""
+        },
+        {
+          "text": "Raises escalation flag for wingwall height exceeding 5 m -- substantial retaining wall requiring detailed design",
+          "passed": null,
+          "evidence": ""
+        },
+        {
+          "text": "Notes high outlet velocity (4.0 m/s) requiring energy dissipation and references Skill #32 for scour protection",
+          "passed": null,
+          "evidence": ""
+        },
+        {
+          "text": "Considers counterfort wingwalls or alternative retaining wall systems for the large retained height",
+          "passed": null,
+          "evidence": ""
+        }
+      ]
+    }
+  ]
+}

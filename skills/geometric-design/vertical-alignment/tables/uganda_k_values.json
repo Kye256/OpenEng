@@ -1,0 +1,37 @@
+{
+  "source": {
+    "manual": "Uganda MoWT Road Design Manual Vol. 1",
+    "table": "Tables 6-11, 6-12",
+    "page": "107-108",
+    "verified": true,
+    "verified_date": "2026-03-20"
+  },
+  "description": "K-values for crest and sag vertical curves by design speed",
+  "unit": "m per % grade change",
+  "data": {
+    "crest": [
+      {"design_speed_kmh": 30, "K": 2},
+      {"design_speed_kmh": 40, "K": 4},
+      {"design_speed_kmh": 50, "K": 7},
+      {"design_speed_kmh": 60, "K": 12},
+      {"design_speed_kmh": 70, "K": 19},
+      {"design_speed_kmh": 80, "K": 29},
+      {"design_speed_kmh": 90, "K": 44},
+      {"design_speed_kmh": 100, "K": 62},
+      {"design_speed_kmh": 110, "K": 81},
+      {"design_speed_kmh": 120, "K": 106}
+    ],
+    "sag": [
+      {"design_speed_kmh": 30, "K": 4},
+      {"design_speed_kmh": 40, "K": 8},
+      {"design_speed_kmh": 50, "K": 12},
+      {"design_speed_kmh": 60, "K": 18},
+      {"design_speed_kmh": 70, "K": 25},
+      {"design_speed_kmh": 80, "K": 32},
+      {"design_speed_kmh": 90, "K": 41},
+      {"design_speed_kmh": 100, "K": 51},
+      {"design_speed_kmh": 110, "K": 62},
+      {"design_speed_kmh": 120, "K": 73}
+    ]
+  }
+}

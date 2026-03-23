@@ -1,0 +1,171 @@
+{
+  "source": {
+    "document": "MoWT General Specifications for Road and Bridge Works / standard practice",
+    "disclaimer": "Frequencies are typical -- verify against project-specific specification",
+    "verification": "pending"
+  },
+  "material_tests": [
+    {
+      "material": "Subgrade / Selected Fill",
+      "tests": [
+        {
+          "test": "CBR (soaked)",
+          "standard": "BS 1377",
+          "frequency": "1 per 500 m3 or 1 per material source",
+          "acceptance": "Per specification class (e.g., S3: CBR >= 5%, S5: >= 8%, S7: >= 15%)"
+        },
+        {
+          "test": "Compaction (Proctor)",
+          "standard": "BS 1377 / AASHTO T-99",
+          "frequency": "1 per material source",
+          "acceptance": "Reference for field density target"
+        },
+        {
+          "test": "Field density",
+          "standard": "BS 1377 / sand replacement",
+          "frequency": "1 per 500 m2 per layer",
+          "acceptance": ">= 95% MDD (Standard Proctor)"
+        },
+        {
+          "test": "Atterberg limits",
+          "standard": "BS 1377",
+          "frequency": "1 per material source",
+          "acceptance": "Per specification class"
+        }
+      ]
+    },
+    {
+      "material": "Sub-base (natural gravel)",
+      "tests": [
+        {
+          "test": "CBR (soaked)",
+          "standard": "BS 1377",
+          "frequency": "1 per 1000 m3",
+          "acceptance": "CBR >= 30% (typical)"
+        },
+        {
+          "test": "Grading",
+          "standard": "BS 1377",
+          "frequency": "1 per 500 m3",
+          "acceptance": "Within grading envelope"
+        },
+        {
+          "test": "Field density",
+          "standard": "BS 1377",
+          "frequency": "1 per 250 m2 per layer",
+          "acceptance": ">= 97% MDD (Modified AASHTO T-180)"
+        },
+        {
+          "test": "Atterberg limits",
+          "standard": "BS 1377",
+          "frequency": "1 per 500 m3",
+          "acceptance": "PI <= 12, LL <= 35 (typical)"
+        }
+      ]
+    },
+    {
+      "material": "Base course (crushed stone)",
+      "tests": [
+        {
+          "test": "CBR (soaked)",
+          "standard": "BS 1377",
+          "frequency": "1 per 1000 m3",
+          "acceptance": "CBR >= 80% (typical)"
+        },
+        {
+          "test": "Grading",
+          "standard": "BS 812",
+          "frequency": "1 per 250 m3",
+          "acceptance": "Within grading envelope"
+        },
+        {
+          "test": "Field density",
+          "standard": "BS 1377",
+          "frequency": "1 per 200 m2 per layer",
+          "acceptance": ">= 98% MDD (Modified AASHTO T-180)"
+        },
+        {
+          "test": "Los Angeles Abrasion",
+          "standard": "BS 812",
+          "frequency": "1 per source",
+          "acceptance": "<= 30% (typical)"
+        },
+        {
+          "test": "ACV / 10% FACT",
+          "standard": "BS 812",
+          "frequency": "1 per source",
+          "acceptance": "ACV <= 30% / 10% FACT >= 110 kN (typical)"
+        }
+      ]
+    },
+    {
+      "material": "Bituminous surfacing",
+      "tests": [
+        {
+          "test": "Binder penetration",
+          "standard": "BS 2000",
+          "frequency": "Per delivery batch",
+          "acceptance": "Per binder grade specification"
+        },
+        {
+          "test": "Aggregate grading",
+          "standard": "BS 812",
+          "frequency": "1 per day of production",
+          "acceptance": "Within job mix formula tolerance"
+        },
+        {
+          "test": "Marshall stability",
+          "standard": "ASTM D1559",
+          "frequency": "1 per 200 tonnes (hot mix)",
+          "acceptance": ">= 8 kN (typical for wearing course)"
+        },
+        {
+          "test": "Core density",
+          "standard": "BS 598",
+          "frequency": "1 per 500 m2",
+          "acceptance": ">= 93% of Marshall density (typical)"
+        }
+      ]
+    },
+    {
+      "material": "Structural concrete",
+      "tests": [
+        {
+          "test": "Cube compressive strength",
+          "standard": "BS 1881",
+          "frequency": "3 cubes per 50 m3 or per pour (min 1 set)",
+          "acceptance": "28-day mean >= fck + 1.64s; individual >= fck - 3 N/mm2"
+        },
+        {
+          "test": "Slump",
+          "standard": "BS 1881",
+          "frequency": "Every batch or every 2 m3",
+          "acceptance": "Within specified range (e.g., 50-100mm)"
+        },
+        {
+          "test": "Aggregate grading",
+          "standard": "BS 812",
+          "frequency": "1 per source",
+          "acceptance": "Within grading limits"
+        }
+      ]
+    },
+    {
+      "material": "Reinforcement steel",
+      "tests": [
+        {
+          "test": "Tensile strength",
+          "standard": "BS 4449",
+          "frequency": "1 per 50 tonnes per size",
+          "acceptance": "Yield >= 460 N/mm2 (high yield)"
+        },
+        {
+          "test": "Bend test",
+          "standard": "BS 4449",
+          "frequency": "1 per 50 tonnes per size",
+          "acceptance": "No cracking on bend"
+        }
+      ]
+    }
+  ]
+}

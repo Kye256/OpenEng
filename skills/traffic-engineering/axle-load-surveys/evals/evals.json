@@ -1,0 +1,89 @@
+{
+  "skill_name": "axle-load-surveys",
+  "evals": [
+    {
+      "id": 0,
+      "prompt": "A static weighbridge survey was conducted on a UNRA trunk road in Uganda (Tororo-Mbale section) over 3 days. The pavement is bituminous surfacing on granular base and granular subbase. 80 heavy vehicles were weighed in the loaded direction (towards Mbale). The data summary is as follows:\n\n- 30 x 2-axle rigid trucks: average front axle 3800 kg, average rear axle 9200 kg\n- 20 x 3-axle rigid trucks: average front axle 4500 kg, average rear tandem axles 8000 kg and 7500 kg each\n- 15 x 6-axle articulated trucks: average steer 5200 kg, drive tandem 9500 kg and 9000 kg, trailer triaxle 8500 kg, 8000 kg, 7500 kg\n- 15 x 2-axle rigid trucks (unladen/returning): average front axle 2500 kg, average rear axle 3000 kg\n\nThe Uganda legal single axle limit is 10,000 kg. Calculate the vehicle damage factors by class, the weighted average VDF, and assess overloading.",
+      "expected_output": "Using MoWT Equation 2 with n=4 (granular/granular from Table 2.2):\n\n2-axle rigid (laden): Front F=[3800/8160]^4=0.047, Rear F=[9200/8160]^4=1.614. VDF=1.66\n3-axle rigid: Front F=[4500/8160]^4=0.092, Tandem1 F=[8000/8160]^4=0.923, Tandem2 F=[7500/8160]^4=0.713. VDF=1.73\n6-axle articulated: Steer=0.166, Drive1=1.831, Drive2=1.480, T1=1.177, T2=0.923, T3=0.713. VDF=6.29\nUnladen 2-axle: Front=0.009, Rear=0.018. VDF=0.027\n\nWeighted average = (30x1.66 + 20x1.73 + 15x6.29 + 15x0.027)/80 = (49.8+34.6+94.35+0.41)/80 = 179.16/80 = 2.24 ESA/HV\n\nOverloading: None of the average axle loads exceed 10,000 kg single axle limit, but individual vehicles in the 2-axle and articulated categories likely have some axles exceeding the limit.",
+      "files": [],
+      "assertions": [
+        {
+          "text": "Correctly applies MoWT Equation 2 (F=[P/8160]^n) with damage exponent n=4 for granular/granular pavement from Table 2.2",
+          "passed": null,
+          "evidence": ""
+        },
+        {
+          "text": "2-axle rigid laden VDF is between 1.3 and 2.0 ESA (accounts for rounding in power-law calculation)",
+          "passed": null,
+          "evidence": ""
+        },
+        {
+          "text": "6-axle articulated VDF is between 5.0 and 8.0 ESA (highest damage class due to multiple heavily loaded axles)",
+          "passed": null,
+          "evidence": ""
+        },
+        {
+          "text": "Weighted average VDF across all classes is between 1.5 and 3.0 ESA per heavy vehicle",
+          "passed": null,
+          "evidence": ""
+        },
+        {
+          "text": "Overloading assessment references Uganda legal single axle limit of 10,000 kg and identifies which vehicle classes have axles approaching or exceeding the limit",
+          "passed": null,
+          "evidence": ""
+        }
+      ]
+    },
+    {
+      "id": 1,
+      "prompt": "A pavement design is being carried out for a rural A-road in Oxfordshire, United Kingdom. The road carries approximately 5000 AADT with 12% heavy vehicles (OGV1 and OGV2 combined). No site-specific axle load survey has been conducted. Determine the appropriate approach for obtaining vehicle damage factors for this road, and explain why a site-specific survey is or is not necessary.",
+      "expected_output": "In UK practice, site-specific axle load surveys are generally not required for standard roads. The DfT publishes standard wear factors based on extensive national fleet data from the Continuing Survey of Road Goods Transport and the WIM network. For a rural A-road with standard traffic composition (12% HV), standard DfT wear factors should be applied. The standard axle is 80 kN (TRL), and the fourth-power damage law (n=4) is used universally in UK practice. Cumulative loading is expressed in msa (million standard axles). CD 226 provides the methodology for converting traffic data to design traffic loading.",
+      "files": [],
+      "assertions": [
+        {
+          "text": "Recommends using DfT standard wear factors rather than conducting a site-specific survey for a standard UK A-road",
+          "passed": null,
+          "evidence": ""
+        },
+        {
+          "text": "References correct UK standard axle (80 kN) and fourth-power damage law (n=4)",
+          "passed": null,
+          "evidence": ""
+        },
+        {
+          "text": "Notes that UK practice uses msa (million standard axles) as the unit for cumulative traffic loading",
+          "passed": null,
+          "evidence": ""
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "prompt": "A new paved road is being designed in Karamoja region of Uganda to serve a proposed mining operation. No axle load survey data exists for the area. The road function is a district road that will carry mining trucks. No information is available on the mining fleet composition or expected loading. Determine appropriate vehicle damage factors for pavement design, clearly stating all assumptions and limitations.",
+      "expected_output": "Without axle load survey data, default VDFs must be used with significant caveats. For a mining road, standard defaults may significantly underestimate actual loading. Escalation flags should be raised for: (1) no axle load data, (2) mining traffic which typically has much higher VDFs than general traffic (VDF 5-15 ESA per loaded truck). Conservative default of 5.0+ ESA/HV should be assumed for mining trucks pending survey. A minimum 3-day axle load survey should be strongly recommended before detailed pavement design. All assumptions must be explicitly flagged.",
+      "files": [],
+      "assertions": [
+        {
+          "text": "Raises escalation flag for missing axle load survey data and recommends conducting a survey before detailed design",
+          "passed": null,
+          "evidence": ""
+        },
+        {
+          "text": "Applies conservative default VDF that accounts for mining traffic being heavier than typical fleet (VDF significantly higher than standard 3.0 trunk road default)",
+          "passed": null,
+          "evidence": ""
+        },
+        {
+          "text": "Explicitly flags all assumed values with warning markers and states they are preliminary estimates only",
+          "passed": null,
+          "evidence": ""
+        },
+        {
+          "text": "Notes that mining vehicles typically have much higher VDFs than general traffic and standard defaults are inappropriate",
+          "passed": null,
+          "evidence": ""
+        }
+      ]
+    }
+  ]
+}

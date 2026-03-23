@@ -1,0 +1,93 @@
+{
+  "skill_name": "fidic-yellow-book",
+  "evals": [
+    {
+      "id": 0,
+      "prompt": "You are advising the Engineer on a design-build highway project in Uganda (FIDIC Yellow Book 1999). The Contractor has submitted a pavement design for a 30 km section. The Employer's Requirements specify a minimum design life of 20 years for design traffic of 15 million ESA, and surface roughness IRI < 2.5 m/km at completion. Upon review, the Engineer identifies that the Contractor's proposed subbase thickness (150mm) appears inadequate for the design traffic -- the Engineer's own calculation suggests 200mm would be needed. The Contractor's structural analysis shows the design meets the ESA requirement with 150mm. How should the Engineer respond under Sub-Clause 5.2, and what is the Engineer's role regarding the design adequacy?",
+      "expected_output": "The Engineer should review the Contractor's design for compliance with Employer's Requirements (design traffic, IRI, design life) -- not impose the Engineer's preferred design solution. If the Contractor's structural analysis demonstrates compliance with 15 million ESA at 150mm subbase, and the methodology is technically sound, the Engineer should accept the design. Engineer's review under Sub-Clause 5.2 does NOT relieve the Contractor of design responsibility -- even if accepted, the Contractor remains liable if the design proves inadequate. Engineer may comment but should not reject a technically justified design simply because the Engineer would have designed it differently. Response should be 'comment with no objection' or 'approve' if the analysis is sound.",
+      "files": [
+        "skills/professional-practice/fidic-yellow-book/tables/fidic_yellow_book_differences.json"
+      ],
+      "assertions": [
+        {
+          "text": "References Sub-Clause 5.2 review process and the four response options (approve, comment-no objection, comment-disapprove, reject)",
+          "passed": null,
+          "evidence": ""
+        },
+        {
+          "text": "States that Engineer's review does NOT relieve Contractor of design responsibility -- Contractor remains liable for design adequacy",
+          "passed": null,
+          "evidence": ""
+        },
+        {
+          "text": "Notes that Engineer reviews for compliance with Employer's Requirements, not to impose the Engineer's preferred design solution",
+          "passed": null,
+          "evidence": ""
+        },
+        {
+          "text": "If Contractor's analysis is technically sound and meets ER, recommends acceptance (not rejection based on Engineer's different calculation)",
+          "passed": null,
+          "evidence": ""
+        }
+      ]
+    },
+    {
+      "id": 1,
+      "prompt": "On a FIDIC Yellow Book 1999 highway project in Uganda, the road surface has been completed and Tests on Completion are conducted. The IRI survey shows IRI = 3.2 m/km on a 5 km section -- exceeding the Employer's Requirements limit of IRI < 2.5 m/km. The Contractor argues that the poor IRI result is due to subgrade settlement caused by poor ground conditions, not construction quality. Advise the Engineer on: (1) what Sub-Clause governs this situation, (2) who bears the risk, (3) what remedial options exist, and (4) the distinction between construction defect and design defect in this context.",
+      "expected_output": "Sub-Clause 9.4 (Tests on Completion) governs. Under Yellow Book, the Contractor bears design risk -- if the poor IRI is caused by subgrade settlement, this could be either a construction defect (inadequate compaction) or a design defect (inadequate subgrade treatment in the design). Either way, it is the Contractor's responsibility under Yellow Book (design + construction risk). Remedial options: (1) Contractor investigates cause, (2) if construction defect -- remedial compaction/overlay, (3) if design defect -- redesign subgrade treatment and reconstruct. Contractor retests after remedial work. If performance criteria still cannot be met, negotiate reduction in Contract Price.",
+      "files": [],
+      "assertions": [
+        {
+          "text": "References Sub-Clause 9.4 (Tests on Completion) as the governing provision",
+          "passed": null,
+          "evidence": ""
+        },
+        {
+          "text": "Correctly identifies that under Yellow Book, both design defect and construction defect are Contractor's risk",
+          "passed": null,
+          "evidence": ""
+        },
+        {
+          "text": "Distinguishes between construction defect (e.g., inadequate compaction) and design defect (e.g., inadequate subgrade treatment) as different root causes requiring different remedies",
+          "passed": null,
+          "evidence": ""
+        },
+        {
+          "text": "Identifies remedial options including investigation, remedial work, retest, and potential Contract Price reduction if criteria cannot be met",
+          "passed": null,
+          "evidence": ""
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "prompt": "On a FIDIC Yellow Book 1999 project, the Employer's Requirements for a road project state: 'The pavement shall be designed for heavy traffic.' No specific design traffic figure (ESA) is given, and no IRI acceptance criterion is stated. The Contractor interprets 'heavy traffic' as 5 million ESA and designs accordingly. The Engineer believes 'heavy traffic' should mean at least 15 million ESA based on the road's classification. How should this ambiguity be resolved? Which Sub-Clause applies, and who bears the risk of the ambiguity?",
+      "expected_output": "Sub-Clause 1.5 (Priority of Documents) applies for ambiguity resolution. The Employer's Requirements are ambiguous -- 'heavy traffic' without a specific ESA figure is vague and unmeasurable. The risk of ambiguity in the Employer's Requirements generally falls on the Employer (who prepared them). However, the Contractor has an obligation under Sub-Clause 5.1 to review the Employer's Requirements for errors and ambiguities. The correct resolution: Engineer should clarify the Employer's Requirements by issuing a formal clarification. If this changes the scope (e.g., from 5M to 15M ESA), this may constitute a Variation under Sub-Clause 13.1 with cost and time implications. The Engineer should flag that vague performance criteria in Employer's Requirements create exactly this type of dispute.",
+      "files": [
+        "skills/professional-practice/fidic-yellow-book/tables/fidic_yellow_book_differences.json"
+      ],
+      "assertions": [
+        {
+          "text": "References Sub-Clause 1.5 (Priority of Documents) for ambiguity resolution",
+          "passed": null,
+          "evidence": ""
+        },
+        {
+          "text": "Identifies the need for clarification of the Employer's Requirements and discusses who bears the ambiguity risk",
+          "passed": null,
+          "evidence": ""
+        },
+        {
+          "text": "Notes that if clarification changes scope, it may constitute a Variation with cost/time implications",
+          "passed": null,
+          "evidence": ""
+        },
+        {
+          "text": "Flags that vague or unmeasurable performance criteria in Employer's Requirements are a source of disputes",
+          "passed": null,
+          "evidence": ""
+        }
+      ]
+    }
+  ]
+}

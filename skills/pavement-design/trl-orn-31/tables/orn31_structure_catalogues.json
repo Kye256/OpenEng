@@ -1,0 +1,88 @@
+{
+  "source": {
+    "manual": "TRL Road Note 31",
+    "edition": "5th Edition, December 2022",
+    "section": "Chapter 9 - Pavement Structure Catalogues",
+    "page": "96-106",
+    "verification": "pending"
+  },
+  "description": "ORN 31 Chapter 9 pavement structure catalogues for flexible surfaced roads. Extends to 80 MESA in 5th Edition.",
+  "foundation_classes": {
+    "source": "Table 8-1",
+    "classes": [
+      {"class": "F1", "description": "CBR < 3% (very weak)", "stiffness_MPa_range": "< 25", "capping_required": true},
+      {"class": "F2", "description": "CBR 3-7% (weak to moderate)", "stiffness_MPa_range": "25-50", "capping_required": true},
+      {"class": "F3", "description": "CBR 8-14% (fair)", "stiffness_MPa_range": "50-100", "capping_required": false},
+      {"class": "F4", "description": "CBR >= 15% (good to very good)", "stiffness_MPa_range": "> 100", "capping_required": false}
+    ]
+  },
+  "catalogues": {
+    "flexible_surfaced": {
+      "description": "Flexible pavement structures for surfaced roads with bituminous surfacing",
+      "traffic_bands": [
+        {"band": "T1", "mesa_range": "< 0.3", "description": "Very low volume"},
+        {"band": "T2", "mesa_range": "0.3 - 0.7", "description": "Low volume"},
+        {"band": "T3", "mesa_range": "0.7 - 1.5", "description": "Low to medium volume"},
+        {"band": "T4", "mesa_range": "1.5 - 3", "description": "Medium volume"},
+        {"band": "T5", "mesa_range": "3 - 6", "description": "Medium to high volume"},
+        {"band": "T6", "mesa_range": "6 - 10", "description": "High volume"},
+        {"band": "T7", "mesa_range": "10 - 17", "description": "High volume"},
+        {"band": "T8", "mesa_range": "17 - 30", "description": "Very high volume"},
+        {"band": "T9", "mesa_range": "30 - 50", "description": "Very high volume (new in 5th Ed)"},
+        {"band": "T10", "mesa_range": "50 - 80", "description": "Extremely high volume (new in 5th Ed)"}
+      ],
+      "structures": {
+        "granular_base_granular_subbase": {
+          "code": "Chart A",
+          "applicable_traffic": "T1-T6",
+          "examples": {
+            "T1_S5": {"surfacing": {"type": "surface_dressing", "thickness_mm": null}, "roadbase": {"material": "GB3", "thickness_mm": 150}, "sub-base": null, "capping": null},
+            "T2_S4": {"surfacing": {"type": "surface_dressing", "thickness_mm": null}, "roadbase": {"material": "GB1", "thickness_mm": 150}, "sub-base": {"material": "GS2", "thickness_mm": 125}, "capping": null},
+            "T3_S3": {"surfacing": {"type": "surface_dressing", "thickness_mm": null}, "roadbase": {"material": "GB1", "thickness_mm": 175}, "sub-base": {"material": "GS2", "thickness_mm": 150}, "capping": null},
+            "T4_S3": {"surfacing": {"type": "surface_dressing", "thickness_mm": null}, "roadbase": {"material": "GB1", "thickness_mm": 200}, "sub-base": {"material": "GS2", "thickness_mm": 175}, "capping": null},
+            "T5_S4": {"surfacing": {"type": "AC_surfacing", "thickness_mm": 40}, "roadbase": {"material": "GB1", "thickness_mm": 200}, "sub-base": {"material": "GS2", "thickness_mm": 175}, "capping": null}
+          }
+        },
+        "cemented_base_granular_subbase": {
+          "code": "Chart B",
+          "applicable_traffic": "T1-T7",
+          "examples": {
+            "T3_S3": {"surfacing": {"type": "surface_dressing", "thickness_mm": null}, "roadbase": {"material": "CB1", "thickness_mm": 150}, "sub-base": {"material": "GS2", "thickness_mm": 150}, "capping": null},
+            "T5_S4": {"surfacing": {"type": "AC_surfacing", "thickness_mm": 40}, "roadbase": {"material": "CB1", "thickness_mm": 175}, "sub-base": {"material": "GS2", "thickness_mm": 175}, "capping": null},
+            "T7_S5": {"surfacing": {"type": "AC_surfacing", "thickness_mm": 50}, "roadbase": {"material": "CB1", "thickness_mm": 200}, "sub-base": {"material": "GS2", "thickness_mm": 200}, "capping": null}
+          }
+        },
+        "bituminous_base_granular_subbase": {
+          "code": "Chart C",
+          "applicable_traffic": "T3-T10",
+          "examples": {
+            "T4_S3": {"surfacing": {"type": "AC_surfacing", "thickness_mm": 40}, "roadbase": {"material": "BM", "thickness_mm": 100}, "sub-base": {"material": "GS1", "thickness_mm": 175}, "capping": null},
+            "T6_S4": {"surfacing": {"type": "AC_surfacing", "thickness_mm": 50}, "roadbase": {"material": "BM", "thickness_mm": 130}, "sub-base": {"material": "GS1", "thickness_mm": 200}, "capping": null},
+            "T8_S5": {"surfacing": {"type": "AC_surfacing", "thickness_mm": 60}, "roadbase": {"material": "BM", "thickness_mm": 175}, "sub-base": {"material": "GS1", "thickness_mm": 200}, "capping": null},
+            "T10_S5": {"surfacing": {"type": "AC_surfacing", "thickness_mm": 80}, "roadbase": {"material": "EME2", "thickness_mm": 200}, "sub-base": {"material": "GS1", "thickness_mm": 225}, "capping": null}
+          }
+        }
+      }
+    }
+  },
+  "material_codes": {
+    "GB1": "Graded crushed rock or high-standard natural gravel roadbase (CBR > 80%)",
+    "GB3": "Natural coarsely-graded granular material roadbase (CBR > 80%)",
+    "GS1": "Crushed rock or high-standard natural gravel sub-base (CBR > 45%)",
+    "GS2": "Standard natural gravel sub-base (CBR > 30%)",
+    "GC": "Granular capping layer (CBR > 15%)",
+    "G8": "Selected fill / earthworks (CBR > 8%)",
+    "CB1": "Cement-stabilised base",
+    "BM": "Bitumen Macadam roadbase",
+    "EME2": "Enrobe a Module Eleve (high modulus asphalt) -- new in 5th Ed",
+    "AC_surfacing": "Asphaltic concrete surfacing",
+    "surface_dressing": "Bituminous surface dressing"
+  },
+  "notes": [
+    "ORN 31 5th Edition extends traffic range to 80 MESA (T10) -- previous edition limited to 30 MESA",
+    "Chapter 7 (Climate Resilience) is new in 5th Edition -- consider drainage and climate effects",
+    "Chapter 13 (Carbon Considerations) is new in 5th Edition",
+    "Structure examples are representative -- full catalogue contains many more combinations",
+    "Verification status pending -- engineer review required against actual Chapter 9 charts"
+  ]
+}

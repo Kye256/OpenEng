@@ -1,0 +1,89 @@
+{
+  "skill_name": "traffic-data-processing",
+  "evals": [
+    {
+      "id": 0,
+      "prompt": "Process the following traffic count data for a trunk road in Uganda (Soroti-Lira Road, paved, rural). A 12-hour manual classified count (06:00-18:00) was conducted over 3 days in April (rainy season). The count data is as follows:\n\nDay 1 (Tuesday): Direction 1 = 720 vehicles, Direction 2 = 680 vehicles, Total = 1,400\nDay 2 (Wednesday): Direction 1 = 750 vehicles, Direction 2 = 700 vehicles, Total = 1,450\nDay 3 (Thursday): Direction 1 = 730 vehicles, Direction 2 = 690 vehicles, Total = 1,420\n\nNo continuous count station data is available. The road is a rural trunk road (not a major truck corridor). Process this data to estimate AADT, including daily expansion and seasonal adjustment. Calculate the Design Hourly Volume (DHV) using the MoWT methodology. Show all calculations step by step.",
+      "expected_output": "12-hour ADT = (1400+1450+1420)/3 = 1423 vpd. Daily expansion to 24-hr: Using factor ~0.87 for rural trunk road, 24-hr ADT = 1423/0.87 = approximately 1636 vpd. Seasonal adjustment for April (rainy season): factor ~0.95, AADT = 1636/0.95 = approximately 1722 vpd. DHV = AADT x K where K = 0.15 (MoWT Table 5-2 rural arterial average), DHV = 1722 x 0.15 = approximately 258 vph. Directional split approximately 51/49 from count data.",
+      "files": [],
+      "assertions": [
+        {
+          "text": "Correctly applies a daily expansion factor to convert 12-hour count to 24-hour ADT (factor in range 0.80-0.92 for rural trunk road)",
+          "passed": null,
+          "evidence": ""
+        },
+        {
+          "text": "Applies seasonal adjustment for April (rainy season) count, with factor in range 0.85-1.00",
+          "passed": null,
+          "evidence": ""
+        },
+        {
+          "text": "Estimated AADT is in the range of 1,500-2,100 vpd (reasonable given the input data and adjustment factors)",
+          "passed": null,
+          "evidence": ""
+        },
+        {
+          "text": "Calculates DHV using K-factor from MoWT Table 5-2 or equivalent (K in range 0.10-0.20 for rural road)",
+          "passed": null,
+          "evidence": ""
+        },
+        {
+          "text": "All assumed factors (expansion, seasonal, K-factor) are explicitly stated with their sources or flagged as assumptions",
+          "passed": null,
+          "evidence": ""
+        }
+      ]
+    },
+    {
+      "id": 1,
+      "prompt": "Process the following traffic count data for a rural road in the UK (B-road in Hampshire, England). A 7-day ATC count was conducted in September 2025. The daily volumes (both directions) are:\n\nMonday: 3,200\nTuesday: 3,350\nWednesday: 3,280\nThursday: 3,310\nFriday: 3,650\nSaturday: 2,900\nSunday: 2,510\n\nDfT 2024 AADT for nearest count point: 3,050 vpd. The road is classified as a rural B-road for DfT seasonal factor purposes. Process this data to estimate AADT, applying appropriate UK seasonal factors. Compare the result with the DfT baseline.",
+      "expected_output": "7-day ADT = (3200+3350+3280+3310+3650+2900+2510)/7 = approximately 3171 vpd. September is close to a neutral month in the UK; seasonal factor approximately 0.97-1.00. AADT = 3171 x seasonal factor = approximately 3100-3170 vpd. This is within ~5% of DfT 2024 AADT of 3,050 vpd, which is consistent. Friday highest, Sunday lowest - typical rural pattern.",
+      "files": [],
+      "assertions": [
+        {
+          "text": "Applies DfT seasonal adjustment factor for September (factor should be close to 1.0, in range 0.95-1.02)",
+          "passed": null,
+          "evidence": ""
+        },
+        {
+          "text": "Estimated AADT is in the range of 2,800-3,400 vpd (reasonable for the given data)",
+          "passed": null,
+          "evidence": ""
+        },
+        {
+          "text": "Compares result with DfT 2024 AADT baseline and notes consistency or discrepancy",
+          "passed": null,
+          "evidence": ""
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "prompt": "Process the following traffic count data: A 2-hour manual count was conducted on a rural road in Uganda between 10:00 and 12:00 on a single day (a Saturday in August, which is a local market day in the area). The count recorded 85 vehicles in Direction 1 and 110 vehicles in Direction 2 (total 195 vehicles in 2 hours). No other traffic data exists for this road. No continuous count station is nearby. Process this data to estimate AADT. Identify all limitations and flag any concerns about data adequacy.",
+      "expected_output": "This is a highly unreliable basis for AADT estimation. The count is: (a) only 2 hours long -- cannot establish daily pattern; (b) during a market day -- traffic is likely 2-3x normal; (c) a single day -- no basis for daily variation; (d) during midday peak hours only. Any AADT estimate will have very large uncertainty. A rough screening estimate might expand 2-hour to 12-hour (x4-5), then 12-hour to 24-hour (factor ~0.85), then adjust for market day effect -- but all of these expansions introduce large errors. The response should flag this data as inadequate for design and recommend additional surveying.",
+      "files": [],
+      "assertions": [
+        {
+          "text": "Raises escalation flag or clear warning that 2-hour count on a single market day is inadequate for reliable AADT estimation",
+          "passed": null,
+          "evidence": ""
+        },
+        {
+          "text": "Identifies market day effect as a source of bias (traffic likely higher than normal day)",
+          "passed": null,
+          "evidence": ""
+        },
+        {
+          "text": "Recommends additional survey data before using results for design decisions",
+          "passed": null,
+          "evidence": ""
+        },
+        {
+          "text": "Any AADT estimate provided is clearly marked as very approximate/screening level with large uncertainty",
+          "passed": null,
+          "evidence": ""
+        }
+      ]
+    }
+  ]
+}

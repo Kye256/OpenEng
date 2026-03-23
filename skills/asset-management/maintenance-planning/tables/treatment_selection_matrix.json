@@ -1,0 +1,240 @@
+{
+  "source": "MoWT maintenance manual / standard maintenance engineering practice. Treatment selection based on distress type, severity, and road surface type.",
+  "disclaimer": "REPRESENTATIVE -- treatment selection requires professional judgment. Material availability and budget constraints may modify treatment choice.",
+  "usage": "Look up by surface_type -> distress_type -> severity to find recommended treatment and intervention level.",
+  "paved_road_treatments": [
+    {
+      "distress_type": "alligator_cracking",
+      "severity": "L",
+      "treatment": "Crack sealing",
+      "intervention_level": "routine",
+      "description": "Fill cracks with bitumen sealant to prevent water ingress"
+    },
+    {
+      "distress_type": "alligator_cracking",
+      "severity": "M",
+      "treatment": "Shaped patching + reseal or thin overlay",
+      "intervention_level": "periodic",
+      "description": "Remove and replace failed area, apply surface treatment or 30-50mm overlay"
+    },
+    {
+      "distress_type": "alligator_cracking",
+      "severity": "H",
+      "treatment": "Base repair + overlay or reconstruction",
+      "intervention_level": "rehabilitation",
+      "description": "Structural failure -- remove failed layers, repair base, overlay. Refer to Skill #25."
+    },
+    {
+      "distress_type": "longitudinal_cracking",
+      "severity": "L",
+      "treatment": "Crack sealing",
+      "intervention_level": "routine",
+      "description": "Seal cracks to prevent water ingress"
+    },
+    {
+      "distress_type": "longitudinal_cracking",
+      "severity": "M",
+      "treatment": "Crack sealing + monitoring",
+      "intervention_level": "routine",
+      "description": "Seal and monitor for progression -- may indicate joint or structural issue"
+    },
+    {
+      "distress_type": "longitudinal_cracking",
+      "severity": "H",
+      "treatment": "Patching + overlay",
+      "intervention_level": "periodic",
+      "description": "Wide or branching longitudinal cracks need repair and surface treatment"
+    },
+    {
+      "distress_type": "transverse_cracking",
+      "severity": "L",
+      "treatment": "Crack sealing",
+      "intervention_level": "routine",
+      "description": "Seal to prevent water ingress"
+    },
+    {
+      "distress_type": "transverse_cracking",
+      "severity": "M",
+      "treatment": "Crack sealing + monitoring",
+      "intervention_level": "routine",
+      "description": "Seal and monitor -- may be thermal or reflective"
+    },
+    {
+      "distress_type": "transverse_cracking",
+      "severity": "H",
+      "treatment": "Patching + overlay",
+      "intervention_level": "periodic",
+      "description": "Severe transverse cracking needs repair and surface renewal"
+    },
+    {
+      "distress_type": "rutting",
+      "severity": "L",
+      "treatment": "Monitor",
+      "intervention_level": "routine",
+      "description": "Rutting < 10mm -- monitor progression at next survey"
+    },
+    {
+      "distress_type": "rutting",
+      "severity": "M",
+      "treatment": "Level and overlay (40-50mm)",
+      "intervention_level": "periodic",
+      "description": "Rutting 10-25mm -- level with AC and apply overlay"
+    },
+    {
+      "distress_type": "rutting",
+      "severity": "H",
+      "treatment": "Mill and overlay or reconstruction",
+      "intervention_level": "rehabilitation",
+      "description": "Rutting > 25mm -- structural failure likely. Mill out ruts, investigate base, overlay. Refer to Skill #25."
+    },
+    {
+      "distress_type": "ravelling",
+      "severity": "L",
+      "treatment": "Monitor",
+      "intervention_level": "routine",
+      "description": "Minor surface loss -- monitor progression"
+    },
+    {
+      "distress_type": "ravelling",
+      "severity": "M",
+      "treatment": "Surface dressing or reseal",
+      "intervention_level": "periodic",
+      "description": "Moderate surface loss -- apply new seal to arrest deterioration"
+    },
+    {
+      "distress_type": "ravelling",
+      "severity": "H",
+      "treatment": "Overlay (30-50mm)",
+      "intervention_level": "periodic",
+      "description": "Severe surface loss -- new surface layer required"
+    },
+    {
+      "distress_type": "bleeding",
+      "severity": "L",
+      "treatment": "Apply coarse aggregate",
+      "intervention_level": "routine",
+      "description": "Blot excess binder with coarse sand/aggregate"
+    },
+    {
+      "distress_type": "bleeding",
+      "severity": "M",
+      "treatment": "Apply coarse aggregate + monitor",
+      "intervention_level": "routine",
+      "description": "Significant flushing -- address at next reseal cycle"
+    },
+    {
+      "distress_type": "bleeding",
+      "severity": "H",
+      "treatment": "Mill and reseal or overlay",
+      "intervention_level": "periodic",
+      "description": "Severe flushing -- safety concern when wet. Remove and replace surface."
+    },
+    {
+      "distress_type": "potholes",
+      "severity": "L",
+      "treatment": "Patching (cold or hot mix)",
+      "intervention_level": "routine",
+      "description": "Isolated potholes < 5% area -- patch individually"
+    },
+    {
+      "distress_type": "potholes",
+      "severity": "M",
+      "treatment": "Patching + surface treatment",
+      "intervention_level": "periodic",
+      "description": "Moderate potholes 5-15% -- systematic patching followed by reseal or overlay"
+    },
+    {
+      "distress_type": "potholes",
+      "severity": "H",
+      "treatment": "Patching + overlay or reconstruction",
+      "intervention_level": "rehabilitation",
+      "description": "Extensive potholes > 15% -- indicates advanced structural failure. Refer to Skill #25."
+    }
+  ],
+  "gravel_road_treatments": [
+    {
+      "distress_type": "corrugation",
+      "severity": "L",
+      "treatment": "Grading (blade)",
+      "intervention_level": "routine",
+      "description": "Light grading to smooth corrugations"
+    },
+    {
+      "distress_type": "corrugation",
+      "severity": "M",
+      "treatment": "Heavy grading + compaction",
+      "intervention_level": "routine",
+      "description": "Rip, reshape, and compact. Add water if available."
+    },
+    {
+      "distress_type": "corrugation",
+      "severity": "H",
+      "treatment": "Gravel resheeting (150mm compacted)",
+      "intervention_level": "periodic",
+      "description": "Severe corrugation with gravel loss -- new wearing course needed"
+    },
+    {
+      "distress_type": "potholes",
+      "severity": "L",
+      "treatment": "Spot patching with gravel",
+      "intervention_level": "routine",
+      "description": "Fill individual potholes with compacted gravel"
+    },
+    {
+      "distress_type": "potholes",
+      "severity": "M",
+      "treatment": "Patching + grading",
+      "intervention_level": "routine",
+      "description": "Systematic pothole repair followed by grading"
+    },
+    {
+      "distress_type": "potholes",
+      "severity": "H",
+      "treatment": "Gravel resheeting",
+      "intervention_level": "periodic",
+      "description": "Extensive potholes indicate wearing course failure -- resheeting needed"
+    },
+    {
+      "distress_type": "erosion",
+      "severity": "L",
+      "treatment": "Drain clearing + minor repair",
+      "intervention_level": "routine",
+      "description": "Clear drains to redirect water flow away from carriageway"
+    },
+    {
+      "distress_type": "erosion",
+      "severity": "M",
+      "treatment": "Drainage improvement + reshaping",
+      "intervention_level": "periodic",
+      "description": "Improve drains, install mitre drains, reshape cross-section for drainage"
+    },
+    {
+      "distress_type": "erosion",
+      "severity": "H",
+      "treatment": "Drainage reconstruction + resheeting",
+      "intervention_level": "rehabilitation",
+      "description": "Major erosion damage -- reconstruct drainage, reshape, and resheet"
+    },
+    {
+      "distress_type": "gravel_loss",
+      "severity": "L",
+      "treatment": "Monitor",
+      "intervention_level": "routine",
+      "description": "< 25% thickness lost -- monitor and plan resheeting"
+    },
+    {
+      "distress_type": "gravel_loss",
+      "severity": "M",
+      "treatment": "Gravel resheeting (150mm compacted)",
+      "intervention_level": "periodic",
+      "description": "25-50% thickness lost -- resheet before complete loss"
+    },
+    {
+      "distress_type": "gravel_loss",
+      "severity": "H",
+      "treatment": "Subgrade assessment + resheeting or reconstruction",
+      "intervention_level": "rehabilitation",
+      "description": "> 50% thickness lost -- wearing course effectively gone. Assess subgrade before resheeting."
+    }
+  ]
+}

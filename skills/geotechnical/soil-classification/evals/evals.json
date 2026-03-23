@@ -1,0 +1,89 @@
+{
+  "skill_name": "soil-classification",
+  "evals": [
+    {
+      "id": 0,
+      "prompt": "Classify soils from the following borehole log data from a road project on the Kampala-Jinja Highway in Uganda. The data is from Test Pit TP-08 at chainage 15+200.\n\nDepth 0.0-0.8 m: Reddish-brown gravelly soil. Lab results: LL = 35%, PL = 18%, PI = 17%. Grading: 25% passing 0.075 mm, 50% passing 2.0 mm, 65% passing 4.75 mm.\n\nDepth 0.8-1.5 m: Reddish-brown clayey soil with some gravel. Lab results: LL = 44%, PL = 20%, PI = 24%. Grading: 40% passing 0.075 mm, 62% passing 2.0 mm, 78% passing 4.75 mm.\n\nDepth 1.5-2.0 m: Dark brown to grey clay, very sticky. Lab results: LL = 58%, PL = 22%, PI = 36%. Grading: 55% passing 0.075 mm, 75% passing 2.0 mm, 88% passing 4.75 mm.\n\nClassify each layer using AASHTO system, calculate Group Index, provide USCS classification, and assess subgrade suitability for pavement design.",
+      "expected_output": "Layer 1 (0.0-0.8 m): AASHTO A-2-6, GI approximately 0-2. USCS: SC (clayey sand). Good laterite, suitable for subgrade (likely S4-S5 range with CBR 8-20%). Layer 2 (0.8-1.5 m): AASHTO A-2-7 or A-7-5, GI approximately 3-6. USCS: CL or SC. Moderate quality, marginal subgrade. Layer 3 (1.5-2.0 m): AASHTO A-7-6 (since LL-30=28 < PI=36), GI approximately 10-15. USCS: CH. Very poor subgrade -- potentially expansive clay. Escalation flag for expansive soil below 1.5 m requiring treatment or replacement.",
+      "files": [],
+      "assertions": [
+        {
+          "text": "Correctly classifies the upper layer (0.0-0.8 m) as AASHTO A-2-6 with GI in the 0-2 range",
+          "passed": null,
+          "evidence": ""
+        },
+        {
+          "text": "Correctly identifies the lowest layer (1.5-2.0 m) as AASHTO A-7-6 (not A-7-5), noting that PI > LL-30 indicates expansive clay",
+          "passed": null,
+          "evidence": ""
+        },
+        {
+          "text": "Calculates Group Index values that are reasonable for each layer (increasing with depth as soil quality decreases)",
+          "passed": null,
+          "evidence": ""
+        },
+        {
+          "text": "Provides engineering assessment of subgrade suitability, identifying the deepest layer as problematic (expansive, very poor subgrade)",
+          "passed": null,
+          "evidence": ""
+        },
+        {
+          "text": "Raises an escalation or warning flag for the expansive clay at depth, recommending swell testing or subgrade treatment",
+          "passed": null,
+          "evidence": ""
+        }
+      ]
+    },
+    {
+      "id": 1,
+      "prompt": "Classify soils from a trial pit on a highway scheme near Oxford, United Kingdom. The geology is Oxford Clay Formation.\n\nTrial Pit TP-03, depth 0.0-3.0 m:\n\nDepth 0.0-0.3 m: Dark brown topsoil with roots.\nDepth 0.3-1.5 m: Firm brown slightly silty CLAY. Lab results: LL = 48%, PL = 21%, PI = 27%. Percentage passing 63 microns = 72%.\nDepth 1.5-3.0 m: Stiff dark grey CLAY with occasional shell fragments. Lab results: LL = 62%, PL = 25%, PI = 37%. Percentage passing 63 microns = 85%.\n\nProvide a BS 5930 soil description and classify using BS EN ISO 14688. Assess subgrade suitability for highway design and estimate equilibrium CBR.",
+      "expected_output": "BS 5930 descriptions should follow the standard format. Stratum 1 (0.3-1.5 m): Firm brown slightly silty CLAY, high plasticity, Oxford Clay Formation. PI = 27, equilibrium CBR approximately 2-4%. Stratum 2 (1.5-3.0 m): Stiff dark grey CLAY, very high plasticity, Oxford Clay Formation. PI = 37, equilibrium CBR approximately 1.5-3%. Both layers are poor subgrade material requiring capping. London/Oxford Clay shrink-swell should be noted.",
+      "files": [],
+      "assertions": [
+        {
+          "text": "Provides BS 5930 format soil descriptions (consistency, colour, principal soil type) for each stratum",
+          "passed": null,
+          "evidence": ""
+        },
+        {
+          "text": "Classifies soils using BS EN ISO 14688 or notes the high plasticity classification (PI > 25)",
+          "passed": null,
+          "evidence": ""
+        },
+        {
+          "text": "Estimates equilibrium CBR values in the 1-5% range for both clay strata, appropriate for high-plasticity clay",
+          "passed": null,
+          "evidence": ""
+        },
+        {
+          "text": "Identifies both layers as poor subgrade material requiring capping or stabilisation for highway design",
+          "passed": null,
+          "evidence": ""
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "prompt": "Classify soils from a test pit on a district road project in Gulu, northern Uganda. Only visual field descriptions are available -- no laboratory test results have been obtained.\n\nTest Pit TP-05, depth 0.0-1.5 m:\n\nDepth 0.0-0.5 m: Reddish-brown gravelly material, crumbly when dry. Moderate amount of fines. Some quartz pebbles visible.\nDepth 0.5-1.2 m: Reddish-brown clayey material, moderately plastic, can be rolled into a thread but crumbles at about 5 mm diameter. Sticky when wet.\nDepth 1.2-1.5 m: Yellowish-brown sandy material with very little fines. Non-plastic.\n\nClassify these soils based on visual description only and recommend what laboratory tests are needed.",
+      "expected_output": "Visual classification should be attempted for all three layers with clear caveats. Layer 1: Probable laterite gravel, tentatively A-2 group. Layer 2: Lateritic clay, tentatively A-6 or A-7. Layer 3: Sand, tentatively A-3 or A-2-4. All classifications must be flagged as preliminary/visual only. Must recommend laboratory testing: Atterberg limits, grading analysis, CBR (soaked, 4-day), and compaction test for all three layers. Escalation flag for no lab data -- classification is unreliable without testing.",
+      "files": [],
+      "assertions": [
+        {
+          "text": "Attempts visual classification for all three layers, assigning tentative AASHTO groups with clear uncertainty flags",
+          "passed": null,
+          "evidence": ""
+        },
+        {
+          "text": "Flags that classification without laboratory data is preliminary and unreliable, raising an escalation or warning",
+          "passed": null,
+          "evidence": ""
+        },
+        {
+          "text": "Recommends specific laboratory tests needed (Atterberg limits, grading analysis at minimum) to confirm classification",
+          "passed": null,
+          "evidence": ""
+        }
+      ]
+    }
+  ]
+}

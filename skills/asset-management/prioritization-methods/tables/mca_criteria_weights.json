@@ -1,0 +1,115 @@
+{
+  "source": "Adapted from UNRA/DUCAR prioritization practice. Weights are representative ranges -- actual weights set by decision-maker based on policy priorities.",
+  "disclaimer": "REPRESENTATIVE -- these weights reflect typical practice, not mandatory values. Decision-makers should review and confirm weights for their specific context.",
+  "scoring_scale": {
+    "min": 1,
+    "max": 5,
+    "description": "1 = lowest priority, 5 = highest priority for each criterion"
+  },
+  "criteria": [
+    {
+      "criterion": "road_condition",
+      "description": "Current pavement condition from Skill #56 assessment",
+      "scoring_guide": {
+        "1": "Good condition (VCI > 80, IRI < 4 paved / < 8 gravel)",
+        "2": "Fair-Good condition",
+        "3": "Fair condition (VCI 60-79, IRI 4-6 paved / 8-12 gravel)",
+        "4": "Poor condition (VCI 40-59, IRI 6-8 paved / 12-16 gravel)",
+        "5": "Very Poor condition (VCI < 40, IRI > 8 paved / > 16 gravel)"
+      },
+      "weight_range": {
+        "national": {"min": 0.25, "max": 0.35, "typical": 0.30},
+        "district": {"min": 0.20, "max": 0.30, "typical": 0.25}
+      }
+    },
+    {
+      "criterion": "traffic_volume",
+      "description": "Average daily traffic or estimated usage level",
+      "scoring_guide": {
+        "1": "< 100 vpd or very low usage",
+        "2": "100-500 vpd or low usage",
+        "3": "500-2,000 vpd or moderate usage",
+        "4": "2,000-5,000 vpd or high usage",
+        "5": "> 5,000 vpd or very high usage"
+      },
+      "weight_range": {
+        "national": {"min": 0.20, "max": 0.30, "typical": 0.25},
+        "district": {"min": 0.10, "max": 0.20, "typical": 0.15}
+      }
+    },
+    {
+      "criterion": "economic_return",
+      "description": "Benefit-cost ratio from economic appraisal (Skill #65 TARA data)",
+      "scoring_guide": {
+        "1": "BCR < 1.0 (not economically justified)",
+        "2": "BCR 1.0-2.0 (marginally justified)",
+        "3": "BCR 2.0-3.0 (justified)",
+        "4": "BCR 3.0-5.0 (well justified)",
+        "5": "BCR > 5.0 (highly justified)"
+      },
+      "weight_range": {
+        "national": {"min": 0.15, "max": 0.25, "typical": 0.20},
+        "district": {"min": 0.05, "max": 0.15, "typical": 0.10}
+      },
+      "notes": "Set to 0.00 if no economic appraisal data available. Redistribute weight to other criteria."
+    },
+    {
+      "criterion": "social_access",
+      "description": "Population served, access to health facilities, schools, markets",
+      "scoring_guide": {
+        "1": "< 5,000 population, no critical facilities",
+        "2": "5,000-20,000 population or 1 critical facility",
+        "3": "20,000-50,000 population or 2-3 critical facilities",
+        "4": "50,000-100,000 population or hospital/secondary school",
+        "5": "> 100,000 population or regional hospital/university"
+      },
+      "weight_range": {
+        "national": {"min": 0.10, "max": 0.20, "typical": 0.15},
+        "district": {"min": 0.25, "max": 0.35, "typical": 0.30}
+      }
+    },
+    {
+      "criterion": "strategic_importance",
+      "description": "Trade corridor, tourism route, border access, connectivity function",
+      "scoring_guide": {
+        "1": "Local access only, no strategic function",
+        "2": "Minor connectivity role",
+        "3": "Sub-county connectivity or minor trade route",
+        "4": "District connectivity or significant trade route",
+        "5": "International trade corridor, tourism gateway, or critical connectivity link"
+      },
+      "weight_range": {
+        "national": {"min": 0.05, "max": 0.15, "typical": 0.10},
+        "district": {"min": 0.15, "max": 0.25, "typical": 0.20}
+      }
+    }
+  ],
+  "weight_sets": {
+    "national_typical": {
+      "road_condition": 0.30,
+      "traffic_volume": 0.25,
+      "economic_return": 0.20,
+      "social_access": 0.15,
+      "strategic_importance": 0.10,
+      "total": 1.00
+    },
+    "district_typical": {
+      "road_condition": 0.25,
+      "traffic_volume": 0.15,
+      "economic_return": 0.10,
+      "social_access": 0.30,
+      "strategic_importance": 0.20,
+      "total": 1.00
+    },
+    "equity_adjusted": {
+      "road_condition": 0.25,
+      "traffic_volume": 0.15,
+      "economic_return": 0.05,
+      "social_access": 0.25,
+      "strategic_importance": 0.15,
+      "regional_equity": 0.15,
+      "total": 1.00,
+      "notes": "Includes regional equity criterion to address geographic imbalance in road investment"
+    }
+  }
+}

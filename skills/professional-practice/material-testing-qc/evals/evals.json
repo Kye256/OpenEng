@@ -1,0 +1,98 @@
+{
+  "skill_name": "material-testing-qc",
+  "evals": [
+    {
+      "id": 0,
+      "prompt": "You are advising the Materials Engineer on a UNRA road project in Uganda. Base course compaction testing has been conducted at Km 6+200. The field density test (sand replacement method, BS 1377) gives a dry density of 2,009 kg/m3. The laboratory Maximum Dry Density (Modified AASHTO T-180) for this material is 2,050 kg/m3. The project specification requires base course field density >= 98% MDD (Modified AASHTO). Advise on: (1) whether this test result passes or fails, (2) the NCR procedure if it fails, (3) the options for dealing with the non-conformance, and (4) what additional testing should be done.",
+      "expected_output": "Field density = 2009/2050 x 100 = 98.0% MDD. This is exactly at the specification limit (>= 98%). Strictly, 98.0% meets the >= 98% requirement -- PASS. However, this is borderline and warrants attention. If rounded differently or if there is measurement uncertainty, it could be interpreted as marginal. Advise: record as passing, but test at closer spacing to confirm the area is generally achieving target density. If further tests show results below 98%, NCR procedure would apply: document non-conformance, require Contractor to rework (scarify, re-moisten, re-compact), re-test after reworking. Options include additional testing, reworking, or acceptance with reduced payment (for marginal failures only).",
+      "files": [
+        "skills/professional-practice/material-testing-qc/tables/test_frequency_table.json"
+      ],
+      "assertions": [
+        {
+          "text": "Calculation performed correctly -- field density as percentage of MDD calculated (2009/2050 x 100 = approximately 98.0%)",
+          "passed": null,
+          "evidence": ""
+        },
+        {
+          "text": "Acceptance criteria from specification correctly referenced -- >= 98% MDD (Modified AASHTO T-180) for base course",
+          "passed": null,
+          "evidence": ""
+        },
+        {
+          "text": "NCR procedure described if failure -- document non-conformance, Contractor proposes remedy, options include reworking, additional testing, or acceptance with reduced payment",
+          "passed": null,
+          "evidence": ""
+        },
+        {
+          "text": "Additional testing recommended -- closer spacing to confirm whether result is isolated or indicative of broader issue",
+          "passed": null,
+          "evidence": ""
+        }
+      ]
+    },
+    {
+      "id": 1,
+      "prompt": "You are advising the Materials Engineer on a UNRA road project in Uganda. Concrete cube test results at 28 days for a culvert base slab (Class 25 concrete, fck = 25 N/mm2) are: Cube 1: 24 N/mm2, Cube 2: 26 N/mm2, Cube 3: 22 N/mm2. The cubes were cast from the same batch. Advise on: (1) the individual test check against the minimum (fck - 3), (2) the mean strength check, (3) whether the concrete is accepted or rejected, and (4) what action to take if rejected.",
+      "expected_output": "Individual minimum check: fck - 3 = 25 - 3 = 22 N/mm2. Cube 3 result is exactly 22 N/mm2 -- borderline, technically meets >= 22. Mean check: (24 + 26 + 22) / 3 = 24.0 N/mm2. For statistical acceptance using initial production s = 8: mean should be >= 25 + 1.64 x 8 = 38.1 (very conservative for initial production). Using actual production standard deviation (if established): s = 2.0, so mean >= 25 + 1.64 x 2.0 = 28.3 -- FAILS. Decision depends on how many results are available for s calculation. With limited data, the individual check is more relevant: Cube 3 at 22 is borderline. Recommend: accept with caution, increase testing frequency for next concrete pours, review mix design if trend continues. If any result were below 22, NCR and potential structural assessment (load test or cores) would be required.",
+      "files": [
+        "skills/professional-practice/material-testing-qc/tables/test_frequency_table.json"
+      ],
+      "assertions": [
+        {
+          "text": "Individual minimum check applied -- fck - 3 = 22 N/mm2, Cube 3 at 22 N/mm2 identified as borderline (exactly at minimum)",
+          "passed": null,
+          "evidence": ""
+        },
+        {
+          "text": "Mean strength calculated -- (24 + 26 + 22) / 3 = 24.0 N/mm2, assessed against statistical acceptance criteria",
+          "passed": null,
+          "evidence": ""
+        },
+        {
+          "text": "Statistical acceptance criteria discussed -- mean requirement depends on standard deviation (initial vs production data), explaining why the criterion changes as more data becomes available",
+          "passed": null,
+          "evidence": ""
+        },
+        {
+          "text": "Practical recommendation provided -- accept with increased monitoring, review mix design, and escalation path if further results fail (NCR, structural assessment)",
+          "passed": null,
+          "evidence": ""
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "prompt": "You are advising the RE on a UNRA road project in Uganda. During a site inspection at Km 10, you discover that the Contractor has been placing subgrade fill material from a borrow pit that has not been submitted for source approval. The material appears to be red laterite gravel. Approximately 3,000 m3 has been placed and compacted over a 1 km section. The specification requires selected fill with CBR >= 15% (soaked, Standard Proctor), PI <= 20. Advise on: (1) immediate actions, (2) what testing is required for the placed material, (3) the decision based on test results (pass, fail, or marginal), and (4) reference to the relevant skills for specification requirements.",
+      "expected_output": "Immediate actions: stop work instruction for fill placement from unapproved source, NCR issued for using unapproved material, require Contractor to submit source approval documentation immediately. Testing required: CBR (soaked, Standard Proctor) per BS 1377, Atterberg limits (PI, LL) per BS 1377, grading analysis, compaction characteristics (Standard Proctor), field density of placed material. Reference Skill #24 for acceptance criteria. Decision: if material passes all tests (CBR >= 15%, PI <= 20, density >= 95% MDD) -- approve source retrospectively with formal warning; if material fails -- require removal and replacement at Contractor's cost; if marginal -- refer to Engineer for determination. Source testing from borrow pit and in-situ testing of placed material both required.",
+      "files": [],
+      "assertions": [
+        {
+          "text": "Stop work instruction issued for fill placement from unapproved source and NCR raised",
+          "passed": null,
+          "evidence": ""
+        },
+        {
+          "text": "Testing requirements listed -- CBR (soaked, Standard Proctor), Atterberg limits, grading, field density at minimum",
+          "passed": null,
+          "evidence": ""
+        },
+        {
+          "text": "Skill #24 referenced for acceptance criteria (material specification requirements)",
+          "passed": null,
+          "evidence": ""
+        },
+        {
+          "text": "Decision tree includes three outcomes based on test results -- retrospective approval with warning (passes), removal and replacement (fails), Engineer determination (marginal)",
+          "passed": null,
+          "evidence": ""
+        },
+        {
+          "text": "Both source testing (borrow pit samples) and in-situ testing (placed material) identified as required",
+          "passed": null,
+          "evidence": ""
+        }
+      ]
+    }
+  ]
+}

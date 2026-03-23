@@ -1,0 +1,94 @@
+{
+  "skill_name": "survey-data-for-design",
+  "evals": [
+    {
+      "id": 0,
+      "prompt": "You have received topographic survey data for a 10 km road upgrade project in Uganda (Masindi to Hoima road). The survey was conducted using total station with GPS control points. Cross-sections were taken at 50 m intervals with 30 m width either side of centreline. The survey data includes: centreline coordinates (Easting, Northing, Elevation at each chainage point), cross-section levels, and identified features (existing road edge, drainage ditches, buildings, power lines). Benchmarks were established at approximately 500 m intervals along the route. The coordinate system is Arc 1960, Uganda. The project is at preliminary design stage. The terrain is rolling. Assess the survey data adequacy and identify what additional data may be needed for detailed design.",
+      "expected_output": "The survey should be assessed as adequate for preliminary design stage (50 m cross-section interval meets the 50-100 m requirement). For detailed design, the cross-section interval would need to be reduced to 20-25 m. Additional requirements for detailed design should include: closer cross-sections at structures (bridges, culverts), wider corridor in cut/fill areas, underground utility detection, and possibly closer cross-sections through town sections. The benchmark interval (500 m) meets the MoWT requirement of max 700 m. The Arc 1960 coordinate system should be noted with a recommendation to verify transformation parameters if GPS data will be combined.",
+      "files": [],
+      "assertions": [
+        {
+          "text": "Assesses the 50 m cross-section interval as adequate for preliminary design but identifies that 20-25 m intervals would be needed for detailed design",
+          "passed": null,
+          "evidence": ""
+        },
+        {
+          "text": "Identifies the need for additional survey at bridge/culvert locations with closer cross-section intervals (5-10 m)",
+          "passed": null,
+          "evidence": ""
+        },
+        {
+          "text": "Notes the benchmark interval (500 m) meets MoWT Section 3.1.4 requirement of maximum 700 m",
+          "passed": null,
+          "evidence": ""
+        },
+        {
+          "text": "Flags the Arc 1960 coordinate system and notes the datum transition issue (Arc 1960 to WGS 84) for any future GPS data integration",
+          "passed": null,
+          "evidence": ""
+        },
+        {
+          "text": "References MoWT Vol 1 Section 3 for survey requirements",
+          "passed": null,
+          "evidence": ""
+        }
+      ]
+    },
+    {
+      "id": 1,
+      "prompt": "A road improvement scheme in Norfolk, UK requires a survey data assessment. Available data includes: Ordnance Survey MasterMap topography layer for the corridor, Environment Agency LiDAR at 1 m resolution covering the full route (5 km), and existing road condition data from National Highways. No project-specific topographic survey has been commissioned yet. The project is at preliminary design stage for a single carriageway improvement. The terrain is flat. Assess whether the available data is sufficient for preliminary design and identify what additional survey may be needed.",
+      "expected_output": "The available data (OS MasterMap + 1 m LiDAR + road condition data) provides a good baseline for preliminary design. LiDAR at 1 m resolution can generate cross-sections and a DTM suitable for preliminary alignment studies. However, a project-specific topographic survey would be needed for: detailed feature survey (utilities, boundary markers, vegetation extent), verification of LiDAR-derived ground levels (particularly under tree canopy), and cross-sections at specific locations (junctions, accesses, structures). OS National Grid (OSGB36) and Ordnance Datum Newlyn should be confirmed as the project datum.",
+      "files": [],
+      "assertions": [
+        {
+          "text": "Recognises that LiDAR at 1 m resolution plus OS MasterMap provides a reasonable baseline for preliminary design",
+          "passed": null,
+          "evidence": ""
+        },
+        {
+          "text": "Identifies the need for a project-specific topographic survey for detailed feature information not captured by LiDAR/OS data",
+          "passed": null,
+          "evidence": ""
+        },
+        {
+          "text": "Notes OS National Grid (OSGB36) and Ordnance Datum Newlyn as the UK coordinate and vertical datum framework",
+          "passed": null,
+          "evidence": ""
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "prompt": "You are reviewing survey data for a 15 km road project in Uganda. The survey was conducted in two phases by different survey teams. Phase 1 (km 0+000 to 7+500) used GPS RTK survey referenced to WGS 84 with cross-sections at 25 m intervals. Phase 2 (km 7+500 to 15+000) used total station survey referenced to Arc 1960 with cross-sections at 50 m intervals. At the junction point (km 7+500), there is a level discrepancy of 1.8 m between the two datasets. Additionally, no cross-sections were taken at the bridge crossing at km 4+200 and the junction with the national highway at km 12+000. The project is at detailed design stage. Assess the survey data quality and identify issues.",
+      "expected_output": "Critical issues: (1) The 1.8 m level discrepancy at km 7+500 indicates a datum mismatch between WGS 84 and Arc 1960 -- this must be resolved through proper datum transformation before the data can be used together. (2) Missing cross-sections at the bridge (km 4+200) is a critical gap blocking bridge design and vertical alignment design at this location. (3) Missing cross-sections at the highway junction (km 12+000) is a critical gap blocking junction design. (4) Phase 2 cross-section interval (50 m) is inadequate for detailed design (20-25 m required). The response should flag all issues as escalation items requiring immediate action.",
+      "files": [],
+      "assertions": [
+        {
+          "text": "Identifies the 1.8 m level discrepancy as a datum mismatch between WGS 84 and Arc 1960 requiring coordinate transformation, not a survey error",
+          "passed": null,
+          "evidence": ""
+        },
+        {
+          "text": "Flags the missing cross-sections at the bridge (km 4+200) as a critical data gap blocking structure design",
+          "passed": null,
+          "evidence": ""
+        },
+        {
+          "text": "Flags the missing cross-sections at the highway junction (km 12+000) as a critical gap",
+          "passed": null,
+          "evidence": ""
+        },
+        {
+          "text": "Identifies Phase 2 cross-section interval (50 m) as inadequate for detailed design stage, recommending 20-25 m intervals",
+          "passed": null,
+          "evidence": ""
+        },
+        {
+          "text": "Raises escalation flags for the datum mismatch and missing critical survey data, recommending immediate corrective action before design proceeds",
+          "passed": null,
+          "evidence": ""
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,103 @@
+{
+  "source": {
+    "document": "FIDIC Conditions of Contract for Construction",
+    "edition": "1st Edition 1999",
+    "commonly_known_as": "Red Book",
+    "verification": "pending"
+  },
+  "roles": [
+    {
+      "role": "Employer",
+      "defined_in": "Sub-Clause 1.1.2.2",
+      "key_duties": [
+        "Give right of access to Site (2.1)",
+        "Make payments within 56 days (14.7)",
+        "Provide financial arrangements evidence (2.4)",
+        "Appoint the Engineer (3.1)",
+        "Cooperate with DAB appointment (20.2)"
+      ],
+      "key_rights": [
+        "Issue variations through the Engineer (13.1)",
+        "Deduct delay damages (8.7)",
+        "Terminate for Contractor's default (15.2)",
+        "Terminate for convenience (15.5)"
+      ],
+      "impartiality": "Not applicable -- Employer is a party with commercial interests",
+      "delegation": "Employer acts through the Engineer for contract administration but retains certain decisions (e.g., termination, major variations)"
+    },
+    {
+      "role": "Contractor",
+      "defined_in": "Sub-Clause 1.1.2.3",
+      "key_duties": [
+        "Execute and complete the Works (4.1)",
+        "Provide Performance Security (4.2)",
+        "Submit programme (8.3)",
+        "Submit monthly Statements (14.3)",
+        "Give 28-day claim notice (20.1)",
+        "Remedy defects during DNP (11.1)"
+      ],
+      "key_rights": [
+        "Receive interim payments (14.6/14.7)",
+        "Claim extension of time (8.4)",
+        "Claim additional payment (20.1)",
+        "Suspend work for non-payment (16.1)",
+        "Terminate for Employer's default (16.2)",
+        "Propose value engineering (13.2)"
+      ],
+      "impartiality": "Not applicable -- Contractor is a party with commercial interests",
+      "delegation": "Contractor's Representative (Sub-Clause 4.3)"
+    },
+    {
+      "role": "Engineer",
+      "defined_in": "Sub-Clause 1.1.2.4",
+      "key_duties": [
+        "Certify payments (14.6)",
+        "Determine claims (3.5)",
+        "Issue variation instructions (13.1)",
+        "Inspect works (7.3)",
+        "Issue Taking-Over Certificate (10.1)",
+        "Issue Performance Certificate (11.9)",
+        "Monitor programme and progress (8.3/8.6)"
+      ],
+      "key_rights": [
+        "Give instructions to Contractor (3.3)",
+        "Request tests and inspections (7.3/7.4)",
+        "Reject defective work (7.5)",
+        "Request Contractor's proposals for variations (13.3)"
+      ],
+      "impartiality": "Sub-Clause 3.5 -- fair determination obligation. When making determinations, the Engineer shall consult each Party, endeavour to reach agreement, and make a fair determination. The Engineer is NOT the Employer's agent for determinations.",
+      "delegation": "Sub-Clause 3.2 -- Engineer may delegate to Engineer's Representative or assistants. Delegation must be in writing. Delegated person has same duty of impartiality for determinations."
+    },
+    {
+      "role": "Engineer's Representative",
+      "defined_in": "Sub-Clause 3.2 (within Clause 3 -- The Engineer)",
+      "key_duties": [
+        "Duties as delegated by the Engineer in writing",
+        "Resident on or near the Site",
+        "Act within delegated authority only"
+      ],
+      "key_rights": [
+        "As delegated by the Engineer",
+        "May issue instructions within delegated scope"
+      ],
+      "impartiality": "Same obligation as Engineer for delegated determinations",
+      "delegation": "Cannot further delegate without Engineer's written authority"
+    },
+    {
+      "role": "Dispute Adjudication Board (DAB)",
+      "defined_in": "Sub-Clause 20.2",
+      "key_duties": [
+        "Give decision on referred disputes within 84 days (20.4)",
+        "Act impartially",
+        "Visit the Site periodically (if standing DAB)"
+      ],
+      "key_rights": [
+        "Request information from both Parties",
+        "Visit the Site",
+        "Meet with Parties"
+      ],
+      "impartiality": "DAB members must be independent and impartial. Each member signs a declaration of independence.",
+      "delegation": "N/A -- DAB acts as a body"
+    }
+  ]
+}

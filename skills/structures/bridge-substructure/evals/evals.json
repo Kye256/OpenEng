@@ -1,0 +1,93 @@
+{
+  "skill_name": "bridge-substructure",
+  "evals": [
+    {
+      "id": 0,
+      "prompt": "Perform preliminary design of a cantilever abutment for a 20m RC T-beam bridge in Uganda. The abutment height is 6.5m. The vertical reaction from the superstructure is 1200 kN (from Skill #37). Geotechnical data from Skill #10: phi = 30 degrees, gamma = 18 kN/m3, allowable bearing capacity = 200 kPa (soaked laterite). Live load surcharge is HA = 10 kN/m2. Using MoWT Vol 4 provisions, calculate: (1) Ka, (2) earth pressure with surcharge, (3) check sliding (F >= 1.5), (4) check overturning (F >= 2.0), (5) check bearing pressure. Include escalation trigger for detailed reinforcement design.",
+      "expected_output": "Ka = (1-sin30)/(1+sin30) = 0.333 (range 0.30-0.35). Earth pressure calculation including fill and surcharge components. Sliding check with F >= 1.5 (may be marginal -- practical abutments often need shear key). Overturning check F >= 2.0. Bearing pressure check against 200 kPa. Escalation for reinforcement design by specialist. gamma_fL = 1.50 for earth pressure ULS.",
+      "files": [
+        "skills/structures/bridge-loading/tables/uganda_load_combinations.json"
+      ],
+      "assertions": [
+        {
+          "text": "Ka calculated in range 0.30-0.35 (Rankine active pressure coefficient for phi = 30 degrees)",
+          "passed": null,
+          "evidence": ""
+        },
+        {
+          "text": "Earth pressure calculation present including both fill pressure and surcharge (10 kN/m2) components",
+          "passed": null,
+          "evidence": ""
+        },
+        {
+          "text": "All three stability checks performed: sliding (F >= 1.5), overturning (F >= 2.0), and bearing pressure",
+          "passed": null,
+          "evidence": ""
+        },
+        {
+          "text": "Escalation trigger present for detailed reinforcement design by specialist structural engineer",
+          "passed": null,
+          "evidence": ""
+        },
+        {
+          "text": "Earth pressure load factor gamma_fL = 1.50 ULS applied (from MoWT Vol 4 Table 1)",
+          "passed": null,
+          "evidence": ""
+        }
+      ]
+    },
+    {
+      "id": 1,
+      "prompt": "Design a bridge abutment in the UK for a 6.5m high wall retaining approach embankment fill. The superstructure reaction is 1200 kN. Soil friction angle 30 degrees, unit weight 18 kN/m3, bearing capacity 200 kPa. Provide the design approach using current UK standards.",
+      "expected_output": "References Eurocode 7 (EN 1997-1) for geotechnical design with partial factor approach (DA1). Notes that global FoS (1.5 sliding, 2.0 overturning) is NOT used in UK EC7 design -- replaced by partial factor combinations. EN 1992-2 for concrete substructure design. Knowledge-based flag.",
+      "files": [],
+      "assertions": [
+        {
+          "text": "References Eurocode 7 (EN 1997-1) or EN 1997 for geotechnical design",
+          "passed": null,
+          "evidence": ""
+        },
+        {
+          "text": "Notes partial factor method replaces global FoS approach used in MoWT/CP 2004",
+          "passed": null,
+          "evidence": ""
+        },
+        {
+          "text": "Knowledge-based module flag present",
+          "passed": null,
+          "evidence": ""
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "prompt": "Perform preliminary design of a bridge abutment in western Uganda (Kasese area, seismic Zone 1) for a 15m bridge. The abutment height is 10m. The foundation soil has very low bearing capacity of 80 kPa (weak alluvial clay). The superstructure reaction is 800 kN. Determine abutment type and assess whether a shallow foundation is feasible.",
+      "expected_output": "Counterfort type recommended for 10m height. Bearing check: 80 kPa insufficient for shallow foundation of a 10m abutment (bearing pressure will exceed 80 kPa). Pile foundation escalation required -- specialist geotechnical engineer. Seismic Zone 1 (A = 0.15), SPC 3 -- full seismic design required per Section 9.6. Response modification factors from Table 9.4 apply to substructure. Multiple escalation flags: (1) pile foundation needed, (2) seismic SPC 3, (3) tall abutment.",
+      "files": [
+        "skills/structures/bridge-loading/tables/uganda_seismic_parameters.json"
+      ],
+      "assertions": [
+        {
+          "text": "Counterfort type recommended for 10m abutment height",
+          "passed": null,
+          "evidence": ""
+        },
+        {
+          "text": "Bearing check fails for shallow foundation (80 kPa insufficient) -- pile foundation escalation raised",
+          "passed": null,
+          "evidence": ""
+        },
+        {
+          "text": "Seismic design required -- Zone 1 identified with A = 0.15, SPC 3",
+          "passed": null,
+          "evidence": ""
+        },
+        {
+          "text": "Multiple escalation flags present: pile foundation specialist, seismic analysis, and reinforcement design",
+          "passed": null,
+          "evidence": ""
+        }
+      ]
+    }
+  ]
+}

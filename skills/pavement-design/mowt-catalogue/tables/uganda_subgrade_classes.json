@@ -1,0 +1,32 @@
+{
+  "source": {
+    "manual": "MoWT Road Design Manual Vol 3 Part I",
+    "edition": "January 2010",
+    "table": "Table 3.1",
+    "page": "3-1",
+    "verified": true
+  },
+  "description": "Subgrade class designations by CBR ranges for pavement design catalogue entry",
+  "classes": [
+    {"class": "S1", "cbr_min": 0, "cbr_max": 2, "description": "Very poor -- subgrade improvement essential"},
+    {"class": "S2", "cbr_min": 3, "cbr_max": 4, "description": "Poor -- thick capping layers likely"},
+    {"class": "S3", "cbr_min": 5, "cbr_max": 7, "description": "Moderate"},
+    {"class": "S4", "cbr_min": 8, "cbr_max": 14, "description": "Fair -- common in Uganda laterites"},
+    {"class": "S5", "cbr_min": 15, "cbr_max": 29, "description": "Good"},
+    {"class": "S6", "cbr_min": 30, "cbr_max": null, "description": "Very good -- 30% and above"}
+  ],
+  "minimum_depth_mm": {
+    "source": "Table 3.3",
+    "S1": 250,
+    "S2": 250,
+    "S3": 350,
+    "S4": 450,
+    "S5": 550,
+    "S6": 650
+  },
+  "notes": [
+    "CBR values are design CBR from 10th percentile method (Section 3.3)",
+    "Use soaked CBR for wet conditions, unsoaked or dried-back CBR for dry conditions per Table 3.2",
+    "Minimum depth is the depth below pavement to which the design subgrade strength must be confirmed"
+  ]
+}

@@ -1,0 +1,20 @@
+{
+  "_metadata": {
+    "source": "Illustrative rates for methodology demonstration",
+    "base_year": "2024",
+    "currency_primary": "UGX",
+    "currency_secondary": "USD",
+    "exchange_rate": "UGX 3,700 = USD 1 (illustrative)",
+    "disclaimer": "PLACEHOLDER RATES -- not current market rates. Replace with actual market data before use.",
+    "region": "Central Uganda (Kampala corridor)"
+  },
+  "items": [
+    {"item_code": "P01", "description": "Natural gravel sub-base (150mm)", "unit": "m3", "rate_ugx": 45000, "rate_usd": 12.16, "notes": "Including supply, haul, spreading, compaction, and testing", "source_skill": "Skill #21"},
+    {"item_code": "P02", "description": "Crushed stone base course (200mm)", "unit": "m3", "rate_ugx": 85000, "rate_usd": 22.97, "notes": "Commercial quarry source. Transport cost dominant.", "source_skill": "Skill #21"},
+    {"item_code": "P03", "description": "Cement stabilized base (6% cement)", "unit": "m3", "rate_ugx": 120000, "rate_usd": 32.43, "notes": "Includes cement, mixing, compaction. Cement price volatile.", "source_skill": "Skill #22"},
+    {"item_code": "P04", "description": "Prime coat (MC-30)", "unit": "m2", "rate_ugx": 3500, "rate_usd": 0.95, "notes": "Application rate 0.8-1.2 l/m2", "source_skill": "Skill #24"},
+    {"item_code": "P05", "description": "Tack coat (K1-60)", "unit": "m2", "rate_ugx": 2500, "rate_usd": 0.68, "notes": "Application rate 0.3-0.5 l/m2", "source_skill": "Skill #24"},
+    {"item_code": "P06", "description": "Double bituminous surface treatment (DBST)", "unit": "m2", "rate_ugx": 15000, "rate_usd": 4.05, "notes": "Two applications. Bitumen price USD-linked.", "source_skill": "Skill #21"},
+    {"item_code": "P07", "description": "Asphalt wearing course (50mm AC)", "unit": "m2", "rate_ugx": 35000, "rate_usd": 9.46, "notes": "Hot mix asphalt. Only available near asphalt plants.", "source_skill": "Skill #22"}
+  ]
+}

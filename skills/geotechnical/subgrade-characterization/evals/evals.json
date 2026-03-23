@@ -1,0 +1,99 @@
+{
+  "skill_name": "subgrade-characterization",
+  "evals": [
+    {
+      "id": 0,
+      "prompt": "You are determining the design CBR and subgrade class for a Uganda trunk road project: the Jinja-Iganga road upgrade (UNRA). The road section is 15 km long (Ch 0+000 to Ch 15+000). The region has annual rainfall of 1400 mm with two wet seasons. Soil classification (Skill #8) indicates lateritic sandy clay (AASHTO A-6) throughout. The water table is approximately 2 m below the proposed formation level.\n\n8 CBR test results (soaked 4-day, compacted at OMC to 100% Proctor MDD per MoWT Table 3.2):\n\n| Test | Chainage | CBR (%) |\n|------|----------|--------|\n| 1 | 1+000 | 7 |\n| 2 | 3+000 | 10 |\n| 3 | 5+000 | 12 |\n| 4 | 7+000 | 8 |\n| 5 | 9+000 | 15 |\n| 6 | 10+500 | 9 |\n| 7 | 12+000 | 11 |\n| 8 | 14+000 | 14 |\n\nThe design traffic class is T5 (3-6 million ESAs). Expected drainage provision is good (new construction with side drains). Expected maintenance level is uncertain.\n\nDetermine the design CBR, subgrade class, wet/dry design condition, and minimum investigation depth. Provide the complete subgrade characterization output.",
+      "expected_output": "Design CBR should be determined using the 10th percentile method per MoWT Section 3.3. Ranked values: 7, 8, 9, 10, 11, 12, 14, 15. With 8 results, the 10th percentile is approximated by the lowest value (7%) or interpolation giving approximately 7-8%. Design CBR = 7% or 8%. Subgrade class per Table 3.1: CBR 7% = S3 (5-7%); CBR 8% = S4 (8-14%). This is a boundary case requiring careful assessment. Mean = 10.75, SD = 2.8, statistical 10th percentile = 10.75 - 1.28*2.8 = 7.2% -> S3. Wet/dry condition: rainfall 1400mm = wet; per Table 4.1, good drainage + uncertain maintenance + high traffic (T5) -> W (wet catalogue). Minimum subgrade depth per Table 3.3: S3 = 350 mm, S4 = 450 mm.",
+      "files": [],
+      "assertions": [
+        {
+          "text": "Applies the 10th percentile method per MoWT Section 3.3 and determines design CBR in the range 7-8%",
+          "passed": null,
+          "evidence": ""
+        },
+        {
+          "text": "Identifies this as a boundary case between S3 (CBR 5-7%) and S4 (CBR 8-14%) per Table 3.1, and recommends the conservative classification S3 or discusses the boundary explicitly",
+          "passed": null,
+          "evidence": ""
+        },
+        {
+          "text": "Correctly selects wet design condition (W catalogue) per Table 4.1 based on rainfall 1400mm, good drainage, uncertain maintenance, and high traffic (T5)",
+          "passed": null,
+          "evidence": ""
+        },
+        {
+          "text": "States minimum subgrade depth from Table 3.3 appropriate for the assigned class (S3=350mm or S4=450mm)",
+          "passed": null,
+          "evidence": ""
+        },
+        {
+          "text": "Confirms CBR test conditions are correct per MoWT Table 3.2 (soaked 4-day, 100% Proctor MDD) for wet conditions",
+          "passed": null,
+          "evidence": ""
+        }
+      ]
+    },
+    {
+      "id": 1,
+      "prompt": "You are determining the subgrade foundation class for a UK road improvement project: a new housing estate access road in Warwickshire. The subgrade is Lias Clay. The water table is 2.5 m below formation level.\n\n6 equilibrium CBR estimates from plasticity data and confirmed by 3 in-situ plate bearing tests:\n\n| Test | Method | CBR (%) |\n|------|--------|---------|\n| 1 | PI correlation | 3.5 |\n| 2 | PI correlation | 4.0 |\n| 3 | PI correlation | 3.2 |\n| 4 | Plate bearing | 4.5 |\n| 5 | Plate bearing | 3.8 |\n| 6 | Plate bearing | 5.0 |\n\nDetermine the foundation class per CD 225 and recommend the foundation treatment. Address frost susceptibility.",
+      "expected_output": "Design equilibrium CBR approximately 3.2-3.5% (10th percentile from ranked values). Foundation Class 2 (CBR 2.5-5%). Capping layer required: minimum 350mm Class 6F2 or equivalent, plus sub-base. Lias Clay: PI typically 30-50%, generally non-frost-susceptible due to high clay content and low permeability. Note that UK uses equilibrium CBR, not soaked CBR.",
+      "files": [],
+      "assertions": [
+        {
+          "text": "Assigns Foundation Class 2 (CBR 2.5-5%) based on the equilibrium CBR values",
+          "passed": null,
+          "evidence": ""
+        },
+        {
+          "text": "Recommends capping layer per CD 225 for Foundation Class 2 subgrade",
+          "passed": null,
+          "evidence": ""
+        },
+        {
+          "text": "Addresses frost susceptibility and concludes Lias Clay is generally non-frost-susceptible due to high PI/clay content",
+          "passed": null,
+          "evidence": ""
+        },
+        {
+          "text": "Notes the use of equilibrium CBR (not soaked CBR) as appropriate for UK design per CD 225",
+          "passed": null,
+          "evidence": ""
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "prompt": "You are determining the design CBR for a Uganda district road project. The road is 8 km long. Due to budget constraints, only 2 CBR tests were performed:\n\n| Test | Chainage | CBR (soaked, 100% T-99 MDD) |\n|------|----------|----|\n| 1 | 2+000 | 6 |\n| 2 | 6+000 | 11 |\n\nThe project stage is detailed design. The traffic class is T2 (0.3-0.7 million ESAs). Rainfall is approximately 1100 mm/year.\n\nDetermine the design CBR and subgrade class. Identify all issues with the data and provide recommendations.",
+      "expected_output": "Only 2 CBR results are available -- well below the MoWT Table 3.2 minimum of 6 per uniform section. Statistical classification is not possible with 2 results. Must use the lower value (CBR 6%) conservatively. The two values (6% and 11%) are quite different -- the section may not be uniform. Recommend additional testing: at least 4 more CBR tests to reach the minimum of 6. Conservatively, design CBR = 6%, subgrade class = S3 (5-7%). Escalation flag for insufficient data. Despite being a low-traffic road (T2), the standard for data quality should not be relaxed -- the cost of additional testing is minimal compared to pavement construction cost.",
+      "files": [],
+      "assertions": [
+        {
+          "text": "Flags that only 2 CBR results are insufficient -- MoWT Table 3.2 requires minimum 6 representative samples per uniform section",
+          "passed": null,
+          "evidence": ""
+        },
+        {
+          "text": "Uses the lower CBR value (6%) conservatively as the design CBR, since statistical methods are unreliable with only 2 data points",
+          "passed": null,
+          "evidence": ""
+        },
+        {
+          "text": "Recommends additional CBR testing (at least 4 more tests to reach minimum 6) before finalising the design",
+          "passed": null,
+          "evidence": ""
+        },
+        {
+          "text": "Raises an escalation flag for insufficient data for reliable subgrade classification",
+          "passed": null,
+          "evidence": ""
+        },
+        {
+          "text": "Notes that the large difference between the two values (6% vs 11%) suggests the section may not be uniform and section delineation should be investigated",
+          "passed": null,
+          "evidence": ""
+        }
+      ]
+    }
+  ]
+}

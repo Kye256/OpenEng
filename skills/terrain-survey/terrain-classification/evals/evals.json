@@ -1,0 +1,89 @@
+{
+  "skill_name": "terrain-classification",
+  "evals": [
+    {
+      "id": 0,
+      "prompt": "A proposed road in southwestern Uganda traverses ground with typical transverse slopes of 15-20%. The road connects Kabale to Kisoro through hilly terrain with some steep valley crossings. The route is approximately 60 km long. Based on a site visit, the terrain is predominantly hilly with moderate slopes, though a 5 km section near Lake Bunyonyi has transverse slopes exceeding 40%. Classify the terrain and identify design implications for this road project.",
+      "expected_output": "The predominant terrain class should be Rolling (transverse slopes 15-20% fall within the MoWT range of >5% to 20%). The 5 km section near Lake Bunyonyi with slopes >40% should be classified separately as Mountainous. The assessment should reference MoWT Vol 1 Section 5.2 thresholds and note design speed implications for each terrain section.",
+      "files": [],
+      "assertions": [
+        {
+          "text": "Classifies the predominant terrain as Rolling based on 15-20% transverse slopes falling within MoWT threshold of >5% to 20%",
+          "passed": null,
+          "evidence": ""
+        },
+        {
+          "text": "Identifies the Lake Bunyonyi section (slopes >40%) as Mountainous and recommends sectional classification",
+          "passed": null,
+          "evidence": ""
+        },
+        {
+          "text": "References MoWT Vol 1 Section 5.2 terrain thresholds (around 5% / 20% / 70% boundaries)",
+          "passed": null,
+          "evidence": ""
+        },
+        {
+          "text": "Notes design speed implications -- rolling terrain design speeds from MoWT tables (e.g., 60-100 km/h depending on design class) with reduced speeds for the mountainous section",
+          "passed": null,
+          "evidence": ""
+        },
+        {
+          "text": "Flags the terrain transition between rolling and mountainous sections and recommends design speed transition treatment",
+          "passed": null,
+          "evidence": ""
+        }
+      ]
+    },
+    {
+      "id": 1,
+      "prompt": "A road improvement project in the flat fenlands of Cambridgeshire, UK. The existing road is a single carriageway connecting Ely to March, approximately 25 km long. The terrain is extremely flat agricultural land with transverse ground slopes consistently below 2%. There are no significant hills, valleys, or elevation changes along the route. Classify the terrain for this project.",
+      "expected_output": "The terrain should be classified as Flat. The response should note that DMRB does not use formal terrain classification but that universal thresholds confirm flat terrain (slopes <5%). Design speed in the UK context is set by speed limit (national speed limit 60 mph / 100 km/h for rural single carriageway) rather than derived from terrain class. Alignment is essentially unrestricted by terrain.",
+      "files": [],
+      "assertions": [
+        {
+          "text": "Classifies terrain as Flat based on transverse slopes consistently below 2-5%",
+          "passed": null,
+          "evidence": ""
+        },
+        {
+          "text": "Notes that DMRB does not use formal terrain classification in the same way as MoWT/AASHTO -- design speed is set by speed limit and alignment constraints rather than terrain class",
+          "passed": null,
+          "evidence": ""
+        },
+        {
+          "text": "Notes that alignment is largely unrestricted by terrain in flat conditions, with long sight distances achievable",
+          "passed": null,
+          "evidence": ""
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "prompt": "A 50 km road project where no terrain data is available. The project description states only that the road connects two towns in a rural area. No site visit has been conducted, no contour maps have been reviewed, and no DEM data is available. The country is Uganda. Classify the terrain and recommend next steps.",
+      "expected_output": "In the absence of any terrain data, the terrain should be assumed as Rolling (default per both MoWT practice and universal engineering judgment). This assumption must be clearly flagged. The response should include escalation flags for missing terrain data and recommend specific actions: site visit, contour map review at 1:50,000 scale, or DEM analysis. The assumed terrain class should be explicitly marked as preliminary and subject to verification.",
+      "files": [],
+      "assertions": [
+        {
+          "text": "Defaults to Rolling terrain in the absence of data and explicitly flags this as an assumption requiring verification",
+          "passed": null,
+          "evidence": ""
+        },
+        {
+          "text": "Raises escalation flag or senior review note for missing terrain data recommending site visit or DEM analysis",
+          "passed": null,
+          "evidence": ""
+        },
+        {
+          "text": "Recommends specific next steps to obtain terrain data (site visit, contour map review, DEM/DTM analysis)",
+          "passed": null,
+          "evidence": ""
+        },
+        {
+          "text": "Notes that the assumed Rolling classification affects design speed selection and all downstream geometric parameters, and that if actual terrain is flat or mountainous, the design would change significantly",
+          "passed": null,
+          "evidence": ""
+        }
+      ]
+    }
+  ]
+}

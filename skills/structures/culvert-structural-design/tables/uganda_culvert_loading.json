@@ -1,0 +1,52 @@
+{
+  "source": {
+    "manual": "MoWT Road Design Manual Vol 4",
+    "edition": "January 2010",
+    "sections": "Section 5.8 (Earth Pressure), Table 1 (Load Factors), Section 6 (Highway Live Loads)",
+    "verification": "pending"
+  },
+  "earth_pressure": {
+    "gamma_fL_uls": 1.50,
+    "gamma_fL_sls": 1.00,
+    "gamma_fL_relieving_uls": 1.00,
+    "gamma_fL_relieving_sls": 1.00,
+    "surcharge_ha_kPa": 10,
+    "surcharge_hb_25_kPa": 10,
+    "surcharge_hb_45_kPa": 20,
+    "notes": "Earth pressure gamma_fL applies to all 5 load combinations per Table 1. Surcharge values from Section 5.8.2."
+  },
+  "dead_load_factors": {
+    "steel_uls": 1.05,
+    "steel_sls": 1.00,
+    "concrete_uls": 1.15,
+    "concrete_sls": 1.00,
+    "superimposed_uls": 1.75,
+    "superimposed_sls": 1.20,
+    "notes": "From MoWT Vol 4, Table 1 and Section 5.1-5.2"
+  },
+  "fill_depth_classification": {
+    "shallow_mm": {"max": 600},
+    "standard_mm": {"min": 600, "max": 3000},
+    "deep_mm": {"min": 3000},
+    "notes": "Classification determines load model: shallow = concentrated wheel loads, standard = distributed surcharge, deep = earth pressure dominates"
+  },
+  "pipe_bedding_classes": [
+    {"class": "A", "description": "Concrete surround (360 degrees)", "bedding_factor": 3.4},
+    {"class": "B", "description": "Granular bedding (180 degrees)", "bedding_factor": 2.2},
+    {"class": "C", "description": "Granular bedding (90 degrees)", "bedding_factor": 1.5},
+    {"class": "D", "description": "Flat subgrade", "bedding_factor": 1.1}
+  ],
+  "foundation_design": {
+    "code": "CP 2004",
+    "reference": "MoWT Vol 4, Section 4.7",
+    "gamma_fL_for_cp2004": 1.0,
+    "gamma_f3_for_cp2004": 1.0,
+    "notes": "CP 2004 uses nominal (unfactored) loads. gamma_fL = 1.0 and gamma_f3 = 1.0 when checking foundations per MoWT Vol 4, Section 4.7. CP 2004 is an older code, superseded by Eurocode 7 in the UK."
+  },
+  "typical_fill_properties": {
+    "unit_weight_kNm3": {"typical": 19, "range_min": 17, "range_max": 22},
+    "K0_rigid_structure": 0.5,
+    "Ka_active": 0.33,
+    "notes": "K0 = 0.5 for at-rest conditions (rigid box culverts). Ka = 0.33 for active conditions (flexible walls, rarely applicable to rigid culverts)."
+  }
+}
