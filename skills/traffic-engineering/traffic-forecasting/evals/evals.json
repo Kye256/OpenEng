@@ -84,6 +84,34 @@
           "evidence": ""
         }
       ]
+    },
+    {
+      "id": 3,
+      "prompt": "Forecast traffic for a KeRRA road upgrade project in Kenya. The road is C64, a Class C road being upgraded from gravel to paved. Current AADT is 2,500 vpd with 20% motorcycles and 15% commercial vehicles. Opening year is 2029. The design period for pavement is 15 years. No historical traffic data exists for this road. Nearby VWS data suggests 4-5% growth for similar roads. The area is an agricultural zone with moderate economic development. Determine appropriate growth rates, calculate projected AADT at opening and at design year, and account for generated traffic from the road upgrade.",
+      "expected_output": "Should separate growth rates by vehicle type (especially separating motorcycle growth from commercial vehicle growth per RDM 1.2 Table 5.1 note). Should present at least two growth rate scenarios (low/medium/high per RDM 1.2 Section 5.2.2). Should add generated traffic for gravel-to-paved upgrade (typically 10-25%). Should apply minimum 0.2% growth rate per RDM 1.2 Section 5.1 note. Should select design period from RDM 3.4 Table 2.1 for Class C road (High LoS). Should reference KeRRA as the road authority.",
+      "files": [],
+      "assertions": [
+        {
+          "text": "Separates motorcycle growth rate from commercial vehicle growth rate in the forecast",
+          "passed": null,
+          "evidence": ""
+        },
+        {
+          "text": "Includes generated traffic component for the gravel-to-paved upgrade (not zero generated traffic)",
+          "passed": null,
+          "evidence": ""
+        },
+        {
+          "text": "Presents at least two growth rate scenarios or sensitivity analysis (not just a single point estimate)",
+          "passed": null,
+          "evidence": ""
+        },
+        {
+          "text": "References Kenya RDM 1.2 Chapter 5 or Kenya growth estimation methods (not MoWT or DMRB)",
+          "passed": null,
+          "evidence": ""
+        }
+      ]
     }
   ]
 }

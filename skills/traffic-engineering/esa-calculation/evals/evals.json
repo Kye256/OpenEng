@@ -89,6 +89,39 @@
           "evidence": ""
         }
       ]
+    },
+    {
+      "id": 3,
+      "prompt": "Calculate the design traffic loading for a KeNHA trunk road in Kenya. The road is the A104 (Nairobi-Nakuru Highway), Class A. An axle load survey has been processed and shows a DESA of 1,500 ESA/day in the heavy direction. The traffic growth rate for commercial vehicles is 5% per year. The pavement type will be granular base with granular subbase. The road has a high level of service. Determine the design period, calculate the cumulative traffic loading, determine the design traffic class, and present the results using appropriate Kenya terminology.",
+      "expected_output": "Should use MESA/CESA/MCESA terminology throughout (not ESA/ESAL). Should select a design period of 15-20 years for Heavy traffic and High LoS per RDM 3.4 Table 2.1. Should calculate CESA using compound growth formula. Should determine the Design Traffic Class from RDM 3.4 Table 2.2 (TC-series classes, not Uganda T-series). Should use damage exponent n=4 for granular pavement. The CESA calculation should yield approximately 18-36 MCESA depending on design period selected.",
+      "files": [],
+      "assertions": [
+        {
+          "text": "Uses MESA, CESA, or MCESA terminology for cumulative traffic loading (not just ESA or ESAL)",
+          "passed": null,
+          "evidence": ""
+        },
+        {
+          "text": "References RDM 3.4 Table 2.2 Design Traffic Classes (TC series) for determining traffic class (not Uganda T1-T8)",
+          "passed": null,
+          "evidence": ""
+        },
+        {
+          "text": "Selects design period from RDM 3.4 Table 2.1 appropriate for the traffic level and level of service",
+          "passed": null,
+          "evidence": ""
+        },
+        {
+          "text": "Calculates CESA or MESA using the compound growth formula with the given DESA and growth rate",
+          "passed": null,
+          "evidence": ""
+        },
+        {
+          "text": "Identifies the correct Design Traffic Class (TC17, TC30, or TC50 depending on design period) from the calculated MESA value",
+          "passed": null,
+          "evidence": ""
+        }
+      ]
     }
   ]
 }

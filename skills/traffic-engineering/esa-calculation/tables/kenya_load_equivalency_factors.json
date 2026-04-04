@@ -1,0 +1,85 @@
+{
+  "source": {
+    "manual": "Kenya Road Design Manual RDM 3.3",
+    "edition": "2025",
+    "table": "Section 2.5 Load Equivalency Factor",
+    "page": "RDM 3.3 Section 2.5",
+    "verified": true,
+    "notes": "Kenya uses the same fourth-power law as MoWT/TRL/AASHTO. Standard axle = 80 kN (8,160 kg). The load equivalency factor formula EF = (P/80)^n is universal. Kenya-specific factors derived from RDM 3.3 Section 2.5 using the same methodology as the Uganda MoWT Vol 3 Part I Table 2.3. Axle loads exceeding 13 tonnes (130 kN) require sensitivity analysis per RDM 3.4 Section 2.5."
+  },
+  "description": "Kenya load equivalency factors for MESA/CESA calculation. Same fourth-power law formula as Uganda but with Kenya-specific terminology (MESA/CESA/DESA/MCESA). Kenya legal single axle limit = 10 tonnes (98 kN).",
+  "standard_axle_kg": 8160,
+  "standard_axle_kN": 80,
+  "formula": "EF = (P/8160)^n (kg) or EF = (P/80)^n (kN)",
+  "terminology": {
+    "ESA": "Equivalent Standard Axles (individual load equivalency)",
+    "DESA": "Daily Equivalent Standard Axles",
+    "CESA": "Cumulative Equivalent Standard Axles",
+    "MESA": "Millions Equivalent Standard Axle Load (= CESA / 1,000,000)",
+    "MCESA": "Million Cumulative Equivalent Standard Axles (same as MESA)",
+    "VEF": "Vehicle Equivalence Factor (ESA per vehicle passage)",
+    "EF": "Equivalency Factor (load equivalency for a single axle)"
+  },
+  "damage_exponents": {
+    "description": "Recommended damage exponents by pavement type (same as MoWT/TRL approach)",
+    "values": [
+      { "pavement_type": "Granular base / granular subbase", "n": 4 },
+      { "pavement_type": "Granular base / cemented subbase", "n": 3 },
+      { "pavement_type": "Cemented base / cemented subbase", "n": 4.5 },
+      { "pavement_type": "Bituminous base / granular subbase", "n": 4 },
+      { "pavement_type": "Bituminous base / cemented subbase", "n": 4 }
+    ]
+  },
+  "data": {
+    "description": "Load equivalency factors by axle load range for n=3, n=4, and n=4.5. Same formula and values as Uganda MoWT Table 2.3 (both derived from the standard fourth-power law). Presented in both kg and kN ranges.",
+    "factors_kN": [
+      { "axle_load_range_kN": "Less than 15", "n3": null, "n4": null, "n4_5": null },
+      { "axle_load_range_kN": "15-24", "n3": 0.02, "n4": null, "n4_5": null },
+      { "axle_load_range_kN": "25-34", "n3": 0.05, "n4": 0.02, "n4_5": 0.01 },
+      { "axle_load_range_kN": "35-44", "n3": 0.13, "n4": 0.06, "n4_5": 0.05 },
+      { "axle_load_range_kN": "45-54", "n3": 0.24, "n4": 0.15, "n4_5": 0.12 },
+      { "axle_load_range_kN": "55-64", "n3": 0.42, "n4": 0.32, "n4_5": 0.28 },
+      { "axle_load_range_kN": "65-74", "n3": 0.66, "n4": 0.58, "n4_5": 0.55 },
+      { "axle_load_range_kN": "75-84", "n3": 0.99, "n4": 0.99, "n4_5": 1.00 },
+      { "axle_load_range_kN": "85-94", "n3": 1.41, "n4": 1.59, "n4_5": 1.69 },
+      { "axle_load_range_kN": "95-104", "n3": 1.94, "n4": 2.42, "n4_5": 2.71 },
+      { "axle_load_range_kN": "105-114", "n3": 2.58, "n4": 3.55, "n4_5": 4.16 },
+      { "axle_load_range_kN": "115-124", "n3": 3.35, "n4": 5.02, "n4_5": 6.15 },
+      { "axle_load_range_kN": "125-134", "n3": 4.26, "n4": 6.92, "n4_5": 8.82 },
+      { "axle_load_range_kN": "135-144", "n3": 5.32, "n4": 9.30, "n4_5": 12.31 },
+      { "axle_load_range_kN": "145-154", "n3": 6.54, "n4": 12.26, "n4_5": 16.79 },
+      { "axle_load_range_kN": "155-164", "n3": 7.94, "n4": 15.88, "n4_5": 22.45 },
+      { "axle_load_range_kN": "165-174", "n3": 9.53, "n4": 20.24, "n4_5": 29.50 },
+      { "axle_load_range_kN": "175-184", "n3": 11.32, "n4": 25.44, "n4_5": 38.15 },
+      { "axle_load_range_kN": "185-194", "n3": 13.31, "n4": 31.59, "n4_5": 48.67 },
+      { "axle_load_range_kN": "195-204", "n3": 15.53, "n4": 38.79, "n4_5": 61.32 }
+    ]
+  },
+  "design_traffic_classes": {
+    "source": "RDM 3.4, Table 2.2",
+    "classes": [
+      { "class": "TC0.025", "cesa_range": "< 25,000", "mcesa": 0.025, "category": "Low" },
+      { "class": "TC0.10", "cesa_range": "25,000 - 100,000", "mcesa": 0.10, "category": "Low" },
+      { "class": "TC0.25", "cesa_range": "100,000 - 250,000", "mcesa": 0.25, "category": "Low" },
+      { "class": "TC0.50", "cesa_range": "250,000 - 500,000", "mcesa": 0.50, "category": "Low" },
+      { "class": "TC1", "cesa_range": "500,000 - 1,000,000", "mcesa": 1, "category": "Low" },
+      { "class": "TC3", "cesa_range": "1,000,000 - 3,000,000", "mcesa": 3, "category": "Medium" },
+      { "class": "TC10", "cesa_range": "3,000,000 - 10,000,000", "mcesa": 10, "category": "Medium" },
+      { "class": "TC17", "cesa_range": "10,000,000 - 17,000,000", "mcesa": 17, "category": "Heavy" },
+      { "class": "TC30", "cesa_range": "17,000,000 - 30,000,000", "mcesa": 30, "category": "Heavy" },
+      { "class": "TC50", "cesa_range": "30,000,000 - 50,000,000", "mcesa": 50, "category": "Very Heavy" },
+      { "class": "TC80", "cesa_range": "50,000,000 - 80,000,000", "mcesa": 80, "category": "Very Heavy" },
+      { "class": "TC150", "cesa_range": "80,000,000 - 150,000,000", "mcesa": 150, "category": "Very Heavy" },
+      { "class": "TC150+", "cesa_range": "> 150,000,000", "mcesa": null, "category": "Very Heavy" }
+    ]
+  },
+  "notes": [
+    "Kenya uses MESA/CESA terminology throughout -- not ESA/ESAL as used in AASHTO.",
+    "The standard axle (80 kN) and fourth-power law are universal across Kenya, Uganda, and TRL methodologies.",
+    "Load equivalency factors are derived from the same formula: EF = (P/80)^n. The tabulated values are identical to MoWT Table 2.3 because the formula is the same.",
+    "Axle loads exceeding 13 tonnes (130 kN) require sensitivity analysis per RDM 3.4 Section 2.5.",
+    "Kenya legal single axle load limit = 10 tonnes (98 kN), same as Uganda. Tandem = 16 tonnes, triaxle = 24 tonnes.",
+    "Kenya design traffic classes (TC0.025 to TC150+) are more granular than Uganda MoWT classes (T1-T8).",
+    "For traffic > 150 MCESA, performance-based mechanistic design is recommended (RDM 3.4 Section 1.5)."
+  ]
+}
