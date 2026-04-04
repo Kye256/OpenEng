@@ -1,0 +1,84 @@
+{
+  "source": "General engineering practice (MUTCD, EN 1436, ASTM standards)",
+  "verified": false,
+  "note": "Universal reference values -- verify against applicable country standard and specifications",
+  "data": [
+    {
+      "material_type": "hot_applied_thermoplastic",
+      "application_method": "Machine or hand applied in molten state at 180-220 deg C",
+      "typical_life_years": "2-10",
+      "retroreflectivity_initial": "high",
+      "retroreflectivity_retained": "good",
+      "cost_relative": "medium",
+      "thickness_mm": "1.5-2.5",
+      "best_for": "Longitudinal markings, transverse markings, high-traffic roads",
+      "standards": ["KS EAS 928-1", "AASHTO M249", "BS EN 1871"]
+    },
+    {
+      "material_type": "solvent_based_paint",
+      "application_method": "Spray applied by marking machine",
+      "typical_life_years": "0.5-1.0",
+      "retroreflectivity_initial": "moderate",
+      "retroreflectivity_retained": "poor",
+      "cost_relative": "low",
+      "thickness_mm": "0.3-0.5",
+      "best_for": "Temporary markings, low-traffic roads, work zones",
+      "standards": ["KS EAS 927", "AASHTO M248"]
+    },
+    {
+      "material_type": "water_based_paint",
+      "application_method": "Spray applied by marking machine",
+      "typical_life_years": "0.5-1.0",
+      "retroreflectivity_initial": "moderate",
+      "retroreflectivity_retained": "poor",
+      "cost_relative": "low",
+      "thickness_mm": "0.3-0.5",
+      "best_for": "Temporary markings, environmentally sensitive areas",
+      "standards": ["KS EAS 927", "AASHTO M248"]
+    },
+    {
+      "material_type": "cold_applied_plastic",
+      "application_method": "Brush or mechanical application, cures at ambient temperature",
+      "typical_life_years": "3-5",
+      "retroreflectivity_initial": "high",
+      "retroreflectivity_retained": "good",
+      "cost_relative": "medium-high",
+      "thickness_mm": "0.6-1.5",
+      "best_for": "Edge lines, coloured markings, raised profile markings",
+      "standards": ["AASHTO M237"]
+    },
+    {
+      "material_type": "preformed_thermoplastic",
+      "application_method": "Pre-cut shapes heated and applied to pavement",
+      "typical_life_years": "2-5",
+      "retroreflectivity_initial": "high",
+      "retroreflectivity_retained": "good",
+      "cost_relative": "high",
+      "thickness_mm": "1.5-3.0",
+      "best_for": "Symbols, arrows, word messages, high-quality finishes",
+      "standards": ["ASTM D4505-17"]
+    },
+    {
+      "material_type": "preformed_tape",
+      "application_method": "Adhesive application on clean dry surface",
+      "typical_life_years": "0.3-1.0",
+      "retroreflectivity_initial": "high",
+      "retroreflectivity_retained": "moderate",
+      "cost_relative": "high",
+      "thickness_mm": "<2",
+      "best_for": "Temporary high-visibility markings, tunnels, school zones",
+      "standards": ["ASTM D4505-17", "ASTM D4592-17"]
+    },
+    {
+      "material_type": "methyl_methacrylate_mma",
+      "application_method": "Two-part mixed material applied and cures rapidly",
+      "typical_life_years": "5-8",
+      "retroreflectivity_initial": "high",
+      "retroreflectivity_retained": "very good",
+      "cost_relative": "high",
+      "thickness_mm": "1.5-3.0",
+      "best_for": "Heavy traffic areas, long-life markings, expressways",
+      "standards": []
+    }
+  ]
+}

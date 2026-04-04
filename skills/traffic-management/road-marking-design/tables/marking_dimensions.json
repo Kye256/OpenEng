@@ -1,0 +1,106 @@
+{
+  "source": "MUTCD / Vienna Convention (universal principles)",
+  "verified": false,
+  "note": "Universal reference values -- verify against applicable country standard",
+  "data": [
+    {
+      "marking_type": "centre_line_broken",
+      "width_mm": 100,
+      "mark_length_m": 3.0,
+      "gap_length_m": 9.0,
+      "speed_range_kmh": ">=80",
+      "colour": "yellow",
+      "notes": "Standard broken centre line for two-way roads at rural/high speeds"
+    },
+    {
+      "marking_type": "centre_line_broken",
+      "width_mm": 100,
+      "mark_length_m": 2.0,
+      "gap_length_m": 6.0,
+      "speed_range_kmh": "<80",
+      "colour": "yellow",
+      "notes": "Standard broken centre line for urban/lower speed roads"
+    },
+    {
+      "marking_type": "centre_line_continuous",
+      "width_mm": 100,
+      "mark_length_m": null,
+      "gap_length_m": null,
+      "speed_range_kmh": "all",
+      "colour": "yellow",
+      "notes": "No-overtaking centre line. Used where visibility is below critical value."
+    },
+    {
+      "marking_type": "edge_line",
+      "width_mm": 100,
+      "mark_length_m": null,
+      "gap_length_m": null,
+      "speed_range_kmh": "<=100",
+      "colour": "white",
+      "notes": "Standard continuous edge line for normal roads"
+    },
+    {
+      "marking_type": "edge_line",
+      "width_mm": 150,
+      "mark_length_m": null,
+      "gap_length_m": null,
+      "speed_range_kmh": ">100",
+      "colour": "white",
+      "notes": "Wider edge line for high-speed/expressway roads"
+    },
+    {
+      "marking_type": "lane_line",
+      "width_mm": 100,
+      "mark_length_m": 2.0,
+      "gap_length_m": 6.0,
+      "speed_range_kmh": "<80",
+      "colour": "white",
+      "notes": "Standard broken lane line for urban roads"
+    },
+    {
+      "marking_type": "lane_line",
+      "width_mm": 150,
+      "mark_length_m": 3.0,
+      "gap_length_m": 9.0,
+      "speed_range_kmh": ">=80",
+      "colour": "white",
+      "notes": "Standard broken lane line for rural/high-speed roads"
+    },
+    {
+      "marking_type": "barrier_line",
+      "width_mm": 100,
+      "mark_length_m": null,
+      "gap_length_m": null,
+      "speed_range_kmh": "all",
+      "colour": "white",
+      "notes": "Continuous white line prohibiting lane change"
+    },
+    {
+      "marking_type": "stop_line",
+      "width_mm": 400,
+      "mark_length_m": null,
+      "gap_length_m": null,
+      "speed_range_kmh": "all",
+      "colour": "white",
+      "notes": "Continuous transverse line at stop-controlled junctions"
+    },
+    {
+      "marking_type": "give_way_line",
+      "width_mm": 200,
+      "mark_length_m": 0.5,
+      "gap_length_m": 0.5,
+      "speed_range_kmh": "all",
+      "colour": "white",
+      "notes": "Broken transverse line at give-way-controlled junctions"
+    },
+    {
+      "marking_type": "pedestrian_crossing",
+      "width_mm": 500,
+      "mark_length_m": null,
+      "gap_length_m": 0.5,
+      "speed_range_kmh": "all",
+      "colour": "white",
+      "notes": "Zebra crossing bars. Length (crossing distance) 2.5-4.0 m. Bar spacing 500 mm."
+    }
+  ]
+}

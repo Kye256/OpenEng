@@ -1,0 +1,43 @@
+{
+  "source": "ASTM D 4956-09, KS 814 (universal classification)",
+  "verified": false,
+  "note": "Universal sheeting grade classification. Country modules may specify different selection criteria.",
+  "data": [
+    {
+      "grade": "Class A",
+      "alternative_names": "Engineering Grade, Super-Engineering Grade",
+      "astm_types": ["Type I", "Type II"],
+      "technology": "Enclosed lens (glass bead)",
+      "min_coefficient_white_cd_lx_m2": 70,
+      "typical_application": "Collector roads, local roads, low-speed urban",
+      "min_road_speed_kmh": 0,
+      "max_road_speed_kmh": 60,
+      "warranty_years": 5,
+      "notes": "Lowest retroreflectivity. Suitable for roads where approach speed <=60 km/h."
+    },
+    {
+      "grade": "Class B",
+      "alternative_names": "High Intensity, High Intensity Prismatic (HIP)",
+      "astm_types": ["Type III", "Type IV"],
+      "technology": "Encapsulated glass lens or micro prismatic",
+      "min_coefficient_white_cd_lx_m2": 250,
+      "typical_application": "Arterial roads, trunk roads, major urban roads",
+      "min_road_speed_kmh": 60,
+      "max_road_speed_kmh": 100,
+      "warranty_years": 7,
+      "notes": "Medium retroreflectivity. Suitable for most arterial and trunk roads."
+    },
+    {
+      "grade": "Class C",
+      "alternative_names": "Micro Prismatic, Diamond Grade",
+      "astm_types": ["Type VIII", "Type IX", "Type XI"],
+      "technology": "Micro prismatic (cube corner)",
+      "min_coefficient_white_cd_lx_m2": 580,
+      "typical_application": "Expressways, motorways, overhead signs, gantry signs",
+      "min_road_speed_kmh": 100,
+      "max_road_speed_kmh": null,
+      "warranty_years": 10,
+      "notes": "Highest retroreflectivity. Required for high-speed roads and overhead signs. ASTM D4956 Type XI for permanent works."
+    }
+  ]
+}

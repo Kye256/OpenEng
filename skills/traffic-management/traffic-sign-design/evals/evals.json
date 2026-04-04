@@ -1,0 +1,109 @@
+{
+  "skill_name": "traffic-sign-design",
+  "evals": [
+    {
+      "id": 0,
+      "prompt": "Select and design traffic signs for a new Class A highway in Kenya with design speed 120 km/h. A new T-junction is being constructed at km 45 with a Class C road. Specify: (1) advance warning signs and distances, (2) regulatory signs at the junction, (3) sign sizes, (4) retroreflectivity grade, (5) mounting arrangement.",
+      "expected_output": "Advance warning: W3 T Junction sign, 900 mm (Table 4.1, >65 km/h), sited 1000 m in advance with 200-300 m clear visibility. Regulatory: R1 STOP on minor road (or R2 GIVE WAY if visibility funnel clear per Table 3.2), 900 mm (Table 3.1, >80 km/h). Directional: advance direction sign (I1) at 1000 m, route direction (I2) at junction, route confirmatory (I6) after junction. Colour: green background, white text, yellow route number (Table 2.6, Class A). Retroreflectivity: Class C (Type VIII/IX/XI) per Table 2.3 for Class A road. Mounting: 1.5 m bottom edge (rural), 0.6 m lateral offset.",
+      "files": [],
+      "assertions": [
+        {
+          "text": "References Kenya RDM 6.2 as the governing standard",
+          "passed": null,
+          "evidence": ""
+        },
+        {
+          "text": "Specifies Kenya W-series warning sign code (W3 or equivalent T-junction warning)",
+          "passed": null,
+          "evidence": ""
+        },
+        {
+          "text": "Sign sizes appropriate for 120 km/h / Class A road (900 mm per Table 4.1 or larger)",
+          "passed": null,
+          "evidence": ""
+        },
+        {
+          "text": "Specifies Class B or Class C retroreflective sheeting for high-speed road (not Class A engineering grade)",
+          "passed": null,
+          "evidence": ""
+        },
+        {
+          "text": "Specifies R1 STOP or R2 GIVE WAY with reference to visibility funnel / Table 3.2 warrant",
+          "passed": null,
+          "evidence": ""
+        },
+        {
+          "text": "Directional sign colour scheme matches Table 2.6 for Class A (green background, white text)",
+          "passed": null,
+          "evidence": ""
+        }
+      ]
+    },
+    {
+      "id": 1,
+      "prompt": "Design directional signage for a 4-arm roundabout on a 60 km/h urban road. Three destinations need to be signed. Specify sign types, layout, and advance warning distances.",
+      "expected_output": "Advance warning: W17 Roundabout Ahead sign (750 mm for 50-65 km/h, Table 4.1) at 900 m. Advance direction sign: I1 stack type or I3 roundabout map type sign showing three destinations. Route direction signs (I2) at the roundabout exits. Route confirmatory sign (I6) after roundabout on departure road. Letter height: 75-100 mm x-height depending on road class (Table A1-1). Sign spacing minimum 0.6 x 60 = 36 m between consecutive signs. Reference Skill #19 for roundabout geometry.",
+      "files": [],
+      "assertions": [
+        {
+          "text": "Includes advance direction sign (I1 stack type or I3 roundabout map type) showing destinations",
+          "passed": null,
+          "evidence": ""
+        },
+        {
+          "text": "Includes route direction sign (I2) and route confirmatory sign (I6)",
+          "passed": null,
+          "evidence": ""
+        },
+        {
+          "text": "Letter height appropriate for 60 km/h (75-100 mm x-height or equivalent)",
+          "passed": null,
+          "evidence": ""
+        },
+        {
+          "text": "References Skill #19 for roundabout geometry",
+          "passed": null,
+          "evidence": ""
+        },
+        {
+          "text": "Advance warning distance appropriate for approach speed (minimum 600-900 m)",
+          "passed": null,
+          "evidence": ""
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "prompt": "A speed limit of 30 km/h is requested for a school zone on a Class C road in Kenya where the current speed limit is 80 km/h. Determine the signing requirements including advance warning, speed limit signs, and school warning signs. Note any escalation concerns.",
+      "expected_output": "Advance warning: W47 School Ahead warning sign (750 mm, Table 4.1 for Class C at 50-65 km/h). Speed limit: P-series speed limit sign showing 30 km/h at school zone entry. Advance sign indicating speed reduction ahead. End-of-zone P9 sign restoring 80 km/h limit. W48 School Children Crossing Ahead at pedestrian crossing points. P21 School Warden Stop sign if warden present. Escalation: large speed differential (80 to 30 km/h = 50 km/h reduction) should be flagged for SENIOR REVIEW. Recommend supporting speed management measures (road markings from Skill #67, physical calming measures, rumble strips). Multiple advance warning signs may be needed to manage the transition safely.",
+      "files": [],
+      "assertions": [
+        {
+          "text": "Includes advance warning of speed reduction (sign or combination indicating speed change ahead)",
+          "passed": null,
+          "evidence": ""
+        },
+        {
+          "text": "Specifies W-series school warning sign (W47, W48, or equivalent)",
+          "passed": null,
+          "evidence": ""
+        },
+        {
+          "text": "Flags the large speed differential (80 to 30 km/h) as requiring escalation review or senior review",
+          "passed": null,
+          "evidence": ""
+        },
+        {
+          "text": "Recommends supporting speed management measures (references Skill #67 markings or physical measures)",
+          "passed": null,
+          "evidence": ""
+        },
+        {
+          "text": "References Kenya RDM 6.2 for sign specifications",
+          "passed": null,
+          "evidence": ""
+        }
+      ]
+    }
+  ]
+}

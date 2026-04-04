@@ -1,0 +1,144 @@
+{
+  "source": "Kenya RDM 6.1 (2025), Chapter 13, Tables 13.1-13.4, Section 13.4",
+  "verified": true,
+  "note": "Kenya road stud colour coding and spacing verified from RDM 6.1 PDF",
+  "colour_coding": {
+    "white": "Traffic lane line delineation",
+    "red": "Lines that should not be crossed -- nearside (left-hand) edge of carriageway, shoulder side edge lines. Omit or replace with green at traffic exits (lay-bys, service roads).",
+    "yellow": "Centre lines on undivided highways. Right-hand edge of carriageway on multi-lane divided roads (median side edge line).",
+    "green": "Crossable continuous lines -- acceleration/deceleration lanes, lay-by entries, boundary of lanes on left-hand side of divided carriageways."
+  },
+  "stud_face_rules": {
+    "uni_directional": "One coloured face. Used on one-directional carriageways, one-way streets, slip roads.",
+    "bi_directional": "Two coloured faces (can be same or different colours, e.g., red-white, white-white, yellow-yellow). Used on two-directional roads."
+  },
+  "spacing_by_approach_speed": {
+    "source": "RDM 6.1, Table 13.1",
+    "data": [
+      {
+        "category": "Rural Highways (Type A and B) for Approach Speed 60 km/h and above",
+        "markings": [
+          {"marking": "Lane lines (white)", "spacing_m": 18, "use": "Separation of lanes"},
+          {"marking": "Lane lines (white)", "spacing_m": 9, "use": "Next to auxiliary lane for ramp"},
+          {"marking": "Centre line (yellow)", "spacing_m": 12, "use": "Approach to junctions"},
+          {"marking": "Centre line (yellow)", "spacing_m": 9, "use": "Four-lane undivided carriageway"},
+          {"marking": "Edge line (white)", "spacing_m": 18, "use": "Edge of carriageway"}
+        ]
+      },
+      {
+        "category": "Rural Highways (Type A, B and C) for Approach Speed Less Than 60 km/h",
+        "markings": [
+          {"marking": "Lane lines (white)", "spacing_m": 12, "use": "Separation of lanes"},
+          {"marking": "Lane lines (white)", "spacing_m": 9, "use": "Approach to junctions"},
+          {"marking": "Centre line (yellow)", "spacing_m": 12, "use": "Two-lane undivided carriageway"},
+          {"marking": "Centre line (yellow)", "spacing_m": 9, "use": "Four-lane undivided carriageway"},
+          {"marking": "Edge line (white)", "spacing_m": 12, "use": "Edge of carriageway"}
+        ]
+      }
+    ]
+  },
+  "spacing_undivided_roads": {
+    "source": "RDM 6.1, Table 13.2",
+    "data": [
+      {
+        "road_category": "Single/Intermediate Lane Road",
+        "carriageway_width": "<5.5 m",
+        "normal_centre_m": "NA",
+        "normal_edge_m": "12",
+        "normal_lane_m": "NA",
+        "no_overtaking_centre_m": "NA",
+        "no_overtaking_edge_m": "9",
+        "no_overtaking_lane_m": "NA"
+      },
+      {
+        "road_category": "Two Lane Road",
+        "carriageway_width": "5.5 to 7 m",
+        "normal_centre_m": "12",
+        "normal_edge_m": "12",
+        "normal_lane_m": "NA",
+        "no_overtaking_centre_m": "9",
+        "no_overtaking_edge_m": "9",
+        "no_overtaking_lane_m": "NA"
+      },
+      {
+        "road_category": "Two Lane Road with Paved Shoulder",
+        "carriageway_width": ">7 m",
+        "normal_centre_m": "12",
+        "normal_edge_m": "12",
+        "normal_lane_m": "NA",
+        "no_overtaking_centre_m": "9",
+        "no_overtaking_edge_m": "9",
+        "no_overtaking_lane_m": "NA"
+      },
+      {
+        "road_category": "Three Lane Undivided Road",
+        "carriageway_width": ">11 m",
+        "normal_centre_m": "12",
+        "normal_edge_m": "12",
+        "normal_lane_m": "Not Required",
+        "no_overtaking_centre_m": "9",
+        "no_overtaking_edge_m": "9",
+        "no_overtaking_lane_m": "Not required"
+      },
+      {
+        "road_category": "Four Lane Undivided Road",
+        "carriageway_width": ">14 m",
+        "normal_centre_m": "12",
+        "normal_edge_m": "12",
+        "normal_lane_m": "12",
+        "no_overtaking_centre_m": "9",
+        "no_overtaking_edge_m": "9",
+        "no_overtaking_lane_m": "9"
+      }
+    ]
+  },
+  "spacing_divided_carriageways": {
+    "source": "RDM 6.1, Table 13.3",
+    "data": [
+      {
+        "road_category": "Four Lane Divided Carriageways",
+        "carriageway_width_one_side": ">7.3 m",
+        "normal_traffic_lane_m": 12,
+        "normal_shoulder_edge_m": 12,
+        "normal_median_edge_m": 12,
+        "no_overtaking_traffic_lane_m": 9,
+        "no_overtaking_shoulder_edge_m": 9,
+        "no_overtaking_median_edge_m": 9
+      },
+      {
+        "road_category": "Six Lane Divided Carriageways",
+        "carriageway_width_one_side": ">10.8 m",
+        "normal_traffic_lane_m": 12,
+        "normal_shoulder_edge_m": 12,
+        "normal_median_edge_m": 12,
+        "no_overtaking_traffic_lane_m": 9,
+        "no_overtaking_shoulder_edge_m": 9,
+        "no_overtaking_median_edge_m": 9
+      },
+      {
+        "road_category": "Four Lane Divided Expressway",
+        "carriageway_width_one_side": ">9.5 m",
+        "normal_traffic_lane_m": 18,
+        "normal_shoulder_edge_m": 18,
+        "normal_median_edge_m": 18,
+        "no_overtaking_traffic_lane_m": 12,
+        "no_overtaking_shoulder_edge_m": 12,
+        "no_overtaking_median_edge_m": 12
+      },
+      {
+        "road_category": "Six Lane Divided Expressway",
+        "carriageway_width_one_side": ">11 m",
+        "normal_traffic_lane_m": 18,
+        "normal_shoulder_edge_m": 18,
+        "normal_median_edge_m": 18,
+        "no_overtaking_traffic_lane_m": 12,
+        "no_overtaking_shoulder_edge_m": 12,
+        "no_overtaking_median_edge_m": 12
+      }
+    ]
+  },
+  "pedestrian_crossing_studs": "Two rows of yellow road studs at 0.5 m spacing across carriageway. Studs installed at four corners of each block of marking.",
+  "hazard_area_studs": "Two arrays of road studs at 0.5 m spacing, placed 0.5 m apart on approaches to hazardous situations.",
+  "solar_studs": "Same spacing as conventional studs. Used at crash-prone areas, bridges, toll plazas, sharp curves, pedestrian crossings. Visible >800 m.",
+  "guard_rail_studs": "Spacing same as carriageway studs. Reflector sheeting ASTM D4956 Type IX or XI. Minimum reflector size 102 mm x 76 mm."
+}

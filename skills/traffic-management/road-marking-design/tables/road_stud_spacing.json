@@ -1,0 +1,77 @@
+{
+  "source": "General engineering practice (MUTCD, Vienna Convention principles)",
+  "verified": false,
+  "note": "Universal reference values -- verify against applicable country standard",
+  "data": [
+    {
+      "road_type": "two_lane_undivided_normal",
+      "centre_line_spacing_m": 12,
+      "edge_line_spacing_m": 12,
+      "lane_line_spacing_m": null,
+      "stud_type": "bi-directional",
+      "colour_nearside": "red-white",
+      "colour_centre": "yellow-yellow",
+      "notes": "Normal section, two-lane two-way road"
+    },
+    {
+      "road_type": "two_lane_undivided_no_overtaking",
+      "centre_line_spacing_m": 9,
+      "edge_line_spacing_m": 9,
+      "lane_line_spacing_m": null,
+      "stud_type": "bi-directional",
+      "colour_nearside": "red-white",
+      "colour_centre": "yellow-yellow",
+      "notes": "No-overtaking section, closer spacing for emphasis"
+    },
+    {
+      "road_type": "multi_lane_undivided_normal",
+      "centre_line_spacing_m": 12,
+      "edge_line_spacing_m": 12,
+      "lane_line_spacing_m": 12,
+      "stud_type": "bi-directional",
+      "colour_nearside": "red-white",
+      "colour_centre": "yellow-yellow",
+      "notes": "Three or four lane undivided road, normal section"
+    },
+    {
+      "road_type": "divided_carriageway_normal",
+      "centre_line_spacing_m": null,
+      "edge_line_spacing_m": 12,
+      "lane_line_spacing_m": 12,
+      "stud_type": "uni-directional",
+      "colour_nearside": "red",
+      "colour_centre": null,
+      "notes": "Divided carriageway. Median edge uses yellow uni-directional studs."
+    },
+    {
+      "road_type": "expressway_normal",
+      "centre_line_spacing_m": null,
+      "edge_line_spacing_m": 18,
+      "lane_line_spacing_m": 18,
+      "stud_type": "uni-directional",
+      "colour_nearside": "red",
+      "colour_centre": null,
+      "notes": "Expressway. Wider spacing due to higher visibility requirements."
+    },
+    {
+      "road_type": "junction_approach",
+      "centre_line_spacing_m": 9,
+      "edge_line_spacing_m": 9,
+      "lane_line_spacing_m": 9,
+      "stud_type": "bi-directional",
+      "colour_nearside": "red-white",
+      "colour_centre": "yellow-yellow",
+      "notes": "Reduced spacing at junction approaches for emphasis"
+    },
+    {
+      "road_type": "crossable_line_accel_decel",
+      "centre_line_spacing_m": null,
+      "edge_line_spacing_m": null,
+      "lane_line_spacing_m": 8,
+      "stud_type": "uni-directional",
+      "colour_nearside": null,
+      "colour_centre": null,
+      "notes": "Green studs at crossable continuous lines (acceleration/deceleration lanes)"
+    }
+  ]
+}

@@ -1,0 +1,43 @@
+{
+  "source": "MUTCD / Vienna Convention (universal principles)",
+  "verified": false,
+  "note": "Universal reference values -- verify against applicable country standard",
+  "data": [
+    {
+      "speed_range_kmh": "<=50",
+      "road_context": "urban_local",
+      "regulatory_diameter_mm": 600,
+      "warning_side_mm": 600,
+      "informatory_min_height_mm": 600,
+      "letter_height_mm": 60,
+      "notes": "Small signs for low-speed urban/local roads"
+    },
+    {
+      "speed_range_kmh": "51-80",
+      "road_context": "suburban_rural_collector",
+      "regulatory_diameter_mm": 750,
+      "warning_side_mm": 750,
+      "informatory_min_height_mm": 750,
+      "letter_height_mm": 75,
+      "notes": "Normal signs for single carriageway rural/suburban roads"
+    },
+    {
+      "speed_range_kmh": "81-100",
+      "road_context": "rural_arterial",
+      "regulatory_diameter_mm": 900,
+      "warning_side_mm": 900,
+      "informatory_min_height_mm": 900,
+      "letter_height_mm": 100,
+      "notes": "Large signs for high-speed arterial roads"
+    },
+    {
+      "speed_range_kmh": "110-120",
+      "road_context": "expressway_motorway",
+      "regulatory_diameter_mm": 1200,
+      "warning_side_mm": 1200,
+      "informatory_min_height_mm": 1200,
+      "letter_height_mm": 125,
+      "notes": "Oversize signs for expressways and motorways"
+    }
+  ]
+}

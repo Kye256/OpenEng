@@ -1,0 +1,104 @@
+{
+  "skill_name": "road-marking-design",
+  "evals": [
+    {
+      "id": 0,
+      "prompt": "Design road markings for a Class B rural highway in Kenya with design speed 100 km/h. The road is two-lane two-way with 3.5 m lanes and 1.5 m paved shoulders. Specify: (1) centre line marking type and dimensions, (2) edge line type and dimensions, (3) road stud requirements, (4) marking material recommendation.",
+      "expected_output": "Centre line: LM02 broken yellow, 3 m mark / 9 m gap, 150 mm wide (Table 4.2, >=80 km/h). Edge line: LM27 continuous white, 150 mm wide. Road studs: centre line bi-directional yellow-yellow at 12 m spacing, edge line bi-directional red-white at 18 m spacing (normal section) reducing to 9 m at no-overtaking sections (Table 13.1/13.2). Material: hot-applied thermoplastic per KS EAS 928-1 with glass beads, initial dry retroreflectivity >=250 mcd/m2/lux (Table 14.1).",
+      "files": [],
+      "assertions": [
+        {
+          "text": "Centre line specified as yellow (not white) per Kenya Traffic Act and RDM 6.1 Section 2.10",
+          "passed": null,
+          "evidence": ""
+        },
+        {
+          "text": "Centre line dimensions match Table 4.2 for >=80 km/h: 3 m mark, 9 m gap, 150 mm width (LM02)",
+          "passed": null,
+          "evidence": ""
+        },
+        {
+          "text": "Edge line specified as continuous white, width 150 mm for higher-category road (LM27)",
+          "passed": null,
+          "evidence": ""
+        },
+        {
+          "text": "Road stud spacing references Table 13.1 or 13.2 with appropriate values (12-18 m normal, 9 m no-overtaking)",
+          "passed": null,
+          "evidence": ""
+        },
+        {
+          "text": "Material recommendation is thermoplastic (not paint) for this high-speed road",
+          "passed": null,
+          "evidence": ""
+        },
+        {
+          "text": "References Kenya RDM 6.1 as the governing standard",
+          "passed": null,
+          "evidence": ""
+        }
+      ]
+    },
+    {
+      "id": 1,
+      "prompt": "Design junction markings for a signalised 4-arm intersection on an urban arterial with 60 km/h approach speed. The intersection has two through lanes and one right-turn lane on each approach. Specify stop lines, turn arrows, lane markings, and pedestrian crossing markings.",
+      "expected_output": "Stop line: TM01, 400 mm wide continuous white line, positioned 1.5 m in advance of nearside primary signal. Lane lines: broken white (mark/gap per urban table, 100 mm wide). Lane indication arrows on each approach: straight, left-turn, and right-turn arrows (3.5 m length for approach speed up to 50 km/h or 5.0 m for 51-100 km/h). Pedestrian crossing: white rectangular blocks (500 mm wide, 500 mm gaps, 2.5-4.0 m length), positioned at least 1 m behind stop line. Reference Skill #19 for junction geometry and lane allocation.",
+      "files": [],
+      "assertions": [
+        {
+          "text": "Stop line specified as continuous white, 400 mm wide, positioned relative to signal head",
+          "passed": null,
+          "evidence": ""
+        },
+        {
+          "text": "Lane indication arrows specified with appropriate length for approach speed",
+          "passed": null,
+          "evidence": ""
+        },
+        {
+          "text": "Pedestrian crossing markings specified with zebra bar dimensions",
+          "passed": null,
+          "evidence": ""
+        },
+        {
+          "text": "References Skill #19 (Intersection Design) for junction geometric layout",
+          "passed": null,
+          "evidence": ""
+        },
+        {
+          "text": "Lane markings transition specified (broken to continuous approaching junction)",
+          "passed": null,
+          "evidence": ""
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "prompt": "A road marking design is requested for a gravel road (Class D) in Kenya with no existing markings. Design speed is 40 km/h. Determine if markings are appropriate and what provisions are needed.",
+      "expected_output": "Road markings on unsealed/gravel roads are generally not applicable -- markings require a sealed (paved) surface to be effective and durable. Painted or thermoplastic markings will not adhere to gravel surfaces and will be destroyed rapidly. Escalation trigger: marking on unsealed road. However, road studs may be used on approaches to junctions even if the main road is unsealed -- studs can be fixed to short concrete pads at junction approaches. For the gravel road itself, delineation should rely on road signs (Skill #68) rather than pavement markings.",
+      "files": [],
+      "assertions": [
+        {
+          "text": "Identifies that road markings on unsealed/gravel roads are generally not applicable",
+          "passed": null,
+          "evidence": ""
+        },
+        {
+          "text": "Triggers escalation or clearly states that markings require a sealed surface",
+          "passed": null,
+          "evidence": ""
+        },
+        {
+          "text": "Mentions that road studs may be used on approaches to junctions even if main road is unsealed",
+          "passed": null,
+          "evidence": ""
+        },
+        {
+          "text": "Recommends alternative delineation (road signs via Skill #68) for the unsealed road",
+          "passed": null,
+          "evidence": ""
+        }
+      ]
+    }
+  ]
+}

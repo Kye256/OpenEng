@@ -1,0 +1,125 @@
+{
+  "source": "Kenya RDM 6.2 (2025), Tables 3.1, 3.3, 4.1, Section 2.9, Appendix 1",
+  "verified": true,
+  "note": "Kenya-specific sign sizes by road class and approach speed, verified from RDM 6.2 PDF",
+  "regulatory_sign_sizes": {
+    "note": "STOP and GIVE WAY sign sizes from Tables 3.1 and 3.3",
+    "data": [
+      {"speed_85th_kmh": ">80", "road_class": "A", "stop_sign_mm": 900, "give_way_sign_mm": 900},
+      {"speed_85th_kmh": "65-80", "road_class": "B, C, UA", "stop_sign_mm": 750, "give_way_sign_mm": 750},
+      {"speed_85th_kmh": "50-65", "road_class": "D, UC", "stop_sign_mm": 750, "give_way_sign_mm": 750},
+      {"speed_85th_kmh": "30-50", "road_class": "E, UL", "stop_sign_mm": 600, "give_way_sign_mm": 600},
+      {"speed_85th_kmh": "<30", "road_class": "F-W", "stop_sign_mm": 600, "give_way_sign_mm": 600}
+    ]
+  },
+  "mandatory_prohibitory_sizes": {
+    "note": "From Section 3.3 and 3.4",
+    "data": [
+      {"context": "Single carriageway, approach speed <=50 km/h", "size_mm": 600, "label": "Small"},
+      {"context": "Single carriageway, approach speed >50 km/h", "size_mm": 750, "label": "Normal"},
+      {"context": "Dual carriageway", "size_mm": 900, "label": "Large"}
+    ]
+  },
+  "speed_limit_sizes": {
+    "note": "From Section 3.5. Three sizes prescribed.",
+    "data": [
+      {"context": "Single carriageway, approach speed <=50 km/h", "size_mm": 600},
+      {"context": "Single carriageway, approach speed >50 km/h", "size_mm": 750},
+      {"context": "Dual carriageway", "size_mm": 900}
+    ]
+  },
+  "warning_sign_sizes": {
+    "source": "RDM 6.2, Table 4.1",
+    "data": [
+      {
+        "speed_85th_kmh": ">65",
+        "road_class": "A, B, UA",
+        "sign_size_mm": 900,
+        "siting_distance_m": 1000,
+        "clear_visibility_m": "200-300",
+        "supplementary_plate_x_height_mm": 100
+      },
+      {
+        "speed_85th_kmh": "50-65",
+        "road_class": "C, D, UC",
+        "sign_size_mm": 750,
+        "siting_distance_m": 900,
+        "clear_visibility_m": "100-200",
+        "supplementary_plate_x_height_mm": 75
+      },
+      {
+        "speed_85th_kmh": "<50",
+        "road_class": "E, UL, F-W",
+        "sign_size_mm": 600,
+        "siting_distance_m": 600,
+        "clear_visibility_m": "50-100",
+        "supplementary_plate_x_height_mm": 60
+      }
+    ]
+  },
+  "expressway_signs": {
+    "note": "From Section 2.9 and Chapter 8",
+    "regulatory_size_mm": 1200,
+    "warning_size_mm": 1200,
+    "speed_limit_sizes": [120],
+    "colour_scheme": "Blue background, white text, white border"
+  },
+  "mounting_heights": {
+    "source": "RDM 6.2, Section 2.4, Figures 2.1-2.2",
+    "data": [
+      {"context": "Road side rural (no kerb, no shoulder)", "min_height_m": 1.5, "reference": "Above crown of pavement"},
+      {"context": "Road side rural (with shoulder)", "min_height_m": 1.5, "reference": "Above pavement surface"},
+      {"context": "Road side urban (with kerb)", "min_height_m": 2.1, "max_height_m": 2.5, "reference": "Above kerb level"},
+      {"context": "Road side route sign (directional)", "min_height_m": 1.5, "reference": "Above pavement, 1.2 m for directional on fill slope"},
+      {"context": "Nose of median", "min_height_m": 2.1, "reference": "Above pavement"},
+      {"context": "Overhead sign", "min_clearance_m": 5.5, "reference": "Above carriageway surface"},
+      {"context": "Footpath/cycleway sign", "min_height_m": 2.1, "reference": "Above footpath level"},
+      {"context": "Traffic island", "min_height_m": 1.0, "reference": "Above paved surface"}
+    ]
+  },
+  "lateral_offsets": {
+    "source": "RDM 6.2, Section 2.4",
+    "data": [
+      {"context": "Road with kerb", "min_offset_m": 0.3, "max_offset_m": 1.0, "from": "Kerb line"},
+      {"context": "Road without kerb", "min_offset_m": 0.6, "max_offset_m": 3.0, "from": "Carriageway or shoulder edge"},
+      {"context": "Gantry mounted", "min_lateral_m": 7.0, "from": "Nearest traffic lane (preferably)"}
+    ]
+  },
+  "sign_spacing": {
+    "formula": "0.6 x V metres (V = 85th percentile speed in km/h)",
+    "note": "Minimum distance between consecutive signs on same road section"
+  },
+  "visibility_funnel": {
+    "source": "RDM 6.2, Table 3.2",
+    "note": "Visibility funnel for STOP sign warrants",
+    "data": [
+      {"major_road_speed_kmh": "<=30", "visibility_on_major_m": 15},
+      {"major_road_speed_kmh": "31-50", "visibility_on_major_m": 30},
+      {"major_road_speed_kmh": "51-65", "visibility_on_major_m": 45},
+      {"major_road_speed_kmh": "66-80", "visibility_on_major_m": 70},
+      {"major_road_speed_kmh": "81-100", "visibility_on_major_m": 90},
+      {"major_road_speed_kmh": ">100", "visibility_on_major_m": 120}
+    ]
+  },
+  "directional_sign_colours": {
+    "source": "RDM 6.2, Table 2.6",
+    "data": [
+      {"road_class": "Expressways", "background": "Blue", "text_borders_arrows": "White", "route_number": "White"},
+      {"road_class": "Class A, B & UA", "background": "Green", "text_borders_arrows": "White", "route_number": "Yellow"},
+      {"road_class": "Class C, D & UC", "background": "White", "text_borders_arrows": "Black", "route_number": "Black"},
+      {"road_class": "Class E to W & UL", "background": "White", "text_borders_arrows": "Black", "route_number": "Black"}
+    ]
+  },
+  "letter_sizes_appendix1": {
+    "source": "RDM 6.2, Appendix 1, Table A1-1",
+    "note": "Letter x-height for directional information signs by road class",
+    "data": [
+      {"road_class": "A (International Trunk)", "x_height_mm": 200, "upper_case_mm": 267, "stroke_width_mm": 33},
+      {"road_class": "B (National Trunk)", "x_height_mm": 150, "upper_case_mm": 200, "stroke_width_mm": 25},
+      {"road_class": "C, D (Primary, Secondary)", "x_height_mm": 100, "upper_case_mm": 133, "stroke_width_mm": 17},
+      {"road_class": "UA (Urban Arterial)", "x_height_mm": 100, "upper_case_mm": 133, "stroke_width_mm": 17},
+      {"road_class": "UC (Urban Collector)", "x_height_mm": 75, "upper_case_mm": 100, "stroke_width_mm": 13},
+      {"road_class": "UL, E-W (Local)", "x_height_mm": 50, "upper_case_mm": 67, "stroke_width_mm": 8}
+    ]
+  }
+}
