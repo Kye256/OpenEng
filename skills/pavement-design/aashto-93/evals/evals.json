@@ -83,6 +83,36 @@
           "evidence": ""
         }
       ]
+    },
+    {
+      "id": 3,
+      "prompt": "A World Bank-funded road project in Kenya requires AASHTO 93 pavement design. Design traffic is 5 million ESALs, design CBR is 6%. Compare with the Kenya RDM 3.4 result.",
+      "expected_output": "Acknowledges AASHTO 93 is not Kenya's primary method -- RDM 3.4 mechanistic-empirical method is primary. Performs AASHTO 93 calculation with Kenya-appropriate parameters. Also performs RDM 3.4 design for comparison. Presents both results noting RDM 3.4 governs for national compliance.",
+      "files": [
+        "skills/pavement-design/aashto-93/modules/kenya.md"
+      ],
+      "assertions": [
+        {
+          "text": "Acknowledges that AASHTO 93 is not Kenya's primary design method and references RDM 3.4 as primary",
+          "passed": null,
+          "evidence": ""
+        },
+        {
+          "text": "Identifies that AASHTO 93 is being used because donor (World Bank) requires it",
+          "passed": null,
+          "evidence": ""
+        },
+        {
+          "text": "Provides both AASHTO 93 and RDM 3.4 designs for comparison",
+          "passed": null,
+          "evidence": ""
+        },
+        {
+          "text": "Notes that RDM 3.4 governs for national projects where results differ",
+          "passed": null,
+          "evidence": ""
+        }
+      ]
     }
   ]
 }

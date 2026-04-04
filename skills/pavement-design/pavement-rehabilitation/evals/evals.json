@@ -83,6 +83,36 @@
           "evidence": ""
         }
       ]
+    },
+    {
+      "id": 3,
+      "prompt": "A 30 km section of Kenya Class B road shows average IRI of 6.5 m/km, rutting of 15mm, and 30% moderate cracking. Design a rehabilitation strategy.",
+      "expected_output": "References RDM 5.2 as the Kenya rehabilitation standard. Uses Kenya condition thresholds: IRI 6.5 = Poor (rehabilitation required), rutting 15mm = moderate, cracking 30% moderate = borderline. Checks reconstruction triggers -- none met. Recommends overlay with crack mitigation measures. Calculates overlay thickness. Specifies pre-overlay repairs and drainage assessment.",
+      "files": [
+        "skills/pavement-design/pavement-rehabilitation/modules/kenya.md"
+      ],
+      "assertions": [
+        {
+          "text": "References Kenya RDM 5.2 as the applicable rehabilitation standard",
+          "passed": null,
+          "evidence": ""
+        },
+        {
+          "text": "Uses Kenya RDM 5.2 condition thresholds (not Uganda MoWT Part IV thresholds)",
+          "passed": null,
+          "evidence": ""
+        },
+        {
+          "text": "Recommends overlay or reconstruction with technical justification based on condition data",
+          "passed": null,
+          "evidence": ""
+        },
+        {
+          "text": "Specifies pre-overlay repairs and/or drainage improvements as part of rehabilitation strategy",
+          "passed": null,
+          "evidence": ""
+        }
+      ]
     }
   ]
 }

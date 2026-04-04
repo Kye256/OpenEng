@@ -1,0 +1,286 @@
+{
+  "source": {
+    "manual": "Kenya RDM 3.4",
+    "edition": "2025",
+    "sections": "4.5.1-4.5.16",
+    "verification": "Verified against PDF"
+  },
+  "description": "Kenya 16 standard pavement structure types from RDM 3.4. Each structure was derived using mechanistic-empirical analysis (multi-layer elastic theory) and verified for its designated traffic and subgrade class range.",
+  "material_codes": {
+    "GCS": "Graded Crushed Stone -- high-quality crushed aggregate for base/subbase, per RDM 3.3 Chapter 8",
+    "HSM": "Hydraulically Stabilised Material -- cement or lime treated material, per RDM 3.3",
+    "HPS": "Hand-Packed Stone -- labour-intensive base construction method",
+    "HIG": "Hydraulically Improved Gravel -- improved natural gravel with hydraulic binder",
+    "G45": "Natural gravel with minimum soaked CBR >= 45%",
+    "G30": "Natural gravel with minimum soaked CBR >= 30%",
+    "G15": "Selected fill / capping with minimum soaked CBR >= 15%",
+    "AC": "Asphalt concrete (wearing course)",
+    "AC_base": "Asphalt concrete base layer (higher binder content than wearing course)",
+    "AC_subbase": "Asphalt concrete subbase layer",
+    "surface_dressing": "Single or double surface dressing per Standard Specification"
+  },
+  "structures": [
+    {
+      "id": "ST01",
+      "section": "4.5.1",
+      "name": "Granular base, granular subbase",
+      "description": "Standard granular structure for light to medium traffic on good subgrade",
+      "layers": {
+        "surfacing": {"material": "surface_dressing", "thickness_mm": null},
+        "base": {"material": "GCS", "thickness_mm": 150},
+        "subbase": {"material": "G45", "thickness_mm": 150},
+        "capping": null
+      },
+      "applicable_traffic": ["TLC01", "TLC02", "TLC03", "TLC04"],
+      "applicable_subgrade": ["S4", "S5", "S6"],
+      "notes": "Most economical structure where GCS is available. Surface dressing thickness not fixed."
+    },
+    {
+      "id": "ST02",
+      "section": "4.5.2",
+      "name": "Granular base, granular subbase (heavy duty)",
+      "description": "Enhanced granular structure for medium to heavy traffic",
+      "layers": {
+        "surfacing": {"material": "AC", "thickness_mm": 40},
+        "base": {"material": "GCS", "thickness_mm": 175},
+        "subbase": {"material": "G45", "thickness_mm": 175},
+        "capping": null
+      },
+      "applicable_traffic": ["TLC04", "TLC05", "TLC06"],
+      "applicable_subgrade": ["S4", "S5", "S6"],
+      "notes": "AC surfacing provides better waterproofing than surface dressing for higher traffic."
+    },
+    {
+      "id": "ST03",
+      "section": "4.5.3",
+      "name": "Granular base, cemented subbase",
+      "description": "Granular base with stabilised subbase for weaker subgrades",
+      "layers": {
+        "surfacing": {"material": "surface_dressing", "thickness_mm": null},
+        "base": {"material": "GCS", "thickness_mm": 150},
+        "subbase": {"material": "HSM", "thickness_mm": 150},
+        "capping": null
+      },
+      "applicable_traffic": ["TLC01", "TLC02", "TLC03", "TLC04"],
+      "applicable_subgrade": ["S3", "S4", "S5"],
+      "notes": "HSM subbase provides structural improvement for moderate subgrade."
+    },
+    {
+      "id": "ST04",
+      "section": "4.5.4",
+      "name": "Granular base, cemented subbase (heavy duty)",
+      "description": "Enhanced structure with cemented subbase for heavy traffic",
+      "layers": {
+        "surfacing": {"material": "AC", "thickness_mm": 40},
+        "base": {"material": "GCS", "thickness_mm": 175},
+        "subbase": {"material": "HSM", "thickness_mm": 175},
+        "capping": null
+      },
+      "applicable_traffic": ["TLC04", "TLC05", "TLC06"],
+      "applicable_subgrade": ["S3", "S4", "S5"],
+      "notes": "Suitable for KeNHA Class B roads with medium-heavy traffic."
+    },
+    {
+      "id": "ST05",
+      "section": "4.5.5",
+      "name": "Cemented base, cemented subbase",
+      "description": "Fully cemented structure for weaker subgrades",
+      "layers": {
+        "surfacing": {"material": "surface_dressing", "thickness_mm": null},
+        "base": {"material": "HSM", "thickness_mm": 150},
+        "subbase": {"material": "HSM", "thickness_mm": 150},
+        "capping": null
+      },
+      "applicable_traffic": ["TLC01", "TLC02", "TLC03", "TLC04", "TLC05"],
+      "applicable_subgrade": ["S2", "S3", "S4"],
+      "notes": "Provides structural capacity on weak subgrades. Risk of shrinkage cracking -- design for crack control."
+    },
+    {
+      "id": "ST06",
+      "section": "4.5.6",
+      "name": "Cemented base, cemented subbase (heavy duty)",
+      "description": "Heavy-duty cemented structure for high traffic on moderate subgrade",
+      "layers": {
+        "surfacing": {"material": "AC", "thickness_mm": 50},
+        "base": {"material": "HSM", "thickness_mm": 175},
+        "subbase": {"material": "HSM", "thickness_mm": 200},
+        "capping": null
+      },
+      "applicable_traffic": ["TLC05", "TLC06", "TLC07", "TLC08"],
+      "applicable_subgrade": ["S2", "S3", "S4", "S5"],
+      "notes": "AC surfacing essential for heavy traffic to waterproof cemented layers."
+    },
+    {
+      "id": "ST07",
+      "section": "4.5.7",
+      "name": "Bituminous base, granular subbase",
+      "description": "Bituminous base for heavy traffic with granular subbase",
+      "layers": {
+        "surfacing": {"material": "AC", "thickness_mm": 50},
+        "base": {"material": "AC_base", "thickness_mm": 80},
+        "subbase": {"material": "GCS", "thickness_mm": 200},
+        "capping": null
+      },
+      "applicable_traffic": ["TLC04", "TLC05", "TLC06", "TLC07"],
+      "applicable_subgrade": ["S3", "S4", "S5", "S6"],
+      "notes": "Requires asphalt plant capability. Common for KeNHA trunk roads."
+    },
+    {
+      "id": "ST08",
+      "section": "4.5.8",
+      "name": "Bituminous base, granular subbase (heavy duty)",
+      "description": "Heavy-duty bituminous base for very heavy to maximum traffic",
+      "layers": {
+        "surfacing": {"material": "AC", "thickness_mm": 60},
+        "base": {"material": "AC_base", "thickness_mm": 100},
+        "subbase": {"material": "GCS", "thickness_mm": 225},
+        "capping": null
+      },
+      "applicable_traffic": ["TLC07", "TLC08", "TLC09", "TLC10"],
+      "applicable_subgrade": ["S4", "S5", "S6"],
+      "notes": "For major national highways and expressways. Requires good quality GCS subbase."
+    },
+    {
+      "id": "ST09",
+      "section": "4.5.9",
+      "name": "Bituminous base, cemented subbase",
+      "description": "Bituminous base with cemented subbase for moisture-susceptible areas",
+      "layers": {
+        "surfacing": {"material": "AC", "thickness_mm": 50},
+        "base": {"material": "AC_base", "thickness_mm": 80},
+        "subbase": {"material": "HSM", "thickness_mm": 175},
+        "capping": null
+      },
+      "applicable_traffic": ["TLC04", "TLC05", "TLC06", "TLC07"],
+      "applicable_subgrade": ["S3", "S4", "S5"],
+      "notes": "Better moisture protection than ST07. Preferred in wet climate zones."
+    },
+    {
+      "id": "ST10",
+      "section": "4.5.10",
+      "name": "Bituminous base, cemented subbase (heavy duty)",
+      "description": "Heavy-duty bituminous with cemented subbase for maximum traffic",
+      "layers": {
+        "surfacing": {"material": "AC", "thickness_mm": 60},
+        "base": {"material": "AC_base", "thickness_mm": 120},
+        "subbase": {"material": "HSM", "thickness_mm": 200},
+        "capping": null
+      },
+      "applicable_traffic": ["TLC07", "TLC08", "TLC09", "TLC10"],
+      "applicable_subgrade": ["S3", "S4", "S5", "S6"],
+      "notes": "For expressways and major corridors. Combines structural capacity with moisture protection."
+    },
+    {
+      "id": "ST11",
+      "section": "4.5.11",
+      "name": "Hand-packed stone base",
+      "description": "Labour-intensive base construction for low-volume rural roads",
+      "layers": {
+        "surfacing": {"material": "surface_dressing", "thickness_mm": null},
+        "base": {"material": "HPS", "thickness_mm": 200},
+        "subbase": {"material": "G30", "thickness_mm": 150},
+        "capping": null
+      },
+      "applicable_traffic": ["TLC01", "TLC02", "TLC03"],
+      "applicable_subgrade": ["S3", "S4", "S5"],
+      "notes": "Kenya-specific innovation for KeRRA rural roads. Uses local labour and stone."
+    },
+    {
+      "id": "ST12",
+      "section": "4.5.12",
+      "name": "Hydraulically improved gravel base",
+      "description": "Stabilised natural gravel base for rural roads",
+      "layers": {
+        "surfacing": {"material": "surface_dressing", "thickness_mm": null},
+        "base": {"material": "HIG", "thickness_mm": 175},
+        "subbase": {"material": "G30", "thickness_mm": 150},
+        "capping": null
+      },
+      "applicable_traffic": ["TLC01", "TLC02", "TLC03", "TLC04"],
+      "applicable_subgrade": ["S3", "S4", "S5"],
+      "notes": "Improves marginal gravel quality to base standard using small cement additions."
+    },
+    {
+      "id": "ST13",
+      "section": "4.5.13",
+      "name": "Full-depth bituminous",
+      "description": "All-bituminous pavement for maximum traffic on good subgrade",
+      "layers": {
+        "surfacing": {"material": "AC", "thickness_mm": 70},
+        "base": {"material": "AC_base", "thickness_mm": 150},
+        "subbase": {"material": "AC_subbase", "thickness_mm": 150},
+        "capping": null
+      },
+      "applicable_traffic": ["TLC08", "TLC09", "TLC10"],
+      "applicable_subgrade": ["S4", "S5", "S6"],
+      "notes": "Highest cost but best fatigue performance. For expressways and critical corridors."
+    },
+    {
+      "id": "ST14",
+      "section": "4.5.14",
+      "name": "Inverted structure (bituminous over cemented)",
+      "description": "Inverted pavement with bituminous layers over thick cemented layer",
+      "layers": {
+        "surfacing": {"material": "AC", "thickness_mm": 60},
+        "base": {"material": "AC_base", "thickness_mm": 100},
+        "subbase": {"material": "HSM", "thickness_mm": 250},
+        "capping": null
+      },
+      "applicable_traffic": ["TLC06", "TLC07", "TLC08", "TLC09"],
+      "applicable_subgrade": ["S3", "S4", "S5"],
+      "notes": "The thick cemented subbase provides stiffness while bituminous layers resist fatigue cracking."
+    },
+    {
+      "id": "ST15",
+      "section": "4.5.15",
+      "name": "Composite with capping",
+      "description": "Structure for weak subgrades requiring capping layer",
+      "layers": {
+        "surfacing": {"material": "AC", "thickness_mm": 40},
+        "base": {"material": "GCS", "thickness_mm": 175},
+        "subbase": {"material": "G30", "thickness_mm": 150},
+        "capping": {"material": "G15", "thickness_mm": 200}
+      },
+      "applicable_traffic": ["TLC03", "TLC04", "TLC05", "TLC06"],
+      "applicable_subgrade": ["S1", "S2", "S3"],
+      "notes": "Capping layer required for weak subgrades (S1-S3). G15 capping raises effective foundation strength."
+    },
+    {
+      "id": "ST16",
+      "section": "4.5.16",
+      "name": "Low-volume sealed",
+      "description": "Minimal sealed structure for very light traffic",
+      "layers": {
+        "surfacing": {"material": "surface_dressing", "thickness_mm": null},
+        "base": {"material": "G45", "thickness_mm": 150},
+        "subbase": {"material": "G15", "thickness_mm": 125},
+        "capping": null
+      },
+      "applicable_traffic": ["TLC01", "TLC02"],
+      "applicable_subgrade": ["S2", "S3", "S4"],
+      "notes": "Most basic sealed structure. Natural gravel base only, suitable for very low traffic."
+    }
+  ],
+  "low_volume_structures": [
+    {"id": "LV1", "section": "5.1", "description": "Gravel wearing course", "traffic": "< 0.1 MCESA"},
+    {"id": "LV2", "section": "5.2", "description": "Improved gravel", "traffic": "< 0.1 MCESA"},
+    {"id": "LV3", "section": "5.3", "description": "Sealed gravel", "traffic": "< 0.3 MCESA"},
+    {"id": "LV4", "section": "5.4", "description": "Sealed with HPS base", "traffic": "< 0.3 MCESA"},
+    {"id": "LV5", "section": "5.5", "description": "Block paving on gravel", "traffic": "< 0.1 MCESA"},
+    {"id": "LV6", "section": "5.6", "description": "Cobblestone surface", "traffic": "< 0.1 MCESA"},
+    {"id": "LV7", "section": "5.7", "description": "Stabilised gravel sealed", "traffic": "< 0.3 MCESA"},
+    {"id": "LV8", "section": "5.8", "description": "Dressed stone surface", "traffic": "< 0.1 MCESA"},
+    {"id": "LV9", "section": "5.9", "description": "Thin bituminous on HIG", "traffic": "0.1-0.3 MCESA"},
+    {"id": "LV10", "section": "5.10", "description": "Engineered natural surface", "traffic": "< 50 vpd"},
+    {"id": "LV11", "section": "5.11", "description": "Track road", "traffic": "< 20 vpd"}
+  ],
+  "notes": [
+    "All 16 standard structures derived from mechanistic-empirical analysis (MLET + transfer functions)",
+    "Structure applicability ranges are indicative -- verify against RDM 3.4 Section 4.5 details",
+    "Material specifications per RDM 3.3 Chapter 8 and Standard Specification",
+    "Layer thicknesses shown are typical -- RDM 3.4 may specify ranges for some structures",
+    "Surfacing thickness null indicates surface dressing (no fixed layer thickness)",
+    "Capping null indicates capping layer not required for that structure",
+    "Kenya material codes are NOT equivalent to Uganda codes -- do not cross-reference"
+  ]
+}
