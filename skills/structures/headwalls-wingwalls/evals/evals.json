@@ -94,6 +94,39 @@
           "evidence": ""
         }
       ]
+    },
+    {
+      "id": 3,
+      "prompt": "Design a headwall and wingwalls for a 1200mm pipe culvert on a Class C road in Kenya. The fill height is 2.0m and the wingwall angle is 45 degrees. The subgrade has bearing capacity 100 kPa and phi' = 30 degrees (Ka = 0.33). Fill unit weight is 19 kN/m3. Using Kenya RDM 4.2 standards, determine: (a) headwall type and height, (b) wingwall earth pressure with EN partial factors, (c) stability checks per EQU/STR verification, (d) apron slab sizing, and (e) erosion protection requirements.",
+      "expected_output": "Headwall height approximately 3.0-3.5 m. Designed headwall for 1200 mm pipe. Earth pressure uses EN approach per RDM 4.2 Section 3.7 with gamma_G,sup = 1.05/1.35 and gamma_Q = 1.35/1.50 depending on verification type (EQU/STR). Stability checked using EQU verification (Table 3.31 Set A) not single global FoS. Bearing check against 100 kPa. Erosion protection at outlet -- gabion mattress per RDM 4.2 Figure 10.1.",
+      "files": [],
+      "assertions": [
+        {
+          "text": "References RDM 4.2 Section 3.7 for earth pressure design (not BS 5400 Part 2 earth pressure)",
+          "passed": null,
+          "evidence": ""
+        },
+        {
+          "text": "Uses EN partial factors (gamma_G,sup and gamma_Q from Tables 3.31/3.32) -- not BS 5400 gamma_fL = 1.50",
+          "passed": null,
+          "evidence": ""
+        },
+        {
+          "text": "Specifies headwall type appropriate for 1200 mm pipe culvert",
+          "passed": null,
+          "evidence": ""
+        },
+        {
+          "text": "Stability check uses EQU or STR verification approach (not single global factor of safety)",
+          "passed": null,
+          "evidence": ""
+        },
+        {
+          "text": "References erosion protection (gabion, riprap) at outlet per RDM 4.2 Figure 10.1 or Skill #32",
+          "passed": null,
+          "evidence": ""
+        }
+      ]
     }
   ]
 }
