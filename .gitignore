@@ -48,5 +48,10 @@ references/local/
 # Eval workspaces (generated, large)
 *-workspace/
 
+# Drafts and private notes
+drafts/
+*.private.md
+.notes/
+
 # Skill-creator plugin working files
 skill-snapshot/
