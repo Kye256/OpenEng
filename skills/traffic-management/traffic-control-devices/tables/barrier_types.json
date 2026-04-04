@@ -1,0 +1,63 @@
+{
+  "source": "International practice (EN 1317, MASH, AASHTO RDG)",
+  "verified": false,
+  "note": "Universal barrier type comparison. Containment levels reference EN 1317 and MASH systems.",
+  "data": [
+    {
+      "barrier_type": "W-beam guardrail",
+      "flexibility": "flexible",
+      "containment_level": "N2 / TL-3",
+      "working_width_m": "1.0-2.5",
+      "typical_application": "Embankments, fixed objects, standard rural roads. Most common barrier type worldwide.",
+      "maintenance_after_impact": "Replace damaged sections (posts, rail). Moderate cost."
+    },
+    {
+      "barrier_type": "Thrie-beam guardrail",
+      "flexibility": "semi-rigid",
+      "containment_level": "H1-H2 / TL-3 to TL-4",
+      "working_width_m": "0.6-1.5",
+      "typical_application": "Higher containment needs, bridge approach transitions, heavy vehicle routes.",
+      "maintenance_after_impact": "Replace damaged sections. Higher cost than W-beam."
+    },
+    {
+      "barrier_type": "Wire rope barrier",
+      "flexibility": "flexible",
+      "containment_level": "N2-H1 / TL-3",
+      "working_width_m": "1.5-3.0",
+      "typical_application": "Wide medians, roadside with adequate space for deflection. Low visual impact.",
+      "maintenance_after_impact": "Re-tension cables, replace damaged posts. Relatively low cost per repair."
+    },
+    {
+      "barrier_type": "Concrete barrier (New Jersey / F-shape)",
+      "flexibility": "rigid",
+      "containment_level": "H2-H4 / TL-4 to TL-6",
+      "working_width_m": "0",
+      "typical_application": "Narrow medians, bridges, high-speed roads with no deflection space. Permanent installation.",
+      "maintenance_after_impact": "Minimal for low-speed impacts. May need replacement for high-speed impacts."
+    },
+    {
+      "barrier_type": "Steel box beam",
+      "flexibility": "semi-rigid",
+      "containment_level": "N2-H1 / TL-3",
+      "working_width_m": "0.5-1.0",
+      "typical_application": "Urban areas with limited space. Aesthetic applications.",
+      "maintenance_after_impact": "Replace damaged sections. Moderate to high cost."
+    },
+    {
+      "barrier_type": "Energy-absorbing terminal (EAT)",
+      "flexibility": "varies",
+      "containment_level": "Matches parent barrier",
+      "working_width_m": "0.5-1.5",
+      "typical_application": "Upstream end of any barrier on roads with speed > 60 km/h. Absorbs head-on impact energy.",
+      "maintenance_after_impact": "Replace after impact. Moderate to high cost per unit."
+    },
+    {
+      "barrier_type": "Crash cushion / impact attenuator",
+      "flexibility": "energy-absorbing",
+      "containment_level": "TL-2 to TL-3 typical",
+      "working_width_m": "1.0-3.0",
+      "typical_application": "Gore areas, bridge piers, tunnel portals. Freestanding installation protecting a fixed point.",
+      "maintenance_after_impact": "Replace deformed elements. Some types are redirective (reusable after minor impact)."
+    }
+  ]
+}

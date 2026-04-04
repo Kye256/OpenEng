@@ -1,0 +1,79 @@
+{
+  "source": "International practice (universal principles)",
+  "verified": false,
+  "note": "Universal speed hump geometry. Country modules provide jurisdiction-specific values.",
+  "data": [
+    {
+      "hump_type": "circular",
+      "height_mm": 75,
+      "chord_length_m": 3.0,
+      "ramp_gradient": null,
+      "flat_top_length_m": null,
+      "target_speed_kmh": "20-25",
+      "notes": "Semicircular profile. Short chord produces low target speed."
+    },
+    {
+      "hump_type": "circular",
+      "height_mm": 100,
+      "chord_length_m": 3.7,
+      "ramp_gradient": null,
+      "flat_top_length_m": null,
+      "target_speed_kmh": "25-30",
+      "notes": "Standard circular hump. Most common profile."
+    },
+    {
+      "hump_type": "circular",
+      "height_mm": 100,
+      "chord_length_m": 6.5,
+      "ramp_gradient": null,
+      "flat_top_length_m": null,
+      "target_speed_kmh": "35-40",
+      "notes": "Long-chord circular hump. Less aggressive for higher approach speeds."
+    },
+    {
+      "hump_type": "trapezoidal",
+      "height_mm": 75,
+      "chord_length_m": null,
+      "ramp_gradient": "1:10 to 1:15",
+      "flat_top_length_m": 2.5,
+      "target_speed_kmh": "30-40",
+      "notes": "Flat-top with approach ramps. Preferred for bus routes (extend flat top for bus wheelbase)."
+    },
+    {
+      "hump_type": "speed_table",
+      "height_mm": 100,
+      "chord_length_m": null,
+      "ramp_gradient": "1:10 (1.7 m ramp)",
+      "flat_top_length_m": 5.0,
+      "target_speed_kmh": "30-40",
+      "notes": "Raised pedestrian crossing. Flat top at footway level with zebra or signalised crossing."
+    },
+    {
+      "hump_type": "sinusoidal",
+      "height_mm": 100,
+      "chord_length_m": 3.7,
+      "ramp_gradient": null,
+      "flat_top_length_m": null,
+      "target_speed_kmh": "25-30",
+      "notes": "S-curve profile (4 x 0.925 m quarter wavelengths). More comfortable for cyclists than circular."
+    },
+    {
+      "hump_type": "rumble_strip_raised",
+      "height_mm": "5-10",
+      "chord_length_m": null,
+      "ramp_gradient": null,
+      "flat_top_length_m": null,
+      "target_speed_kmh": "advisory only",
+      "notes": "Thermoplastic bars 300 mm wide, 600-1000 mm apart. 6 bars per set. Alert device, not speed reducer."
+    },
+    {
+      "hump_type": "rumble_strip_milled",
+      "height_mm": "10-15 (depth)",
+      "chord_length_m": null,
+      "ramp_gradient": null,
+      "flat_top_length_m": null,
+      "target_speed_kmh": "advisory only",
+      "notes": "Milled into pavement surface. More durable than raised. Used on high-speed approaches."
+    }
+  ]
+}

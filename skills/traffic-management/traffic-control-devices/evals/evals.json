@@ -1,0 +1,109 @@
+{
+  "skill_name": "traffic-control-devices",
+  "evals": [
+    {
+      "id": 0,
+      "prompt": "A Class C road in Kenya passes through a trading centre (1.2 km length). Design speed outside the centre is 80 km/h, reduced to 50 km/h through the centre. Specify: (1) speed reduction device type and geometry per Kenya RDM, (2) device spacing, (3) approach treatment (advance warning), (4) marking requirements for the devices. Reference Kenya RDM.",
+      "expected_output": "Speed reduction from 80 to 50 km/h through trading centre. Trapezoidal (plateau) humps are preferred over circular for the 50 km/h target speed (better bus comfort and pedestrian crossing compatibility). Per RDM 6.4 Table 2.2: for 50 km/h target, ramp length 2.5 m, gradient 4.0%, flat-top minimum 2.5 m. Alternative: speed tables at pedestrian crossing locations. Spacing approximately 125 m for 50 km/h target (approximately 9-10 humps over 1.2 km). Approach treatment: transverse bar markings per RDM 6.4 Table 2.3 -- for 80 km/h approach, 3 sets of bar markings at 50 m, 80 m, and 120 m from the first hump. Advance warning signs per RDM 6.2 (Skill #68). Hump markings: chequered markings per RDM 6.4 Figure 2.1 with retro-reflective material and road studs. Speed breakers are not recommended per RDM 6.4.",
+      "files": [],
+      "assertions": [
+        {
+          "text": "Specifies trapezoidal or plateau humps (not circular) as preferred for higher speed approaches or bus routes",
+          "passed": null,
+          "evidence": ""
+        },
+        {
+          "text": "References RDM 6.4 Table 2.2 for ramp gradients or provides specific geometry values",
+          "passed": null,
+          "evidence": ""
+        },
+        {
+          "text": "Specifies advance warning signing by referencing Skill #68 or RDM 6.2",
+          "passed": null,
+          "evidence": ""
+        },
+        {
+          "text": "Specifies hump marking by referencing Skill #67 or RDM 6.1 or RDM 6.4 Figure 2.1",
+          "passed": null,
+          "evidence": ""
+        },
+        {
+          "text": "Notes that speed breakers are not recommended per RDM 6.4",
+          "passed": null,
+          "evidence": ""
+        },
+        {
+          "text": "Includes transverse bar markings or rumble strips as approach treatment",
+          "passed": null,
+          "evidence": ""
+        }
+      ]
+    },
+    {
+      "id": 1,
+      "prompt": "Select a roadside safety barrier for a rural highway with design speed 100 km/h. The road runs along a 6 m high embankment for 200 m. The clear zone is only 2 m from the edge line. Determine: (1) barrier type, (2) containment level, (3) barrier length, (4) end terminal treatment.",
+      "expected_output": "Barrier warranted: 6 m embankment is a severe hazard within the 2 m clear zone (far less than the required clear zone for 100 km/h, which is typically 9-10 m). Barrier type: W-beam guardrail (flexible, suitable for rural highway). Working width 1.0-2.5 m -- check that 2 m clear zone can accommodate deflection; if not, consider thrie-beam (semi-rigid, 0.6-1.5 m working width). Containment level: N2 or H1 for 100 km/h with standard traffic (TL-3 in MASH terms). Barrier length: must exceed 200 m hazard length plus runout length at both ends (runout approximately 50-80 m at 100 km/h), so total barrier approximately 300-360 m. End terminal: energy-absorbing terminal (EAT) required at both upstream ends -- turned-down ends are NOT acceptable at 100 km/h. Reference Skill #67 for barrier delineation markings.",
+      "files": [],
+      "assertions": [
+        {
+          "text": "Identifies need for barrier based on hazard (embankment) within clear zone",
+          "passed": null,
+          "evidence": ""
+        },
+        {
+          "text": "Selects appropriate containment level for 100 km/h design speed",
+          "passed": null,
+          "evidence": ""
+        },
+        {
+          "text": "Specifies barrier length exceeding embankment length (200 m) plus runout",
+          "passed": null,
+          "evidence": ""
+        },
+        {
+          "text": "Requires energy-absorbing end terminal (not turned-down at 100 km/h)",
+          "passed": null,
+          "evidence": ""
+        },
+        {
+          "text": "References Skill #67 for barrier delineation markings",
+          "passed": null,
+          "evidence": ""
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "prompt": "A community in Kenya requests speed humps on a Class A national trunk road with design speed 110 km/h due to pedestrian fatalities. Determine the appropriate response.",
+      "expected_output": "Speed humps on a Class A road with 110 km/h design speed are NOT appropriate. Speed humps should not be installed on roads with design speed > 60 km/h (SKILL.md Section 7 escalation trigger). At 110 km/h, encountering an unexpected hump would cause severe vehicle control problems. Alternative measures: (1) grade-separated pedestrian crossing (footbridge or subway) per Skill #20 (NMT Facilities), (2) pedestrian warning signs and advance warning per Skill #68 (Traffic Sign Design), (3) road safety audit per Skill #61 to identify specific hazards, (4) speed limit reduction through the affected section with enforcement, (5) roadside barriers and delineation to channelise pedestrians to safe crossing points, (6) transverse bar markings as advance warning per RDM 6.4 Table 2.3 (4 sets for 81-100 km/h approach). Escalate: community engagement required. If community pressure overrides engineering judgment, this is a political/social decision, not an engineering decision -- flag for senior engineer review.",
+      "files": [],
+      "assertions": [
+        {
+          "text": "Determines that speed humps on a Class A road with 110 km/h design speed are NOT appropriate",
+          "passed": null,
+          "evidence": ""
+        },
+        {
+          "text": "Triggers escalation or flags the situation as requiring senior engineer review",
+          "passed": null,
+          "evidence": ""
+        },
+        {
+          "text": "Recommends alternative measures such as grade-separated crossing (Skill #20), warning signs (Skill #68), or road safety audit (Skill #61)",
+          "passed": null,
+          "evidence": ""
+        },
+        {
+          "text": "Notes community engagement is required and flags the community pressure issue",
+          "passed": null,
+          "evidence": ""
+        },
+        {
+          "text": "References at least two other skills for alternative measures",
+          "passed": null,
+          "evidence": ""
+        }
+      ]
+    }
+  ]
+}
