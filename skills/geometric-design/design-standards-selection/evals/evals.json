@@ -94,6 +94,39 @@
           "evidence": ""
         }
       ]
+    },
+    {
+      "id": 3,
+      "prompt": "A 2-lane road connecting Nakuru to Eldoret in Kenya along the A104 corridor (Trans-Africa Highway). The current AADT is 4500 vpd with an estimated annual growth rate of 6%. The terrain is rolling (Rift Valley). The road is managed by KeNHA (Kenya National Highways Authority). Determine the appropriate design standard, road classification, design speed, design vehicle, and design period for this project.",
+      "expected_output": "Kenya RDM 1.3 (2025) should be selected as the primary standard. The road should be classified as Functional Class A (International Highway - Trans-Africa route). Based on design-year AADT of approximately 14,400 vpd (4500 x 1.06^20), the Design Standard should be DR2. Design speed for rolling terrain Class A road should be in the range of 90-100 km/h per RDM Table 3.4. Design period 20 years per RDM Section 3.4. Design vehicle DV5 (truck + semi-trailer) for KeNHA trunk road.",
+      "files": [],
+      "assertions": [
+        {
+          "text": "Selects Kenya RDM as the primary standard (not MoWT or AASHTO)",
+          "passed": null,
+          "evidence": ""
+        },
+        {
+          "text": "Identifies road as Class A (International Highway) or trunk road under KeNHA management",
+          "passed": null,
+          "evidence": ""
+        },
+        {
+          "text": "Design speed is in the 90-100 km/h range for Class A road on rolling terrain per Kenya RDM Table 3.4",
+          "passed": null,
+          "evidence": ""
+        },
+        {
+          "text": "Uses Kenya institutional context (KeNHA, not UNRA or MoWT)",
+          "passed": null,
+          "evidence": ""
+        },
+        {
+          "text": "All assumptions are flagged with warning markers or explicitly stated",
+          "passed": null,
+          "evidence": ""
+        }
+      ]
     }
   ]
 }
