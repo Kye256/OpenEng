@@ -99,6 +99,39 @@
           "evidence": ""
         }
       ]
+    },
+    {
+      "id": 3,
+      "prompt": "Calculate earthworks for a 15 km Kenya Class B road upgrade from gravel to paved. The route traverses rolling terrain with an average cut/fill ratio of 1.2. Typical soil is lateritic gravel with 15% shrinkage factor. Maximum embankment height is 4m. Provide representative earthworks volumes for a typical 100m section with cut area 18 m2 and fill area 15 m2 at one station and cut area 10 m2 and fill area 22 m2 at the next station (50m interval). Apply Kenya Standard Specification compaction requirements and RDM 3.3 Chapter 5 earthworks standards.",
+      "expected_output": "Cut volume = (18+10)/2 x 50 = 700 m3. Fill volume = (15+22)/2 x 50 = 925 m3. Shrinkage-adjusted fill = 925 x 1.15 = 1063.75 m3. Net balance = 700 - 1063.75 = -363.75 m3 (borrow needed). Kenya compaction: upper 600mm at 95% MDD (T180) with G15 min, lower fill at 93% MDD (T99) with G5 min. References RDM 3.3 Chapter 5 for slope design. Identifies laterite as common Kenya fill material. Notes regional soil considerations.",
+      "files": [],
+      "assertions": [
+        {
+          "text": "References RDM 3.3 Chapter 5 or Section 5.2/5.3 for Kenya earthworks requirements",
+          "passed": null,
+          "evidence": ""
+        },
+        {
+          "text": "Uses Kenya Standard Specification compaction standards: 95% MDD (T180) for upper 600mm and 93% MDD (T99) for lower fill",
+          "passed": null,
+          "evidence": ""
+        },
+        {
+          "text": "Identifies Kenya soil types (laterite, lateritic gravel) and applies appropriate shrinkage factors",
+          "passed": null,
+          "evidence": ""
+        },
+        {
+          "text": "Applies shrinkage factor of 1.15 to fill volume and correctly identifies borrow requirement",
+          "passed": null,
+          "evidence": ""
+        },
+        {
+          "text": "References Skill #28 Kenya module for material suitability assessment of borrow source",
+          "passed": null,
+          "evidence": ""
+        }
+      ]
     }
   ]
 }

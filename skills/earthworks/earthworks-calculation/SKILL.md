@@ -11,7 +11,7 @@ description: "Use when calculating cut and fill volumes from road cross-sections
 > **Status:** Draft
 > **Last Updated:** 2026-03-20
 > **Reviewed By:** ---
-> **Country Modules:** Uganda, UK
+> **Country Modules:** Uganda, UK, Kenya
 
 ## Purpose
 
@@ -309,6 +309,7 @@ The agent runs all checks from the country module's Section M.5 in addition to u
 |------|-------------|--------|
 | `modules/uganda.md` | Uganda-specific shrinkage factors and soil context | Markdown |
 | `modules/uk.md` | UK-specific earthworks classification and context | Markdown |
+| `modules/kenya.md` | Kenya RDM 3.3 Ch5 earthworks and Standard Specification context | Markdown |
 
 ---
 
@@ -415,6 +416,7 @@ Field verification and detailed design review required.
 See country modules for worked examples:
 - **Uganda:** modules/uganda.md, Section M.7
 - **UK:** modules/uk.md, Section M.7
+- **Kenya:** modules/kenya.md, Section M.7
 
 ---
 
@@ -422,8 +424,8 @@ See country modules for worked examples:
 
 - **Not covered:** Cross-section area computation from raw survey points (assumes areas are pre-computed or simple geometry). Rock excavation vs common excavation classification. Topsoil stripping volumes. Subgrade improvement/replacement volumes (Skill #28 determines suitability, but replacement quantity calculation is project-specific).
 - **Simplifications:** Uses two primary methods (average end area and prismoidal). Does not implement grid methods or digital terrain model (DTM) based volume computation used in modern CAD software. Shrinkage factors are applied uniformly -- in practice, different soil layers may have different factors.
-- **Country modules available:** Uganda, UK
-- **Country modules needed:** Kenya, Ethiopia, Tanzania, South Africa
+- **Country modules available:** Uganda, UK, Kenya
+- **Country modules needed:** Ethiopia, Tanzania, South Africa
 
 ---
 

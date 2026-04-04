@@ -11,7 +11,7 @@ description: "Use when optimizing earthworks haulage, identifying borrow and spo
 > **Status:** Draft
 > **Last Updated:** 2026-03-20
 > **Reviewed By:** ---
-> **Country Modules:** Uganda, UK
+> **Country Modules:** Uganda, UK, Kenya
 
 ## Purpose
 
@@ -258,6 +258,7 @@ The agent runs all checks from the country module's Section M.5 in addition to u
 |------|-------------|--------|
 | `modules/uganda.md` | Uganda-specific free haul and contract context | Markdown |
 | `modules/uk.md` | UK-specific earthworks management context | Markdown |
+| `modules/kenya.md` | Kenya Standard Specification haul categories and regional material context | Markdown |
 
 ---
 
@@ -373,6 +374,7 @@ Optimize with detailed cost data and contract conditions.
 See country modules for worked examples:
 - **Uganda:** modules/uganda.md, Section M.7
 - **UK:** modules/uk.md, Section M.7
+- **Kenya:** modules/kenya.md, Section M.7
 
 ---
 
@@ -380,8 +382,8 @@ See country modules for worked examples:
 
 - **Not covered:** Automated balance line optimization (requires iterative cost calculation with unit rates). 3D mass haul considering lateral haul (material moved perpendicular to alignment). Temporary stockpile planning. Haul road design.
 - **Simplifications:** Mass haul diagram is described textually rather than plotted graphically. Balance line optimization is manual (position described). Direction of haul is qualitative (no detailed cost model for uphill vs downhill).
-- **Country modules available:** Uganda, UK
-- **Country modules needed:** Kenya, Ethiopia, Tanzania, South Africa
+- **Country modules available:** Uganda, UK, Kenya
+- **Country modules needed:** Ethiopia, Tanzania, South Africa
 
 ---
 

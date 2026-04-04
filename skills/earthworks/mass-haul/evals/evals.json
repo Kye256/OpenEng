@@ -99,6 +99,39 @@
           "evidence": ""
         }
       ]
+    },
+    {
+      "id": 3,
+      "prompt": "Optimise the mass haul for a 20 km Kenya Class A road construction. There are 3 borrow pits available: BP-1 at 2km from the fill centroid with CBR 25% (G25 laterite), BP-2 at 8km with CBR 45% (G45 graded crushed stone), and BP-3 at 15km with CBR 60% (G45+ weathered basalt). The project requires 150,000 m3 of fill (shrinkage-adjusted) but only has 95,000 m3 of cut available along the alignment. The free haul distance per the Kenya Standard Specification is 500m. Consider Kenya material quality requirements (G-code system), NEMA borrow pit regulations, and haul payment categories.",
+      "expected_output": "Borrow deficit = 150,000 - 95,000 = 55,000 m3. All three sources suitable for lower fill (G5 min). For upper 600mm (G15 min), all three qualify. BP-1 (G25 at 2km) offers best cost-quality balance for general fill. BP-2 (G45 at 8km) better for upper layers where higher quality is preferred. Overhaul: BP-1 = 55,000 x (2.0-0.5) = 82,500 m3-km if all from BP-1. Split strategy recommended. NEMA EIA required for borrow pits > 5,000 m2. References Standard Specification haul payment categories.",
+      "files": [],
+      "assertions": [
+        {
+          "text": "Considers Kenya material quality (G-code) vs haul distance trade-off for each borrow pit",
+          "passed": null,
+          "evidence": ""
+        },
+        {
+          "text": "References Kenya Standard Specification haul payment categories (free haul 500m, overhaul per m3-km)",
+          "passed": null,
+          "evidence": ""
+        },
+        {
+          "text": "Evaluates material suitability at each source against RDM 3.3 G-code requirements for different embankment zones",
+          "passed": null,
+          "evidence": ""
+        },
+        {
+          "text": "Mentions NEMA environmental requirements for borrow pit operations",
+          "passed": null,
+          "evidence": ""
+        },
+        {
+          "text": "Recommends a borrow strategy (single source or split) with cost justification based on overhaul quantities",
+          "passed": null,
+          "evidence": ""
+        }
+      ]
     }
   ]
 }
