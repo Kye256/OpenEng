@@ -1,0 +1,34 @@
+{
+  "source": {
+    "manual": "Kenya RDM 3.4",
+    "edition": "2025",
+    "section": "Table 2.2",
+    "verification": "Verified against PDF"
+  },
+  "description": "Kenya traffic class designations by cumulative MESA ranges for flexible pavement design. Kenya uses MESA (Million Equivalent Standard Axles) and CESA (Cumulative Equivalent Standard Axles) terminology -- never plain ESA.",
+  "terminology": {
+    "MESA": "Million Equivalent Standard Axles -- primary unit in RDM 3.4",
+    "CESA": "Cumulative Equivalent Standard Axles -- total traffic over design life",
+    "MCESA": "Million CESA -- equivalent to MESA for design purposes"
+  },
+  "classes": [
+    {"class": "TLC01", "mesa_min": 0, "mesa_max": 0.3, "description": "< 0.3 MESA -- very light traffic"},
+    {"class": "TLC02", "mesa_min": 0.3, "mesa_max": 0.7, "description": "0.3 - 0.7 MESA -- light traffic"},
+    {"class": "TLC03", "mesa_min": 0.7, "mesa_max": 1.5, "description": "0.7 - 1.5 MESA -- light-medium traffic"},
+    {"class": "TLC04", "mesa_min": 1.5, "mesa_max": 3.0, "description": "1.5 - 3.0 MESA -- medium traffic"},
+    {"class": "TLC05", "mesa_min": 3.0, "mesa_max": 6.0, "description": "3.0 - 6.0 MESA -- medium-heavy traffic"},
+    {"class": "TLC06", "mesa_min": 6.0, "mesa_max": 10.0, "description": "6.0 - 10.0 MESA -- heavy traffic"},
+    {"class": "TLC07", "mesa_min": 10.0, "mesa_max": 17.0, "description": "10.0 - 17.0 MESA -- very heavy traffic"},
+    {"class": "TLC08", "mesa_min": 17.0, "mesa_max": 30.0, "description": "17.0 - 30.0 MESA -- extremely heavy traffic"},
+    {"class": "TLC09", "mesa_min": 30.0, "mesa_max": 50.0, "description": "30.0 - 50.0 MESA -- ultra-heavy traffic"},
+    {"class": "TLC10", "mesa_min": 50.0, "mesa_max": 80.0, "description": "50.0 - 80.0 MESA -- maximum design traffic"}
+  ],
+  "notes": [
+    "Kenya extends to TLC10 (80 MESA) compared to Uganda T8 (30M ESA)",
+    "MESA boundaries for TLC01-TLC08 numerically match Uganda T1-T8 ranges but use different terminology",
+    "TLC09-TLC10 cover traffic levels beyond Uganda MoWT catalogue range",
+    "For design traffic < 0.1 MESA, use low-volume road structures (RDM 3.4 Chapter 5: LV1-LV11)",
+    "Standard axle = 80 kN (same as Uganda)",
+    "If design MESA is near a class boundary, review forecasts and run sensitivity analysis"
+  ]
+}

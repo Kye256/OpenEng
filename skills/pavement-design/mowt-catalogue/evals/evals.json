@@ -97,6 +97,43 @@
           "evidence": ""
         }
       ]
+    },
+    {
+      "id": 3,
+      "prompt": "Design a flexible pavement for a Kenya Class A road (KeNHA) with cumulative traffic of 12 MCESA on a subgrade with design CBR of 8%. The project is in a wet climate zone near Lake Victoria.",
+      "expected_output": "Uses Kenya RDM 3.4 mechanistic-empirical method (not Uganda MoWT). Traffic class TLC07 (10-17 MESA). Kenya subgrade class for CBR 8%. Selects from 16 standard structure types -- bituminous base structure (ST07 or ST09) appropriate for TLC07 in wet zone. Uses MESA/CESA terminology throughout. References mechanistic-empirical basis of RDM 3.4.",
+      "files": [
+        "skills/pavement-design/mowt-catalogue/modules/kenya.md",
+        "skills/pavement-design/mowt-catalogue/tables/kenya_traffic_classes.json",
+        "skills/pavement-design/mowt-catalogue/tables/kenya_standard_structures.json"
+      ],
+      "assertions": [
+        {
+          "text": "Uses Kenya RDM 3.4 as the design standard (not Uganda MoWT catalogue)",
+          "passed": null,
+          "evidence": ""
+        },
+        {
+          "text": "Selects from the 16 standard structure types (ST01-ST16), not Uganda D/W charts",
+          "passed": null,
+          "evidence": ""
+        },
+        {
+          "text": "Uses MESA or CESA terminology throughout (not plain ESA without prefix)",
+          "passed": null,
+          "evidence": ""
+        },
+        {
+          "text": "References Kenya subgrade classes from RDM 3.3 (not Uganda S1-S6 with MoWT boundaries)",
+          "passed": null,
+          "evidence": ""
+        },
+        {
+          "text": "Mentions the mechanistic-empirical basis of RDM 3.4 (MLET, strain calculations, or transfer functions)",
+          "passed": null,
+          "evidence": ""
+        }
+      ]
     }
   ]
 }
