@@ -1,0 +1,87 @@
+{
+  "source": "Kenya RDM 6.2 (2025), Chapters 3-6, 10, Appendix 5",
+  "verified": true,
+  "note": "Representative sign codes by category -- full catalogue in RDM 6.2 Appendix 5. Not every individual sign variant is listed; representative examples given.",
+  "categories": [
+    {
+      "category": "regulatory_priority",
+      "prefix": "R",
+      "description": "Priority signs indicating right of way",
+      "examples": ["R1 STOP", "R2 GIVE WAY"],
+      "sizes_mm": [600, 750, 900],
+      "shape": "Octagonal (STOP), Inverted triangle (GIVE WAY)",
+      "total_in_catalogue": 2,
+      "notes": "STOP sign is octagonal red with white text. GIVE WAY is inverted triangle with red border."
+    },
+    {
+      "category": "regulatory_mandatory",
+      "prefix": "M",
+      "description": "Mandatory signs -- drivers must obey",
+      "examples": ["M1 Turn Left", "M2 Straight Ahead", "M3 Turn Right", "M4 Straight Ahead or Turn Left", "M5 Keep Left", "M6 Keep Right", "M7 Turn Left Ahead", "M8 Turn Right Ahead", "M9 Pass Either Side"],
+      "sizes_mm": [600, 750, 900],
+      "shape": "Circular, blue background with white symbol",
+      "total_in_catalogue": 9,
+      "notes": "Small (600 mm) for single carriageway <=50 km/h. Normal (750 mm) for >50 km/h. Large (900 mm) for dual carriageway."
+    },
+    {
+      "category": "regulatory_prohibitory",
+      "prefix": "P",
+      "description": "Prohibitory signs -- drivers must not do specified action",
+      "examples": ["P1 No Entry", "P2 No Right Turn", "P3 No Left Turn", "P4 No U Turn", "P5-P8 Speed Limits (50/70/80/120)", "P9 End of Speed Limit", "P11 Parking Permitted", "P13 Parking Prohibited", "P14 No Stopping", "P17-P20 Cycle facility signs", "P21 School Warden Stop", "P23-P25 Weight Restrictions", "P29 Height Restriction", "P32 No Overtaking", "P44-P50 Vehicle class prohibitions"],
+      "sizes_mm": [600, 750, 900],
+      "shape": "Circular, white background with red border (most). Speed limits are red circle with number.",
+      "total_in_catalogue": 51,
+      "notes": "Largest category of regulatory signs. Speed limit P5 (50 km/h built-up), P6 (70), P7 (80), P8 (120 expressway)."
+    },
+    {
+      "category": "warning",
+      "prefix": "W",
+      "description": "Warning signs alerting drivers to hazards ahead",
+      "examples": ["W1 Crossroads", "W2 Side Road", "W3 T Junction", "W4 Y Junction", "W11-W14 Junction with dual carriageway", "W15 Merging Traffic", "W17 Roundabout Ahead", "W18 Mini Roundabout", "W19-W22 Sharp turns and bends", "W25-W29 Road narrowing/divides", "W30-W32 Steep gradient/headroom", "W36-W38 Level crossings", "W44 Slippery Road", "W47-W49 School/Children", "W50-W53 Animals", "W54 Crosswinds", "W55 Pedestrian Crossing", "W59 Keep Left (drive on left)", "W60-W63 Road widening/bridge/median"],
+      "sizes_mm": [600, 750, 900],
+      "shape": "Triangular (equilateral, point up), red border on white background",
+      "total_in_catalogue": 71,
+      "notes": "Sizes per Table 4.1: 900 mm for Class A/B/UA (>65 km/h), 750 mm for C/D/UC (50-65 km/h), 600 mm for E/UL/F-W (<50 km/h)."
+    },
+    {
+      "category": "informatory_directional",
+      "prefix": "I",
+      "description": "Directional and route information signs",
+      "examples": ["I1 Advance Direction Sign (stack type)", "I2 Route Direction Sign", "I3 Roundabout Map Type Sign", "I4 Lane Destination Sign", "I5 Direction Sign (for Class A/B and collectors)", "I6 Route Confirmatory Sign", "I7 Town/Village Sign"],
+      "sizes_mm": "Variable -- depends on content, letter height, and number of destinations",
+      "shape": "Rectangular with pointed end (direction signs). Rectangular (others).",
+      "total_in_catalogue": 33,
+      "notes": "Colour scheme from Table 2.6: Expressway=blue bg/white text; Class A,B,UA=green bg/white text/yellow route; Class C,D,UC=white bg/black text; Class E-W,UL=white bg/black text."
+    },
+    {
+      "category": "informatory_facilities",
+      "prefix": "I",
+      "description": "Facility and information signs",
+      "examples": ["I7 Town/Village", "I8 Alternative Route for Heavy Vehicle", "I10 Tourist Facility", "I16 Car Park", "I18 Hospital Ahead", "I20 Airport", "I21 Ferry", "I22 Industrial Estate", "I23-I31 Amenities (eating, fuel, toilet, picnic, camp)"],
+      "sizes_mm": "Variable",
+      "shape": "Rectangular, blue or brown background",
+      "total_in_catalogue": 20,
+      "notes": "Tourist signs use brown background. Facility signs typically blue."
+    },
+    {
+      "category": "persons_with_disabilities",
+      "prefix": "PD",
+      "description": "Signs for persons with disabilities",
+      "examples": ["PD1 International Symbol of Accessibility (ISA)", "PD2 Parking Information", "PD3 Parking Areas", "PD4 Ramped Entrance", "PD5 Telephone Facilities", "PD6 Toilet Facilities", "PD7 Wayfinding"],
+      "sizes_mm": "Variable",
+      "shape": "Rectangular, blue background with white symbol",
+      "total_in_catalogue": 8,
+      "notes": "ISA symbol per international standards."
+    },
+    {
+      "category": "roadwork_temporary",
+      "prefix": "RW",
+      "description": "Temporary signs for roadwork zones",
+      "examples": ["RW1 Roadworks Ahead", "RW2 Uneven Surface", "RW3 Slippery Road Ahead", "RW4 Road Narrows", "RW5 Road Narrows", "RW6 Manual Traffic Control", "RW7 Traffic Signals Ahead", "RW8 Two-Way Traffic", "RW9-RW14 Lane closures", "RW15 Major Road Works Ahead", "RW16 No Through Road", "RW17 Road Closed", "RW21-RW24 Keep Left/Right/Pass", "RW25-RW28 Pedestrian protection", "RW29-RW41 Diversions and traffic management"],
+      "sizes_mm": [600, 750, 900],
+      "shape": "Triangular (warning type) or rectangular, yellow background with black border",
+      "total_in_catalogue": 41,
+      "notes": "Detailed deployment scenarios in Appendix 4 with layout figures A4-1 to A4-22."
+    }
+  ]
+}
