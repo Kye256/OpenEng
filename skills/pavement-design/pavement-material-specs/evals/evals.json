@@ -83,6 +83,36 @@
           "evidence": ""
         }
       ]
+    },
+    {
+      "id": 3,
+      "prompt": "Specify pavement materials for a Kenya Class A road with traffic class TC10. The available material sources include natural gravel (CBR 45%, PI 8, LAA 55%), crushed stone from a nearby quarry (ACV 24%, LAA 32%), and laterite from a borrow pit (CBR 28%, PI 14). Assess each source against Kenya RDM 3.3 material specifications and recommend appropriate layer assignments.",
+      "expected_output": "Use Kenya RDM 3.3 Table 8.8 and Charts GM8-GM11 for material classification. Natural gravel CBR 45%: meets G45 (Chart GM9, min 45%, PI max 10 -- FAIL, PI 8 PASS, LAA max 70 -- PASS at 55%). Crushed stone ACV 24%/LAA 32%: meets GCS-A requirements (ACV max 25%, LAA max 30% -- LAA 32% FAILS GCS-A, passes GCS-B with ACV 28%/LAA 35%). Laterite CBR 28%: meets G25 (min 25%, PI max 15/20 wet/dry -- PI 14 PASSES for dry areas but FAILS wet if PI max 15). Does NOT use Uganda material codes G80/C1/C2. References KS/EN test standards.",
+      "files": [
+        "skills/pavement-design/pavement-material-specs/tables/kenya_material_specifications.json"
+      ],
+      "assertions": [
+        {
+          "text": "Uses Kenya G8-G45/GCS/HBS material classification system from RDM 3.3, not Uganda G-code/C-code equivalents",
+          "passed": null,
+          "evidence": ""
+        },
+        {
+          "text": "References RDM 3.3 Chapter 8, Table 8.8, or specific Charts (GM8-GM11) for material specifications",
+          "passed": null,
+          "evidence": ""
+        },
+        {
+          "text": "Correctly assesses the natural gravel (CBR 45%) against G45 requirements including PI and LAA limits",
+          "passed": null,
+          "evidence": ""
+        },
+        {
+          "text": "Assesses the crushed stone against GCS classification using ACV and LAA criteria, not CBR alone",
+          "passed": null,
+          "evidence": ""
+        }
+      ]
     }
   ]
 }

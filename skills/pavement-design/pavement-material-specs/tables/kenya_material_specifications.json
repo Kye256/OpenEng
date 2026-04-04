@@ -1,0 +1,318 @@
+{
+  "source": {
+    "manual": "Kenya RDM 3.3",
+    "edition": "2025",
+    "section": "Chapter 8, Section 8.9, Table 8.8, Charts GM1-GM13",
+    "verification": "Verified against PDF pp119-132"
+  },
+  "description": "Kenya pavement material specifications from RDM 3.3 Table 8.8 and Materials Specification Charts. Covers granular materials (G-series), graded crushed stone (GCS-series), hand packed stone (HPS), hydraulically improved granular (HIG-series), hydraulically modified stone (HMS), hydraulically bound stone (HBS-series), and bitumen stabilised materials (BSM-series).",
+  "material_classes": {
+    "granular_materials": {
+      "G3": {
+        "material": "Natural silty/sandy/gravelly clays, silty/clayey sands",
+        "layer": "Embankment fill only",
+        "chart": "GM1",
+        "requirements": {
+          "cbr_min_pct": 3,
+          "cbr_test_condition": "100% MDD (AASHTO T99) and 4 days soak",
+          "swell_max_pct": 3.0,
+          "ll_max": 70,
+          "pi_max": 50,
+          "compaction_density": "100% MDD (AASHTO T99)",
+          "max_layer_thickness_mm": 250
+        }
+      },
+      "G8": {
+        "material": "Natural materials blended with up to 20% stone aggregates",
+        "layer": "Lower capping on S1 to convert to S2",
+        "chart": "GM2",
+        "requirements": {
+          "cbr_min_pct": 8,
+          "cbr_test_condition": "95% MDD (AASHTO T180) and 4 days soak",
+          "swell_max_pct": 3.0,
+          "ll_max": 70,
+          "pi_max": 50,
+          "compaction_density": "100% MDD (AASHTO T180)",
+          "max_layer_thickness_mm": 250
+        }
+      },
+      "G10": {
+        "material": "Natural or blended silty/sandy/gravelly clays, sands, or gravels",
+        "layer": "Capping on S1 and S2 subgrade for foundation class F1",
+        "chart": "GM3",
+        "requirements": {
+          "cbr_min_pct": 10,
+          "cbr_test_condition": "95% MDD (AASHTO T180) and 4 days soak",
+          "swell_max_pct": 2.5,
+          "pi_max": 30,
+          "ll_max": 50,
+          "uniformity_coefficient_min": 6,
+          "compaction_density": "95% MDD (AASHTO T180)",
+          "max_layer_thickness_mm": 150
+        }
+      },
+      "G14": {
+        "material": "Natural or blended silty/clayey materials, volcanic gravel (scoria)",
+        "layer": "Capping on S1-S3 for foundation classes F1 and F2",
+        "chart": "GM4",
+        "requirements": {
+          "cbr_min_pct": 14,
+          "cbr_test_condition": "95% MDD (AASHTO T180) and 4 days soak",
+          "swell_max_pct": 1.0,
+          "pi_max": 30,
+          "ll_max": 50,
+          "plasticity_modulus_max": 2500,
+          "organic_matter_max_pct": 2,
+          "uniformity_coefficient_min": 6,
+          "compaction_density": "95% MDD (AASHTO T180)",
+          "max_layer_thickness_mm": 200
+        }
+      },
+      "G20": {
+        "material": "Natural gravel or mixtures of natural materials with up to 30% stone",
+        "layer": "Gravel Wearing Course (GWC)",
+        "chart": "GM5",
+        "requirements": {
+          "cbr_min_pct": 20,
+          "cbr_test_condition": "95% MDD (AASHTO T180) and 4 days soak",
+          "swell_max_pct": 1.0,
+          "pi_wet_areas": "5-20",
+          "pi_dry_areas": "5-25",
+          "plasticity_modulus_max": 30,
+          "compaction_density": "95% MDD (AASHTO T180)",
+          "max_layer_thickness_mm": 200,
+          "grading_class_1_max_size_mm": 28,
+          "grading_class_2_max_size_mm": 37.5
+        }
+      },
+      "G23": {
+        "material": "Natural or blended silty and clayey materials",
+        "layer": "Capping on S2 and S3 subgrades for foundation classes F2 and F3",
+        "chart": "GM6",
+        "requirements": {
+          "cbr_min_pct": 23,
+          "cbr_test_condition": "95% MDD (AASHTO T180) and 4 days soak",
+          "swell_max_pct": 1.0,
+          "pi_max": 25,
+          "plasticity_modulus_max": 2500,
+          "uniformity_coefficient_min": 6,
+          "compaction_density": "95% MDD (AASHTO T180)",
+          "max_layer_thickness_mm": 200
+        }
+      },
+      "G25": {
+        "material": "Natural or blended materials",
+        "layer": "Sub-base for traffic classes TC0.5 and TC0.25",
+        "chart": "GM7",
+        "requirements": {
+          "cbr_min_pct": 25,
+          "cbr_test_condition": "95% MDD (AASHTO T180) and 4 days soak",
+          "swell_max_pct": 1.0,
+          "pi_wet_areas": "5-15",
+          "pi_dry_areas": "5-20",
+          "plasticity_modulus_max": 250,
+          "uniformity_coefficient_min": 6,
+          "compaction_density": "95% MDD (AASHTO T180)",
+          "max_layer_thickness_mm": 200
+        }
+      },
+      "G30": {
+        "material": "Natural or blended materials",
+        "layer": "Base for TC0.1 and TC0.025; Sub-base for TC1, TC3, TC10",
+        "chart": "GM8",
+        "requirements": {
+          "cbr_min_pct": 30,
+          "cbr_test_condition": "95% MDD (AASHTO T180) and 4 days soak",
+          "pi_max": 12,
+          "plasticity_modulus_max": 250,
+          "swell_max_pct": 0.5,
+          "compaction_density": "95% MDD (AASHTO T180)",
+          "min_layer_thickness_mm": 125,
+          "max_layer_thickness_mm": 200
+        }
+      },
+      "G45": {
+        "material": "Natural/blended materials OR crushed stone gravel",
+        "layer": "Capping S3-S5/F2-F4; Base TC0.5; Sub-base TC0.25/TC1-TC10",
+        "chart": "GM9",
+        "requirements": {
+          "cbr_min_pct": 45,
+          "cbr_test_condition": "95% MDD (AASHTO T180) and 4 days soak",
+          "laa_max_pct": 70,
+          "acv_max_pct": 40,
+          "pi_max": 10,
+          "plasticity_modulus_max": 250,
+          "swell_max_pct": 0.5,
+          "compaction_density": "95% MDD (AASHTO T180)",
+          "min_layer_thickness_mm": 125,
+          "max_layer_thickness_mm": 200
+        }
+      },
+      "G80": {
+        "material": "Natural/blended materials with up to 30% stone OR crushed stone gravel",
+        "layer": "Base for TC1, TC3, TC10; Sub-base for TC17",
+        "chart": "GM10",
+        "requirements": {
+          "cbr_min_pct": 80,
+          "cbr_test_condition": "95% MDD (AASHTO T180) and 4 days soak",
+          "laa_max_pct": 50,
+          "acv_max_pct": 35,
+          "pi_max": 10,
+          "plasticity_modulus_max": 250,
+          "compaction_density": "95% MDD (AASHTO T180)",
+          "min_layer_thickness_mm": 125,
+          "max_layer_thickness_mm": 200,
+          "notes": "In dry areas (rainfall < 500mm), CBR 60% may be used for TC1 base with Chief Engineer (Materials) approval"
+        }
+      }
+    },
+    "graded_crushed_stone": {
+      "GCS-F": {
+        "material": "Crushed stone Class F, mostly weathered rock",
+        "layer": "Base TC0.025 and TC0.1",
+        "chart": "GM11",
+        "requirements": {
+          "cbr_min_pct": 30
+        }
+      },
+      "GCS-E": {
+        "material": "Crushed stone Class E, mostly soft stone and partially weathered rock",
+        "layer": "Base TC0.25; Sub-base TC1-TC10",
+        "chart": "GM11",
+        "requirements": {
+          "cbr_min_pct": 50,
+          "acv_max_pct": 35,
+          "laa_max_pct": 50
+        }
+      },
+      "GCS-D": {
+        "material": "Crushed stone Class D, partially weathered granites, basalts, and other rocks",
+        "layer": "Base TC1, TC3, TC10; Sub-base TC17",
+        "chart": "GM11",
+        "requirements": {
+          "cbr_min_pct": 80,
+          "acv_max_pct": 35,
+          "laa_max_pct": 50
+        }
+      },
+      "GCS-C": {
+        "material": "GCS Class C, fresh corals and metamorphic rocks",
+        "layer": "Base and Sub-base TC1, TC3",
+        "chart": "GM11",
+        "requirements": {
+          "acv_max_pct": 30,
+          "laa_max_pct": 40
+        }
+      },
+      "GCS-B": {
+        "material": "GCS Class B, mostly fresh granites, basalts, and other igneous rocks",
+        "layer": "Base/Sub-base TC10; Sub-base TC17",
+        "chart": "GM11",
+        "requirements": {
+          "acv_max_pct": 28,
+          "laa_max_pct": 35
+        }
+      },
+      "GCS-A": {
+        "material": "GCS Class A, fresh granites, basalts, and other igneous rocks",
+        "layer": "Base TC17; Sub-base TC30/TC50; Capping S5-S6/F5 for TC80+",
+        "chart": "GM11",
+        "requirements": {
+          "acv_max_pct": 25,
+          "laa_max_pct": 30
+        }
+      }
+    },
+    "hand_packed_stone": {
+      "HPS": {
+        "material": "Hand Packed Stone, mostly fresh trachytes, soft stone, basalts, igneous rocks",
+        "layer": "Sub-base and Base for TC0.25-TC10",
+        "chart": "GM12",
+        "requirements": {
+          "acv_max_pct": 40,
+          "laa_max_pct": 60
+        }
+      }
+    },
+    "hydraulically_improved_granular": {
+      "HIG50": {
+        "material": "Lime and hydraulically improved granular material",
+        "layer": "Sub-base TC0.25 and TC0.5",
+        "chart": "HM1",
+        "requirements": {
+          "cbr_min_pct": 50,
+          "test_condition": "7 days cure and 7 days soak"
+        }
+      },
+      "HIG60": {
+        "material": "Lime and hydraulically improved granular material",
+        "layer": "Sub-base TC1, TC3, TC10; Base TC0.025, TC0.1",
+        "chart": "HM2",
+        "requirements": {
+          "cbr_min_pct": 60,
+          "test_condition": "7 days cure and 7 days soak"
+        }
+      },
+      "HIG100": {
+        "material": "Lime and hydraulically improved granular material",
+        "layer": "Base TC0.25 and TC0.5",
+        "chart": "HM3",
+        "requirements": {
+          "cbr_min_pct": 100,
+          "test_condition": "7 days cure and 7 days soak"
+        }
+      },
+      "HIG160": {
+        "material": "Lime and hydraulically improved granular material",
+        "layer": "Base TC1, TC3, TC10; Sub-base TC17, TC30, TC50; Capping S5-S6/F5 for TC80+",
+        "chart": "HM4",
+        "requirements": {
+          "cbr_min_pct": 160,
+          "ucs_range_mpa": {"min": 1.0, "max": 2.0},
+          "test_condition": "7 days cure and 7 days soak"
+        }
+      }
+    },
+    "hydraulically_modified_stone": {
+      "HMS1": {
+        "material": "Hydraulically modified stone",
+        "layer": "Base TC1, TC3, TC10; Sub-base TC17, TC30, TC50; Capping S5-S6/F5 for TC80+",
+        "chart": "HM5",
+        "requirements": {
+          "ucs_min_mpa": 1.0,
+          "ucs_max_mpa": 2.5,
+          "test_condition": "7-day cure and 7-day soak"
+        }
+      }
+    },
+    "hydraulically_bound_stone": {
+      "HBS3": {
+        "material": "Hydraulically bound stone",
+        "layer": "Base TC17, TC30, TC50; Sub-base TC80+",
+        "chart": "HB1",
+        "requirements": {
+          "ucs_min_mpa": 3.0,
+          "test_condition": "7-day cure and 7-day soak"
+        }
+      },
+      "HBS6": {
+        "material": "Hydraulically bound stone",
+        "layer": "Base TC17, TC30, TC50; Sub-base for concrete pavement TC150+",
+        "chart": "HB2",
+        "requirements": {
+          "ucs_min_mpa": 6.0,
+          "test_condition": "7-day cure and 7-day soak"
+        }
+      },
+      "HBS9": {
+        "material": "Hydraulically bound stone",
+        "layer": "Base TC50+; Sub-base for concrete pavement TC150+",
+        "chart": "HB3",
+        "requirements": {
+          "ucs_min_mpa": 9.0,
+          "test_condition": "7-day cure and 7-day soak"
+        }
+      }
+    }
+  }
+}

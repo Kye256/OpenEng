@@ -94,6 +94,34 @@
           "evidence": ""
         }
       ]
+    },
+    {
+      "id": 3,
+      "prompt": "Interpret the following test results for a Kenya road project base material: CBR=82, PI=8, LL=28, MDD=2.15 t/m3, OMC=8.2%. The material is being assessed for use as a granular base on a Class A road. Determine compliance with Kenya material specifications and identify any missing test data.",
+      "expected_output": "Assess against RDM 3.3 Table 8.8 material codes and Chart GM10 (G80). CBR 82% >= 80% minimum for G80 = PASS. PI 8 <= Max 10 for G80 = PASS. But LAA and ACV data are missing -- G80 requires LAA Max 50% and ACV Max 35%. Grading data also needed to check envelope compliance and Plasticity Modulus (Max 250). KS/EN test standards should be referenced (BS EN ISO 17892-12 for Atterberg limits). Kenya is transitioning from BS to KS/EN standards per RDM 3.2.",
+      "files": [],
+      "assertions": [
+        {
+          "text": "References KS/EN test standards or notes the transition from BS to KS/EN standards in Kenya per RDM 3.2",
+          "passed": null,
+          "evidence": ""
+        },
+        {
+          "text": "Assesses CBR against G80 requirement (minimum 80%) from RDM 3.3 and confirms it passes",
+          "passed": null,
+          "evidence": ""
+        },
+        {
+          "text": "Identifies missing test data (LAA, ACV, or grading) needed for complete G80 compliance assessment per RDM 3.3 Chart GM10",
+          "passed": null,
+          "evidence": ""
+        },
+        {
+          "text": "References Kenya material specification system (G80, Table 8.8, or Chart GM10) rather than Uganda G-code system",
+          "passed": null,
+          "evidence": ""
+        }
+      ]
     }
   ]
 }
