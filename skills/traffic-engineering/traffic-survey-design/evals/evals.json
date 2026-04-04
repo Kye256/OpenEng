@@ -94,6 +94,39 @@
           "evidence": ""
         }
       ]
+    },
+    {
+      "id": 3,
+      "prompt": "Plan traffic surveys for a KeNHA trunk road rehabilitation project in Kenya. The road is the Nairobi-Nakuru Highway (A104), a 45 km section from Naivasha to Gilgil. The project is at detailed design stage. A Virtual Weigh Station (VWS) exists at Gilgil. The last project-specific survey was a 3-day MCC from 2023 showing approximately 11,000 vpd. The project is funded by the African Development Bank. The survey budget is adequate. Plan the full traffic survey programme including survey types, station locations, durations, timing, and vehicle classification scheme.",
+      "expected_output": "Should recommend a comprehensive survey programme per RDM 1.2 including 7-day ATC and 7-day MCC (or minimum 3 weekdays + weekend day) at multiple stations spaced along the corridor, axle load survey at a representative location, and speed survey. Should reference the Kenya RDM 1.2 as the mandatory standard. Should recommend obtaining VWS data from KeNHA for seasonal factors and growth rates. Classification scheme should use RDM 1.2 Table 2.1 classes including separate motorcycle (MC) and three-wheeler (MR) categories. Survey timing should target a neutral month (February, March, June, July, September, or October per RDM 1.2). Should note this is a Northern Corridor road with port-driven freight patterns.",
+      "files": [],
+      "assertions": [
+        {
+          "text": "References Kenya RDM 1.2 or Kenya Road Design Manual as the primary survey standard (not MoWT or DMRB)",
+          "passed": null,
+          "evidence": ""
+        },
+        {
+          "text": "Recommends obtaining VWS data from KeNHA for seasonal factors or growth rate validation",
+          "passed": null,
+          "evidence": ""
+        },
+        {
+          "text": "Classification scheme includes separate motorcycle (MC) and three-wheeler (MR) categories per RDM 1.2 Table 2.1",
+          "passed": null,
+          "evidence": ""
+        },
+        {
+          "text": "References KeNHA as the road authority for Class A roads in Kenya (not UNRA or Highways England)",
+          "passed": null,
+          "evidence": ""
+        },
+        {
+          "text": "Identifies Northern Corridor context (Mombasa port traffic) as relevant to survey design or timing",
+          "passed": null,
+          "evidence": ""
+        }
+      ]
     }
   ]
 }

@@ -84,6 +84,34 @@
           "evidence": ""
         }
       ]
+    },
+    {
+      "id": 3,
+      "prompt": "Process traffic count data for a KeNHA road project in Kenya. The road is the Mombasa-Nairobi Highway (A109) near Mtito Andei. A 7-day manual classified count (12-hour, 06:00-18:00) was conducted in July. Two 24-hour counts are available (one weekday, one weekend). The weekday 24-hour total was 7,200 vpd with 5,400 vehicles in 12 hours. The weekend 24-hour total was 6,800 vpd with 5,100 in 12 hours. Weekday 12-hour totals average 6,200 vpd and weekend 12-hour totals average 5,400 vpd. A seasonal factor of 0.98 is available from the KeNHA VWS at the nearest station. The motorcycle traffic component is 22% of total volume. Process the data to determine AADT, DHV, and DDHV.",
+      "expected_output": "Should convert partial-day counts to 24-hour using the site-specific expansion factors derived from the two 24-hour counts (expansion factor approximately 0.75). Should apply the seasonal factor of 0.98 from the VWS. Should use K-factor from RDM 1.2 Table 3.1 (rural range 0.15-0.25). Should note this is a Northern Corridor road with significant nighttime truck traffic explaining the low expansion factor. Should recommend presenting volumes both with and without motorcycles to avoid masking trends.",
+      "files": [],
+      "assertions": [
+        {
+          "text": "Uses the site-specific expansion factor derived from the 24-hour counts (approximately 0.75) rather than a generic value",
+          "passed": null,
+          "evidence": ""
+        },
+        {
+          "text": "Applies the seasonal factor of 0.98 from the VWS data to estimate AADT",
+          "passed": null,
+          "evidence": ""
+        },
+        {
+          "text": "Uses K-factor from RDM 1.2 Table 3.1 range (0.15-0.25 for rural roads) for DHV calculation",
+          "passed": null,
+          "evidence": ""
+        },
+        {
+          "text": "Notes or addresses motorcycle traffic handling -- recommends presenting data with and without motorcycles or flags motorcycle percentage",
+          "passed": null,
+          "evidence": ""
+        }
+      ]
     }
   ]
 }
