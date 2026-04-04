@@ -80,6 +80,36 @@
           "evidence": ""
         }
       ]
+    },
+    {
+      "id": 3,
+      "prompt": "Compare TRL ORN 31 and Kenya RDM 3.4 design for a Class C road with 2 MCESA traffic loading on a subgrade with CBR 10%.",
+      "expected_output": "Identifies that TRL authored both ORN 31 and Kenya RDM 3.4 -- closest technical lineage. Notes that RDM 3.4 supersedes ORN 31 for Kenya projects. Performs both ORN 31 and RDM 3.4 designs. Documents specific differences in subgrade classification, structure selection, and material codes.",
+      "files": [
+        "skills/pavement-design/trl-orn-31/modules/kenya.md"
+      ],
+      "assertions": [
+        {
+          "text": "Identifies TRL lineage -- TRL authored both ORN 31 and Kenya RDM 3.4",
+          "passed": null,
+          "evidence": ""
+        },
+        {
+          "text": "Notes that RDM 3.4 supersedes ORN 31 for Kenya road projects",
+          "passed": null,
+          "evidence": ""
+        },
+        {
+          "text": "Documents specific differences in structure selection between ORN 31 and RDM 3.4",
+          "passed": null,
+          "evidence": ""
+        },
+        {
+          "text": "Uses MESA or MCESA terminology (not plain ESA) in Kenya context",
+          "passed": null,
+          "evidence": ""
+        }
+      ]
     }
   ]
 }
