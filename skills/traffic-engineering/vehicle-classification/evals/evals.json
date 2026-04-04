@@ -89,6 +89,39 @@
           "evidence": ""
         }
       ]
+    },
+    {
+      "id": 3,
+      "prompt": "Classify traffic on a KeNHA trunk road in Kenya for both capacity analysis and pavement design purposes. The road is the Nairobi-Mombasa Highway (A109). A classified count shows the following AADT (both directions): Cars/SUV/Pickups 5,000, Motorcycles (MC) 2,000, Three-wheelers (MR) 100, Microbuses 14-seat (MCB) 800, Minibuses 25-seat (MB) 500, Buses (B) 250, Omnibuses (OB) 40, LGV 600, MGV 900, HGV 700, AHGV 550, Pedal Cycles 150. Total 11,590 vpd. The terrain is rolling. Determine the classification for capacity analysis using Kenya PCU factors, the heavy vehicle percentage, and which vehicles should be included in axle load surveys for pavement design.",
+      "expected_output": "Should use Kenya RDM 1.2 Table 2.1 classification system (not Uganda MoWT classes). Should identify vehicles for axle load survey per Table 7.3 (B, OB, MGV, HGV, AHGV -- commercial vehicles causing pavement damage). Should calculate heavy vehicle percentage. Should note that motorcycles are significant for capacity and safety but negligible for pavement. Should distinguish MCB (14-seat matatus) from MB (25-seat matatus) per RDM 1.2. Should not map to Uganda vehicle classes.",
+      "files": [],
+      "assertions": [
+        {
+          "text": "Uses Kenya RDM 1.2 Table 2.1 vehicle classification system (not Uganda MoWT Table 5-4)",
+          "passed": null,
+          "evidence": ""
+        },
+        {
+          "text": "Identifies vehicles for axle load survey using RDM 1.2 Table 7.3 categories (B, OB, MGV, HGV, AHGV)",
+          "passed": null,
+          "evidence": ""
+        },
+        {
+          "text": "Distinguishes between Microbus MCB (14-seat matatu) and Minibus MB (25-seat matatu) as separate classes",
+          "passed": null,
+          "evidence": ""
+        },
+        {
+          "text": "Notes that motorcycles (MC) and three-wheelers (MR) are significant for capacity/safety but negligible for pavement design",
+          "passed": null,
+          "evidence": ""
+        },
+        {
+          "text": "Calculates heavy vehicle percentage or commercial vehicle count for pavement purposes",
+          "passed": null,
+          "evidence": ""
+        }
+      ]
     }
   ]
 }

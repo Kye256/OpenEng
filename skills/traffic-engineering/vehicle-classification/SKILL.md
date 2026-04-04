@@ -11,7 +11,7 @@ description: "Use when mapping classified traffic counts to standard vehicle cat
 > **Status:** Draft
 > **Last Updated:** 2026-03-19
 > **Reviewed By:** --
-> **Country Modules:** Uganda, UK
+> **Country Modules:** Uganda, UK, Kenya
 
 ## Purpose
 

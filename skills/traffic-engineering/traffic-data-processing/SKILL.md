@@ -11,7 +11,7 @@ description: "Use when processing raw traffic count data into design parameters 
 > **Status:** Draft
 > **Last Updated:** 2026-03-19
 > **Reviewed By:** --
-> **Country Modules:** Uganda, UK
+> **Country Modules:** Uganda, UK, Kenya
 
 ## Purpose
 

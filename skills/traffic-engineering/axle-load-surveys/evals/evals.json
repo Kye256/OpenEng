@@ -84,6 +84,39 @@
           "evidence": ""
         }
       ]
+    },
+    {
+      "id": 3,
+      "prompt": "Plan an axle load survey for a KeNHA trunk road rehabilitation project in Kenya. The road is the A109 (Mombasa-Nairobi Highway), a 40 km section near Mtito Andei. Commercial vehicle volume is approximately 2,500 vpd (both directions). There are permanent weighbridges at Mariakani (A109) but none near the survey section. The road carries significant port traffic from Mombasa. Plan the survey including methodology, equipment, duration, vehicle classes to survey, sample size, and any Kenya-specific considerations.",
+      "expected_output": "Should reference Kenya RDM 1.2 Chapter 7 as the survey standard. Should specify vehicle classes from RDM 1.2 Table 7.3 (B, OB, LGV, MGV, HGV, AHGV). Should recommend 7-day continuous survey with static weigh pads. Should note that overloading is widespread and legal limits should not be used for design. Should note directional loading imbalance (Mombasa port traffic -- loaded vs empty direction). Should mention Kenya's weighbridge network (Table 7.2) and recommend obtaining historical data from KeNHA. Should note avoidance behaviour risk.",
+      "files": [],
+      "assertions": [
+        {
+          "text": "References Kenya RDM 1.2 Chapter 7 or Kenya axle load survey standards (not MoWT or DMRB)",
+          "passed": null,
+          "evidence": ""
+        },
+        {
+          "text": "Specifies vehicle classes from RDM 1.2 Table 7.3 for axle load surveys (B, OB, MGV, HGV, AHGV)",
+          "passed": null,
+          "evidence": ""
+        },
+        {
+          "text": "References KeNHA as the road authority and mentions Kenya weighbridge network or permanent weighbridges",
+          "passed": null,
+          "evidence": ""
+        },
+        {
+          "text": "Notes that overloading is widespread and measured loads (not legal limits) should be used for pavement design",
+          "passed": null,
+          "evidence": ""
+        },
+        {
+          "text": "Identifies directional loading imbalance or port traffic patterns as relevant to the survey design",
+          "passed": null,
+          "evidence": ""
+        }
+      ]
     }
   ]
 }
