@@ -1,0 +1,155 @@
+{
+  "skill_name": "rigid-pavement-design",
+  "skill_id": 71,
+  "domain": "Pavement Design",
+  "evals": [
+    {
+      "id": 0,
+      "title": "Kenya Class A Urban Rigid Pavement Design",
+      "type": "kenya_standard",
+      "prompt": "Design a rigid pavement for a new 4-lane Class A urban road in Nairobi with cumulative traffic of 50 MCESA, subgrade CBR of 5% (k-value 40 MPa/m), and available cement concrete with 4.5 MPa flexural strength. The road has fair drainage conditions. Specify the pavement type, slab thickness, joint design, reinforcement, and subbase requirements.",
+      "assertions": [
+        {
+          "type": "contains_reference",
+          "value": "RDM 3.5",
+          "description": "Must reference Kenya RDM 3.5 as design standard"
+        },
+        {
+          "type": "contains_any",
+          "values": ["JUC", "JRC", "CRCP"],
+          "description": "Must use Kenya slab type terminology (JUC, JRC, or CRCP)"
+        },
+        {
+          "type": "contains_any",
+          "values": ["CESA", "MCESA"],
+          "description": "Must use Kenya CESA traffic loading terminology"
+        },
+        {
+          "type": "contains_concept",
+          "value": "slab thickness",
+          "description": "Must provide a slab thickness value in mm"
+        },
+        {
+          "type": "contains_concept",
+          "value": "joint design OR reinforcement",
+          "description": "Must address joint layout or reinforcement requirements"
+        },
+        {
+          "type": "contains_any",
+          "values": ["lean concrete subbase", "cement-treated subbase", "subbase"],
+          "description": "Must specify Kenya subbase requirements"
+        },
+        {
+          "type": "contains_concept",
+          "value": "preliminary OR screening",
+          "description": "Must flag output as preliminary/screening level"
+        },
+        {
+          "type": "range_check",
+          "parameter": "slab_thickness_mm",
+          "min": 225,
+          "max": 300,
+          "description": "Slab thickness should be 225-300 mm for 50 MCESA at k=40 MPa/m"
+        }
+      ]
+    },
+    {
+      "id": 1,
+      "title": "Universal Toll Highway -- JPCP vs CRCP Comparison",
+      "type": "universal_cross_country",
+      "prompt": "Design a rigid pavement for a toll highway in a generic tropical country with 80 million ESALs, subgrade k=50 MPa/m, concrete flexural strength 4.0 MPa. Compare JPCP and CRCP options. For each option, provide slab thickness, joint design (or reinforcement for CRCP), and subbase. Recommend the preferred option with justification.",
+      "assertions": [
+        {
+          "type": "contains_any",
+          "values": ["AASHTO 1993", "AASHTO", "PCA"],
+          "description": "Must use AASHTO 1993 or PCA universal design method"
+        },
+        {
+          "type": "contains_reference",
+          "value": "JPCP",
+          "description": "Must cover JPCP option"
+        },
+        {
+          "type": "contains_reference",
+          "value": "CRCP",
+          "description": "Must cover CRCP option"
+        },
+        {
+          "type": "contains_concept",
+          "value": "thickness comparison",
+          "description": "Must provide thickness for both JPCP and CRCP"
+        },
+        {
+          "type": "contains_concept",
+          "value": "joint design OR joint spacing",
+          "description": "Must discuss joint design for JPCP and absence of joints for CRCP"
+        },
+        {
+          "type": "contains_concept",
+          "value": "reinforcement",
+          "description": "Must discuss CRCP reinforcement requirements"
+        },
+        {
+          "type": "contains_concept",
+          "value": "recommendation OR preferred",
+          "description": "Must provide a recommendation with justification"
+        },
+        {
+          "type": "range_check",
+          "parameter": "jpcp_thickness_mm",
+          "min": 250,
+          "max": 325,
+          "description": "JPCP thickness should be 250-325 mm for 80M ESALs at k=50"
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "title": "Low-Volume Urban Road -- Block Paving / Cobblestone Edge Case",
+      "type": "edge_case",
+      "prompt": "A low-volume urban road (0.5 MCESA, 40 km/h design speed) in a developing country needs a durable, low-maintenance surface. Local materials include natural stone and concrete blocks but limited asphalt supply. Recommend a rigid pavement type and provide the design. Consider labour availability, maintenance requirements, and long-term durability.",
+      "assertions": [
+        {
+          "type": "contains_any",
+          "values": ["block paving", "Block Paving", "cobblestone", "Cobblestone", "interlocking concrete block"],
+          "description": "Must consider block paving and/or cobblestone as options"
+        },
+        {
+          "type": "contains_concept",
+          "value": "low speed OR low traffic OR low volume",
+          "description": "Must account for low speed and low traffic context"
+        },
+        {
+          "type": "contains_concept",
+          "value": "labour OR employment OR labor",
+          "description": "Must discuss labour-intensive construction advantage"
+        },
+        {
+          "type": "contains_concept",
+          "value": "maintenance",
+          "description": "Must flag maintenance considerations"
+        },
+        {
+          "type": "contains_concept",
+          "value": "durability OR service life OR long-term",
+          "description": "Must address long-term durability"
+        },
+        {
+          "type": "contains_concept",
+          "value": "bedding OR base OR subbase",
+          "description": "Must specify structural layers below the surface"
+        },
+        {
+          "type": "not_contains",
+          "value": "CRCP",
+          "description": "Should NOT recommend CRCP for 0.5 MCESA -- grossly overdesigned"
+        },
+        {
+          "type": "contains_concept",
+          "value": "preliminary OR screening OR professional review",
+          "description": "Must flag output as preliminary level"
+        }
+      ]
+    }
+  ]
+}
