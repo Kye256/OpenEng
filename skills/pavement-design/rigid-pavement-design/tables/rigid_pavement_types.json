@@ -1,0 +1,191 @@
+{
+  "source": {
+    "manual": "AASHTO Design of Pavement Structures (1993), PCA Thickness Design for Concrete Highway and Street Pavements, General Practice",
+    "verification": "Compiled from multiple published sources"
+  },
+  "description": "Universal rigid pavement types with characteristics, applicability, and design parameters",
+  "pavement_types": [
+    {
+      "abbreviation": "JPCP",
+      "alternate_name": "JUC",
+      "full_name": "Jointed Plain Concrete Pavement",
+      "alternate_full_name": "Jointed Unreinforced Concrete",
+      "description": "Unreinforced concrete slabs with closely-spaced transverse contraction joints. The most common rigid pavement type worldwide.",
+      "reinforcement": "None (plain concrete)",
+      "transverse_joints": "Contraction joints at 4-6 m spacing, dowelled for traffic > 5 MCESA",
+      "longitudinal_joints": "Tie bars at lane and shoulder interfaces",
+      "typical_slab_thickness_mm": {"min": 150, "max": 300},
+      "typical_joint_spacing_m": {"min": 4.0, "max": 6.0},
+      "traffic_range_MCESA": {"min": 0.1, "max": 100},
+      "speed_range_kmh": {"min": 0, "max": 130},
+      "advantages": [
+        "Simple construction -- no reinforcement to place",
+        "Well-understood design methods (AASHTO 1993, PCA)",
+        "Lower material cost than reinforced types",
+        "Widest range of traffic applicability"
+      ],
+      "limitations": [
+        "Many joints to construct and maintain",
+        "Joint performance critical to pavement life",
+        "Joint faulting and pumping possible without dowels"
+      ]
+    },
+    {
+      "abbreviation": "JRCP",
+      "alternate_name": "JRC",
+      "full_name": "Jointed Reinforced Concrete Pavement",
+      "alternate_full_name": "Jointed Reinforced Concrete",
+      "description": "Concrete slabs with distributed reinforcement allowing wider joint spacing. Reinforcement holds mid-panel cracks tight, not for structural capacity.",
+      "reinforcement": "Distributed mesh or bar reinforcement, 0.10-0.25% of cross-section",
+      "transverse_joints": "Contraction joints at 8-15 m spacing, dowelled",
+      "longitudinal_joints": "Tie bars at lane and shoulder interfaces",
+      "typical_slab_thickness_mm": {"min": 175, "max": 325},
+      "typical_joint_spacing_m": {"min": 8.0, "max": 15.0},
+      "traffic_range_MCESA": {"min": 1, "max": 100},
+      "speed_range_kmh": {"min": 0, "max": 130},
+      "advantages": [
+        "Fewer joints than JPCP -- reduced construction and maintenance cost",
+        "Cracks held tight by reinforcement -- maintains aggregate interlock",
+        "Longer slab panels reduce joint-related distresses"
+      ],
+      "limitations": [
+        "Higher material cost (reinforcement)",
+        "More complex construction (steel placement)",
+        "Steel corrosion risk if cracks exceed 0.5 mm width"
+      ]
+    },
+    {
+      "abbreviation": "CRCP",
+      "alternate_name": null,
+      "full_name": "Continuously Reinforced Concrete Pavement",
+      "alternate_full_name": null,
+      "description": "No transverse joints. Continuous longitudinal reinforcement (0.60-0.70%) controls natural cracking to produce tight, closely-spaced transverse cracks.",
+      "reinforcement": "Continuous longitudinal 0.60-0.70% (deformed bars), transverse 0.05-0.10%",
+      "transverse_joints": "None (except at structures and terminals)",
+      "longitudinal_joints": "Tie bars at lane and shoulder interfaces",
+      "typical_slab_thickness_mm": {"min": 200, "max": 350},
+      "typical_joint_spacing_m": null,
+      "traffic_range_MCESA": {"min": 10, "max": 200},
+      "speed_range_kmh": {"min": 60, "max": 130},
+      "advantages": [
+        "No transverse joints -- excellent ride quality",
+        "Low maintenance -- no joint sealing or faulting",
+        "Longest service life of rigid pavement types (40+ years)",
+        "Best suited for very heavy traffic corridors"
+      ],
+      "limitations": [
+        "Highest initial cost (continuous reinforcement)",
+        "Complex terminal treatments at ends and structures",
+        "Difficult to repair -- punchouts require full-depth patching",
+        "Not economical for low-traffic roads"
+      ]
+    },
+    {
+      "abbreviation": "CRCB",
+      "alternate_name": null,
+      "full_name": "Continuously Reinforced Concrete Base",
+      "alternate_full_name": null,
+      "description": "Similar to CRCP but used as a base layer with thick asphalt surfacing (>=180 mm). Combines concrete rigidity with asphalt surface characteristics.",
+      "reinforcement": "Continuous longitudinal 0.60-0.70%, transverse 0.05-0.10%",
+      "transverse_joints": "None (except at structures and terminals)",
+      "longitudinal_joints": "Tie bars at lane and shoulder interfaces",
+      "typical_slab_thickness_mm": {"min": 200, "max": 300},
+      "typical_joint_spacing_m": null,
+      "traffic_range_MCESA": {"min": 30, "max": 200},
+      "speed_range_kmh": {"min": 60, "max": 130},
+      "advantages": [
+        "Surface maintenance by milling and overlay (no concrete surface repair)",
+        "Excellent structural capacity from concrete base",
+        "Good ride quality from asphalt surface",
+        "Can accommodate surface rutting repair without structural impact"
+      ],
+      "limitations": [
+        "Highest overall thickness (concrete base + asphalt surface)",
+        "Two construction operations (concrete then asphalt)",
+        "Reflection cracking through asphalt possible",
+        "Highest initial cost of all pavement types"
+      ]
+    },
+    {
+      "abbreviation": "RCC",
+      "alternate_name": null,
+      "full_name": "Roller Compacted Concrete",
+      "alternate_full_name": null,
+      "description": "Zero-slump concrete placed with asphalt paving equipment and compacted with vibratory rollers. No dowels, no forms. Rapid, economical placement.",
+      "reinforcement": "None",
+      "transverse_joints": "Contraction joints by early sawcutting at 3-6 m spacing",
+      "longitudinal_joints": "Sawcut at lane interfaces",
+      "typical_slab_thickness_mm": {"min": 150, "max": 250},
+      "typical_joint_spacing_m": {"min": 3.0, "max": 6.0},
+      "traffic_range_MCESA": {"min": 0.1, "max": 30},
+      "speed_range_kmh": {"min": 0, "max": 80},
+      "advantages": [
+        "Very rapid construction (no curing forms, no dowels)",
+        "Lower cost than conventional concrete",
+        "Uses asphalt paving equipment (widely available)",
+        "Suitable for large areas (industrial yards, ports)"
+      ],
+      "limitations": [
+        "Rough surface texture -- may need asphalt overlay for ride comfort",
+        "Lower flexural strength than conventional concrete",
+        "No dowel load transfer -- relies on aggregate interlock",
+        "Limited to lower speeds without asphalt surface"
+      ]
+    },
+    {
+      "abbreviation": "BP",
+      "alternate_name": null,
+      "full_name": "Block Paving",
+      "alternate_full_name": "Interlocking Concrete Block Pavement",
+      "description": "Interlocking concrete blocks (60-100 mm thick) laid on sand bedding over structural base. Labour-intensive, individually replaceable blocks.",
+      "reinforcement": "None (block interlock provides load distribution)",
+      "transverse_joints": "None (continuous surface with sand-filled joints between blocks)",
+      "longitudinal_joints": "Edge restraint required (kerbing or concrete edge beam)",
+      "typical_slab_thickness_mm": {"min": 60, "max": 100},
+      "typical_joint_spacing_m": null,
+      "traffic_range_MCESA": {"min": 0, "max": 5},
+      "speed_range_kmh": {"min": 0, "max": 60},
+      "advantages": [
+        "Labour-intensive construction (employment generation)",
+        "Individual blocks replaceable (easy maintenance)",
+        "No curing period (immediate trafficking after laying)",
+        "Can be constructed with minimal equipment",
+        "Suitable for irregular shapes and areas around structures"
+      ],
+      "limitations": [
+        "Limited to low/medium traffic and low speeds",
+        "Block displacement possible under heavy braking/turning",
+        "Sand bedding susceptible to washing out if drainage is poor",
+        "Ride quality inferior to concrete or asphalt"
+      ]
+    },
+    {
+      "abbreviation": "CS",
+      "alternate_name": null,
+      "full_name": "Cobblestone Paving",
+      "alternate_full_name": null,
+      "description": "Natural or dressed stone blocks (100-200 mm thick) laid on sand or mortar bedding. Very durable, locally-sourced material, labour-intensive construction.",
+      "reinforcement": "None",
+      "transverse_joints": "None (continuous surface with mortar or sand-filled joints)",
+      "longitudinal_joints": "Edge restraint required",
+      "typical_slab_thickness_mm": {"min": 100, "max": 200},
+      "typical_joint_spacing_m": null,
+      "traffic_range_MCESA": {"min": 0, "max": 2},
+      "speed_range_kmh": {"min": 0, "max": 50},
+      "advantages": [
+        "Very long service life (50+ years)",
+        "Uses locally available natural stone",
+        "Labour-intensive (employment-intensive programmes)",
+        "Extremely durable in tropical climates",
+        "Low technology requirement"
+      ],
+      "limitations": [
+        "Rough ride quality -- noise and vibration",
+        "Very low speed suitability only",
+        "Difficult access to underground services",
+        "Skilled stonemasons required for dressed stone",
+        "Not suitable for high-speed or heavy traffic"
+      ]
+    }
+  ]
+}

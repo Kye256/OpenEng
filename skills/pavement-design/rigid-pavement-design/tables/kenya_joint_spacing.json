@@ -1,0 +1,159 @@
+{
+  "source": {
+    "manual": "Kenya RDM 3.5",
+    "edition": "2025",
+    "verification": "Verified against PDF"
+  },
+  "description": "Kenya joint spacing, dowel bar, and tie bar requirements by slab type and thickness from RDM 3.5",
+  "transverse_joint_spacing": [
+    {
+      "slab_type": "JUC",
+      "slab_thickness_mm": 200,
+      "joint_spacing_m": 4.5,
+      "sawcut_depth_fraction": 0.25,
+      "sawcut_timing_hours": "6-12",
+      "notes": "Minimum JUC thickness for Kenya trunk roads"
+    },
+    {
+      "slab_type": "JUC",
+      "slab_thickness_mm": 225,
+      "joint_spacing_m": 4.5,
+      "sawcut_depth_fraction": 0.25,
+      "sawcut_timing_hours": "6-12",
+      "notes": "Standard for moderate traffic (5-10 MCESA)"
+    },
+    {
+      "slab_type": "JUC",
+      "slab_thickness_mm": 250,
+      "joint_spacing_m": 5.0,
+      "sawcut_depth_fraction": 0.25,
+      "sawcut_timing_hours": "6-12",
+      "notes": "Standard for heavy traffic (10-30 MCESA)"
+    },
+    {
+      "slab_type": "JUC",
+      "slab_thickness_mm": 275,
+      "joint_spacing_m": 5.5,
+      "sawcut_depth_fraction": 0.25,
+      "sawcut_timing_hours": "6-12",
+      "notes": "Maximum JUC thickness -- consider JRC or CRCP for higher traffic"
+    },
+    {
+      "slab_type": "JRC",
+      "slab_thickness_mm": 225,
+      "joint_spacing_m": 8.0,
+      "sawcut_depth_fraction": 0.25,
+      "sawcut_timing_hours": "6-12",
+      "notes": "Minimum JRC thickness; reinforcement holds mid-panel cracks"
+    },
+    {
+      "slab_type": "JRC",
+      "slab_thickness_mm": 250,
+      "joint_spacing_m": 10.0,
+      "sawcut_depth_fraction": 0.25,
+      "sawcut_timing_hours": "6-12",
+      "notes": "Standard JRC panel length"
+    },
+    {
+      "slab_type": "JRC",
+      "slab_thickness_mm": 275,
+      "joint_spacing_m": 10.0,
+      "sawcut_depth_fraction": 0.25,
+      "sawcut_timing_hours": "6-12",
+      "notes": "Heavy traffic JRC"
+    },
+    {
+      "slab_type": "JRC",
+      "slab_thickness_mm": 300,
+      "joint_spacing_m": 12.0,
+      "sawcut_depth_fraction": 0.25,
+      "sawcut_timing_hours": "6-12",
+      "notes": "Maximum JRC panel length in Kenya"
+    },
+    {
+      "slab_type": "RCC",
+      "slab_thickness_mm": 150,
+      "joint_spacing_m": 3.5,
+      "sawcut_depth_fraction": 0.33,
+      "sawcut_timing_hours": "4-8",
+      "notes": "RCC requires earlier sawcutting due to rapid strength gain"
+    },
+    {
+      "slab_type": "RCC",
+      "slab_thickness_mm": 200,
+      "joint_spacing_m": 4.5,
+      "sawcut_depth_fraction": 0.33,
+      "sawcut_timing_hours": "4-8",
+      "notes": "Standard RCC thickness"
+    },
+    {
+      "slab_type": "RCC",
+      "slab_thickness_mm": 225,
+      "joint_spacing_m": 5.0,
+      "sawcut_depth_fraction": 0.33,
+      "sawcut_timing_hours": "4-8",
+      "notes": "Maximum RCC thickness"
+    }
+  ],
+  "dowel_bars": {
+    "description": "Kenya dowel bar specification from RDM 3.5",
+    "material": "Smooth round steel, Grade 500, epoxy-coated for trunk roads",
+    "sizing": [
+      {
+        "slab_thickness_mm": {"min": 200, "max": 200},
+        "dowel_diameter_mm": 25,
+        "dowel_length_mm": 450,
+        "dowel_spacing_mm": 300
+      },
+      {
+        "slab_thickness_mm": {"min": 225, "max": 250},
+        "dowel_diameter_mm": 32,
+        "dowel_length_mm": 450,
+        "dowel_spacing_mm": 300
+      },
+      {
+        "slab_thickness_mm": {"min": 275, "max": 300},
+        "dowel_diameter_mm": 32,
+        "dowel_length_mm": 500,
+        "dowel_spacing_mm": 300
+      },
+      {
+        "slab_thickness_mm": {"min": 300, "max": 325},
+        "dowel_diameter_mm": 38,
+        "dowel_length_mm": 500,
+        "dowel_spacing_mm": 300
+      }
+    ],
+    "notes": [
+      "Dowels required for all JUC with traffic > 5 MCESA",
+      "Dowels required for all JRC",
+      "Dowels NOT used in RCC, block paving, or cobblestone",
+      "Epoxy coating mandatory on KeNHA Class A and B trunk roads",
+      "Alignment tolerance: +/-6 mm vertical, +/-6 mm horizontal, +/-10 mm longitudinal"
+    ]
+  },
+  "tie_bars": {
+    "description": "Kenya tie bar specification for longitudinal joints from RDM 3.5",
+    "material": "Deformed reinforcing bar, Grade 500 per KS EAS",
+    "sizing": [
+      {
+        "application": "Lane-lane longitudinal joint (standard)",
+        "tie_bar_diameter_mm": 12,
+        "tie_bar_length_mm": 600,
+        "tie_bar_spacing_mm": 750
+      },
+      {
+        "application": "Lane-lane joint (wide lane > 3.65 m)",
+        "tie_bar_diameter_mm": 16,
+        "tie_bar_length_mm": 800,
+        "tie_bar_spacing_mm": 600
+      },
+      {
+        "application": "Lane-shoulder joint",
+        "tie_bar_diameter_mm": 12,
+        "tie_bar_length_mm": 600,
+        "tie_bar_spacing_mm": 900
+      }
+    ]
+  }
+}

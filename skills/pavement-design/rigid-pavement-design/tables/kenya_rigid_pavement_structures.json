@@ -1,0 +1,146 @@
+{
+  "source": {
+    "manual": "Kenya RDM 3.5",
+    "edition": "2025",
+    "verification": "Verified against PDF"
+  },
+  "description": "Kenya rigid pavement structures from RDM 3.5 with slab types, thicknesses, subbase requirements, and applicable traffic ranges",
+  "structures": [
+    {
+      "type": "JUC",
+      "full_name": "Jointed Unreinforced Concrete",
+      "cesa_range_millions": {"min": 3, "max": 80},
+      "slab_thickness_mm": {"min": 200, "max": 275},
+      "concrete_class": "FC45",
+      "modulus_of_rupture_MPa": 4.5,
+      "design_life_years": 30,
+      "subbase": {
+        "type_low_traffic": "Cement-treated (CESA 3-10M)",
+        "type_high_traffic": "Lean concrete (CESA >10M)",
+        "thickness_mm": 150,
+        "bond_breaker": "200 micron polyethylene or 2x bituminous emulsion"
+      },
+      "joint_type": "Transverse contraction, dowelled",
+      "joint_spacing_m": {"min": 4.5, "max": 5.5},
+      "dowels_required": true,
+      "reinforcement": "None",
+      "notes": "Standard Kenya trunk road rigid pavement. Most commonly specified by KeNHA."
+    },
+    {
+      "type": "JRC",
+      "full_name": "Jointed Reinforced Concrete",
+      "cesa_range_millions": {"min": 10, "max": 100},
+      "slab_thickness_mm": {"min": 225, "max": 300},
+      "concrete_class": "FC45",
+      "modulus_of_rupture_MPa": 4.5,
+      "design_life_years": 30,
+      "subbase": {
+        "type": "Lean concrete",
+        "thickness_mm": 150,
+        "bond_breaker": "200 micron polyethylene or 2x bituminous emulsion"
+      },
+      "joint_type": "Transverse contraction, dowelled",
+      "joint_spacing_m": {"min": 8.0, "max": 12.0},
+      "dowels_required": true,
+      "reinforcement": "Distributed mesh 0.12-0.20% of cross-section",
+      "notes": "Fewer joints than JUC. Used where maintenance access is difficult."
+    },
+    {
+      "type": "CRCP",
+      "full_name": "Continuously Reinforced Concrete Pavement",
+      "cesa_range_millions": {"min": 50, "max": 200},
+      "slab_thickness_mm": {"min": 200, "max": 300},
+      "concrete_class": "FC45 to FC50",
+      "modulus_of_rupture_MPa": 4.5,
+      "design_life_years": 40,
+      "subbase": {
+        "type": "Lean concrete",
+        "thickness_mm": 150,
+        "bond_breaker": "200 micron polyethylene"
+      },
+      "joint_type": "None (continuous reinforcement controls cracking)",
+      "joint_spacing_m": null,
+      "dowels_required": false,
+      "reinforcement": "Longitudinal >= 0.62%, transverse 0.05-0.10%",
+      "notes": "Kenya minimum longitudinal steel 0.62%. Preferred by KeNHA for Class A expressways."
+    },
+    {
+      "type": "CRCB",
+      "full_name": "Continuously Reinforced Concrete Base",
+      "cesa_range_millions": {"min": 80, "max": 200},
+      "slab_thickness_mm": {"min": 200, "max": 250},
+      "concrete_class": "FC45",
+      "modulus_of_rupture_MPa": 4.5,
+      "design_life_years": 40,
+      "subbase": {
+        "type": "Lean concrete",
+        "thickness_mm": 150,
+        "bond_breaker": "200 micron polyethylene"
+      },
+      "asphalt_surfacing_mm": {"min": 180},
+      "joint_type": "None (continuous reinforcement)",
+      "joint_spacing_m": null,
+      "dowels_required": false,
+      "reinforcement": "Longitudinal >= 0.62%, transverse 0.05-0.10%",
+      "notes": "Concrete base with asphalt surface. Highest-traffic corridors where surface maintenance flexibility needed."
+    },
+    {
+      "type": "RCC",
+      "full_name": "Roller Compacted Concrete",
+      "cesa_range_millions": {"min": 0.5, "max": 15},
+      "slab_thickness_mm": {"min": 150, "max": 225},
+      "concrete_class": "FC35 to FC40",
+      "modulus_of_rupture_MPa": 3.5,
+      "design_life_years": 25,
+      "subbase": {
+        "type_low_traffic": "Granular (CESA <5M)",
+        "type_high_traffic": "Cement-treated (CESA 5-15M)",
+        "thickness_mm": 150,
+        "bond_breaker": "Not required for granular; required for cement-treated"
+      },
+      "joint_type": "Contraction joints by sawcutting",
+      "joint_spacing_m": {"min": 3.5, "max": 5.0},
+      "dowels_required": false,
+      "reinforcement": "None",
+      "notes": "Rapid construction. Thin asphalt overlay (40-50 mm) recommended for roads >60 km/h."
+    },
+    {
+      "type": "BP",
+      "full_name": "Block Paving",
+      "cesa_range_millions": {"min": 0, "max": 5},
+      "block_thickness_mm": {"vehicular": 80, "pedestrian": 60},
+      "bedding_thickness_mm": {"min": 25, "max": 30},
+      "design_life_years": 20,
+      "subbase": {
+        "type": "Per flexible pavement catalogue for traffic class",
+        "thickness_mm": "Per RDM 3.2",
+        "bond_breaker": "Not applicable"
+      },
+      "joint_type": "Sand-filled joints between blocks",
+      "joint_spacing_m": null,
+      "dowels_required": false,
+      "reinforcement": "None",
+      "speed_limit_kmh": 60,
+      "notes": "Common at bus stops, roundabouts, urban access roads. Labour-intensive construction."
+    },
+    {
+      "type": "CS",
+      "full_name": "Cobblestone Paving",
+      "cesa_range_millions": {"min": 0, "max": 2},
+      "stone_thickness_mm": {"dressed": 120, "natural": 150},
+      "bedding_thickness_mm": {"min": 30, "max": 40},
+      "design_life_years": 30,
+      "subbase": {
+        "type": "Granular",
+        "thickness_mm": 150,
+        "bond_breaker": "Not applicable"
+      },
+      "joint_type": "Mortar or sand-filled joints",
+      "joint_spacing_m": null,
+      "dowels_required": false,
+      "reinforcement": "None",
+      "speed_limit_kmh": 50,
+      "notes": "KeRRA employment-intensive programme. Natural stone (granite, basalt, phonolite) available across Kenya."
+    }
+  ]
+}

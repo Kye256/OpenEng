@@ -1,0 +1,140 @@
+{
+  "source": {
+    "manual": "AASHTO Design of Pavement Structures (1993), PCA Practice Guides, FHWA Technical Advisory T 5040.30",
+    "verification": "Compiled from published design guides"
+  },
+  "description": "Universal dowel bar and tie bar sizing parameters for rigid pavement joint design",
+  "dowel_bars": {
+    "description": "Dowel bar sizing by slab thickness for transverse joints",
+    "notes": [
+      "Dowels are smooth round steel bars (Grade 300 or 500)",
+      "Epoxy-coated or stainless steel in corrosive environments",
+      "One end greased or capped to allow free horizontal movement",
+      "Placed at slab mid-depth with alignment tolerance +/-6 mm vertical/horizontal",
+      "Dowels extend equal length on both sides of the joint"
+    ],
+    "sizing_table": [
+      {
+        "slab_thickness_mm": {"min": 150, "max": 175},
+        "dowel_diameter_mm": 25,
+        "dowel_length_mm": 450,
+        "dowel_spacing_mm": 300,
+        "notes": "Light traffic applications"
+      },
+      {
+        "slab_thickness_mm": {"min": 175, "max": 200},
+        "dowel_diameter_mm": 25,
+        "dowel_length_mm": 450,
+        "dowel_spacing_mm": 300,
+        "notes": "Standard for thin slabs"
+      },
+      {
+        "slab_thickness_mm": {"min": 200, "max": 225},
+        "dowel_diameter_mm": 32,
+        "dowel_length_mm": 450,
+        "dowel_spacing_mm": 300,
+        "notes": "Most common highway thickness range"
+      },
+      {
+        "slab_thickness_mm": {"min": 225, "max": 250},
+        "dowel_diameter_mm": 32,
+        "dowel_length_mm": 450,
+        "dowel_spacing_mm": 300,
+        "notes": "Standard highway thickness"
+      },
+      {
+        "slab_thickness_mm": {"min": 250, "max": 275},
+        "dowel_diameter_mm": 32,
+        "dowel_length_mm": 450,
+        "dowel_spacing_mm": 300,
+        "notes": "Heavy traffic thickness"
+      },
+      {
+        "slab_thickness_mm": {"min": 275, "max": 300},
+        "dowel_diameter_mm": 38,
+        "dowel_length_mm": 450,
+        "dowel_spacing_mm": 300,
+        "notes": "Heavy traffic thickness"
+      },
+      {
+        "slab_thickness_mm": {"min": 300, "max": 325},
+        "dowel_diameter_mm": 38,
+        "dowel_length_mm": 450,
+        "dowel_spacing_mm": 300,
+        "notes": "Very heavy traffic"
+      },
+      {
+        "slab_thickness_mm": {"min": 325, "max": 350},
+        "dowel_diameter_mm": 38,
+        "dowel_length_mm": 500,
+        "dowel_spacing_mm": 300,
+        "notes": "Maximum standard thickness -- escalate if thicker needed"
+      }
+    ]
+  },
+  "tie_bars": {
+    "description": "Tie bar sizing for longitudinal joints",
+    "notes": [
+      "Tie bars are deformed reinforcing bars (Grade 500)",
+      "Must develop bond on both sides of the joint",
+      "Placed at slab mid-depth",
+      "Length includes embedment on both sides plus joint width"
+    ],
+    "sizing_table": [
+      {
+        "joint_type": "Lane-lane longitudinal joint",
+        "tie_bar_diameter_mm": 12,
+        "tie_bar_length_mm": 600,
+        "tie_bar_spacing_mm": 750,
+        "notes": "Standard lane joint, slab thickness 150-250 mm"
+      },
+      {
+        "joint_type": "Lane-lane longitudinal joint (thick slab)",
+        "tie_bar_diameter_mm": 16,
+        "tie_bar_length_mm": 800,
+        "tie_bar_spacing_mm": 600,
+        "notes": "Lane joint, slab thickness > 250 mm"
+      },
+      {
+        "joint_type": "Lane-shoulder joint",
+        "tie_bar_diameter_mm": 12,
+        "tie_bar_length_mm": 600,
+        "tie_bar_spacing_mm": 900,
+        "notes": "Wider spacing acceptable at shoulder"
+      },
+      {
+        "joint_type": "Wide lane joint (lane > 4.5 m)",
+        "tie_bar_diameter_mm": 16,
+        "tie_bar_length_mm": 900,
+        "tie_bar_spacing_mm": 600,
+        "notes": "Increased bar size and length for wide lanes"
+      }
+    ]
+  },
+  "joint_sealant": {
+    "description": "Joint sealant type selection guide",
+    "types": [
+      {
+        "type": "Hot-pour rubberised asphalt",
+        "joint_movement_mm": {"max": 6},
+        "service_life_years": "5-10",
+        "application": "Standard for most joints, moderate movement",
+        "notes": "ASTM D6690 Type II or IV"
+      },
+      {
+        "type": "Silicone sealant",
+        "joint_movement_mm": {"max": 12},
+        "service_life_years": "10-20",
+        "application": "Wide joints, large temperature range",
+        "notes": "ASTM D5893 Type NS or LS"
+      },
+      {
+        "type": "Preformed compression seal",
+        "joint_movement_mm": {"max": 10},
+        "service_life_years": "10-15",
+        "application": "High-quality joints, minimal maintenance",
+        "notes": "ASTM D2628, requires precise joint width"
+      }
+    ]
+  }
+}
