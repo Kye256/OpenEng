@@ -1,0 +1,75 @@
+{
+  "source": {
+    "manual": "Kenya Road Design Manual RDM 1.3",
+    "table": "Tables 6.1, 6.2, 6.4",
+    "page": "120-122",
+    "verified": true,
+    "verified_date": "2026-04-04"
+  },
+  "description": "K-values for crest and sag vertical curves by design speed. Crest K based on SSD with eye height 1.05 m and object height 0.2 m. Sag K for both driver comfort and headlight distance criteria.",
+  "unit": "m per % grade change",
+  "note": "Kenya uses h1=1.05m eye height and h2=0.2m object height (Table 3.13), which differ from Uganda (h1=1.07m, h2=0.15m). This results in different K-values. Minimum curve lengths from Table 6.3.",
+  "data": {
+    "crest_paved": {
+      "description": "Minimum K for crest vertical curves on paved roads (Table 6.1)",
+      "values": [
+        {"design_speed_kmh": 25, "K_ssd": 1, "K_psd": 30},
+        {"design_speed_kmh": 30, "K_ssd": 2, "K_psd": 50},
+        {"design_speed_kmh": 40, "K_ssd": 5, "K_psd": 90},
+        {"design_speed_kmh": 50, "K_ssd": 10, "K_psd": 130},
+        {"design_speed_kmh": 60, "K_ssd": 17, "K_psd": 180},
+        {"design_speed_kmh": 70, "K_ssd": 30, "K_psd": 245},
+        {"design_speed_kmh": 80, "K_ssd": 45, "K_psd": 315},
+        {"design_speed_kmh": 85, "K_ssd": 55, "K_psd": 350},
+        {"design_speed_kmh": 90, "K_ssd": 67, "K_psd": 390},
+        {"design_speed_kmh": 100, "K_ssd": 100, "K_psd": 480},
+        {"design_speed_kmh": 110, "K_ssd": 140, "K_psd": 580},
+        {"design_speed_kmh": 120, "K_ssd": 185, "K_psd": 680}
+      ]
+    },
+    "crest_unpaved": {
+      "description": "Minimum K for crest vertical curves on unpaved roads (Table 6.2)",
+      "values": [
+        {"design_speed_kmh": 25, "K_ssd": 1, "K_psd": 30},
+        {"design_speed_kmh": 30, "K_ssd": 2, "K_psd": 50},
+        {"design_speed_kmh": 40, "K_ssd": 6, "K_psd": 90},
+        {"design_speed_kmh": 50, "K_ssd": 11, "K_psd": 135},
+        {"design_speed_kmh": 60, "K_ssd": 20, "K_psd": 185},
+        {"design_speed_kmh": 70, "K_ssd": 35, "K_psd": 245},
+        {"design_speed_kmh": 80, "K_ssd": 58, "K_psd": 315},
+        {"design_speed_kmh": 85, "K_ssd": 72, "K_psd": 350},
+        {"design_speed_kmh": 90, "K_ssd": 90, "K_psd": 390},
+        {"design_speed_kmh": 100, "K_ssd": 130, "K_psd": 480}
+      ]
+    },
+    "sag": {
+      "description": "Minimum K for sag vertical curves (Table 6.4). Two criteria: driver comfort (K > V^2/395) and headlight distance.",
+      "values": [
+        {"design_speed_kmh": 20, "K_comfort": 1.0, "K_headlight": 2},
+        {"design_speed_kmh": 25, "K_comfort": 1.5, "K_headlight": 3},
+        {"design_speed_kmh": 30, "K_comfort": 2.5, "K_headlight": 5},
+        {"design_speed_kmh": 40, "K_comfort": 4, "K_headlight": 9},
+        {"design_speed_kmh": 50, "K_comfort": 6.5, "K_headlight": 14},
+        {"design_speed_kmh": 60, "K_comfort": 9, "K_headlight": 19},
+        {"design_speed_kmh": 70, "K_comfort": 12, "K_headlight": 25},
+        {"design_speed_kmh": 80, "K_comfort": 16, "K_headlight": 32},
+        {"design_speed_kmh": 85, "K_comfort": 18, "K_headlight": 36},
+        {"design_speed_kmh": 90, "K_comfort": 20, "K_headlight": 40},
+        {"design_speed_kmh": 100, "K_comfort": 25, "K_headlight": 50},
+        {"design_speed_kmh": 110, "K_comfort": 30, "K_headlight": 60},
+        {"design_speed_kmh": 120, "K_comfort": 36, "K_headlight": 70}
+      ]
+    },
+    "minimum_curve_lengths": {
+      "description": "Minimum lengths of vertical curves (Table 6.3)",
+      "values": [
+        {"design_speed_kmh": 40, "min_length_m": 80},
+        {"design_speed_kmh": 60, "min_length_m": 100},
+        {"design_speed_kmh": 80, "min_length_m": 140},
+        {"design_speed_kmh": 100, "min_length_m": 180},
+        {"design_speed_kmh": 120, "min_length_m": 220},
+        {"design_speed_kmh": 130, "min_length_m": 240}
+      ]
+    }
+  }
+}

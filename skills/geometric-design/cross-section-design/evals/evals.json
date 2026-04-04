@@ -94,6 +94,39 @@
           "evidence": ""
         }
       ]
+    },
+    {
+      "id": 3,
+      "prompt": "Determine the cross-section parameters for a Class A road in Kenya using design standard DR2. The road is an inter-urban highway on flat terrain. Using the Kenya Road Design Manual RDM 1.3, specify the lane width, shoulder width, carriageway configuration, crossfall, and identify the standard cross-section type. Also note the expressway (DR1) cross-section for comparison.",
+      "expected_output": "From Kenya RDM Table 4.1: Class A lane width = 3.65 m. From Table 4.2: Class A shoulder width = 2.7 m. DR2 maps to cross-section R3 or R4 (Table 2.7). R3: 2-carriageway road with 3.65m lanes, 2.70m outer shoulder, 1.00m inner shoulder, 2.00m central median. If using R4: single carriageway with 3.65m lane and 2.50m shoulders. Crossfall: 2.5% (paved). For DR1 expressway comparison: R1 has 4 carriageways, frontage road, full access control.",
+      "files": ["tables/kenya_cross_sections.json"],
+      "assertions": [
+        {
+          "text": "Lane width is 3.65 m for Class A per Kenya RDM Table 4.1 (not 3.5 m Uganda value)",
+          "passed": null,
+          "evidence": ""
+        },
+        {
+          "text": "Shoulder width is 2.7 m for Class A per Table 4.2",
+          "passed": null,
+          "evidence": ""
+        },
+        {
+          "text": "Cross-section type identified as R3 or R4 for DR2 standard",
+          "passed": null,
+          "evidence": ""
+        },
+        {
+          "text": "Crossfall is 2.5% for paved road per Section 4.3.4",
+          "passed": null,
+          "evidence": ""
+        },
+        {
+          "text": "Expressway DR1 cross-section (R1) described with divided carriageway, median, and full access control",
+          "passed": null,
+          "evidence": ""
+        }
+      ]
     }
   ]
 }

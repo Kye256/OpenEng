@@ -94,6 +94,39 @@
           "evidence": ""
         }
       ]
+    },
+    {
+      "id": 3,
+      "prompt": "Design a horizontal curve for a Class B national highway in Kenya. The design speed is 90 km/h (rolling terrain), the maximum superelevation is 6% (emax = 0.06, rural road per Kenya RDM standard), and the terrain is rolling. Using the Kenya Road Design Manual RDM 1.3 and the formula R = V^2 / (127 * (e + f)), determine the minimum radius, check whether a transition curve is required for a proposed radius of 400 m, and calculate the superelevation rate.",
+      "expected_output": "Using R_min = V^2 / (127 * (emax + fmax)) with V=90, emax=0.06, fmax=0.12 (from RDM Table 3.14 side friction for paved at 90 km/h): R_min = 8100 / (127 * 0.18) = 8100 / 22.86 = approximately 355 m. For R = 400 m: superelevation from R = V^2/(127*(e+f)) gives e = (8100/(127*400)) - 0.12 = 0.1594 - 0.12 = 0.039 = 3.9%. Transition curve: Table 5.8 says transition required if R < 480 m at 90 km/h, so transition IS required for R = 400 m.",
+      "files": [],
+      "assertions": [
+        {
+          "text": "Minimum radius calculated as approximately 355 m for 90 km/h with emax = 6% (from Kenya RDM Table 5.1)",
+          "passed": null,
+          "evidence": ""
+        },
+        {
+          "text": "Uses Kenya RDM side friction factor f = 0.12 at 90 km/h (from Table 3.14), not Uganda values",
+          "passed": null,
+          "evidence": ""
+        },
+        {
+          "text": "Superelevation rate for 400 m radius calculated as approximately 3.5-4.5% (within Kenya emax 6%)",
+          "passed": null,
+          "evidence": ""
+        },
+        {
+          "text": "Correctly identifies that transition curve IS required because R = 400 m < 480 m threshold from Table 5.8",
+          "passed": null,
+          "evidence": ""
+        },
+        {
+          "text": "References Kenya RDM 1.3 (not Uganda MoWT or AASHTO) for parameter values",
+          "passed": null,
+          "evidence": ""
+        }
+      ]
     }
   ]
 }

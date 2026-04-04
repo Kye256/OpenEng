@@ -103,6 +103,41 @@
           "evidence": ""
         }
       ]
+    },
+    {
+      "id": 3,
+      "prompt": "Calculate the stopping sight distance for a Class B road in Kenya with a design speed of 90 km/h on a 3% downgrade. Use the Kenya Road Design Manual RDM 1.3. Provide the desirable and minimum SSD values, state the friction factor used, and compare the Kenya eye height and object height assumptions with Uganda's.",
+      "expected_output": "From Kenya RDM Table 3.15 (desirable SSD) at 90 km/h on -3% downgrade: 170 m. From Table 3.16 (minimum SSD) at 90 km/h on -3% downgrade: 125 m. Friction factor from Table 3.14: f = 0.295 at 90 km/h for paved road. Kenya assumptions: eye height 1.05 m, object height 0.2 m (Table 3.13). Uganda uses 1.07 m and 0.15 m respectively -- different values mean Kenya and Uganda K-values and SSD cannot be interchanged.",
+      "files": [
+        "skills/geometric-design/sight-distance/tables/kenya_ssd.json"
+      ],
+      "assertions": [
+        {
+          "text": "Desirable SSD at 90 km/h on -3% downgrade is approximately 170 m (from Kenya RDM Table 3.15)",
+          "passed": null,
+          "evidence": ""
+        },
+        {
+          "text": "Minimum SSD at 90 km/h on -3% downgrade is approximately 125 m (from Kenya RDM Table 3.16)",
+          "passed": null,
+          "evidence": ""
+        },
+        {
+          "text": "Kenya friction factor f approximately 0.29-0.30 at 90 km/h (from Table 3.14)",
+          "passed": null,
+          "evidence": ""
+        },
+        {
+          "text": "Kenya eye height stated as 1.05 m and object height as 0.2 m (from Table 3.13)",
+          "passed": null,
+          "evidence": ""
+        },
+        {
+          "text": "Correctly identifies that Kenya and Uganda use different eye/object height assumptions and values cannot be interchanged",
+          "passed": null,
+          "evidence": ""
+        }
+      ]
     }
   ]
 }

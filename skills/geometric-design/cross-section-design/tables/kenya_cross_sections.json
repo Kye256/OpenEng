@@ -1,0 +1,270 @@
+{
+  "source": {
+    "manual": "Kenya Road Design Manual RDM 1.3",
+    "table": "Tables 4.1, 4.2, 4.23, 4.24",
+    "page": "60-90",
+    "verified": true,
+    "verified_date": "2026-04-04"
+  },
+  "description": "Cross-section parameters by road class and context for Kenya roads. Rural cross-sections R1-R9 and urban cross-sections U1-U9.",
+  "data": {
+    "lane_widths": {
+      "description": "Typical lane widths for paved roads (Table 4.1)",
+      "values": [
+        {"road_class": "A", "lane_width_m": 3.65, "category": "inter-urban"},
+        {"road_class": "B", "lane_width_m": 3.65, "category": "inter-urban"},
+        {"road_class": "C", "lane_width_m": 3.50, "category": "inter-urban"},
+        {"road_class": "D", "lane_width_m": 3.50, "category": "rural"},
+        {"road_class": "E", "lane_width_m": "3.25-3.50", "category": "rural"},
+        {"road_class": "F-W", "lane_width_m": "3.00-3.50", "category": "rural_local"},
+        {"road_class": "UA", "lane_width_m": 3.75, "category": "urban"},
+        {"road_class": "UC", "lane_width_m": 3.75, "category": "urban"},
+        {"road_class": "UL", "lane_width_m": "3.00-3.50", "category": "urban"}
+      ]
+    },
+    "shoulder_widths": {
+      "description": "Recommended shoulder widths (Table 4.2)",
+      "values": [
+        {"road_class": "A", "shoulder_width_m": 2.7},
+        {"road_class": "B", "shoulder_width_m": 2.7},
+        {"road_class": "C", "shoulder_width_m": 2.0},
+        {"road_class": "D", "shoulder_width_m": 1.5},
+        {"road_class": "E", "shoulder_width_m": 1.0},
+        {"road_class": "F-W", "shoulder_width_m": 1.0},
+        {"road_class": "UA", "shoulder_width_m": "1.0-1.5"},
+        {"road_class": "UC", "shoulder_width_m": "1.0-1.5"},
+        {"road_class": "UL", "shoulder_width_m": "1.0-1.5"}
+      ]
+    },
+    "crossfall": {
+      "paved_carriageway": "2.5%",
+      "gravel_carriageway": "4%",
+      "earth_carriageway": "5%",
+      "shoulder_all": "4%",
+      "source": "Section 4.3.4, Table 4.3"
+    },
+    "rural_cross_sections": {
+      "description": "Standard cross-sections for inter-urban and rural roads (Table 4.23)",
+      "sections": [
+        {
+          "cross_section": "R1",
+          "surface_type": "Paved",
+          "carriageways": 4,
+          "lanes_per_direction": "2-3",
+          "lane_width_m": 3.65,
+          "inner_shoulder_m": 1.50,
+          "outer_shoulder_m": 2.70,
+          "central_median_m": 2.00,
+          "outer_separator_m": 2.00,
+          "frontage_road_mt_lane_m": "2x3.25",
+          "frontage_shoulder_m": 1.50,
+          "access_control": "Full",
+          "description": "4-carriageway road with 2-way 2-lane frontage road, expressway with outer and inner shoulders, central median"
+        },
+        {
+          "cross_section": "R2",
+          "surface_type": "Paved",
+          "carriageways": 4,
+          "lanes_per_direction": "2-3",
+          "lane_width_m": 3.65,
+          "inner_shoulder_m": 1.50,
+          "outer_shoulder_m": 2.70,
+          "central_median_m": 2.00,
+          "outer_separator_m": 2.00,
+          "frontage_road_mt_lane_m": "1x3.25",
+          "access_control": "Full",
+          "description": "4-carriageway road with 1-way MT lane, expressway with outer and inner shoulders"
+        },
+        {
+          "cross_section": "R3",
+          "surface_type": "Paved",
+          "carriageways": 2,
+          "lanes_per_direction": "1-3",
+          "lane_width_m": 3.65,
+          "inner_shoulder_m": 1.00,
+          "outer_shoulder_m": 2.70,
+          "central_median_m": 2.00,
+          "access_control": "Full/Partial",
+          "description": "2-carriageway road, MT expressway with outer and inner shoulders and central median"
+        },
+        {
+          "cross_section": "R4",
+          "surface_type": "Paved",
+          "carriageways": 1,
+          "lanes_per_direction": 1,
+          "lane_width_m": 3.65,
+          "outer_shoulder_m": 2.50,
+          "access_control": "Partial",
+          "description": "Single carriageway road with 2-way 3.65m MT lane and 2.50m shoulders"
+        },
+        {
+          "cross_section": "R5",
+          "surface_type": "Paved",
+          "carriageways": 1,
+          "lanes_per_direction": 1,
+          "lane_width_m": 3.50,
+          "outer_shoulder_m": 2.00,
+          "access_control": "Partial",
+          "description": "Single carriageway road with 2-way 3.50m MT lane and 2.00m shoulders"
+        },
+        {
+          "cross_section": "R6",
+          "surface_type": "Paved",
+          "carriageways": 1,
+          "lanes_per_direction": 1,
+          "lane_width_m": 3.25,
+          "outer_shoulder_m": 1.50,
+          "access_control": "Partial/Unrestricted",
+          "description": "Single carriageway road with 2-way 3.25m MT lane and 1.50m shoulders"
+        },
+        {
+          "cross_section": "R7",
+          "surface_type": "Paved",
+          "carriageways": 1,
+          "lanes_per_direction": 1,
+          "lane_width_m": 3.00,
+          "outer_shoulder_m": 1.00,
+          "access_control": "Unrestricted",
+          "description": "Single carriageway road with 2-way 3.00m MT lane and 1.00m shoulders"
+        },
+        {
+          "cross_section": "R8",
+          "surface_type": "Gravel",
+          "carriageways": 1,
+          "lanes_per_direction": 1,
+          "lane_width_m": 3.00,
+          "outer_shoulder_m": 1.00,
+          "access_control": "Unrestricted",
+          "description": "Single carriageway gravel road with 2.70-3.00m MT lane"
+        },
+        {
+          "cross_section": "R9",
+          "surface_type": "Earth",
+          "carriageways": 1,
+          "lanes_per_direction": 1,
+          "lane_width_m": 3.00,
+          "outer_shoulder_m": null,
+          "access_control": "Unrestricted",
+          "description": "Single carriageway earth road with 3.00m MT lane"
+        }
+      ]
+    },
+    "urban_cross_sections": {
+      "description": "Standard cross-sections for urban roads (Table 4.24)",
+      "sections": [
+        {
+          "cross_section": "U1",
+          "surface_type": "Paved",
+          "carriageways": 4,
+          "lanes_per_direction": "3",
+          "lane_width_m": 3.65,
+          "inner_shoulder_m": 1.00,
+          "outer_shoulder_m": 2.00,
+          "central_median_m": 2.00,
+          "outer_median_m": 2.00,
+          "service_road_m": "2x3.50",
+          "walkway_m": 2.00,
+          "cycle_track_m": 2.00,
+          "parking_bay_m": 3.50,
+          "access_control": "Full",
+          "description": "4-carriageway urban expressway with service road, cycle track, walkway"
+        },
+        {
+          "cross_section": "U2",
+          "surface_type": "Paved",
+          "carriageways": 4,
+          "lanes_per_direction": "2-3",
+          "lane_width_m": 3.65,
+          "inner_shoulder_m": 1.00,
+          "outer_shoulder_m": 2.00,
+          "central_median_m": 2.00,
+          "service_road_m": "1x3.50",
+          "walkway_m": 2.00,
+          "cycle_track_m": 2.00,
+          "parking_bay_m": 3.50,
+          "access_control": "Full",
+          "description": "4-carriageway urban expressway with 1-way service road"
+        },
+        {
+          "cross_section": "U3",
+          "surface_type": "Paved",
+          "carriageways": 3,
+          "lanes_per_direction": "1-2",
+          "lane_width_m": 3.65,
+          "outer_shoulder_m": null,
+          "central_median_m": 2.00,
+          "service_road_m": "1x3.50",
+          "walkway_m": 3.00,
+          "access_control": "Full",
+          "description": "3-carriageway road with parking bay and service road"
+        },
+        {
+          "cross_section": "U4",
+          "surface_type": "Paved",
+          "carriageways": 2,
+          "lanes_per_direction": "1-2",
+          "lane_width_m": 3.50,
+          "outer_shoulder_m": 2.00,
+          "central_median_m": 2.00,
+          "walkway_m": 3.00,
+          "access_control": "Full",
+          "description": "2-carriageway with pedestrian walkway and raised median"
+        },
+        {
+          "cross_section": "U5",
+          "surface_type": "Paved",
+          "carriageways": 1,
+          "lanes_per_direction": 1,
+          "lane_width_m": 3.50,
+          "outer_shoulder_m": 1.50,
+          "walkway_m": 3.00,
+          "parking_bay_m": 3.50,
+          "access_control": "Partial",
+          "description": "Single carriageway with parking bay and walkway"
+        },
+        {
+          "cross_section": "U6",
+          "surface_type": "Paved",
+          "carriageways": 1,
+          "lanes_per_direction": 1,
+          "lane_width_m": 3.65,
+          "outer_shoulder_m": null,
+          "walkway_m": 3.00,
+          "cycle_track_m": 2.00,
+          "access_control": "Unrestricted",
+          "description": "1 or 2-way single carriageway with walkway and cycle track"
+        },
+        {
+          "cross_section": "U7",
+          "surface_type": "Paved",
+          "carriageways": 1,
+          "lanes_per_direction": 1,
+          "lane_width_m": 3.65,
+          "walkway_m": 3.00,
+          "cycle_track_m": "3.00",
+          "access_control": "Unrestricted",
+          "description": "2 or 1-way single carriageway with walkway and cycle track"
+        },
+        {
+          "cross_section": "U8",
+          "surface_type": "Paved",
+          "carriageways": 1,
+          "lanes_per_direction": 1,
+          "walkway_m": 3.00,
+          "cycle_track_m": "3.00",
+          "access_control": "Unrestricted",
+          "description": "Pedal-cycle and walkways only"
+        },
+        {
+          "cross_section": "U9",
+          "surface_type": "Paved",
+          "carriageways": 1,
+          "lanes_per_direction": 1,
+          "walkway_m": 3.00,
+          "access_control": "Unrestricted",
+          "description": "Walkways only"
+        }
+      ]
+    }
+  }
+}
