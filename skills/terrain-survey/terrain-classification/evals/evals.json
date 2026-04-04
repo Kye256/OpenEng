@@ -84,6 +84,39 @@
           "evidence": ""
         }
       ]
+    },
+    {
+      "id": 3,
+      "prompt": "A proposed road improvement project in the Kenya highlands near Nyeri, connecting Nyeri to Nanyuki via the foothills of Mt. Kenya. The terrain survey indicates transverse ground slopes of 30-45% along most of the route, with a 3 km section near Naro Moru where slopes exceed 55%. The route is approximately 45 km long and is classified as Class C (inter-county road) under KeRRA. Classify the terrain and identify design implications for this Kenya road project.",
+      "expected_output": "The predominant terrain class should be Mountainous based on Kenya RDM 1.3 Table 3.1 thresholds (transverse slopes 26-50%). The 3 km section near Naro Moru with slopes >55% should be classified separately as Escarpment (>50% per Kenya RDM). The assessment should reference Kenya RDM 1.3 Section 3.3.6 and Table 3.1 thresholds, NOT Uganda MoWT Section 5.2 thresholds. Design speed implications should reference Kenya Class C design speeds for mountainous (50-70 km/h) and escarpment (50 km/h) terrain.",
+      "files": [],
+      "assertions": [
+        {
+          "text": "Classifies the predominant terrain as Mountainous based on Kenya RDM Table 3.1 thresholds (26-50% transverse slopes), not using Uganda MoWT thresholds",
+          "passed": null,
+          "evidence": ""
+        },
+        {
+          "text": "Identifies the Naro Moru section (slopes >55%) as Escarpment per Kenya RDM threshold of >50% and recommends sectional classification",
+          "passed": null,
+          "evidence": ""
+        },
+        {
+          "text": "References Kenya RDM 1.3 Section 3.3.6 or Table 3.1 for terrain thresholds (not MoWT Vol 1 Section 5.2)",
+          "passed": null,
+          "evidence": ""
+        },
+        {
+          "text": "Notes design speed implications using Kenya RDM Table 3.4 values for Class C road (mountainous 50-70 km/h, escarpment 50 km/h)",
+          "passed": null,
+          "evidence": ""
+        },
+        {
+          "text": "Uses Kenya institutional context (KeRRA for Class C road, not UNRA or District)",
+          "passed": null,
+          "evidence": ""
+        }
+      ]
     }
   ]
 }

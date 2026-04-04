@@ -89,6 +89,39 @@
           "evidence": ""
         }
       ]
+    },
+    {
+      "id": 3,
+      "prompt": "You are assessing survey data adequacy for a 30 km Class B road improvement project in Kenya (Nairobi-Naivasha corridor, B3). The project is at preliminary design stage. Available data includes: KeNHA topographic survey conducted using total station with GNSS control, cross-sections at 100 m intervals with 40 m width each side of centreline, benchmarks at approximately 600 m intervals. The coordinate system is UTM based on ARC1960 Datum. The terrain is rolling to mountainous (Rift Valley escarpment section). The project is funded by JICA. Assess the survey data adequacy and identify what additional data may be needed.",
+      "expected_output": "The survey should be assessed as adequate for preliminary design stage per Kenya RDM 1.1 requirements. Cross-section interval of 100 m is acceptable for preliminary design. For detailed design, closer intervals (20 m or less per Table 2.1) would be needed, especially in mountainous sections. The corridor width of 40 m each side should be checked against Kenya road reserve width for Class B (desirable 60 m per RDM 1.3 Table 2.5). The ARC1960 datum is the Kenya standard per RDM 1.1 Section 5.6.1. Additional survey at bridge/culvert sites and escarpment sections should be flagged.",
+      "files": [],
+      "assertions": [
+        {
+          "text": "Assesses the 100 m cross-section interval as adequate for preliminary design but identifies closer intervals needed for detailed design per Kenya RDM 1.1",
+          "passed": null,
+          "evidence": ""
+        },
+        {
+          "text": "References Kenya RDM 1.1 for survey requirements (not MoWT Vol 1 Section 3)",
+          "passed": null,
+          "evidence": ""
+        },
+        {
+          "text": "Notes that ARC1960 datum is the standard coordinate system for Kenya surveys per RDM 1.1 Section 5.6.1",
+          "passed": null,
+          "evidence": ""
+        },
+        {
+          "text": "Identifies need for additional survey at bridge sites and escarpment crossing sections with closer cross-section intervals",
+          "passed": null,
+          "evidence": ""
+        },
+        {
+          "text": "Uses Kenya institutional context (KeNHA for Class B road, references RDM 1.1 not MoWT)",
+          "passed": null,
+          "evidence": ""
+        }
+      ]
     }
   ]
 }
