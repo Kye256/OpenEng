@@ -1,0 +1,65 @@
+{
+  "source": {
+    "manual": "Kenya Road Design Manual RDM 1.3",
+    "table": "Table 3.18, Section 3.13.5",
+    "page": "46-47",
+    "verified": true,
+    "verified_date": "2026-04-04"
+  },
+  "description": "Junction visibility requirements for Kenya roads. Intersection sight distance (ISD) from Table 3.18 based on ISD = 0.278 x V_major x t_g. Decision sight distances from Table 3.19.",
+  "data": {
+    "intersection_sight_distance": {
+      "description": "Intersection Sight Distance (Table 3.18). ISD = 0.278 x V_major x t_g, where t_g is the time gap for minor road vehicle to enter the major road.",
+      "values": [
+        {"design_speed_major_kmh": 50, "isd_m": 70},
+        {"design_speed_major_kmh": 60, "isd_m": 90},
+        {"design_speed_major_kmh": 70, "isd_m": 120},
+        {"design_speed_major_kmh": 85, "isd_m": 160},
+        {"design_speed_major_kmh": 100, "isd_m": 215},
+        {"design_speed_major_kmh": 120, "isd_m": 295}
+      ]
+    },
+    "decision_sight_distance": {
+      "description": "Decision sight distances for various situations (Table 3.19). Measured with eye height 1.05 m and object height 0.10 m.",
+      "interchanges": [
+        {"design_speed_kmh": 60, "near_left_side_m": 200, "off_right_side_m": 275},
+        {"design_speed_kmh": 80, "near_left_side_m": 250, "off_right_side_m": 340},
+        {"design_speed_kmh": 100, "near_left_side_m": 350, "off_right_side_m": 430},
+        {"design_speed_kmh": 120, "near_left_side_m": 400, "off_right_side_m": 500}
+      ],
+      "lane_drop": [
+        {"design_speed_kmh": 50, "sight_distance_m": 150},
+        {"design_speed_kmh": 60, "sight_distance_m": 200},
+        {"design_speed_kmh": 80, "sight_distance_m": 250},
+        {"design_speed_kmh": 100, "sight_distance_m": 350},
+        {"design_speed_kmh": 120, "sight_distance_m": 400}
+      ],
+      "lane_shift": [
+        {"design_speed_kmh": 50, "sight_distance_m": 85},
+        {"design_speed_kmh": 60, "sight_distance_m": 100},
+        {"design_speed_kmh": 80, "sight_distance_m": 150},
+        {"design_speed_kmh": 100, "sight_distance_m": 200},
+        {"design_speed_kmh": 120, "sight_distance_m": 250}
+      ],
+      "intersections": [
+        {"design_speed_kmh": 50, "sight_distance_m": 150},
+        {"design_speed_kmh": 60, "sight_distance_m": 200},
+        {"design_speed_kmh": 80, "sight_distance_m": 250},
+        {"design_speed_kmh": 100, "sight_distance_m": 350},
+        {"design_speed_kmh": 120, "sight_distance_m": 400}
+      ]
+    },
+    "pedestrian_sight_distance": {
+      "description": "Pedestrian sight distances at crossings (Table 4.13)",
+      "values": [
+        {"design_speed_kmh": 60, "two_lane_m": 85, "three_lane_m": 130, "four_lane_m": 170},
+        {"design_speed_kmh": 70, "two_lane_m": 100, "three_lane_m": 150, "four_lane_m": 200},
+        {"design_speed_kmh": 80, "two_lane_m": 115, "three_lane_m": 170, "four_lane_m": 230},
+        {"design_speed_kmh": 90, "two_lane_m": 130, "three_lane_m": 190, "four_lane_m": 255},
+        {"design_speed_kmh": 100, "two_lane_m": 140, "three_lane_m": 215, "four_lane_m": 285},
+        {"design_speed_kmh": 110, "two_lane_m": 155, "three_lane_m": 235, "four_lane_m": 310},
+        {"design_speed_kmh": 120, "two_lane_m": 170, "three_lane_m": 255, "four_lane_m": 340}
+      ]
+    }
+  }
+}

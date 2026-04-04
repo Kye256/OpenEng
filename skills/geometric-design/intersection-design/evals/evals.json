@@ -99,6 +99,39 @@
           "evidence": ""
         }
       ]
+    },
+    {
+      "id": 3,
+      "prompt": "Design a priority junction on a Class C inter-county road in Kenya. The major road has a design speed of 85 km/h and AADT of 3000. The minor road (Class D) has AADT of 350. The junction is on flat terrain. Using the Kenya Road Design Manual RDM 1.3, determine the intersection sight distance (ISD) requirement, the decision sight distance to the turning lane, and check the pedestrian sight distance for a 2-lane crossing. A matatu stage is proposed 30 m before the junction.",
+      "expected_output": "ISD from Kenya RDM Table 3.18 at 85 km/h: 160 m. Decision sight distance from Table 3.19 at 80 km/h: 250 m (interpolate for 85 km/h: approximately 275 m). Pedestrian sight distance for 2-lane crossing from Table 4.13: not directly at 85 km/h, interpolate between 80 (115 m) and 90 (130 m) = approximately 120 m. Matatu stage at 30 m before junction is non-compliant -- RDM Section 4.12 recommends bus stops not immediately before intersections due to sight distance restriction. Relocate matatu stage to after the junction, within 50 m.",
+      "files": ["tables/kenya_junction_visibility.json"],
+      "assertions": [
+        {
+          "text": "ISD at 85 km/h is 160 m (from Kenya RDM Table 3.18)",
+          "passed": null,
+          "evidence": ""
+        },
+        {
+          "text": "Decision sight distance to turning lane is approximately 250-300 m at 85 km/h (from Table 3.19)",
+          "passed": null,
+          "evidence": ""
+        },
+        {
+          "text": "Pedestrian sight distance for 2-lane crossing checked against Table 4.13 (approximately 115-130 m range)",
+          "passed": null,
+          "evidence": ""
+        },
+        {
+          "text": "Identifies matatu stage at 30 m before junction as non-compliant with Section 4.12 (sight distance restriction)",
+          "passed": null,
+          "evidence": ""
+        },
+        {
+          "text": "Recommends relocating matatu stage to after the junction per Section 4.12 guidance",
+          "passed": null,
+          "evidence": ""
+        }
+      ]
     }
   ]
 }

@@ -11,7 +11,7 @@ description: "Use when designing at-grade intersections, selecting junction type
 > **Status:** Draft
 > **Last Updated:** 2026-03-20
 > **Reviewed By:** ---
-> **Country Modules:** Uganda, UK
+> **Country Modules:** Uganda, UK, Kenya
 
 ## Purpose
 
