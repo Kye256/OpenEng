@@ -99,6 +99,34 @@
           "evidence": ""
         }
       ]
+    },
+    {
+      "id": 3,
+      "prompt": "Assess the suitability of excavated material from a road cutting in Central Kenya for use as fill in a nearby embankment. Material properties: PI=18, LL=42, CBR=12 (soaked at 100% MDD AASHTO T99), MDD=1.75 t/m3, swell=0.8%. Determine the highest suitable use per Kenya specifications and recommend actions.",
+      "expected_output": "Assess against Kenya RDM 3.3 Table 8.8 G-code requirements. G3 (fill): CBR 12% > 3%, PI 18 < 50, swell 0.8% < 3.0% = PASS. G8 (lower capping): CBR 12% > 8%, PI 18 < 50 = PASS. G10 (capping): CBR 12% > 10%, PI 18 < 30 = PASS (but note CBR tested at T99, not T180). G14: CBR 12% < 14% = FAIL. Highest use: G10 capping, pending retest at 95% MDD T180. Swell 0.8% limits use to G14 max (swell max 1.0%). Recommend lime treatment to reduce PI for potential G14/G23 upgrade. References Standard Specification, NOT MoWT specifications.",
+      "files": [],
+      "assertions": [
+        {
+          "text": "References Kenya Standard Specification or RDM 3.3 for material acceptance criteria, not Uganda MoWT specifications",
+          "passed": null,
+          "evidence": ""
+        },
+        {
+          "text": "Assesses material against Kenya G-code system (G3, G8, G10, G14 etc.) and identifies the highest suitable use",
+          "passed": null,
+          "evidence": ""
+        },
+        {
+          "text": "Notes that CBR was tested at Standard Proctor (T99) and may need retesting at Modified AASHTO (T180) for improved subgrade assessment",
+          "passed": null,
+          "evidence": ""
+        },
+        {
+          "text": "Identifies swell (0.8%) as a limiting factor and recommends treatment (lime or blending) to improve material properties",
+          "passed": null,
+          "evidence": ""
+        }
+      ]
     }
   ]
 }
