@@ -1,0 +1,114 @@
+{
+  "skill_name": "traffic-signal-design",
+  "evals": [
+    {
+      "id": 0,
+      "prompt": "A 4-arm intersection on a Class B road in Kenya has the following peak hour volumes: North-South major approach 800 veh/hr (mixed traffic), East-West minor approach 350 veh/hr. Pedestrian crossing demand is 150 ped/hr on the major road. The intersection has experienced 8 injury crashes in 3 years. Assume the traffic composition gives a PCU factor of approximately 1.1 for the mixed traffic. Determine: (1) whether signal warrants are met per Kenya RDM 6.3, (2) recommended phasing, (3) approximate cycle length using Webster's formula assuming 2-phase with saturation flow 1800 pcu/hr/lane and 2 lanes on major, 1 on minor, (4) pedestrian phase timing for a 12m crossing width.",
+      "expected_output": "Warrant analysis against Kenya RDM 6.3 criteria. Warrant 1 (Table 2.1): major = 800 x 1.1 = 880 pcu/hr (both approaches), minor = 350 x 1.1 = 385 pcu/hr. For 2+ major lanes and 1 minor lane, thresholds are 600/150 -- both met. Warrant 3 (pedestrian): 150 ped/hr meets the threshold. Warrant 4 (crash): 8 crashes in 3 years is approximately 2.7/year, below the 5/year threshold for Warrant 4. Signal is warranted under Warrants 1 and 3. Phasing: 2-phase initially (N-S and E-W), with concurrent pedestrian. Timing: y_A = (880/2)/1800 = 0.244, y_B = 385/1800 = 0.214, Y = 0.458, L = 6s (2 phases x 3s), C_opt = (1.5x6+5)/(1-0.458) = 14/0.542 = 25.8s, round to practical minimum 30s. Pedestrian: t_ped = 7 + 12/1.2 = 17s.",
+      "files": [],
+      "assertions": [
+        {
+          "text": "Checks warrants against Kenya RDM 6.3 criteria with specific volume thresholds from Tables 2.1 or 2.2",
+          "passed": null,
+          "evidence": ""
+        },
+        {
+          "text": "Identifies at least one warrant as met (Warrant 1 minimum vehicle volume or Warrant 3 pedestrian volume)",
+          "passed": null,
+          "evidence": ""
+        },
+        {
+          "text": "Calculates cycle length using Webster's formula C_opt = (1.5L + 5) / (1 - Y) with shown working",
+          "passed": null,
+          "evidence": ""
+        },
+        {
+          "text": "Calculates pedestrian green time as approximately 17 seconds (7 + 12/1.2 = 17s) for a 12m crossing",
+          "passed": null,
+          "evidence": ""
+        },
+        {
+          "text": "References Kenya RDM 6.3 as the applicable standard",
+          "passed": null,
+          "evidence": ""
+        },
+        {
+          "text": "Converts vehicle counts to PCU using Kenya-specific factors from RDM 6.3 Table 2.3 or applies a stated PCU factor",
+          "passed": null,
+          "evidence": ""
+        }
+      ]
+    },
+    {
+      "id": 1,
+      "prompt": "Design signal timing for a simple 2-phase signalised intersection with: Phase A (N-S) critical lane flow 500 veh/hr at saturation flow 1800 veh/hr, Phase B (E-W) critical lane flow 300 veh/hr at saturation flow 1800 veh/hr. Lost time per phase is 3 seconds (start-up + intergreen). Calculate: (1) the sum of critical flow ratios Y, (2) total lost time L, (3) the optimum cycle length using Webster's formula, (4) the effective green times for each phase.",
+      "expected_output": "Y = y_A + y_B = 500/1800 + 300/1800 = 0.278 + 0.167 = 0.444. L = 2 x 3 = 6 seconds. C_opt = (1.5 x 6 + 5) / (1 - 0.444) = (9 + 5) / 0.556 = 14 / 0.556 = 25.2 seconds. This is below the practical minimum of 25-30 seconds, so use C = 30 seconds. Green allocation: g_A = (0.278/0.444) x (30 - 6) = 0.626 x 24 = 15.0s. g_B = (0.167/0.444) x (30 - 6) = 0.376 x 24 = 9.0s. Check: 15 + 9 + 6 = 30s. Both greens meet minimum 7s requirement.",
+      "files": [],
+      "assertions": [
+        {
+          "text": "Calculates Y = 500/1800 + 300/1800 = 0.278 + 0.167 = 0.444 (or equivalent decimal rounding)",
+          "passed": null,
+          "evidence": ""
+        },
+        {
+          "text": "Calculates L = 6 seconds (2 phases x 3 seconds per phase)",
+          "passed": null,
+          "evidence": ""
+        },
+        {
+          "text": "Applies Webster's formula to get C_opt approximately 25 seconds and notes practical minimum applies",
+          "passed": null,
+          "evidence": ""
+        },
+        {
+          "text": "Allocates green times proportional to flow ratios with shown working",
+          "passed": null,
+          "evidence": ""
+        },
+        {
+          "text": "Verifies that green times meet minimum requirements (>= 7 seconds each)",
+          "passed": null,
+          "evidence": ""
+        },
+        {
+          "text": "Shows that total phase times sum to the cycle length",
+          "passed": null,
+          "evidence": ""
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "prompt": "A T-junction on a Class C road in Kenya has peak hour volumes of major road 200 veh/hr and minor road 50 veh/hr. A local community has requested traffic signals due to perceived safety concerns. The intersection has recorded 1 minor property-damage crash in the past 2 years. Determine whether signals are warranted and recommend alternatives if not.",
+      "expected_output": "Warrant analysis: Warrant 1 (Table 2.1): major 200 pcu/hr is well below 500 threshold for 1-lane configuration. NOT MET. Warrant 2 (Table 2.2): 200 pcu/hr is well below 750 threshold. NOT MET. Warrant 3 (pedestrian): no pedestrian demand data provided, but volumes too low for pedestrian warrant. NOT MET. Warrant 4 (crash): 1 minor crash in 2 years, well below 5 injury crashes in 12 months. NOT MET. Warrant 5 (combination): no warrant reaches 80%. NOT MET. Signals are NOT warranted. Recommend alternatives: give way/yield control (standard for T-junction), improved visibility (vegetation clearance), advance warning signs (Skill #68), consider speed management (Skill #70) if approach speeds are a concern. If community pressure overrides engineering judgment, escalate to senior engineer.",
+      "files": [],
+      "assertions": [
+        {
+          "text": "Determines that volume warrants are NOT met (volumes far below Kenya RDM 6.3 thresholds)",
+          "passed": null,
+          "evidence": ""
+        },
+        {
+          "text": "Does NOT recommend signal installation",
+          "passed": null,
+          "evidence": ""
+        },
+        {
+          "text": "Suggests alternatives such as give way/yield control, roundabout, improved signage, or traffic calming",
+          "passed": null,
+          "evidence": ""
+        },
+        {
+          "text": "Triggers escalation or flags the community pressure issue as requiring engineering judgment",
+          "passed": null,
+          "evidence": ""
+        },
+        {
+          "text": "References at least one other skill (Skill #20, #61, #67, #68, or #70) for alternative measures",
+          "passed": null,
+          "evidence": ""
+        }
+      ]
+    }
+  ]
+}

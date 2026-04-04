@@ -1,0 +1,122 @@
+{
+  "source": "Kenya RDM 6.3 (2025) Chapter 2 -- Traffic Signals and Communication System",
+  "verified": true,
+  "note": "Warrant criteria extracted from RDM 6.3 Tables 2.1, 2.2, and Section 2.2. PCU values from RDM 6.3 Table 2.3 (Traffic Signal Design column).",
+  "warrants": [
+    {
+      "warrant_number": 1,
+      "warrant_type": "minimum_vehicle_volume",
+      "description": "Minimum vehicle volumes -- 8-hour criterion. Signal justified when traffic volume in pcu exceeds thresholds for 8 or more hours on an average day.",
+      "table_reference": "RDM 6.3 Table 2.1",
+      "thresholds": [
+        {
+          "lanes_major": 1,
+          "lanes_minor": 1,
+          "major_both_approaches_pcu_hr": 500,
+          "minor_higher_volume_approach_pcu_hr": 150
+        },
+        {
+          "lanes_major": "2 or more",
+          "lanes_minor": 1,
+          "major_both_approaches_pcu_hr": 600,
+          "minor_higher_volume_approach_pcu_hr": 150
+        },
+        {
+          "lanes_major": "2 or more",
+          "lanes_minor": "2 or more",
+          "major_both_approaches_pcu_hr": 600,
+          "minor_higher_volume_approach_pcu_hr": 200
+        },
+        {
+          "lanes_major": 1,
+          "lanes_minor": "2 or more",
+          "major_both_approaches_pcu_hr": 500,
+          "minor_higher_volume_approach_pcu_hr": 200
+        }
+      ]
+    },
+    {
+      "warrant_number": 2,
+      "warrant_type": "interruption_of_continuous_traffic",
+      "description": "Applied when traffic volume on the major road is so heavy that minor road traffic suffers excessive delay or hazard. Satisfied when pcu volumes exceed thresholds for any 8-hour period on an average day.",
+      "table_reference": "RDM 6.3 Table 2.2",
+      "thresholds": [
+        {
+          "lanes_major": 1,
+          "lanes_minor": 1,
+          "major_both_approaches_pcu_hr": 750,
+          "minor_higher_volume_approach_pcu_hr": 75
+        },
+        {
+          "lanes_major": "2 or more",
+          "lanes_minor": 1,
+          "major_both_approaches_pcu_hr": 900,
+          "minor_higher_volume_approach_pcu_hr": 75
+        },
+        {
+          "lanes_major": "2 or more",
+          "lanes_minor": "2 or more",
+          "major_both_approaches_pcu_hr": 900,
+          "minor_higher_volume_approach_pcu_hr": 100
+        },
+        {
+          "lanes_major": 1,
+          "lanes_minor": "2 or more",
+          "major_both_approaches_pcu_hr": 750,
+          "minor_higher_volume_approach_pcu_hr": 100
+        }
+      ]
+    },
+    {
+      "warrant_number": 3,
+      "warrant_type": "pedestrian_volume",
+      "description": "Applied when pedestrians experience excessive delay in crossing. Applicable if 600+ pcu/hr enter the intersection (both approaches) on the major road AND 150+ pedestrians cross the major road per hour.",
+      "thresholds": {
+        "major_road_both_approaches_pcu_hr": 600,
+        "pedestrians_crossing_major_per_hr": 150,
+        "median_condition": "Also applicable if raised median >= 1.5 m width AND 1000+ pcu/hr on major road"
+      },
+      "reduced_thresholds_note": "70% of requirement applies where 85th percentile speed > 60 km/h or in built-up area of population < 150,000"
+    },
+    {
+      "warrant_number": 4,
+      "warrant_type": "crash_experience",
+      "description": "Applied when severity and frequency of crashes are principal reasons. Signal can be installed if alternatives were tried but were not effective.",
+      "thresholds": {
+        "minimum_crashes_12_months": 5,
+        "crash_type": "each with injury and property damage",
+        "condition": "which could have been prevented by installing a traffic signal"
+      },
+      "reference": "RDM 6.3 Section 2.2.2"
+    },
+    {
+      "warrant_number": 5,
+      "warrant_type": "combination_of_warrants",
+      "description": "If no single factor provides the warrant, two or more warrants may be considered together if they meet 80% or more of the stated criteria.",
+      "thresholds": {
+        "percent_of_criteria": 80,
+        "minimum_warrants": 2
+      },
+      "note": "Adequate trial of other remedial measures should be tried before installing a signal.",
+      "reference": "RDM 6.3 Section 2.2.3"
+    }
+  ],
+  "pcu_values": {
+    "table_reference": "RDM 6.3 Table 2.3 -- Traffic Signal Design column",
+    "values": [
+      {"vehicle_class": "Pedal Cycle (PC)", "pcu": 0.2},
+      {"vehicle_class": "Animal/hand cart", "pcu": 0.7},
+      {"vehicle_class": "Motorcycle (MC)", "pcu": 0.33},
+      {"vehicle_class": "Three wheelers and Tuk-tuk", "pcu": 0.5},
+      {"vehicle_class": "Cars, Jeeps, SUV, Pick-up (C)", "pcu": 1.0},
+      {"vehicle_class": "Microbus (MCB)", "pcu": 1.2},
+      {"vehicle_class": "Minibus (MB)", "pcu": 2.0},
+      {"vehicle_class": "Bus (B)", "pcu": 2.0},
+      {"vehicle_class": "Omnibus (OB)", "pcu": 2.25},
+      {"vehicle_class": "Light Goods Vehicle (LGV)", "pcu": 1.2},
+      {"vehicle_class": "Medium Goods Vehicle (MGV)", "pcu": 1.75},
+      {"vehicle_class": "Heavy Goods Vehicle (HGV)", "pcu": 2.25},
+      {"vehicle_class": "Articulated Heavy Goods Vehicle (AHGV)", "pcu": 3.0}
+    ]
+  }
+}

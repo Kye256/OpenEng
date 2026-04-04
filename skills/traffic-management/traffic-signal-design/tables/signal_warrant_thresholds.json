@@ -1,0 +1,133 @@
+{
+  "source": "MUTCD / international practice (universal principles)",
+  "verified": false,
+  "note": "Universal reference thresholds -- verify against applicable country standard. Country modules provide jurisdiction-specific values.",
+  "warrants": [
+    {
+      "warrant_type": "eight_hour_vehicular_volume",
+      "warrant_number": 1,
+      "description": "Minimum traffic volumes on major and minor approaches for 8 or more hours on an average day",
+      "thresholds": [
+        {
+          "lanes_major": 1,
+          "lanes_minor": 1,
+          "major_approach_pcu_per_hr": 500,
+          "minor_approach_pcu_per_hr": 150
+        },
+        {
+          "lanes_major": 2,
+          "lanes_minor": 1,
+          "major_approach_pcu_per_hr": 600,
+          "minor_approach_pcu_per_hr": 150
+        },
+        {
+          "lanes_major": 2,
+          "lanes_minor": 2,
+          "major_approach_pcu_per_hr": 600,
+          "minor_approach_pcu_per_hr": 200
+        },
+        {
+          "lanes_major": 1,
+          "lanes_minor": 2,
+          "major_approach_pcu_per_hr": 500,
+          "minor_approach_pcu_per_hr": 200
+        }
+      ],
+      "notes": "Reduced thresholds (70%) apply where population < 10,000 or 85th percentile speed > 70 km/h"
+    },
+    {
+      "warrant_type": "four_hour_vehicular_volume",
+      "warrant_number": 2,
+      "description": "Interruption of continuous traffic -- minor road suffers excessive delay for any 4 hours",
+      "thresholds": [
+        {
+          "lanes_major": 1,
+          "lanes_minor": 1,
+          "major_approach_pcu_per_hr": 750,
+          "minor_approach_pcu_per_hr": 75
+        },
+        {
+          "lanes_major": 2,
+          "lanes_minor": 1,
+          "major_approach_pcu_per_hr": 900,
+          "minor_approach_pcu_per_hr": 75
+        },
+        {
+          "lanes_major": 2,
+          "lanes_minor": 2,
+          "major_approach_pcu_per_hr": 900,
+          "minor_approach_pcu_per_hr": 100
+        },
+        {
+          "lanes_major": 1,
+          "lanes_minor": 2,
+          "major_approach_pcu_per_hr": 750,
+          "minor_approach_pcu_per_hr": 100
+        }
+      ],
+      "notes": "Applied when major road volume prevents minor road entry"
+    },
+    {
+      "warrant_type": "peak_hour",
+      "warrant_number": 3,
+      "description": "Peak hour delay on minor road unacceptable",
+      "thresholds": [
+        {
+          "lanes_major": 1,
+          "lanes_minor": 1,
+          "major_approach_pcu_per_hr": 650,
+          "minor_approach_pcu_per_hr": 200
+        },
+        {
+          "lanes_major": 2,
+          "lanes_minor": 1,
+          "major_approach_pcu_per_hr": 800,
+          "minor_approach_pcu_per_hr": 200
+        }
+      ],
+      "notes": "Only requires 1 hour. Higher thresholds than 8-hour warrant."
+    },
+    {
+      "warrant_type": "pedestrian_volume",
+      "warrant_number": 4,
+      "description": "Pedestrian crossing demand warrants signal control",
+      "thresholds": {
+        "major_road_pcu_per_hr": 600,
+        "pedestrians_per_hr_crossing_major": 150,
+        "gap_availability": "Fewer than 60 adequate gaps per hour in the traffic stream"
+      },
+      "notes": "Also applicable if raised median >= 1.5 m width with 1000+ pcu/hr on major road. Reduced thresholds (70%) apply where 85th percentile speed > 60 km/h or population < 150,000."
+    },
+    {
+      "warrant_type": "crash_experience",
+      "warrant_number": 5,
+      "description": "Signal justified by crash frequency and severity",
+      "thresholds": {
+        "minimum_crashes_12_months": 5,
+        "crash_type": "injury and/or property damage crashes susceptible to correction by traffic signal",
+        "condition": "Alternatives (signs, markings, channelisation) tried and not effective"
+      },
+      "notes": "Signal must be likely to reduce crash type. Not for rear-end crashes which may increase with signals."
+    },
+    {
+      "warrant_type": "school_crossing",
+      "warrant_number": 6,
+      "description": "Gaps in traffic inadequate for school children to cross",
+      "thresholds": {
+        "description": "Applied when the number of adequate gaps during school crossing periods is insufficient for safe crossing by school children",
+        "gap_seconds": "Depends on crossing width and walking speed (typically requires longer gaps than adult pedestrians)"
+      },
+      "notes": "Consider school crossing guards, raised crossings, or other measures before signals"
+    },
+    {
+      "warrant_type": "combination",
+      "warrant_number": 7,
+      "description": "Two or more warrants met at 80% of their criteria",
+      "thresholds": {
+        "percent_of_criteria": 80,
+        "minimum_warrants": 2
+      },
+      "notes": "Engineering judgment required. Trial of other remedial measures should be attempted first."
+    }
+  ]
+}

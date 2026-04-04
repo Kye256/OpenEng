@@ -1,0 +1,84 @@
+{
+  "source": "International practice / MUTCD / Webster (1966)",
+  "verified": false,
+  "note": "Universal default parameters for signal timing calculation. Country modules may override specific values.",
+  "data": [
+    {
+      "parameter": "amber_time_s",
+      "typical_value": 3,
+      "range": "3-5",
+      "depends_on": "approach speed",
+      "notes": "3s for speeds <= 60 km/h, 4s for 70-80 km/h, 5s for > 80 km/h. Kenya RDM 6.3 Table 14.3 provides speed-specific values."
+    },
+    {
+      "parameter": "all_red_min_s",
+      "typical_value": 1,
+      "range": "1-5",
+      "depends_on": "clearance distance, approach speed",
+      "notes": "Calculate from R = (W + L_veh) / v_approach. Minimum 1 second."
+    },
+    {
+      "parameter": "min_green_vehicular_s",
+      "typical_value": 7,
+      "range": "7-15",
+      "depends_on": "detection type, queued vehicles",
+      "notes": "7s minimum to allow vehicles between stop line and detector to clear. 10-15s where no detection."
+    },
+    {
+      "parameter": "min_green_pedestrian_walk_s",
+      "typical_value": 7,
+      "range": "4-10",
+      "depends_on": "crossing width, walking speed",
+      "notes": "Walk interval (steady Walk signal). Minimum 4-7 seconds for step-off. Total pedestrian green = Walk + Clearance."
+    },
+    {
+      "parameter": "pedestrian_clearance_s",
+      "typical_value": null,
+      "range": "calculated",
+      "depends_on": "crossing width, walking speed",
+      "notes": "Flashing Don't Walk period. Calculated as W / v_walk. Use 1.2 m/s standard, 0.8 m/s for elderly/disabled."
+    },
+    {
+      "parameter": "saturation_flow_default_pcu_hr_lane",
+      "typical_value": 1800,
+      "range": "1600-1950",
+      "depends_on": "lane width, gradient, turning, HGV proportion",
+      "notes": "1800 pcu/hr/lane for standard 3.0-3.5 m lane, flat grade, no turning, no HGV adjustment."
+    },
+    {
+      "parameter": "lost_time_per_phase_s",
+      "typical_value": 2,
+      "range": "2-4",
+      "depends_on": "start-up behaviour, detection type",
+      "notes": "Start-up lost time at the beginning of green. Typically 2-3 seconds."
+    },
+    {
+      "parameter": "max_cycle_length_s",
+      "typical_value": 120,
+      "range": "90-150",
+      "depends_on": "pedestrian tolerance, capacity requirement",
+      "notes": "120s practical maximum. 150s absolute maximum. > 120s causes excessive pedestrian delay."
+    },
+    {
+      "parameter": "min_cycle_length_s",
+      "typical_value": 25,
+      "range": "25-30",
+      "depends_on": "number of phases, lost time",
+      "notes": "Below 25-30s, the proportion of lost time is excessive and intersection efficiency drops."
+    },
+    {
+      "parameter": "walking_speed_standard_m_s",
+      "typical_value": 1.2,
+      "range": "1.0-1.5",
+      "depends_on": "pedestrian demographics",
+      "notes": "1.2 m/s for standard design. Use 0.8-1.0 m/s near hospitals, aged care, schools for young children."
+    },
+    {
+      "parameter": "vehicle_length_m",
+      "typical_value": 6,
+      "range": "5-7",
+      "depends_on": "vehicle mix",
+      "notes": "Used in all-red calculation. 6 m represents a standard car/light truck."
+    }
+  ]
+}
