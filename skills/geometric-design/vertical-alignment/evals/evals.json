@@ -104,6 +104,42 @@
           "evidence": ""
         }
       ]
+    },
+    {
+      "id": 3,
+      "prompt": "Design a crest vertical curve for a Class C road in Kenya. The terrain is mountainous, the design speed is 60 km/h (from Kenya RDM Table 3.4), and the proposed grades are +5% rising to a crest then -4% falling, giving an algebraic grade difference A = 9%. Using the Kenya Road Design Manual RDM 1.3, determine the appropriate K-value for the crest curve, calculate the required curve length, check the minimum curve length requirement, and verify that the proposed gradient of 5% complies with the desirable maximum for mountainous terrain.",
+      "expected_output": "From Kenya RDM Table 6.1 at 60 km/h: K_crest (SSD) = 17. Curve length L = K x A = 17 x 9 = 153 m. Minimum curve length from Table 6.3: at 60 km/h = 100 m; 153 m > 100 m so OK. From Table 6.5, mountainous terrain rural: desirable maximum gradient = 6%, absolute = 8%. The proposed 5% is within the desirable maximum (6%). All checks pass.",
+      "files": [
+        "skills/geometric-design/vertical-alignment/tables/kenya_k_values.json",
+        "skills/geometric-design/vertical-alignment/tables/kenya_gradients.json"
+      ],
+      "assertions": [
+        {
+          "text": "K-value for crest curve at 60 km/h is 17 (from Kenya RDM Table 6.1, not Uganda Table 6-11)",
+          "passed": null,
+          "evidence": ""
+        },
+        {
+          "text": "Curve length calculated as L = K x A = 17 x 9 = 153 m (range 145-160 m acceptable)",
+          "passed": null,
+          "evidence": ""
+        },
+        {
+          "text": "Minimum curve length check: 100 m at 60 km/h from Table 6.3, and 153 m exceeds this",
+          "passed": null,
+          "evidence": ""
+        },
+        {
+          "text": "Gradient compliance: 5% is within desirable maximum of 6% for mountainous terrain rural roads (Table 6.5)",
+          "passed": null,
+          "evidence": ""
+        },
+        {
+          "text": "References Kenya RDM 1.3 table numbers (Table 6.1, Table 6.3, Table 6.5)",
+          "passed": null,
+          "evidence": ""
+        }
+      ]
     }
   ]
 }

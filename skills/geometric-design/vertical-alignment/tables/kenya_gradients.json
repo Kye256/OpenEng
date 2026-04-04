@@ -1,0 +1,65 @@
+{
+  "source": {
+    "manual": "Kenya Road Design Manual RDM 1.3",
+    "table": "Table 6.5",
+    "page": 122,
+    "verified": true,
+    "verified_date": "2026-04-04"
+  },
+  "description": "Maximum gradients (desirable and absolute) by terrain class for paved sections. Rural roads use DR1-DR7 standards; urban roads use DU1-DU6 standards.",
+  "unit": "percent (%)",
+  "note": "Note 1 from Table 6.5: On expressways a maximum gradient should not exceed 4%. Table 6.6 provides maximum lengths of gradient. Minimum gradient for drainage is 0.5% (Section 6.5.4).",
+  "data": {
+    "rural_DR1_to_DR7": {
+      "description": "Maximum gradients for rural road design standards DR1 to DR7",
+      "flat": {
+        "desirable": 3,
+        "absolute": 5
+      },
+      "rolling": {
+        "desirable": 4,
+        "absolute": 6
+      },
+      "mountainous": {
+        "desirable": 6,
+        "absolute": 8
+      },
+      "escarpment": {
+        "desirable": 7,
+        "absolute": 9
+      }
+    },
+    "urban_DU1_to_DU6": {
+      "description": "Maximum gradients for urban road design standards DU1 to DU6",
+      "flat": {
+        "desirable": 3,
+        "absolute": 5
+      },
+      "rolling": {
+        "desirable": 6,
+        "absolute": 8
+      },
+      "mountainous": {
+        "desirable": 8,
+        "absolute": 10
+      },
+      "escarpment": {
+        "desirable": 8,
+        "absolute": 10
+      }
+    },
+    "expressway_note": "On expressways (DR1), maximum gradient shall not exceed 4%",
+    "maximum_lengths": {
+      "description": "Maximum lengths of gradient (Table 6.6, source: SANRAL and SATCC)",
+      "data": [
+        {"gradient_pct": 2, "max_length_m": "No limit"},
+        {"gradient_pct": 3, "max_length_m": "No limit"},
+        {"gradient_pct": 4, "max_length_m": 900},
+        {"gradient_pct": 5, "max_length_m": 800},
+        {"gradient_pct": 6, "max_length_m": 700},
+        {"gradient_pct": 7, "max_length_m": 600},
+        {"gradient_pct": 8, "max_length_m": 500}
+      ]
+    }
+  }
+}

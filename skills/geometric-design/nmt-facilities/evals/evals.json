@@ -104,6 +104,39 @@
           "evidence": ""
         }
       ]
+    },
+    {
+      "id": 3,
+      "prompt": "Design NMT facilities for a Class UC urban collector road in Kenya passing through a trading centre. The road has a design speed of 50 km/h, ADT of 12,000, motorcycle traffic is 35% of total traffic, and estimated pedestrian flow is 800 per day. There is a primary school 150 m from the main junction. Determine: (1) walkway provision and width, (2) whether a motorcycle lane is warranted per Kenya RDM, (3) speed management measures for the school zone, and (4) boda-boda safety provisions per Section 3.6.",
+      "expected_output": "Walkways on both sides per Section 4.5.1 (mandatory on collector roads). Width: 3.0 m recommended for high pedestrian volume (Table 4.4). Motorcycle lane warrants (Section 4.7): ADT 12,000 < 15,000 threshold (not met), but motorcycle 35% > 30% (met). Only 1 of 3 warrants -- motorcycle lane not formally warranted but monitor. School zone: entry gates, 30 km/h speed zone, speed humps per Chapter 11, raised pedestrian crossing at school desire line. Boda-boda (Section 3.6): motorcycle-friendly safety barriers, surface consistency at superelevation transitions, adequate clear zone for motorcycle envelope, advance warning and delineation.",
+      "files": [],
+      "assertions": [
+        {
+          "text": "Walkway provided on both sides (mandatory on collector road per Section 4.5.1), width 3.0 m for high volume",
+          "passed": null,
+          "evidence": ""
+        },
+        {
+          "text": "Motorcycle lane warrant assessment: checks ADT threshold (15,000), motorcycle percentage (30%), and KSI crashes per Section 4.7",
+          "passed": null,
+          "evidence": ""
+        },
+        {
+          "text": "Speed management for school zone includes entry gates and speed humps or raised crossings per Chapter 11",
+          "passed": null,
+          "evidence": ""
+        },
+        {
+          "text": "Boda-boda safety provisions reference Section 3.6 including motorcycle-friendly barriers and surface consistency",
+          "passed": null,
+          "evidence": ""
+        },
+        {
+          "text": "References Kenya RDM 1.3 sections (4.5, 4.7, 3.6, Chapter 11) for parameter values",
+          "passed": null,
+          "evidence": ""
+        }
+      ]
     }
   ]
 }

@@ -94,6 +94,39 @@
           "evidence": ""
         }
       ]
+    },
+    {
+      "id": 3,
+      "prompt": "Select the appropriate design vehicle for a Class B national highway in Kenya on rolling terrain. The road carries significant freight traffic on the Northern Corridor. Using the Kenya Road Design Manual RDM 1.3, determine the design vehicle type, its minimum turning radius, and the absolute minimum junction turning radius. Also identify the Kenya design vehicle code system and note the matatu (minibus) design implications for junctions.",
+      "expected_output": "For a Class B national highway with significant freight, DV5 (Truck + Semi-trailer) is the minimum design vehicle per RDM Section 3.5. DV5 has minimum turning radius 13.7 m, length 15.0 m, width 2.6 m. Absolute minimum junction radius is 15 m per Section 5.8. Kenya uses DV1-DV9 code system (harmonised for EAC Partner States), not Uganda's P/SU/BUS/WB system. Matatu (minibus) equivalent to DV2 (single unit bus, 12.3 m, turning radius 12.8 m) -- junctions must accommodate DV2 for matatu routes.",
+      "files": ["tables/kenya_design_vehicles.json"],
+      "assertions": [
+        {
+          "text": "Selects DV5 (Truck + Semi-trailer) or larger for Class B national highway, not DV1 or DV4",
+          "passed": null,
+          "evidence": ""
+        },
+        {
+          "text": "Minimum turning radius is 13.7 m for DV5 (from Kenya RDM Table 3.3)",
+          "passed": null,
+          "evidence": ""
+        },
+        {
+          "text": "States absolute minimum junction radius of 15 m per Kenya RDM Section 5.8",
+          "passed": null,
+          "evidence": ""
+        },
+        {
+          "text": "Correctly identifies Kenya DV1-DV9 code system and notes it differs from Uganda P/SU/BUS/WB",
+          "passed": null,
+          "evidence": ""
+        },
+        {
+          "text": "Discusses matatu (minibus) as equivalent to DV2 with 12.8 m turning radius for junction design",
+          "passed": null,
+          "evidence": ""
+        }
+      ]
     }
   ]
 }

@@ -11,7 +11,7 @@ description: "Use when selecting a design vehicle, determining turning radii, ch
 > **Status:** Draft
 > **Last Updated:** 2026-03-20
 > **Reviewed By:** ---
-> **Country Modules:** Uganda, UK
+> **Country Modules:** Uganda, UK, Kenya
 
 ## Purpose
 

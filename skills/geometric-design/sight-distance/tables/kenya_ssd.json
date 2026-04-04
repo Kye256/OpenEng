@@ -1,0 +1,180 @@
+{
+  "source": {
+    "manual": "Kenya Road Design Manual RDM 1.3",
+    "table": "Tables 3.15, 3.16, 3.17",
+    "page": "45-46",
+    "verified": true,
+    "verified_date": "2026-04-04"
+  },
+  "description": "Stopping sight distance (desirable and minimum) on level and on grades for paved roads",
+  "parameters": {
+    "prt": 2.5,
+    "eye_height_m": 1.05,
+    "object_height_m": 0.2,
+    "object_height_ssd_flat_m": 0.0,
+    "max_deceleration_cars_ms2": 3.0,
+    "max_deceleration_trucks_ms2": 1.5,
+    "note": "Kenya eye height 1.05m and object height 0.2m differ from Uganda (1.07/0.15m). Table 3.17 uses friction-based SSD. Desirable SSD (Table 3.15) uses design speed; minimum SSD (Table 3.16) uses a reduced speed."
+  },
+  "data": {
+    "desirable": {
+      "description": "Desirable Stopping Sight Distance (Table 3.15, RDM 1.3). Uses design speed for calculation.",
+      "level": [
+        {"design_speed_kmh": 40, "ssd_m": 45},
+        {"design_speed_kmh": 50, "ssd_m": 60},
+        {"design_speed_kmh": 60, "ssd_m": 80},
+        {"design_speed_kmh": 70, "ssd_m": 100},
+        {"design_speed_kmh": 80, "ssd_m": 130},
+        {"design_speed_kmh": 90, "ssd_m": 165},
+        {"design_speed_kmh": 100, "ssd_m": 200},
+        {"design_speed_kmh": 110, "ssd_m": 250},
+        {"design_speed_kmh": 120, "ssd_m": 310},
+        {"design_speed_kmh": 140, "ssd_m": 400}
+      ],
+      "on_grades": [
+        {
+          "design_speed_kmh": 40,
+          "ssd_9pct_up": 40, "ssd_6pct_up": 40, "ssd_3pct_up": 45,
+          "ssd_3pct_down": 45, "ssd_6pct_down": 45, "ssd_9pct_down": 50
+        },
+        {
+          "design_speed_kmh": 50,
+          "ssd_9pct_up": 55, "ssd_6pct_up": 50, "ssd_3pct_up": 60,
+          "ssd_3pct_down": 60, "ssd_6pct_down": 65, "ssd_9pct_down": 65
+        },
+        {
+          "design_speed_kmh": 60,
+          "ssd_9pct_up": null, "ssd_6pct_up": 75, "ssd_3pct_up": 50,
+          "ssd_3pct_down": 80, "ssd_6pct_down": 85, "ssd_9pct_down": 90
+        },
+        {
+          "design_speed_kmh": 70,
+          "ssd_9pct_up": null, "ssd_6pct_up": 35, "ssd_3pct_up": 100,
+          "ssd_3pct_down": 105, "ssd_6pct_down": 110, "ssd_9pct_down": 120
+        },
+        {
+          "design_speed_kmh": 80,
+          "ssd_9pct_up": null, "ssd_6pct_up": 120, "ssd_3pct_up": 125,
+          "ssd_3pct_down": 135, "ssd_6pct_down": 145, "ssd_9pct_down": 155
+        },
+        {
+          "design_speed_kmh": 90,
+          "ssd_9pct_up": null, "ssd_6pct_up": 145, "ssd_3pct_up": 155,
+          "ssd_3pct_down": 170, "ssd_6pct_down": 185, "ssd_9pct_down": 200
+        },
+        {
+          "design_speed_kmh": 100,
+          "ssd_9pct_up": null, "ssd_6pct_up": null, "ssd_3pct_up": 185,
+          "ssd_3pct_down": 215, "ssd_6pct_down": 235, "ssd_9pct_down": 255
+        },
+        {
+          "design_speed_kmh": 110,
+          "ssd_9pct_up": null, "ssd_6pct_up": null, "ssd_3pct_up": 230,
+          "ssd_3pct_down": 270, "ssd_6pct_down": 295, "ssd_9pct_down": null
+        },
+        {
+          "design_speed_kmh": 120,
+          "ssd_9pct_up": null, "ssd_6pct_up": null, "ssd_3pct_up": 285,
+          "ssd_3pct_down": 340, "ssd_6pct_down": null, "ssd_9pct_down": null
+        },
+        {
+          "design_speed_kmh": 140,
+          "ssd_9pct_up": null, "ssd_6pct_up": null, "ssd_3pct_up": 350,
+          "ssd_3pct_down": 375, "ssd_6pct_down": null, "ssd_9pct_down": null
+        }
+      ]
+    },
+    "minimum": {
+      "description": "Minimum Stopping Sight Distance (Table 3.16, RDM 1.3). Uses a reduced speed assumption for lower values.",
+      "level": [
+        {"design_speed_kmh": 40, "ssd_m": 40},
+        {"design_speed_kmh": 50, "ssd_m": 55},
+        {"design_speed_kmh": 60, "ssd_m": 70},
+        {"design_speed_kmh": 70, "ssd_m": 85},
+        {"design_speed_kmh": 80, "ssd_m": 100},
+        {"design_speed_kmh": 90, "ssd_m": 120},
+        {"design_speed_kmh": 100, "ssd_m": 140},
+        {"design_speed_kmh": 110, "ssd_m": 165},
+        {"design_speed_kmh": 120, "ssd_m": 190},
+        {"design_speed_kmh": 140, "ssd_m": 220}
+      ],
+      "on_grades": [
+        {
+          "design_speed_kmh": 40,
+          "ssd_9pct_up": 40, "ssd_6pct_up": 40, "ssd_3pct_up": 40,
+          "ssd_3pct_down": 40, "ssd_6pct_down": 45, "ssd_9pct_down": 45
+        },
+        {
+          "design_speed_kmh": 50,
+          "ssd_9pct_up": 50, "ssd_6pct_up": 55, "ssd_3pct_up": 55,
+          "ssd_3pct_down": 55, "ssd_6pct_down": 60, "ssd_9pct_down": 60
+        },
+        {
+          "design_speed_kmh": 60,
+          "ssd_9pct_up": null, "ssd_6pct_up": 65, "ssd_3pct_up": 70,
+          "ssd_3pct_down": 70, "ssd_6pct_down": 75, "ssd_9pct_down": 80
+        },
+        {
+          "design_speed_kmh": 70,
+          "ssd_9pct_up": null, "ssd_6pct_up": 80, "ssd_3pct_up": 85,
+          "ssd_3pct_down": 90, "ssd_6pct_down": 95, "ssd_9pct_down": 100
+        },
+        {
+          "design_speed_kmh": 80,
+          "ssd_9pct_up": null, "ssd_6pct_up": 95, "ssd_3pct_up": 100,
+          "ssd_3pct_down": 105, "ssd_6pct_down": 110, "ssd_9pct_down": 120
+        },
+        {
+          "design_speed_kmh": 90,
+          "ssd_9pct_up": null, "ssd_6pct_up": 110, "ssd_3pct_up": 115,
+          "ssd_3pct_down": 125, "ssd_6pct_down": 135, "ssd_9pct_down": 145
+        },
+        {
+          "design_speed_kmh": 100,
+          "ssd_9pct_up": null, "ssd_6pct_up": null, "ssd_3pct_up": 135,
+          "ssd_3pct_down": 145, "ssd_6pct_down": 155, "ssd_9pct_down": 170
+        },
+        {
+          "design_speed_kmh": 110,
+          "ssd_9pct_up": null, "ssd_6pct_up": null, "ssd_3pct_up": 155,
+          "ssd_3pct_down": 170, "ssd_6pct_down": 185, "ssd_9pct_down": null
+        },
+        {
+          "design_speed_kmh": 120,
+          "ssd_9pct_up": null, "ssd_6pct_up": null, "ssd_3pct_up": 175,
+          "ssd_3pct_down": 200, "ssd_6pct_down": null, "ssd_9pct_down": null
+        },
+        {
+          "design_speed_kmh": 140,
+          "ssd_9pct_up": null, "ssd_6pct_up": null, "ssd_3pct_up": 210,
+          "ssd_3pct_down": 220, "ssd_6pct_down": null, "ssd_9pct_down": null
+        }
+      ]
+    },
+    "passing_sight_distance": {
+      "description": "Passing Sight Distances (Table 3.20, RDM 1.3)",
+      "values": [
+        {"design_speed_kmh": 50, "normal_psd_m": 250, "reduced_psd_m": 175},
+        {"design_speed_kmh": 60, "normal_psd_m": 325, "reduced_psd_m": 225},
+        {"design_speed_kmh": 70, "normal_psd_m": 400, "reduced_psd_m": 275},
+        {"design_speed_kmh": 80, "normal_psd_m": 475, "reduced_psd_m": 325},
+        {"design_speed_kmh": 90, "normal_psd_m": 525, "reduced_psd_m": 350},
+        {"design_speed_kmh": 100, "normal_psd_m": 575, "reduced_psd_m": 375},
+        {"design_speed_kmh": 110, "normal_psd_m": 625, "reduced_psd_m": 400},
+        {"design_speed_kmh": 120, "normal_psd_m": 700, "reduced_psd_m": 450},
+        {"design_speed_kmh": 140, "normal_psd_m": 775, "reduced_psd_m": 500}
+      ]
+    },
+    "intersection_sight_distance": {
+      "description": "Intersection Sight Distances (Table 3.18, RDM 1.3). ISD = 0.278 x V_major x t_g",
+      "values": [
+        {"design_speed_kmh": 50, "isd_m": 70},
+        {"design_speed_kmh": 60, "isd_m": 90},
+        {"design_speed_kmh": 70, "isd_m": 120},
+        {"design_speed_kmh": 85, "isd_m": 160},
+        {"design_speed_kmh": 100, "isd_m": 215},
+        {"design_speed_kmh": 120, "isd_m": 295}
+      ]
+    }
+  }
+}
