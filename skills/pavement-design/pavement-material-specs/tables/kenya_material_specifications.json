@@ -314,5 +314,166 @@
         }
       }
     }
+  },
+  "bituminous_materials": {
+    "source": "RDM 3.3 Chapter 8, Charts SU1-SU11, BB1-BB2; Standard Specification for Road and Bridge Construction (2025)",
+    "description": "Bituminous surfacing and base materials for Kenya pavement structures. Specifications from Materials Specification Charts and Standard Specification.",
+    "asphalt_concrete": {
+      "description": "Hot mix asphalt concrete for wearing course and binder course. Kenya references KS EN 13108 series. Marshall method is primary design approach in East Africa.",
+      "charts": "SU1-SU4",
+      "types": {
+        "AC20": {
+          "use": "Binder course; wearing course on heavily trafficked roads (TC30+)",
+          "nominal_max_aggregate_mm": 20,
+          "typical_thickness_mm": "50-80",
+          "marshall_stability_min_kn": "Chart SU1 -- verify against RDM 3.3 PDF",
+          "verification": "Values from RDM 3.3 Charts SU1-SU4 -- verify against PDF"
+        },
+        "AC14": {
+          "use": "Wearing course for normal traffic (TC3-TC30)",
+          "nominal_max_aggregate_mm": 14,
+          "typical_thickness_mm": "40-60",
+          "marshall_stability_min_kn": "Chart SU2 -- verify against RDM 3.3 PDF",
+          "verification": "Values from RDM 3.3 Charts SU1-SU4 -- verify against PDF"
+        },
+        "AC10": {
+          "use": "Wearing course for moderate traffic (TC1-TC3); patching",
+          "nominal_max_aggregate_mm": 10,
+          "typical_thickness_mm": "30-40",
+          "marshall_stability_min_kn": "Chart SU3 -- verify against RDM 3.3 PDF",
+          "verification": "Values from RDM 3.3 Charts SU1-SU4 -- verify against PDF"
+        }
+      },
+      "common_properties": {
+        "design_method": "Marshall (75 blows per face for TC10+; 50 blows for lower traffic classes)",
+        "air_voids_pct": {"min": 3, "max": 5},
+        "vma_min_pct": "Varies by nominal aggregate size -- Chart SU1-SU4",
+        "flow_mm": {"min": 2, "max": 4},
+        "verification": "Common property ranges from Standard Specification -- verify exact values against Charts SU1-SU4"
+      },
+      "bitumen_grade": {
+        "normal_inland": "60/70 penetration grade (standard for most Kenya climate zones)",
+        "coastal_hot": "80/100 penetration grade (coastal areas, mean annual temperature > 27C)",
+        "highland_cool": "60/70 or 40/50 penetration grade (highland areas > 2000m elevation)",
+        "heavy_traffic": "PMB (polymer modified binder) required for TC30+ per Standard Specification",
+        "source": "Standard Specification for Road and Bridge Construction, Bituminous Works section",
+        "verification": "Binder grade zones from Standard Specification -- verify climate zone boundaries against PDF"
+      },
+      "aggregate_requirements": {
+        "laa_max_pct": 30,
+        "acv_max_pct": 25,
+        "flakiness_index_max_pct": 25,
+        "water_absorption_max_pct": 2,
+        "source": "Standard Specification, Section on Coarse Aggregates for Bituminous Mixes",
+        "verification": "Aggregate values from Standard Specification -- verify against PDF"
+      }
+    },
+    "surface_dressing": {
+      "description": "Surface dressing types for sealing and surfacing. Kenya specifies multiple surface treatment types for different traffic classes and conditions.",
+      "charts": "SU5-SU11",
+      "types": [
+        {
+          "name": "Single surface dressing (SSD)",
+          "chart": "SU5",
+          "application": "Resealing existing surfaced roads; new surfacing for TC0.025-TC1",
+          "description": "Single application of binder followed by single layer of chippings"
+        },
+        {
+          "name": "Double surface dressing (DSD)",
+          "chart": "SU6",
+          "application": "New surfacing for TC0.5-TC10; resealing for TC3-TC10",
+          "description": "Two applications of binder and chippings, providing better texture and durability"
+        },
+        {
+          "name": "Cape seal",
+          "chart": "SU7",
+          "application": "New surfacing for TC3-TC17; provides dense, waterproof surface",
+          "description": "Single surface dressing followed by slurry seal -- combines chip seal durability with slurry waterproofing"
+        },
+        {
+          "name": "Otta seal (single)",
+          "chart": "SU8",
+          "application": "Low-volume roads TC0.025-TC1; uses softer binder and graded aggregate",
+          "description": "Uses continuously graded aggregate rolled into soft binder; suitable for lower-quality aggregates"
+        },
+        {
+          "name": "Otta seal (double)",
+          "chart": "SU9",
+          "application": "Low-to-medium volume roads TC0.5-TC3",
+          "description": "Two layers of Otta seal for improved durability"
+        },
+        {
+          "name": "Sand seal",
+          "chart": "SU10",
+          "application": "Enrichment seal on existing surfacing; fog seal alternative",
+          "description": "Binder application followed by fine sand cover; enriches dry/oxidised surfaces"
+        },
+        {
+          "name": "Slurry seal / micro-surfacing",
+          "chart": "SU11",
+          "application": "Maintenance resurfacing; texture restoration on existing AC; Cape seal component",
+          "description": "Emulsion-aggregate-water slurry applied as thin overlay; micro-surfacing uses PMB emulsion for heavier traffic"
+        }
+      ],
+      "aggregate_requirements": {
+        "acv_max_pct_high_traffic": 21,
+        "acv_max_pct_low_traffic": 30,
+        "laa_max_pct_high_traffic": 25,
+        "laa_max_pct_low_traffic": 40,
+        "flakiness_index_max_pct": 25,
+        "water_absorption_max_pct": 1.5,
+        "source": "Standard Specification, Aggregate for Surface Dressing",
+        "verification": "Aggregate thresholds from Standard Specification -- verify ACV/LAA traffic boundaries against PDF"
+      },
+      "binder_options": {
+        "penetration_grade": "80/100 or 60/70 depending on climate zone",
+        "emulsion": "K1-60, K1-70, or K3-60 cationic emulsion per Standard Specification",
+        "cutback": "MC-30, MC-70 for priming; MC-3000 for tack coat",
+        "otta_seal_binder": "150/200 penetration or MC-3000 (soft binder for aggregate embedment)",
+        "source": "Standard Specification, Binders for Surface Dressing",
+        "verification": "Binder types from Standard Specification -- verify emulsion grades against PDF"
+      }
+    },
+    "bituminous_base": {
+      "description": "Asphalt base (dense bitumen macadam / DBM) for high-traffic pavement structures. Specified in Charts BB1-BB2.",
+      "charts": "BB1-BB2",
+      "types": {
+        "BB1": {
+          "material": "Dense Bitumen Macadam (DBM) -- continuously graded asphalt base",
+          "application": "Base course for TC17-TC50",
+          "typical_thickness_mm": "60-100",
+          "chart": "BB1",
+          "requirements": {
+            "stability": "Chart BB1 -- verify against RDM 3.3 PDF",
+            "nominal_max_aggregate_mm": 28,
+            "verification": "Values from RDM 3.3 Chart BB1 -- verify against PDF"
+          }
+        },
+        "BB2": {
+          "material": "Dense Bitumen Macadam (DBM) -- high modulus base",
+          "application": "Base course for TC50+; high-modulus base for heavily trafficked trunk roads",
+          "typical_thickness_mm": "80-120",
+          "chart": "BB2",
+          "requirements": {
+            "stability": "Chart BB2 -- verify against RDM 3.3 PDF",
+            "nominal_max_aggregate_mm": 28,
+            "verification": "Values from RDM 3.3 Chart BB2 -- verify against PDF"
+          }
+        }
+      },
+      "bitumen_grade": {
+        "standard": "40/50 or 60/70 penetration grade",
+        "high_modulus": "10/20 or 15/25 penetration grade for BB2 high-modulus base",
+        "verification": "Binder grades from Charts BB1-BB2 -- verify against PDF"
+      },
+      "aggregate_requirements": {
+        "laa_max_pct": 30,
+        "acv_max_pct": 25,
+        "flakiness_index_max_pct": 25,
+        "water_absorption_max_pct": 2,
+        "source": "Standard Specification, Aggregate for Bituminous Base",
+        "verification": "Values from Standard Specification -- verify against PDF"
+      }
+    }
   }
 }
