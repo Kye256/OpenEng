@@ -1,0 +1,212 @@
+{
+  "source": "Kenya RDM 6.1 (2025), Tables 4.1, 4.2, 4.3, 5.1, Appendix A Tables A.1-A.5",
+  "verified": true,
+  "note": "Kenya-specific marking dimensions verified from RDM 6.1 PDF. Code references (LM01, TM01, etc.) are RDM 6.1 Appendix A designations.",
+  "longitudinal_markings": [
+    {
+      "code": "LM01",
+      "type": "broken",
+      "description": "Single broken yellow centre line (<80 km/h)",
+      "mark_mm": 2000,
+      "gap_mm": 6000,
+      "width_mm": 100,
+      "colour": "yellow",
+      "speed_context": "<80 km/h",
+      "use": "Centre line, two-lane undivided carriageway"
+    },
+    {
+      "code": "LM02",
+      "type": "broken",
+      "description": "Single broken yellow centre line (>=80 km/h)",
+      "mark_mm": 3000,
+      "gap_mm": 9000,
+      "width_mm": 150,
+      "colour": "yellow",
+      "speed_context": ">=80 km/h",
+      "use": "Centre line, rural roads of higher category"
+    },
+    {
+      "code": "LM03",
+      "type": "broken",
+      "description": "Single broken white lane line (<80 km/h)",
+      "mark_mm": 2000,
+      "gap_mm": 6000,
+      "width_mm": 100,
+      "colour": "white",
+      "speed_context": "<80 km/h",
+      "use": "Separation of lanes, same direction"
+    },
+    {
+      "code": "LM04",
+      "type": "broken",
+      "description": "Single broken white lane line (>=80 km/h)",
+      "mark_mm": 3000,
+      "gap_mm": 9000,
+      "width_mm": 150,
+      "colour": "white",
+      "speed_context": ">=80 km/h",
+      "use": "Division of carriageway into traffic lanes"
+    },
+    {
+      "code": "LM05",
+      "type": "broken",
+      "description": "Short broken white line",
+      "mark_mm": 1000,
+      "gap_mm": 1000,
+      "width_mm": 100,
+      "colour": "white",
+      "speed_context": "all",
+      "use": "Edge of speed change lane, approach to junctions"
+    },
+    {
+      "code": "LM07",
+      "type": "broken",
+      "description": "Broken white line for approaches",
+      "mark_mm": 2000,
+      "gap_mm": 2000,
+      "width_mm": 100,
+      "colour": "white",
+      "speed_context": "<80 km/h",
+      "use": "Approaches to junctions, lane separation near junctions"
+    },
+    {
+      "code": "LM08",
+      "type": "broken",
+      "description": "Broken white warning line",
+      "mark_mm": 2000,
+      "gap_mm": 2000,
+      "width_mm": 150,
+      "colour": "white",
+      "speed_context": ">=80 km/h",
+      "use": "Edge of speed change lane, ramp approach"
+    },
+    {
+      "code": "LM24",
+      "type": "continuous",
+      "description": "Continuous yellow centre line",
+      "mark_mm": null,
+      "gap_mm": null,
+      "width_mm": 100,
+      "colour": "yellow",
+      "speed_context": "all",
+      "use": "No-overtaking centre line, single line"
+    },
+    {
+      "code": "LM25",
+      "type": "continuous",
+      "description": "Continuous yellow centre line (wide)",
+      "mark_mm": null,
+      "gap_mm": null,
+      "width_mm": 150,
+      "colour": "yellow",
+      "speed_context": ">=80 km/h",
+      "use": "No-overtaking centre line, higher-category road"
+    },
+    {
+      "code": "LM26",
+      "type": "continuous",
+      "description": "Continuous white edge line (standard)",
+      "mark_mm": null,
+      "gap_mm": null,
+      "width_mm": 100,
+      "colour": "white",
+      "speed_context": "lower category",
+      "use": "Edge of carriageway, lower-category roads"
+    },
+    {
+      "code": "LM27",
+      "type": "continuous",
+      "description": "Continuous white edge line (wide)",
+      "mark_mm": null,
+      "gap_mm": null,
+      "width_mm": 150,
+      "colour": "white",
+      "speed_context": "higher category",
+      "use": "Edge of carriageway, higher-category roads"
+    },
+    {
+      "code": "LM28",
+      "type": "combined",
+      "description": "Combined line (solid and broken, yellow)",
+      "mark_mm": 2000,
+      "gap_mm": 6000,
+      "width_mm": 100,
+      "colour": "yellow",
+      "speed_context": "<80 km/h",
+      "use": "Centre line with overtaking restriction in one direction, gap between lines 100 mm"
+    },
+    {
+      "code": "LM29",
+      "type": "combined",
+      "description": "Combined line (solid and broken, yellow, wide)",
+      "mark_mm": 3000,
+      "gap_mm": 9000,
+      "width_mm": 150,
+      "colour": "yellow",
+      "speed_context": ">=80 km/h",
+      "use": "Centre line with overtaking restriction in one direction, higher-category road"
+    },
+    {
+      "code": "LM30",
+      "type": "continuous",
+      "description": "Double continuous white separation line",
+      "mark_mm": null,
+      "gap_mm": null,
+      "width_mm": 100,
+      "colour": "white",
+      "speed_context": "all",
+      "use": "Separation between traffic lane and cycle path/walkway"
+    },
+    {
+      "code": "LM32",
+      "type": "continuous",
+      "description": "Double continuous yellow centre line",
+      "mark_mm": null,
+      "gap_mm": null,
+      "width_mm": 100,
+      "colour": "yellow",
+      "speed_context": "all",
+      "use": "Double yellow centre line, dual carriageway without central reserve, gap 100 mm"
+    }
+  ],
+  "transverse_markings": [
+    {
+      "code": "TM01",
+      "type": "continuous",
+      "description": "Stop line",
+      "width_mm": 400,
+      "colour": "white",
+      "notes": "Continuous white line across traffic lane. STOP word message required with STOP sign."
+    },
+    {
+      "code": "TM04",
+      "type": "broken",
+      "description": "Give way line (at junction edge)",
+      "mark_mm": 600,
+      "gap_mm": 300,
+      "width_mm": 200,
+      "colour": "white",
+      "notes": "Broken line along inner edge of acceleration lanes or at Give Way junctions"
+    },
+    {
+      "code": "TM07",
+      "type": "broken",
+      "description": "Give way line (at junction)",
+      "mark_mm": 600,
+      "gap_mm": 300,
+      "width_mm": 400,
+      "colour": "white",
+      "notes": "Wider Give Way line at major junctions"
+    }
+  ],
+  "speed_visibility_table": {
+    "source": "RDM 6.1, Table 4.4",
+    "note": "Visibility distance and critical value for combined line system decisions",
+    "data": [
+      {"road_class": "E, UL, and other minor roads", "speed_85th_kmh": 40, "visibility_distance_m": 40, "critical_value_m": 65},
+      {"road_class": "C, D, UC", "speed_85th_kmh": 60, "visibility_distance_m": 80, "critical_value_m": 75},
+      {"road_class": "B, UA", "speed_85th_kmh": 80, "visibility_distance_m": 130, "critical_value_m": 95},
+      {"road_class": "A", "speed_85th_kmh": ">90", "visibility_distance_m": 300, "critical_value_m": 135}
+    ]
+  }
+}
