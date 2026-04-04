@@ -115,6 +115,39 @@ Climate resilience measures in the 2025 RDM have made plasticity specifications 
 | BSM100 | Bitumen stabilised material | Min soaked ITS 100 kPa | Base TC3, TC10; Sub-base TC17, TC30 |
 | BM175 | Bitumen stabilised material | Min soaked ITS 175 kPa | Base TC17, TC30; Sub-base TC50+ |
 
+**BITUMINOUS BASE (BB-series, Charts BB1-BB2):**
+
+| Code | Material | Strength/Requirements | Application | Chart |
+|------|----------|----------------------|-------------|-------|
+| BB1 | Dense Bitumen Macadam (DBM) | Marshall stability per Chart BB1; NMAS 28 mm; thickness 60-100 mm | Base course for TC17-TC50 | BB1 |
+| BB2 | Dense Bitumen Macadam -- high modulus | Marshall stability per Chart BB2; NMAS 28 mm; thickness 80-120 mm; 10/20 or 15/25 pen binder | Base course for TC50+; heavily trafficked trunk roads | BB2 |
+
+**SURFACING -- ASPHALT CONCRETE (Charts SU1-SU4):**
+
+| Type | Use | Thickness (mm) | Key Requirements | Application by Traffic Class |
+|------|-----|----------------|-----------------|------------------------------|
+| AC 20 | Binder course; wearing course on TC30+ | 50-80 | Marshall stability per Chart SU1; LAA Max 30%, ACV Max 25% | TC30+ (wearing), all classes (binder) |
+| AC 14 | Wearing course, normal traffic | 40-60 | Marshall stability per Chart SU2; LAA Max 30%, ACV Max 25% | TC3-TC30 |
+| AC 10 | Wearing course, moderate traffic; patching | 30-40 | Marshall stability per Chart SU3; LAA Max 30%, ACV Max 25% | TC1-TC3 |
+
+Common properties: air voids 3-5%, flow 2-4 mm, VMA per chart. Marshall design: 75 blows per face for TC10+, 50 blows for lower classes.
+
+Binder grade by climate zone: 60/70 pen (normal inland), 80/100 pen (coastal hot, mean annual temp > 27C), 40/50 pen (highland > 2000m), PMB for TC30+.
+
+**SURFACING -- SURFACE DRESSING (Charts SU5-SU11):**
+
+| Type | Application | Aggregate Requirements | Chart |
+|------|-------------|----------------------|-------|
+| Single surface dressing (SSD) | Resealing; new surfacing TC0.025-TC1 | ACV Max 30% (low traffic), Max 21% (high traffic); FI Max 25% | SU5 |
+| Double surface dressing (DSD) | New surfacing TC0.5-TC10; resealing TC3-TC10 | ACV Max 30% (low traffic), Max 21% (high traffic); FI Max 25% | SU6 |
+| Cape seal | New surfacing TC3-TC17 | Per SSD aggregate + slurry aggregate requirements | SU7 |
+| Otta seal (single) | Low-volume roads TC0.025-TC1 | Graded aggregate, lower quality acceptable | SU8 |
+| Otta seal (double) | TC0.5-TC3 | Graded aggregate, lower quality acceptable | SU9 |
+| Sand seal | Enrichment seal on existing surfacing | Fine sand | SU10 |
+| Slurry seal / micro-surfacing | Maintenance resurfacing; texture restoration | Per Chart SU11; micro-surfacing uses PMB emulsion | SU11 |
+
+Binder options: penetration grade (80/100 or 60/70), cationic emulsion (K1-60, K1-70, K3-60), cutback (MC-30, MC-70 for priming), Otta seal binder (150/200 pen or MC-3000).
+
 Full specifications for each material class are detailed in `tables/kenya_material_specifications.json`.
 
 ### M.2.2 Country-Specific Formulas
@@ -132,6 +165,9 @@ Kenya uses a material coding system where:
 - **HMS + number** = Hydraulically Modified Stone, number = minimum UCS in kPa (cylinder strength)
 - **HBS + number** = Hydraulically Bound Stone, number = minimum UCS in kPa
 - **BSM + number** = Bitumen Stabilised Material, number = minimum soaked ITS in kPa
+- **BB + number** = Bituminous Base (asphalt base / dense bitumen macadam), chart number indicates specification level (BB1 = standard DBM, BB2 = high modulus)
+- **SU + number** = Surfacing, chart number indicates surfacing type: SU1-SU4 = asphalt concrete by nominal aggregate size, SU5-SU11 = surface dressing types (SSD, DSD, Cape seal, Otta seal, sand seal, slurry/micro-surfacing)
+- **AC + number** = Asphalt Concrete, number = nominal maximum aggregate size in mm (AC 20, AC 14, AC 10)
 - **HPS** = Hand Packed Stone
 - **MAC** = Macadam (dry-bound or wet-bound)
 
@@ -158,10 +194,26 @@ IF Kenya project:
         - Aggregate quality (LAA, ACV) where applicable
         - Swell limit
         - Construction requirements (layer thickness, compaction)
-  5. If material does not meet specification:
+  5. For surfacing selection:
+     a. IF structure type specifies AC surfacing:
+        - Select AC type by traffic class: AC 10 for TC1-TC3, AC 14 for TC3-TC30, AC 20 for TC30+
+        - Select binder grade by climate zone (60/70 inland, 80/100 coastal, PMB for TC30+)
+        - Verify aggregate meets LAA Max 30%, ACV Max 25% per Charts SU1-SU4
+     b. IF structure type specifies surface dressing:
+        - Select type by traffic class and aggregate availability:
+          * SSD for TC0.025-TC1 (new) or resealing
+          * DSD for TC0.5-TC10 (new) or resealing TC3-TC10
+          * Cape seal for TC3-TC17 (improved waterproofing)
+          * Otta seal for TC0.025-TC3 (lower aggregate quality areas)
+        - Verify aggregate ACV and flakiness per Charts SU5-SU11
+     c. IF structure type specifies bituminous base:
+        - BB1 (DBM) for TC17-TC50
+        - BB2 (high modulus DBM) for TC50+
+        - Verify aggregate meets Charts BB1-BB2 requirements
+  6. If material does not meet specification:
      a. Check if treatment (hydraulic improvement) can upgrade to required code
      b. Check if alternative material class is available for the traffic/subgrade combination
-  6. DO NOT use Uganda material codes (G80-Uganda, C1, C2, C3) for Kenya projects
+  7. DO NOT use Uganda material codes (G80-Uganda, C1, C2, C3) for Kenya projects
 ```
 
 ### M.3.2 Professional Judgment (Kenya-Specific)
@@ -176,6 +228,12 @@ IF Kenya project:
 **The G80 60% alternative (Chart GM10 note):** In areas with annual rainfall < 500 mm, if permission is obtained from the Chief Engineer (Materials), material of CBR 60% may be used as an alternative to G80 base for TC1. This is a departure requiring formal approval.
 
 **Climate differentiation:** Several material charts (G20, G25) have different PI limits for wet areas vs dry areas. In wet areas (rainfall > 500 mm), lower PI limits apply to reduce moisture susceptibility.
+
+**Bituminous binder grade by climate zone:**
+- **Coastal Kenya (Mombasa, Malindi, Lamu):** Mean annual temperature > 27C; use softer 80/100 pen grade to prevent cracking from thermal stress; asphalt temperatures are high, so softer binder deforms less during placement.
+- **Highland Kenya (Nairobi, Eldoret, Nyeri > 1500m):** Cooler climate; 60/70 pen standard, 40/50 pen for heavily loaded areas.
+- **Rift Valley / Northern Kenya (hot arid):** High pavement temperatures; 60/70 pen standard, PMB for TC17+.
+- **PMB requirement:** Polymer modified binder is required for TC30+ traffic classes to resist rutting under channelised heavy loading. This is a Standard Specification requirement, not a design option.
 
 ### M.3.3 Common Errors (Kenya-Specific)
 
@@ -214,6 +272,11 @@ IF Kenya project:
 | G80 PI | Max 10 | Chart GM10 | Exceeds specification |
 | HBS3 UCS | Min 3.0 MPa | Chart HB1 | Below specification |
 | GCS-A ACV | Max 25% | Table 8.8 | Aggregate quality insufficient |
+| AC air voids | 3-5% | Charts SU1-SU4 | Below 3% = bleeding/rutting risk; above 5% = permeability/durability risk |
+| AC aggregate LAA | Max 30% | Standard Specification | Aggregate too soft for bituminous mix |
+| AC aggregate ACV | Max 25% | Standard Specification | Aggregate too weak for bituminous mix |
+| Surface dressing aggregate ACV (high traffic) | Max 21% | Charts SU5-SU6 | Aggregate quality insufficient for traffic class |
+| Surface dressing aggregate FI | Max 25% | Charts SU5-SU11 | Flaky aggregate -- poor embedment and early stripping |
 
 ### M.5.2 Standards Compliance Checks
 
@@ -277,4 +340,5 @@ Departure from material specifications requires Chief Engineer for Roads approva
 ---
 
 **Module Changelog**
+- 0.2 (2026-04-04): Added bituminous materials section -- asphalt concrete (AC 20/14/10, Charts SU1-SU4), surface dressing (SSD, DSD, Cape seal, Otta seal, sand seal, slurry/micro-surfacing, Charts SU5-SU11), and bituminous base (BB1-BB2). Updated classification system, decision logic, professional judgment (climate zone binder selection), and range checks. Closes UAT gap for bituminous materials.
 - 0.1 (2026-04-04): Initial Kenya module created from RDM 3.3 Chapter 8 and Table 8.8 (2025). All material codes verified against PDF pp119-132.
