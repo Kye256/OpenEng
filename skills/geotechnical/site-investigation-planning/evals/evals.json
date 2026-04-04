@@ -89,6 +89,39 @@
           "evidence": ""
         }
       ]
+    },
+    {
+      "id": 3,
+      "prompt": "Plan a ground investigation for a 40 km Class B road upgrade in the Rift Valley, Kenya. The route passes through black cotton soil areas and crosses two seasonal rivers. The project is at the detailed design stage. No previous ground investigation data is available. Provide a complete investigation plan including DCP survey, test pits, boreholes, borrow pit investigation, and laboratory testing programme.",
+      "expected_output": "Kenya RDM 3.1 (2025) should be the reference standard. DCP at 250 m intervals for trunk road (Table 6.1), giving 160 DCP tests over 40 km. Test pits at 250 m intervals (Table 6.1), giving 160 test pits. Boreholes at the two river crossings (minimum 2 per substructure per Section 7.13.1). Black cotton soil areas require extended investigation per Section 6.7.1: Shrinkage Limit, weighted PI, Activity determination. Laboratory testing per BS EN ISO 17892 series and AASHTO T 99/T 193. Soils classified using ESCS (BS EN ISO 14688-2:2018), NOT AASHTO. KeNHA as the managing authority for Class B trunk road.",
+      "files": [],
+      "assertions": [
+        {
+          "text": "References Kenya RDM 3.1 as the applicable standard for ground investigations",
+          "passed": null,
+          "evidence": ""
+        },
+        {
+          "text": "Specifies DCP and test pit intervals from Table 6.1: 250 m for trunk/primary roads at detailed design, giving approximately 160 of each over 40 km",
+          "passed": null,
+          "evidence": ""
+        },
+        {
+          "text": "Mentions KeNHA as the road authority for Class B trunk roads, or identifies Kenya institutional context",
+          "passed": null,
+          "evidence": ""
+        },
+        {
+          "text": "Identifies black cotton soil as an escalation trigger requiring extended investigation per Section 6.7.1, including Shrinkage Limit, weighted PI, or Activity determination",
+          "passed": null,
+          "evidence": ""
+        },
+        {
+          "text": "Specifies soil classification using ESCS (BS EN ISO 14688-2:2018), not AASHTO classification system",
+          "passed": null,
+          "evidence": ""
+        }
+      ]
     }
   ]
 }

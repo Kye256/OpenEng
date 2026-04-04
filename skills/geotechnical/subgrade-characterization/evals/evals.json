@@ -94,6 +94,34 @@
           "evidence": ""
         }
       ]
+    },
+    {
+      "id": 3,
+      "prompt": "Characterize the subgrade for a 25 km Class D road in Western Kenya. DCP survey results show CBR values: 8, 12, 6, 15, 9, 11, 7, 14, 10, 8. The region has high rainfall (>1200 mm/year). Determine the design subgrade class using the Kenya method and identify any issues.",
+      "expected_output": "Use Kenya RDM 3.3 Table 4.1 subgrade classes (NOT Uganda S1-S6 boundaries). Apply CUSUM method (Section 4.3.1) for section identification. Mean CBR = 10.0%. CUSUM shows no clear inflection -- treat as single section. Average 10.0% equals S3 median (10). But minimum CBR = 6% is below S3 lower bound of 7% -- the minimum value check fails. Either reclassify to S2 (requires capping per S3 minimum rule for paved roads) or isolate the weak point for localised treatment. S3 is the minimum subgrade for paved road foundations per RDM 3.3 Section 3.4.",
+      "files": [],
+      "assertions": [
+        {
+          "text": "Uses Kenya subgrade classes from RDM 3.3 Table 4.1 (not Uganda S1-S6 boundaries), with Kenya class ranges such as S3: CBR 7-13%",
+          "passed": null,
+          "evidence": ""
+        },
+        {
+          "text": "Applies the CUSUM method or average-based design CBR selection method from RDM 3.3 Section 4.3, not the 10th percentile method",
+          "passed": null,
+          "evidence": ""
+        },
+        {
+          "text": "Identifies that the minimum CBR value (6%) falls below the S3 class lower bound (7%) and flags this as an issue requiring resolution",
+          "passed": null,
+          "evidence": ""
+        },
+        {
+          "text": "Notes that S3 is the minimum subgrade class for paved road foundations per Kenya RDM 3.3 Section 3.4 (climate resilience measure)",
+          "passed": null,
+          "evidence": ""
+        }
+      ]
     }
   ]
 }

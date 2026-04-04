@@ -84,6 +84,34 @@
           "evidence": ""
         }
       ]
+    },
+    {
+      "id": 3,
+      "prompt": "Classify soil samples from a Kenya Class C road project: Sample A (PI=28, LL=52, sand 15%, fines 85%), Sample B (gravel 60%, sand 30%, fines 10%, CBR=35). Use the Kenya-mandated classification system and assess subgrade suitability.",
+      "expected_output": "Kenya uses ESCS classification (BS EN ISO 14688-2:2018), NOT AASHTO. Sample A: fines 85% (> 35%) = fine soil. LL=52 (High plasticity zone), PI=28 > A-line value 23.4 = CLAY. Sand 15% = add 'sa' prefix. Classification: saClH (Sandy CLAY of High Plasticity). Likely S3-S4 when soaked. Sample B: fines 10% (< 35%) = coarse soil. Gravel 60% > sand 30% in coarse = GRAVEL. Fines 5-15% = silty or clayey gravel (siGr or clGr). CBR 35% suggests S5-S6 range.",
+      "files": [],
+      "assertions": [
+        {
+          "text": "Uses ESCS classification (BS EN ISO 14688-2:2018) as the Kenya system, not AASHTO groups",
+          "passed": null,
+          "evidence": ""
+        },
+        {
+          "text": "Correctly classifies Sample A as a fine soil (fines > 35%), plots on plasticity chart as Clay of High Plasticity, and identifies it as saClH or equivalent ESCS symbol",
+          "passed": null,
+          "evidence": ""
+        },
+        {
+          "text": "Correctly classifies Sample B as a coarse soil (gravel-dominant) with ESCS gravel symbol (siGr, clGr, or similar)",
+          "passed": null,
+          "evidence": ""
+        },
+        {
+          "text": "References Kenya subgrade classes from RDM 3.3 Table 4.1 (S1-S6 with Kenya-specific CBR ranges) or identifies common Kenya soil types",
+          "passed": null,
+          "evidence": ""
+        }
+      ]
     }
   ]
 }

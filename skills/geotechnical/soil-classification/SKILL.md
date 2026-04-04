@@ -11,7 +11,7 @@ description: "Use when classifying soils from borehole logs, test pit records, o
 > **Status:** Draft
 > **Last Updated:** 2026-03-19
 > **Reviewed By:** --
-> **Country Modules:** Uganda, UK
+> **Country Modules:** Uganda, UK, Kenya
 
 ## Purpose
 
