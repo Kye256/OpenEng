@@ -88,6 +88,34 @@
           "evidence": ""
         }
       ]
+    },
+    {
+      "id": 3,
+      "prompt": "KeNHA is considering design-build procurement for an urban expressway project in Nairobi. The estimated cost is KES 25 billion with AfDB financing. Advise on FIDIC Yellow Book applicability and Kenya-specific procurement considerations.",
+      "expected_output": "FIDIC Yellow Book is appropriate for design-build where the Contractor provides both design and construction. Kenya context: Yellow Book is less common than Red Book for KeNHA but used for expressways and large highway packages. Nairobi Expressway provides a design-build precedent (though delivered as PPP). PPRA framework permits design-build procurement -- two-stage tendering typical. Employer's Requirements must specify performance criteria (IRI, design traffic in MESA/CESA, structural capacity) per Kenya RDM standards. Engineer's role shifts to design reviewer. AfDB procurement rules apply alongside PPRA. Kenya COPA should address design review timeline, performance testing protocols, IP provisions.",
+      "files": [],
+      "assertions": [
+        {
+          "text": "FIDIC Yellow Book correctly identified as appropriate for design-build procurement",
+          "passed": null,
+          "evidence": ""
+        },
+        {
+          "text": "PPRA design-build procurement provisions referenced",
+          "passed": null,
+          "evidence": ""
+        },
+        {
+          "text": "Context appropriate for expressway -- notes Yellow Book suitability for large design-build highway projects",
+          "passed": null,
+          "evidence": ""
+        },
+        {
+          "text": "Engineer's role as design reviewer (not designer) discussed",
+          "passed": null,
+          "evidence": ""
+        }
+      ]
     }
   ]
 }

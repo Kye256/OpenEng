@@ -89,6 +89,34 @@
           "evidence": ""
         }
       ]
+    },
+    {
+      "id": 3,
+      "prompt": "A contractor on a KeNHA road project has encountered unforeseen ground conditions and wishes to submit a claim. The project is a Class B road in the Rift Valley, FIDIC Red Book 1999, KES 6 billion GoK-funded. During earthworks, rock was encountered at Km 18-22 that was not shown in the site investigation report. The Contractor gave notice 7 days after encountering the rock. Outline the variation and claims procedure under the Kenya FIDIC Red Book contract.",
+      "expected_output": "Notice compliance: Day 7 within 28-day limit under Sub-Clause 20.1 -- notice is valid. Two routes available: (1) Sub-Clause 4.12 claim for unforeseeable physical conditions (entitlement to Cost only, no profit) if rock was genuinely unforeseeable from site investigation data; (2) Variation instruction under Sub-Clause 13.1 with new rate per Sub-Clause 12.3 (includes overheads and profit). Engineer must assess unforeseeability against site investigation data. If variation route: check Engineer's authority threshold (COPA). If above threshold, seek KeNHA approval. PPRA contract management provisions may apply for cumulative variations.",
+      "files": [],
+      "assertions": [
+        {
+          "text": "Sub-Clause 20.1 notice requirement referenced -- 28-day bar identified with Day 7 notice confirmed as compliant",
+          "passed": null,
+          "evidence": ""
+        },
+        {
+          "text": "28-day notice bar discussed as critical FIDIC procedural requirement",
+          "passed": null,
+          "evidence": ""
+        },
+        {
+          "text": "PPRA contract management provisions referenced for Kenya context",
+          "passed": null,
+          "evidence": ""
+        },
+        {
+          "text": "Distinction between Sub-Clause 4.12 (Cost only) and variation (rates including profit) discussed",
+          "passed": null,
+          "evidence": ""
+        }
+      ]
     }
   ]
 }

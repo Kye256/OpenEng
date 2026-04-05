@@ -98,6 +98,39 @@
           "evidence": ""
         }
       ]
+    },
+    {
+      "id": 3,
+      "prompt": "A Kenya Class A road construction project is being procured by KeNHA with World Bank financing. The detailed design is complete (prepared by a consulting firm). The estimated contract value is KES 12 billion. Advise on the appropriate FIDIC contract form, key Conditions of Particular Application (COPA) amendments for Kenya, and PPRA procurement requirements.",
+      "expected_output": "FIDIC Red Book 1999 is the correct form -- design is complete and provided by KeNHA (Employer), so Red Book (construction with Employer's design) applies. Key COPA amendments for Kenya include: Engineer's authority limits for variations, payment timeline adjustments for exchequer cycles, performance security (typically 10%), retention (typically 10% per IPC to 5% max), advance payment (10-15%), defects liability 12 months, dispute resolution via NCIA or CIArb Kenya with Nairobi seat. PPRA compliance required -- Open Tendering for this contract value. World Bank requirements overlay: prior review/no-objection thresholds, fraud and corruption clause, World Bank SBD format. World Bank rules override PPRA thresholds on procurement method.",
+      "files": [],
+      "assertions": [
+        {
+          "text": "FIDIC Red Book correctly identified as the appropriate contract form for construction with Employer's design",
+          "passed": null,
+          "evidence": ""
+        },
+        {
+          "text": "PPRA referenced -- identifies Kenya procurement regulatory framework (Public Procurement and Asset Disposal Act 2015)",
+          "passed": null,
+          "evidence": ""
+        },
+        {
+          "text": "KeNHA identified as the Employer for national trunk road projects",
+          "passed": null,
+          "evidence": ""
+        },
+        {
+          "text": "World Bank prior review/no-objection requirements referenced for donor-funded project",
+          "passed": null,
+          "evidence": ""
+        },
+        {
+          "text": "Kenya-specific COPA amendments discussed (e.g., dispute resolution, payment terms, performance security)",
+          "passed": null,
+          "evidence": ""
+        }
+      ]
     }
   ]
 }

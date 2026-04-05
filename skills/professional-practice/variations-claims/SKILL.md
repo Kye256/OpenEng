@@ -11,7 +11,7 @@ description: "Use when instructing or valuing variations (Sub-Clause 13.x), or w
 > **Status:** Draft
 > **Last Updated:** 2026-03-21
 > **Reviewed By:** ---
-> **Country Modules:** Uganda
+> **Country Modules:** Uganda, Kenya
 
 ## Purpose
 
