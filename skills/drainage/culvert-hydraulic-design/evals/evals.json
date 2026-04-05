@@ -93,6 +93,39 @@
           "evidence": ""
         }
       ]
+    },
+    {
+      "id": 3,
+      "prompt": "Size a pipe culvert for a Class C road crossing in Kenya. The design flow is 1.8 m3/s for the appropriate return period. The culvert length is 12m with an invert slope of 1.5%. Available pipe diameters are 600mm, 900mm, and 1200mm. The embankment height is 3.5m and tailwater depth is 0.6m. Use the Kenya RDM 2.2 design procedure.",
+      "expected_output": "From RDM 2.1 Table 4.1, pipe culverts require 10-year design frequency. Using RDM 2.2 Ch 4 procedure: check both inlet and outlet control. For 900mm pipe: inlet control HW/D approximately 1.6, exceeds 1.5 limit. For 1200mm pipe: inlet control HW/D approximately 0.85 (within limits), outlet control HW approximately 0.9m. Inlet control governs at HW = 1.02m. Select 1200mm diameter. Reference design charts B.5-B.7 or empirical formulae (Section 4.6). Outlet velocity = 1.59 m/s -- check erosion protection needs.",
+      "files": [],
+      "assertions": [
+        {
+          "text": "References RDM 2.2 Ch 4 for Kenya culvert design procedure (not MoWT Vol 2 Section 9)",
+          "passed": null,
+          "evidence": ""
+        },
+        {
+          "text": "Checks both inlet and outlet control and identifies which governs",
+          "passed": null,
+          "evidence": ""
+        },
+        {
+          "text": "References design charts from Appendix B (nomographs) or empirical formulae from Section 4.6",
+          "passed": null,
+          "evidence": ""
+        },
+        {
+          "text": "Selects appropriate diameter (1200mm) that satisfies HW/D limits",
+          "passed": null,
+          "evidence": ""
+        },
+        {
+          "text": "Notes outlet velocity and references erosion protection assessment (Skill #32)",
+          "passed": null,
+          "evidence": ""
+        }
+      ]
     }
   ]
 }
