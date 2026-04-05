@@ -99,6 +99,34 @@
           "evidence": ""
         }
       ]
+    },
+    {
+      "id": 3,
+      "prompt": "Assess climate resilience measures for a proposed road project in Kenya's arid North Eastern region (Garissa County). The area experiences flash floods from seasonal wadis and extreme temperatures exceeding 40 degrees Celsius. The 40km Class C road crosses 3 seasonal wadis. Recommend appropriate climate adjustment factors and design adaptations.",
+      "expected_output": "Identifies Kenya climate zone as arid/semi-arid. References RDM 5.2 Chapter 12 or RDM 2.1 Chapter 7 for climate resilience guidance. Recommends drainage climate adjustment factor (illustrative 1.2-1.3). Recommends PMB for high-temperature surfacing. Suggests drift/causeway design for wadi crossings. All CF values flagged as ILLUSTRATIVE. References Climate Change Act 2016.",
+      "files": [],
+      "assertions": [
+        {
+          "text": "References Kenya climate zones and correctly identifies the project location as arid/semi-arid zone",
+          "passed": null,
+          "evidence": ""
+        },
+        {
+          "text": "Recommends climate adjustment factors for drainage design and flags them as illustrative or requiring verification",
+          "passed": null,
+          "evidence": ""
+        },
+        {
+          "text": "Cross-references drainage and pavement design skills or RDM 2.1/5.2 for implementation of climate adaptation measures",
+          "passed": null,
+          "evidence": ""
+        },
+        {
+          "text": "Mentions Climate Change Act 2016 or NCCAP as Kenya's climate change policy framework",
+          "passed": null,
+          "evidence": ""
+        }
+      ]
     }
   ]
 }

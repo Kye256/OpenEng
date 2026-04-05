@@ -99,6 +99,34 @@
           "evidence": ""
         }
       ]
+    },
+    {
+      "id": 3,
+      "prompt": "Develop a maintenance plan for a deteriorating KeNHA Class A road section. Current condition: IRI 4.8 m/km, surface cracking >40%, drainage partially blocked. The road is 15km long, 7m wide, carrying 5,000 vpd. Use RDM 5.2 criteria to determine the appropriate maintenance intervention level and recommend specific treatments.",
+      "expected_output": "References RDM 5.2 criteria. IRI 4.8 in periodic range (4-6). Cracking >40% approaching rehabilitation trigger (>50%). Recommends periodic maintenance (overlay or surface treatment) with immediate drainage repair per RDM 5.2 Section 8.2. KeNHA is responsible authority for Class A. Mentions RMLF as funding source. Cross-references condition assessment from Skill #56.",
+      "files": [],
+      "assertions": [
+        {
+          "text": "References RDM 5.2 maintenance criteria including surface condition triggers for periodic maintenance and rehabilitation",
+          "passed": null,
+          "evidence": ""
+        },
+        {
+          "text": "Recommends appropriate maintenance intervention (periodic maintenance such as overlay or surface treatment, or rehabilitation if structural assessment warrants)",
+          "passed": null,
+          "evidence": ""
+        },
+        {
+          "text": "Identifies KeNHA as responsible authority for Class A road and mentions RMLF or KRB funding",
+          "passed": null,
+          "evidence": ""
+        },
+        {
+          "text": "Cross-references condition assessment input from Skill #56 or mentions drainage repair as prerequisite before surface treatment",
+          "passed": null,
+          "evidence": ""
+        }
+      ]
     }
   ]
 }

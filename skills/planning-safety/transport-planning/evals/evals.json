@@ -99,6 +99,34 @@
           "evidence": ""
         }
       ]
+    },
+    {
+      "id": 3,
+      "prompt": "A feasibility study is being prepared for a new 80km Class B road connecting two market towns in Western Kenya. Current traffic on the existing gravel road is ADT 800 vpd with 25% motorcycles. Growth rate is 6% per year. Design period is 20 years. Outline the transport planning context and key considerations for this project.",
+      "expected_output": "References Vision 2030 / MTP IV transport development context. Identifies KeNHA as responsible authority for Class B road. Applies compound growth to estimate future AADT approximately 2,500-3,100 vpd (including generated traffic of 15-20% for gravel-to-paved upgrade). Notes motorcycle traffic at 25% as significant safety and capacity consideration. Mentions county spatial plan context and economic justification screening.",
+      "files": [],
+      "assertions": [
+        {
+          "text": "References Vision 2030 or MTP IV as strategic context for Kenya road development",
+          "passed": null,
+          "evidence": ""
+        },
+        {
+          "text": "Identifies KeNHA as responsible authority or mentions Kenya road classification (Class B = national trunk)",
+          "passed": null,
+          "evidence": ""
+        },
+        {
+          "text": "References Kenya road classification system (Class A-E) and correctly places Class B as national trunk road",
+          "passed": null,
+          "evidence": ""
+        },
+        {
+          "text": "Considers socio-economic justification and generated traffic for gravel-to-paved upgrade",
+          "passed": null,
+          "evidence": ""
+        }
+      ]
     }
   ]
 }
