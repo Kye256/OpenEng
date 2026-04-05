@@ -84,6 +84,39 @@
           "evidence": ""
         }
       ]
+    },
+    {
+      "id": 3,
+      "prompt": "Recommend the appropriate small span structure for a Class D road crossing a seasonal stream in Kenya. The required waterway area is 8 m2 and the road is subject to occasional flooding for up to 3 hours. AADT is 120 vehicles/day. Normal wet-season base flow is 0.8 m3/s, and the river is dry for 4 months per year. The budget is limited (rural road standard). Using Kenya RDM 2.2 and RDM 4.2, recommend a structure type, identify key design considerations, and reference appropriate Kenya standards.",
+      "expected_output": "For AADT 120, seasonal stream, acceptable closure 15 days/year: recommend vented drift (causeway with pipes) per RDM 2.2 Ch 3. Base flow of 0.8 m3/s requires pipes to pass dry-season and normal wet-season flow. Design considerations from RDM 2.2 Section 3.4 include flood frequency, overtopping depth, closure duration. If budget allows, box culvert per RDM 4.2 Section 10.4 provides better service. Flood markers and scour protection required.",
+      "files": [],
+      "assertions": [
+        {
+          "text": "References RDM 2.2 Chapter 3 for drift/causeway/low-level crossing design (definitions, characteristics, design considerations)",
+          "passed": null,
+          "evidence": ""
+        },
+        {
+          "text": "Considers flood duration (3 hours) in structure type selection",
+          "passed": null,
+          "evidence": ""
+        },
+        {
+          "text": "References RDM 4.2 Chapter 10 for box culvert option if budget permits",
+          "passed": null,
+          "evidence": ""
+        },
+        {
+          "text": "Recommends appropriate structure type for AADT 120, seasonal stream, limited budget (drift, vented drift, or low-level crossing)",
+          "passed": null,
+          "evidence": ""
+        },
+        {
+          "text": "Mentions scour protection requirement and/or flood warning signage",
+          "passed": null,
+          "evidence": ""
+        }
+      ]
     }
   ]
 }

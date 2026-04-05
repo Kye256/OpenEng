@@ -1,0 +1,126 @@
+{
+  "source": {
+    "manual": "Kenya RDM 4.2",
+    "edition": "2025",
+    "sections": "Ch 3 (Actions -- Tables 3.1-3.4, 3.29, 3.31-3.35, Figures 3.7/3.8), Ch 10 (Culverts -- Sections 10.2-10.5, Figure 10.3)",
+    "verification": "Verified against PDF"
+  },
+  "lm1_characteristic_values": {
+    "description": "Load Model 1 characteristic values per notional lane (Table 3.4)",
+    "lanes": [
+      {"lane": "Lane 1", "tandem_axle_load_kN": 300, "udl_kNm2": 9.0},
+      {"lane": "Lane 2", "tandem_axle_load_kN": 200, "udl_kNm2": 2.5},
+      {"lane": "Lane 3", "tandem_axle_load_kN": 100, "udl_kNm2": 2.5},
+      {"lane": "Other lanes", "tandem_axle_load_kN": 0, "udl_kNm2": 2.5},
+      {"lane": "Remaining area", "tandem_axle_load_kN": 0, "udl_kNm2": 2.5}
+    ],
+    "tandem_axle_spacing_m": 1.2,
+    "wheel_contact_area_m": 0.40,
+    "notes": "Each axle of tandem system has two identical wheels. Load per wheel = 0.5 x alpha_Qi x Q_ik. Contact surface is square of side 0.40 m."
+  },
+  "lm1_adjustment_factors": {
+    "description": "Adjustment factors for LM1 -- Kenya NDP values (Table 3.3, based on UK National Annex)",
+    "alpha_Q1": 1.0,
+    "alpha_Q2": 1.0,
+    "alpha_Q3": 1.0,
+    "alpha_q1": 0.61,
+    "alpha_q2": 2.2,
+    "alpha_q3": 2.2,
+    "alpha_qn": 2.2,
+    "alpha_qr": 2.2,
+    "notes": "alpha_Qi, alpha_qi, and alpha_qr are Nationally Determined Parameters (NDPs). Values from Table 3.3 of RDM 4.2."
+  },
+  "partial_factors_str_set_b": {
+    "description": "Partial factors for STR limit state -- Set B (Table 3.32)",
+    "permanent_actions": {
+      "concrete_self_weight": {"gamma_G_sup": 1.35, "gamma_G_inf": 0.95},
+      "steel_self_weight": {"gamma_G_sup": 1.20, "gamma_G_inf": 0.95},
+      "superimposed_dead_weight": {"gamma_G_sup": 1.20, "gamma_G_inf": 0.95},
+      "road_surfacing": {"gamma_G_sup": 1.20, "gamma_G_inf": 0.95},
+      "weight_of_soil": {"gamma_G_sup": 1.35, "gamma_G_inf": 0.95}
+    },
+    "variable_actions": {
+      "road_traffic_gr1a_gr1b_gr2_gr5_gr6": {"gamma_Q": 1.35},
+      "pedestrian_gr3_gr4": {"gamma_Q": 1.35},
+      "variable_horizontal_earth_pressure_surcharge": {"gamma_Q": 1.50},
+      "wind_actions": {"gamma_Q": 1.70},
+      "thermal_actions": {"gamma_Q": 1.55}
+    },
+    "notes": "From RDM 4.2 Table 3.32. gamma_Q = 0 where favourable."
+  },
+  "partial_factors_equ_set_a": {
+    "description": "Partial factors for EQU limit state -- Set A (Table 3.31)",
+    "permanent_actions": {
+      "gamma_G_sup": 1.05,
+      "gamma_G_inf": 0.95
+    },
+    "variable_actions": {
+      "road_traffic": {"gamma_Q": 1.35},
+      "wind": {"gamma_Q": 1.70},
+      "thermal": {"gamma_Q": 1.55}
+    }
+  },
+  "psi_factors_road_bridges": {
+    "description": "Combination factors for road bridges (Table 3.29)",
+    "lm1_tandem_system": {"psi_0": 0.75, "psi_1": 0.75, "psi_2": 0},
+    "lm1_udl_system": {"psi_0": 0.75, "psi_1": 0.75, "psi_2": 0},
+    "wind_persistent": {"psi_0": 0.5, "psi_1": 0.2, "psi_2": 0},
+    "thermal": {"psi_0": 0.6, "psi_1": 0.6, "psi_2": 0.5},
+    "notes": "From RDM 4.2 Table 3.29"
+  },
+  "wheel_dispersal_through_fill": {
+    "description": "Dispersal of wheel loads through fill to buried structures (Section 10.4.7, Figure 10.3)",
+    "through_pavement_and_slab": {
+      "dispersal_angle_degrees": 45,
+      "spread_ratio": "1:1 horizontally to vertically",
+      "reference": "Figure 3.7"
+    },
+    "through_earth_fill": {
+      "dispersal_angle_from_vertical_degrees": 30,
+      "tan_30": 0.577,
+      "formula": "dispersed_length = contact_dimension + 2 x H_c x tan(30)",
+      "reference": "Section 10.4.7, Figure 10.3"
+    },
+    "earth_cover_threshold_m": 0.6,
+    "notes": "Structures with H_c < 0.6 m treated as bridge structures with direct loading. Structures with H_c >= 0.6 m use 30-degree dispersal through fill. When near wing wall or head wall, dispersal zone may be curtailed (Section 10.4.7)."
+  },
+  "model_factor_earth_cover": {
+    "description": "Supplementary model factor for earth cover weight (Section 10.4.3)",
+    "hard_material_or_piles": {
+      "formula": "gamma_Sd_ec = 1.5 + 0.5 x (H_c - 8) / 3",
+      "minimum": 1.5
+    },
+    "other_foundation": {
+      "formula": "gamma_Sd_ec = 1.15 + 0.35 x (H_c - 8) / 3",
+      "minimum": 1.15
+    }
+  },
+  "minimum_dimensions": {
+    "min_pipe_diameter_mm": 450,
+    "min_box_span_mm": 500,
+    "min_box_height_mm": 450,
+    "min_size_long_culvert_mm": 1200,
+    "long_culvert_threshold_m": 12,
+    "min_fill_height_granular_bedding_m": 0.90,
+    "notes": "From RDM 4.2 Section 10.2. Pipe diameter >= 450 mm. Box culvert >= 500 mm span x 450 mm height. For culverts > 12 m long, min 1.2 m for maintenance access. Fill height >= 0.90 m for granular bedding; below this, concrete surround required."
+  },
+  "pipe_bedding_classes": [
+    {"class": "A (concrete surround)", "bedding_factor": 3.4, "notes": "360-degree concrete surround"},
+    {"class": "B (granular, 180 deg)", "bedding_factor": 2.2, "notes": "Granular bedding to 180 degrees"},
+    {"class": "C (granular, 90 deg)", "bedding_factor": 1.5, "notes": "Granular bedding to 90 degrees"},
+    {"class": "D (flat subgrade)", "bedding_factor": 1.1, "notes": "Flat trench bottom, no shaped bedding"}
+  ],
+  "construction_materials": {
+    "reinforced_concrete_density_kNm3": 25,
+    "normal_concrete_density_kNm3": 24,
+    "typical_fill_unit_weight_kNm3": {"typical": 19, "range_min": 15, "range_max": 22},
+    "K0_rigid_structure": 0.5,
+    "notes": "Densities from RDM 4.2 Table 3.1. K0 = 0.5 for at-rest conditions (rigid box culverts). Typical fill values for compacted granular material."
+  },
+  "design_return_periods": {
+    "description": "Design flow return periods for culverts (Table 2.5)",
+    "pipe_culverts": {"design_years": 10, "check_years": 25},
+    "box_culverts_small": {"area_threshold_m2": 6.0, "design_years": 25, "check_years": 50},
+    "box_culverts_large": {"area_threshold_m2": 6.0, "design_years": 50, "check_years": 100}
+  }
+}

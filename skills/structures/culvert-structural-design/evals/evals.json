@@ -103,6 +103,46 @@
           "evidence": ""
         }
       ]
+    },
+    {
+      "id": 3,
+      "prompt": "Design a reinforced concrete box culvert for a Class B road in Kenya. The culvert has a 3.0m span, 2.0m rise, and 1.5m fill depth. The subgrade has an allowable bearing capacity of 120 kPa. The fill unit weight is 19 kN/m3. Apply Kenya RDM 4.2 loading per EN/Eurocode. Determine: (a) the traffic loading with correct dispersal through fill, (b) the earth pressure with correct partial factors, (c) preliminary slab and wall thicknesses, (d) bearing pressure check, and (e) any escalation flags.",
+      "expected_output": "Traffic loading uses LM1 (not HA/HB). Lane 1 tandem system: 300 kN per axle, wheel load 150 kN dispersed through 1.5 m fill at 30 degrees per Section 10.4.7. Partial factors from Table 3.32 Set B: gamma_G,sup = 1.35 for permanent, gamma_Q = 1.35 for traffic. Earth pressure uses gamma_Q = 1.50 for variable surcharge. Concrete design per EN 1992-1-1 (RDM 4.2 Ch 4). Preliminary slab 300-400 mm, wall 250-350 mm. Bearing pressure check against 120 kPa. Escalation: detailed reinforcement design required by specialist structural engineer.",
+      "files": [
+        "skills/structures/culvert-structural-design/tables/kenya_culvert_loading.json"
+      ],
+      "assertions": [
+        {
+          "text": "Uses LM1 loading (tandem system + UDL from Tables 3.3/3.4) -- does NOT use HA/HB loading",
+          "passed": null,
+          "evidence": ""
+        },
+        {
+          "text": "Applies wheel load dispersal through fill at 30 degrees per RDM 4.2 Section 10.4.7 / Figure 10.3 (not 45 degrees)",
+          "passed": null,
+          "evidence": ""
+        },
+        {
+          "text": "Uses EN partial factors gamma_G = 1.35 and gamma_Q = 1.35 for traffic (Table 3.32 Set B) -- does NOT use BS 5400 gamma_fL notation",
+          "passed": null,
+          "evidence": ""
+        },
+        {
+          "text": "References RDM 4.2 Chapter 10 for culvert design provisions",
+          "passed": null,
+          "evidence": ""
+        },
+        {
+          "text": "References EN 1992-1-1 or RDM 4.2 Chapter 4 for concrete structural design",
+          "passed": null,
+          "evidence": ""
+        },
+        {
+          "text": "Preliminary member sizes provided and bearing pressure check performed",
+          "passed": null,
+          "evidence": ""
+        }
+      ]
     }
   ]
 }
