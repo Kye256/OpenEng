@@ -1,0 +1,102 @@
+{
+  "source": {
+    "manual": "Kenya RDM 2.1",
+    "edition": "2025",
+    "tables": "6.18-6.22",
+    "section": "Section 6.8.8",
+    "verification": "Verified against PDF"
+  },
+  "description": "SCS Curve Number values from Kenya RDM 2.1 for use with the SCS method (Section 6.8). Tables cover urban areas (6.18), cultivated agricultural land (6.19), agricultural land (6.20), arid and semiarid rangelands (6.21), and CN conversion for dry/wet conditions (6.22). All CN values are for average runoff condition with Ia = 0.2S.",
+  "scs_equations": {
+    "rainfall_runoff": "Q = (P - 0.2S)^2 / (P + 0.8S)",
+    "retention": "S = 25400/CN - 254",
+    "initial_abstraction": "Ia = 0.2S",
+    "source": "RDM 2.1 Equations 6.16-6.19"
+  },
+  "table_6_18_urban": {
+    "description": "Table 6.18: Runoff Curve Numbers (CN) for Soil Groups - Urban Areas",
+    "notes": "Average runoff condition, Ia = 0.2S. Impervious areas have CN of 98. Pervious areas are considered equivalent to open space in good hydrologic condition.",
+    "entries": [
+      {"cover_type": "Open space (lawns, parks)", "condition": "Poor (grass <50%)", "avg_imperv_pct": null, "cn_A": 68, "cn_B": 79, "cn_C": 86, "cn_D": 89},
+      {"cover_type": "Open space (lawns, parks)", "condition": "Fair (grass 50-75%)", "avg_imperv_pct": null, "cn_A": 49, "cn_B": 69, "cn_C": 79, "cn_D": 84},
+      {"cover_type": "Open space (lawns, parks)", "condition": "Good (grass >75%)", "avg_imperv_pct": null, "cn_A": 39, "cn_B": 61, "cn_C": 74, "cn_D": 80},
+      {"cover_type": "Impervious areas", "condition": "Paved parking lots, roofs, driveways", "avg_imperv_pct": null, "cn_A": 98, "cn_B": 98, "cn_C": 98, "cn_D": 98},
+      {"cover_type": "Streets and roads", "condition": "Paved; curbs and storm drains", "avg_imperv_pct": null, "cn_A": 98, "cn_B": 98, "cn_C": 98, "cn_D": 98},
+      {"cover_type": "Streets and roads", "condition": "Paved; open ditches", "avg_imperv_pct": null, "cn_A": 83, "cn_B": 89, "cn_C": 92, "cn_D": 93},
+      {"cover_type": "Streets and roads", "condition": "Gravel (including right-of-way)", "avg_imperv_pct": null, "cn_A": 76, "cn_B": 85, "cn_C": 89, "cn_D": 91},
+      {"cover_type": "Streets and roads", "condition": "Dirt (including right-of-way) desert", "avg_imperv_pct": null, "cn_A": 72, "cn_B": 82, "cn_C": 87, "cn_D": 89},
+      {"cover_type": "Urban areas", "condition": "Natural desert cover", "avg_imperv_pct": null, "cn_A": 63, "cn_B": 77, "cn_C": 85, "cn_D": 88},
+      {"cover_type": "Urban districts", "condition": "Commercial and business industrial", "avg_imperv_pct": null, "cn_A": 89, "cn_B": 92, "cn_C": 94, "cn_D": 95},
+      {"cover_type": "Residential districts", "condition": "0.05 hectare or less", "avg_imperv_pct": 65, "cn_A": 77, "cn_B": 85, "cn_C": 90, "cn_D": 92},
+      {"cover_type": "Residential districts", "condition": "0.1 hectare", "avg_imperv_pct": 38, "cn_A": 61, "cn_B": 75, "cn_C": 83, "cn_D": 87},
+      {"cover_type": "Residential districts", "condition": "0.135 hectare", "avg_imperv_pct": 30, "cn_A": 57, "cn_B": 72, "cn_C": 81, "cn_D": 86},
+      {"cover_type": "Residential districts", "condition": "0.2 hectare", "avg_imperv_pct": 25, "cn_A": 54, "cn_B": 70, "cn_C": 80, "cn_D": 85},
+      {"cover_type": "Residential districts", "condition": "0.4 hectare", "avg_imperv_pct": 20, "cn_A": 51, "cn_B": 68, "cn_C": 79, "cn_D": 84},
+      {"cover_type": "Residential districts", "condition": "0.8 hectare", "avg_imperv_pct": 12, "cn_A": 46, "cn_B": 65, "cn_C": 77, "cn_D": 82},
+      {"cover_type": "Developing urban areas", "condition": "Newly graded areas (pervious, no vegetation)", "avg_imperv_pct": null, "cn_A": 77, "cn_B": 86, "cn_C": 91, "cn_D": 94}
+    ]
+  },
+  "table_6_20_agricultural": {
+    "description": "Table 6.20: CN for Soil Groups in Agricultural Land",
+    "entries": [
+      {"cover_type": "Pasture, grassland, continuous forage", "condition": "Poor", "cn_A": 68, "cn_B": 79, "cn_C": 86, "cn_D": 89},
+      {"cover_type": "Pasture, grassland, continuous forage", "condition": "Fair", "cn_A": 49, "cn_B": 69, "cn_C": 79, "cn_D": 84},
+      {"cover_type": "Pasture, grassland, continuous forage", "condition": "Good", "cn_A": 39, "cn_B": 61, "cn_C": 74, "cn_D": 80},
+      {"cover_type": "Meadow-continuous grass, protected", "condition": "--", "cn_A": 35, "cn_B": 59, "cn_C": 72, "cn_D": 79},
+      {"cover_type": "Brush-weed-grass mixture", "condition": "Poor", "cn_A": 48, "cn_B": 67, "cn_C": 77, "cn_D": 83},
+      {"cover_type": "Brush-weed-grass mixture", "condition": "Fair", "cn_A": 35, "cn_B": 56, "cn_C": 70, "cn_D": 77},
+      {"cover_type": "Brush-weed-grass mixture", "condition": "Good", "cn_A": 30, "cn_B": 48, "cn_C": 65, "cn_D": 73},
+      {"cover_type": "Woods-grass combination", "condition": "Poor", "cn_A": 57, "cn_B": 73, "cn_C": 82, "cn_D": 86},
+      {"cover_type": "Woods-grass combination", "condition": "Fair", "cn_A": 43, "cn_B": 65, "cn_C": 76, "cn_D": 82},
+      {"cover_type": "Woods-grass combination", "condition": "Good", "cn_A": 32, "cn_B": 58, "cn_C": 72, "cn_D": 79},
+      {"cover_type": "Woods", "condition": "Poor", "cn_A": 45, "cn_B": 66, "cn_C": 77, "cn_D": 83},
+      {"cover_type": "Woods", "condition": "Fair", "cn_A": 36, "cn_B": 60, "cn_C": 73, "cn_D": 79},
+      {"cover_type": "Woods", "condition": "Good", "cn_A": 30, "cn_B": 55, "cn_C": 70, "cn_D": 77},
+      {"cover_type": "Farms - buildings, lanes, driveways", "condition": "--", "cn_A": 66, "cn_B": 74, "cn_C": 80, "cn_D": 82}
+    ]
+  },
+  "table_6_21_arid_semiarid": {
+    "description": "Table 6.21: CN Values for Arid and Semiarid Rangelands -- Kenya-specific for ASAL regions",
+    "notes": "CN for Group A soils only developed for desert shrub. This table is particularly relevant for Kenya's arid and semi-arid lands (ASALs) covering approximately 80% of the country.",
+    "entries": [
+      {"cover_type": "Mixture of grass, weeds, low-growing brush", "condition": "Poor", "cn_A": null, "cn_B": 80, "cn_C": 87, "cn_D": 93},
+      {"cover_type": "Mixture of grass, weeds, low-growing brush", "condition": "Fair", "cn_A": null, "cn_B": 71, "cn_C": 81, "cn_D": 89},
+      {"cover_type": "Mixture of grass, weeds, low-growing brush", "condition": "Good", "cn_A": null, "cn_B": 62, "cn_C": 74, "cn_D": 85},
+      {"cover_type": "Mountain brush, mixture of small trees and brush", "condition": "Poor", "cn_A": null, "cn_B": 66, "cn_C": 74, "cn_D": 79},
+      {"cover_type": "Mountain brush, mixture of small trees and brush", "condition": "Fair", "cn_A": null, "cn_B": 48, "cn_C": 57, "cn_D": 63},
+      {"cover_type": "Mountain brush, mixture of small trees and brush", "condition": "Good", "cn_A": null, "cn_B": 30, "cn_C": 41, "cn_D": 48},
+      {"cover_type": "Small trees with grass understory brush", "condition": "Poor", "cn_A": null, "cn_B": 75, "cn_C": 85, "cn_D": 89},
+      {"cover_type": "Small trees with grass understory brush", "condition": "Fair", "cn_A": null, "cn_B": 58, "cn_C": 73, "cn_D": 80},
+      {"cover_type": "Small trees with grass understory brush", "condition": "Good", "cn_A": null, "cn_B": 41, "cn_C": 61, "cn_D": 71},
+      {"cover_type": "Brush with grass understory", "condition": "Poor", "cn_A": null, "cn_B": 67, "cn_C": 80, "cn_D": 85},
+      {"cover_type": "Brush with grass understory", "condition": "Fair", "cn_A": null, "cn_B": 51, "cn_C": 63, "cn_D": 70},
+      {"cover_type": "Brush with grass understory", "condition": "Good", "cn_A": null, "cn_B": 35, "cn_C": 47, "cn_D": 55},
+      {"cover_type": "Desert shrub brush", "condition": "Poor", "cn_A": 63, "cn_B": 77, "cn_C": 85, "cn_D": 88},
+      {"cover_type": "Desert shrub brush", "condition": "Fair", "cn_A": 55, "cn_B": 72, "cn_C": 81, "cn_D": 86},
+      {"cover_type": "Desert shrub brush", "condition": "Good", "cn_A": 49, "cn_B": 68, "cn_C": 79, "cn_D": 84}
+    ]
+  },
+  "table_6_22_cn_conversion": {
+    "description": "Table 6.22: Conversion of Average CN to Dry and Wet Condition CN",
+    "entries": [
+      {"cn_average": 100, "cn_dry": 100, "cn_wet": 100},
+      {"cn_average": 95, "cn_dry": 87, "cn_wet": 98},
+      {"cn_average": 90, "cn_dry": 78, "cn_wet": 96},
+      {"cn_average": 85, "cn_dry": 70, "cn_wet": 94},
+      {"cn_average": 80, "cn_dry": 63, "cn_wet": 91},
+      {"cn_average": 75, "cn_dry": 57, "cn_wet": 88},
+      {"cn_average": 70, "cn_dry": 51, "cn_wet": 85},
+      {"cn_average": 65, "cn_dry": 45, "cn_wet": 82},
+      {"cn_average": 60, "cn_dry": 40, "cn_wet": 78},
+      {"cn_average": 55, "cn_dry": 35, "cn_wet": 74}
+    ]
+  },
+  "table_6_23_antecedent_moisture": {
+    "description": "Table 6.23: Rainfall Groups for Antecedent Soil Moisture Condition",
+    "entries": [
+      {"condition": "Dry", "description": "Soils are dry but not to wilting point", "growing_season_5day_rainfall_mm": "Less than 36", "dormant_season_5day_rainfall_mm": "Less than 13"},
+      {"condition": "Average", "description": "Average case for annual floods", "growing_season_5day_rainfall_mm": "36 to 53", "dormant_season_5day_rainfall_mm": "13 to 28"},
+      {"condition": "Wet", "description": "Heavy or light rainfall with low temperatures in 5 days prior", "growing_season_5day_rainfall_mm": "Over 53", "dormant_season_5day_rainfall_mm": "Over 28"}
+    ]
+  }
+}

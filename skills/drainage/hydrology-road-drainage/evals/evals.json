@@ -104,6 +104,42 @@
           "evidence": ""
         }
       ]
+    },
+    {
+      "id": 3,
+      "prompt": "Calculate the design peak flow for a culvert on a Class B road in Kenya. The catchment area is 3.0 hectares with moderately permeable soil (Soil Group B -- silt loam) and gentle slope (rolling, 4%). The vegetation is grassland/scrub. Use the Kenya RDM 2.1 Rational Method with appropriate return period from Table 4.1. Assume KMD IDF data gives a 10-year, 15-minute rainfall intensity of 95 mm/hr.",
+      "expected_output": "From RDM 2.1 Table 4.1, pipe culverts require a 10-year design frequency (25-year check frequency). Catchment 3.0 ha = 0.03 km2 is within the 0.5 km2 Rational Method limit (Table 4.2). Runoff coefficient from Table 6.9: C = Cs + Cp + Cv = 0.10 + 0.10 + 0.15 = 0.35. Frequency factor Cf = 1.0 for 10-year (Table 6.11). Q = CIA/360 = 0.35 * 95 * 3.0 / 360 = 0.277 m3/s. For the 25-year check: Cf = 1.10, I = 115 mm/hr, Q_check = 1.10 * 0.35 * 115 * 3.0 / 360 = 0.369 m3/s.",
+      "files": [
+        "skills/drainage/hydrology-road-drainage/tables/kenya_idf_parameters.json",
+        "skills/drainage/hydrology-road-drainage/tables/kenya_cn_values.json"
+      ],
+      "assertions": [
+        {
+          "text": "References RDM 2.1 Section 6.6 or Equation 6.1 for the Rational Method (not MoWT Vol 2)",
+          "passed": null,
+          "evidence": ""
+        },
+        {
+          "text": "Uses Kenya return period from Table 4.1 -- 10-year for pipe culverts (not Uganda Table 3.2 which varies by road class)",
+          "passed": null,
+          "evidence": ""
+        },
+        {
+          "text": "Uses Kenya runoff coefficient from Table 6.9 component method (Cs + Cp + Cv) -- not Uganda Table 4.7 factors",
+          "passed": null,
+          "evidence": ""
+        },
+        {
+          "text": "References Kenya rainfall data (KMD IDF curves or Equation 6.5), not Uganda TRRL LR 623 station constants",
+          "passed": null,
+          "evidence": ""
+        },
+        {
+          "text": "Mentions the Check Frequency (25-year) from Table 4.1 as an additional assessment per Kenya climate resilience approach",
+          "passed": null,
+          "evidence": ""
+        }
+      ]
     }
   ]
 }

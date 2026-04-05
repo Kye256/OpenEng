@@ -84,6 +84,39 @@
           "evidence": ""
         }
       ]
+    },
+    {
+      "id": 3,
+      "prompt": "Design a side drain for a Class C road in Western Kenya with a longitudinal gradient of 2.5%. The catchment contributing area produces a design flow of 0.35 m3/s for the 5-year return period per RDM 2.1 Table 4.1. The soil is firm laterite loam. Propose drain dimensions and assess whether lining is needed.",
+      "expected_output": "Using Manning's equation per RDM 2.2 Ch 2. Trapezoidal channel with b = 0.5 m, side slopes z = 1.5:1, n = 0.025 for earth. Trial depth d = 0.35 m gives A = 0.359 m2, P = 1.762 m, R = 0.204 m. Q_cap = (1/0.025) * 0.359 * 0.204^(2/3) * 0.025^(1/2) = approximately 0.79 m3/s > 0.35 m3/s OK. V = Q/A = 0.35/0.359 = 0.975 m/s. Permissible for firm laterite loam approximately 0.8 m/s. V exceeds limit -- grass lining recommended (permissible up to 1.5 m/s). Total depth with 150 mm freeboard = 0.50 m.",
+      "files": [],
+      "assertions": [
+        {
+          "text": "References RDM 2.2 Ch 6.4 or Ch 2 for Kenya side drain design (not MoWT Vol 2)",
+          "passed": null,
+          "evidence": ""
+        },
+        {
+          "text": "Uses Kenya side drain dimensions and Manning's equation for capacity check",
+          "passed": null,
+          "evidence": ""
+        },
+        {
+          "text": "Applies Manning's equation Q = (1/n)*A*R^(2/3)*S^(1/2) with appropriate n value",
+          "passed": null,
+          "evidence": ""
+        },
+        {
+          "text": "Checks velocity against permissible limits for the soil type and recommends lining if needed",
+          "passed": null,
+          "evidence": ""
+        },
+        {
+          "text": "Specifies freeboard (at least 150 mm) in the final drain dimensions",
+          "passed": null,
+          "evidence": ""
+        }
+      ]
     }
   ]
 }
