@@ -89,6 +89,39 @@
           "evidence": ""
         }
       ]
+    },
+    {
+      "id": 3,
+      "prompt": "Carry out a bridge condition assessment for a 30-year old reinforced concrete bridge on a Class B road in Kenya. Visual inspection reveals minor cracking in deck soffit, moderate spalling on one pier, and minor vegetation growth on abutments. Assign condition ratings and identify maintenance priorities.",
+      "expected_output": "Uses NBI or Kenya BMS rating system. Assigns condition ratings to each element. Identifies pier spalling as priority for repair. References Kenya institutional context (KeNHA for Class B road). Documents that Kenya BMS details are a knowledge gap and NBI is used as primary methodology.",
+      "files": [],
+      "assertions": [
+        {
+          "text": "Uses rating system (NBI or Kenya BMS) to assign condition ratings per element",
+          "passed": null,
+          "evidence": ""
+        },
+        {
+          "text": "Assigns pier with moderate spalling a lower rating (Poor or similar) than other elements",
+          "passed": null,
+          "evidence": ""
+        },
+        {
+          "text": "Identifies maintenance priorities based on condition ratings",
+          "passed": null,
+          "evidence": ""
+        },
+        {
+          "text": "References Kenya institutional context (KeNHA for national road bridges)",
+          "passed": null,
+          "evidence": ""
+        },
+        {
+          "text": "Acknowledges knowledge gap in Kenya BMS or uses NBI as documented methodology",
+          "passed": null,
+          "evidence": ""
+        }
+      ]
     }
   ]
 }

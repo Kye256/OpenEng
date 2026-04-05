@@ -102,6 +102,48 @@
           "evidence": ""
         }
       ]
+    },
+    {
+      "id": 3,
+      "prompt": "Determine the design traffic loading for a 25m span bridge on a Class B road in Kenya. The carriageway width is 7.3m. Apply Kenya RDM 4.2 EN/Eurocode loading. Calculate: (1) number of notional lanes, (2) LM1 UDL and tandem system loads with adjustment factors, (3) STR Set B factored loads using Tables 3.32 partial factors, and (4) check whether seismic design is needed for a central Kenya location.",
+      "expected_output": "Uses LM1 (not HA/HB). 2 notional lanes from Table 3.2 (7.3m carriageway). Kenya NDP adjustment factors from Table 3.3 applied: alpha_Q1=1.0, alpha_q1=0.61 for Lane 1. EN 1990 load combinations from Table 3.32 (STR Set B) with gamma_G=1.35 and gamma_Q=1.35. Uses gamma_G/gamma_Q notation (not gamma_fL). Gazette Notice 13048 referenced for Eurocode adoption. Seismic zone determined from Figure 3.30 for central Kenya.",
+      "files": [
+        "skills/structures/bridge-loading/tables/kenya_lm1_load_model.json",
+        "skills/structures/bridge-loading/tables/kenya_load_combinations.json",
+        "skills/structures/bridge-loading/tables/kenya_seismic_parameters.json"
+      ],
+      "assertions": [
+        {
+          "text": "Uses LM1 load model (not HA/HB loading) -- LM1 with UDL + tandem system per lane",
+          "passed": null,
+          "evidence": ""
+        },
+        {
+          "text": "Determines notional lanes from Table 3.2 -- 2 lanes for 7.3m carriageway",
+          "passed": null,
+          "evidence": ""
+        },
+        {
+          "text": "Applies Kenya NDP adjustment factors from Table 3.3 (alpha_q1=0.61 for Lane 1 UDL)",
+          "passed": null,
+          "evidence": ""
+        },
+        {
+          "text": "Uses EN 1990 load combinations from Tables 3.31-3.35 (not BS 5400 Table 1 combinations)",
+          "passed": null,
+          "evidence": ""
+        },
+        {
+          "text": "Uses gamma_G/gamma_Q notation (not gamma_fL) throughout",
+          "passed": null,
+          "evidence": ""
+        },
+        {
+          "text": "References Gazette Notice 13048 or notes Eurocode adoption in Kenya",
+          "passed": null,
+          "evidence": ""
+        }
+      ]
     }
   ]
 }

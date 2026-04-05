@@ -98,6 +98,41 @@
           "evidence": ""
         }
       ]
+    },
+    {
+      "id": 3,
+      "prompt": "Assess the hydraulic adequacy of a proposed bridge over a seasonal river in Kenya. The design flow is 450 m3/s, the waterway width is 30m, and the river bed is sandy gravel. Check freeboard, estimate scour depth, and verify afflux.",
+      "expected_output": "References RDM 2.2 Ch 5 for bridge hydraulics. Estimates scour depth using Section 5.6 methods (pier scour, contraction scour). Checks freeboard from Table 5.2. Checks afflux against 0.5m limit. Recommends protection if scour depth is significant.",
+      "files": [
+        "skills/structures/bridge-hydraulics/tables/kenya_scour_parameters.json"
+      ],
+      "assertions": [
+        {
+          "text": "References RDM 2.2 Chapter 5 for bridge hydraulics methodology",
+          "passed": null,
+          "evidence": ""
+        },
+        {
+          "text": "Estimates scour depth using Section 5.6 methods (pier scour equation)",
+          "passed": null,
+          "evidence": ""
+        },
+        {
+          "text": "Checks freeboard from Table 5.2 or Section 5.3",
+          "passed": null,
+          "evidence": ""
+        },
+        {
+          "text": "Checks afflux against maximum 0.5m limit",
+          "passed": null,
+          "evidence": ""
+        },
+        {
+          "text": "Recommends scour protection if scour depth is significant",
+          "passed": null,
+          "evidence": ""
+        }
+      ]
     }
   ]
 }

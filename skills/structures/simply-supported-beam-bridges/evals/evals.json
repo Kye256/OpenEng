@@ -89,6 +89,42 @@
           "evidence": ""
         }
       ]
+    },
+    {
+      "id": 3,
+      "prompt": "Carry out a preliminary design for a simply supported reinforced concrete beam bridge in Kenya. The span is 15m and the road is Class B. Use EN/Eurocode design per RDM 4.2. Determine bridge type, preliminary beam depth, dead load estimate, live load from LM1, and factored design moment for ULS.",
+      "expected_output": "RCC girder bridge selected from Table 2.4 (10-20m range). Beam depth approximately L/14 = 1.07m. References EN 1992 (not BS 5400 Part 4) for concrete design. Uses LM1 loading from Skill #36 Kenya module. Applies EN material partial factors gamma_c=1.50 and gamma_s=1.15 from Table 4.1. STR Set B combination factors gamma_G=1.35 and gamma_Q=1.35. Checks both ULS and SLS requirements.",
+      "files": [
+        "skills/structures/bridge-loading/tables/kenya_lm1_load_model.json",
+        "skills/structures/bridge-loading/tables/kenya_load_combinations.json"
+      ],
+      "assertions": [
+        {
+          "text": "References EN 1992 or Eurocode 2 for concrete design (not BS 5400 Part 4)",
+          "passed": null,
+          "evidence": ""
+        },
+        {
+          "text": "Uses LM1 loading from Skill #36 Kenya module (not HA/HB)",
+          "passed": null,
+          "evidence": ""
+        },
+        {
+          "text": "Applies EN material partial factors gamma_c=1.50 and gamma_s=1.15 from Table 4.1",
+          "passed": null,
+          "evidence": ""
+        },
+        {
+          "text": "Both ULS and SLS checks referenced or performed",
+          "passed": null,
+          "evidence": ""
+        },
+        {
+          "text": "Escalation trigger present for detailed reinforcement design by specialist",
+          "passed": null,
+          "evidence": ""
+        }
+      ]
     }
   ]
 }

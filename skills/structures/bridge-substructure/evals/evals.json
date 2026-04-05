@@ -88,6 +88,41 @@
           "evidence": ""
         }
       ]
+    },
+    {
+      "id": 3,
+      "prompt": "Carry out a preliminary substructure design for a bridge in Kenya's Rift Valley (seismic zone from RDM 4.2). The bridge has 2 spans of 20m on spread foundations in stiff clay. Determine the seismic zone, importance factor, earth pressure approach, and foundation requirements.",
+      "expected_output": "References RDM 4.2 Ch 11 for foundation design. Applies Kenya seismic zone from Figure 3.30 (Zone II or III for Rift Valley). Uses EN earth pressure from Section 3.7 with gamma_Q notation. Uses EN partial factors (gamma_G/gamma_Q). Identifies seismic detailing requirements if in Zone III. References EN 1997 for geotechnical design.",
+      "files": [
+        "skills/structures/bridge-loading/tables/kenya_seismic_parameters.json"
+      ],
+      "assertions": [
+        {
+          "text": "References RDM 4.2 Chapter 11 for foundation design",
+          "passed": null,
+          "evidence": ""
+        },
+        {
+          "text": "Applies Kenya seismic zone from Figure 3.30 -- identifies Rift Valley as Zone II or III",
+          "passed": null,
+          "evidence": ""
+        },
+        {
+          "text": "Uses EN earth pressure from Section 3.7 with gamma_G/gamma_Q notation (not gamma_fL)",
+          "passed": null,
+          "evidence": ""
+        },
+        {
+          "text": "Uses EN partial factors (gamma_G/gamma_Q) throughout, not BS 5400 notation",
+          "passed": null,
+          "evidence": ""
+        },
+        {
+          "text": "Identifies seismic detailing requirements for Zone III location",
+          "passed": null,
+          "evidence": ""
+        }
+      ]
     }
   ]
 }

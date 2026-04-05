@@ -1,0 +1,96 @@
+{
+  "title": "Kenya Bridge Scour Parameters",
+  "source": {
+    "manual": "Kenya RDM 2.2",
+    "edition": "2025",
+    "section": "5.6",
+    "methodology": "HEC-18 principles applied per RDM 2.2",
+    "verification": "Verified against PDF"
+  },
+  "pier_scour_csu_equation": {
+    "formula": "y_s/y_1 = 2.0 * K_1 * K_2 * K_3 * (a/y_1)^0.65 * Fr_1^0.43",
+    "variables": {
+      "y_s": "Scour depth (m)",
+      "y_1": "Flow depth upstream of pier (m)",
+      "a": "Pier width (m)",
+      "Fr_1": "Froude number upstream",
+      "K_1": "Pier shape correction factor",
+      "K_2": "Angle of attack correction factor",
+      "K_3": "Bed condition correction factor"
+    },
+    "K1_pier_shape": [
+      { "shape": "Square nose", "K1": 1.1 },
+      { "shape": "Round nose", "K1": 1.0 },
+      { "shape": "Circular", "K1": 1.0 },
+      { "shape": "Sharp nose", "K1": 0.9 },
+      { "shape": "Group of cylinders", "K1": 1.0 }
+    ],
+    "K2_angle_of_attack": {
+      "formula": "K2 = (cos(theta) + L/a * sin(theta))^0.65",
+      "table": [
+        { "angle_deg": 0, "L_a_4": 1.0, "L_a_8": 1.0, "L_a_12": 1.0 },
+        { "angle_deg": 15, "L_a_4": 1.5, "L_a_8": 2.0, "L_a_12": 2.5 },
+        { "angle_deg": 30, "L_a_4": 2.0, "L_a_8": 2.75, "L_a_12": 3.5 },
+        { "angle_deg": 45, "L_a_4": 2.3, "L_a_8": 3.3, "L_a_12": 4.3 },
+        { "angle_deg": 90, "L_a_4": 2.5, "L_a_8": 3.9, "L_a_12": 5.0 }
+      ]
+    },
+    "K3_bed_condition": [
+      { "condition": "Clear-water scour", "K3": 1.1 },
+      { "condition": "Plane bed", "K3": 1.1 },
+      { "condition": "Small dunes", "K3": 1.1 },
+      { "condition": "Medium dunes", "K3": 1.2 },
+      { "condition": "Large dunes", "K3": 1.3 }
+    ]
+  },
+  "contraction_scour": {
+    "live_bed_formula": "y_2/y_1 = (Q_2/Q_1)^(6/7) * (W_1/W_2)^k1",
+    "K1_values": [
+      { "V_star_over_w": "<0.50", "K1": 0.59, "mode": "Mostly contact bed material" },
+      { "V_star_over_w": "0.50-2.0", "K1": 0.64, "mode": "Some suspended bed material" },
+      { "V_star_over_w": ">2.0", "K1": 0.69, "mode": "Mostly suspended bed material" }
+    ]
+  },
+  "freeboard_requirements": {
+    "source_table": "Table 5.2",
+    "short_medium_bridges_m": 1.0,
+    "long_bridges_m": 1.5,
+    "recommended_minimum_m": 1.5,
+    "approach_embankment_m": 1.50,
+    "bearing_above_hfl_m": 0.50,
+    "notes": [
+      "Short/medium: 6m < L <= 50m, minimum 1.0m (recommended up to 1.5m if alignment permits)",
+      "Long: L > 50m, minimum 1.5m",
+      "Bearing elevation at least 0.50m above design HFL (RDM 4.2 Section 2.7)",
+      "Approach embankment freeboard 1.50m (RDM 4.2 Section 2.7)"
+    ]
+  },
+  "design_flood_return_period": {
+    "source_table": "Table 5.1",
+    "short_bridges_design": 50,
+    "short_bridges_check": 100,
+    "medium_bridges_design": 50,
+    "medium_bridges_check": 100,
+    "long_bridges_design": 100,
+    "long_bridges_check": 200,
+    "super_flood": "Q500 or 1.7 * Q100",
+    "climate_change_note": "Increase return periods by 50% or 100% in high-risk areas"
+  },
+  "maximum_afflux_m": 0.5,
+  "afflux_note": "RDM 2.2 Section 5.1.2a: maximum backwater allowed 0.5m unless justified by special hydraulic conditions",
+  "orifice_coefficients": {
+    "source_table": "Table 5.3",
+    "values": [
+      { "L_W": 0.50, "C_o": 0.892, "e": 1.050 },
+      { "L_W": 0.55, "C_o": 0.880, "e": 1.030 },
+      { "L_W": 0.60, "C_o": 0.870, "e": 1.000 },
+      { "L_W": 0.65, "C_o": 0.867, "e": 0.975 },
+      { "L_W": 0.70, "C_o": 0.865, "e": 0.925 },
+      { "L_W": 0.75, "C_o": 0.868, "e": 0.860 },
+      { "L_W": 0.80, "C_o": 0.875, "e": 0.720 },
+      { "L_W": 0.85, "C_o": 0.897, "e": 0.510 },
+      { "L_W": 0.90, "C_o": 0.923, "e": 0.285 },
+      { "L_W": 0.95, "C_o": 0.960, "e": 0.125 }
+    ]
+  }
+}

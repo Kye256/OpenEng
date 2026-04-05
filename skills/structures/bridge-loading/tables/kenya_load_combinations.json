@@ -1,0 +1,241 @@
+{
+  "title": "Kenya EN 1990 Load Combinations for Bridges",
+  "source": {
+    "manual": "Kenya RDM 4.2",
+    "edition": "2025",
+    "tables": "3.29, 3.30, 3.31, 3.32, 3.33, 3.34, 3.35",
+    "section": "3.13",
+    "verification": "Verified against PDF"
+  },
+  "psi_factors_road_bridges": {
+    "description": "Value of psi factors for road bridges per Table 3.29",
+    "source_table": "Table 3.29",
+    "actions": [
+      {
+        "action": "Traffic loads -- LM1 Tandem System",
+        "group": "gr1a",
+        "psi_0": 0.75,
+        "psi_1": 0.75,
+        "psi_2": 0
+      },
+      {
+        "action": "Traffic loads -- LM1 UDL System",
+        "group": "gr1a",
+        "psi_0": 0.75,
+        "psi_1": 0.75,
+        "psi_2": 0
+      },
+      {
+        "action": "Traffic loads -- Walkway & cycle-track loads",
+        "group": "gr1a",
+        "psi_0": 0.40,
+        "psi_1": 0.40,
+        "psi_2": 0
+      },
+      {
+        "action": "Traffic loads -- LM2 Single axle",
+        "group": "gr1b",
+        "psi_0": 0,
+        "psi_1": 0.75,
+        "psi_2": 0
+      },
+      {
+        "action": "Traffic loads -- Horizontal forces",
+        "group": "gr2",
+        "psi_0": 0,
+        "psi_1": 0,
+        "psi_2": 0
+      },
+      {
+        "action": "Traffic loads -- Pedestrian loads",
+        "group": "gr3",
+        "psi_0": 0,
+        "psi_1": 0.40,
+        "psi_2": 0
+      },
+      {
+        "action": "Traffic loads -- LM4 Crowd loading",
+        "group": "gr4",
+        "psi_0": 0,
+        "psi_1": null,
+        "psi_2": 0
+      },
+      {
+        "action": "Traffic loads -- LM3 Vertical forces from SV & SOV",
+        "group": "gr5",
+        "psi_0": 0,
+        "psi_1": null,
+        "psi_2": 0
+      },
+      {
+        "action": "Traffic loads -- Horizontal forces from SV & SOV",
+        "group": "gr6",
+        "psi_0": 0,
+        "psi_1": 0,
+        "psi_2": 0
+      },
+      {
+        "action": "Wind forces -- Persistent design",
+        "group": "F_Wk",
+        "psi_0": 0.50,
+        "psi_1": 0.20,
+        "psi_2": 0
+      },
+      {
+        "action": "Wind forces -- During execution",
+        "group": "F_W",
+        "psi_0": 0.80,
+        "psi_1": null,
+        "psi_2": 0
+      },
+      {
+        "action": "Wind forces -- During execution (F_W*)",
+        "group": "F_W*",
+        "psi_0": 1.0,
+        "psi_1": null,
+        "psi_2": 0
+      },
+      {
+        "action": "Thermal actions",
+        "group": "T_k",
+        "psi_0": 0.60,
+        "psi_1": 0.60,
+        "psi_2": 0.50
+      },
+      {
+        "action": "Construction loads",
+        "group": "Q_c",
+        "psi_0": 1.0,
+        "psi_1": null,
+        "psi_2": 1.0
+      }
+    ]
+  },
+  "combination_sets": {
+    "equ_set_a": {
+      "description": "Design Value of Actions for Verification of Equilibrium (EQU) -- Set A per Table 3.31",
+      "source_table": "Table 3.31",
+      "equation": "Equation 3.65",
+      "permanent_actions": {
+        "concrete_self_weight": { "gamma_G_sup": 1.05, "gamma_G_inf": 0.95 },
+        "steel_self_weight": { "gamma_G_sup": 1.05, "gamma_G_inf": 0.95 },
+        "superimposed_dead_weight": { "gamma_G_sup": 1.05, "gamma_G_inf": 0.95 },
+        "road_surfacing": { "gamma_G_sup": 1.05, "gamma_G_inf": 0.95 },
+        "weight_of_soil": { "gamma_G_sup": 1.05, "gamma_G_inf": 0.95 },
+        "other_contributing_materials": { "gamma_G_sup": 1.05, "gamma_G_inf": 0.95 }
+      },
+      "variable_actions": {
+        "road_traffic_gr1a_gr1b_gr2_gr5_gr6": { "gamma_Q": 1.35, "note": "= 0 where favourable" },
+        "pedestrian_gr3_gr4": { "gamma_Q": 1.35, "note": "= 0 where favourable" },
+        "wind": { "gamma_Q": 1.70, "note": "= 0 where favourable" },
+        "thermal": { "gamma_Q": 1.55, "note": "= 0 where favourable" }
+      }
+    },
+    "str_set_b": {
+      "description": "Design Value of Actions for Verification of Resistance (STR/GEO) -- Set B per Table 3.32",
+      "source_table": "Table 3.32",
+      "equation": "Equation 3.65",
+      "permanent_actions": {
+        "concrete_self_weight": { "gamma_G_sup": 1.35, "gamma_G_inf": 0.95 },
+        "steel_self_weight": { "gamma_G_sup": 1.20, "gamma_G_inf": 0.95 },
+        "superimposed_dead_weight": { "gamma_G_sup": 1.20, "gamma_G_inf": 0.95 },
+        "road_surfacing": { "gamma_G_sup": 1.20, "gamma_G_inf": 0.95 },
+        "weight_of_soil": { "gamma_G_sup": 1.35, "gamma_G_inf": 0.95 },
+        "other_contributing_materials": { "gamma_G_sup": 1.35, "gamma_G_inf": 0.95 },
+        "settlement_linear": { "gamma_G_sup": 1.20, "gamma_G_inf": 0 },
+        "settlement_nonlinear": { "gamma_G_sup": 1.35, "gamma_G_inf": 0 }
+      },
+      "variable_actions": {
+        "road_traffic_gr1a_gr1b_gr2_gr5_gr6": { "gamma_Q": 1.35, "note": "= 0 where favourable" },
+        "pedestrian_gr3_gr4": { "gamma_Q": 1.35, "note": "= 0 where favourable" },
+        "earth_pressure_variable": { "gamma_Q": 1.50, "note": "= 0 where favourable" },
+        "wind": { "gamma_Q": 1.70, "note": "= 0 where favourable" },
+        "thermal": { "gamma_Q": 1.55, "note": "= 0 where favourable" }
+      }
+    },
+    "str_set_c": {
+      "description": "Design Value of Actions for Verification of Resistance (STR/GEO) -- Set C per Table 3.33",
+      "source_table": "Table 3.33",
+      "equation": "Equation 3.65",
+      "permanent_actions": {
+        "concrete_self_weight": { "gamma_G_sup": 1.00, "gamma_G_inf": 1.00 },
+        "steel_self_weight": { "gamma_G_sup": 1.00, "gamma_G_inf": 1.00 },
+        "superimposed_dead_weight": { "gamma_G_sup": 1.00, "gamma_G_inf": 1.00 },
+        "road_surfacing": { "gamma_G_sup": 1.00, "gamma_G_inf": 1.00 },
+        "weight_of_soil": { "gamma_G_sup": 1.00, "gamma_G_inf": 1.00 },
+        "other_contributing_materials": { "gamma_G_sup": 1.00, "gamma_G_inf": 1.00 },
+        "settlement_linear": { "gamma_G_sup": 1.00, "gamma_G_inf": 0 },
+        "settlement_nonlinear": { "gamma_G_sup": 1.00, "gamma_G_inf": 0 }
+      },
+      "variable_actions": {
+        "road_traffic_gr1a_gr1b_gr2_gr5_gr6": { "gamma_Q": 1.15, "note": "= 0 where favourable" },
+        "pedestrian_gr3_gr4": { "gamma_Q": 1.15, "note": "= 0 where favourable" },
+        "earth_pressure_variable": { "gamma_Q": 1.30, "note": "= 0 where favourable" },
+        "wind": { "gamma_Q": 1.45, "note": "= 0 where favourable" },
+        "thermal": { "gamma_Q": 1.30, "note": "= 0 where favourable" }
+      }
+    },
+    "accidental_and_seismic": {
+      "description": "Design Value of Actions for Accidental and Seismic Combinations per Table 3.34",
+      "source_table": "Table 3.34",
+      "accidental": {
+        "equation": "Equation 3.66",
+        "gamma_all": 1.0,
+        "permanent_unfavourable": "G_k,sup",
+        "permanent_favourable": "G_k,inf",
+        "accidental_action": "A_d",
+        "leading_variable": "psi_1 * Q_k,1",
+        "accompanying_variable": "psi_2 * Q_k"
+      },
+      "seismic": {
+        "equation": "Equation 3.67",
+        "gamma_all": 1.0,
+        "permanent_unfavourable": "G_k,sup",
+        "permanent_favourable": "G_k,inf",
+        "seismic_action": "A_Ed = gamma_I * A_Ek",
+        "accompanying_variable": "psi_2 * Q_k"
+      }
+    },
+    "sls": {
+      "description": "SLS Combination per Table 3.35",
+      "source_table": "Table 3.35",
+      "characteristic": {
+        "equation": "Equation 3.69",
+        "permanent": "G_k,sup and G_k,inf",
+        "leading_variable": "Q_k,l",
+        "accompanying_variable": "psi_0 * Q_k"
+      },
+      "frequent": {
+        "equation": "Equation 3.70",
+        "permanent": "G_k,sup and G_k,inf",
+        "leading_variable": "psi_1 * Q_k,l",
+        "accompanying_variable": "psi_2 * Q_k"
+      },
+      "quasi_permanent": {
+        "equation": "Equation 3.71",
+        "permanent": "G_k,sup and G_k,inf",
+        "leading_variable": "psi_2 * Q_k,l",
+        "accompanying_variable": "psi_2 * Q_k"
+      },
+      "partial_factors": "All partial factors = 1.0 for SLS",
+      "deflection_limits": {
+        "vehicular_general": "Span/800",
+        "vehicular_and_pedestrian": "Span/1000",
+        "vehicular_cantilever": "Span/300",
+        "vehicular_and_pedestrian_cantilever": "Span/375"
+      }
+    }
+  },
+  "combination_formula": {
+    "uls_persistent_transient": "E_d = sum(gamma_G * G_k) + gamma_P * P + gamma_Q1 * Q_k1 + sum(gamma_Qi * psi_0i * Q_ki)",
+    "uls_accidental": "E_d = sum(G_k) + P + A_d + psi_11 * Q_k1 + sum(psi_2i * Q_ki)",
+    "uls_seismic": "E_d = sum(G_k) + P + A_Ed + sum(psi_2i * Q_ki)",
+    "notation": {
+      "gamma_G": "Partial factor for permanent action",
+      "gamma_Q": "Partial factor for variable action",
+      "psi_0": "Factor for combination value of variable action",
+      "psi_1": "Factor for frequent value of variable action",
+      "psi_2": "Factor for quasi-permanent value of variable action"
+    }
+  }
+}
