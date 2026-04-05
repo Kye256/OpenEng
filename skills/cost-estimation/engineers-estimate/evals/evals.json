@@ -94,6 +94,39 @@
           "evidence": ""
         }
       ]
+    },
+    {
+      "id": 3,
+      "prompt": "Prepare a preliminary engineer's estimate for a 30km Class B road rehabilitation project in North Eastern Kenya. The project includes base repair, AC overlay, drainage improvements, and road furniture. The project is funded by the African Development Bank. Use WSCM Part 3 BoQ format.",
+      "expected_output": "Estimate using WSCM Part 3 series structure (Series 1000-9000). North Eastern Kenya regional cost factor (1.25-1.45) applied to base rates. Both KES and USD amounts shown (donor-funded). PPRA threshold implications noted. Physical contingency at 15-20% for preliminary design stage. All rates flagged as PLACEHOLDER. VAT at 16% (or exempt per donor agreement -- flag for verification).",
+      "files": [],
+      "assertions": [
+        {
+          "text": "References WSCM Part 3 format with series numbering (Series 1000-9000)",
+          "passed": null,
+          "evidence": ""
+        },
+        {
+          "text": "Applies regional cost factor for North Eastern Kenya (1.25-1.45 range or similar remote area adjustment)",
+          "passed": null,
+          "evidence": ""
+        },
+        {
+          "text": "All rates and cost figures flagged as PLACEHOLDER",
+          "passed": null,
+          "evidence": ""
+        },
+        {
+          "text": "PPRA threshold implications mentioned (procurement method determination based on estimate value)",
+          "passed": null,
+          "evidence": ""
+        },
+        {
+          "text": "Dual currency (KES and USD) presentation for donor-funded context",
+          "passed": null,
+          "evidence": ""
+        }
+      ]
     }
   ]
 }

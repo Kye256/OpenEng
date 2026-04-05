@@ -99,6 +99,39 @@
           "evidence": ""
         }
       ]
+    },
+    {
+      "id": 3,
+      "prompt": "Build up the unit rate for hot mix asphalt wearing course (40mm AC) for a road project in Western Kenya. The asphalt plant is 30 km from the site. Show the complete L+E+M+OH breakdown with production rates, labour, equipment, and material costs. Apply appropriate regional adjustment factor.",
+      "expected_output": "Complete rate build-up with Labour (paver operator, roller operator, labourers), Equipment (asphalt paver, rollers, trucks for transport), Materials (asphalt mix including aggregate, bitumen, filler with transport from plant). Western Kenya regional factor (1.10-1.20) applied. Overhead and profit at typical Kenya percentages. Total rate flagged as PLACEHOLDER. Material cost includes transport from plant to site (30 km).",
+      "files": [],
+      "assertions": [
+        {
+          "text": "L+E+M+OH breakdown with labour, equipment, material, and overhead components identified",
+          "passed": null,
+          "evidence": ""
+        },
+        {
+          "text": "Western Kenya regional adjustment factor applied (1.10-1.20 range or similar)",
+          "passed": null,
+          "evidence": ""
+        },
+        {
+          "text": "All rates and costs flagged as PLACEHOLDER",
+          "passed": null,
+          "evidence": ""
+        },
+        {
+          "text": "Overhead and profit percentages stated (site overheads, head office overheads, profit)",
+          "passed": null,
+          "evidence": ""
+        },
+        {
+          "text": "Transport cost from asphalt plant to site (30 km) included in material component",
+          "passed": null,
+          "evidence": ""
+        }
+      ]
     }
   ]
 }
