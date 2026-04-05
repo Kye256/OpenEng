@@ -99,6 +99,34 @@
           "evidence": ""
         }
       ]
+    },
+    {
+      "id": 3,
+      "prompt": "Estimate the current asset value of a 50km KeNHA Class B road built 12 years ago. Original construction cost was KES 2.5 billion. Current condition rating from Skill #56 is Fair (PCI = 52%). Assume current replacement cost is KES 300 million per km and residual value of 10%. Apply the most appropriate depreciation method and explain your choice.",
+      "expected_output": "Applies depreciated replacement cost per IPSAS 17. Total replacement cost = 300M x 50 = KES 15.0B. Residual = 1.5B. Condition-based depreciation preferred since PCI data available. Fair condition factor ~0.43. DRC = 15.0B x 0.43 + 1.5B = approximately KES 7.95B. Compares with straight-line (12/20 = 60% depreciated, DRC ~KES 7.5B). Flags Kenya-specific methodology as knowledge gap. Mentions WSCM rates for verification.",
+      "files": [],
+      "assertions": [
+        {
+          "text": "Applies depreciated replacement cost method using current replacement cost (not original construction cost of KES 2.5B)",
+          "passed": null,
+          "evidence": ""
+        },
+        {
+          "text": "References condition-based depreciation as preferred method when Skill #56 PCI data is available",
+          "passed": null,
+          "evidence": ""
+        },
+        {
+          "text": "Flags Kenya-specific road asset valuation methodology as a knowledge gap requiring verification",
+          "passed": null,
+          "evidence": ""
+        },
+        {
+          "text": "Cross-references WSCM rates or Skill #50-51 for replacement cost verification",
+          "passed": null,
+          "evidence": ""
+        }
+      ]
     }
   ]
 }

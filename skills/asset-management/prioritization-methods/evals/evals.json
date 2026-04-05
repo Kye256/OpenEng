@@ -99,6 +99,34 @@
           "evidence": ""
         }
       ]
+    },
+    {
+      "id": 3,
+      "prompt": "Prioritize the following 3 road projects for a Kenya county: (A) 10km gravel road serving market town, ADT 500; (B) 15km earth road serving health facility, ADT 150; (C) 5km urban road with safety issues, ADT 2000. The county has limited budget of KES 200 million. Treatment costs: A = KES 80M, B = KES 120M, C = KES 150M. Use appropriate county-level MCA weights and explain the prioritization.",
+      "expected_output": "Applies MCA with county-level weights emphasising social access (0.35). Road B scores highly on social access (health facility). Road C scores highly on traffic and safety. Road A moderate on all criteria. With county weights, B and A likely rank above C despite lower traffic. Budget of KES 200M funds A+B (200M) or A+some of C. Recommends A+B for social access impact. Documents methodology transparently.",
+      "files": [],
+      "assertions": [
+        {
+          "text": "Applies multi-criteria analysis with county-level weights that emphasise social access over pure economic return or traffic volume",
+          "passed": null,
+          "evidence": ""
+        },
+        {
+          "text": "Considers social access weighting for county roads -- health facility access (Road B) and market access (Road A) weighted appropriately",
+          "passed": null,
+          "evidence": ""
+        },
+        {
+          "text": "References Kenya prioritization framework including KRB, RMLF, or county road budget context",
+          "passed": null,
+          "evidence": ""
+        },
+        {
+          "text": "Applies budget constraint and identifies funded vs unfunded roads with budget utilization calculation",
+          "passed": null,
+          "evidence": ""
+        }
+      ]
     }
   ]
 }
