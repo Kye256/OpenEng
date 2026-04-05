@@ -244,6 +244,7 @@ The agent shall run all validation checks from the loaded country module's Secti
 | Road section details | text | -- | Yes (existing road) | User | Location, length, key features of road to be inspected |
 | Traffic data | object | -- | Recommended | Skill #1-2 | AADT, vehicle composition, pedestrian volumes |
 | Crash data | object | -- | Recommended (existing) | Road authority | Crash records for existing road audits |
+| Traffic management design | object | -- | Recommended | Skill #67-70 | Road marking, sign, signal, and traffic control device designs for audit review |
 
 ### 6.2 Outputs
 
@@ -259,14 +260,29 @@ The agent shall run all validation checks from the loaded country module's Secti
 | File | Description | Format |
 |------|-------------|--------|
 | `modules/uganda.md` | Uganda-specific RSA context and requirements | Markdown |
+| `modules/kenya.md` | Kenya-specific RSA context -- PAM-4 procedures | Markdown |
 | `tables/rsa_checklist_items.json` | RSA checklist items by stage and category | JSON |
+
+### 6.4 Related Skills
+
+| Skill | Relevance to RSA |
+|-------|-----------------|
+| Skill #15 (Vertical Alignment) | Audit checks for gradient and sight distance compliance |
+| Skill #16 (Sight Distance) | Audit checks for SSD, PSD, ISD adequacy |
+| Skill #17 (Cross-Section Design) | Audit checks for lane width, shoulder, and clear zone |
+| Skill #19 (Intersection Design) | Audit checks for junction visibility and layout |
+| Skill #20 (NMT Facilities) | Audit checks for pedestrian and cyclist provisions |
+| Skill #67 (Road Marking Design) | Audit checks for marking type, visibility, retroreflectivity |
+| Skill #68 (Traffic Sign Design) | Audit checks for sign placement, size, visibility |
+| Skill #69 (Traffic Signal Design) | Audit checks for signal warrants, phasing, timing adequacy |
+| Skill #70 (Traffic Control Devices) | Audit checks for barrier placement, hump design, delineation |
 
 ---
 
 ## 7. Procedure
 
 ### Step 1: Load Country Module
-Identify the jurisdiction. Load the Uganda module for UNRA/MoWT projects. Add East African-specific hazard items to the checklist.
+Identify the jurisdiction. Load the appropriate country module (Uganda for UNRA/MoWT projects, Kenya for KeNHA/KeRRA/KURA projects). Add country-specific hazard items to the checklist.
 
 ### Step 2: Determine Audit Stage
 Classify the project stage (feasibility, preliminary, detailed, pre-opening, existing road). Load the appropriate checklist from `tables/rsa_checklist_items.json`.
@@ -380,8 +396,8 @@ See country module for jurisdiction-specific worked examples:
 
 - **Not covered:** Crash investigation and forensic analysis. Traffic impact assessment. Road safety engineering in urban networks (this skill focuses on rural and peri-urban roads). Detailed speed modelling. Road safety management systems.
 - **Simplifications:** Severity classification is judgment-based, not quantitative crash risk modelling. Mitigation cost classification (low/medium/high) is indicative, not detailed cost estimation.
-- **Country modules available:** Uganda
-- **Country modules needed:** Kenya (KeNHA RSA procedures), Tanzania (TANROADS), Ethiopia (ERA Road Safety Manual)
+- **Country modules available:** Uganda, Kenya
+- **Country modules needed:** Tanzania (TANROADS), Ethiopia (ERA Road Safety Manual)
 
 ---
 
