@@ -99,6 +99,34 @@
           "evidence": ""
         }
       ]
+    },
+    {
+      "id": 3,
+      "prompt": "Conduct a preliminary design stage road safety audit for a Kenya Class B road through a small town. The design includes a 50 km/h speed zone, pedestrian crossings, and side road junctions. The town has a population of 15,000, a school near the road, significant motorcycle (boda-boda) traffic, and a market area with roadside trading. Apply the PAM-4 methodology.",
+      "expected_output": "References PAM-4 as the Kenya RSA standard. Applies Stage 2 (Detailed Design) or Stage 1 (Feasibility/Preliminary Design) checklist. Identifies key safety concerns: speed transition from rural to 50 km/h, school zone safety, pedestrian crossings, motorcycle safety at junctions, market area pedestrian-vehicle conflict. Provides checklist-based findings with priority ratings. Mentions NTSA crash data context.",
+      "files": [],
+      "assertions": [
+        {
+          "text": "References PAM-4 as the Kenya road safety audit standard and applies appropriate RSA stage checklist",
+          "passed": null,
+          "evidence": ""
+        },
+        {
+          "text": "Applies appropriate RSA stage (Stage 1 or 2) with stage-specific safety considerations",
+          "passed": null,
+          "evidence": ""
+        },
+        {
+          "text": "Considers pedestrian safety and motorcycle (boda-boda) safety as Kenya-specific concerns",
+          "passed": null,
+          "evidence": ""
+        },
+        {
+          "text": "Provides checklist-based audit findings with priority or severity ratings for identified safety concerns",
+          "passed": null,
+          "evidence": ""
+        }
+      ]
     }
   ]
 }

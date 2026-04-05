@@ -99,6 +99,34 @@
           "evidence": ""
         }
       ]
+    },
+    {
+      "id": 3,
+      "prompt": "Screen a proposed 25km Kenya road upgrade project (gravel to paved) for environmental and social impacts. The project is funded by the World Bank and passes through agricultural land with some homesteads requiring relocation. There are no environmentally sensitive areas (forests, wetlands, national parks) along the alignment. Approximately 15 homesteads are within the road reserve and will require relocation.",
+      "expected_output": "Identifies dual framework: NEMA (EMCA 1999/2015) and World Bank ESF both apply. Full EIA required under EMCA Second Schedule. ESF risk classification: Substantial (due to involuntary resettlement). Required instruments: ESCP, SEP, RAP (for 15 homesteads), ESMP, LMP. Key social impact: resettlement requiring RAP with compensation at replacement cost. Notes stakeholder engagement requirements.",
+      "files": [],
+      "assertions": [
+        {
+          "text": "References both NEMA (EMCA) and World Bank ESF as applicable frameworks for this donor-funded project (dual framework)",
+          "passed": null,
+          "evidence": ""
+        },
+        {
+          "text": "Identifies resettlement of 15 homesteads as a key social impact requiring a Resettlement Action Plan (RAP)",
+          "passed": null,
+          "evidence": ""
+        },
+        {
+          "text": "Mentions EIA requirements under EMCA or references the Second Schedule for projects requiring full EIA",
+          "passed": null,
+          "evidence": ""
+        },
+        {
+          "text": "References Stakeholder Engagement Plan (SEP) or stakeholder consultation requirements under ESF or EMCA",
+          "passed": null,
+          "evidence": ""
+        }
+      ]
     }
   ]
 }
