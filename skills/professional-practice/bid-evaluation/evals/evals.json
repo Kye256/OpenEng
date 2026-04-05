@@ -99,6 +99,34 @@
           "evidence": ""
         }
       ]
+    },
+    {
+      "id": 3,
+      "prompt": "Evaluate the following three bids for a Kenya road construction project procured under Open Tendering (GoK funded, estimated value KES 2.5 billion). Bid A: KES 2,350 million (compliant, valid bid security, valid KRA certificate). Bid B: KES 2,180 million (missing bank guarantee for bid security). Bid C: KES 2,480 million (compliant, valid bid security, valid KRA certificate). The engineer's estimate is KES 2,400 million. Advise on the evaluation outcome.",
+      "expected_output": "Apply PPRA evaluation procedures: Stage 1 (Preliminary): Bid B rejected -- missing bid security (bank guarantee) is a material deviation requiring rejection. Bids A and C proceed. Stage 2 (Technical): Both A and C assessed for technical compliance. Stage 3 (Financial): Correct arithmetic if needed. Bid A at KES 2,350M (97.9% of estimate) and Bid C at KES 2,480M (103.3%). Bid A is the lowest evaluated price. Stage 4: Post-qualification of Bid A. Award recommendation: Bid A as lowest evaluated compliant bid. Evaluation committee must document rationale.",
+      "files": [],
+      "assertions": [
+        {
+          "text": "References PPRA evaluation procedures for Kenya procurement",
+          "passed": null,
+          "evidence": ""
+        },
+        {
+          "text": "Identifies Bid B as non-responsive due to missing bid security (bank guarantee)",
+          "passed": null,
+          "evidence": ""
+        },
+        {
+          "text": "Selects the lowest evaluated compliant bid as the recommended award",
+          "passed": null,
+          "evidence": ""
+        },
+        {
+          "text": "Mentions evaluation committee requirements or documentation needs",
+          "passed": null,
+          "evidence": ""
+        }
+      ]
     }
   ]
 }

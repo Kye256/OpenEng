@@ -89,6 +89,34 @@
           "evidence": ""
         }
       ]
+    },
+    {
+      "id": 3,
+      "prompt": "A dispute has arisen on a Kenya road project regarding interim payment. The DAB process has been exhausted without resolution -- the DAB issued a decision, but KeNHA gave notice of dissatisfaction within 28 days. The 56-day amicable settlement period has elapsed without agreement. The dispute value is KES 90 million. Advise on next steps for dispute resolution in Kenya.",
+      "expected_output": "Since the DAB decision was given, notice of dissatisfaction was properly given within 28 days, and the 56-day amicable settlement period has elapsed, the next step is arbitration under Sub-Clause 20.6. In Kenya: (1) Check COPA for specified arbitration institution -- NCIA (Nairobi Centre for International Arbitration) or CIArb Kenya Chapter are commonly specified for Kenya government contracts; (2) Seat of arbitration typically Nairobi per COPA; (3) Kenya Arbitration Act 1995 provides the legal framework; (4) Consider mediation first under Kenya Mediation Act 2012 through CIArb Kenya -- may be more cost-effective for KES 90 million dispute; (5) Both parties must comply with the DAB decision in the meantime even while pursuing arbitration.",
+      "files": [],
+      "assertions": [
+        {
+          "text": "NCIA or CIArb Kenya referenced as Kenya arbitration institutions",
+          "passed": null,
+          "evidence": ""
+        },
+        {
+          "text": "Kenya Arbitration Act 1995 referenced as the legal framework",
+          "passed": null,
+          "evidence": ""
+        },
+        {
+          "text": "Mediation or arbitration options outlined as next steps after DAB exhaustion",
+          "passed": null,
+          "evidence": ""
+        },
+        {
+          "text": "DAB decision binding nature referenced -- parties must comply even while pursuing further dispute resolution",
+          "passed": null,
+          "evidence": ""
+        }
+      ]
     }
   ]
 }

@@ -89,6 +89,34 @@
           "evidence": ""
         }
       ]
+    },
+    {
+      "id": 3,
+      "prompt": "Prepare an interim payment certificate for a Kenya road construction project. The contract uses WSCM Part 3 BoQ format. The Contractor claims KES 380 million for Month 6 measured work across Series 300 (Earthworks), Series 500 (Pavement), and Series 600 (Bituminous). The contract has 10% retention per IPC (max 5% of KES 4.5 billion CP) and 10% advance payment received. Verify quantities and calculate the IPC amount.",
+      "expected_output": "IPC calculation using WSCM Part 3 item structure. Verify quantities per WSCM Part 3 measurement rules for each series. Adjust for overclaimed quantities and quality test failures. Calculate deductions: retention (10% of verified amount, check against max 5% of CP), advance payment repayment (proportional deduction). Issue IPC within 28 days of Statement receipt (Sub-Clause 14.6). Employer pays within 56 days (Sub-Clause 14.7). WSCM Part 3 series-based item numbering referenced.",
+      "files": [],
+      "assertions": [
+        {
+          "text": "WSCM Part 3 referenced as the Kenya standard BoQ format for road works",
+          "passed": null,
+          "evidence": ""
+        },
+        {
+          "text": "Standard item numbering or series structure referenced (Series 300, 500, 600 etc.)",
+          "passed": null,
+          "evidence": ""
+        },
+        {
+          "text": "FIDIC Sub-Clause 14 payment procedures referenced (14.3, 14.6, 14.7)",
+          "passed": null,
+          "evidence": ""
+        },
+        {
+          "text": "Retention and advance payment deductions calculated or described in the IPC process",
+          "passed": null,
+          "evidence": ""
+        }
+      ]
     }
   ]
 }

@@ -99,6 +99,34 @@
           "evidence": ""
         }
       ]
+    },
+    {
+      "id": 3,
+      "prompt": "KeNHA needs to procure a road rehabilitation project with an estimated cost of KES 800 million. The project is funded by the Government of Kenya (GoK). Multiple domestic contractors are available with experience in similar projects. No urgency or special circumstances apply. Advise on the appropriate procurement method under Kenya PPRA regulations.",
+      "expected_output": "PPRA Act 2015 framework applies (GoK funded). Open National Tendering is the appropriate method -- KES 800 million exceeds the PPRA threshold for Open Tendering. Open Tendering is the default method under Section 91. Prequalification may be considered given the contract size. PPRA Standard Bidding Documents for Works should be used. Tender Committee approval required. Contract form: FIDIC Red Book (Skill #42) with KeNHA COPA. All thresholds are illustrative and should be verified against current PPRA regulations.",
+      "files": [],
+      "assertions": [
+        {
+          "text": "References PPRA Act 2015 as the applicable procurement framework for GoK-funded project",
+          "passed": null,
+          "evidence": ""
+        },
+        {
+          "text": "Recommends Open Tendering (above threshold) as the appropriate procurement method",
+          "passed": null,
+          "evidence": ""
+        },
+        {
+          "text": "Mentions PPRA regulatory requirements for procurement method selection",
+          "passed": null,
+          "evidence": ""
+        },
+        {
+          "text": "Flags thresholds as illustrative or notes need to verify against current PPRA regulations",
+          "passed": null,
+          "evidence": ""
+        }
+      ]
     }
   ]
 }

@@ -99,6 +99,34 @@
           "evidence": ""
         }
       ]
+    },
+    {
+      "id": 3,
+      "prompt": "Prepare an outline of the tender documents for a KeRRA rural road construction project in Kenya. The project is a 25 km Class D road, GoK funded, KES 800 million estimated value, Open National Tendering. FIDIC Red Book contract.",
+      "expected_output": "Use PPRA Standard Bidding Documents for Works (Open Tendering edition). Key components: (1) Instructions to Bidders with Bid Data Sheet entries (KeRRA as Employer, 90-day validity, 2% bid security, technical compliance evaluation); (2) Conditions of Contract -- FIDIC Red Book General Conditions with Kenya COPA (10% performance security, advance payment, retention, arbitration via NCIA/Nairobi); (3) Technical Specifications referencing Kenya Standard Specification for Road and Bridge Construction; (4) Bill of Quantities in WSCM Part 3 format with series-based numbering; (5) Drawings list; (6) Standard bid forms. PPRA SBDs mandatory for GoK procurement. Tender Committee approval before issue.",
+      "files": [],
+      "assertions": [
+        {
+          "text": "References PPRA SBDs as the standard bidding documents for GoK-funded procurement",
+          "passed": null,
+          "evidence": ""
+        },
+        {
+          "text": "Mentions Kenya Standard Specification for Road and Bridge Construction for technical specifications (not Uganda MoWT)",
+          "passed": null,
+          "evidence": ""
+        },
+        {
+          "text": "References WSCM Part 3 for the BoQ format",
+          "passed": null,
+          "evidence": ""
+        },
+        {
+          "text": "Includes mandatory PPRA sections or compliance requirements in the tender document outline",
+          "passed": null,
+          "evidence": ""
+        }
+      ]
     }
   ]
 }
