@@ -3,7 +3,7 @@
 > **Parent Skill:** #70 (Traffic Control Devices)
 > **Country:** Kenya
 > **Standards:** Kenya RDM 6.4 -- Other Traffic Control Devices (2025); Kenya RDM 1.3 -- Geometric Design of Highways, Rural and Urban Roads (2025), Chapter 13 (Safety)
-> **Last Updated:** 2026-04-04
+> **Last Updated:** 2026-04-05
 
 ---
 
@@ -129,20 +129,42 @@ Where RDM 1.3 Chapter 13 provides Kenya-specific clear zone widths, barrier warr
 
 ---
 
-## M.3 Procedure Adjustments
+## M.3 Country-Specific Reasoning
 
-When applying the universal procedure (SKILL.md Section 9) in Kenya:
+### M.3.1 Decision Logic (Kenya Branch)
 
-1. **Speed hump selection:** Use Kenya RDM 6.4 Tables 2.1 and 2.2 for hump geometry (extracted to `tables/kenya_speed_hump_geometry.json`). Specify circular or trapezoidal based on target speed and bus traffic.
-2. **Speed breakers:** Do not specify speed breakers. RDM 6.4 explicitly distinguishes between properly designed humps and crude speed breakers. Only properly designed humps meeting Tables 2.1/2.2 should be used.
-3. **Hump markings:** Specify per RDM 6.4 Figure 2.1 and RDM 6.1 marking details (LM04, LM05, LM23, LM24).
-4. **Bar markings:** Use RDM 6.4 Table 2.3 for placement distances. Yellow on Class A/B roads, white on others.
-5. **VMS:** Use RDM 6.4 Chapter 3 specifications. Include English and local language requirement.
-6. **Barriers:** Use RDM 1.3 Chapter 13 for Kenya-specific barrier requirements. Supplement with universal SKILL.md Section 1.2.
+```
+Step 2 (Kenya): Speed reduction device selection
+  +-- Target speed?
+  |     +-- 20-30 km/h (trading centre, school zone)?
+  |     |     +-- Bus route?
+  |     |     |     +-- Yes: circular hump R=20m, chord=4.0m (Table 2.1, 30 km/h target)
+  |     |     |     +--       Check bus speed acceptable (15 km/h for 30 km/h target)
+  |     |     |     +-- No: trapezoidal hump, ramp 1.0m, 10% gradient (Table 2.2)
+  |     |     +--           or sinusoidal hump for high-cyclist areas
+  |     +-- 35-50 km/h (transition zone)?
+  |     |     +-- Use circular hump with larger radius (Table 2.1)
+  |     |     +-- Bus route: chord >= 6.5 m for 40 km/h target
+  |     +-- Approach warning only (no physical device)?
+  |           +-- Transverse bar markings per Table 2.3
+  |           +-- Number of sets based on approach speed
+  |
+  +-- Location type?
+  |     +-- Mid-block pedestrian crossing: speed table (Figure 2.4)
+  |     +-- Car park / private road: speed bumps per KS 774
+  |     +-- Public road: humps only (not bumps, not speed breakers)
+  |
+  +-- Hump markings required?
+  |     +-- Yes: specify per Figure 2.1 and RDM 6.1
+  |     +-- Warning signs per RDM 6.2
+  |
+  +-- VMS required?
+        +-- Expressway or managed motorway: LED matrix per Chapter 3
+        +-- Character height >= 400 mm, bilingual display
+        +-- UPS backup required
+```
 
----
-
-## M.4 Additional Considerations
+### M.3.2 Professional Judgment (Kenya-Specific)
 
 **Speed breakers are not recommended:** RDM 6.4 Section 2.1 describes speed breakers as crude devices that cause driver discomfort and potential vehicle damage. The manual provides properly designed hump geometries (Tables 2.1, 2.2) as the correct alternative. If existing speed breakers are encountered, recommend replacement with properly designed humps.
 
@@ -152,17 +174,143 @@ When applying the universal procedure (SKILL.md Section 9) in Kenya:
 
 **VMS bilingual requirement:** Section 3.6.3 requires displays in at least two languages -- English and the applicable local language. The first line should be in English, the second in the local language.
 
+### M.3.3 Common Errors (Kenya-Specific)
+
+1. **Specifying speed breakers instead of properly designed humps.** RDM 6.4 Section 2.1 explicitly discourages speed breakers. Only humps meeting Tables 2.1/2.2 specifications should be used.
+2. **Wrong hump geometry for bus routes.** Circular humps for bus routes must have larger radii to achieve acceptable bus passage speeds. Using a 30 km/h hump (R=20m, chord=4.0m) on a bus route gives only 15 km/h bus speed, which may be unacceptable.
+3. **Omitting hump markings and warning signs.** Every hump must have markings per Figure 2.1 and advance warning signs per RDM 6.2. Unmarked humps are a serious safety hazard, especially at night.
+4. **Hump rise exceeding 100 mm.** RDM 6.4 limits circular hump rise to 100 mm. Greater rise causes vehicle damage and is not compliant.
+5. **Using speed bumps on arterial or trunk roads.** Speed bumps (Section 2.4) are restricted to local and collector streets with approach speed <50 km/h. Bumps on trunk roads are non-compliant.
+
 ---
 
-## M.5 Limitations & Knowledge Gaps
+## M.4 Country-Specific Defaults
 
-- RDM 6.4 does not cover barriers, guardrails, delineators, or crash cushions. This is a significant gap. RDM 1.3 Chapter 13 provides some safety barrier guidance, but it is not as detailed as dedicated barrier design standards (EN 1317, MASH).
-- RDM 6.4 does not provide a systematic speed hump spacing methodology (i.e., relationship between hump spacing and 85th percentile speed). The universal guidance in SKILL.md Section 1.1 and Skill #20 (NMT Facilities) should be applied.
-- VMS electrical specifications in RDM 6.4 are detailed but may not reflect the latest LED technology developments.
+| Input | Default Value | Condition | Flag Text | Source/Rationale |
+|-------|--------------|-----------|-----------|-----------------|
+| Hump rise | 100 mm | Circular and trapezoidal humps | ASSUMED: 100 mm standard rise per Section 2.2 | RDM 6.4, Section 2.2 |
+| Transverse bar width | 300 mm | All bar marking installations | ASSUMED: 300 mm bar width per Section 2.7 | RDM 6.4, Section 2.7 |
+| VMS character height | 400 mm | All VMS installations | ASSUMED: 400 mm minimum character height per Section 3.5 | RDM 6.4, Section 3.5 |
+| VMS legibility distance | 200 m | Non-expressway roads | ASSUMED: 200 m legibility distance per Table 3.1 | RDM 6.4, Table 3.1 |
+| Speed bump max height | 100 mm | Permanent bumps on local streets | ASSUMED: 100 mm maximum bump height per Section 2.4 | RDM 6.4, Section 2.4 |
+| Speed table flat-top length | 5.0 m | Standard raised pedestrian crossing | ASSUMED: 5.0 m flat top per Figure 2.4 | RDM 6.4, Section 2.5 |
 
 ---
 
-## M.6 References
+## M.5 Country-Specific Validation
+
+### M.5.1 Range Checks
+
+| Parameter | Minimum | Maximum | Unit | Standard Reference | Action if Violated |
+|-----------|---------|---------|------|-------------------|-------------------|
+| Circular hump rise | 50 | 100 | mm | RDM 6.4, Section 2.2 | Rise <50 mm ineffective; rise >100 mm causes vehicle damage |
+| Circular hump chord length | 3.0 | 9.5 | m | RDM 6.4, Table 2.1 | Must match Table 2.1 for target speed |
+| Trapezoidal hump height | 50 | 100 | mm | RDM 6.4, Section 2.3 | Reject if outside range |
+| Transverse bar spacing | 600 | 1000 | mm | RDM 6.4, Section 2.7 | 600 mm for <=50 km/h; 1000 mm for higher speeds |
+| VMS character height | 400 | -- | mm | RDM 6.4, Section 3.5 | Reject if <400 mm; illegible at design distance |
+| Speed bump height | 25 | 100 | mm | RDM 6.4, Section 2.4 | Per KS 774; reject if outside range |
+| Speed bump width | 900 | -- | mm | RDM 6.4, Section 2.4 | Minimum 900 mm per Section 2.4 |
+
+### M.5.2 Standards Compliance Checks
+
+- **Check:** Speed reduction device type is a properly designed hump (not a speed breaker)
+- **Standard:** RDM 6.4, Section 2.1
+- **Pass condition:** Device specified as circular hump, trapezoidal hump, speed table, sinusoidal hump, or speed bump per KS 774
+- **Fail action:** SENIOR REVIEW -- Speed breaker specified. RDM 6.4 Section 2.1 discourages speed breakers. Replace with properly designed hump per Tables 2.1/2.2.
+
+- **Check:** Hump markings and warning signs specified
+- **Standard:** RDM 6.4, Figure 2.1; RDM 6.2
+- **Pass condition:** Hump marking schedule and warning sign schedule included in design
+- **Fail action:** NOTE -- Hump design missing markings per Figure 2.1 and/or warning signs per RDM 6.2. Both are mandatory.
+
+- **Check:** Speed bumps restricted to appropriate road classes
+- **Standard:** RDM 6.4, Section 2.4
+- **Pass condition:** Speed bumps specified only for local/collector streets with approach speed <50 km/h
+- **Fail action:** SENIOR REVIEW -- Speed bump specified on [road class] with approach speed [X] km/h. Bumps only permitted on local/collector streets <50 km/h.
+
+### M.5.3 Departures / Relaxations Process
+
+Non-standard speed hump geometries or installations on trunk roads require approval from the relevant road authority (KeNHA for Class A/B, KURA for urban roads).
+
+---
+
+## M.6 Country-Specific Escalation
+
+| Trigger | Reason | Suggested Action |
+|---------|--------|-----------------|
+| Speed breaker requested instead of designed hump | Non-compliant device | NOTE -- RDM 6.4 Section 2.1 discourages speed breakers. Specify a properly designed hump per Tables 2.1/2.2. If existing speed breaker, recommend replacement. |
+| Hump on bus route without bus-speed check | Disruption to public transport | SENIOR REVIEW -- Speed hump on bus route. Verify bus passage speed from Table 2.1 column 4 or Table 2.2 column 4 is acceptable. Consider larger radius or trapezoidal hump. |
+| VMS in area without reliable power | System reliability risk | NOTE -- VMS requires 230V AC supply with 12-hour UPS backup (Section 3.10). Verify power supply reliability and UPS sizing for the location. |
+| Hump rise >100 mm requested | Vehicle damage risk | SENIOR REVIEW -- Hump rise [X] mm exceeds 100 mm maximum per RDM 6.4 Section 2.2. Rise >100 mm causes vehicle damage. Reduce to 100 mm or use alternative speed management. |
+| Multiple humps on arterial road | Network speed management | NOTE -- Series of humps on arterial road. Verify spacing achieves desired speed profile. Consider transverse bar markings (Section 2.7) as softer alternative for approach zones. |
+
+---
+
+## M.7 Worked Example -- Kenya
+
+### Example: Speed Hump Design for Class C Road through Trading Centre
+
+**Given:**
+- Road: Class C rural road
+- Design speed: 60 km/h
+- Target speed through trading centre: 30 km/h
+- Bus route: Yes (scheduled service)
+- Trading centre length: 400 m
+- Context: Mixed traffic including motorcycles, pedestrians, market activity
+
+**Solution:**
+
+**Step 1 -- Device selection:**
+
+Target speed 30 km/h on a bus route. From Table 2.1 (circular humps):
+- 30 km/h target: R = 20 m, chord = 4.0 m, bus speed = 15 km/h
+
+Bus speed of 15 km/h may be acceptable for a trading centre. If not, increase to 35 km/h target: R = 31 m, chord = 5.0 m, bus speed = 20 km/h. Use the 30 km/h geometry since the low bus speed is tolerable in a trading centre context.
+
+**Step 2 -- Approach warning (transverse bar markings):**
+
+Approach speed 60 km/h falls in the 51-65 km/h range per Table 2.3. Provide 2 sets of transverse bars:
+- Set 1: 80 m from first hump
+- Set 2: 50 m from first hump
+- Each set: 6 bars, 300 mm wide, 5-10 mm high, spacing 1000 mm (>50 km/h)
+- Colour: white (Class C road)
+
+**Step 3 -- Hump markings:**
+
+Per Figure 2.1:
+- Chequered markings on tapering sections: alternate black and white bands, 500 mm width
+- Triangular markings on hump: base 750 mm, height to apex 1.85 m
+- Retro-reflective material with road studs for night visibility
+- Refer to RDM 6.1 marking codes LM04, LM05, LM23, LM24
+
+**Step 4 -- Warning signs:**
+
+Per RDM 6.2:
+- Advance warning sign (W-series hump warning) at both approaches
+- Siting distance per Table 4.1: 900 m for 50-65 km/h
+- Speed limit sign (P-series) reducing to 30 km/h at trading centre entry
+
+**Step 5 -- Hump spacing:**
+
+For 400 m trading centre with 30 km/h target: space humps at approximately 75-100 m intervals to maintain low speed. Approximately 4-5 humps through the trading centre.
+
+**Result:**
+
+| Parameter | Value | Reference |
+|-----------|-------|-----------|
+| Hump type | Circular, R = 20 m, chord = 4.0 m | RDM 6.4 Table 2.1, 30 km/h |
+| Hump rise | 100 mm | RDM 6.4 Section 2.2 |
+| Bus passage speed | 15 km/h | RDM 6.4 Table 2.1, column 4 |
+| Number of humps | 4-5 over 400 m | Spacing 75-100 m |
+| Approach bars | 2 sets at 50 m and 80 m | RDM 6.4 Table 2.3, 51-65 km/h |
+| Bar colour | White | Class C road |
+| Hump markings | Per Figure 2.1 with road studs | RDM 6.4, RDM 6.1 |
+
+---
+
+## M.8 References
+
+### Standards
 
 - Kenya RDM 6.4: Other Traffic Control Devices (2025), Ministry of Roads and Transport
 - Kenya RDM 1.3: Geometric Design of Highways, Rural and Urban Roads (2025), Chapter 13
@@ -172,17 +320,13 @@ When applying the universal procedure (SKILL.md Section 9) in Kenya:
 - Indian Roads Congress IRC 35:2015 (source for circular hump geometry in RDM 6.4)
 - TRL Report 377: Traffic Calming -- Sinusoidal, 'H' and 'S' humps (source for sinusoidal hump in RDM 6.4)
 
----
+### Limitations
 
-## M.7 Changelog
+- RDM 6.4 does not cover barriers, guardrails, delineators, or crash cushions. This is a significant gap. RDM 1.3 Chapter 13 provides some safety barrier guidance, but it is not as detailed as dedicated barrier design standards (EN 1317, MASH).
+- RDM 6.4 does not provide a systematic speed hump spacing methodology (i.e., relationship between hump spacing and 85th percentile speed). The universal guidance in SKILL.md Section 1.1 and Skill #20 (NMT Facilities) should be applied.
+- VMS electrical specifications in RDM 6.4 are detailed but may not reflect the latest LED technology developments.
 
-| Date | Change | Author |
-|------|--------|--------|
-| 2026-04-04 | Initial Kenya module created from RDM 6.4 and RDM 1.3 Ch13 | OpenEng |
-
----
-
-## M.8 Cross-References
+### Cross-References
 
 - **Skill #13 Kenya module** -- Road classification, design speed context
 - **Skill #20 Kenya module** -- Speed management zone layout, NMT crossing placement
