@@ -120,10 +120,10 @@ Add Kenya country modules to all applicable existing skills and create new skill
 - [x] **TMAN-05**: Skill #68 Kenya module — RDM 6.2 as primary source
 - [x] **TMAN-06**: Skill #68 evaluation scenarios
 - [x] **TMAN-07**: Skill #69 traffic signal design — warrants, phasing, timing, controller selection, pedestrian phases
-- [ ] **TMAN-08**: Skill #69 Kenya module — RDM 6.3 as primary source (gap closure: M.1-M.8 restructure)
+- [x] **TMAN-08**: Skill #69 Kenya module — RDM 6.3 as primary source (gap closure: M.1-M.8 restructure)
 - [x] **TMAN-09**: Skill #69 evaluation scenarios
 - [x] **TMAN-10**: Skill #70 traffic control devices — barriers, delineators, rumble strips, guardrails, crash cushions, speed humps, VMS
-- [ ] **TMAN-11**: Skill #70 Kenya module — RDM 6.4 as primary source (gap closure: M.1-M.8 restructure)
+- [x] **TMAN-11**: Skill #70 Kenya module — RDM 6.4 as primary source (gap closure: M.1-M.8 restructure)
 - [x] **TMAN-12**: Skill #70 evaluation scenarios
 
 ### Integration & Cleanup
@@ -229,10 +229,10 @@ Add Kenya country modules to all applicable existing skills and create new skill
 | TMAN-05 | Phase 8 | Complete |
 | TMAN-06 | Phase 8 | Complete |
 | TMAN-07 | Phase 8 | Complete |
-| TMAN-08 | Phase 12 | Pending |
+| TMAN-08 | Phase 12 | Complete |
 | TMAN-09 | Phase 8 | Complete |
 | TMAN-10 | Phase 8 | Complete |
-| TMAN-11 | Phase 12 | Pending |
+| TMAN-11 | Phase 12 | Complete |
 | TMAN-12 | Phase 8 | Complete |
 | INTEG-K01 | Phase 11 | Complete |
 | INTEG-K02 | Phase 11 | Complete |
