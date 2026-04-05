@@ -94,6 +94,39 @@
           "evidence": ""
         }
       ]
+    },
+    {
+      "id": 3,
+      "prompt": "Recommend erosion protection for a road embankment toe adjacent to a seasonal river in Kenya. Flow velocity during the design flood is 3.5 m/s. The riverbed is sandy gravel. Local stone is available from a quarry 20 km away with sizes up to 400mm. Consider both structural and bio-engineering options per Kenya RDM 2.2.",
+      "expected_output": "V = 3.5 m/s exceeds sandy gravel permissible velocity of approximately 1.5 m/s. Per RDM 2.2 Ch 6, velocity 3.0-5.0 m/s requires gabion baskets/mattresses (Section 6.3.3) or heavy rip-rap. Gabion mattresses recommended for bank face below HWL (2.0x1.0x0.5m, PVC-coated wire, 100-200mm stone fill). Bio-engineering (vetiver grass per Section 6.3.6) recommended above HWL. Toe protection with gabion basket embedded below bed level. Geotextile filter beneath gabions.",
+      "files": [],
+      "assertions": [
+        {
+          "text": "References RDM 2.2 Ch 6 for Kenya erosion protection design (not MoWT Vol 2)",
+          "passed": null,
+          "evidence": ""
+        },
+        {
+          "text": "Considers locally available materials and recommends appropriate protection type for 3.5 m/s velocity",
+          "passed": null,
+          "evidence": ""
+        },
+        {
+          "text": "Recommends a protection type appropriate for the velocity range (gabions, heavy rip-rap, or concrete)",
+          "passed": null,
+          "evidence": ""
+        },
+        {
+          "text": "Mentions bio-engineering (Section 6.3.6) as an option -- either as primary method or complement to structural measures",
+          "passed": null,
+          "evidence": ""
+        },
+        {
+          "text": "Specifies filter layer or geotextile beneath the stone/gabion protection",
+          "passed": null,
+          "evidence": ""
+        }
+      ]
     }
   ]
 }
