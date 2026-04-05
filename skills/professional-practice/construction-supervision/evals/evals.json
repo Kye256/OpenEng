@@ -84,6 +84,39 @@
           "evidence": ""
         }
       ]
+    },
+    {
+      "id": 3,
+      "prompt": "Outline the monthly supervision requirements for a KeNHA road construction project in Kenya. The project is 45km of Class B road construction under a FIDIC Red Book contract. Include the supervision team structure, reporting requirements, quality control procedures, and payment certification workflow. Reference the applicable Kenya standards.",
+      "expected_output": "Supervision framework based on Standard Specification for Road and Bridge Construction (WSCM Part 2) -- not MoWT General Specifications. Supervision team includes Resident Engineer, Deputy RE, Materials Engineer, Surveyor, Inspector of Works. Hold points and witness points referenced per Section 1730. Quality control per Section 1800 (statistical lot-based system). WSCM Part 3 BoQ format for measurement and payment certification. Monthly reporting to KeNHA covering progress, quality, safety, environmental compliance.",
+      "files": [],
+      "assertions": [
+        {
+          "text": "References Standard Specification for Road and Bridge Construction (not MoWT General Specifications) as the technical standard",
+          "passed": null,
+          "evidence": ""
+        },
+        {
+          "text": "Mentions hold points and/or witness points requiring Engineer's approval before proceeding (Section 1730 or equivalent)",
+          "passed": null,
+          "evidence": ""
+        },
+        {
+          "text": "References WSCM Part 3 BoQ format for measurement and payment certification",
+          "passed": null,
+          "evidence": ""
+        },
+        {
+          "text": "Mentions Resident Engineer role and supervision team structure",
+          "passed": null,
+          "evidence": ""
+        },
+        {
+          "text": "Monthly reporting content outlined including quality, safety, environmental, and community aspects",
+          "passed": null,
+          "evidence": ""
+        }
+      ]
     }
   ]
 }

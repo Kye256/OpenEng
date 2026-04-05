@@ -11,7 +11,7 @@ description: "Use when advising the Resident Engineer on construction supervisio
 > **Status:** Draft
 > **Last Updated:** 2026-03-21
 > **Reviewed By:** ---
-> **Country Modules:** Uganda
+> **Country Modules:** Uganda, Kenya
 
 ## Purpose
 
