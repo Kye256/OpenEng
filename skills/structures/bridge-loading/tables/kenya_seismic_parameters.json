@@ -1,0 +1,228 @@
+{
+  "title": "Kenya Seismic Design Parameters for Bridges",
+  "source": {
+    "manual": "Kenya RDM 4.2",
+    "edition": "2025",
+    "tables": "3.24, 3.25, 3.26, 3.27, 3.28",
+    "figures": "3.30, 3.31, 3.32",
+    "section": "3.11",
+    "verification": "Verified against PDF"
+  },
+  "seismic_zones": {
+    "description": "Kenya seismic zones per Figure 3.30 (Source: WHO 2010)",
+    "source_figure": "Figure 3.30",
+    "zones": [
+      {
+        "zone": "I",
+        "pga_range_m_per_s2": "0 - 0.2",
+        "description": "Low seismicity",
+        "typical_regions": "Eastern Kenya (Garissa, Mombasa coastal areas, parts of northeastern Kenya)"
+      },
+      {
+        "zone": "II",
+        "pga_range_m_per_s2": "0.2 - 0.8",
+        "description": "Moderate seismicity",
+        "typical_regions": "Central Kenya (Nairobi, Thika, parts of central highlands, Nakuru)"
+      },
+      {
+        "zone": "III",
+        "pga_range_m_per_s2": "0.8 - 2.4",
+        "description": "High seismicity",
+        "typical_regions": "Western Kenya Rift Valley (Kisumu, Eldoret, Kitale, Kakamega, Lake Victoria region)"
+      }
+    ],
+    "notes": [
+      "Seismic zones and PGA values are indicative, based on WHO seismic map.",
+      "Actual values for bridge-specific site should be obtained from Mines and Geological Department, Kenya.",
+      "Return period T_NCR = 475 years recommended (Eurocode default). UK National Annex uses T_NCR = 2500 years."
+    ]
+  },
+  "importance_factors": {
+    "description": "Seismic importance factors per Table 3.24",
+    "source_table": "Table 3.24",
+    "formula": "a_g = gamma_I * a_gR",
+    "categories": [
+      {
+        "category": "I",
+        "importance_factor": 0.85,
+        "description": "Bridges not critical for maintaining communication and of less than average importance"
+      },
+      {
+        "category": "II",
+        "importance_factor": 1.0,
+        "description": "General road bridges of average importance"
+      },
+      {
+        "category": "III",
+        "importance_factor": 1.3,
+        "description": "Bridges of critical importance for maintaining communications, especially post-earthquake; bridges with large number of probable fatalities; major bridges where design life greater than normal is required"
+      }
+    ],
+    "notes": "Where T_NCR = 2500 years is adopted for Category III, gamma_I = 1.0 may be assumed."
+  },
+  "ground_types": {
+    "description": "Ground types per Table 3.25",
+    "source_table": "Table 3.25",
+    "types": [
+      {
+        "type": "A",
+        "description": "Rock or other rock-like geological formation, including at most 5 m of weaker material at surface",
+        "v_s30_m_per_s": ">800",
+        "N_SPT": null,
+        "c_u_N_per_mm2": null
+      },
+      {
+        "type": "B",
+        "description": "Deposits of very dense sand, gravel, or very stiff clay, at least several tens of metres thick, characterised by gradual increase of mechanical properties with depth",
+        "v_s30_m_per_s": "360-800",
+        "N_SPT": ">50",
+        "c_u_N_per_mm2": ">0.25"
+      },
+      {
+        "type": "C",
+        "description": "Deep deposits of dense or medium-dense sand, gravel or stiff clay with thickness from several tens to many hundreds of metres",
+        "v_s30_m_per_s": "180-360",
+        "N_SPT": "15-50",
+        "c_u_N_per_mm2": "0.07-0.25"
+      },
+      {
+        "type": "D",
+        "description": "Deposits of loose-to-medium cohesionless soil, or of predominantly soft-to-firm cohesive soil",
+        "v_s30_m_per_s": "<180",
+        "N_SPT": "<15",
+        "c_u_N_per_mm2": "<0.07"
+      },
+      {
+        "type": "E",
+        "description": "Surface alluvium layer with v_s of Type C or D (5-20m thick), underlain by stiffer material with v_s > 800 m/s",
+        "v_s30_m_per_s": null,
+        "N_SPT": null,
+        "c_u_N_per_mm2": null
+      },
+      {
+        "type": "S1",
+        "description": "Deposits containing a layer of soft clay/silt (PI > 40) at least 10m thick, with high water content",
+        "v_s30_m_per_s": "<100 (indicative)",
+        "N_SPT": null,
+        "c_u_N_per_mm2": "0.01-0.02"
+      },
+      {
+        "type": "S2",
+        "description": "Deposits of liquefiable soils, sensitive clays, or any other soil profile not in A-E or S1",
+        "v_s30_m_per_s": null,
+        "N_SPT": null,
+        "c_u_N_per_mm2": null
+      }
+    ]
+  },
+  "elastic_response_spectra": {
+    "description": "Parameters for elastic response spectra per Table 3.26",
+    "source_table": "Table 3.26",
+    "type_1": {
+      "description": "Type 1 spectrum -- surface-wave magnitude M_s > 5.5",
+      "parameters": [
+        { "ground_type": "A", "S": 1.0, "T_B_s": 0.15, "T_C_s": 0.4, "T_D_s": 2.0 },
+        { "ground_type": "B", "S": 1.2, "T_B_s": 0.15, "T_C_s": 0.5, "T_D_s": 2.0 },
+        { "ground_type": "C", "S": 1.15, "T_B_s": 0.20, "T_C_s": 0.6, "T_D_s": 2.0 },
+        { "ground_type": "D", "S": 1.35, "T_B_s": 0.20, "T_C_s": 0.8, "T_D_s": 2.0 },
+        { "ground_type": "E", "S": 1.4, "T_B_s": 0.15, "T_C_s": 0.5, "T_D_s": 2.0 }
+      ]
+    },
+    "type_2": {
+      "description": "Type 2 spectrum -- surface-wave magnitude M_s <= 5.5",
+      "parameters": [
+        { "ground_type": "A", "S": 1.0, "T_B_s": 0.05, "T_C_s": 0.25, "T_D_s": 1.2 },
+        { "ground_type": "B", "S": 1.35, "T_B_s": 0.05, "T_C_s": 0.25, "T_D_s": 1.2 },
+        { "ground_type": "C", "S": 1.5, "T_B_s": 0.10, "T_C_s": 0.25, "T_D_s": 1.2 },
+        { "ground_type": "D", "S": 1.8, "T_B_s": 0.10, "T_C_s": 0.30, "T_D_s": 1.2 },
+        { "ground_type": "E", "S": 1.6, "T_B_s": 0.05, "T_C_s": 0.25, "T_D_s": 1.2 }
+      ]
+    },
+    "equations": {
+      "0_to_TB": "S_e(T) = a_g * S * [1 + T/T_B * (eta*2.5 - 1)]",
+      "TB_to_TC": "S_e(T) = a_g * S * eta * 2.5",
+      "TC_to_TD": "S_e(T) = a_g * S * eta * 2.5 * [T_C/T]",
+      "TD_to_4s": "S_e(T) = a_g * S * eta * 2.5 * [T_C*T_D/T^2]",
+      "eta": "sqrt(10/(5+xi)) >= 0.55, where xi = damping ratio in %"
+    }
+  },
+  "vertical_elastic_response_spectra": {
+    "description": "Parameters for vertical elastic response spectra per Table 3.27",
+    "source_table": "Table 3.27",
+    "parameters": [
+      { "spectrum": "Type 1", "a_vg": "0.90 * a_g", "T_B_s": 0.05, "T_C_s": 0.15, "T_D_s": 1.0 },
+      { "spectrum": "Type 2", "a_vg": "0.45 * a_g", "T_B_s": 0.05, "T_C_s": 0.15, "T_D_s": 1.0 }
+    ]
+  },
+  "behaviour_factors": {
+    "description": "Maximum values of behaviour factor q per Table 3.28",
+    "source_table": "Table 3.28",
+    "factors": [
+      {
+        "member_type": "Reinforced concrete piers -- vertical in bending",
+        "limited_ductile": 1.5,
+        "ductile": "3.5 * lambda"
+      },
+      {
+        "member_type": "Reinforced concrete piers -- inclined struts in bending",
+        "limited_ductile": 1.2,
+        "ductile": "2.1 * lambda"
+      },
+      {
+        "member_type": "Steel piers -- vertical in bending",
+        "limited_ductile": 1.5,
+        "ductile": 3.5
+      },
+      {
+        "member_type": "Steel piers -- inclined struts in bending",
+        "limited_ductile": 1.2,
+        "ductile": 2.0
+      },
+      {
+        "member_type": "Steel piers -- with normal bracing",
+        "limited_ductile": 1.5,
+        "ductile": 2.5
+      },
+      {
+        "member_type": "Steel piers -- with eccentric bracing",
+        "limited_ductile": null,
+        "ductile": 3.5
+      },
+      {
+        "member_type": "Abutments rigidly connected -- in general",
+        "limited_ductile": 1.5,
+        "ductile": 1.5
+      },
+      {
+        "member_type": "Abutments rigidly connected -- locked-in structures",
+        "limited_ductile": 1.0,
+        "ductile": 1.0
+      },
+      {
+        "member_type": "Arches",
+        "limited_ductile": 1.2,
+        "ductile": 2.0
+      }
+    ],
+    "lambda_definition": "lambda = 1.0 for alpha_s >= 3; lambda = sqrt(alpha_s/3) for 3 > alpha_s >= 1.0; alpha_s = L_s/h is shear span ratio",
+    "damping_ratios": {
+      "reinforced_concrete": "5%",
+      "prestressed_concrete": "2%",
+      "welded_steel": "2%",
+      "bolted_steel": "4%"
+    }
+  },
+  "low_seismicity_thresholds": {
+    "description": "Thresholds for reduced or simplified seismic design",
+    "low_seismicity": {
+      "T_NCR_475": "a_g on Type A ground <= 0.78 m/s2",
+      "T_NCR_2500": "a_g on Type A ground <= 2 m/s2",
+      "action": "Reduced or simplified seismic design procedures may be used"
+    },
+    "very_low_seismicity": {
+      "T_NCR_475": "a_g on Type A ground <= 0.39 m/s2",
+      "T_NCR_2500": "a_g on Type A ground <= 1.8 m/s2",
+      "action": "Seismic action effects may be neglected"
+    }
+  }
+}

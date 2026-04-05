@@ -94,6 +94,39 @@
           "evidence": ""
         }
       ]
+    },
+    {
+      "id": 3,
+      "prompt": "Assess the suitability of a bridge site for a Class A road crossing the Tana River in Kenya. The proposed crossing is at a straight reach with firm foundation conditions on both banks. The required navigation clearance is 5m. The river width is 60m at normal flow, expanding to 120m at Q100. Approach gradients are 4%.",
+      "expected_output": "Multi-criteria assessment referencing RDM 4.2 Ch 2. Design working life 100 years from Table 2.1. Large bridge classification (>50m). Design return period Q100 (Table 2.5). Minimum vertical clearance 1.5m from Table 2.6 plus 5m navigation clearance per Authority requirements. Minimum bridge width from Table 2.2. Foundation investigation per Section 2.8. Seismic zone determination from Figure 3.30. KeNHA approval required for Class A road bridge.",
+      "files": [],
+      "assertions": [
+        {
+          "text": "References RDM 4.2 Chapter 2 for bridge site selection requirements",
+          "passed": null,
+          "evidence": ""
+        },
+        {
+          "text": "Design working life of 100 years identified from Table 2.1",
+          "passed": null,
+          "evidence": ""
+        },
+        {
+          "text": "Clearance requirements checked -- navigation clearance 5m noted as exceeding minimum Table 2.6 values",
+          "passed": null,
+          "evidence": ""
+        },
+        {
+          "text": "KeNHA approval referenced for Class A road bridge location",
+          "passed": null,
+          "evidence": ""
+        },
+        {
+          "text": "Seismic zone identified for bridge location",
+          "passed": null,
+          "evidence": ""
+        }
+      ]
     }
   ]
 }

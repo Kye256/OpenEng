@@ -1,0 +1,146 @@
+{
+  "title": "Kenya LM1 Load Model and Traffic Load Parameters",
+  "source": {
+    "manual": "Kenya RDM 4.2",
+    "edition": "2025",
+    "tables": "3.2, 3.3, 3.4, 3.5, 3.6",
+    "figures": "3.2, 3.3, 3.4, 3.5",
+    "verification": "Verified against PDF"
+  },
+  "notional_lanes": {
+    "description": "Notional lane definitions per Table 3.2",
+    "source_table": "Table 3.2",
+    "lanes": [
+      {
+        "carriageway_width": "w < 5.4 m",
+        "number_of_notional_lanes": 1,
+        "notional_lane_width_m": 3.0,
+        "remaining_area_width": "w - 3"
+      },
+      {
+        "carriageway_width": "5.4 <= w < 6",
+        "number_of_notional_lanes": 2,
+        "notional_lane_width_m": "w/2",
+        "remaining_area_width": "0"
+      },
+      {
+        "carriageway_width": "w >= 6",
+        "number_of_notional_lanes": "Int(w/3)",
+        "notional_lane_width_m": 3.0,
+        "remaining_area_width": "w - 3*n_l"
+      }
+    ]
+  },
+  "lm1_adjustment_factors": {
+    "description": "Adjustment factors for LM1 per Table 3.3 (Kenya NDP -- UK National Annex values used pending Kenya NDP)",
+    "source_table": "Table 3.3",
+    "note": "These are Nationally Determined Parameters (NDPs). Kenya currently uses UK National Annex values pending development of Kenya National Annex.",
+    "factors": [
+      {
+        "location": "Lane 1",
+        "alpha_Qi": 1.0,
+        "alpha_qi": 0.61,
+        "description": "alpha_Q1 shall be taken as 1.0 for Clause 3.3.5.1"
+      },
+      {
+        "location": "Lane 2",
+        "alpha_Qi": 1.0,
+        "alpha_qi": 2.2,
+        "description": ""
+      },
+      {
+        "location": "Lane 3",
+        "alpha_Qi": 1.0,
+        "alpha_qi": 2.2,
+        "description": ""
+      },
+      {
+        "location": "Other lanes",
+        "alpha_Qi": null,
+        "alpha_qi": 2.2,
+        "description": "No tandem system on other lanes"
+      },
+      {
+        "location": "Remaining area",
+        "alpha_Qi": null,
+        "alpha_qi": 2.2,
+        "description": "alpha_qr = 2.2"
+      }
+    ]
+  },
+  "lm1_characteristic_values": {
+    "description": "Characteristic values of LM1 per Table 3.4 (including dynamic amplification)",
+    "source_table": "Table 3.4",
+    "tandem_system": {
+      "unit": "kN per axle (Q_ik)",
+      "values": [
+        { "location": "Lane 1", "axle_load_kN": 300 },
+        { "location": "Lane 2", "axle_load_kN": 200 },
+        { "location": "Lane 3", "axle_load_kN": 100 },
+        { "location": "Other lanes", "axle_load_kN": 0 },
+        { "location": "Remaining area", "axle_load_kN": 0 }
+      ],
+      "axle_spacing_m": 1.2,
+      "wheel_contact_area_m": 0.40,
+      "notes": "Each axle = 2 identical wheels, load per wheel = 0.5 * alpha_Q * Q_ik"
+    },
+    "udl_system": {
+      "unit": "kN/m2 (q_ik or q_rk)",
+      "values": [
+        { "location": "Lane 1", "udl_kN_per_m2": 9.0 },
+        { "location": "Lane 2", "udl_kN_per_m2": 2.5 },
+        { "location": "Lane 3", "udl_kN_per_m2": 2.5 },
+        { "location": "Other lanes", "udl_kN_per_m2": 2.5 },
+        { "location": "Remaining area", "udl_kN_per_m2": 2.5 }
+      ]
+    }
+  },
+  "lm2": {
+    "description": "Load Model 2 -- single axle load per Section 3.3.3.2",
+    "Q_ak_kN": 400,
+    "beta_Q": "May be taken equal to alpha_Q1 used for LM1",
+    "wheel_contact_area_m": 0.40,
+    "wheel_spacing_m": 2.0,
+    "notes": "Only one wheel of 200 * beta_Q kN may also be relevant"
+  },
+  "lm3": {
+    "description": "Load Model 3 -- Special Vehicles per Section 3.3.3.3 and Table 3.5",
+    "sv_models": [
+      {
+        "designation": "SV80",
+        "max_gross_weight_tonnes": 80,
+        "max_basic_axle_load_tonnes": 12.5,
+        "road_class": "Other public roads as agreed by Approving Authority"
+      },
+      {
+        "designation": "SV100",
+        "max_gross_weight_tonnes": 100,
+        "max_basic_axle_load_tonnes": 16.5,
+        "road_class": "Principal roads as agreed by Approving Authority"
+      },
+      {
+        "designation": "SV196",
+        "max_gross_weight_tonnes": 196,
+        "max_basic_axle_load_tonnes": 16.5,
+        "road_class": "Motorway and all-purpose trunk road, principal road extensions of trunk roads"
+      }
+    ],
+    "sov_models": ["SOV-250", "SOV-350", "SOV-450", "SOV-600"],
+    "daf": {
+      "description": "Dynamic Amplification Factor for SV and SOV per Table 3.6",
+      "source_table": "Table 3.6",
+      "values": [
+        { "basic_axle_load_kN": 100, "daf": 1.20 },
+        { "basic_axle_load_kN": 130, "daf": 1.16 },
+        { "basic_axle_load_kN": 165, "daf": 1.12 },
+        { "basic_axle_load_kN": 180, "daf": 1.10 },
+        { "basic_axle_load_kN": 225, "daf": 1.07 }
+      ]
+    }
+  },
+  "lm4": {
+    "description": "Load Model 4 -- crowd loading per Section 3.3.5",
+    "udl_kN_per_m2": 5.0,
+    "application": "Applied to parts of deck including central reservation but excluding carriageway and safety barriers"
+  }
+}
