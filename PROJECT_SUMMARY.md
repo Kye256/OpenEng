@@ -2,7 +2,7 @@
 
 ## What OpenEng Is
 
-OpenEng is an open-source skills library that makes AI a competent engineering colleague for civil/road infrastructure design. It's a collection of 65 structured SKILL.md files that encode engineering standards, design tables, decision logic, validation rules, and professional judgment — organized so an LLM (Claude, GPT, etc.) can perform preliminary engineering design work to a consistent, auditable standard.
+OpenEng is an open-source skills library that makes AI a competent engineering colleague for civil/road infrastructure design. It's a collection of 70 structured SKILL.md files that encode engineering standards, design tables, decision logic, validation rules, and professional judgment — organized so an LLM (Claude, GPT, etc.) can perform preliminary engineering design work to a consistent, auditable standard.
 
 The engineer drives. The agent handles the grunt work: looking up standards, running calculations, checking designs, generating deliverables, and flagging decisions that need senior judgment.
 
@@ -12,14 +12,14 @@ The engineer drives. The agent handles the grunt work: looking up standards, run
 
 | Metric | Count |
 |--------|-------|
-| Total skills | 65 |
-| Engineering domains | 13 |
-| Country modules | 106 |
-| JSON design tables | 114 |
-| Evaluation scenarios | 195 (3 per skill) |
-| Total files | 448 |
+| Total skills | 70 |
+| Engineering domains | 14 |
+| Country modules | 173 |
+| JSON design tables | 84 |
+| Evaluation scenarios | 272 |
+| Total files | 414 |
 
-## The 65 Skills by Domain
+## The 70 Skills by Domain
 
 ### Traffic Engineering (Skills #1–6)
 | # | Skill | What It Does |
@@ -57,7 +57,7 @@ The engineer drives. The agent handles the grunt work: looking up standards, run
 | 19 | intersection-design | Intersection type selection, geometry, channelization |
 | 20 | nmt-facilities | Pedestrian and cyclist facilities, NMT design |
 
-### Pavement Design (Skills #21–25)
+### Pavement Design (Skills #21–25, #71)
 | # | Skill | What It Does |
 |---|-------|-------------|
 | 21 | mowt-catalogue | MoWT catalogue pavement design (Uganda) |
@@ -65,6 +65,7 @@ The engineer drives. The agent handles the grunt work: looking up standards, run
 | 23 | trl-orn-31 | TRL Road Note 31 for low-volume roads |
 | 24 | pavement-material-specs | Material specifications for pavement layers |
 | 25 | pavement-rehabilitation | Overlay design, rehabilitation strategy |
+| 71 | rigid-pavement-design | Concrete/rigid pavement slab thickness, joint design, reinforcement |
 
 ### Earthworks (Skills #26–28)
 | # | Skill | What It Does |
@@ -93,6 +94,14 @@ The engineer drives. The agent handles the grunt work: looking up standards, run
 | 39 | bridge-hydraulics | Bridge waterway adequacy, scour analysis |
 | 40 | small-span-structures | Causeways, drifts, small-span options |
 | 41 | bridge-inspection-condition | Bridge condition rating and inspection |
+
+### Traffic Management (Skills #67–70)
+| # | Skill | What It Does |
+|---|-------|-------------|
+| 67 | road-marking-design | Centre lines, edge lines, junction markings, road studs, material selection |
+| 68 | traffic-sign-design | Regulatory, warning, and informatory sign design and placement |
+| 69 | traffic-signal-design | Signal warrant analysis, phase design, timing calculation |
+| 70 | traffic-control-devices | Speed humps, barriers, delineation, VMS |
 
 ### Professional Practice (Skills #42–49, 54–55)
 | # | Skill | What It Does |
@@ -135,7 +144,7 @@ The engineer drives. The agent handles the grunt work: looking up standards, run
 ### Integration (Skills #64–65)
 | # | Skill | What It Does |
 |---|-------|-------------|
-| 64 | coordination-meta-skill | Orchestrates multi-skill workflows, dependency graph of all 65 skills |
+| 64 | coordination-meta-skill | Orchestrates multi-skill workflows, dependency graph of all 70 skills |
 | 65 | tara-integration | Data exchange between TARA appraisal system and OpenEng skills |
 
 ## Architecture
@@ -168,6 +177,7 @@ description: "Use when [trigger]. [Prerequisites]. [Outputs]."
 Skills separate universal engineering principles from country-specific standards. Each skill can have multiple country modules in its `modules/` directory:
 
 - **Uganda** (MoWT Road Design Manual 2010) — most complete
+- **Kenya** (KeNHA/RDM, Standard Specification, PPRA, PAM-4) — 67 modules covering all domains
 - **UK** (DMRB, BS standards) — partial coverage
 
 Country modules provide: local design tables, standard-specific decision branches, country defaults, compliance checks, and worked examples using local standards.
@@ -176,7 +186,7 @@ Country modules provide: local design tables, standard-specific decision branche
 Standards data stored as structured JSON for reliable lookup — no AI arithmetic on critical values like minimum radii, K-values, pavement layer thicknesses, or unit rates.
 
 ### Evaluation Framework
-Every skill has an `evals/evals.json` with 3 scenarios (195 total):
+Every skill has an `evals/evals.json` with 3-4 scenarios (272 total):
 1. Standard Uganda case
 2. Cross-domain or complex case
 3. Edge case with missing data
@@ -198,7 +208,7 @@ Survey:  #12 ──↗
 
 Geometric: #13 → #14, #15, #16, #17, #18, #19, #20
 
-Pavement: #10 + #5 → #21/#22/#23 → #24, #25
+Pavement: #10 + #5 → #21/#22/#23 → #24, #25; #71 (rigid)
 
 Earthworks: #14 + #15 → #26 → #27, #28
 
@@ -207,6 +217,8 @@ Drainage: #29 → #30, #31 → #32
 Structures: #33 → #34; #35 → #36 → #37 → #38; #39; #40; #41
 
 Cost: #26 + #31 + #37 → #51 → #52 → #53 → #50
+
+Traffic Mgmt: #67-#70 (markings, signs, signals, devices)
 
 Professional: #42-#49, #54-#55 (contract/procurement — parallel track)
 
@@ -241,7 +253,7 @@ Paste the SKILL.md content (+ country module) into context and prompt the model 
 | `COUNTRY_MODULE_GUIDE.md` | How to add a new country's standards |
 | `templates/SKILL_TEMPLATE.md` | Template for creating new skills |
 | `templates/COUNTRY_MODULE_TEMPLATE.md` | Template for country modules |
-| `benchmarks/benchmark-results.md` | Evaluation results across all 65 skills |
+| `benchmarks/benchmark-results.md` | Evaluation results across all 70 skills |
 | `skills/integration/coordination-meta-skill/SKILL.md` | Dependency graph and workflow orchestrator |
 | `skills/integration/tara-integration/SKILL.md` | TARA data exchange specifications |
 
@@ -249,7 +261,8 @@ Paste the SKILL.md content (+ country module) into context and prompt the model 
 
 | Standard | Country | Coverage |
 |----------|---------|----------|
-| MoWT Road Design Manual (2010) | Uganda | Most complete — all 65 skills have Uganda context |
+| MoWT Road Design Manual (2010) | Uganda | Most complete — all 70 skills have Uganda context |
+| Kenya RDM / KeNHA Standards | Kenya | 67 country modules across all domains |
 | ERA Design Manual (2013) | Ethiopia | In progress |
 | AASHTO Green Book (7th Ed, 2018) | International | In progress |
 | TRL ORN 31, ORN 18 | International | Pavement design skills |

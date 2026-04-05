@@ -5,7 +5,7 @@
 
 <p align="center">
   <a href="#quick-start">Quick Start</a> •
-  <a href="#skills">65 Skills</a> •
+  <a href="#skills">70 Skills</a> •
   <a href="#standards">Standards</a> •
   <a href="#contributing">Contributing</a> •
   <a href="LICENSE">Apache 2.0</a>
@@ -13,7 +13,7 @@
 
 ---
 
-OpenEng is a library of 65 structured skills that make AI competent at civil engineering design. Each skill encodes engineering standards, design tables, decision logic, and professional judgment — so an LLM can perform preliminary design work to a consistent, auditable standard.
+OpenEng is a library of 70 structured skills that make AI competent at civil engineering design. Each skill encodes engineering standards, design tables, decision logic, and professional judgment — so an LLM can perform preliminary design work to a consistent, auditable standard.
 
 The engineer drives. The agent handles the grunt work.
 
@@ -28,11 +28,11 @@ Agent:  [reads skill → looks up catalogue → selects structure → validates 
 
 | | Count |
 |---|---|
-| Engineering skills | 65 |
-| Domains | 13 |
-| Country modules | 106 |
-| JSON design tables | 114 |
-| Evaluation scenarios | 195 |
+| Engineering skills | 70 |
+| Domains | 14 |
+| Country modules | 173 |
+| JSON design tables | 84 |
+| Evaluation scenarios | 272 |
 
 Each skill is a self-contained `SKILL.md` file with a standard structure: knowledge, reasoning, defaults, validation, escalation triggers, interfaces, procedures, output format, worked examples, and limitations.
 
@@ -66,8 +66,8 @@ Terrain classification • survey data assessment
 ### Geometric Design (#13–20)
 Design standards selection → horizontal alignment → vertical alignment → sight distance → cross-sections → design vehicle → intersection design → NMT facilities
 
-### Pavement Design (#21–25)
-MoWT catalogue method • AASHTO 93 • TRL ORN 31 • material specifications • rehabilitation design
+### Pavement Design (#21–25, #71)
+MoWT catalogue method • AASHTO 93 • TRL ORN 31 • material specifications • rehabilitation design • rigid pavement design
 
 ### Earthworks (#26–28)
 Cut/fill calculation → mass haul optimization → material suitability assessment
@@ -77,6 +77,9 @@ Hydrology → ditch and channel design → culvert hydraulic sizing → erosion 
 
 ### Structures (#33–41)
 Culvert structural design • headwalls and wingwalls • bridge site selection → bridge loading → beam bridge design → substructure → bridge hydraulics • small span structures • bridge inspection
+
+### Traffic Management (#67–70)
+Road marking design • traffic sign design • traffic signal design • traffic control devices (speed humps, barriers, delineation, VMS)
 
 ### Professional Practice (#42–49, 54–55)
 FIDIC Red Book • FIDIC Yellow Book • measurement and payment • variations and claims • dispute resolution • procurement methods • tender documents • bid evaluation • construction supervision • QC testing
@@ -91,7 +94,7 @@ Road condition assessment → maintenance planning → asset valuation → prior
 Transport planning • road safety audit • environmental and social screening • climate resilience
 
 ### Integration (#64–65)
-Coordination meta-skill (orchestrates all 65 skills) • TARA integration (data exchange with transport appraisal)
+Coordination meta-skill (orchestrates all 70 skills) • TARA integration (data exchange with transport appraisal)
 
 ## How skills connect
 
@@ -109,6 +112,7 @@ Survey (#12) ──↗                                      │
                                                        │
 Drainage (#29-32) ──→ Structures (#33-41) ─────────────↗
 
+Traffic Management (#67-70)              ← road markings, signs, signals, devices
 Professional Practice (#42-49, 54-55)    ← parallel track
 Planning & Safety (#60-63)               ← parallel track, informs design decisions
 Asset Management (#56-59)                ← post-construction lifecycle
@@ -118,7 +122,8 @@ Asset Management (#56-59)                ← post-construction lifecycle
 
 | Standard | Coverage |
 |----------|----------|
-| Uganda MoWT Road Design Manual (2010) | All 65 skills |
+| Uganda MoWT Road Design Manual (2010) | All 70 skills |
+| Kenya RDM / KeNHA Standards | 67 country modules across all domains |
 | Uganda General Specifications for Road & Bridge Works (2026) | In progress |
 | ERA Design Manual (2013) | In progress |
 | AASHTO Green Book (7th Edition, 2018) | Geometric design, pavement |
@@ -132,6 +137,7 @@ Asset Management (#56-59)                ← post-construction lifecycle
 Skills separate universal engineering principles from country-specific standards. Each skill can have modules for multiple jurisdictions:
 
 - **Uganda** — most complete (MoWT 2010, MoWT General Specs 2026)
+- **Kenya** — 67 modules covering all domains (KeNHA/RDM, Standard Specification, PPRA, PAM-4)
 - **UK** — partial coverage (DMRB, BS standards)
 - **Your country** — see [COUNTRY_MODULE_GUIDE.md](COUNTRY_MODULE_GUIDE.md) to contribute
 
@@ -150,7 +156,7 @@ Every output includes calculation steps with standard references, explicit flags
 
 ### Evaluation
 
-Each skill has evaluation scenarios in `evals/evals.json` — 195 scenarios across the library covering standard cases, complex cross-domain cases, and edge cases with missing data. Evaluations use the [skill-creator](https://github.com/anthropics/skills/tree/main/skills/skill-creator) framework for benchmarking, regression testing, and skill-vs-no-skill comparison.
+Each skill has evaluation scenarios in `evals/evals.json` — 272 scenarios across the library covering standard cases, complex cross-domain cases, and edge cases with missing data. Evaluations use the [skill-creator](https://github.com/anthropics/skills/tree/main/skills/skill-creator) framework for benchmarking, regression testing, and skill-vs-no-skill comparison.
 
 ## Project structure
 
@@ -161,10 +167,11 @@ openeng/
 │   ├── geotechnical/               # Skills #7-10
 │   ├── terrain-survey/             # Skills #11-12
 │   ├── geometric-design/           # Skills #13-20
-│   ├── pavement-design/            # Skills #21-25
+│   ├── pavement-design/            # Skills #21-25, #71
 │   ├── earthworks/                 # Skills #26-28
 │   ├── drainage/                   # Skills #29-32
 │   ├── structures/                 # Skills #33-41
+│   ├── traffic-management/         # Skills #67-70
 │   ├── professional-practice/      # Skills #42-49, 54-55
 │   ├── cost-estimation/            # Skills #50-53
 │   ├── asset-management/           # Skills #56-59
@@ -197,8 +204,8 @@ See [CONTRIBUTING.md](CONTRIBUTING.md) for guidelines. All contributions require
 ## What's next
 
 - **Python tools** — Calculation modules for numerical-heavy tasks (interpolation, iterative design, earthworks volumes). The skills are the spec; the tools are the implementation.
-- **More standards** — ERA (Ethiopia), SATCC/SADC, KeNHA (Kenya), TANROADS (Tanzania). Community contributions drive expansion.
-- **Evaluation benchmarks** — Published benchmark results across all 65 skills, including skill-vs-no-skill comparisons.
+- **More standards** — ERA (Ethiopia), SATCC/SADC, TANROADS (Tanzania). Community contributions drive expansion.
+- **Evaluation benchmarks** — Published benchmark results across all 70 skills, including skill-vs-no-skill comparisons.
 
 ## Disclaimer
 
