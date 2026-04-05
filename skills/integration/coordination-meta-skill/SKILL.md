@@ -1,6 +1,6 @@
 ---
 name: "coordination-meta-skill"
-description: "Use when orchestrating multi-skill engineering workflows that span multiple domains (traffic, geometric, pavement, drainage, structures, cost, procurement). Provides dependency graph of all 65 OpenEng skills with input/output mappings, plus workflow templates for common multi-step tasks (feasibility study, detailed design, rehabilitation assessment). Load this skill first to determine which domain skills to invoke and in what order."
+description: "Use when orchestrating multi-skill engineering workflows that span multiple domains (traffic, geometric, pavement, drainage, structures, cost, procurement, traffic management). Provides dependency graph of all 70 OpenEng skills with input/output mappings, plus workflow templates for common multi-step tasks (feasibility study, detailed design, rehabilitation assessment). Load this skill first to determine which domain skills to invoke and in what order."
 ---
 
 # Coordination Meta-Skill
@@ -11,11 +11,11 @@ description: "Use when orchestrating multi-skill engineering workflows that span
 > **Status:** Draft
 > **Last Updated:** 2026-03-21
 > **Reviewed By:**
-> **Country Modules:** Uganda
+> **Country Modules:** Uganda, Kenya
 
 ## Purpose
 
-Enable the agent to orchestrate multi-skill engineering workflows by providing a comprehensive dependency graph of all 65 OpenEng skills and workflow templates for common multi-step tasks. This is a meta-skill -- it describes how other skills connect and the order in which they should be invoked, not engineering calculations. Use this skill to determine which domain skills are needed for a given task, resolve their dependencies, and plan execution order.
+Enable the agent to orchestrate multi-skill engineering workflows by providing a comprehensive dependency graph of all 70 OpenEng skills and workflow templates for common multi-step tasks. This is a meta-skill -- it describes how other skills connect and the order in which they should be invoked, not engineering calculations. Use this skill to determine which domain skills are needed for a given task, resolve their dependencies, and plan execution order.
 
 ## When to Use This Skill
 
@@ -29,7 +29,7 @@ Enable the agent to orchestrate multi-skill engineering workflows by providing a
 
 ### 1.1 Key Concepts
 
-The 65 OpenEng skills are organized into 10 domains, each covering a distinct aspect of road engineering:
+The 70 OpenEng skills are organized into 14 domains, each covering a distinct aspect of road engineering:
 
 | Domain | Skills | ID Range | Core Function |
 |--------|--------|----------|---------------|
@@ -37,10 +37,11 @@ The 65 OpenEng skills are organized into 10 domains, each covering a distinct as
 | Geotechnical | 4 skills | #7-10 | Site investigation, soil classification, material testing, subgrade characterization |
 | Terrain & Survey | 2 skills | #11-12 | Terrain classification, survey data for design |
 | Geometric Design | 8 skills | #13-20 | Standards selection, alignment, cross-section, intersection, NMT |
-| Pavement Design | 5 skills | #21-25 | Catalogue design, AASHTO/ORN methods, material specs, rehabilitation |
+| Pavement Design | 6 skills | #21-25, #71 | Catalogue design, AASHTO/ORN methods, material specs, rehabilitation, rigid pavement |
 | Earthworks | 3 skills | #26-28 | Volume calculation, mass haul optimization, material suitability |
 | Drainage | 4 skills | #29-32 | Hydrology, ditches, culvert hydraulics, erosion protection |
 | Structures | 9 skills | #33-41 | Culverts, bridges (site to substructure), small spans, inspection |
+| Traffic Management | 4 skills | #67-70 | Road markings, traffic signs, traffic signals, traffic control devices |
 | Professional Practice | 10 skills | #42-49, #54-55 | FIDIC contracts, procurement, measurement, supervision, QC |
 | Cost Estimation | 4 skills | #50-53 | Engineer's estimate, BoQ, unit rates, rate database |
 | Asset Management | 4 skills | #56-59 | Condition assessment, maintenance planning, valuation, prioritization |
@@ -56,8 +57,8 @@ The 65 OpenEng skills are organized into 10 domains, each covering a distinct as
 ### 1.2 Dependency Graph Structure
 
 The full machine-readable dependency graph is in `tables/skill_dependency_graph.json`. It contains:
-- **65 nodes:** One per skill, with ID, name, slug, and domain.
-- **142 edges:** Each edge specifies `from_skill`, `to_skill`, `data_type`, `required` (hard vs soft), and a description of the data flow.
+- **70 nodes:** One per skill, with ID, name, slug, and domain.
+- **200 edges:** Each edge specifies `from_skill`, `to_skill`, `data_type`, `required` (hard vs soft), and a description of the data flow.
 
 ### 1.3 Domain Interaction Patterns
 
@@ -157,7 +158,7 @@ Step 5: Return the execution plan
 
 | Parameter | Minimum | Maximum | Unit | Action if Violated |
 |-----------|---------|---------|------|--------------------|
-| Skills in workflow | 1 | 65 | count | If 0: no skills needed -- task may not require OpenEng. If >30: verify scope is correct |
+| Skills in workflow | 1 | 70 | count | If 0: no skills needed -- task may not require OpenEng. If >30: verify scope is correct |
 | Hard dependency violations | 0 | 0 | count | Any hard dependency violation means the workflow cannot execute as planned |
 
 ### 4.2 Consistency Checks
@@ -216,7 +217,7 @@ The agent shall verify that the workflow includes all skills required by the pro
 | File | Description | Format |
 |------|-------------|--------|
 | `modules/uganda.md` | Uganda-specific workflow considerations | Markdown |
-| `tables/skill_dependency_graph.json` | Machine-readable dependency graph of all 65 skills | JSON |
+| `tables/skill_dependency_graph.json` | Machine-readable dependency graph of all 70 skills | JSON |
 
 ---
 
@@ -495,8 +496,8 @@ Using Workflow Template 3 (Rehabilitation Assessment):
 
 - **Not covered:** Detailed scheduling and resource allocation across concurrent skill executions; real-time dependency resolution during execution (the plan is static once created).
 - **Simplifications:** The dependency graph captures direct data flows from Section 6 interfaces. Indirect dependencies (e.g., knowledge from one skill informing judgment in another) are not captured as edges.
-- **Country modules available:** Uganda
-- **Country modules needed:** UK (when DMRB skills are built), Kenya (ERA manual), Tanzania (TANROADS manual)
+- **Country modules available:** Uganda, Kenya
+- **Country modules needed:** UK (when DMRB skills are built), Tanzania (TANROADS manual)
 - **Future work:** Dynamic workflow adjustment based on intermediate results (e.g., if Skill #56 shows "Good" condition, skip Skills #25 and #57). Integration with project management tools for timeline estimation.
 
 ---
@@ -506,3 +507,4 @@ Using Workflow Template 3 (Rehabilitation Assessment):
 | Version | Date | Author | Changes |
 |---------|------|--------|---------|
 | 0.1 | 2026-03-21 | | Initial draft -- 65 skill nodes, 169 edges, 4 workflow templates |
+| 0.2 | 2026-04-05 | | v1.1 update -- 70 skill nodes, 200 edges; added Traffic Management domain (#67-70) and Rigid Pavement Design (#71); Kenya country module support |

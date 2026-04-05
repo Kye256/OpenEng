@@ -1,9 +1,9 @@
 {
   "_metadata": {
-    "source": "Extracted from Section 6 (Interfaces) of all 65 OpenEng skills",
-    "total_skills": 65,
-    "total_edges": 169,
-    "generated_date": "2026-03-21",
+    "source": "Extracted from Section 6/8 (Interfaces) of all 70 OpenEng skills",
+    "total_skills": 70,
+    "total_edges": 200,
+    "generated_date": "2026-04-05",
     "edge_types": {
       "hard": "Must have input before proceeding -- downstream skill cannot function without it",
       "soft": "Optional enhancement -- downstream skill works without it but produces better results with it",
@@ -75,7 +75,12 @@
     {"id": 62, "name": "Environmental & Social Screening", "slug": "environmental-social-screening", "domain": "planning-safety"},
     {"id": 63, "name": "Climate Resilience", "slug": "climate-resilience", "domain": "planning-safety"},
     {"id": 64, "name": "Coordination Meta-Skill", "slug": "coordination-meta-skill", "domain": "integration"},
-    {"id": 65, "name": "TARA Integration", "slug": "tara-integration", "domain": "integration"}
+    {"id": 65, "name": "TARA Integration", "slug": "tara-integration", "domain": "integration"},
+    {"id": 67, "name": "Road Marking Design", "slug": "road-marking-design", "domain": "traffic-management"},
+    {"id": 68, "name": "Traffic Sign Design", "slug": "traffic-sign-design", "domain": "traffic-management"},
+    {"id": 69, "name": "Traffic Signal Design", "slug": "traffic-signal-design", "domain": "traffic-management"},
+    {"id": 70, "name": "Traffic Control Devices", "slug": "traffic-control-devices", "domain": "traffic-management"},
+    {"id": 71, "name": "Rigid Pavement Design", "slug": "rigid-pavement-design", "domain": "pavement-design"}
   ],
   "edges": [
     {"from_skill": 1, "to_skill": 2, "data_type": "raw_count_data", "required": true, "description": "Survey plan and raw count data flow to processing"},
@@ -246,6 +251,37 @@
     {"from_skill": 52, "to_skill": 49, "data_type": "unit_rate_analysis", "required": false, "description": "Key rate analysis for abnormally low bid assessment"},
     {"from_skill": 14, "to_skill": 35, "data_type": "road_alignment", "required": false, "description": "Approach alignment for bridge site assessment"},
     {"from_skill": 15, "to_skill": 35, "data_type": "road_alignment", "required": false, "description": "Approach grades for bridge site assessment"},
-    {"from_skill": 15, "to_skill": 26, "data_type": "station_chainages", "required": true, "description": "Chainage of each cross-section for earthworks calculation"}
+    {"from_skill": 15, "to_skill": 26, "data_type": "station_chainages", "required": true, "description": "Chainage of each cross-section for earthworks calculation"},
+    {"from_skill": 13, "to_skill": 67, "data_type": "road_class_design_speed", "required": true, "description": "Road class and design speed determine marking dimensions and material requirements"},
+    {"from_skill": 17, "to_skill": 67, "data_type": "carriageway_configuration", "required": true, "description": "Number of lanes and carriageway width determine centre line, lane line, and edge line requirements"},
+    {"from_skill": 19, "to_skill": 67, "data_type": "junction_layout", "required": false, "description": "Junction layout for junction marking design"},
+    {"from_skill": 20, "to_skill": 67, "data_type": "pedestrian_crossing_location", "required": false, "description": "Pedestrian crossing locations for crossing marking design"},
+    {"from_skill": 67, "to_skill": 61, "data_type": "marking_schedule", "required": false, "description": "Complete marking schedule for road safety audit review"},
+    {"from_skill": 13, "to_skill": 68, "data_type": "road_class_design_speed", "required": true, "description": "Road class and design speed determine sign size and sheeting grade"},
+    {"from_skill": 19, "to_skill": 68, "data_type": "junction_type", "required": false, "description": "Junction type determines which regulatory and warning signs are needed"},
+    {"from_skill": 17, "to_skill": 68, "data_type": "road_configuration", "required": true, "description": "Number of lanes and median type for sign placement context"},
+    {"from_skill": 68, "to_skill": 61, "data_type": "sign_schedule", "required": false, "description": "Complete sign schedule for road safety audit review"},
+    {"from_skill": 13, "to_skill": 69, "data_type": "road_class_design_speed", "required": true, "description": "Road class, design speed, and speed limit for signal design context"},
+    {"from_skill": 19, "to_skill": 69, "data_type": "junction_geometry", "required": true, "description": "Junction geometry, lane configuration, turning radii, and visibility splays"},
+    {"from_skill": 67, "to_skill": 69, "data_type": "stop_line_position", "required": false, "description": "Stop line position and junction marking layout for signal coordination"},
+    {"from_skill": 68, "to_skill": 69, "data_type": "signal_warning_signs", "required": false, "description": "Signal advance warning signs and regulatory signs at intersection"},
+    {"from_skill": 69, "to_skill": 61, "data_type": "signal_timing_plan", "required": false, "description": "Signal timing plan for safety review and phase conflict check"},
+    {"from_skill": 69, "to_skill": 67, "data_type": "signal_marking_requirements", "required": false, "description": "Signal-specific marking requirements at signalised junctions"},
+    {"from_skill": 69, "to_skill": 68, "data_type": "signal_sign_requirements", "required": false, "description": "Signal advance warning sign requirements and turn restriction signs"},
+    {"from_skill": 13, "to_skill": 70, "data_type": "road_class_design_speed", "required": true, "description": "Road class, design speed, and speed limit for device selection"},
+    {"from_skill": 20, "to_skill": 70, "data_type": "speed_management_zones", "required": false, "description": "Speed management zone layout, crossing locations, trading centre boundaries"},
+    {"from_skill": 17, "to_skill": 70, "data_type": "road_cross_section", "required": true, "description": "Road width, clear zone width, shoulder width for barrier placement"},
+    {"from_skill": 70, "to_skill": 67, "data_type": "device_marking_requirements", "required": false, "description": "Device marking requirements for humps, barriers, and delineation"},
+    {"from_skill": 70, "to_skill": 68, "data_type": "warning_sign_requirements", "required": false, "description": "Warning sign requirements for advance warning of humps, barriers, and VMS"},
+    {"from_skill": 70, "to_skill": 69, "data_type": "VMS_coordination", "required": false, "description": "VMS coordination with signal systems if applicable"},
+    {"from_skill": 70, "to_skill": 61, "data_type": "device_specifications", "required": false, "description": "Device specifications for road safety audit review"},
+    {"from_skill": 5, "to_skill": 71, "data_type": "cumulative_ESA", "required": true, "description": "Cumulative design traffic (W18/CESA/ESALs) for rigid pavement slab thickness design"},
+    {"from_skill": 10, "to_skill": 71, "data_type": "subgrade_k_value", "required": true, "description": "Subgrade k-value from CBR correlation or plate load test for slab design"},
+    {"from_skill": 13, "to_skill": 71, "data_type": "road_class", "required": false, "description": "Road class for reliability level selection in rigid pavement design"},
+    {"from_skill": 26, "to_skill": 71, "data_type": "subgrade_preparation", "required": false, "description": "Subgrade preparation requirements and formation level for rigid pavement"},
+    {"from_skill": 71, "to_skill": 24, "data_type": "material_specifications", "required": false, "description": "Concrete and subbase material specifications for the designed rigid pavement"},
+    {"from_skill": 71, "to_skill": 67, "data_type": "surface_marking_specs", "required": false, "description": "Surface marking specifications for the completed rigid pavement surface"},
+    {"from_skill": 21, "to_skill": 71, "data_type": "flexible_pavement_comparison", "required": false, "description": "Flexible pavement alternative for cost comparison analysis"},
+    {"from_skill": 22, "to_skill": 71, "data_type": "flexible_pavement_comparison", "required": false, "description": "AASHTO flexible pavement design for comparison where both options viable"}
   ]
 }
