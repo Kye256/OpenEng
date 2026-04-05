@@ -94,6 +94,39 @@
           "evidence": ""
         }
       ]
+    },
+    {
+      "id": 3,
+      "prompt": "Prepare a BoQ structure for a Kenya road construction project using WSCM Part 3 format. The project involves 15km of new Class C road with earthworks, pavement layers, and drainage. Include all relevant series from the Standard Specification.",
+      "expected_output": "Complete BoQ using WSCM Part 3 series numbering -- Series 1000 (General), Series 2000 (Drainage), Series 3000 (Earthworks), Series 4000 (Pavement Layers), Series 5000 (Bituminous), Series 8000 (Ancillary), Series 9000 (Environmental). Correct measurement units per Standard Specification (m3 for earthworks, m2 for surfacing, m for culverts, ha for clearing). Preamble requirements mentioned. Overhaul items per Section 1600 with 1.0 km free haul distance.",
+      "files": [],
+      "assertions": [
+        {
+          "text": "References WSCM Part 3 series numbering structure (Series 1000 through 9000)",
+          "passed": null,
+          "evidence": ""
+        },
+        {
+          "text": "Includes correct measurement units per Standard Specification (m3 for earthworks volumes, m2 for surfacing, m for culverts)",
+          "passed": null,
+          "evidence": ""
+        },
+        {
+          "text": "Mentions preamble requirements as part of WSCM Part 3 BoQ format",
+          "passed": null,
+          "evidence": ""
+        },
+        {
+          "text": "Overhaul items referenced with 1.0 km free haul distance per Section 1600",
+          "passed": null,
+          "evidence": ""
+        },
+        {
+          "text": "Environmental items (Series 9000) included for NEMA compliance",
+          "passed": null,
+          "evidence": ""
+        }
+      ]
     }
   ]
 }

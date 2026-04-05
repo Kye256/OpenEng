@@ -11,7 +11,7 @@ description: "Use when building up a unit rate from first principles for any roa
 > **Status:** Draft
 > **Last Updated:** 2026-03-21
 > **Reviewed By:** ---
-> **Country Modules:** Uganda
+> **Country Modules:** Uganda, Kenya
 
 ## Purpose
 

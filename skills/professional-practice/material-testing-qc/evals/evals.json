@@ -93,6 +93,39 @@
           "evidence": ""
         }
       ]
+    },
+    {
+      "id": 3,
+      "prompt": "Specify the material testing requirements for granular base course construction on a Kenya road project. Include test types, standards, and minimum frequencies. The base course uses graded crushed stone per Section 4300 of the Standard Specification. Reference the applicable Kenya testing standards and frequency tables.",
+      "expected_output": "Testing requirements from Standard Specification Section 1700 with KS/EN and BS standards (not older BS-only). Test frequencies from Table 1708/1: PI/SG/Vib.Hammer/grading/flakiness at 1 per 5000 m2, MDD/ACV at 1 per 10000 m2. Field density testing from Table 1730/1: 1 test per 500 m2 for base course. Density requirement from Table 1730/2: 98% of vibratory Hammer for crushed aggregate. CBR and sieve analysis testing included. Frequencies flagged as minimums to verify against project specification.",
+      "files": [],
+      "assertions": [
+        {
+          "text": "References KS/EN standards or BS EN standards (not exclusively old BS standards)",
+          "passed": null,
+          "evidence": ""
+        },
+        {
+          "text": "Mentions Standard Specification test frequencies (Table 1708/1 or equivalent frequency values)",
+          "passed": null,
+          "evidence": ""
+        },
+        {
+          "text": "Includes sieve analysis and CBR testing as required tests",
+          "passed": null,
+          "evidence": ""
+        },
+        {
+          "text": "Flags test frequencies as typical minimums to verify against project-specific specification",
+          "passed": null,
+          "evidence": ""
+        },
+        {
+          "text": "Field density requirement stated (98% of vibratory Hammer for crushed aggregate base or equivalent compaction target)",
+          "passed": null,
+          "evidence": ""
+        }
+      ]
     }
   ]
 }
