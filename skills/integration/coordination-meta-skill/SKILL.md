@@ -11,7 +11,7 @@ description: "Use when orchestrating multi-skill engineering workflows that span
 > **Status:** Draft
 > **Last Updated:** 2026-03-21
 > **Reviewed By:**
-> **Country Modules:** Uganda, Kenya
+> **Country Modules:** Uganda, Kenya, Ethiopia
 
 ## Purpose
 
