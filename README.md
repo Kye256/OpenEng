@@ -30,9 +30,9 @@ Agent:  [reads skill → looks up catalogue → selects structure → validates 
 |---|---|
 | Engineering skills | 70 |
 | Domains | 14 |
-| Country modules | 173 |
+| Country modules | 212 |
 | JSON design tables | 84 |
-| Evaluation scenarios | 272 |
+| Evaluation scenarios | 313 |
 
 Each skill is a self-contained `SKILL.md` file with a standard structure: knowledge, reasoning, defaults, validation, escalation triggers, interfaces, procedures, output format, worked examples, and limitations.
 
@@ -123,9 +123,9 @@ Asset Management (#56-59)                ← post-construction lifecycle
 | Standard | Coverage |
 |----------|----------|
 | Uganda MoWT Road Design Manual (2010) | All 70 skills |
-| Kenya RDM / KeNHA Standards | 67 country modules across all domains |
+| Kenya RDM / KeNHA Standards | 68 country modules across all domains |
 | Uganda General Specifications for Road & Bridge Works (2026) | In progress |
-| ERA Design Manual (2013) | In progress |
+| ERA Design Manual (2013) — Ethiopia | 38 country modules across 9 domains |
 | AASHTO Green Book (7th Edition, 2018) | Geometric design, pavement |
 | TRL ORN 31, ORN 18 | Pavement design, low-volume roads |
 | FIDIC Red Book / Yellow Book | Contract administration |
@@ -137,7 +137,8 @@ Asset Management (#56-59)                ← post-construction lifecycle
 Skills separate universal engineering principles from country-specific standards. Each skill can have modules for multiple jurisdictions:
 
 - **Uganda** — most complete (MoWT 2010, MoWT General Specs 2026)
-- **Kenya** — 67 modules covering all domains (KeNHA/RDM, Standard Specification, PPRA, PAM-4)
+- **Kenya** — 68 modules covering all domains (KeNHA/RDM, Standard Specification, PPRA, PAM-4)
+- **Ethiopia** — 38 modules across 9 domains (ERA Design Manual 2013) covering terrain, geometric design, geotechnical, pavement design, earthworks, drainage, structures, environmental screening, and integration
 - **UK** — partial coverage (DMRB, BS standards)
 - **Your country** — see [COUNTRY_MODULE_GUIDE.md](COUNTRY_MODULE_GUIDE.md) to contribute
 
@@ -156,7 +157,7 @@ Every output includes calculation steps with standard references, explicit flags
 
 ### Evaluation
 
-Each skill has evaluation scenarios in `evals/evals.json` — 272 scenarios across the library covering standard cases, complex cross-domain cases, and edge cases with missing data. Evaluations use the [skill-creator](https://github.com/anthropics/skills/tree/main/skills/skill-creator) framework for benchmarking, regression testing, and skill-vs-no-skill comparison.
+Each skill has evaluation scenarios in `evals/evals.json` — 313 scenarios across the library covering standard cases, complex cross-domain cases, and edge cases with missing data. Evaluations use the [skill-creator](https://github.com/anthropics/skills/tree/main/skills/skill-creator) framework for benchmarking, regression testing, and skill-vs-no-skill comparison.
 
 ## Project structure
 
@@ -204,7 +205,7 @@ See [CONTRIBUTING.md](CONTRIBUTING.md) for guidelines. All contributions require
 ## What's next
 
 - **Python tools** — Calculation modules for numerical-heavy tasks (interpolation, iterative design, earthworks volumes). The skills are the spec; the tools are the implementation.
-- **More standards** — ERA (Ethiopia), SATCC/SADC, TANROADS (Tanzania). Community contributions drive expansion.
+- **More standards** — SATCC/SADC, TANROADS (Tanzania). Community contributions drive expansion.
 - **Evaluation benchmarks** — Published benchmark results across all 70 skills, including skill-vs-no-skill comparisons.
 
 ## Disclaimer

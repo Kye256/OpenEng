@@ -14,10 +14,10 @@ The engineer drives. The agent handles the grunt work: looking up standards, run
 |--------|-------|
 | Total skills | 70 |
 | Engineering domains | 14 |
-| Country modules | 173 |
+| Country modules | 212 |
 | JSON design tables | 84 |
-| Evaluation scenarios | 272 |
-| Total files | 414 |
+| Evaluation scenarios | 313 |
+| Total files | 453 |
 
 ## The 70 Skills by Domain
 
@@ -177,7 +177,8 @@ description: "Use when [trigger]. [Prerequisites]. [Outputs]."
 Skills separate universal engineering principles from country-specific standards. Each skill can have multiple country modules in its `modules/` directory:
 
 - **Uganda** (MoWT Road Design Manual 2010) — most complete
-- **Kenya** (KeNHA/RDM, Standard Specification, PPRA, PAM-4) — 67 modules covering all domains
+- **Kenya** (KeNHA/RDM, Standard Specification, PPRA, PAM-4) — 68 modules covering all domains
+- **Ethiopia** (ERA Design Manual 2013) — 38 modules across 9 domains (terrain, geometric design, geotechnical, pavement design, earthworks, drainage, structures, environmental screening, integration)
 - **UK** (DMRB, BS standards) — partial coverage
 
 Country modules provide: local design tables, standard-specific decision branches, country defaults, compliance checks, and worked examples using local standards.
@@ -186,7 +187,7 @@ Country modules provide: local design tables, standard-specific decision branche
 Standards data stored as structured JSON for reliable lookup — no AI arithmetic on critical values like minimum radii, K-values, pavement layer thicknesses, or unit rates.
 
 ### Evaluation Framework
-Every skill has an `evals/evals.json` with 3-4 scenarios (272 total):
+Every skill has an `evals/evals.json` with 3-4 scenarios (313 total):
 1. Standard Uganda case
 2. Cross-domain or complex case
 3. Edge case with missing data
@@ -262,8 +263,8 @@ Paste the SKILL.md content (+ country module) into context and prompt the model 
 | Standard | Country | Coverage |
 |----------|---------|----------|
 | MoWT Road Design Manual (2010) | Uganda | Most complete — all 70 skills have Uganda context |
-| Kenya RDM / KeNHA Standards | Kenya | 67 country modules across all domains |
-| ERA Design Manual (2013) | Ethiopia | In progress |
+| Kenya RDM / KeNHA Standards | Kenya | 68 country modules across all domains |
+| ERA Design Manual (2013) | Ethiopia | 38 country modules across 9 domains |
 | AASHTO Green Book (7th Ed, 2018) | International | In progress |
 | TRL ORN 31, ORN 18 | International | Pavement design skills |
 | FIDIC Red/Yellow Book | International | Contract administration skills |
