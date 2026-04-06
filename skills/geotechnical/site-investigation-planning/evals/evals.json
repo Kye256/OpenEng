@@ -122,6 +122,34 @@
           "evidence": ""
         }
       ]
+    },
+    {
+      "id": 4,
+      "prompt": "Plan a geotechnical site investigation for a new ERA DC7 trunk road in Ethiopia. The road is 65 km long through mountainous terrain in the Amhara region with potential for expansive black cotton soils. Using the ERA Site Investigation Manual 2013 and ERA Geotechnical Design Manual 2013, specify the investigation stages, borehole spacing, and special soil investigation requirements.",
+      "expected_output": "Per ERA Site Investigation Manual: four-stage phased approach (desk study, reconnaissance, preliminary investigation, detailed investigation). For DC7 new construction through mountainous terrain: full corridor survey. Borehole spacing per ERA SIM guidelines. Mandatory investigation for expansive soils per ERA GDM Section 2.3.1 (8 pages of guidance). ERA uses AASHTO/ASTM test standards throughout. Special attention to highland escarpment geology and Rift Valley margin soils.",
+      "files": [],
+      "assertions": [
+        {
+          "text": "References ERA Site Investigation Manual 2013 and ERA Geotechnical Design Manual 2013 (not Uganda or Kenya standards)",
+          "passed": null,
+          "evidence": ""
+        },
+        {
+          "text": "Specifies ERA's phased investigation approach (desk study, reconnaissance, preliminary, detailed)",
+          "passed": null,
+          "evidence": ""
+        },
+        {
+          "text": "Addresses expansive soil investigation requirements per ERA GDM Section 2.3.1",
+          "passed": null,
+          "evidence": ""
+        },
+        {
+          "text": "References AASHTO/ASTM test standards as specified by ERA manuals",
+          "passed": null,
+          "evidence": ""
+        }
+      ]
     }
   ]
 }

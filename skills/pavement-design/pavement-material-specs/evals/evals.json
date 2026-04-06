@@ -113,6 +113,34 @@
           "evidence": ""
         }
       ]
+    },
+    {
+      "id": 4,
+      "prompt": "Specify the material requirements for a base course on an ERA DC6 trunk road in Ethiopia. The design catalogue chart specifies a GB1 (Graded Crushed Stone) base. Using the ERA Flexible Pavement Design Manual Vol I 2013 Chapter 6, Tables 6-2 and 6-3, provide the CBR requirement, grading envelope limits, plasticity requirements, and compaction standard.",
+      "expected_output": "Per ERA Pavement Vol I Chapter 6: GB1 requires CBR >= 80% at 98% Modified AASHTO (T-180), 4-day soaked. Grading per Table 6-2 (37.5 mm to 0.075 mm envelope). Plasticity: PI <= 6, LL <= 25 per Table 6-3. Compaction: 98% Modified AASHTO (T-180). ERA material codes (GB1, GB2, GB3, GS, GC) are not directly interchangeable with Uganda MoWT or Kenya RDM codes though underlying properties are comparable.",
+      "files": [],
+      "assertions": [
+        {
+          "text": "References ERA Pavement Vol I 2013 Chapter 6 for material specifications (not Uganda MoWT or Kenya RDM)",
+          "passed": null,
+          "evidence": ""
+        },
+        {
+          "text": "Specifies GB1 CBR >= 80% at 98% Modified AASHTO (T-180), 4-day soaked",
+          "passed": null,
+          "evidence": ""
+        },
+        {
+          "text": "Provides plasticity requirements: PI <= 6 and LL <= 25 per ERA Table 6-3",
+          "passed": null,
+          "evidence": ""
+        },
+        {
+          "text": "Uses ERA material code system (GB1, GB2, GB3, GS, GC) specific to Ethiopia",
+          "passed": null,
+          "evidence": ""
+        }
+      ]
     }
   ]
 }

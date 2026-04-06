@@ -122,6 +122,34 @@
           "evidence": ""
         }
       ]
+    },
+    {
+      "id": 4,
+      "prompt": "A DCP test on an ERA trunk road project in Ethiopia gives a penetration rate of 15 mm/blow at a depth of 300-600 mm below the existing surface. Using the ERA Flexible Pavement Design Manual Vol I 2013 Appendix I, convert this to an estimated CBR value and determine the subgrade class. Also specify what laboratory confirmation tests ERA requires.",
+      "expected_output": "Per ERA Pavement Vol I Appendix I: DCP penetration rate of 15 mm/blow corresponds to an estimated CBR of approximately 8-12% using the DCP-CBR correlation. This places the subgrade in class S3 (CBR 8-14%) per ERA Table 3-1. Laboratory confirmation requires soaked CBR test per AASHTO T-193, compacted at Standard Proctor (AASHTO T-99) for subgrade. ERA's DCP correlation is provided in Appendix I. Five subgrade classes S1-S5 (not six as in Uganda/Kenya).",
+      "files": [],
+      "assertions": [
+        {
+          "text": "References ERA Pavement Vol I 2013 Appendix I for DCP-CBR correlation (not Uganda or Kenya)",
+          "passed": null,
+          "evidence": ""
+        },
+        {
+          "text": "Converts 15 mm/blow DCP to estimated CBR in the 8-12% range",
+          "passed": null,
+          "evidence": ""
+        },
+        {
+          "text": "Classifies subgrade as S3 (CBR 8-14%) using ERA's five-class system (S1-S5)",
+          "passed": null,
+          "evidence": ""
+        },
+        {
+          "text": "Specifies AASHTO T-193 (CBR) and AASHTO T-99 (Standard Proctor) as ERA-required test standards",
+          "passed": null,
+          "evidence": ""
+        }
+      ]
     }
   ]
 }

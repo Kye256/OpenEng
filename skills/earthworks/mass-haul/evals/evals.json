@@ -132,6 +132,34 @@
           "evidence": ""
         }
       ]
+    },
+    {
+      "id": 4,
+      "prompt": "Optimise the mass haul for a 30 km ERA DC6 trunk road project in the Ethiopian highlands. The project has significant cut volumes through weathered basalt (good quality material) in the first 15 km and net fill requirements in the last 15 km across a valley. ERA Standard Technical Specifications define the free haul distance. Determine the economical haul limit considering ERA payment categories for common excavation, hard material, and rock.",
+      "expected_output": "ERA Standard Technical Specifications define free haul (typically 500 m, verify in contract). Overhaul payment applies beyond free haul distance. ERA classifies excavation into three categories: common, hard material, rock -- affecting unit costs. Weathered basalt cut material is likely suitable for fill (assess per ERA GDM Chapter 3 requirements). Mass haul optimisation must balance material quality, haul distance economics, and ERA environmental requirements. Donor-funded projects may specify different free haul in Particular Conditions.",
+      "files": [],
+      "assertions": [
+        {
+          "text": "References ERA Standard Technical Specifications for free haul distance and payment categories (not Uganda or Kenya)",
+          "passed": null,
+          "evidence": ""
+        },
+        {
+          "text": "Identifies ERA's three excavation categories: common, hard material, and rock",
+          "passed": null,
+          "evidence": ""
+        },
+        {
+          "text": "Considers ERA environmental management requirements for borrow pits and spoil areas",
+          "passed": null,
+          "evidence": ""
+        },
+        {
+          "text": "Notes free haul distance is typically 500 m per ERA specifications (verify in contract)",
+          "passed": null,
+          "evidence": ""
+        }
+      ]
     }
   ]
 }

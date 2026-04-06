@@ -113,6 +113,34 @@
           "evidence": ""
         }
       ]
+    },
+    {
+      "id": 4,
+      "prompt": "An ERA trunk road project in Ethiopia requires AASHTO 93 verification of a catalogue design. The design traffic is 12 million ESAs (calculated using ERA damage exponent n=4.5), subgrade resilient modulus Mr = 45 MPa, reliability R = 90%, overall standard deviation So = 0.45, and terminal serviceability pt = 2.5. Using ERA Pavement Vol I Appendix H.5, calculate the required structural number (SN) and design the pavement layers using ERA layer coefficients from Appendix H.4.",
+      "expected_output": "ERA Appendix H.5 uses AASHTO 93 as a verification/alternative method (not the primary method). Using AASHTO 93 equation with ERA inputs: log10(W18) = ZR*So + 9.36*log10(SN+1) - 0.20 + log10(delta_PSI/(4.2-1.5))/(0.40+1094/(SN+1)^5.19) + 2.32*log10(Mr) - 8.07. SN calculation with ERA layer coefficients from Appendix H.4. Note ERA uses n=4.5 for ESA calculation, not AASHTO's n=4.0 -- this is the key departure.",
+      "files": [],
+      "assertions": [
+        {
+          "text": "References ERA Pavement Vol I 2013 Appendix H.5 for AASHTO 93 application (not as primary method)",
+          "passed": null,
+          "evidence": ""
+        },
+        {
+          "text": "Uses ERA layer coefficients from Appendix H.4 (not generic AASHTO values)",
+          "passed": null,
+          "evidence": ""
+        },
+        {
+          "text": "Notes ERA damage exponent n=4.5 as the key departure from AASHTO standard n=4.0",
+          "passed": null,
+          "evidence": ""
+        },
+        {
+          "text": "Positions AASHTO 93 as verification/alternative method, not ERA's primary design approach",
+          "passed": null,
+          "evidence": ""
+        }
+      ]
     }
   ]
 }

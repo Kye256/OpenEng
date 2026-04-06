@@ -112,6 +112,34 @@
           "evidence": ""
         }
       ]
+    },
+    {
+      "id": 4,
+      "prompt": "A soil sample from an ERA road project in Ethiopia has the following properties: 65% passing #200 sieve, liquid limit 52%, plasticity index 28%, and Group Index 18. Classify the soil using the ERA Geotechnical Design Manual 2013 approach and assess its suitability as subgrade material. ERA uses the AASHTO soil classification system.",
+      "expected_output": "Per ERA GDM 2013 Chapter 2 using AASHTO M 145: >35% passing #200 sieve, LL>41%, PI>11%, GI=18. Classification: A-7-6 (high plasticity clay). Rating as subgrade: Fair to poor. GI of 18 indicates poor quality subgrade material. This soil would likely fall in subgrade class S1 or S2 (low CBR expected). ERA uses AASHTO classification (same as Uganda), not ESCS/BS EN ISO (Kenya).",
+      "files": [],
+      "assertions": [
+        {
+          "text": "Uses AASHTO M 145 classification system as specified by ERA GDM 2013 (not Kenya ESCS/BS EN ISO)",
+          "passed": null,
+          "evidence": ""
+        },
+        {
+          "text": "Classifies soil as A-7-6 based on sieve analysis, LL, PI, and GI values",
+          "passed": null,
+          "evidence": ""
+        },
+        {
+          "text": "Rates subgrade quality as fair to poor based on Group Index of 18",
+          "passed": null,
+          "evidence": ""
+        },
+        {
+          "text": "References ERA Geotechnical Design Manual 2013 Chapter 2 as the governing standard",
+          "passed": null,
+          "evidence": ""
+        }
+      ]
     }
   ]
 }

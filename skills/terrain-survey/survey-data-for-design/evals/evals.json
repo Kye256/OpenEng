@@ -122,6 +122,34 @@
           "evidence": ""
         }
       ]
+    },
+    {
+      "id": 4,
+      "prompt": "An ERA trunk road upgrading project in the Tigray region of Ethiopia requires survey data. The road is Design Class DC5 (AADT 300-1,000) and runs through rolling terrain for 45 km. Using the ERA Geometric Design Manual 2013 Chapter 4, specify the survey data requirements including topographic survey corridor width, cross-section intervals, and survey accuracy levels.",
+      "expected_output": "Per ERA GDM 2013 Chapter 4 Table 4-1 for upgrading: corridor survey of existing alignment plus alternatives, cross-sections at 25 m intervals (closer at structures and junctions), continuous longitudinal profile along existing and alternative alignments, targeted geotechnical investigation. Survey accuracy per Table 4-2: topographic survey horizontal accuracy +/- 50 mm, vertical +/- 25 mm. Primary control tied to national geodetic network with +/- 10 mm horizontal and +/- 5 mm vertical.",
+      "files": [],
+      "assertions": [
+        {
+          "text": "References ERA Geometric Design Manual 2013 Chapter 4 for survey requirements (not Uganda MoWT or Kenya RDM)",
+          "passed": null,
+          "evidence": ""
+        },
+        {
+          "text": "Specifies cross-section intervals of 25 m for upgrading projects per ERA Table 4-1",
+          "passed": null,
+          "evidence": ""
+        },
+        {
+          "text": "Includes ERA survey accuracy levels from Table 4-2",
+          "passed": null,
+          "evidence": ""
+        },
+        {
+          "text": "Distinguishes between upgrading and new construction survey requirements per ERA",
+          "passed": null,
+          "evidence": ""
+        }
+      ]
     }
   ]
 }

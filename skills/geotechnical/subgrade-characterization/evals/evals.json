@@ -122,6 +122,34 @@
           "evidence": ""
         }
       ]
+    },
+    {
+      "id": 4,
+      "prompt": "An ERA trunk road project in Ethiopia has 15 subgrade CBR test results along a 20 km section: 8, 12, 6, 9, 14, 7, 11, 5, 10, 8, 13, 7, 9, 6, 11. Using the ERA Flexible Pavement Design Manual Vol I 2013 Chapter 3, determine the design CBR using the 10th percentile method and the subgrade class from ERA Table 3-1.",
+      "expected_output": "Per ERA Pavement Vol I Chapter 3: sort CBR values ascending: 5, 6, 6, 7, 7, 8, 8, 9, 9, 10, 11, 11, 12, 13, 14. 10th percentile (lower) from 15 samples: approximately 6%. Design CBR = 6%. Per ERA Table 3-1: CBR 6% falls in subgrade class S2 (CBR 5-7%). ERA uses 10th percentile method (same as Uganda/TRL ORN 31), not Kenya's CUSUM average-based method. ERA has 5 subgrade classes (S1-S5), not 6 as in Uganda and Kenya.",
+      "files": [],
+      "assertions": [
+        {
+          "text": "References ERA Pavement Vol I 2013 Chapter 3 for subgrade characterization (not Uganda MoWT or Kenya RDM)",
+          "passed": null,
+          "evidence": ""
+        },
+        {
+          "text": "Uses 10th percentile method to determine design CBR (ERA/TRL ORN 31 approach)",
+          "passed": null,
+          "evidence": ""
+        },
+        {
+          "text": "Design CBR is approximately 6% from the 10th percentile of the dataset",
+          "passed": null,
+          "evidence": ""
+        },
+        {
+          "text": "Classifies subgrade as S2 (CBR 5-7%) per ERA Table 3-1 with five classes S1-S5",
+          "passed": null,
+          "evidence": ""
+        }
+      ]
     }
   ]
 }

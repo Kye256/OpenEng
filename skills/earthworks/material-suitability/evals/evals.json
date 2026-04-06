@@ -127,6 +127,34 @@
           "evidence": ""
         }
       ]
+    },
+    {
+      "id": 4,
+      "prompt": "Assess the suitability of black cotton soil (expansive clay) encountered on an ERA road project in the Ethiopian Rift Valley for use as embankment fill. The soil has LL=65%, PI=35%, free swell >100%, CBR=2% (soaked). Using the ERA Geotechnical Design Manual 2013, determine whether this material is suitable, what treatment options are available, and what placement restrictions apply.",
+      "expected_output": "Per ERA GDM 2013 Section 2.3.1 (expansive soils): black cotton soil with LL=65%, PI=35%, free swell >100% is classified as highly expansive. Not suitable as general fill without treatment. Treatment options per ERA GDM: lime stabilisation (Section 2.3.1), removal and replacement, encapsulation with non-expansive material. If used, restrict to lower embankment zones away from pavement structure. CBR 2% is at the bottom of ERA S1 class (2-4%). ERA devotes 8 pages to expansive soils reflecting their prevalence in Ethiopia.",
+      "files": [],
+      "assertions": [
+        {
+          "text": "References ERA Geotechnical Design Manual 2013 Section 2.3.1 for expansive soil assessment (not Uganda or Kenya)",
+          "passed": null,
+          "evidence": ""
+        },
+        {
+          "text": "Classifies the black cotton soil as highly expansive based on LL, PI, and free swell values",
+          "passed": null,
+          "evidence": ""
+        },
+        {
+          "text": "Identifies ERA treatment options for expansive soils (lime stabilisation, removal, encapsulation)",
+          "passed": null,
+          "evidence": ""
+        },
+        {
+          "text": "Notes placement restrictions for expansive material in embankments",
+          "passed": null,
+          "evidence": ""
+        }
+      ]
     }
   ]
 }

@@ -137,6 +137,34 @@
           "evidence": ""
         }
       ]
+    },
+    {
+      "id": 4,
+      "prompt": "A DC6 trunk road in Ethiopia passes through a peri-urban area near Dire Dawa. NMT traffic survey data shows 400 bajaj three-wheelers, 200 donkey carts, 150 bicycles, and 500 pedestrians per day. Using the ERA Geometric Design Manual 2013 Section 5.7 and Table 2-5, convert the NMT traffic to PCUs and determine whether shoulder widening is required. What NMT provision does ERA specify?",
+      "expected_output": "ERA PCU conversion per Table 2-5: bajaj 400 x 0.4 = 160, donkey carts 200 x 1.0 = 200, bicycles 150 x 0.2 = 30, pedestrians 500 x 0.3 = 150. Total NMT PCUs = 540 per day. Since this exceeds the 300 AADT PCU threshold, shoulder widening is required per ERA Section 5.7. ERA's PCU-based approach using Ethiopia-specific factors (bajaj, donkey carts) is distinctive compared to Kenya's warrants-based system.",
+      "files": [],
+      "assertions": [
+        {
+          "text": "References ERA GDM 2013 Section 5.7 and Table 2-5 for NMT provision (not Uganda MoWT or Kenya RDM)",
+          "passed": null,
+          "evidence": ""
+        },
+        {
+          "text": "Converts NMT traffic to PCUs using ERA-specific PCU values: bajaj 0.4, donkey cart 1.0, bicycle 0.2, pedestrian 0.3",
+          "passed": null,
+          "evidence": ""
+        },
+        {
+          "text": "Total NMT PCUs calculated as approximately 540 per day (exceeds 300 AADT threshold)",
+          "passed": null,
+          "evidence": ""
+        },
+        {
+          "text": "Determines shoulder widening is required because NMT PCU exceeds ERA 300 AADT threshold",
+          "passed": null,
+          "evidence": ""
+        }
+      ]
     }
   ]
 }

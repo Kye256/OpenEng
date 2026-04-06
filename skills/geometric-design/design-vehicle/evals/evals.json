@@ -5,7 +5,9 @@
       "id": 0,
       "prompt": "Select the appropriate design vehicle for a Class II trunk road in Uganda on the northern corridor (Kampala to Gulu). The road carries mixed traffic including heavy freight. Determine the design vehicle type, its minimum turning radius, and the minimum junction turning radius per MoWT standard. Use the MoWT Road Design Manual as the primary reference.",
       "expected_output": "For a Class II trunk road on the northern corridor, WB-15 (Semitrailer) is the minimum appropriate design vehicle, with WB-19 recommended for new construction given the corridor's freight importance. WB-15 minimum turning radius is 13.7m. MoWT Section 8.3.1(c) requires a minimum junction turning radius of 15m. The 15m junction minimum exceeds the WB-15 vehicle minimum (13.7m), providing adequate clearance.",
-      "files": ["tables/uganda_design_vehicles.json"],
+      "files": [
+        "tables/uganda_design_vehicles.json"
+      ],
       "assertions": [
         {
           "text": "Selects WB-15 or larger (WB-19/WB-20) as design vehicle for Class II trunk road, not SU or P",
@@ -66,7 +68,9 @@
       "id": 2,
       "prompt": "An urban road in Uganda serves mixed traffic including buses and semitrailers. A tight junction has only 10m turning radius available due to building constraints. The design vehicle is an SU (Single Unit Truck) with a minimum turning radius of 12.8m. Assess whether the junction is adequate and recommend appropriate action.",
       "expected_output": "The available 10m turning radius is below the SU minimum turning radius of 12.8m and well below the MoWT 15m minimum junction requirement (Section 8.3.1(c)). This is a non-compliant condition. The agent should raise an escalation flag. Options include: (1) increase the radius by acquiring additional right-of-way, (2) use mountable kerbs to provide additional swept path, (3) reduce the design vehicle to P (passenger car) with restricted access for trucks, (4) provide alternative routing for large vehicles. The 10m radius cannot safely accommodate an SU truck.",
-      "files": ["tables/uganda_design_vehicles.json"],
+      "files": [
+        "tables/uganda_design_vehicles.json"
+      ],
       "assertions": [
         {
           "text": "Identifies that 10m radius is below the SU minimum turning radius of 12.8m",
@@ -99,7 +103,9 @@
       "id": 3,
       "prompt": "Select the appropriate design vehicle for a Class B national highway in Kenya on rolling terrain. The road carries significant freight traffic on the Northern Corridor. Using the Kenya Road Design Manual RDM 1.3, determine the design vehicle type, its minimum turning radius, and the absolute minimum junction turning radius. Also identify the Kenya design vehicle code system and note the matatu (minibus) design implications for junctions.",
       "expected_output": "For a Class B national highway with significant freight, DV5 (Truck + Semi-trailer) is the minimum design vehicle per RDM Section 3.5. DV5 has minimum turning radius 13.7 m, length 15.0 m, width 2.6 m. Absolute minimum junction radius is 15 m per Section 5.8. Kenya uses DV1-DV9 code system (harmonised for EAC Partner States), not Uganda's P/SU/BUS/WB system. Matatu (minibus) equivalent to DV2 (single unit bus, 12.3 m, turning radius 12.8 m) -- junctions must accommodate DV2 for matatu routes.",
-      "files": ["tables/kenya_design_vehicles.json"],
+      "files": [
+        "tables/kenya_design_vehicles.json"
+      ],
       "assertions": [
         {
           "text": "Selects DV5 (Truck + Semi-trailer) or larger for Class B national highway, not DV1 or DV4",
@@ -123,6 +129,34 @@
         },
         {
           "text": "Discusses matatu (minibus) as equivalent to DV2 with 12.8 m turning radius for junction design",
+          "passed": null,
+          "evidence": ""
+        }
+      ]
+    },
+    {
+      "id": 4,
+      "prompt": "Select the design vehicle for a DC4 paved road in Ethiopia and determine the curve widening required on a horizontal curve with radius 100 m. Using the ERA Geometric Design Manual 2013 Section 5.3, Tables 5-2 and 5-3, identify the design vehicle code, its dimensions, minimum turning radius, and the required curve widening from Table 8-3.",
+      "expected_output": "Per ERA GDM 2013 Table 5-3: DC4 uses DV4 (Truck + semi-trailer). DV4 dimensions from Table 5-2: height 4.1 m, width 2.6 m, length 15.2 m, minimum turning radius 13.7 m. Curve widening for DV4 at R=100 m from Table 8-3. ERA uses only four design vehicles (DV1-DV4), simpler than Kenya's nine (DV1-DV9) or Uganda's P/SU/BUS/WB system.",
+      "files": [],
+      "assertions": [
+        {
+          "text": "References ERA GDM 2013 Section 5.3 and Tables 5-2, 5-3 for design vehicle selection (not Uganda or Kenya)",
+          "passed": null,
+          "evidence": ""
+        },
+        {
+          "text": "Selects DV4 (Truck + semi-trailer) for DC4 per ERA Table 5-3",
+          "passed": null,
+          "evidence": ""
+        },
+        {
+          "text": "DV4 dimensions include length 15.2 m and minimum turning radius 13.7 m per ERA Table 5-2",
+          "passed": null,
+          "evidence": ""
+        },
+        {
+          "text": "Provides curve widening for R=100 m from ERA Table 8-3",
           "passed": null,
           "evidence": ""
         }

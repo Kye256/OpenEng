@@ -117,6 +117,34 @@
           "evidence": ""
         }
       ]
+    },
+    {
+      "id": 4,
+      "prompt": "Classify the terrain for a proposed ERA trunk road in Ethiopia that crosses from the Rift Valley floor (elevation 1,500 m) to the Ethiopian Highlands (elevation 2,800 m) over a distance of 40 km. Field survey data shows an average of 35 five-metre contour lines per kilometre and transverse ground slopes averaging 30%. Using the ERA Geometric Design Manual 2013, determine the terrain classification and the implications for design speed and gradient limits for a DC6 road.",
+      "expected_output": "Using ERA GDM 2013 Section 5.6.1: 35 contours per km and 30% transverse slope classify as Mountainous terrain (26-50 contours/km, generally above 25% transverse slope). For DC6 on mountainous terrain, the design speed would be reduced compared to flat/rolling terrain. The terrain classification affects gradient limits, minimum radii, and cross-section standards. Note that ERA mountainous threshold (above 25%) differs from Uganda MoWT (above 20%).",
+      "files": [],
+      "assertions": [
+        {
+          "text": "References ERA Geometric Design Manual 2013 Section 5.6.1 for terrain classification (not Uganda MoWT or Kenya RDM)",
+          "passed": null,
+          "evidence": ""
+        },
+        {
+          "text": "Classifies terrain as Mountainous based on 35 contours/km (ERA range 26-50) and 30% transverse slope (above 25%)",
+          "passed": null,
+          "evidence": ""
+        },
+        {
+          "text": "Uses ERA-specific terrain thresholds: flat <3%, rolling 3-25%, mountainous above 25%, escarpment >50%",
+          "passed": null,
+          "evidence": ""
+        },
+        {
+          "text": "Identifies implications for design speed reduction in mountainous terrain for a DC6 road",
+          "passed": null,
+          "evidence": ""
+        }
+      ]
     }
   ]
 }

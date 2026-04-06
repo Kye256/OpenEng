@@ -132,6 +132,34 @@
           "evidence": ""
         }
       ]
+    },
+    {
+      "id": 4,
+      "prompt": "Calculate the earthworks volumes for a 2 km section of an ERA DC5 trunk road in Ethiopia through mountainous terrain. The terrain involves a 15 m deep cut through residual clay soils transitioning to a 10 m high embankment. Using the ERA Geotechnical Design Manual 2013, specify the cut slope ratios from Table 4-8 and fill slope ratios from Table 3-8. Apply ERA-specific shrinkage and bulking factors.",
+      "expected_output": "Per ERA GDM 2013: cut slopes for residual clay soils from Table 4-8 (varies by height: 1:1 for 3-6 m, consider benching above 6 m). Fill slopes for earth fill from Table 3-8 (varies by height and material type). ERA explicitly requires stability analysis for embankments >5 m high or steeper than 1.5H:1V (Section 3.6). Volume calculation using average end area or prismoidal formula. ERA-specific shrinkage factors for Ethiopian highland soils. Attention to expansive soils per Section 2.3.1.",
+      "files": [],
+      "assertions": [
+        {
+          "text": "References ERA Geotechnical Design Manual 2013 for cut and fill slopes (not Uganda MoWT or Kenya RDM)",
+          "passed": null,
+          "evidence": ""
+        },
+        {
+          "text": "Uses ERA Table 4-8 for cut slope ratios and Table 3-8 for fill slope ratios",
+          "passed": null,
+          "evidence": ""
+        },
+        {
+          "text": "Notes ERA requirement for stability analysis when embankment >5 m or steeper than 1.5H:1V",
+          "passed": null,
+          "evidence": ""
+        },
+        {
+          "text": "Addresses expansive soil considerations relevant to Ethiopian highland conditions",
+          "passed": null,
+          "evidence": ""
+        }
+      ]
     }
   ]
 }

@@ -144,6 +144,39 @@
           "evidence": ""
         }
       ]
+    },
+    {
+      "id": 5,
+      "prompt": "A bridge is being designed at the Ethiopia-Kenya border crossing. The bridge must accommodate traffic from both countries. Compare the ERA and Kenya RDM bridge loading standards. What load combinations, live load models, and seismic requirements would apply? Which standard should govern the design?",
+      "expected_output": "ERA bridge loading from ERA Bridge Design Manual. Kenya bridge loading from RDM. Comparison of live load models, load combinations, and seismic provisions. ERA has specific seismic zone requirements for Ethiopia. Design should use the more conservative loading from either standard. Notes ERA seismic zones vs Kenya seismic provisions.",
+      "files": [],
+      "assertions": [
+        {
+          "text": "References ERA Bridge Design Manual for Ethiopian loading standards",
+          "passed": null,
+          "evidence": ""
+        },
+        {
+          "text": "References Kenya RDM for Kenyan loading standards",
+          "passed": null,
+          "evidence": ""
+        },
+        {
+          "text": "Compares live load models between ERA and Kenya standards",
+          "passed": null,
+          "evidence": ""
+        },
+        {
+          "text": "Addresses Ethiopian seismic zone requirements from ERA Bridge Design Manual",
+          "passed": null,
+          "evidence": ""
+        },
+        {
+          "text": "Recommends using the more conservative standard for the border bridge design",
+          "passed": null,
+          "evidence": ""
+        }
+      ]
     }
   ]
 }

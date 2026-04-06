@@ -113,6 +113,34 @@
           "evidence": ""
         }
       ]
+    },
+    {
+      "id": 4,
+      "prompt": "An existing ERA trunk road in Ethiopia shows extensive fatigue cracking and rutting. Deflection testing with a Benkelman beam gives a representative characteristic deflection of 0.8 mm. Using the ERA Pavement Rehabilitation and Asphalt Overlay Design Manual 2013, diagnose the pavement condition and recommend a rehabilitation strategy including overlay thickness.",
+      "expected_output": "Per ERA Rehabilitation Manual 2013: systematic diagnostic process -- data collection (Chapter 2), condition evaluation (Chapter 3), structural assessment (Chapter 6). Fatigue cracking and rutting indicate structural distress. Benkelman beam deflection 0.8 mm used for overlay design per ERA Chapter 10 (deflection-based method). ERA provides three overlay design methods: empirical, deflection-only, and analytical. Treatment selection per Chapter 11 based on diagnosis. Localised defects addressed per Chapter 4 before overlay.",
+      "files": [],
+      "assertions": [
+        {
+          "text": "References ERA Pavement Rehabilitation and Asphalt Overlay Design Manual 2013 (not Uganda or Kenya rehabilitation standards)",
+          "passed": null,
+          "evidence": ""
+        },
+        {
+          "text": "Follows ERA's systematic diagnostic process from data collection through rehabilitation design",
+          "passed": null,
+          "evidence": ""
+        },
+        {
+          "text": "Uses Benkelman beam deflection for overlay design per ERA deflection-based method",
+          "passed": null,
+          "evidence": ""
+        },
+        {
+          "text": "Addresses localised defect treatment (Chapter 4) before overlay design",
+          "passed": null,
+          "evidence": ""
+        }
+      ]
     }
   ]
 }

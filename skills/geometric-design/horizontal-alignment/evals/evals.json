@@ -127,6 +127,39 @@
           "evidence": ""
         }
       ]
+    },
+    {
+      "id": 4,
+      "prompt": "Design a horizontal curve for a DC6 trunk road in Ethiopia. The design speed is 85 km/h, the maximum superelevation is 8% (emax = 0.08, paved rural road per ERA standard for DC5 and above), and the terrain is rolling. Using the ERA Geometric Design Manual 2013 Chapter 8 and Table 8-1, determine the minimum radius, the superelevation for a proposed curve of radius 350 m, and whether a transition curve is required.",
+      "expected_output": "Using ERA GDM 2013 Table 8-1 for paved roads at 85 km/h with emax=8%: R_min = 250 m. For R = 350 m (above minimum), superelevation is calculated from the standard formula and would be less than emax. Transition curve requirements per ERA Chapter 8. Note that ERA emax = 8% for DC5+ paved rural roads is higher than Kenya (6%) and Uganda (7%), resulting in tighter minimum radii.",
+      "files": [],
+      "assertions": [
+        {
+          "text": "References ERA GDM 2013 Table 8-1 for minimum radius (not Uganda MoWT or Kenya RDM)",
+          "passed": null,
+          "evidence": ""
+        },
+        {
+          "text": "Uses ERA emax = 8% for DC5+ paved rural roads (higher than Kenya 6% and Uganda 7%)",
+          "passed": null,
+          "evidence": ""
+        },
+        {
+          "text": "Minimum radius at 85 km/h with emax=8% is approximately 250 m per ERA Table 8-1",
+          "passed": null,
+          "evidence": ""
+        },
+        {
+          "text": "Superelevation for R=350 m is calculated and does not exceed 8%",
+          "passed": null,
+          "evidence": ""
+        },
+        {
+          "text": "Addresses transition curve requirements per ERA Chapter 8",
+          "passed": null,
+          "evidence": ""
+        }
+      ]
     }
   ]
 }

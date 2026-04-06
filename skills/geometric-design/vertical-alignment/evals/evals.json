@@ -59,7 +59,7 @@
           "evidence": ""
         },
         {
-          "text": "Correctly identifies sag curve relaxation rules from Table 5.9 — states that all-purpose (not 50B/60B/70B) gets 1 step relaxation",
+          "text": "Correctly identifies sag curve relaxation rules from Table 5.9 \u2014 states that all-purpose (not 50B/60B/70B) gets 1 step relaxation",
           "passed": null,
           "evidence": ""
         },
@@ -73,7 +73,7 @@
     {
       "id": 2,
       "prompt": "A road in mountainous terrain in Uganda has a proposed gradient of 11% over a length of 400 m. The design speed is 50 km/h. The AADT is 3,500 pcu/day and the road is Class II. Using the MoWT Road Design Manual, check whether this gradient is within the desirable and absolute maximum limits, check the critical length of gradient, and assess whether a climbing lane is needed.",
-      "expected_output": "From MoWT Table 6-14 (desirable): mountainous at 50 km/h = 9%. The proposed 11% exceeds the desirable maximum. From Table 6-15 (absolute): mountainous at 50 km/h = 11%. The proposed 11% is at the absolute maximum — barely compliant. Critical length check from Table 6-16: at 11%, max desirable length = 350 m. The proposed 400 m exceeds the critical length. Escalation: gradient at absolute maximum AND exceeds critical length. Climbing lane: AADT 3,500 is between 2,000-6,000 on Class II road — climbing lane should be considered. Overall: multiple escalation flags for gradient, critical length, and climbing lane.",
+      "expected_output": "From MoWT Table 6-14 (desirable): mountainous at 50 km/h = 9%. The proposed 11% exceeds the desirable maximum. From Table 6-15 (absolute): mountainous at 50 km/h = 11%. The proposed 11% is at the absolute maximum \u2014 barely compliant. Critical length check from Table 6-16: at 11%, max desirable length = 350 m. The proposed 400 m exceeds the critical length. Escalation: gradient at absolute maximum AND exceeds critical length. Climbing lane: AADT 3,500 is between 2,000-6,000 on Class II road \u2014 climbing lane should be considered. Overall: multiple escalation flags for gradient, critical length, and climbing lane.",
       "files": [
         "skills/geometric-design/vertical-alignment/tables/uganda_gradients.json"
       ],
@@ -136,6 +136,39 @@
         },
         {
           "text": "References Kenya RDM 1.3 table numbers (Table 6.1, Table 6.3, Table 6.5)",
+          "passed": null,
+          "evidence": ""
+        }
+      ]
+    },
+    {
+      "id": 4,
+      "prompt": "Design a crest vertical curve for a DC7 trunk road in Ethiopia. The design speed is 100 km/h and the grade change is from +4% to -3% (algebraic difference A = 7%). Using the ERA Geometric Design Manual 2013 Chapter 9 and Table 9-1, determine the minimum K-value and the minimum curve length. Also specify the desirable K-value.",
+      "expected_output": "Using ERA GDM 2013 Table 9-1 for paved roads at 100 km/h: K_min (crest) = 50, desirable K = 100. SSD = 160 m at 100 km/h. Minimum curve length L = K x A = 50 x 7 = 350 m. Desirable curve length L = 100 x 7 = 700 m. ERA uses eye height 1.05 m and object height 0.2 m -- same as Kenya but different from Uganda (1.07/0.15 m).",
+      "files": [],
+      "assertions": [
+        {
+          "text": "References ERA GDM 2013 Table 9-1 for K-values (not Uganda MoWT or Kenya RDM)",
+          "passed": null,
+          "evidence": ""
+        },
+        {
+          "text": "K_min for crest at 100 km/h is 50 per ERA Table 9-1",
+          "passed": null,
+          "evidence": ""
+        },
+        {
+          "text": "Desirable K for crest at 100 km/h is 100 per ERA Table 9-1",
+          "passed": null,
+          "evidence": ""
+        },
+        {
+          "text": "Minimum curve length calculated as L = K x A = 350 m",
+          "passed": null,
+          "evidence": ""
+        },
+        {
+          "text": "Notes ERA eye/object heights (1.05/0.2 m) differ from Uganda (1.07/0.15 m)",
           "passed": null,
           "evidence": ""
         }

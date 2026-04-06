@@ -134,6 +134,39 @@
           "evidence": ""
         }
       ]
+    },
+    {
+      "id": 4,
+      "prompt": "Design a flexible pavement for an ERA trunk road in Ethiopia using the ERA design catalogue method. The design traffic is 8 million ESAs over a 20-year design period. The subgrade has a design CBR of 10% (10th percentile). Using the ERA Flexible Pavement Design Manual Vol I 2013 Chapter 10, determine the traffic class, subgrade class, select the appropriate design chart, and provide the pavement structure.",
+      "expected_output": "Traffic class T6 (6-10M ESA) per ERA classification. Subgrade class S3 (CBR 8-14%) per ERA Table 3-1. Chart selection from ERA catalogue groups A1-D based on surfacing type and base type. Pavement structure from the selected chart for T6/S3 combination. Damage exponent n=4.5. ERA uses 7 chart groups (A1-A3, B, C1-C2, D), not Uganda D1-D5/W1-W5 wet/dry charts or Kenya ST01-ST16 structure types.",
+      "files": [],
+      "assertions": [
+        {
+          "text": "References ERA Flexible Pavement Design Manual Vol I 2013 Chapter 10 (not Uganda MoWT or Kenya RDM 3.4)",
+          "passed": null,
+          "evidence": ""
+        },
+        {
+          "text": "Classifies 8M ESAs as traffic class T6 (6-10M ESA range)",
+          "passed": null,
+          "evidence": ""
+        },
+        {
+          "text": "Classifies CBR 10% as subgrade class S3 (8-14%) using ERA's five-class system",
+          "passed": null,
+          "evidence": ""
+        },
+        {
+          "text": "Selects from ERA chart groups A1-D (not Uganda D/W charts or Kenya ST structure types)",
+          "passed": null,
+          "evidence": ""
+        },
+        {
+          "text": "Uses ERA design period of 20 years for trunk road and damage exponent n=4.5",
+          "passed": null,
+          "evidence": ""
+        }
+      ]
     }
   ]
 }

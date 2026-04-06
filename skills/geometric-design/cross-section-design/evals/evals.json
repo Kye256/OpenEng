@@ -5,7 +5,9 @@
       "id": 0,
       "prompt": "Determine the cross-section parameters for a Class II Paved road in Uganda. The road is in a rural area with rolling terrain. The design speed is 70 km/h per MoWT standard. Using the MoWT Road Design Manual, specify the lane width, shoulder width, carriageway width, crossfall, and road reserve width for the rural/normal cross-section.",
       "expected_output": "From MoWT Figure 7-14 (rural/normal cross-section) for Paved II: lane width 3.0m, shoulder width 2.0m, carriageway width 6.0m (2 lanes x 3.0m), roadway width 10.0m, road reserve width 30.0m, crossfall 2.5% (paved road).",
-      "files": ["tables/uganda_cross_sections.json"],
+      "files": [
+        "tables/uganda_cross_sections.json"
+      ],
       "assertions": [
         {
           "text": "Lane width is 3.0m for Class II Paved rural section",
@@ -66,7 +68,9 @@
       "id": 2,
       "prompt": "A Gravel C road in Uganda passes through a small trading centre (town section). Determine the cross-section parameters for the town section. Note any concerns about a single-lane road in a town context and recommend whether an escalation flag is appropriate.",
       "expected_output": "From MoWT Figure 7-16 (town gravel) for Gravel C: single-lane road (4.0m lane width), outer lane width 2.5m, footway width 2.0m each side, roadway width 13.0m, road reserve width 20.0m. An escalation note is appropriate because a single-lane road in a town context may create access and safety issues if traffic volume is growing. Consider whether upgrade to Gravel B (2-lane) is warranted.",
-      "files": ["tables/uganda_cross_sections.json"],
+      "files": [
+        "tables/uganda_cross_sections.json"
+      ],
       "assertions": [
         {
           "text": "Correctly identifies Gravel C as single-lane (1 lane, 4.0m carriageway) even in town context",
@@ -99,7 +103,9 @@
       "id": 3,
       "prompt": "Determine the cross-section parameters for a Class A road in Kenya using design standard DR2. The road is an inter-urban highway on flat terrain. Using the Kenya Road Design Manual RDM 1.3, specify the lane width, shoulder width, carriageway configuration, crossfall, and identify the standard cross-section type. Also note the expressway (DR1) cross-section for comparison.",
       "expected_output": "From Kenya RDM Table 4.1: Class A lane width = 3.65 m. From Table 4.2: Class A shoulder width = 2.7 m. DR2 maps to cross-section R3 or R4 (Table 2.7). R3: 2-carriageway road with 3.65m lanes, 2.70m outer shoulder, 1.00m inner shoulder, 2.00m central median. If using R4: single carriageway with 3.65m lane and 2.50m shoulders. Crossfall: 2.5% (paved). For DR1 expressway comparison: R1 has 4 carriageways, frontage road, full access control.",
-      "files": ["tables/kenya_cross_sections.json"],
+      "files": [
+        "tables/kenya_cross_sections.json"
+      ],
       "assertions": [
         {
           "text": "Lane width is 3.65 m for Class A per Kenya RDM Table 4.1 (not 3.5 m Uganda value)",
@@ -123,6 +129,34 @@
         },
         {
           "text": "Expressway DR1 cross-section (R1) described with divided carriageway, median, and full access control",
+          "passed": null,
+          "evidence": ""
+        }
+      ]
+    },
+    {
+      "id": 4,
+      "prompt": "Design the cross-section for a DC5 paved trunk road in Ethiopia on rolling terrain. Using the ERA Geometric Design Manual 2013 Tables 2-1 and 2-2, specify the carriageway width, shoulder widths, normal crossfall, and side slope ratios. The road has an AADT of 500 vehicles per day.",
+      "expected_output": "Per ERA GDM 2013 Tables 2-1 and 2-2 for DC5 paved: carriageway width 7.0 m, shoulder width 1.5 m (rolling terrain). Normal crossfall 2.5% for paved DC5. Side slopes per ERA Table 6-1. Note DC5 carriageway is 7.0 m (same as DC6) but shoulders are narrower (1.5 m vs 1.5-3.0 m for DC6). ERA cross-sections differ from Uganda and Kenya in the dual paved/unpaved standards for DC2-DC4.",
+      "files": [],
+      "assertions": [
+        {
+          "text": "References ERA GDM 2013 Tables 2-1 and 2-2 for cross-section dimensions (not Uganda MoWT or Kenya RDM)",
+          "passed": null,
+          "evidence": ""
+        },
+        {
+          "text": "DC5 paved carriageway width is 7.0 m per ERA Table 2-1",
+          "passed": null,
+          "evidence": ""
+        },
+        {
+          "text": "Shoulder width for DC5 on rolling terrain is 1.5 m per ERA Table 2-2",
+          "passed": null,
+          "evidence": ""
+        },
+        {
+          "text": "Normal crossfall is 2.5% for paved DC5 roads per ERA Tables 2-6 to 2-17",
           "passed": null,
           "evidence": ""
         }

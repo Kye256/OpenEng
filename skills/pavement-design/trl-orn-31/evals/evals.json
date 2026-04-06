@@ -110,6 +110,34 @@
           "evidence": ""
         }
       ]
+    },
+    {
+      "id": 4,
+      "prompt": "Explain the relationship between the ERA Flexible Pavement Design Manual Vol I 2013 and TRL Overseas Road Note 31. A consultant proposes using ORN 31 5th Edition (2022) directly for an ERA project in Ethiopia instead of the ERA manual. Is this acceptable? Identify the specific ERA departures from the base ORN 31 method.",
+      "expected_output": "ERA Pavement Vol I IS the Ethiopian calibration of TRL ORN 31 (4th Edition, 1993). Engineers should use the ERA manual directly, not ORN 31. The 5th Edition (2022) post-dates the ERA manual and includes features not in ERA (e.g., extended traffic to 80 MESA, climate resilience chapter). ERA departures from ORN 31 include: 5 subgrade classes S1-S5 (not 6), 7 chart groups A1-D (not ORN 31 charts), Ethiopian-specific material codes (GB1-GC), and ERA-calibrated material specifications.",
+      "files": [],
+      "assertions": [
+        {
+          "text": "Identifies ERA Pavement Vol I as the Ethiopian calibration of TRL ORN 31 (not a separate method)",
+          "passed": null,
+          "evidence": ""
+        },
+        {
+          "text": "Advises using ERA manual directly, not ORN 31 directly, for Ethiopian projects",
+          "passed": null,
+          "evidence": ""
+        },
+        {
+          "text": "Notes ORN 31 5th Edition (2022) post-dates ERA manual (2013) and includes features not in ERA",
+          "passed": null,
+          "evidence": ""
+        },
+        {
+          "text": "Identifies at least two specific ERA departures from base ORN 31 (e.g., 5 subgrade classes, chart groups)",
+          "passed": null,
+          "evidence": ""
+        }
+      ]
     }
   ]
 }

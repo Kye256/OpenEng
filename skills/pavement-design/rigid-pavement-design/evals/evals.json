@@ -16,12 +16,19 @@
         },
         {
           "type": "contains_any",
-          "values": ["JUC", "JRC", "CRCP"],
+          "values": [
+            "JUC",
+            "JRC",
+            "CRCP"
+          ],
           "description": "Must use Kenya slab type terminology (JUC, JRC, or CRCP)"
         },
         {
           "type": "contains_any",
-          "values": ["CESA", "MCESA"],
+          "values": [
+            "CESA",
+            "MCESA"
+          ],
           "description": "Must use Kenya CESA traffic loading terminology"
         },
         {
@@ -36,7 +43,11 @@
         },
         {
           "type": "contains_any",
-          "values": ["lean concrete subbase", "cement-treated subbase", "subbase"],
+          "values": [
+            "lean concrete subbase",
+            "cement-treated subbase",
+            "subbase"
+          ],
           "description": "Must specify Kenya subbase requirements"
         },
         {
@@ -61,7 +72,11 @@
       "assertions": [
         {
           "type": "contains_any",
-          "values": ["AASHTO 1993", "AASHTO", "PCA"],
+          "values": [
+            "AASHTO 1993",
+            "AASHTO",
+            "PCA"
+          ],
           "description": "Must use AASHTO 1993 or PCA universal design method"
         },
         {
@@ -111,7 +126,13 @@
       "assertions": [
         {
           "type": "contains_any",
-          "values": ["block paving", "Block Paving", "cobblestone", "Cobblestone", "interlocking concrete block"],
+          "values": [
+            "block paving",
+            "Block Paving",
+            "cobblestone",
+            "Cobblestone",
+            "interlocking concrete block"
+          ],
           "description": "Must consider block paving and/or cobblestone as options"
         },
         {
@@ -148,6 +169,72 @@
           "type": "contains_concept",
           "value": "preliminary OR screening OR professional review",
           "description": "Must flag output as preliminary level"
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "prompt": "Design a rigid pavement for a Kenya Class B highway with cumulative traffic of 30 MCESA, subgrade CBR 6% (k-value 35 MPa/m), and concrete flexural strength 4.2 MPa. The road is on the Northern Corridor near Nairobi. Using Kenya RDM 3.5, specify the pavement type, slab thickness, joint design, subbase requirements, and any reinforcement needed.",
+      "expected_output": "Per Kenya RDM 3.5: for 30 MCESA on k=35 MPa/m with 4.2 MPa concrete. Pavement type: JUC (Jointed Unreinforced Concrete) or JRC depending on traffic and maintenance considerations. Slab thickness from RDM 3.5 design charts. Joint spacing per RDM 3.5 (typically 4.5-6.0 m for JUC). Lean concrete or cement-treated subbase required. Dowel bars at transverse joints. Uses Kenya CESA terminology throughout.",
+      "files": [],
+      "assertions": [
+        {
+          "text": "References Kenya RDM 3.5 as the design standard for rigid pavement (not Uganda MoWT or ERA)",
+          "passed": null,
+          "evidence": ""
+        },
+        {
+          "text": "Uses Kenya CESA/MCESA traffic loading terminology",
+          "passed": null,
+          "evidence": ""
+        },
+        {
+          "text": "Uses Kenya slab type terminology (JUC, JRC, or CRCP)",
+          "passed": null,
+          "evidence": ""
+        },
+        {
+          "text": "Specifies slab thickness in mm appropriate for 30 MCESA at k=35 MPa/m (approximately 250-300 mm)",
+          "passed": null,
+          "evidence": ""
+        },
+        {
+          "text": "Addresses joint design including dowel bars and joint spacing",
+          "passed": null,
+          "evidence": ""
+        }
+      ]
+    },
+    {
+      "id": 4,
+      "prompt": "Design a rigid pavement for an ERA DC7 trunk road in Ethiopia with design traffic of 15 million ESAs, subgrade CBR 8% (k-value 45 MPa/m), and concrete flexural strength 4.0 MPa. The road is at high altitude near Addis Ababa (2,400 m) with significant temperature differentials. Using ERA Pavement Design Manual Volume II 2013, specify the pavement type, slab thickness, joint design, and subbase requirements.",
+      "expected_output": "Per ERA Pavement Vol II 2013: three pavement types covered (JUCP, JRCP, CRCP). For DC7 trunk road: JUCP likely most appropriate due to simpler construction in Ethiopian context. Slab thickness from ERA Vol II design approach for 15M ESAs at k=45 MPa/m. Joint spacing typically 4.5-6.0 m for JUCP. ERA uses TRL/AASHTO hybrid approach. High altitude at 2,400 m creates significant curl/warp stresses from temperature differentials -- ERA addresses this specifically. ERA uses T1-T8 traffic classification and S1-S5 subgrade classification from Vol I.",
+      "files": [],
+      "assertions": [
+        {
+          "text": "References ERA Pavement Design Manual Volume II 2013 for rigid pavement design (not Kenya RDM 3.5 or Uganda)",
+          "passed": null,
+          "evidence": ""
+        },
+        {
+          "text": "Uses ERA pavement type terminology (JUCP, JRCP, CRCP)",
+          "passed": null,
+          "evidence": ""
+        },
+        {
+          "text": "Addresses high-altitude temperature differential effects on curl/warp stresses",
+          "passed": null,
+          "evidence": ""
+        },
+        {
+          "text": "Uses ERA traffic and subgrade classification from Vol I (T1-T8, S1-S5)",
+          "passed": null,
+          "evidence": ""
+        },
+        {
+          "text": "Describes ERA's TRL/AASHTO hybrid approach to rigid pavement design",
+          "passed": null,
+          "evidence": ""
         }
       ]
     }

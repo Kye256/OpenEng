@@ -5,7 +5,9 @@
       "id": 0,
       "prompt": "Design a priority T-junction on a Class II paved road in Uganda. The major road has a design speed of 80 km/h and AADT of 5000. The minor road has AADT of 600. The junction is on level ground. The junction is controlled by a give-way sign (approach condition). Using the MoWT Road Design Manual, determine: (1) the appropriate junction type, (2) the visibility splay requirement, (3) whether a right turn lane is needed and if so its total length. Assume right-turning traffic is 120 pcu/h.",
       "expected_output": "Junction type B or C (partly to fully channelised T) based on approximate thresholds from MoWT Figures 8-5 to 8-8 at 80 km/h. Visibility splay: approach condition from 20 m setback, LA = 210 m at 80 km/h (from MoWT Figure 8-11). Right turn lane required: deceleration 85 m (MoWT Table 8-5) + storage 20 m (traffic 0-150 pcu/h, MoWT Table 8-6) = 105 m total at 3.0 m width. No gradient adjustment (level ground).",
-      "files": ["tables/uganda_junction_visibility.json"],
+      "files": [
+        "tables/uganda_junction_visibility.json"
+      ],
       "assertions": [
         {
           "text": "Junction type is B (Partly Channelised T) or C (Channelised T) based on traffic volumes and 80 km/h design speed",
@@ -71,7 +73,9 @@
       "id": 2,
       "prompt": "A junction in Uganda has a minor road AADT of 3000 on a major road with AADT of 5000 and design speed of 60 km/h. The minor road carries 37.5% of total junction traffic. Additionally, the visibility splay on the northern approach is obstructed by a building at 100 m. Determine the junction type and identify any concerns.",
       "expected_output": "With minor road at 37.5% of total traffic, a priority junction is inadequate. Recommend roundabout (Type D) or signalised intersection (Type E). At 60 km/h the required approach visibility LA = 160 m, but only 100 m is available on the northern approach -- this is a serious deficiency requiring escalation. Options: relocate junction, acquire land to remove obstruction, change to roundabout (which has different visibility geometry), or reduce design speed.",
-      "files": ["tables/uganda_junction_visibility.json"],
+      "files": [
+        "tables/uganda_junction_visibility.json"
+      ],
       "assertions": [
         {
           "text": "Recommends roundabout or signalised intersection (not just priority T) given minor road carries over 30% of traffic",
@@ -104,7 +108,9 @@
       "id": 3,
       "prompt": "Design a priority junction on a Class C inter-county road in Kenya. The major road has a design speed of 85 km/h and AADT of 3000. The minor road (Class D) has AADT of 350. The junction is on flat terrain. Using the Kenya Road Design Manual RDM 1.3, determine the intersection sight distance (ISD) requirement, the decision sight distance to the turning lane, and check the pedestrian sight distance for a 2-lane crossing. A matatu stage is proposed 30 m before the junction.",
       "expected_output": "ISD from Kenya RDM Table 3.18 at 85 km/h: 160 m. Decision sight distance from Table 3.19 at 80 km/h: 250 m (interpolate for 85 km/h: approximately 275 m). Pedestrian sight distance for 2-lane crossing from Table 4.13: not directly at 85 km/h, interpolate between 80 (115 m) and 90 (130 m) = approximately 120 m. Matatu stage at 30 m before junction is non-compliant -- RDM Section 4.12 recommends bus stops not immediately before intersections due to sight distance restriction. Relocate matatu stage to after the junction, within 50 m.",
-      "files": ["tables/kenya_junction_visibility.json"],
+      "files": [
+        "tables/kenya_junction_visibility.json"
+      ],
       "assertions": [
         {
           "text": "ISD at 85 km/h is 160 m (from Kenya RDM Table 3.18)",
@@ -128,6 +134,34 @@
         },
         {
           "text": "Recommends relocating matatu stage to after the junction per Section 4.12 guidance",
+          "passed": null,
+          "evidence": ""
+        }
+      ]
+    },
+    {
+      "id": 4,
+      "prompt": "A T-junction is proposed where an ERA DC5 road (major road, AADT 800 vpd) meets an ERA DC3 road (minor road, AADT 100 vpd) in Ethiopia. Using the ERA Geometric Design Manual 2013 Chapter 11 and Figure 11-2, determine the recommended junction type. Also specify the minimum sight distance requirements at the junction.",
+      "expected_output": "Per ERA GDM 2013 Figure 11-2 for three-leg junctions: major road flow 800 vpd and minor road flow 100 vpd indicates Priority with turning lanes. ERA Chapter 11 provides a systematic volume-based junction type selection framework. Sight distance at the junction per ERA Chapter 11 intersection sight distance requirements. Note ERA's volume-based approach is more prescriptive than Kenya and Uganda's warrants-based systems.",
+      "files": [],
+      "assertions": [
+        {
+          "text": "References ERA GDM 2013 Chapter 11 and Figure 11-2 for junction type selection (not Uganda MoWT or Kenya RDM)",
+          "passed": null,
+          "evidence": ""
+        },
+        {
+          "text": "Recommends priority junction with turning lanes based on ERA Figure 11-2 volume thresholds",
+          "passed": null,
+          "evidence": ""
+        },
+        {
+          "text": "Uses ERA volume-based junction selection framework (not warrants-based)",
+          "passed": null,
+          "evidence": ""
+        },
+        {
+          "text": "Addresses intersection sight distance requirements per ERA Chapter 11",
           "passed": null,
           "evidence": ""
         }

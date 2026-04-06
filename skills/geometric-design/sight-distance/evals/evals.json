@@ -39,7 +39,7 @@
     {
       "id": 1,
       "prompt": "For a single carriageway road in the UK with design speed 100A km/h, following DMRB CD 109 standards, determine the desirable minimum stopping sight distance and the full overtaking sight distance (FOSD). A crest curve on this road has K = 80. Is the desirable SSD provided? Is FOSD available over this crest? State the SSD relaxation rules for this road type.",
-      "expected_output": "From CD 109 Table 2.10 at 100 km/h: Desirable minimum SSD = 215 m. One step below = 160 m. FOSD = 580 m, FOSD overtaking crest K = 400. For crest K = 80: desirable minimum crest K = 100, one step below = 55. K = 80 is between these values — desirable SSD is NOT fully provided but one-step-below SSD IS provided. FOSD requires K = 400, so K = 80 does NOT provide FOSD. SSD relaxation for all-purpose Band A: 2 steps (Table 3.5).",
+      "expected_output": "From CD 109 Table 2.10 at 100 km/h: Desirable minimum SSD = 215 m. One step below = 160 m. FOSD = 580 m, FOSD overtaking crest K = 400. For crest K = 80: desirable minimum crest K = 100, one step below = 55. K = 80 is between these values \u2014 desirable SSD is NOT fully provided but one-step-below SSD IS provided. FOSD requires K = 400, so K = 80 does NOT provide FOSD. SSD relaxation for all-purpose Band A: 2 steps (Table 3.5).",
       "files": [],
       "assertions": [
         {
@@ -71,7 +71,7 @@
     },
     {
       "id": 2,
-      "prompt": "A road in Uganda has a design speed of 60 km/h and a 7% downgrade. The friction factor for 60 km/h is not explicitly provided in the project data — only friction factors for 50 km/h (f=0.35) and 70 km/h (f=0.31) are available. Calculate the SSD on this 7% downgrade, explaining how you handle the missing friction data and the grade adjustment. State any escalation flags.",
+      "prompt": "A road in Uganda has a design speed of 60 km/h and a 7% downgrade. The friction factor for 60 km/h is not explicitly provided in the project data \u2014 only friction factors for 50 km/h (f=0.35) and 70 km/h (f=0.31) are available. Calculate the SSD on this 7% downgrade, explaining how you handle the missing friction data and the grade adjustment. State any escalation flags.",
       "expected_output": "Friction factor for 60 km/h can be interpolated from MoWT Table 6-19: between f=0.35 (50 km/h) and f=0.31 (70 km/h), giving approximately f=0.33 at 60 km/h. SSD on 7% downgrade: reaction = 0.278 x 2.5 x 60 = 41.7 m. Braking = 60^2 / (254 x (0.33 + (-0.07))) = 3600 / (254 x 0.26) = 3600 / 66.04 = 54.5 m. Total SSD = 96.2 m. This should be cross-checked against MoWT Table 6-20 (SSD on grades). Escalation: flag that friction data was interpolated, flag that SSD on 7% downgrade is significantly longer than on level (~84.6 m upper bound from Table 6-19), and note the conservative estimate.",
       "files": [
         "skills/geometric-design/sight-distance/tables/uganda_ssd.json"
@@ -134,6 +134,34 @@
         },
         {
           "text": "Correctly identifies that Kenya and Uganda use different eye/object height assumptions and values cannot be interchanged",
+          "passed": null,
+          "evidence": ""
+        }
+      ]
+    },
+    {
+      "id": 4,
+      "prompt": "Determine the stopping sight distance and passing sight distance for a DC5 paved road in Ethiopia with a design speed of 70 km/h on rolling terrain. The road is a two-lane single carriageway. Using the ERA Geometric Design Manual 2013 Chapter 7, provide both minimum and desirable SSD values, and the PSD value. Identify the eye and object height assumptions used by ERA.",
+      "expected_output": "Per ERA GDM 2013 Chapter 7: driver eye height 1.05 m, object height 0.2 m (SSD), object height 0.6 m (PSD), perception-reaction time 2.5 s, comfortable braking deceleration 3.4 m/s^2 for paved roads. SSD values from ERA Table 7-2 for 70 km/h. PSD from ERA Table 7-3 for two-lane road design. Note ERA eye/object heights match Kenya but differ from Uganda (1.07/0.15 m).",
+      "files": [],
+      "assertions": [
+        {
+          "text": "References ERA GDM 2013 Chapter 7 for sight distance parameters (not Uganda MoWT or Kenya RDM)",
+          "passed": null,
+          "evidence": ""
+        },
+        {
+          "text": "Uses ERA eye height 1.05 m and object height 0.2 m for SSD",
+          "passed": null,
+          "evidence": ""
+        },
+        {
+          "text": "Provides both minimum and desirable SSD values for 70 km/h from ERA Table 7-2",
+          "passed": null,
+          "evidence": ""
+        },
+        {
+          "text": "PSD value for two-lane road provided from ERA tables",
           "passed": null,
           "evidence": ""
         }

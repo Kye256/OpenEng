@@ -127,6 +127,72 @@
           "evidence": ""
         }
       ]
+    },
+    {
+      "id": 4,
+      "prompt": "Select the design standards for a new ERA trunk road in Ethiopia connecting Addis Ababa to Hawassa. The road has a mid-life AADT forecast of 5,000 vehicles per day with 30% heavy vehicles. The terrain is rolling. Using the ERA Geometric Design Manual 2013, determine the functional class, design class, design speed, and key geometric parameters.",
+      "expected_output": "Functional Class I (Trunk Road) per ERA Section 5.11. Design Class DC7 based on AADT 5,000 (range 3,000-10,000) per ERA Table 2-1. Design speed for DC7 on rolling terrain from ERA design speed tables. Key geometric parameters from ERA Tables 2-6 to 2-17 for DC7. Note ERA's dual classification system: functional class sets a minimum DC floor, but AADT drives the actual design class. This is fundamentally different from Kenya where functional class maps directly to design standards.",
+      "files": [],
+      "assertions": [
+        {
+          "text": "Classifies as ERA Functional Class I (Trunk Road) and Design Class DC7 based on AADT 5,000",
+          "passed": null,
+          "evidence": ""
+        },
+        {
+          "text": "Uses ERA dual classification system (functional class + design class based on AADT) from ERA GDM 2013 Table 2-1",
+          "passed": null,
+          "evidence": ""
+        },
+        {
+          "text": "Provides design speed for DC7 on rolling terrain from ERA design speed tables",
+          "passed": null,
+          "evidence": ""
+        },
+        {
+          "text": "Does not apply Uganda MoWT or Kenya RDM classification systems",
+          "passed": null,
+          "evidence": ""
+        },
+        {
+          "text": "References ERA Tables 2-6 to 2-17 for geometric parameters",
+          "passed": null,
+          "evidence": ""
+        }
+      ]
+    },
+    {
+      "id": 5,
+      "prompt": "A road project connects Moyale (Ethiopia-Kenya border town) to Hawassa in Ethiopia and extends to Isiolo in Kenya. Compare the road classification systems and design standards that would apply on each side of the border. The Ethiopian section is 300 km on rolling terrain and the Kenya section is 250 km on flat-to-rolling terrain. What design classes, design speeds, and cross-section standards apply under ERA and Kenya RDM respectively?",
+      "expected_output": "Ethiopian section: ERA classification (likely DC3 or Trunk Road), ERA design speeds for rolling terrain, ERA cross-section standards. Kenya section: Kenya RDM classification (likely Class B or C), Kenya design speeds, Kenya cross-section standards. Comparison of key parameters showing differences in design speed, carriageway width, shoulder width. Notes on transition zone at the border.",
+      "files": [],
+      "assertions": [
+        {
+          "text": "Applies ERA road classification for the Ethiopian section (DC or Trunk/Link terminology)",
+          "passed": null,
+          "evidence": ""
+        },
+        {
+          "text": "Applies Kenya RDM road classification for the Kenya section (Class A/B/C terminology)",
+          "passed": null,
+          "evidence": ""
+        },
+        {
+          "text": "Compares design speeds between ERA and Kenya RDM for the respective terrain types",
+          "passed": null,
+          "evidence": ""
+        },
+        {
+          "text": "Does not apply Uganda MoWT standards to either section",
+          "passed": null,
+          "evidence": ""
+        },
+        {
+          "text": "Identifies differences in cross-section standards between ERA and Kenya RDM",
+          "passed": null,
+          "evidence": ""
+        }
+      ]
     }
   ]
 }
