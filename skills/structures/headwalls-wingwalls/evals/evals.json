@@ -127,6 +127,34 @@
           "evidence": ""
         }
       ]
+    },
+    {
+      "id": 4,
+      "prompt": "Design a wingwall for a box culvert on an ERA DC5 road in Ethiopia. The wingwall retains 3 m of backfill with a level surface behind. The backfill is granular (phi = 30 degrees, gamma = 18 kN/m3). Using the ERA Bridge Design Manual 2013, calculate the earth pressure using AASHTO LRFD methodology and check sliding and overturning stability using ERA load factors.",
+      "expected_output": "Per ERA BDM 2013: AASHTO LRFD earth pressure methodology. Active earth pressure coefficient Ka = tan^2(45 - phi/2) = tan^2(30) = 0.333 (Rankine). Lateral earth force = 0.5 x Ka x gamma x H^2 = 0.5 x 0.333 x 18 x 9 = 27 kN/m. Earth pressure is permanent load (EH) with gamma_EH = 1.50 (Strength I). Stability checks using LRFD format with resistance factors on geotechnical capacity, not factors of safety.",
+      "files": [],
+      "assertions": [
+        {
+          "text": "References ERA BDM 2013 for wingwall design using AASHTO LRFD methodology (not Kenya EN 1997 or Uganda BS 8002)",
+          "passed": null,
+          "evidence": ""
+        },
+        {
+          "text": "Calculates active earth pressure using Rankine or Coulomb theory per AASHTO Section 3.11",
+          "passed": null,
+          "evidence": ""
+        },
+        {
+          "text": "Uses LRFD load factor gamma_EH = 1.50 for earth pressure (Strength I)",
+          "passed": null,
+          "evidence": ""
+        },
+        {
+          "text": "Checks stability using LRFD resistance factors, not working stress factors of safety",
+          "passed": null,
+          "evidence": ""
+        }
+      ]
     }
   ]
 }

@@ -133,6 +133,34 @@
           "evidence": ""
         }
       ]
+    },
+    {
+      "id": 4,
+      "prompt": "Assess bridge hydraulics for a DC7 trunk road bridge over a highland river in Ethiopia. The 100-year design flood is 350 m3/s. The river has a 150 m wide floodplain with alluvial bed material (d50 = 25 mm). Using the ERA Bridge Design Manual 2013, determine the freeboard requirement, estimate scour depth using the HEC-18 methodology, and specify the design flood return period for a DC7 trunk road bridge.",
+      "expected_output": "Per ERA BDM 2013 Part 1 Section 2.6 and Part 2 Section 2.6: design flood return period 100-year for DC7 trunk roads, check flood 500-year. Freeboard per ERA BDM requirements. Scour assessment using HEC-18 methodology as adopted by ERA: general scour (contraction scour) + local scour (pier/abutment scour). For alluvial bed with d50 = 25 mm, use live-bed or clear-water scour equations depending on flow velocity relative to critical velocity. Ethiopian rivers have seasonal flash flood characteristics requiring conservative scour estimates.",
+      "files": [],
+      "assertions": [
+        {
+          "text": "References ERA BDM 2013 for bridge hydraulics (not Kenya RDM or Uganda MoWT Vol 2)",
+          "passed": null,
+          "evidence": ""
+        },
+        {
+          "text": "Specifies 100-year design flood and 500-year check flood for DC7 trunk road bridge",
+          "passed": null,
+          "evidence": ""
+        },
+        {
+          "text": "Uses HEC-18 scour methodology as adopted by ERA BDM",
+          "passed": null,
+          "evidence": ""
+        },
+        {
+          "text": "Estimates scour depth using contraction and local scour components",
+          "passed": null,
+          "evidence": ""
+        }
+      ]
     }
   ]
 }

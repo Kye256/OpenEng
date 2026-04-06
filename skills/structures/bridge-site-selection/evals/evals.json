@@ -127,6 +127,34 @@
           "evidence": ""
         }
       ]
+    },
+    {
+      "id": 4,
+      "prompt": "Evaluate a bridge site for a new ERA DC7 trunk road crossing of the Awash River in Ethiopia. The proposed crossing is at an elevation of 900 m in the Rift Valley. The river has a 200 m wide floodplain with seasonal flash floods. The geology includes alluvial deposits over volcanic bedrock. Using the ERA Bridge Design Manual 2013, assess the site suitability considering alignment, hydraulics, geotechnical conditions, and seismic hazard.",
+      "expected_output": "Per ERA BDM 2013 Part 1 Chapter 2 and Part 2 Chapter 1: bridge on straight reach with minimised skew angle. Hydraulic assessment: 200 m floodplain requires careful waterway design to avoid excessive backwater. Geotechnical: alluvial deposits may require deep foundations (piles or drilled shafts) to reach volcanic bedrock. Seismic: Awash River is in the Rift Valley -- Seismic Zone 3-4 (A > 0.10). This is NOT a low seismicity site. AASHTO LRFD importance classification (Critical/Essential/Other).",
+      "files": [],
+      "assertions": [
+        {
+          "text": "References ERA BDM 2013 for bridge site selection criteria (not Kenya RDM or Uganda MoWT)",
+          "passed": null,
+          "evidence": ""
+        },
+        {
+          "text": "Identifies Rift Valley location as Seismic Zone 3 or 4 with significant seismic hazard",
+          "passed": null,
+          "evidence": ""
+        },
+        {
+          "text": "Addresses hydraulic challenges of the 200 m floodplain including backwater and scour",
+          "passed": null,
+          "evidence": ""
+        },
+        {
+          "text": "Uses ERA/AASHTO LRFD importance classification, not Eurocode Consequence Classes",
+          "passed": null,
+          "evidence": ""
+        }
+      ]
     }
   ]
 }

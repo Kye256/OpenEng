@@ -5,7 +5,9 @@
       "id": 0,
       "prompt": "A UNRA project involves rehabilitation of a 40 km national road in central Uganda. The road is in an existing corridor -- works include repaving, drainage repair, and minor shoulder widening within the existing road reserve. No land acquisition is required. The road does not cross any wetlands, forests, or protected areas. No structures need to be demolished. The project is funded entirely from the Government of Uganda budget (no donor funding). Screen the project for environmental and social impacts and determine the required assessment level.",
       "expected_output": "Applies NEMA framework first (not World Bank -- GoU funded). Correctly identifies the project as Second Schedule under NEMA (rehabilitation in existing corridor, no significant impacts). Recommends Project Brief submission to NEMA. Does not require full EIA. Identifies minor construction-phase risks (dust, noise, drainage) but no significant environmental or social risks.",
-      "files": ["tables/nema_screening_categories.json"],
+      "files": [
+        "tables/nema_screening_categories.json"
+      ],
       "assertions": [
         {
           "text": "Applies NEMA framework based on GoU funding source identification (not World Bank ESF)",
@@ -38,7 +40,10 @@
       "id": 1,
       "prompt": "A World Bank-funded project involves construction of a new 15 km road in western Uganda to connect a subcounty to the district road network. The road alignment crosses a wetland (approximately 800m crossing length). Approximately 50 households will be affected: 12 households require physical relocation and 38 households will experience economic displacement (loss of roadside market stalls and agricultural plots). The area is not near Batwa communities. There are no known cultural heritage sites. Screen the project using the applicable environmental and social framework and determine all required safeguard instruments.",
       "expected_output": "Applies World Bank ESF (not NEMA alone -- WB funded). Classifies as High Risk due to new road + wetland crossing + significant resettlement. Also applies NEMA screening -- Third Schedule (EIA mandatory) due to new road in sensitive area + resettlement. Both frameworks require full EIA/ESIA. Identifies RAP requirement for the 50 affected households. Lists all required instruments: Full ESIA, ESMP, RAP, Stakeholder Engagement Plan. Notes that both NEMA approval and WB no-objection are required.",
-      "files": ["tables/nema_screening_categories.json", "tables/wb_esf_risk_classification.json"],
+      "files": [
+        "tables/nema_screening_categories.json",
+        "tables/wb_esf_risk_classification.json"
+      ],
       "assertions": [
         {
           "text": "Applies World Bank ESF framework based on WB funding source (and also checks NEMA requirements)",
@@ -71,7 +76,10 @@
       "id": 2,
       "prompt": "A road improvement project in eastern Uganda is co-funded by GoU (40%) and AfDB (60%). The project involves upgrading a 25 km gravel road to paved standard. The road passes within 500m of a community sacred grove (traditional burial site). Minor land acquisition is needed (15 properties, all roadside market stalls -- economic displacement only, no physical relocation of households). The road does not cross wetlands but runs adjacent to a seasonal stream for 3 km. Screen the project for environmental and social impacts, identifying which framework applies and how the dual requirements interact.",
       "expected_output": "Identifies mixed funding (GoU + AfDB) -- both NEMA and AfDB ISS apply, most restrictive governs. NEMA likely Second Schedule (upgrade in existing corridor, minor land take, no wetland crossing). AfDB likely Category 2 (limited impacts, cultural heritage concern). Most restrictive = AfDB Category 2 requirements (limited ESIA with Heritage Impact Assessment). Identifies sacred grove as cultural heritage requiring specific assessment. Notes economic displacement of 15 properties requires ARAP. Explains why donor rules apply per the same pattern as Skill #47 (Section 4 PPDA Act).",
-      "files": ["tables/nema_screening_categories.json", "tables/wb_esf_risk_classification.json"],
+      "files": [
+        "tables/nema_screening_categories.json",
+        "tables/wb_esf_risk_classification.json"
+      ],
       "assertions": [
         {
           "text": "Identifies most restrictive framework for mixed GoU + AfDB funding",
@@ -123,6 +131,44 @@
         },
         {
           "text": "References Stakeholder Engagement Plan (SEP) or stakeholder consultation requirements under ESF or EMCA",
+          "passed": null,
+          "evidence": ""
+        }
+      ]
+    },
+    {
+      "id": 4,
+      "prompt": "A World Bank-funded ERA road project involves construction of a new 60 km trunk road in the Oromia region of Ethiopia. The road corridor passes through agricultural land (teff and wheat farms), crosses two seasonal rivers, and is within 5 km of a community forest. Approximately 120 households will require relocation. Screen the project for environmental and social impacts and determine the required assessment level under both Ethiopian law and World Bank ESF.",
+      "expected_output": "Applies dual-framework: Ethiopian EPA (EIA Proclamation 299/2002) AND World Bank ESF (donor-funded). Under EPA: Schedule 1 project (new road construction) requiring full EIA. Under World Bank ESF: likely High or Substantial risk (involuntary resettlement of 120 households triggers ESS 5, proximity to community forest triggers ESS 6). The more restrictive framework governs each aspect. ERA Environmental Procedures also apply. Key concerns: resettlement action plan, community forest impact assessment, river crossing environmental management.",
+      "files": [],
+      "assertions": [
+        {
+          "text": "Applies Ethiopian EPA framework (EIA Proclamation 299/2002) as the national regulatory requirement",
+          "passed": null,
+          "evidence": ""
+        },
+        {
+          "text": "Applies World Bank ESF because the project is World Bank-funded (dual-framework pattern)",
+          "passed": null,
+          "evidence": ""
+        },
+        {
+          "text": "Classifies as Schedule 1 under EPA (new road construction requiring full EIA)",
+          "passed": null,
+          "evidence": ""
+        },
+        {
+          "text": "Identifies World Bank ESS 5 (Land Acquisition and Involuntary Resettlement) as triggered by 120 household relocations",
+          "passed": null,
+          "evidence": ""
+        },
+        {
+          "text": "References ERA Environmental Procedures from the ERA Design Manual",
+          "passed": null,
+          "evidence": ""
+        },
+        {
+          "text": "Does not confuse with Uganda NEMA or Kenya NEMA requirements",
           "passed": null,
           "evidence": ""
         }

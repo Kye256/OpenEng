@@ -126,6 +126,34 @@
           "evidence": ""
         }
       ]
+    },
+    {
+      "id": 4,
+      "prompt": "Size a culvert for a DC7 trunk road in Ethiopia crossing a seasonal stream. The design flood (25-year return period) is 8 m3/s. The road embankment height is 4 m. The stream has a steep gradient (2%) and carries significant sediment during the wet season. Using the ERA Drainage Design Manual 2013, determine the culvert type, size, and check both inlet and outlet control headwater. Specify material based on ERA practice.",
+      "expected_output": "Per ERA DDM 2013: dual-control approach checking both inlet and outlet control (FHWA/AASHTO methodology). For 8 m3/s with 4 m embankment: reinforced concrete box or pipe culvert. Size determined by allowable headwater ratio (HW/D). ERA prefers reinforced concrete pipe (RCP), reinforced concrete box, and stone masonry as culvert materials. Check both inlet and outlet control; higher headwater governs. Sediment management critical for Ethiopian seasonal streams.",
+      "files": [],
+      "assertions": [
+        {
+          "text": "References ERA Drainage Design Manual 2013 for culvert hydraulic design (not Uganda MoWT or Kenya RDM)",
+          "passed": null,
+          "evidence": ""
+        },
+        {
+          "text": "Checks both inlet control and outlet control per ERA DDM dual-control approach",
+          "passed": null,
+          "evidence": ""
+        },
+        {
+          "text": "Specifies ERA-preferred culvert materials (RCP, RC box, or stone masonry)",
+          "passed": null,
+          "evidence": ""
+        },
+        {
+          "text": "Addresses sediment considerations for Ethiopian seasonal stream conditions",
+          "passed": null,
+          "evidence": ""
+        }
+      ]
     }
   ]
 }

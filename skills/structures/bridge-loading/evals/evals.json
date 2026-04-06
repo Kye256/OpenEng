@@ -177,6 +177,39 @@
           "evidence": ""
         }
       ]
+    },
+    {
+      "id": 4,
+      "prompt": "Determine the design loads for a 25 m span simply supported bridge on an ERA DC7 trunk road in Ethiopia. The bridge is in Seismic Zone 3 (Rift Valley margins, acceleration coefficient A = 0.12). Using the ERA Bridge Design Manual 2013, specify the HL-93 live load model, dynamic load allowance, load combinations for Strength I and Extreme Event I (seismic), and the applicable load factors.",
+      "expected_output": "Per ERA BDM 2013 Part 1 Chapter 3: HL-93 live load -- design truck (35+145+145 kN) or design tandem (2x110 kN) plus design lane load (9.3 kN/m). Dynamic load allowance IM = 33% for design truck/tandem. Load combinations: Strength I (gamma_DC=1.25, gamma_LL=1.75), Extreme Event I (gamma_EQ=1.0, gamma_LL varies). Seismic Zone 3 (A=0.12): single-mode spectral or uniform load analysis required. R factors applied per BDM Section 3.10.",
+      "files": [],
+      "assertions": [
+        {
+          "text": "References ERA BDM 2013 for bridge loading (not Kenya EN/Eurocode or Uganda BS 5400)",
+          "passed": null,
+          "evidence": ""
+        },
+        {
+          "text": "Uses HL-93 live load model with design truck (325 kN) and design lane load (9.3 kN/m)",
+          "passed": null,
+          "evidence": ""
+        },
+        {
+          "text": "Specifies dynamic load allowance IM = 33% per ERA BDM",
+          "passed": null,
+          "evidence": ""
+        },
+        {
+          "text": "Addresses Seismic Zone 3 requirements with A = 0.12 from ERA BDM Section 3.10",
+          "passed": null,
+          "evidence": ""
+        },
+        {
+          "text": "Provides LRFD load combination format (Strength I, Extreme Event I) with load factors",
+          "passed": null,
+          "evidence": ""
+        }
+      ]
     }
   ]
 }

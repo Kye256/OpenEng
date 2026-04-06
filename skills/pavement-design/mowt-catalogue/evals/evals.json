@@ -167,6 +167,39 @@
           "evidence": ""
         }
       ]
+    },
+    {
+      "id": 5,
+      "prompt": "A consulting engineer is designing pavement structures for road projects in both Ethiopia and Uganda. Both projects have the same traffic loading (3 million cumulative ESAs) and subgrade conditions (CBR 5%). Compare the ERA pavement design catalogue approach with the Uganda MoWT catalogue approach. What pavement structures would each standard recommend? Highlight key differences in layer thicknesses, material specifications, and design methodology.",
+      "expected_output": "ERA catalogue: references ERA Pavement Design Manual flexible pavement catalogue for 3M ESAs on CBR 5% subgrade. MoWT catalogue: references Uganda MoWT Road Design Manual pavement catalogue for equivalent traffic class and subgrade. Comparison of recommended layer thicknesses (surface, base, subbase), material specifications, and any differences in design philosophy. Notes ERA's relationship to TRL ORN 31 methodology.",
+      "files": [],
+      "assertions": [
+        {
+          "text": "References ERA Pavement Design Manual for the Ethiopian design",
+          "passed": null,
+          "evidence": ""
+        },
+        {
+          "text": "References Uganda MoWT Road Design Manual for the Ugandan design",
+          "passed": null,
+          "evidence": ""
+        },
+        {
+          "text": "Compares specific layer thicknesses from each catalogue",
+          "passed": null,
+          "evidence": ""
+        },
+        {
+          "text": "Does not apply Kenya RDM to either design unless explicitly comparing all three",
+          "passed": null,
+          "evidence": ""
+        },
+        {
+          "text": "Notes differences in design methodology or material specifications between ERA and MoWT",
+          "passed": null,
+          "evidence": ""
+        }
+      ]
     }
   ]
 }

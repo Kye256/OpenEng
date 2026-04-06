@@ -117,6 +117,34 @@
           "evidence": ""
         }
       ]
+    },
+    {
+      "id": 4,
+      "prompt": "Design a side ditch for a DC5 paved road in Ethiopia on mountainous terrain. The design flow from hydrology analysis is 0.5 m3/s. Using the ERA Drainage Design Manual 2013, select the ditch shape, determine dimensions using Manning's equation, check velocity limits, and specify the lining material. The area has abundant basalt stone available locally.",
+      "expected_output": "Per ERA DDM 2013: Manning's equation for uniform flow design. Standard ditch shape (trapezoidal preferred for mountainous terrain). Dimensions sized for 0.5 m3/s design flow with appropriate freeboard. Velocity check against ERA maximum permissible velocities. With abundant basalt locally available, stone masonry lining recommended for higher velocity channels. ERA emphasises locally available lining materials including stone masonry, gabion mattresses, and vegetation.",
+      "files": [],
+      "assertions": [
+        {
+          "text": "References ERA Drainage Design Manual 2013 for ditch design (not Uganda MoWT or Kenya RDM)",
+          "passed": null,
+          "evidence": ""
+        },
+        {
+          "text": "Uses Manning's equation as the primary design tool per ERA DDM",
+          "passed": null,
+          "evidence": ""
+        },
+        {
+          "text": "Checks velocity against ERA maximum permissible velocities for the selected lining",
+          "passed": null,
+          "evidence": ""
+        },
+        {
+          "text": "Considers locally available materials (stone masonry from basalt) per ERA practice",
+          "passed": null,
+          "evidence": ""
+        }
+      ]
     }
   ]
 }

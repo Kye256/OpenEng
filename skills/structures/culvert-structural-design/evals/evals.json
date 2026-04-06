@@ -143,6 +143,34 @@
           "evidence": ""
         }
       ]
+    },
+    {
+      "id": 4,
+      "prompt": "Design a reinforced concrete box culvert for an ERA DC6 trunk road in Ethiopia. The culvert has a 3.0 m span and 2.5 m rise with 2.0 m of fill above. Using the ERA Bridge Design Manual 2013, determine the design loads including HL-93 live load distribution through fill, earth pressure, and the applicable load combinations. Specify the resistance factors (phi) for flexure and shear.",
+      "expected_output": "Per ERA BDM 2013: AASHTO LRFD approach. HL-93 live load (design truck 325 kN or tandem 220 kN + lane load 9.3 kN/m). Live load distribution through 2.0 m fill per BDM Section 4.7. Earth pressure as permanent load (EH) with gamma_EH = 1.50 (Strength I). Load combinations: Strength I for normal vehicular. Resistance factors: phi = 0.90 for flexure, phi = 0.90 for shear. ERA uses AASHTO LRFD, not Kenya EN/Eurocode or Uganda BS 5400.",
+      "files": [],
+      "assertions": [
+        {
+          "text": "References ERA Bridge Design Manual 2013 for culvert structural design (not Kenya RDM or Uganda MoWT)",
+          "passed": null,
+          "evidence": ""
+        },
+        {
+          "text": "Uses HL-93 live load model with distribution through fill per ERA BDM Section 4.7",
+          "passed": null,
+          "evidence": ""
+        },
+        {
+          "text": "Applies AASHTO LRFD load factors and resistance factors (phi = 0.90 for flexure)",
+          "passed": null,
+          "evidence": ""
+        },
+        {
+          "text": "Uses LRFD load combinations (Strength I for normal vehicular) not BS 5400 or Eurocode format",
+          "passed": null,
+          "evidence": ""
+        }
+      ]
     }
   ]
 }

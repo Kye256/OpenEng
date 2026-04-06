@@ -122,6 +122,34 @@
           "evidence": ""
         }
       ]
+    },
+    {
+      "id": 4,
+      "prompt": "A 60-year-old stone masonry arch bridge on an ERA trunk road in the Tigray region of Ethiopia requires condition assessment. The bridge has a 12 m span with visible cracking in the arch barrel and mortar deterioration. Using the ERA Bridge Design Manual 2013 Part 2 Chapter 5, determine the appropriate assessment methodology and specify the rating approach. Is the bridge likely to be from the Italian colonial period?",
+      "expected_output": "Per ERA BDM 2013 Part 2 Chapter 5: for masonry arch bridges, use the Modified MEXE Method (empirical method for arch bridges that cannot be easily analysed using modern limit state methods). LRFR is for modern concrete and steel bridges. A 60-year-old stone masonry arch bridge in Tigray is very likely from the Italian colonial period (1930s-1940s). Modified MEXE uses modification factors applied to ideal arch capacity. Condition assessment includes: arch barrel cracking pattern, mortar condition, movement indicators, ring separation, abutment condition.",
+      "files": [],
+      "assertions": [
+        {
+          "text": "References ERA BDM 2013 Part 2 Chapter 5 for bridge assessment (not Kenya RDM or Uganda BD 21/97)",
+          "passed": null,
+          "evidence": ""
+        },
+        {
+          "text": "Selects Modified MEXE Method for masonry arch bridge assessment (not LRFR which is for modern bridges)",
+          "passed": null,
+          "evidence": ""
+        },
+        {
+          "text": "Identifies the bridge as likely Italian colonial era construction (1930s-1940s)",
+          "passed": null,
+          "evidence": ""
+        },
+        {
+          "text": "Describes MEXE modification factors applied to ideal arch capacity",
+          "passed": null,
+          "evidence": ""
+        }
+      ]
     }
   ]
 }

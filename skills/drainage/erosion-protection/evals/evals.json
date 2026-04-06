@@ -127,6 +127,34 @@
           "evidence": ""
         }
       ]
+    },
+    {
+      "id": 4,
+      "prompt": "Design erosion protection at the outlet of a 1200 mm diameter pipe culvert on an ERA DC5 road in Ethiopia. The outlet velocity is 4.5 m/s. Basalt stone and gabion wire mesh are available locally. Using the ERA Drainage Design Manual 2013, select the protection method, size the riprap or gabion, and specify the extent of protection required.",
+      "expected_output": "Per ERA DDM 2013: velocity-based protection selection. At 4.5 m/s, stone riprap or gabion mattress/basket required (vegetation insufficient above approximately 2 m/s). Riprap sizing per ERA DDM using velocity and culvert size. With basalt locally available, stone riprap preferred. Gabion baskets for higher velocities or where stone grading is difficult. Energy dissipator may be needed at 4.5 m/s. ERA emphasises locally available materials (stone masonry, gabion baskets).",
+      "files": [],
+      "assertions": [
+        {
+          "text": "References ERA Drainage Design Manual 2013 for erosion protection design (not Uganda MoWT or Kenya RDM)",
+          "passed": null,
+          "evidence": ""
+        },
+        {
+          "text": "Uses velocity-based approach to select protection method per ERA DDM",
+          "passed": null,
+          "evidence": ""
+        },
+        {
+          "text": "Sizes riprap or gabion for 4.5 m/s outlet velocity",
+          "passed": null,
+          "evidence": ""
+        },
+        {
+          "text": "Considers locally available materials (basalt stone, gabion wire mesh) per ERA practice",
+          "passed": null,
+          "evidence": ""
+        }
+      ]
     }
   ]
 }

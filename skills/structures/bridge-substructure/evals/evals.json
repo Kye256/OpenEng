@@ -123,6 +123,34 @@
           "evidence": ""
         }
       ]
+    },
+    {
+      "id": 4,
+      "prompt": "Design the abutment for a bridge on an ERA DC7 trunk road in Ethiopia. The bridge is located near Hawassa in Seismic Zone 3 (acceleration coefficient A = 0.12). The foundation soil is Type II (stiff soil, dense sand). Using the ERA Bridge Design Manual 2013, determine the seismic design requirements including site coefficient, analysis method, and response modification factor (R) for the abutment.",
+      "expected_output": "Per ERA BDM 2013 Part 1 Section 3.10: Seismic Zone 3 (A = 0.12). Site coefficient S = 1.2 for Soil Profile Type II. Elastic seismic response coefficient Csm = 1.2 x S x A / T^(2/3). Analysis method: single-mode spectral (SM) or uniform load (UL) for Zone 3 regular bridges. Response modification factor R per ERA BDM Table (R varies by substructure type: wall-type abutment, single column, etc.). Foundation design per AASHTO LRFD with bearing, sliding, and overturning checks.",
+      "files": [],
+      "assertions": [
+        {
+          "text": "References ERA BDM 2013 Part 1 Section 3.10 for seismic design (not Kenya EN 1998 or Uganda MoWT)",
+          "passed": null,
+          "evidence": ""
+        },
+        {
+          "text": "Identifies Seismic Zone 3 with A = 0.12 and site coefficient S = 1.2 for Soil Type II",
+          "passed": null,
+          "evidence": ""
+        },
+        {
+          "text": "Specifies analysis method appropriate for Zone 3 (SM or UL for regular bridges)",
+          "passed": null,
+          "evidence": ""
+        },
+        {
+          "text": "Uses AASHTO response modification factor (R), not Eurocode behaviour factor (q)",
+          "passed": null,
+          "evidence": ""
+        }
+      ]
     }
   ]
 }

@@ -117,6 +117,34 @@
           "evidence": ""
         }
       ]
+    },
+    {
+      "id": 4,
+      "prompt": "Select an appropriate crossing structure for a seasonal stream on an ERA DC2 feeder road in rural Ethiopia. The stream has a design flow of 5 m3/s but is dry for 8 months of the year. The road connects farming communities to a market town and carries approximately 30 vehicles per day. Budget is limited. Using the ERA Bridge Design Manual 2013 Part 2 Section 2.8, evaluate ford, Irish crossing, and vented causeway options.",
+      "expected_output": "Per ERA BDM 2013 Part 2 Section 2.8: three low-level water crossing types for evaluation. Ford: simplest and cheapest, suitable for low traffic and seasonal streams, but road closed during floods. Irish crossing: concrete slab at stream level, permits low flow passage, moderate cost. Vented causeway: includes pipes/openings for normal flow, road surface above minor floods, higher cost but better service. For DC2 feeder road with 30 vpd and seasonal stream, ford or Irish crossing may be appropriate given budget constraints. Closure duration analysis needed.",
+      "files": [],
+      "assertions": [
+        {
+          "text": "References ERA BDM 2013 Part 2 Section 2.8 for low-level water crossings (not Kenya RDM or Uganda MoWT)",
+          "passed": null,
+          "evidence": ""
+        },
+        {
+          "text": "Evaluates at least two of the three ERA crossing types: ford, Irish crossing, vented causeway",
+          "passed": null,
+          "evidence": ""
+        },
+        {
+          "text": "Considers closure duration and serviceability for the seasonal stream pattern",
+          "passed": null,
+          "evidence": ""
+        },
+        {
+          "text": "Considers budget constraints appropriate for a DC2 feeder road context",
+          "passed": null,
+          "evidence": ""
+        }
+      ]
     }
   ]
 }

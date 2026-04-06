@@ -140,6 +140,34 @@
           "evidence": ""
         }
       ]
+    },
+    {
+      "id": 4,
+      "prompt": "Estimate the design flood for a culvert on an ERA DC6 trunk road in the Ethiopian Highlands (Amhara region). The catchment area is 2.5 km2 with rolling terrain and mixed agricultural/grassland cover. Annual rainfall is 1,200 mm. Using the ERA Drainage Design Manual 2013, determine the appropriate design return period, select the flood estimation method, and describe how ERA's IDF curves differ from Uganda and Kenya approaches.",
+      "expected_output": "Per ERA DDM 2013: design return period for culvert on DC6 is 25 years (box culvert) per ERA Table. Catchment 2.5 km2 is within Rational Method range for smaller catchments or SCS for medium. ERA IDF curves are based on 8 rainfall regions aggregated into 4 macro areas, derived from disaggregated 24-hour rainfall data. This differs from Uganda (TRRL LR 623 station-specific constants) and Kenya (KMD published curves). ERA uses dual-method: Rational for small, SCS for larger catchments.",
+      "files": [],
+      "assertions": [
+        {
+          "text": "References ERA Drainage Design Manual 2013 for flood estimation (not Uganda MoWT or Kenya RDM)",
+          "passed": null,
+          "evidence": ""
+        },
+        {
+          "text": "Selects appropriate design return period for DC6 trunk road culvert per ERA DDM",
+          "passed": null,
+          "evidence": ""
+        },
+        {
+          "text": "Describes ERA's IDF curve derivation from disaggregated 24-hour rainfall data across 8 regions",
+          "passed": null,
+          "evidence": ""
+        },
+        {
+          "text": "Distinguishes ERA's approach from Uganda (TRRL LR 623) and Kenya (KMD curves)",
+          "passed": null,
+          "evidence": ""
+        }
+      ]
     }
   ]
 }

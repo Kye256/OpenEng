@@ -125,6 +125,34 @@
           "evidence": ""
         }
       ]
+    },
+    {
+      "id": 4,
+      "prompt": "Select the bridge type for a 20 m span simply supported beam bridge on an ERA DC6 trunk road in Ethiopia. The bridge carries two lanes of traffic. Using the ERA Bridge Design Manual 2013 Part 2, determine the appropriate bridge type (RC slab, T-girder, or composite), specify the analysis method for load distribution, and identify the resistance factors for flexure and shear design.",
+      "expected_output": "Per ERA BDM 2013 Part 2 Sections 3.8-3.12: for 20 m span, T-girder bridge is typically appropriate (RC slab spans up to approximately 12 m, T-girder 12-25 m). Analysis using AASHTO distribution factors for typical cross-sections. Resistance factors: phi = 0.90 for flexure, phi = 0.90 for shear. LRFD format: factored demand <= phi x nominal resistance. ERA uses AASHTO LRFD, distinct from Kenya EN 1992 and Uganda BS 5400.",
+      "files": [],
+      "assertions": [
+        {
+          "text": "References ERA BDM 2013 Part 2 for beam bridge type selection (not Kenya RDM or Uganda MoWT)",
+          "passed": null,
+          "evidence": ""
+        },
+        {
+          "text": "Selects appropriate bridge type for 20 m span from ERA span range tables",
+          "passed": null,
+          "evidence": ""
+        },
+        {
+          "text": "Uses AASHTO LRFD distribution factors for load distribution analysis",
+          "passed": null,
+          "evidence": ""
+        },
+        {
+          "text": "Specifies ERA resistance factors (phi = 0.90 for flexure, phi = 0.90 for shear)",
+          "passed": null,
+          "evidence": ""
+        }
+      ]
     }
   ]
 }
