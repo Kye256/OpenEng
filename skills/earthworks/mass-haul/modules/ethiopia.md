@@ -90,6 +90,28 @@ Ethiopia road contracts follow FIDIC-based conditions with ERA-specific free hau
 - **Community consultation:** Required for borrow pits near settlements. Land compensation is governed by Ethiopian land law (all land is state-owned, but compensation for crops and improvements applies).
 - **Quarry permits:** Rock quarries require permits from the regional mining authority in addition to environmental clearance.
 
+### M.2.5 Cross-Country Comparison: Mass Haul and Excavation
+
+**Table E.27.C1: Free Haul and Overhaul -- ERA vs MoWT (Uganda) vs RDM (Kenya)**
+
+| Parameter | ERA (Ethiopia) | MoWT (Uganda) | RDM (Kenya) |
+|-----------|---------------|---------------|-------------|
+| Free haul distance | Per contract (typically 500 m) | 500 m standard | 500 m standard |
+| Overhaul unit | Station-metre (m³·km) | Station-metre (m³·km) | Station-metre (m³·km) |
+| Haul payment basis | ERA STS pay items | MoWT General Specifications | Kenya Standard Specification |
+| Borrow pit investigation | ERA SIM / GDM Ch 2 | MoWT Vol 4 | RDM 3.1 Section 12 |
+
+**Table E.27.C2: Excavation Classification -- ERA vs MoWT (Uganda) vs RDM (Kenya)**
+
+| Classification | ERA (Ethiopia) | MoWT (Uganda) | RDM (Kenya) |
+|---------------|---------------|---------------|-------------|
+| Common excavation | Soil, gravel, soft rock (rippable) | Soft material | Common material |
+| Hard excavation | Weathered rock, cemented laterite | Hard material | Intermediate rock |
+| Rock excavation | Sound rock (requires blasting) | Rock (blasting needed) | Hard rock (blasting) |
+| Cost ratio (common:hard:rock) | 1.0 : 2.0 : 3.5 | 1.0 : 1.5 : 3.0 | 1.0 : 1.5 : 2.5 |
+
+**Critical departure:** ERA excavation cost ratios are higher than both Uganda and Kenya, reflecting the prevalence of hard basalt and volcanic rock formations in the Ethiopian Highlands. The ERA hard excavation factor (2.0x) and rock factor (3.5x) are materially above the Kenyan equivalents (1.5x and 2.5x). Always use ERA-specific cost ratios for Ethiopian projects.
+
 ---
 
 ## M.3 Country-Specific Reasoning

@@ -119,6 +119,34 @@ ERA takes a material-type-based approach to earthworks: the GDM Chapter 3 classi
 - Benches: 1.5 m minimum width, not more than 6 m apart vertically.
 - Rule of thumb for preliminary FS on clay: FS = 6c / (gamma_Fill x H_Fill).
 
+### M.2.5 Cross-Country Comparison: Earthworks Requirements
+
+**Table E.26.C1: Compaction Requirements -- ERA vs MoWT (Uganda) vs RDM (Kenya)**
+
+| Parameter | ERA (Ethiopia) | MoWT (Uganda) | RDM (Kenya) |
+|-----------|---------------|---------------|-------------|
+| Upper zone compaction | 93% MDD (T-180) | 95% MDD (BS 1377) | 95% MDD (T-180) |
+| Upper zone depth | 600 mm | 300 mm | 600 mm |
+| Lower fill compaction | 95% MDD (T-99) | 93% MDD (BS 1377) | 93% MDD (T-99) |
+| Maximum layer thickness (upper) | 200 mm | 150 mm | 200 mm |
+| Maximum layer thickness (lower) | 250 mm | 200 mm | 250 mm |
+| Rock fill layer thickness | 300 mm | 300 mm | 300 mm |
+
+**Critical departure:** ERA specifies 93% MDD T-180 for the upper 600 mm, while Kenya and Uganda both specify 95% MDD. The ERA upper zone is also 600 mm deep (same as Kenya), while Uganda uses only 300 mm. Always apply the ERA-specific values when the project is in Ethiopia.
+
+**Table E.26.C2: Cut and Fill Slope Ratios -- ERA vs MoWT (Uganda) vs RDM (Kenya)**
+
+| Slope Type | ERA (Ethiopia) | MoWT (Uganda) | RDM (Kenya) |
+|-----------|---------------|---------------|-------------|
+| Fill slope (H < 6 m, good material) | 1V:2H | 1V:2H | 1V:2H |
+| Fill slope (H > 10 m) | 1V:2.5H to 1V:3H | 1V:2H (benched) | 1V:2H (benched) |
+| Cut slope (stiff clay) | 1V:2H to 1V:3H | 1V:1.5H to 1V:2H | 1V:1.5H to 1V:2H |
+| Cut slope (weathered rock) | 1V:1H to 1V:1.5H | 1V:0.5H to 1V:1H | 1V:0.5H to 1V:1H |
+| Cut slope (sound rock) | 4V:1H to vertical | 1V:0.25H | Near vertical |
+| Bench interval (cuts > 8-10 m) | Every 8-10 m height | Every 6-8 m | Every 8-10 m |
+
+ERA fill slopes for heights above 10 m are generally flatter than Uganda and Kenya equivalents. ERA cut slopes in weathered rock are also more conservative. Always use ERA-specific slope ratios.
+
 ---
 
 ## M.3 Country-Specific Considerations
