@@ -11,7 +11,7 @@ description: "Use when designing concrete/rigid pavements -- determining slab th
 > **Status:** Draft
 > **Last Updated:** 2026-04-04
 > **Reviewed By:** ---
-> **Country Modules:** Kenya
+> **Country Modules:** Kenya, Ethiopia
 
 ## Purpose
 

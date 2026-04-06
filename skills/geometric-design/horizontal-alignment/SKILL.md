@@ -11,7 +11,7 @@ description: "Use when designing horizontal curves — selecting curve radii, su
 > **Status:** Draft
 > **Last Updated:** 2026-03-17
 > **Reviewed By:** —
-> **Country Modules:** Uganda, UK, Kenya
+> **Country Modules:** Uganda, UK, Kenya, Ethiopia
 
 ## Purpose
 

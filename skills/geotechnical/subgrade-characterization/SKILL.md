@@ -11,7 +11,7 @@ description: "Use when determining design subgrade strength (design CBR) and sub
 > **Status:** Draft
 > **Last Updated:** 2026-03-19
 > **Reviewed By:** --
-> **Country Modules:** Uganda, UK, Kenya
+> **Country Modules:** Uganda, UK, Kenya, Ethiopia
 
 ## Purpose
 

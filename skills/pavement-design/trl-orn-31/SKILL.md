@@ -11,7 +11,7 @@ description: "Use when designing pavement for surfaced low-volume roads using TR
 > **Status:** Draft
 > **Last Updated:** 2026-03-20
 > **Reviewed By:** --
-> **Country Modules:** Uganda, UK, Kenya
+> **Country Modules:** Uganda, UK, Kenya, Ethiopia
 
 ## Purpose
 
